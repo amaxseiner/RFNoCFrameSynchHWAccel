@@ -1,0 +1,204 @@
+INFO: [HLS 200-0] Workspace /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1 opened at Sat Feb 09 17:43:49 EST 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.01 sec.
+Execute     source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.11 sec.
+Command     ap_source returned 0; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.01 sec.
+Execute     source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     set_part xc7k160tfbg484-1 
+Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xc7k160t 
+Command         license_isbetapart returned 1; 0 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed slow 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.05 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed slow 
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_rtl -encoding=onehot -reset=state -reset_level=high 
+Command     config_rtl returned 0; 0 sec.
+Execute     config_interface -m_axi_offset=off -register_io=off 
+Command     config_interface returned 0; 0 sec.
+Command   open_solution returned 0; 0.23 sec.
+Execute   csim_design -compiler gcc -setup -use_gcc -quiet 
+Execute     source /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log 
+Command     is_xip returned 0; 0 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design returned 2; 0.65 sec.
+Command ap_source returned 1; 0.88 sec.
+5
+    while executing
+"source /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
+    invoked from within
+"hls::main /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+Execute cleanup_all 
+Command cleanup_all returned 0; 0 sec.

@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Feb  9 12:34:53 2019
+# Process ID: 3620
+# Current directory: /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev
+# Command line: vivado -mode tcl
+# Log file: /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/vivado.log
+# Journal file: /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/vivado.jou
+#-----------------------------------------------------------
+vivado_hls script.tcl 
+ls
+gedit correlator.cpp &
+vivado_hls script.tcl
+gedit correlator.cpp 
+vivado_hls script.tcl
+gedit correlator.cpp

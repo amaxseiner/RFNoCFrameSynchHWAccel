@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="correlator.cpp" path="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="correlatorTB.cpp" path="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

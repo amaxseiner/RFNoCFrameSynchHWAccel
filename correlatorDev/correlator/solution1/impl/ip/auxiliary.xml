@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="correlator" xd:componentRef="correlator" xd:initiationInterval="1" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="state">
+  <xd:arg xd:name="i_data.data" xd:originalName="i_data" xd:direction="in" xd:interfaceRef="i_data" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="i_data.last" xd:originalName="i_data" xd:direction="in" xd:interfaceRef="i_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="o_data.data" xd:originalName="o_data" xd:direction="out" xd:interfaceRef="o_data" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="o_data.last" xd:originalName="o_data" xd:direction="out" xd:interfaceRef="o_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="start" xd:originalName="start" xd:direction="in" xd:interfaceRef="start_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="3"/>
+  <xd:arg xd:name="pnseq_in" xd:originalName="pnseq_in" xd:direction="in" xd:interfaceRef="pnseq_in_V_V" xd:busTypeRef="register" xd:handshakeRef="ap_hs" xd:dataWidth="1" xd:firstOut="3"/>
+  <xd:arg xd:name="pnseq_len" xd:originalName="pnseq_len" xd:direction="in" xd:interfaceRef="pnseq_len_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="10" xd:firstOut="3"/>
+  <xd:latencyEstimates xd:best-case="4" xd:worst-case="4" xd:average-case="4"/>
+  <xd:resourceEstimates xd:LUT="3091" xd:FF="2813" xd:BRAM="0" xd:DSP="2"/>
+</xd:acceleratorMap>

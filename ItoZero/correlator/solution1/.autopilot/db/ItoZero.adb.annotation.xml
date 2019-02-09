@@ -1,0 +1,10 @@
+<annotationInfo>
+<item  id="46" filename="ItoZero.cpp" linenumber="77" name="tmp_2" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="tmp_2_fu_234_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="59" filename="ItoZero.cpp" linenumber="83" name="tmp_1" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="tmp_1_fu_366_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="60" filename="ItoZero.cpp" linenumber="83" name="p_Result_2" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="p_Result_2_fu_374_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="64" filename="ItoZero.cpp" linenumber="97" name="tmp_3" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="tmp_3_fu_254_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="65" filename="ItoZero.cpp" linenumber="97" name="p_Result_4" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="p_Result_4_fu_258_p5" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="81" filename="ItoZero.cpp" linenumber="121" name="p_Result_s" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="p_Result_s_fu_397_p2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="135" filename="ItoZero.cpp" linenumber="115" name="tmp_5" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="tmp_5_fu_406_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="139" filename="ItoZero.cpp" linenumber="117" name="p_Result_1" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="p_Result_1_fu_427_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero"></item>
+</annotationInfo>

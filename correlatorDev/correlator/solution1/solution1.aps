@@ -1,0 +1,27 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_rtl encoding="onehot" reset="state" reset_level="high"/>
+        <config_interface m_axi_offset="off" register_io="off"/>
+        <schedule model="correlator"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" version="1.0" driver_input_dir="" display_name="" taxonomy="" ipname=""/>
+    </ExportDesign>
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="correlator"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7k160t:fbg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/kintex7/kintex7" name="DefaultPlatform"/>
+        <library value="xilinx/kintex7/kintex7_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
+</AutoPilot:solution>
+

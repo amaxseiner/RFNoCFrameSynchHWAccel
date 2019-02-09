@@ -1,0 +1,379 @@
+
+
+================================================================
+== Vivado HLS Report for 'averaging'
+================================================================
+* Date:           Sat Feb  9 16:58:04 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        matchedFilter
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k410tffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      1.15|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   15|   15|   16|   16| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 16, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 16, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.15ns
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !79"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !83"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !87"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !91"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !95"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @averaging_str) nounwind"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [matched.cpp:35]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [matched.cpp:36]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [matched.cpp:37]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [matched.cpp:38]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [matched.cpp:39]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @data_reg_i_V_0, i16* @data_reg_i_V_1, i16* @data_reg_i_V_2, i16* @data_reg_i_V_3, i16* @data_reg_i_V_4, i16* @data_reg_i_V_5, i16* @data_reg_i_V_6, i16* @data_reg_i_V_7, i16* @data_reg_i_V_8, i16* @data_reg_i_V_9, i16* @data_reg_i_V_10, i16* @data_reg_i_V_11, i16* @data_reg_i_V_12, i16* @data_reg_i_V_13, i16* @data_reg_i_V_14, i16* @data_reg_i_V_15, i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:41]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset([16 x i16]* @data_reg_q_V, i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:44]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:49]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @firstLoad_V, i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:51]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:59]
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:64]
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%currentwrState_load = load i1* @currentwrState, align 1" [matched.cpp:68]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentwrState, i32 1, [1 x i8]* @p_str) nounwind" [matched.cpp:68]
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_Val2_s = load i24* @data_valid_reg_V, align 4" [matched.cpp:74]
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%data_reg_i_V_11_load = load i16* @data_reg_i_V_11, align 2" [matched.cpp:80]
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "br i1 %currentwrState_load, label %2, label %0" [matched.cpp:72]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_s, i32 11)" [matched.cpp:74]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %1, label %._crit_edge197" [matched.cpp:74]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentwrState, align 1" [matched.cpp:75]
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "br label %._crit_edge197" [matched.cpp:75]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "br label %._crit_edge196" [matched.cpp:76]
+ST_1 : Operation 45 [2/2] (1.14ns)   --->   "%data_reg_q_V_load = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 11), align 2" [matched.cpp:79]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i24 %p_Val2_s to i23" [matched.cpp:86]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_Result_4 = call i24 @llvm.part.set.i24.i23(i24 %p_Val2_s, i23 %tmp_2, i32 1, i32 23)" [matched.cpp:86]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1" [matched.cpp:89]
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%firstLoad_V_load = load i1* @firstLoad_V, align 1" [matched.cpp:97]
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %5, label %3" [matched.cpp:89]
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %4, label %._crit_edge199" [matched.cpp:91]
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)" [matched.cpp:96]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %tmp, label %6, label %7" [matched.cpp:96]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "br i1 %firstLoad_V_load, label %.loopexit, label %.preheader.0" [matched.cpp:97]
+ST_1 : Operation 55 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_1 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 14), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 2> : 1.15ns
+ST_2 : Operation 56 [1/2] (1.14ns)   --->   "%data_reg_q_V_load = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 11), align 2" [matched.cpp:79]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%p_Result_3 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %data_reg_i_V_11_load, i16 %data_reg_q_V_load)" [matched.cpp:80]
+ST_2 : Operation 58 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_3, i1 undef)" [matched.cpp:81]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%data_reg_i_V_14_load = load i16* @data_reg_i_V_14, align 4" [matched.cpp:100]
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_14_load, i16* @data_reg_i_V_15, align 2" [matched.cpp:100]
+ST_2 : Operation 61 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_1 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 14), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%data_reg_i_V_13_load = load i16* @data_reg_i_V_13, align 2" [matched.cpp:100]
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_13_load, i16* @data_reg_i_V_14, align 4" [matched.cpp:100]
+ST_2 : Operation 64 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_2 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 13), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%data_reg_i_V_12_load = load i16* @data_reg_i_V_12, align 8" [matched.cpp:100]
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_12_load, i16* @data_reg_i_V_13, align 2" [matched.cpp:100]
+ST_2 : Operation 67 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_3 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 12), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_11_load, i16* @data_reg_i_V_12, align 8" [matched.cpp:100]
+
+ <State 3> : 1.15ns
+ST_3 : Operation 69 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_3, i1 undef)" [matched.cpp:81]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 70 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_2 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 13), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 71 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_3 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 12), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 72 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_4 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 11), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 73 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_5 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 10), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 4> : 1.15ns
+ST_4 : Operation 74 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_4 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 11), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 75 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_5 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 10), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 76 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_6 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 9), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 77 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_7 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 8), align 16" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 5> : 1.15ns
+ST_5 : Operation 78 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_6 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 9), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 79 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_7 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 8), align 16" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 80 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_8 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 7), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 81 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_9 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 6), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 6> : 1.15ns
+ST_6 : Operation 82 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_8 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 7), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 83 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_9 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 6), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 84 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_10 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 5), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 85 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_11 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 4), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 7> : 1.15ns
+ST_7 : Operation 86 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_10 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 5), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 87 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_11 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 4), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 88 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_12 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 3), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 89 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_13 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 2), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 8> : 1.15ns
+ST_8 : Operation 90 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_12 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 3), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 91 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_13 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 2), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 92 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_14 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 1), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 93 [2/2] (1.14ns)   --->   "%data_reg_q_V_load_15 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 0), align 16" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 9> : 1.15ns
+ST_9 : Operation 94 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_1, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 15), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 95 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_2, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 14), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 96 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_14 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 1), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 97 [1/2] (1.14ns)   --->   "%data_reg_q_V_load_15 = load i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 0), align 16" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 10> : 1.15ns
+ST_10 : Operation 98 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_3, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 13), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_10 : Operation 99 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_4, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 12), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 11> : 1.15ns
+ST_11 : Operation 100 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_5, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 11), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_11 : Operation 101 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_6, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 10), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 12> : 1.15ns
+ST_12 : Operation 102 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_7, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 9), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_12 : Operation 103 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_8, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 8), align 16" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 13> : 1.15ns
+ST_13 : Operation 104 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_9, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 7), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_13 : Operation 105 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_10, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 6), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 14> : 1.15ns
+ST_14 : Operation 106 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_11, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 5), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_14 : Operation 107 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_12, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 4), align 8" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 15> : 1.15ns
+ST_15 : Operation 108 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [matched.cpp:92]
+ST_15 : Operation 109 [1/1] (0.00ns)   --->   "br label %._crit_edge199" [matched.cpp:92]
+ST_15 : Operation 110 [1/1] (0.87ns)   --->   "store i1 true, i1* @firstLoad_V, align 1" [matched.cpp:93]
+ST_15 : Operation 111 [1/1] (0.90ns)   --->   "br label %mergeST" [matched.cpp:94]
+ST_15 : Operation 112 [1/1] (0.00ns)   --->   "%p_Result_s = shl i24 %p_Val2_s, 1" [matched.cpp:110]
+ST_15 : Operation 113 [1/1] (0.90ns)   --->   "br label %mergeST"
+ST_15 : Operation 114 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_13, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 3), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_15 : Operation 115 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_14, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 2), align 4" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 16> : 1.15ns
+ST_16 : Operation 116 [1/1] (0.00ns)   --->   "br label %._crit_edge196" [matched.cpp:83]
+ST_16 : Operation 117 [1/1] (0.00ns)   --->   "%data_reg_i_V_10_load = load i16* @data_reg_i_V_10, align 4" [matched.cpp:100]
+ST_16 : Operation 118 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_10_load, i16* @data_reg_i_V_11, align 2" [matched.cpp:100]
+ST_16 : Operation 119 [1/1] (0.00ns)   --->   "%data_reg_i_V_9_load = load i16* @data_reg_i_V_9, align 2" [matched.cpp:100]
+ST_16 : Operation 120 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_9_load, i16* @data_reg_i_V_10, align 4" [matched.cpp:100]
+ST_16 : Operation 121 [1/1] (0.00ns)   --->   "%data_reg_i_V_8_load = load i16* @data_reg_i_V_8, align 16" [matched.cpp:100]
+ST_16 : Operation 122 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_8_load, i16* @data_reg_i_V_9, align 2" [matched.cpp:100]
+ST_16 : Operation 123 [1/1] (0.00ns)   --->   "%data_reg_i_V_7_load = load i16* @data_reg_i_V_7, align 2" [matched.cpp:100]
+ST_16 : Operation 124 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_7_load, i16* @data_reg_i_V_8, align 16" [matched.cpp:100]
+ST_16 : Operation 125 [1/1] (0.00ns)   --->   "%data_reg_i_V_6_load = load i16* @data_reg_i_V_6, align 4" [matched.cpp:100]
+ST_16 : Operation 126 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_6_load, i16* @data_reg_i_V_7, align 2" [matched.cpp:100]
+ST_16 : Operation 127 [1/1] (0.00ns)   --->   "%data_reg_i_V_5_load = load i16* @data_reg_i_V_5, align 2" [matched.cpp:100]
+ST_16 : Operation 128 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_5_load, i16* @data_reg_i_V_6, align 4" [matched.cpp:100]
+ST_16 : Operation 129 [1/1] (0.00ns)   --->   "%data_reg_i_V_4_load = load i16* @data_reg_i_V_4, align 8" [matched.cpp:100]
+ST_16 : Operation 130 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_4_load, i16* @data_reg_i_V_5, align 2" [matched.cpp:100]
+ST_16 : Operation 131 [1/1] (0.00ns)   --->   "%data_reg_i_V_3_load = load i16* @data_reg_i_V_3, align 2" [matched.cpp:100]
+ST_16 : Operation 132 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_3_load, i16* @data_reg_i_V_4, align 8" [matched.cpp:100]
+ST_16 : Operation 133 [1/1] (0.00ns)   --->   "%data_reg_i_V_2_load = load i16* @data_reg_i_V_2, align 4" [matched.cpp:100]
+ST_16 : Operation 134 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_2_load, i16* @data_reg_i_V_3, align 2" [matched.cpp:100]
+ST_16 : Operation 135 [1/1] (0.00ns)   --->   "%data_reg_i_V_1_load = load i16* @data_reg_i_V_1, align 2" [matched.cpp:100]
+ST_16 : Operation 136 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_1_load, i16* @data_reg_i_V_2, align 4" [matched.cpp:100]
+ST_16 : Operation 137 [1/1] (0.00ns)   --->   "%data_reg_i_V_0_load = load i16* @data_reg_i_V_0, align 16" [matched.cpp:100]
+ST_16 : Operation 138 [1/1] (0.00ns)   --->   "store i16 %data_reg_i_V_0_load, i16* @data_reg_i_V_1, align 2" [matched.cpp:100]
+ST_16 : Operation 139 [1/1] (1.14ns)   --->   "store i16 %data_reg_q_V_load_15, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 1), align 2" [matched.cpp:101]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_16 : Operation 140 [1/1] (0.00ns)   --->   "br label %.loopexit"
+ST_16 : Operation 141 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [matched.cpp:103]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_16 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i32, i1 } %empty, 0" [matched.cpp:103]
+ST_16 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_4 = trunc i32 %tmp_data_V to i16" [matched.cpp:104]
+ST_16 : Operation 144 [1/1] (1.14ns)   --->   "store i16 %tmp_4, i16* getelementptr inbounds ([16 x i16]* @data_reg_q_V, i64 0, i64 0), align 16" [matched.cpp:104]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.14> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_16 : Operation 145 [1/1] (0.00ns)   --->   "%p_Result_2 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp_data_V, i32 16, i32 31)" [matched.cpp:105]
+ST_16 : Operation 146 [1/1] (0.00ns)   --->   "store i16 %p_Result_2, i16* @data_reg_i_V_0, align 16" [matched.cpp:105]
+ST_16 : Operation 147 [1/1] (0.00ns)   --->   "%p_Result_1 = call i24 @_ssdm_op_BitConcatenate.i24.i23.i1(i23 %tmp_2, i1 true)" [matched.cpp:106]
+ST_16 : Operation 148 [1/1] (0.87ns)   --->   "store i1 false, i1* @firstLoad_V, align 1" [matched.cpp:107]
+ST_16 : Operation 149 [1/1] (0.90ns)   --->   "br label %mergeST" [matched.cpp:109]
+ST_16 : Operation 150 [1/1] (0.00ns)   --->   "%data_valid_reg_V_new_1 = phi i24 [ %p_Result_4, %._crit_edge199 ], [ %p_Result_1, %.loopexit ], [ %p_Result_s, %7 ]"
+ST_16 : Operation 151 [1/1] (0.00ns)   --->   "store i24 %data_valid_reg_V_new_1, i24* @data_valid_reg_V, align 4" [matched.cpp:86]
+ST_16 : Operation 152 [1/1] (0.00ns)   --->   "ret void" [matched.cpp:115]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load', matched.cpp:79) on array 'data_reg_q_V' [58]  (1.15 ns)
+
+ <State 2>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load', matched.cpp:79) on array 'data_reg_q_V' [58]  (1.15 ns)
+
+ <State 3>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_2', matched.cpp:101) on array 'data_reg_q_V' [91]  (1.15 ns)
+
+ <State 4>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_4', matched.cpp:101) on array 'data_reg_q_V' [98]  (1.15 ns)
+
+ <State 5>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_6', matched.cpp:101) on array 'data_reg_q_V' [106]  (1.15 ns)
+
+ <State 6>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_8', matched.cpp:101) on array 'data_reg_q_V' [114]  (1.15 ns)
+
+ <State 7>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_10', matched.cpp:101) on array 'data_reg_q_V' [122]  (1.15 ns)
+
+ <State 8>: 1.15ns
+The critical path consists of the following:
+	'load' operation ('data_reg_q_V_load_12', matched.cpp:101) on array 'data_reg_q_V' [130]  (1.15 ns)
+
+ <State 9>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_1', matched.cpp:101 on array 'data_reg_q_V' [88]  (1.15 ns)
+
+ <State 10>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_3', matched.cpp:101 on array 'data_reg_q_V' [96]  (1.15 ns)
+
+ <State 11>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_5', matched.cpp:101 on array 'data_reg_q_V' [103]  (1.15 ns)
+
+ <State 12>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_7', matched.cpp:101 on array 'data_reg_q_V' [111]  (1.15 ns)
+
+ <State 13>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_9', matched.cpp:101 on array 'data_reg_q_V' [119]  (1.15 ns)
+
+ <State 14>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_11', matched.cpp:101 on array 'data_reg_q_V' [127]  (1.15 ns)
+
+ <State 15>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_13', matched.cpp:101 on array 'data_reg_q_V' [135]  (1.15 ns)
+
+ <State 16>: 1.15ns
+The critical path consists of the following:
+	'store' operation (matched.cpp:101) of variable 'data_reg_q_V_load_15', matched.cpp:101 on array 'data_reg_q_V' [143]  (1.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Feb  9 17:36:39 2019
+# Process ID: 18866
+# Current directory: /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim/build
+# Command line: vivado -mode tcl
+# Log file: /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim/build/vivado.log
+# Journal file: /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim/build/vivado.jou
+#-----------------------------------------------------------
+vivado_hls run_sim.tcl 

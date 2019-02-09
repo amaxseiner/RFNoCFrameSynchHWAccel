@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../ItoZeroTB.cpp in debug mode
+csim.mk:76: recipe for target 'obj/ItoZeroTB.o' failed
+/home/ece492fa18/Vivado/2017.4/include/hls_stream.h: In function ‘int main(int, char**)’:
+/home/ece492fa18/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
+../../../../ItoZeroTB.cpp:22:44: error: within this context
+../../../../ItoZero.h:10:6: error:   initializing argument 1 of ‘void ItoZero(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>)’
+/home/ece492fa18/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
+../../../../ItoZeroTB.cpp:22:44: error: within this context
+../../../../ItoZero.h:10:6: error:   initializing argument 2 of ‘void ItoZero(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>)’
+make: *** [obj/ItoZeroTB.o] Error 1
+CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:50.178-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:00.247-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:40:50.190-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:33:41.083-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:28:53.410-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:23:57.739-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:20:58.812-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:19:48.830-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:59:09.920-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:56:05.568-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:55:15.425-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:53:59.573-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:52:57.581-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:51:46.341-0500"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-09T15:55:07.388-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_2', ItoZero.cpp:112) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-09T15:55:07.167-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
