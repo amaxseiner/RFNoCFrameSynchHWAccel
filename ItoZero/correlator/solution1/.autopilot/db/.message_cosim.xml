@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[COSIM 212-345]" severity="ERROR" keynum="COSIM_TCL_345_1216" content="Cosim only supports the following &apos;ap_ctrl_none&apos; designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports." tag=""/>
+	<Message prefix="[COSIM 212-4]" severity="ERROR" keynum="COSIM_TCL_4_1074" content="*** C/RTL co-simulation finished: FAIL ***" tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="command &apos;ap_source&apos; returned error code
+    while executing
+&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;
+    invoked from within
+&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

@@ -4,7 +4,6 @@
     <originFiles name="ItoZero.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp"/>
     <originFiles name="ItoZero.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h"/>
     <originFiles name="rfnoc.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h"/>
-    <originFiles name="vivado_hls.log" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log"/>
   </source>
   <testbench>
     <originFiles name="ItoZeroTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp"/>

@@ -6,9 +6,8 @@
 
 source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 17:54:18 EST 2019
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sun Feb 10 11:18:53 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator'
 INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
-INFO: [HLS 200-10] Creating directory /home/alex/.mozilla/eclipse
-INFO: [Common 17-206] Exiting vivado_hls at Sat Feb  9 20:23:35 2019...
+INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 10 11:36:07 2019...

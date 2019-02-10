@@ -18,7 +18,7 @@
   pnseq_len - input parameter PN sequence length
 */
 
-
+#include <hls_stream.h>
 #include "ap_int.h"
 #include "ItoZero.h"
 
@@ -27,7 +27,7 @@ using namespace std;
 #define COR_SIZE_16
 
 
-void ItoZero (rfnoc_axis i_data[128], rfnoc_axis o_data[128], ap_uint<1> start)
+void ItoZero (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
 {
 
 #ifdef COR_SIZE_16
@@ -47,12 +47,6 @@ static ap_int<16> data_reg_q[COR_SIZE];
 #pragma HLS RESET variable=data_reg_q
 
 rfnoc_axis out_sample;
-
-static ap_int<10> counter;
-#pragma HLS RESET variable=counter
-
-static ap_int<10> oCounter;
-#pragma HLS RESET variable=oCounter
 
   static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
@@ -88,8 +82,7 @@ static ap_int<10> oCounter;
           //out_sample.last = 0;
           out_sample.data.range(31,16) = data_reg_i[12];
           out_sample.data.range(15,0) = data_reg_q[12];
-          o_data[oCounter] = (out_sample);
-          oCounter++;
+          o_data.write(out_sample);
           break;
   }
 
@@ -112,16 +105,12 @@ static ap_int<10> oCounter;
 		                data_reg_i[i] = 0;
 		                data_reg_q[i] = data_reg_q[i - 1];}
 		}
-		tmp_data = i_data[counter];
+		i_data.read(tmp_data);
 		data_reg_q[0] = tmp_data.data.range(15,0); // IM
 		data_reg_i[0] = tmp_data.data.range(31,16); // RE
 		data_valid_reg[0] = 1;   // shift in valid pulse
 		firstLoad = 0;
-		counter++;
 		
-	//} else {
-	//	data_valid_reg[0] = 0;
-	//}
 	break;
     }
 

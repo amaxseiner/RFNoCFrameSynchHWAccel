@@ -1,4 +1,4 @@
 #!/bin/sh
 lli=${LLVMINTERP-lli}
 exec $lli \
-    /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/a.o.bc ${1+"$@"}
+    /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/a.o.bc ${1+"$@"}

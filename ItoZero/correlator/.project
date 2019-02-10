@@ -37,11 +37,6 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/ap_int.h</name>
-			<type>1</type>
-			<location>/opt/Xilinx/Vivado/2017.4/include/ap_int.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.tcls</location>
@@ -60,11 +55,6 @@
 			<name>source/rfnoc.h</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h</location>
-		</link>
-		<link>
-			<name>source/vivado_hls.log</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log</location>
 		</link>
 		<link>
 			<name>testbench/ItoZeroTB.cpp</name>

@@ -3,51 +3,21 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;command 'ap_source' returned error code&#xA;    while executing&#xA;&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:16.839-0500"/>
+        <logs message="ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:16.803-0500"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T20:03:27.690-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T20:02:37.631-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:57:22.843-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:55:04.601-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:54:09.971-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:52:38.757-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:48:55.880-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:47:29.014-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:46:52.999-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:46:24.311-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:40:37.700-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:09:26.633-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:09:01.220-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:03:35.942-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:02:40.274-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:01:12.086-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:59:06.324-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:57:39.114-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:54:46.201-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:50.178-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:00.247-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:40:50.190-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:33:41.083-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:28:53.410-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:23:57.739-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:20:58.812-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:19:48.830-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:59:09.920-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:56:05.568-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:55:15.425-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:53:59.573-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:52:57.581-0500"/>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T16:51:46.341-0500"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-09T15:55:07.388-0500" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_2', ItoZero.cpp:112) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-09T15:55:07.167-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:06.729-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_2', ItoZero.cpp:106) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:06.520-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-02-10T11:26:49.287-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

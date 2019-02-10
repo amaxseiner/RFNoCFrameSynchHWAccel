@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1 opened at Sat Feb 09 20:07:00 EST 2019
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1 opened at Sun Feb 10 11:27:16 EST 2019
 Execute     config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 Command     config_clock returned 0; 0 sec.
@@ -26,7 +26,7 @@ Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
 Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
@@ -101,7 +101,7 @@ Command     open_platform returned 0; 0 sec.
 Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0.01 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
@@ -114,29 +114,29 @@ Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/in
 Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command           ap_source returned 0; 0.01 sec.
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command       ap_source returned 0; 0.01 sec.
 Command     import_lib returned 0; 0.02 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0 sec.
 Execute     set_part xc7k160tfbg484-1 
 Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xc7k160t 
-Command         license_isbetapart returned 1; 0 sec.
+Command         license_isbetapart returned 1; 0.01 sec.
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
 Command         config_chip_info returned 0; 0 sec.
 Execute         config_chip_info -quiet -speed slow 
 Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.01 sec.
+Command       add_library returned 0; 0.02 sec.
 Execute       add_library xilinx/kintex7/kintex7_fpv6 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
@@ -156,38 +156,105 @@ Command     config_rtl returned 0; 0 sec.
 Execute     config_interface -m_axi_offset=off -register_io=off 
 Command     config_interface returned 0; 0 sec.
 Command   open_solution returned 0; 0.22 sec.
-Execute   csim_design -setup -clean -compiler gcc -use_gcc -quiet 
+Execute   cosim_design -compiler gcc 
 Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command     ap_source returned 0; 0 sec.
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.1 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.1 sec.
+Command     ap_source returned 0; 0.1 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
 Command     ap_source returned 0; 0 sec.
 Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp 
 Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp 
-Command     is_xip returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp 
-Command     is_xip returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h 
-Command     is_xip returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h 
-Command     is_xip returned 0; 0 sec.
 Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log 
 Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log 
-Command     is_xip returned 0; 0 sec.
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
-INFO: [SIM 211-1] CSim file generation done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-Command   csim_design returned 0; 1.77 sec.
-Command ap_source returned 0; 1.99 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.h 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp 
+Command     is_encrypted returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/ItoZero.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+Command   cosim_design returned 2; 0.16 sec.
+Command ap_source returned 1; 0.38 sec.
+command 'ap_source' returned error code
+    while executing
+"source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl"
+    invoked from within
+"hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
 Execute cleanup_all 
 Command cleanup_all returned 0; 0 sec.

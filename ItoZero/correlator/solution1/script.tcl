@@ -8,7 +8,6 @@ set_top ItoZero
 add_files ItoZero.cpp
 add_files ItoZero.h
 add_files rfnoc.h
-add_files correlator/vivado_hls.log
 add_files -tb ItoZeroTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1}
@@ -18,5 +17,5 @@ config_interface -m_axi_offset off -register_io off
 #source "./correlator/solution1/directives.tcl"
 csim_design -clean -compiler gcc -setup
 csynth_design
-cosim_design
+cosim_design -compiler gcc
 export_design -format ip_catalog

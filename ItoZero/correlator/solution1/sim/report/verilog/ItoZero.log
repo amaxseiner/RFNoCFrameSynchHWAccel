@@ -1,0 +1,2 @@
+ERROR: [COSIM-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports.
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

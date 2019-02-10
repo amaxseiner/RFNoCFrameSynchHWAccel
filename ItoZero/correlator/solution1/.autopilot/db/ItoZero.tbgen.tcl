@@ -103,8 +103,8 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	ItoZero {
-		i_data_V_data_V {Type I LastRead 15 FirstWrite -1}
-		i_data_V_last_V {Type I LastRead 15 FirstWrite -1}
+		i_data_V_data_V {Type I LastRead 14 FirstWrite -1}
+		i_data_V_last_V {Type I LastRead 14 FirstWrite -1}
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
 		start_V {Type I LastRead 0 FirstWrite -1}

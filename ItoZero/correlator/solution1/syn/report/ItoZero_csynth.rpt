@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'ItoZero'
 ================================================================
-* Date:           Sat Feb  9 15:55:07 2019
+* Date:           Sun Feb 10 11:27:06 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -53,10 +53,10 @@
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        1|      -|      16|      20|
-|Multiplexer      |        -|      -|       -|     372|
-|Register         |        -|      -|     422|       -|
+|Multiplexer      |        -|      -|       -|     414|
+|Register         |        -|      -|     468|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        1|      0|     438|     456|
+|Total            |        1|      0|     484|     498|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -87,82 +87,91 @@
     |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+---+----+------------+------------+
     |ap_block_state2_io                |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_213                  |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op128_read_state16   |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
     |o_data_V_data_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
     |o_data_V_data_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
-    |tmp_nbreadreq_fu_148_p4           |    and   |      0|  0|   8|           1|           0|
+    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |ap_block_state16                  |    or    |      0|  0|   8|           1|           1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                             |          |      0|  0|  64|           9|           7|
+    |Total                             |          |      0|  0|  64|          10|           8|
     +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +-------------------------------------------------+----+-----------+-----+-----------+
-    |                       Name                      | LUT| Input Size| Bits| Total Bits|
-    +-------------------------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                                        |  85|         17|    1|         17|
-    |ap_phi_mux_data_valid_reg_V_new_1_phi_fu_204_p6  |   9|          2|   24|         48|
-    |currentwrState                                   |   9|          2|    1|          2|
-    |data_reg_q_V_address0                            |  47|         10|    4|         40|
-    |data_reg_q_V_address1                            |  44|          9|    4|         36|
-    |data_reg_q_V_d0                                  |  44|          9|   16|        144|
-    |data_reg_q_V_d1                                  |  44|          9|   16|        144|
-    |data_valid_reg_V_new_1_reg_201                   |  15|          3|   24|         72|
-    |i_data_TDATA_blk_n                               |   9|          2|    1|          2|
-    |o_data_TDATA_blk_n                               |   9|          2|    1|          2|
-    |o_data_V_data_V_1_data_out                       |   9|          2|   32|         64|
-    |o_data_V_data_V_1_state                          |  15|          3|    2|          6|
-    |o_data_V_last_V_1_state                          |  15|          3|    2|          6|
-    |reg_212                                          |   9|          2|   16|         32|
-    |reg_219                                          |   9|          2|   16|         32|
-    +-------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                            | 372|         77|  160|        647|
-    +-------------------------------------------------+----+-----------+-----+-----------+
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                     | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                      |  85|         17|    1|         17|
+    |ap_phi_mux_data_valid_reg_V_new_phi_fu_192_p4  |   9|          2|   24|         48|
+    |ap_phi_mux_storemerge_phi_fu_202_p4            |   9|          2|    1|          2|
+    |currentwrState                                 |   9|          2|    1|          2|
+    |data_reg_q_V_address0                          |  47|         10|    4|         40|
+    |data_reg_q_V_address1                          |  44|          9|    4|         36|
+    |data_reg_q_V_d0                                |  44|          9|   16|        144|
+    |data_reg_q_V_d1                                |  44|          9|   16|        144|
+    |data_valid_reg_V_new_reg_189                   |   9|          2|   24|         48|
+    |i_data_TDATA_blk_n                             |   9|          2|    1|          2|
+    |i_data_V_data_V_0_data_out                     |   9|          2|   32|         64|
+    |i_data_V_data_V_0_state                        |  15|          3|    2|          6|
+    |i_data_V_last_V_0_state                        |  15|          3|    2|          6|
+    |o_data_TDATA_blk_n                             |   9|          2|    1|          2|
+    |o_data_V_data_V_1_data_out                     |   9|          2|   32|         64|
+    |o_data_V_data_V_1_state                        |  15|          3|    2|          6|
+    |o_data_V_last_V_1_state                        |  15|          3|    2|          6|
+    |reg_210                                        |   9|          2|   16|         32|
+    |reg_217                                        |   9|          2|   16|         32|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                          | 414|         86|  197|        701|
+    +-----------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------+----+----+-----+-----------+
-    |              Name              | FF | LUT| Bits| Const Bits|
-    +--------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                       |  16|   0|   16|          0|
-    |currentState                    |   1|   0|    1|          0|
-    |currentState_load_reg_473       |   1|   0|    1|          0|
-    |currentwrState                  |   1|   0|    1|          0|
-    |currentwrState_load_reg_451     |   1|   0|    1|          0|
-    |data_reg_i_V_12                 |   0|   0|    1|          1|
-    |data_reg_q_V_load_10_reg_525    |  16|   0|   16|          0|
-    |data_reg_q_V_load_11_reg_530    |  16|   0|   16|          0|
-    |data_reg_q_V_load_12_reg_535    |  16|   0|   16|          0|
-    |data_reg_q_V_load_13_reg_540    |  16|   0|   16|          0|
-    |data_reg_q_V_load_3_reg_490     |  16|   0|   16|          0|
-    |data_reg_q_V_load_4_reg_495     |  16|   0|   16|          0|
-    |data_reg_q_V_load_5_reg_500     |  16|   0|   16|          0|
-    |data_reg_q_V_load_6_reg_505     |  16|   0|   16|          0|
-    |data_reg_q_V_load_7_reg_510     |  16|   0|   16|          0|
-    |data_reg_q_V_load_8_reg_515     |  16|   0|   16|          0|
-    |data_reg_q_V_load_9_reg_520     |  16|   0|   16|          0|
-    |data_valid_reg_V                |  24|   0|   24|          0|
-    |data_valid_reg_V_new_1_reg_201  |  24|   0|   24|          0|
-    |firstLoad_V                     |   1|   0|    1|          0|
-    |firstLoad_V_load_reg_477        |   1|   0|    1|          0|
-    |o_data_V_data_V_1_payload_A     |  32|   0|   32|          0|
-    |o_data_V_data_V_1_payload_B     |  32|   0|   32|          0|
-    |o_data_V_data_V_1_sel_rd        |   1|   0|    1|          0|
-    |o_data_V_data_V_1_sel_wr        |   1|   0|    1|          0|
-    |o_data_V_data_V_1_state         |   2|   0|    2|          0|
-    |o_data_V_last_V_1_sel_rd        |   1|   0|    1|          0|
-    |o_data_V_last_V_1_state         |   2|   0|    2|          0|
-    |p_Result_4_reg_468              |  24|   0|   24|          0|
-    |p_Val2_s_reg_455                |  24|   0|   24|          0|
-    |reg_212                         |  16|   0|   16|          0|
-    |reg_219                         |  16|   0|   16|          0|
-    |start_V_read_reg_447            |   1|   0|    1|          0|
-    |tmp_3_reg_463                   |  23|   0|   23|          0|
-    |tmp_reg_481                     |   1|   0|    1|          0|
-    +--------------------------------+----+----+-----+-----------+
-    |Total                           | 422|   0|  423|          1|
-    +--------------------------------+----+----+-----+-----------+
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                     |  16|   0|   16|          0|
+    |currentState                  |   1|   0|    1|          0|
+    |currentState_load_reg_455     |   1|   0|    1|          0|
+    |currentwrState                |   1|   0|    1|          0|
+    |currentwrState_load_reg_438   |   1|   0|    1|          0|
+    |data_reg_i_V_12               |   0|   0|    1|          1|
+    |data_reg_q_V_load_10_reg_503  |  16|   0|   16|          0|
+    |data_reg_q_V_load_11_reg_508  |  16|   0|   16|          0|
+    |data_reg_q_V_load_12_reg_513  |  16|   0|   16|          0|
+    |data_reg_q_V_load_13_reg_518  |  16|   0|   16|          0|
+    |data_reg_q_V_load_3_reg_468   |  16|   0|   16|          0|
+    |data_reg_q_V_load_4_reg_473   |  16|   0|   16|          0|
+    |data_reg_q_V_load_5_reg_478   |  16|   0|   16|          0|
+    |data_reg_q_V_load_6_reg_483   |  16|   0|   16|          0|
+    |data_reg_q_V_load_7_reg_488   |  16|   0|   16|          0|
+    |data_reg_q_V_load_8_reg_493   |  16|   0|   16|          0|
+    |data_reg_q_V_load_9_reg_498   |  16|   0|   16|          0|
+    |data_valid_reg_V              |  24|   0|   24|          0|
+    |data_valid_reg_V_new_reg_189  |  24|   0|   24|          0|
+    |firstLoad_V                   |   1|   0|    1|          0|
+    |firstLoad_V_load_reg_459      |   1|   0|    1|          0|
+    |i_data_V_data_V_0_payload_A   |  32|   0|   32|          0|
+    |i_data_V_data_V_0_payload_B   |  32|   0|   32|          0|
+    |i_data_V_data_V_0_sel_rd      |   1|   0|    1|          0|
+    |i_data_V_data_V_0_sel_wr      |   1|   0|    1|          0|
+    |i_data_V_data_V_0_state       |   2|   0|    2|          0|
+    |i_data_V_last_V_0_state       |   2|   0|    2|          0|
+    |o_data_V_data_V_1_payload_A   |  32|   0|   32|          0|
+    |o_data_V_data_V_1_payload_B   |  32|   0|   32|          0|
+    |o_data_V_data_V_1_sel_rd      |   1|   0|    1|          0|
+    |o_data_V_data_V_1_sel_wr      |   1|   0|    1|          0|
+    |o_data_V_data_V_1_state       |   2|   0|    2|          0|
+    |o_data_V_last_V_1_sel_rd      |   1|   0|    1|          0|
+    |o_data_V_last_V_1_state       |   2|   0|    2|          0|
+    |p_Result_5_reg_450            |  24|   0|   24|          0|
+    |reg_210                       |  16|   0|   16|          0|
+    |reg_217                       |  16|   0|   16|          0|
+    |start_V_read_reg_434          |   1|   0|    1|          0|
+    |storemerge_reg_198            |   1|   0|    1|          0|
+    |tmp_2_reg_445                 |  23|   0|   23|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 468|   0|  469|          1|
+    +------------------------------+----+----+-----+-----------+
 
 
 
