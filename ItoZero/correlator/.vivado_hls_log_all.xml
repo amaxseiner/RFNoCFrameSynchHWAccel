@@ -7,6 +7,25 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T20:03:27.690-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T20:02:37.631-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:57:22.843-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:55:04.601-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:54:09.971-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:52:38.757-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:48:55.880-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:47:29.014-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:46:52.999-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:46:24.311-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:40:37.700-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:09:26.633-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:09:01.220-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:03:35.942-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:02:40.274-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T18:01:12.086-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:59:06.324-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:57:39.114-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:54:46.201-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:50.178-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:43:00.247-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-09T17:40:50.190-0500"/>

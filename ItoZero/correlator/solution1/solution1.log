@@ -9,16 +9,5 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-5
-    while executing
-"source /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
-    invoked from within
-"hls::main /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"

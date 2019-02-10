@@ -4,10 +4,11 @@
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source /home/ece492fa18/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
-INFO: [HLS 200-10] Running '/home/ece492fa18/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 17:39:52 EST 2019
+source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 17:54:18 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
-INFO: [HLS 200-10] In directory '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator'
+INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator'
 INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
-INFO: [Common 17-206] Exiting vivado_hls at Sat Feb  9 17:45:36 2019...
+INFO: [HLS 200-10] Creating directory /home/alex/.mozilla/eclipse
+INFO: [Common 17-206] Exiting vivado_hls at Sat Feb  9 20:23:35 2019...

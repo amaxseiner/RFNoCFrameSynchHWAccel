@@ -20,12 +20,14 @@
 
 
 #include "ap_int.h"
-#include "rfnoc.h"
+#include "ItoZero.h"
+
+using namespace std;
 
 #define COR_SIZE_16
 
 
-void ItoZero (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
+void ItoZero (rfnoc_axis i_data[128], rfnoc_axis o_data[128], ap_uint<1> start)
 {
 
 #ifdef COR_SIZE_16
@@ -44,7 +46,13 @@ static ap_int<16> data_reg_i[COR_SIZE];
 static ap_int<16> data_reg_q[COR_SIZE];
 #pragma HLS RESET variable=data_reg_q
 
-  rfnoc_axis out_sample;
+rfnoc_axis out_sample;
+
+static ap_int<10> counter;
+#pragma HLS RESET variable=counter
+
+static ap_int<10> oCounter;
+#pragma HLS RESET variable=oCounter
 
   static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
@@ -77,11 +85,11 @@ static ap_int<16> data_reg_q[COR_SIZE];
                   currentwrState = ST_NOWRITE;
           else
                   currentwrState = ST_WRITE;
-          out_sample.last = 0;
+          //out_sample.last = 0;
           out_sample.data.range(31,16) = data_reg_i[12];
           out_sample.data.range(15,0) = data_reg_q[12];
-          o_data.write(out_sample);
-
+          o_data[oCounter] = (out_sample);
+          oCounter++;
           break;
   }
 
@@ -97,22 +105,23 @@ static ap_int<16> data_reg_q[COR_SIZE];
 		firstLoad = 1;
           break;
     case ST_LOAD:
-	if(!i_data.empty()){
+	//if(!i_data.empty()){
 		if(firstLoad == 0){
 			SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
 		          #pragma HLS UNROLL
 		                data_reg_i[i] = 0;
 		                data_reg_q[i] = data_reg_q[i - 1];}
 		}
-		i_data.read(tmp_data);
+		tmp_data = i_data[counter];
 		data_reg_q[0] = tmp_data.data.range(15,0); // IM
-		data_reg_i[0] = tmp_data.data.range(31,16); // RE 
+		data_reg_i[0] = tmp_data.data.range(31,16); // RE
 		data_valid_reg[0] = 1;   // shift in valid pulse
 		firstLoad = 0;
+		counter++;
 		
-	} else {
-		data_valid_reg[0] = 0;
-	}
+	//} else {
+	//	data_valid_reg[0] = 0;
+	//}
 	break;
     }
 

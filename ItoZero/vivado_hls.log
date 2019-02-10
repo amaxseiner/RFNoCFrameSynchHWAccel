@@ -1,33 +1,15 @@
-INFO: [HLS 200-10] Running '/home/ece492fa18/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 17:43:49 EST 2019
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 20:07:00 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
-INFO: [HLS 200-10] In directory '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero'
-INFO: [HLS 200-10] Opening project '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator'.
-INFO: [HLS 200-10] Opening solution '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1'.
+INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero'
+INFO: [HLS 200-10] Opening project '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator'.
+INFO: [HLS 200-10] Opening solution '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling ../../../../ItoZeroTB.cpp in debug mode
-csim.mk:76: recipe for target 'obj/ItoZeroTB.o' failed
-/home/ece492fa18/Vivado/2017.4/include/hls_stream.h: In function ‘int main(int, char**)’:
-/home/ece492fa18/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
-../../../../ItoZeroTB.cpp:22:44: error: within this context
-../../../../ItoZero.h:10:6: error:   initializing argument 1 of ‘void ItoZero(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>)’
-/home/ece492fa18/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
-../../../../ItoZeroTB.cpp:22:44: error: within this context
-../../../../ItoZero.h:10:6: error:   initializing argument 2 of ‘void ItoZero(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>)’
-make: *** [obj/ItoZeroTB.o] Error 1
-ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+   Compiling ../../../../ItoZero.cpp in debug mode
+   Generating csim.exe
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-5
-    while executing
-"source /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
-    invoked from within
-"hls::main /home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
