@@ -1,2 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog"/>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T17:25:20.220-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:48:05.030-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:43:59.647-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:24:34.420-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T15:08:39.553-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:58:09.009-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:57:34.592-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:57:12.176-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:53:23.588-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:52:14.260-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:52:00.761-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:51:32.564-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:50:53.989-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:50:43.814-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:50:11.280-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:48:19.158-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:47:06.248-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:46:01.560-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:45:21.865-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:44:32.239-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:41:57.394-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:41:32.420-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:40:59.503-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:39:13.082-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:38:31.723-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:23:03.110-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:20:13.933-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:19:01.845-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:18:37.604-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:18:01.043-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:15:47.756-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:14:22.979-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:12:04.777-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:11:10.832-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:10:24.101-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:09:25.197-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:09:03.165-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:07:17.204-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:06:25.943-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:05:31.315-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:04:07.232-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:02:56.148-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:02:12.084-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:01:29.503-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T14:01:05.005-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T13:59:19.725-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T13:58:48.610-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T13:52:39.786-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T13:52:09.892-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T13:51:15.544-0500"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

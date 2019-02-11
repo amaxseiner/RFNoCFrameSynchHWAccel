@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="complexGMU.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/complexGMU.cpp"/>
-    <originFiles name="complexGMU.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/complexGMU.cpp"/>
+    <originFiles name="complexGMU.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMU.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="complexGMUTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMUTB.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
