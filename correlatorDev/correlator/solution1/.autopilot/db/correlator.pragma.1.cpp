@@ -27183,7 +27183,7 @@ _ssdm_Unroll(0,0,0, "");
                   SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
 _ssdm_Unroll(0,0,0, "");
  data_reg_i[i] = data_reg_i[i - 1];
-                                data_reg_q[i] = data_reg_q[i - 1];}
+   data_reg_q[i] = data_reg_q[i - 1];}
 
                    i_data.read(tmp_data);
                    data_reg_q[0] = tmp_data.data.range(15,0);

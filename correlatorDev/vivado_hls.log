@@ -1,27 +1,21 @@
-
-****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source /home/ece492fa18/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/home/ece492fa18/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 09 12:40:42 EST 2019
+INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-45-generic) on Mon Feb 11 01:45:12 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev'
 INFO: [HLS 200-10] Opening project '/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator'.
 INFO: [HLS 200-10] Adding design file 'correlator.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'correlatorTB.cpp' to the project
 INFO: [HLS 200-10] Opening solution '/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:44 ; elapsed = 00:00:14 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 122401 ; free virtual = 256881
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 366.836 ; gain = 13.375 ; free physical = 122401 ; free virtual = 256881
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:43 ; elapsed = 00:00:14 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121886 ; free virtual = 256746
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121882 ; free virtual = 256746
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:47 ; elapsed = 00:00:17 . Memory (MB): peak = 367.426 ; gain = 13.965 ; free physical = 122390 ; free virtual = 256868
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 367.438 ; gain = 13.965 ; free physical = 121866 ; free virtual = 256734
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:47 ; elapsed = 00:00:18 . Memory (MB): peak = 495.379 ; gain = 141.918 ; free physical = 122383 ; free virtual = 256861
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 495.391 ; gain = 141.918 ; free physical = 121858 ; free virtual = 256727
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlator' (correlator.cpp:30).
 INFO: [XFORM 203-501] Unrolling loop 'ADDER_STAGE3_LOOP' (correlator.cpp:308) in function 'correlator' completely.
 INFO: [XFORM 203-501] Unrolling loop 'ADDER_STAGE2_LOOP' (correlator.cpp:315) in function 'correlator' completely.
@@ -43,8 +37,8 @@ INFO: [XFORM 203-101] Partitioning array 'sum3_reg_i.V'  in dimension 1 complete
 INFO: [XFORM 203-101] Partitioning array 'sum3_reg_q.V'  in dimension 1 completely.
 WARNING: [XFORM 203-104] Completely partitioning array 'pn_seq.V'  accessed through non-constant indices on dimension 1 (correlator.cpp:368:30), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
 INFO: [XFORM 203-101] Partitioning array 'pn_seq.V'  in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 495.379 ; gain = 141.918 ; free physical = 122354 ; free virtual = 256829
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:49 ; elapsed = 00:00:20 . Memory (MB): peak = 495.379 ; gain = 141.918 ; free physical = 122345 ; free virtual = 256818
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 495.391 ; gain = 141.918 ; free physical = 121822 ; free virtual = 256695
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:49 ; elapsed = 00:00:20 . Memory (MB): peak = 495.391 ; gain = 141.918 ; free physical = 121810 ; free virtual = 256685
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'correlator' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -54,13 +48,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'correlator'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 20.8 seconds; current allocated memory: 111.073 MB.
+INFO: [HLS 200-111]  Elapsed time: 20.54 seconds; current allocated memory: 111.128 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 113.186 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 113.241 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlator'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -76,23 +70,10 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'correlator' to 'ap_ctr
 INFO: [SYN 201-210] Renamed object name 'correlator_mul_20s_20s_40_4_1' to 'correlator_mul_20bkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'correlator_mul_20bkb': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
-INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 115.988 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 116.006 MB.
 INFO: [RTMG 210-282] Generating pipelined core: 'correlator_mul_20bkb_MulnS_0'
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 558.832 ; gain = 205.371 ; free physical = 122341 ; free virtual = 256797
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:51 ; elapsed = 00:00:23 . Memory (MB): peak = 558.844 ; gain = 205.371 ; free physical = 121782 ; free virtual = 256664
 INFO: [SYSC 207-301] Generating SystemC RTL for correlator.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlator.
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ece492fa18/Vivado/2017.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Feb  9 12:41:17 2019...
-INFO: [HLS 200-112] Total elapsed time: 60.82 seconds; peak allocated memory: 115.988 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Sat Feb  9 12:41:42 2019...
+INFO: [HLS 200-112] Total elapsed time: 23.04 seconds; peak allocated memory: 116.006 MB.

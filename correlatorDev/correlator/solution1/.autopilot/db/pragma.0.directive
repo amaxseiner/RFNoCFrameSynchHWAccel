@@ -130,62 +130,6 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum4_reg_i"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum4_reg_q"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum5_reg_i"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum5_reg_q"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum6_reg_i"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum6_reg_q"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum7_reg_i"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="sum7_reg_q"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="out_sample_cnt"/>
 </pragma>
@@ -211,18 +155,6 @@
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="currentwrState"/>
 </pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
 <pragma name="UNROLL"/>

@@ -20,19 +20,17 @@
 
 #include <hls_stream.h>
 #include "ap_int.h"
-#include "ItoZero.h"
+#include "rfnoc.h"
 
-using namespace std;
 
-#define COR_SIZE_16
 
 
 void ItoZero (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
 {
 
-#ifdef COR_SIZE_16
+
 const int COR_SIZE = 16;
-#endif
+
 
 #pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE ap_hs port=pnseq_in
@@ -46,7 +44,7 @@ static ap_int<16> data_reg_i[COR_SIZE];
 static ap_int<16> data_reg_q[COR_SIZE];
 #pragma HLS RESET variable=data_reg_q
 
-rfnoc_axis out_sample;
+  rfnoc_axis out_sample;
 
   static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
@@ -71,18 +69,21 @@ rfnoc_axis out_sample;
 // Output write state machine
   switch(currentwrState) {
       case ST_NOWRITE:
-          if(data_valid_reg[12])
-			  currentwrState = ST_WRITE;
+    	  if(data_valid_reg[11]){
+    		  currentwrState = ST_WRITE;
+    	  }
           break;
       case ST_WRITE:
-          if(!data_valid_reg[12])
-                  currentwrState = ST_NOWRITE;
+
+		  out_sample.last = 0;
+		  out_sample.data.range(31,16) = data_reg_i[12];
+		  out_sample.data.range(15,0) = data_reg_q[12];
+		  o_data.write(out_sample);
+
+          if(!data_valid_reg[11])
+              currentwrState = ST_NOWRITE;
           else
-                  currentwrState = ST_WRITE;
-          //out_sample.last = 0;
-          out_sample.data.range(31,16) = data_reg_i[12];
-          out_sample.data.range(15,0) = data_reg_q[12];
-          o_data.write(out_sample);
+        	  currentwrState = ST_WRITE;
           break;
   }
 
@@ -93,24 +94,27 @@ rfnoc_axis out_sample;
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
   switch(currentState) {
     case ST_IDLE:
-          if(start) // wait for start signal. The same start signal is used to load PN sequence generator
-  		currentState = ST_LOAD;
-		firstLoad = 1;
-          break;
+        if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
+        	currentState = ST_LOAD;
+        	i_data.read(tmp_data);
+        	o_data.write(tmp_data);
+        }
+        break;
     case ST_LOAD:
-	//if(!i_data.empty()){
-		if(firstLoad == 0){
-			SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
-		          #pragma HLS UNROLL
-		                data_reg_i[i] = 0;
-		                data_reg_q[i] = data_reg_q[i - 1];}
-		}
+	if(!i_data.empty()){
+		SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
+			  #pragma HLS UNROLL
+					data_reg_i[i] = 0;
+					data_reg_q[i] = data_reg_q[i - 1];}
+
 		i_data.read(tmp_data);
 		data_reg_q[0] = tmp_data.data.range(15,0); // IM
-		data_reg_i[0] = tmp_data.data.range(31,16); // RE
+		data_reg_i[0] = tmp_data.data.range(31,16); // RE 
 		data_valid_reg[0] = 1;   // shift in valid pulse
-		firstLoad = 0;
-		
+		o_data.write(tmp_data);
+	} else {
+		data_valid_reg[0] = 0;
+	}
 	break;
     }
 

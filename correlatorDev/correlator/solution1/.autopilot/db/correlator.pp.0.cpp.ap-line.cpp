@@ -27163,7 +27163,7 @@ const int COR_SIZE = 16;
                   SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
 #pragma HLS UNROLL
  data_reg_i[i] = data_reg_i[i - 1];
-                                data_reg_q[i] = data_reg_q[i - 1];}
+   data_reg_q[i] = data_reg_q[i - 1];}
 #pragma empty_line
                    i_data.read(tmp_data);
                    data_reg_q[0] = tmp_data.data.range(15,0);

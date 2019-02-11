@@ -81,7 +81,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "data_valid_reg_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "data_reg_i_V_12", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "firstLoad_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "data_reg_i_V_15", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "data_reg_i_V_14", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "data_reg_i_V_13", "Type" : "Vld", "Direction" : "O"},
@@ -112,7 +111,6 @@ set ArgLastReadFirstWriteLatency {
 		data_valid_reg_V {Type IO LastRead -1 FirstWrite -1}
 		data_reg_i_V_12 {Type IO LastRead -1 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
-		firstLoad_V {Type IO LastRead -1 FirstWrite -1}
 		data_reg_i_V_15 {Type O LastRead -1 FirstWrite -1}
 		data_reg_i_V_14 {Type O LastRead -1 FirstWrite -1}
 		data_reg_i_V_13 {Type O LastRead -1 FirstWrite -1}

@@ -3,17 +3,17 @@
 	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;vivado_hls.log&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;ItoZero.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:32 ; elapsed = 00:00:14 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 3754 ; free virtual = 6130" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:33 ; elapsed = 00:00:15 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 3749 ; free virtual = 6130" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:13 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121575 ; free virtual = 256559" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121572 ; free virtual = 256559" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 3737 ; free virtual = 6120" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 121559 ; free virtual = 256548" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 3730 ; free virtual = 6115" tag=""/>
-	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;ItoZero&apos; (ItoZero.cpp:30)." tag=""/>
-	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;SHIFT_DATA&apos; (ItoZero.cpp:103) in function &apos;ItoZero&apos; completely." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 121553 ; free virtual = 256543" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;ItoZero&apos; (ItoZero.cpp:28)." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;SHIFT_DATA&apos; (ItoZero.cpp:105) in function &apos;ItoZero&apos; completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;data_reg_i.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 3701 ; free virtual = 6090" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 3698 ; free virtual = 6089" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121525 ; free virtual = 256518" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:00:18 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121522 ; free virtual = 256517" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;ItoZero&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
@@ -21,33 +21,35 @@
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;ItoZero&apos;." tag=""/>
-	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;data_reg_q_V_load_2&apos;, ItoZero.cpp:106) on array &apos;data_reg_q_V&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;data_reg_q_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis write on port &apos;o_data_V_data_V&apos; (ItoZero.cpp:100) and axis write on port &apos;o_data_V_data_V&apos; (ItoZero.cpp:81)." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;data_reg_q_V_load_4&apos;, ItoZero.cpp:108) on array &apos;data_reg_q_V&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;data_reg_q_V&apos;." tag=""/>
 	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 16, Depth = 16." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 17.77 seconds; current allocated memory: 81.467 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 17.72 seconds; current allocated memory: 81.454 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.12 seconds; current allocated memory: 81.909 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.15 seconds; current allocated memory: 81.919 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;ItoZero&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="431" content="Design contains AXI ports. Reset is fixed to synchronous and active low." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/i_data_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/i_data_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/i_data_V_data_V&apos; to &apos;axis&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/i_data_V_last_V&apos; to &apos;axis&apos;." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/o_data_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/o_data_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ItoZero/start_V&apos; to &apos;ap_none&apos;." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;ItoZero&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;ItoZero_data_reg_q_V&apos; to &apos;ItoZero_data_reg_bkb&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;ItoZero&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.1 seconds; current allocated memory: 82.697 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.16 seconds; current allocated memory: 82.655 MB." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1791" content="Implementing memory &apos;ItoZero_data_reg_bkb_ram (RAM)&apos; using block RAMs with reset." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 3689 ; free virtual = 6087" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:46 ; elapsed = 00:00:19 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121519 ; free virtual = 256516" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for ItoZero." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for ItoZero." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for ItoZero." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 18.58 seconds; peak allocated memory: 82.697 MB." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 18.71 seconds; peak allocated memory: 82.655 MB." tag=""/>
 </Messages>

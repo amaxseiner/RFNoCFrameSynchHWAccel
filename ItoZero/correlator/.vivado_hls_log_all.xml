@@ -3,10 +3,7 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog>
-        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;command 'ap_source' returned error code&#xA;    while executing&#xA;&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:16.839-0500"/>
-        <logs message="ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:16.803-0500"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
       <packageLog/>
       <csimLog/>
@@ -15,9 +12,10 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:06.729-0500" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_2', ItoZero.cpp:106) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-10T11:27:06.520-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-02-10T11:26:49.287-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.600-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_4', ItoZero.cpp:108) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.329-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between axis write on port 'o_data_V_data_V' (ItoZero.cpp:100) and axis write on port 'o_data_V_data_V' (ItoZero.cpp:81)." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.290-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:22.259-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
