@@ -1,4 +1,7 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <checksum>
+        <value string="false"/>
+    </checksum>
     <downStreamTool>
         <DownStreamTool name="vivado"/>
     </downStreamTool>
@@ -46,7 +49,7 @@
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>

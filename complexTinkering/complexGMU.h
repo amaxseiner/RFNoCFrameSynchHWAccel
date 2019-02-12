@@ -1,5 +1,6 @@
 #include "ap_int.h"
 #include "ap_fixed.h"
+#include <fstream>
 
 
 using namespace std;
@@ -18,29 +19,56 @@ struct semiComplex{
 
 semiComplex preamble[256];
 
+void generatePreamble();
+void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
+semiComplex toComplexFromStream(rfnoc_axis dat);
+rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
+
 void generatePreamble(){
 	for(int i =0;i<256;i++){
-		preamble[i].i = ((16*(16+i)) + (1+i));
-		preamble[i].q = ((16*(16+i)) + (1+i));
+		preamble[i].i = (float)((16*(16+i)) + (1+i))/100;
+		preamble[i].q = (float)((16*(16+i)) + (1+i))/100;
 	}
 }
 
-void complexMultiplier(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos)
-{
-	struct semiComplex dat;
-	struct semiComplex res;
+void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream *result){
+	// take in the input data and turn it into I and Q samples
+	semiComplex num;
 
-	dat.i = i_data.data.range(31,16);
-	dat.q = i_data.data.range(15,0);
-	res.q = dat.q.V.VAL * preamble[pos.VAL].q.V.VAL;
+	num = toComplexFromStream(i_data);
+	ap_fixed<16,8> iRes = num.i * preamble[pos].i;
+	ap_fixed<16,8> qRes = num.q * preamble[pos].q;
 
-	//o_data->data.range(31,16) = res.i;
-	o_data->data.range(15,0) = res.q.V.VAL;
-	o_data->last = 0;
+	*result << setw(32) << num.q;
+	*result << ",";
+	*result << setw(32) << preamble[pos].q;
+	*result << ",";
+	*result << setw(32) << qRes;
+	*result << ",";
+	semiComplex res;
+	res.i = iRes;
+	res.q = qRes;
+	rfnoc_axis resrf = toStreamFromComplex(res,pos);
+	*result << setw(32) << resrf.data.range(15,0);//converted to 2's complement
+	o_data = &resrf;
+	return;
+}
+
+semiComplex toComplexFromStream(rfnoc_axis dat){
+	semiComplex res;
+	res.i.V = dat.data.range(31,16);
+	res.q.V = dat.data.range(15,0);
+	return res;
+}
+
+rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos){
+	rfnoc_axis rf;
+	rf.data.range(31,16) = dat.i.V;
+	rf.data.range(15,0) = dat.q.V;
 	if(pos == 255){
-		o_data->last = 1;
+		rf.last = 1;
+	} else {
+		rf.last = 0;
 	}
+	return rf;
 }
-
-void generatePreamble();
-void complexMultiplier(rfnoc_axis, rfnoc_axis* , ap_int<32> );

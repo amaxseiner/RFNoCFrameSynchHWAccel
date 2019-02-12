@@ -3,6 +3,14 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T02:38:45.002-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T02:36:17.682-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:47:48.067-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:46:03.396-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:44:37.336-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:43:31.170-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:41:58.457-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-12T01:40:25.431-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:30:05.261-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T17:25:20.220-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:48:05.030-0500"/>
