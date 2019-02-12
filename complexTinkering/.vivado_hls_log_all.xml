@@ -3,6 +3,7 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:30:05.261-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T17:25:20.220-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:48:05.030-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="complexTinkering" solutionName="solution1" date="2019-02-10T16:43:59.647-0500"/>
@@ -58,7 +59,14 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <csimLog/>
+      <csimLog>
+        <logs message="make: Warning: File '/dev/null' has modification time 13160 s in the future&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:41:28.730-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 13345 s in the future&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:38:24.269-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 13411 s in the future&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:37:18.646-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 13735 s in the future&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:31:53.960-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 13815 s in the future&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:30:34.307-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 13844 s in the future&#xA;../../../complexGMUTB.cpp: In function ‘int main(int, char**)’:&#xA;../../../complexGMUTB.cpp:18:19: error: missing template arguments before ‘(’ token&#xA;../../../complexGMUTB.cpp:20:19: error: missing template arguments before ‘(’ token&#xA;make: *** [obj/complexGMUTB.o] Error 1" projectName="complexTinkering" solutionName="solution1" date="2019-02-11T22:30:05.232-0500" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
