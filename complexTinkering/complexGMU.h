@@ -19,10 +19,17 @@ struct semiComplex{
 
 semiComplex preamble[256];
 
+semiComplex preambleWindow[16];
+
+semiComplex window[16];// window of 16 complex samples
+
+semiComplex corrRes[16];
+
 void generatePreamble();
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
 rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
+void correlate();
 
 void generatePreamble(){
 	for(int i =0;i<256;i++){
@@ -36,10 +43,16 @@ void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream
 	semiComplex num;
 
 	num = toComplexFromStream(i_data);
-	ap_fixed<16,8> iRes = num.i * preamble[pos].i;
-	ap_fixed<16,8> qRes = num.q * preamble[pos].q;
 
-	*result << setw(32) << num.q;
+	shiftWindow(num);
+	if(pos > 16){
+		correlate();
+	}
+	//ap_fixed<16,8> iRes = num.i * preamble[pos].i;
+	//ap_fixed<16,8> qRes = num.q * preamble[pos].q;
+
+
+	/**result << setw(32) << num.q;
 	*result << ",";
 	*result << setw(32) << preamble[pos].q;
 	*result << ",";
@@ -50,8 +63,24 @@ void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream
 	res.q = qRes;
 	rfnoc_axis resrf = toStreamFromComplex(res,pos);
 	*result << setw(32) << resrf.data.range(15,0);//converted to 2's complement
-	o_data = &resrf;
+	o_data = &resrf;*/
 	return;
+}
+
+void shiftWindow(semiComplex newVal){
+	for(int i=15;i>0;i--)
+		window[i] = window[i-1];
+
+	window[0] = newVal;
+	return;
+}
+
+void correlate(){
+	for(int a=0;a<16;a++){
+		corrRes[a].i += window[a].i * preambleWindow[a].i;
+		corrRes[a].q += window[a].q * preambleWindow[a].q;
+
+	}
 }
 
 semiComplex toComplexFromStream(rfnoc_axis dat){
