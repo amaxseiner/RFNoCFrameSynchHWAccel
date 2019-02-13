@@ -12,8 +12,8 @@ using namespace std;
 };
 
 struct semiComplex{
-	 ap_fixed<16,8> i;
-	 ap_fixed<16,8> q;
+	 ap_fixed<16,11> i;
+	 ap_fixed<16,11> q;
 };
 
 
@@ -23,19 +23,25 @@ semiComplex preambleWindow[16];
 
 semiComplex window[16];// window of 16 complex samples
 
-semiComplex corrRes[16];
+semiComplex corrRes[256];
+
+ap_fixed<16,10> stuff[16] = {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
 
 void generatePreamble();
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
 rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
-void correlate();
+void correlate(ofstream *result,ap_int<32> pos);
+void shiftWindow(semiComplex newVal);
 
 void generatePreamble(){
-	for(int i =0;i<256;i++){
-		preamble[i].i = (float)((16*(16+i)) + (1+i))/100;
-		preamble[i].q = (float)((16*(16+i)) + (1+i))/100;
+
+
+	for(int i=0;i<16;i++){
+		preambleWindow[i].i = stuff[i];
+		preambleWindow[i].q = stuff[i];
 	}
+
 }
 
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream *result){
@@ -43,11 +49,12 @@ void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream
 	semiComplex num;
 
 	num = toComplexFromStream(i_data);
+	*result << setw(16) << num.q;
 
 	shiftWindow(num);
-	if(pos > 16){
-		correlate();
-	}
+	*result << ",";
+	correlate(result,pos);
+
 	//ap_fixed<16,8> iRes = num.i * preamble[pos].i;
 	//ap_fixed<16,8> qRes = num.q * preamble[pos].q;
 
@@ -64,6 +71,7 @@ void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream
 	rfnoc_axis resrf = toStreamFromComplex(res,pos);
 	*result << setw(32) << resrf.data.range(15,0);//converted to 2's complement
 	o_data = &resrf;*/
+
 	return;
 }
 
@@ -75,11 +83,10 @@ void shiftWindow(semiComplex newVal){
 	return;
 }
 
-void correlate(){
+void correlate(ofstream *result,ap_int<32> pos){
 	for(int a=0;a<16;a++){
-		corrRes[a].i += window[a].i * preambleWindow[a].i;
-		corrRes[a].q += window[a].q * preambleWindow[a].q;
-
+		corrRes[pos+a].i += window[a].i * preambleWindow[a].i;
+		corrRes[pos+a].q += window[a].q * preambleWindow[a].q;
 	}
 }
 

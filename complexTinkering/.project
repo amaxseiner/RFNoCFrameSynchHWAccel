@@ -47,6 +47,11 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMU.h</location>
 		</link>
 		<link>
+			<name>source/corrData.dat</name>
+			<type>1</type>
+			<location>/home/alex/Downloads/corrData.dat</location>
+		</link>
+		<link>
 			<name>testbench/complexGMUTB.cpp</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMUTB.cpp</location>
