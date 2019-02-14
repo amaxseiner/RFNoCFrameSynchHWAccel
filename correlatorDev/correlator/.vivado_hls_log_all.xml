@@ -11,10 +11,7 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-11T01:45:33.853-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'pn_seq.V'  accessed through non-constant indices on dimension 1 (correlator.cpp:368:30), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="correlator" solutionName="solution1" date="2019-02-11T01:45:30.899-0500" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>

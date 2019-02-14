@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.50 . Memory (MB): peak = 366.852 ; gain = 13.375 ; free physical = 2974 ; free virtual = 5703" tag=""/>
+	<Message prefix="[HLS 200-70]" severity="ERROR" keynum="HLS_70_1308" content="Cannot find any design unit to elaborate." tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="Error in linking the design.
+    while executing
+&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/solution1/csynth.tcl&quot;
+    invoked from within
+&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/solution1/csynth.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

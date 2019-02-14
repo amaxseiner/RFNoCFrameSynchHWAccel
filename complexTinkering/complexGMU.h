@@ -35,8 +35,6 @@ void correlate(ofstream *result,ap_int<32> pos);
 void shiftWindow(semiComplex newVal);
 
 void generatePreamble(){
-
-
 	for(int i=0;i<16;i++){
 		preambleWindow[i].i = stuff[i];
 		preambleWindow[i].q = stuff[i];

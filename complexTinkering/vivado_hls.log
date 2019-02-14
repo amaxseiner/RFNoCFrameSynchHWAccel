@@ -1,11 +1,13 @@
-================================================================
-  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
-  Version 2017.2
-  Build 1909853 on Thu Jun 15 18:55:24 MDT 2017
-  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
-================================================================
-INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-MS-7917' (Linux_x86_64 version 4.15.0-45-generic) on Tue Feb 12 22:14:05 EST 2019
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Wed Feb 13 22:49:46 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering'
-INFO: [HLS 200-10] Bringing up Vivado HLS GUI ... 
+INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
+INFO: [Common 17-206] Exiting vivado_hls at Wed Feb 13 23:19:00 2019...

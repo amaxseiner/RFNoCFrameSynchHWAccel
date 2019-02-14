@@ -20,375 +20,105 @@
 */
 #include <hls_stream.h>
 #include "ap_int.h"
+#include "ap_fixed.h"
 #include "rfnoc.h"
-// Uncomment to generate correlator size 256
-//#define COR_SIZE_256
-#define COR_SIZE_16
-// Uncomment to generate correlator size 512
-//#define COR_SIZE_512
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start, hls::stream<ap_uint<1> > pnseq_in, ap_uint<10> pnseq_len)
+void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
 {
-
-#ifdef COR_SIZE_256
-const int COR_SIZE = 256;
-#endif
-
-#ifdef COR_SIZE_16
-const int COR_SIZE = 16;
-#endif
-
-#ifdef COR_SIZE_512
-const int COR_SIZE = 512;
-#endif
+struct semiComplex{
+	 ap_fixed<16,11> i;
+	 ap_fixed<16,11> q;
+};
 
 #pragma HLS RESOURCE variable=o_data latency=1
-#pragma HLS INTERFACE ap_hs port=pnseq_in
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 #pragma HLS PIPELINE II=1
-  static ap_int<16> data_reg_i[COR_SIZE];
-#pragma HLS RESET variable=data_reg_i
-#pragma HLS ARRAY_PARTITION variable=data_reg_i complete dim=1
-  static ap_int<16> data_reg_q[COR_SIZE];
-#pragma HLS RESET variable=data_reg_q
-#pragma HLS ARRAY_PARTITION variable=data_reg_q complete dim=1
-  static ap_int<16> product_reg_i[COR_SIZE];
-#pragma HLS ARRAY_PARTITION variable=product_reg_i complete dim=1
-  static ap_int<16> product_reg_q[COR_SIZE];
-#pragma HLS ARRAY_PARTITION variable=product_reg_q complete dim=1
-  static ap_int<16> adder_in_reg_i[COR_SIZE];
-#pragma HLS ARRAY_PARTITION variable=adder_in_reg_i complete dim=1
-  static ap_int<16> adder_in_reg_q[COR_SIZE];
-#pragma HLS ARRAY_PARTITION variable=adder_in_reg_q complete dim=1
 
-  static ap_int<17> sum1_reg_i[COR_SIZE/2];
-#pragma HLS ARRAY_PARTITION variable=sum1_reg_i complete dim=1
-  static ap_int<17> sum1_reg_q[COR_SIZE/2];
-#pragma HLS ARRAY_PARTITION variable=sum1_reg_q complete dim=1
+  static semiComplex corrResult[256];
+#pragma HLS ARRAY_PARTITION variable=corrResult complete dim=1
+#pragma HLS RESET variable=corrResult
 
-  static ap_int<18> sum2_reg_i[COR_SIZE/4];
-#pragma HLS ARRAY_PARTITION variable=sum2_reg_i complete dim=1
-  static ap_int<18> sum2_reg_q[COR_SIZE/4];
-#pragma HLS ARRAY_PARTITION variable=sum2_reg_q complete dim=1
+  static ap_int<1> corrResultValid[256];
+#pragma HLS ARRAY_PARTITION variable=corrResultValid complete dim=1
+#pragma HLS RESET variable=corrResultValid
 
-  static ap_int<19> sum3_reg_i[COR_SIZE/8];
-#pragma HLS ARRAY_PARTITION variable=sum3_reg_i complete dim=1
-  static ap_int<19> sum3_reg_q[COR_SIZE/8];
-#pragma HLS ARRAY_PARTITION variable=sum3_reg_q complete dim=1
-#ifdef COR_SIZE_256
-#ifdef COR_SIZE_512
-  static ap_int<20> sum4_reg_i[COR_SIZE/16];
-#pragma HLS ARRAY_PARTITION variable=sum4_reg_i complete dim=1
-  static ap_int<20> sum4_reg_q[COR_SIZE/16];
-#pragma HLS ARRAY_PARTITION variable=sum4_reg_q complete dim=1
 
-  static ap_int<21> sum5_reg_i[COR_SIZE/32];
-#pragma HLS ARRAY_PARTITION variable=sum5_reg_i complete dim=1
-  static ap_int<21> sum5_reg_q[COR_SIZE/32];
-#pragma HLS ARRAY_PARTITION variable=sum5_reg_q complete dim=1
+  static ap_fixed<16,11> preamble[16] = {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+#pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 
-  static ap_int<22> sum6_reg_i[COR_SIZE/64];
-#pragma HLS ARRAY_PARTITION variable=sum6_reg_i complete dim=1
-  static ap_int<22> sum6_reg_q[COR_SIZE/64];
-#pragma HLS ARRAY_PARTITION variable=sum6_reg_q complete dim=1
 
-  static ap_int<23> sum7_reg_i[COR_SIZE/128];
-#pragma HLS ARRAY_PARTITION variable=sum7_reg_i complete dim=1
-  static ap_int<23> sum7_reg_q[COR_SIZE/128];
-#pragma HLS ARRAY_PARTITION variable=sum7_reg_q complete dim=1
-#endif
-#endif
-
+  static semiComplex window[16];
+#pragma HLS ARRAY_PARTITION variable=window complete dim=1
+#pragma HLS RESET variable=window
 
   rfnoc_axis out_sample;
 
   static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
 
-  static ap_uint<1> pn_seq[512];
-#pragma HLS ARRAY_PARTITION variable=pn_seq complete dim=1
+  static ap_uint<32> loadCount;
+#pragma HLS RESET variable=loadCount
 
   rfnoc_axis tmp_data;
 
+  static ap_uint<32> readResCount;
+#pragma HLS RESET variable=readResCount
+
+
   static ap_uint<10> load_cnt;
 #pragma HLS RESET variable=load_cnt
-  static ap_uint<24> data_valid_reg;
   static ap_uint<10> pnseq_len_reg;
 
-  enum correlatorState {ST_IDLE = 0, ST_LOAD, ST_GEN, ST_CORRELATE};
+  enum correlatorState {ST_IDLE = 0, ST_LOAD, ST_CORRELATE};
   static correlatorState currentState;
 #pragma HLS RESET variable=currentState
 
-  enum writeState {ST_NOWRITE = 0, ST_WRITE};
-  static writeState currentwrState;
-#pragma HLS RESET variable=currentwrState
 
-#ifdef COR_SIZE_256
-
-  static ap_int<24> sum_reg_i;
-  static ap_int<24> sum_reg_q;
-
-  static ap_int<48> sq_reg_i;
-  static ap_int<48> sq_reg_q;
-
-  static ap_int<49> sq_sum;
-
-// Output write state machine
-  switch(currentwrState) {
-      case ST_NOWRITE:
-          if(data_valid_reg[11])
-                  currentwrState = ST_WRITE;
-          break;
-      case ST_WRITE:
-          if(out_sample_cnt == pnseq_len_reg-1){
-                   out_sample.last = 1;
-                   out_sample_cnt = 0; }
-          else{
-                   out_sample.last = 0;
-               out_sample_cnt = out_sample_cnt + 1;}
-
-          if(!data_valid_reg[11])
-                  currentwrState = ST_NOWRITE;
-          else
-                  currentwrState = ST_WRITE;
-
-          out_sample.data = sq_sum.range(48,17);
-          o_data.write(out_sample);
-
-          break;
-  }
-
-// correlation power I^2 + Q^2
-   sq_sum = (sq_reg_i + sq_reg_q);
-
-   sq_reg_i = sum_reg_i*sum_reg_i; // I*I
-   sq_reg_q = sum_reg_q*sum_reg_q; // Q*Q
-
-//Last addder stage
-   sum_reg_i = sum7_reg_i[0] + sum7_reg_i[1];
-   sum_reg_q = sum7_reg_q[0] + sum7_reg_q[1];
-#endif
-
-#ifdef COR_SIZE_512
-
-   static ap_int<24> sum8_reg_i[COR_SIZE/256];
-   #pragma HLS ARRAY_PARTITION variable=sum8_reg_i complete dim=1
-   static ap_int<24> sum8_reg_q[COR_SIZE/256];
-   #pragma HLS ARRAY_PARTITION variable=sum8_reg_q complete dim=1
-
-   static ap_int<25> sum_reg_i;
-   static ap_int<25> sum_reg_q;
-
-   static ap_int<50> sq_reg_i;
-   static ap_int<50> sq_reg_q;
-
-   static ap_int<51> sq_sum;
-
-// Output write state machine
-  switch(currentwrState) {
-      case ST_NOWRITE:
-          if(data_valid_reg[12])
-                  currentwrState = ST_WRITE;
-          break;
-      case ST_WRITE:
-          if(out_sample_cnt == pnseq_len_reg-1){
-                   out_sample.last = 1;
-                   out_sample_cnt = 0; }
-          else{
-                   out_sample.last = 0;
-               out_sample_cnt = out_sample_cnt + 1;}
-
-          if(!data_valid_reg[12])
-                  currentwrState = ST_NOWRITE;
-          else
-                  currentwrState = ST_WRITE;
-
-          out_sample.data = sq_sum.range(50,19);
-          o_data.write(out_sample);
-
-          break;
-  }
-
-// correlation power I^2 + Q^2
-      sq_sum = (sq_reg_i + sq_reg_q);
-
-      sq_reg_i = sum_reg_i*sum_reg_i; // I*I
-      sq_reg_q = sum_reg_q*sum_reg_q; // Q*Q
-
-//Last adder stage
-      sum_reg_i = sum8_reg_i[0] + sum8_reg_i[1];
-      sum_reg_q = sum8_reg_q[0] + sum8_reg_q[1];
-
-// An additional adder stage for size 512
-      ADDER_STAGE8_LOOP: for(int i = 0; i<COR_SIZE/256; i++){
-      #pragma HLS UNROLL
-         sum8_reg_i[i] = sum7_reg_i[2*i] + sum7_reg_i[2*i + 1];
-         sum8_reg_q[i] = sum7_reg_q[2*i] + sum7_reg_q[2*i + 1];
-      }
-
-#endif
-
-#ifdef COR_SIZE_16
-
-      static ap_int<24> sum_reg_i;
-      static ap_int<24> sum_reg_q;
-
-      static ap_int<48> sq_reg_i;
-      static ap_int<48> sq_reg_q;
-
-      static ap_int<49> sq_sum;
-
-    // Output write state machine
-      switch(currentwrState) {
-          case ST_NOWRITE:
-              if(data_valid_reg[7])
-                      currentwrState = ST_WRITE;
-              break;
-          case ST_WRITE:
-              if(out_sample_cnt == pnseq_len_reg-1){
-                       out_sample.last = 1;
-                       out_sample_cnt = 0; }
-              else{
-                       out_sample.last = 0;
-                   out_sample_cnt = out_sample_cnt + 1;}
-
-              if(!data_valid_reg[7])
-                      currentwrState = ST_NOWRITE;
-              else
-                      currentwrState = ST_WRITE;
-
-              out_sample.data = sq_sum.range(48,17);
-              o_data.write(out_sample);
-
-              break;
-      }
-
-    // correlation power I^2 + Q^2
-       sq_sum = (sq_reg_i + sq_reg_q);
-
-       sq_reg_i = sum_reg_i*sum_reg_i; // I*I
-       sq_reg_q = sum_reg_q*sum_reg_q; // Q*Q
-
-    //Last addder stage
-       sum_reg_i = sum3_reg_i[0] + sum3_reg_i[1];
-       sum_reg_q = sum3_reg_q[0] + sum3_reg_q[1];
-
-#endif
-
-// 7 binary tree adder stages
-#ifdef COR_SIZE_256
-#ifdef COR_SIZE_512
-  ADDER_STAGE7_LOOP: for(int i = 0; i<COR_SIZE/128; i++){
-  #pragma HLS UNROLL
-    sum7_reg_i[i] = sum6_reg_i[2*i] + sum6_reg_i[2*i + 1];
-    sum7_reg_q[i] = sum6_reg_q[2*i] + sum6_reg_q[2*i + 1];
-  }
-
-  ADDER_STAGE6_LOOP: for(int i = 0; i<COR_SIZE/64; i++){
-  #pragma HLS UNROLL
-     sum6_reg_i[i] = sum5_reg_i[2*i] + sum5_reg_i[2*i + 1];
-     sum6_reg_q[i] = sum5_reg_q[2*i] + sum5_reg_q[2*i + 1];
-  }
-
-  ADDER_STAGE5_LOOP: for(int i = 0; i<COR_SIZE/32; i++){
-  #pragma HLS UNROLL
-     sum5_reg_i[i] = sum4_reg_i[2*i] + sum4_reg_i[2*i + 1];
-     sum5_reg_q[i] = sum4_reg_q[2*i] + sum4_reg_q[2*i + 1];
-  }
-
-  ADDER_STAGE4_LOOP: for(int i = 0; i<COR_SIZE/16; i++){
-  #pragma HLS UNROLL
-     sum4_reg_i[i] = sum3_reg_i[2*i] + sum3_reg_i[2*i + 1];
-     sum4_reg_q[i] = sum3_reg_q[2*i] + sum3_reg_q[2*i + 1];
-  }
-#endif
-#endif
-  ADDER_STAGE3_LOOP: for(int i = 0; i<COR_SIZE/8; i++){
-  #pragma HLS UNROLL
-     sum3_reg_i[i] = sum2_reg_i[2*i] + sum2_reg_i[2*i + 1];
-     sum3_reg_q[i] = sum2_reg_q[2*i] + sum2_reg_q[2*i + 1];
-  }
+if(corrResultValid[readResCount]){
+	if(corrResult[readResCount] > 500){
+		// say hey found something
+		out_sample.data = readResCount;//maybe not this but something like it as an output.
+		o_data.write(out_sample);
+		out_sample_cnt++;
+	}
+	readResCount++;
+}
 
 
-  ADDER_STAGE2_LOOP: for(int i = 0; i<COR_SIZE/4; i++){
-  #pragma HLS UNROLL
-     sum2_reg_i[i] = sum1_reg_i[2*i] + sum1_reg_i[2*i + 1];
-     sum2_reg_q[i] = sum1_reg_q[2*i] + sum1_reg_q[2*i + 1];
-  }
-
-  ADDER_STAGE1_LOOP: for(int i = 0; i<COR_SIZE/2; i++){
-  #pragma HLS UNROLL
-     sum1_reg_i[i] = adder_in_reg_i[2*i] + adder_in_reg_i[2*i + 1];
-     sum1_reg_q[i] = adder_in_reg_q[2*i] + adder_in_reg_q[2*i + 1];
-  }
-
-  ADDER_INPUT_LOOP: for(int i = 0; i < COR_SIZE; i++){
-   #pragma HLS UNROLL
-         if(i < pnseq_len_reg){
-          adder_in_reg_i[i] = product_reg_i[i];
-          adder_in_reg_q[i] = product_reg_q[i];
-         }
-         else
-         {
-          adder_in_reg_i[i] = 0;
-          adder_in_reg_q[i] = 0;
-         }
-  }
-
-
- // product or selection since the PN sequence is real, binary
-  PRODUCT_REG_LOOP:for(int i = 0; i < COR_SIZE; i++){
-  #pragma HLS UNROLL
-   if(pn_seq[i] == 1){
-         product_reg_i[i] = data_reg_i[i];
-         product_reg_q[i]= 0 - data_reg_q[i];
-   }
-   else{
-         product_reg_i[i] = 0 - data_reg_i[i];
-         product_reg_q[i] = data_reg_q[i];
-   }
-  }
-
-  data_valid_reg.range(23,1) = data_valid_reg.range(22,0);
-// Read and shift state machine
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
   switch(currentState) {
     case ST_IDLE:
-          if(start) // wait for start signal. The same start signal is used to load PN sequence generator
-                  currentState = ST_LOAD;
-          break;
+		if(start) // wait for start signal. The same start signal is used to load PN sequence generator
+			currentState = ST_LOAD;
+		break;
     case ST_LOAD:
-          pnseq_len_reg = pnseq_len;  // register input parameters
-          load_cnt = pnseq_len - 1;
-          currentState = ST_GEN;
-          break;
-    case ST_GEN: // Read incoming PN sequence and store it locally
-          pn_seq[load_cnt] = pnseq_in.read();
-          if (load_cnt == 0){
-                  currentState = ST_CORRELATE;
-              load_cnt = pnseq_len_reg - 1;}
-          else{
-                  currentState = ST_GEN;
-                  load_cnt = load_cnt - 1;}
-          break;
+    	// may add some other initialization state stuff here.
+		currentState = ST_CORRELATE;
+		break;
      case ST_CORRELATE: // whenever there is valid input data, shift it in
-          if(!i_data.empty())
-          {
-                  SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
-                  #pragma HLS UNROLL
-                        data_reg_i[i] = data_reg_i[i - 1];
-			data_reg_q[i] = data_reg_q[i - 1];}
+		if(!i_data.empty()){
+			SHIFT_DATA: for(int i = 15; i > 0 ; i--){
+				#pragma HLS UNROLL
+				window[i].q = window[i - 1].q;
+				window[i].i = window[i - 1].i;
+			}
+			loadCount++;
+			i_data.read(tmp_data);
+			window[0].q.V = tmp_data.data.range(15,0); // IM
+			window[0].i.V = tmp_data.data.range(31,16); // RE
 
-                   i_data.read(tmp_data);
-                   data_reg_q[0] = tmp_data.data.range(15,0); // IM
-                   data_reg_i[0] = tmp_data.data.range(31,16); // RE 
-                   data_valid_reg[0] = 1;   // shift in valid pulse
-          }
-          else
-                  data_valid_reg[0] = 0;
-        break;
+			CORRELATE_DATA: for(int a = 0;a<16;a++){
+				#pragma HLS UNROLL // might move this pipeline
+				corrResult[loadCount+a].i += window[a].i * preamble[a];
+				corrResult[loadCount+a].q += window[a].q * preamble[a];
+			}
+			showValidData:for(int a=loadCount-1;a<loadCount+15;a++){
+				corrResultValid[a] = 1;
+			}
+		}
+		break;
     }
 
 }

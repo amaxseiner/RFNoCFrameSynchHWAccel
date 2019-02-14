@@ -5,7 +5,7 @@
 ############################################################
 open_project complexTinkering
 add_files complexTinkering/complexGMU.h
-add_files ../../Downloads/corrData.dat
+add_files corrData.dat
 add_files -tb complexTinkering/complexGMUTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1} -tool vivado

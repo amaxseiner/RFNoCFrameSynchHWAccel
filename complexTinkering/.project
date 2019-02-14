@@ -49,7 +49,7 @@
 		<link>
 			<name>source/corrData.dat</name>
 			<type>1</type>
-			<location>/home/alex/Downloads/corrData.dat</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/corrData.dat</location>
 		</link>
 		<link>
 			<name>testbench/complexGMUTB.cpp</name>

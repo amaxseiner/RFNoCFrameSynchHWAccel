@@ -2,7 +2,7 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="complexGMU.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMU.h"/>
-    <originFiles name="corrData.dat" path="/home/alex/Downloads/corrData.dat"/>
+    <originFiles name="corrData.dat" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/corrData.dat"/>
   </source>
   <testbench>
     <originFiles name="complexGMUTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/complexTinkering/complexGMUTB.cpp"/>
