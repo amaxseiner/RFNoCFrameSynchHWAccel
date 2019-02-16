@@ -144,7 +144,7 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "correlator.cpp" 2
-# 21 "correlator.cpp"
+# 18 "correlator.cpp"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 1
 # 66 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
@@ -315,7 +315,7 @@ class stream
 };
 
 }
-# 22 "correlator.cpp" 2
+# 19 "correlator.cpp" 2
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_int.h" 1
 # 60 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_int.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_half.h" 1
@@ -26958,7 +26958,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
   }
 
 };
-# 23 "correlator.cpp" 2
+# 20 "correlator.cpp" 2
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 1
 # 55 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed_special.h" 1
@@ -29141,21 +29141,31 @@ inline bool operator!=(
 
 }
 # 56 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 2
-# 24 "correlator.cpp" 2
+# 21 "correlator.cpp" 2
 # 1 "./rfnoc.h" 1
 # 28 "./rfnoc.h"
  struct rfnoc_axis{
      ap_int<32> data;
      ap_uint<1> last;
    };
-# 25 "correlator.cpp" 2
+
+ struct semiComplex{
+   ap_fixed<16,11> i;
+   ap_fixed<16,11> q;
+ };
+
+ struct bigSemiComplex{
+  ap_fixed<32,22> i;
+  ap_fixed<32,22> q;
+ };
+# 22 "correlator.cpp" 2
+
+
+
+
 
 void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
 {
-struct semiComplex{
-  ap_fixed<16,11> i;
-  ap_fixed<16,11> q;
-};
 
 #pragma HLS RESOURCE variable=o_data latency=1
 #pragma HLS INTERFACE ap_ctrl_none port=return
@@ -29163,48 +29173,47 @@ struct semiComplex{
 #pragma HLS INTERFACE axis port=i_data
 #pragma HLS PIPELINE II=1
 
- static semiComplex corrResult[256];
+ bigSemiComplex corrResult[256];
 #pragma HLS ARRAY_PARTITION variable=corrResult complete dim=1
 #pragma HLS RESET variable=corrResult
 
- static ap_int<1> corrResultValid[256];
+ ap_int<1> corrResultValid[256];
 #pragma HLS ARRAY_PARTITION variable=corrResultValid complete dim=1
 #pragma HLS RESET variable=corrResultValid
 
 
- static ap_fixed<16,11> preamble[16] = {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+ static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
 #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 
 
- static semiComplex window[16];
+ semiComplex window[16];
 #pragma HLS ARRAY_PARTITION variable=window complete dim=1
 #pragma HLS RESET variable=window
 
  rfnoc_axis out_sample;
 
-  static ap_uint<10> out_sample_cnt;
+  ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
 
- static ap_uint<32> loadCount;
+ ap_uint<32> loadCount;
 #pragma HLS RESET variable=loadCount
 
  rfnoc_axis tmp_data;
 
-  static ap_uint<32> readResCount;
+  ap_uint<32> readResCount;
 #pragma HLS RESET variable=readResCount
 
 
- static ap_uint<10> load_cnt;
+ ap_uint<10> load_cnt;
 #pragma HLS RESET variable=load_cnt
- static ap_uint<10> pnseq_len_reg;
 
-  enum correlatorState {ST_IDLE = 0, ST_LOAD, ST_CORRELATE};
+ enum correlatorState {ST_IDLE = 0, ST_CORRELATE};
   static correlatorState currentState;
 #pragma HLS RESET variable=currentState
 
 
 if(corrResultValid[readResCount]){
- if(corrResult[readResCount] > 500){
+ if(corrResult[readResCount].q > 100){
 
   out_sample.data = readResCount;
   o_data.write(out_sample);
@@ -29218,31 +29227,31 @@ if(corrResultValid[readResCount]){
   switch(currentState) {
     case ST_IDLE:
   if(start)
-   currentState = ST_LOAD;
+   currentState = ST_CORRELATE;
   break;
-    case ST_LOAD:
 
-  currentState = ST_CORRELATE;
-  break;
+
+
+
      case ST_CORRELATE:
   if(!i_data.empty()){
-   SHIFT_DATA: for(int i = 15; i > 0 ; i--){
+   SHIFT_DATA: for(int i = 16 -1; i > 0 ; i--){
 #pragma HLS UNROLL
  window[i].q = window[i - 1].q;
     window[i].i = window[i - 1].i;
    }
    loadCount++;
    i_data.read(tmp_data);
-   window[0].q.V = tmp_data.data.range(15,0);
-   window[0].i.V = tmp_data.data.range(31,16);
+   window[0].q = tmp_data.data.range(15,0);
+   window[0].i = tmp_data.data.range(31,16);
 
    CORRELATE_DATA: for(int a = 0;a<16;a++){
-#pragma HLS UNROLL
+#pragma HLS PIPELINE
  corrResult[loadCount+a].i += window[a].i * preamble[a];
     corrResult[loadCount+a].q += window[a].q * preamble[a];
    }
-   showValidData:for(int a=loadCount-1;a<loadCount+15;a++){
-    corrResultValid[a] = 1;
+   if(loadCount - 16 >= 0){
+    corrResultValid[loadCount - 16] = 1;
    }
   }
   break;

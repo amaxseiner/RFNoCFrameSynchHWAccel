@@ -30,3 +30,12 @@
      ap_uint<1>       last;
    };
 
+ struct semiComplex{
+ 	 ap_fixed<16,11> i;
+ 	 ap_fixed<16,11> q;
+ };
+
+ struct bigSemiComplex{
+	 ap_fixed<32,22> i;
+	 ap_fixed<32,22> q;
+ };

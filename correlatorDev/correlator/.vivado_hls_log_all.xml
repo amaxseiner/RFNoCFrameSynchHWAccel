@@ -3,19 +3,21 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/o_data_TLAST' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:56.924-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/o_data_TREADY' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:56.920-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/o_data_TVALID' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:56.918-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/o_data_TDATA' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:56.915-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:56.895-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'corrResult.q.V' (correlator.cpp:36) accessed through non-constant indices on dimension 1 (correlator.cpp:111:34), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:49.405-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'corrResult.i.V' (correlator.cpp:36) accessed through non-constant indices on dimension 1 (correlator.cpp:110:31), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:49.393-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'CORRELATE_DATA' (correlator.cpp:108) because its parent loop or function is pipelined." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:49.349-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-311] Ignored reset directive (correlator.cpp:38:1): variable 'corrResult' is not static or global variable." projectName="correlator" solutionName="solution1" date="2019-02-16T12:57:49.342-0500" type="Warning"/>
+      </synLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

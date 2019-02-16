@@ -21,7 +21,7 @@
     "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "1",
-    "Latency": "4",
+    "Latency": "0",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -37,11 +37,11 @@
   "Files": {
     "CSource": ["..\/..\/correlator.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/correlator_mul_20bkb.vhd",
+      "impl\/vhdl\/correlator_mux_25bkb.vhd",
       "impl\/vhdl\/correlator.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/correlator_mul_20bkb.v",
+      "impl\/verilog\/correlator_mux_25bkb.v",
       "impl\/verilog\/correlator.v"
     ],
     "Misc": ["impl\/misc\/logo.png"]
@@ -87,7 +87,7 @@
     },
     "o_data": {
       "type": "axi4stream",
-      "mode": "master",
+      "mode": "slave",
       "port_prefix": "o_data",
       "has_tready": "1",
       "ctype": {
@@ -106,24 +106,6 @@
         "TDATA": "32",
         "TLAST": "1"
       }
-    },
-    "pnseq_in_V_V": {
-      "type": "data",
-      "dir": "in",
-      "width": "1",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
-        }}
-    },
-    "pnseq_len_V": {
-      "type": "data",
-      "dir": "in",
-      "width": "10",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "10"
-        }}
     },
     "start_V": {
       "type": "data",
@@ -162,19 +144,19 @@
       "isVector": "true"
     },
     "o_data_TDATA": {
-      "dir": "out",
+      "dir": "in",
       "width": "32"
     },
     "o_data_TVALID": {
-      "dir": "out",
-      "width": "1"
-    },
-    "o_data_TREADY": {
       "dir": "in",
       "width": "1"
     },
-    "o_data_TLAST": {
+    "o_data_TREADY": {
       "dir": "out",
+      "width": "1"
+    },
+    "o_data_TLAST": {
+      "dir": "in",
       "width": "1",
       "isVector": "true"
     },
@@ -182,23 +164,6 @@
       "dir": "in",
       "width": "1",
       "isVector": "true"
-    },
-    "pnseq_in_V_V": {
-      "dir": "in",
-      "width": "1",
-      "isVector": "true"
-    },
-    "pnseq_in_V_V_ap_vld": {
-      "dir": "in",
-      "width": "1"
-    },
-    "pnseq_in_V_V_ap_ack": {
-      "dir": "out",
-      "width": "1"
-    },
-    "pnseq_len_V": {
-      "dir": "in",
-      "width": "10"
     }
   },
   "CPorts": {
@@ -212,30 +177,16 @@
     },
     "o_data_V_data_V": {
       "interfaceRef": "o_data",
-      "dir": "out",
-      "firstOutLatency": "3"
+      "dir": "in"
     },
     "o_data_V_last_V": {
       "interfaceRef": "o_data",
-      "dir": "out",
-      "firstOutLatency": "3"
+      "dir": "in"
     },
     "start_V": {
       "interfaceRef": "start_V",
       "dir": "in",
       "dataWidth": "1",
-      "handshakeRef": "ap_none"
-    },
-    "pnseq_in_V_V": {
-      "interfaceRef": "pnseq_in_V_V",
-      "dir": "in",
-      "dataWidth": "1",
-      "handshakeRef": "ap_hs"
-    },
-    "pnseq_len_V": {
-      "interfaceRef": "pnseq_len_V",
-      "dir": "in",
-      "dataWidth": "10",
       "handshakeRef": "ap_none"
     }
   },
@@ -243,29 +194,29 @@
     "Hierarchy": {"ModuleName": "correlator"},
     "Metrics": {"correlator": {
         "Latency": {
-          "LatencyBest": "4",
-          "LatencyAvg": "4",
-          "LatencyWorst": "4",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
           "PipelineII": "1",
-          "PipelineDepth": "5",
+          "PipelineDepth": "1",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "3.77"
+          "Estimate": "2.85"
         },
         "Area": {
+          "FF": "4",
+          "LUT": "1410",
           "BRAM_18K": "0",
-          "DSP48E": "2",
-          "FF": "2813",
-          "LUT": "3091"
+          "DSP48E": "0"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-11 01:45:35 EST",
+    "Time": "2019-02-16 12:57:57 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
