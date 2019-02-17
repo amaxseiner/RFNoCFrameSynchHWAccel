@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ItoZero'" level="0">
-<item name = "Date">Sun Feb 10 20:21:39 2019
+<item name = "Date">Sat Feb 16 17:21:35 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 1.43, 0.62</column>
+<column name="ap_clk">5.00, 0.48, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">15, 15, 16, 16, function</column>
+<column name="">2, 2, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">

@@ -27019,6 +27019,8 @@ static ap_int<16> data_reg_q[COR_SIZE];
  rfnoc_axis tmp_data;
 #pragma empty_line
   static ap_uint<24> data_valid_reg;
+  static ap_int<16> zeros;
+  zeros = 0;
 #pragma empty_line
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
@@ -27029,57 +27031,21 @@ static ap_int<16> data_reg_q[COR_SIZE];
 #pragma HLS RESET variable=currentwrState
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
- switch(currentwrState) {
-      case ST_NOWRITE:
-       if(data_valid_reg[11]){
-        currentwrState = ST_WRITE;
-       }
-          break;
-      case ST_WRITE:
-#pragma empty_line
-    out_sample.last = 0;
-    out_sample.data.range(31,16) = data_reg_i[12];
-    out_sample.data.range(15,0) = data_reg_q[12];
-    o_data.write(out_sample);
-#pragma empty_line
-          if(!data_valid_reg[11])
-              currentwrState = ST_NOWRITE;
-          else
-           currentwrState = ST_WRITE;
-          break;
-  }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  data_valid_reg.range(23,1) = data_valid_reg.range(22,0);
-#pragma empty_line
-#pragma empty_line
-  switch(currentState) {
+ switch(currentState) {
     case ST_IDLE:
         if(start){
          currentState = ST_LOAD;
-         i_data.read(tmp_data);
-         o_data.write(tmp_data);
+#pragma empty_line
         }
         break;
     case ST_LOAD:
- if(!i_data.empty()){
-  SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
-#pragma HLS UNROLL
- data_reg_i[i] = 0;
-     data_reg_q[i] = data_reg_q[i - 1];}
+     i_data.read(tmp_data);
 #pragma empty_line
-  i_data.read(tmp_data);
-  data_reg_q[0] = tmp_data.data.range(15,0);
-  data_reg_i[0] = tmp_data.data.range(31,16);
-  data_valid_reg[0] = 1;
-  o_data.write(tmp_data);
- } else {
-  data_valid_reg[0] = 0;
- }
+#pragma empty_line
+     out_sample.data= tmp_data.data;
+     out_sample.last=tmp_data.last;
+#pragma empty_line
+     o_data.write(out_sample);
  break;
     }
 #pragma empty_line

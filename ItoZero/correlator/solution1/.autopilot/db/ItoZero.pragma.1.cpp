@@ -27019,6 +27019,8 @@ _ssdm_op_SpecReset( &firstLoad, 1,  "");
  rfnoc_axis tmp_data;
 
   static ap_uint<24> data_valid_reg;
+  static ap_int<16> zeros;
+  zeros = 0;
 
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
@@ -27029,57 +27031,21 @@ _ssdm_op_SpecReset( currentState, 1,  "");
 _ssdm_op_SpecReset( currentwrState, 1,  "");
 
 
-
-
-
- switch(currentwrState) {
-      case ST_NOWRITE:
-       if(data_valid_reg[11]){
-        currentwrState = ST_WRITE;
-       }
-          break;
-      case ST_WRITE:
-
-    out_sample.last = 0;
-    out_sample.data.range(31,16) = data_reg_i[12];
-    out_sample.data.range(15,0) = data_reg_q[12];
-    o_data.write(out_sample);
-
-          if(!data_valid_reg[11])
-              currentwrState = ST_NOWRITE;
-          else
-           currentwrState = ST_WRITE;
-          break;
-  }
-
-
-
-  data_valid_reg.range(23,1) = data_valid_reg.range(22,0);
-
-
-  switch(currentState) {
+ switch(currentState) {
     case ST_IDLE:
         if(start){
          currentState = ST_LOAD;
-         i_data.read(tmp_data);
-         o_data.write(tmp_data);
+
         }
         break;
     case ST_LOAD:
- if(!i_data.empty()){
-  SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
-_ssdm_Unroll(0,0,0, "");
- data_reg_i[i] = 0;
-     data_reg_q[i] = data_reg_q[i - 1];}
+     i_data.read(tmp_data);
 
-  i_data.read(tmp_data);
-  data_reg_q[0] = tmp_data.data.range(15,0);
-  data_reg_i[0] = tmp_data.data.range(31,16);
-  data_valid_reg[0] = 1;
-  o_data.write(tmp_data);
- } else {
-  data_valid_reg[0] = 0;
- }
+
+     out_sample.data= tmp_data.data;
+     out_sample.last=tmp_data.last;
+
+     o_data.write(out_sample);
  break;
     }
 

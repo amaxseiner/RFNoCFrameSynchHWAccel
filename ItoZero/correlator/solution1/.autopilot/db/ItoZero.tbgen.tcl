@@ -2,14 +2,14 @@ set C_TypeInfoList {{
 "ItoZero" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"start": [[],"1"] }],[],""], 
 "0": [ "stream<rfnoc_axis>", {"hls_type": {"stream": [[[[],"2"]],"3"]}}], 
 "2": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "4"]},{ "last": [[], "1"]}],""]}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
+"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "3": ["hls", ""]
 }}
 set moduleName ItoZero
 set isCombinational 0
 set isDatapathOnly 0
-set isPipelined 0
+set isPipelined 1
 set pipeline_type function
 set FunctionProtocol ap_ctrl_none
 set isOneStateSeq 0
@@ -59,10 +59,10 @@ set NewPortList {[
  	{ "name": "start_V", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "start_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "ItoZero",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -77,65 +77,27 @@ set RtlHierarchyInfo {[
 					{"Name" : "o_data_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "o_data_V_last_V", "Type" : "Axis", "Direction" : "O"},
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "currentwrState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "data_valid_reg_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "data_reg_i_V_12", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "data_reg_i_V_15", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_14", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_13", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_11", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_10", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_9", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_8", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_7", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_6", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_5", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_4", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_3", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_2", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_1", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_i_V_0", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "data_reg_q_V", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.data_reg_q_V_U", "Parent" : "0"}]}
+			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	ItoZero {
-		i_data_V_data_V {Type I LastRead 14 FirstWrite -1}
-		i_data_V_last_V {Type I LastRead 14 FirstWrite -1}
+		i_data_V_data_V {Type I LastRead 0 FirstWrite -1}
+		i_data_V_last_V {Type I LastRead 0 FirstWrite -1}
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
 		start_V {Type I LastRead 0 FirstWrite -1}
-		currentwrState {Type IO LastRead -1 FirstWrite -1}
-		data_valid_reg_V {Type IO LastRead -1 FirstWrite -1}
-		data_reg_i_V_12 {Type IO LastRead -1 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}
-		data_reg_i_V_15 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_14 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_13 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_11 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_10 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_9 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_8 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_7 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_6 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_5 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_4 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_3 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_2 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_1 {Type O LastRead -1 FirstWrite -1}
-		data_reg_i_V_0 {Type O LastRead -1 FirstWrite -1}
-		data_reg_q_V {Type IO LastRead -1 FirstWrite -1}}}
+		currentState {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "15", "Max" : "15"}
-	, {"Name" : "Interval", "Min" : "16", "Max" : "16"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

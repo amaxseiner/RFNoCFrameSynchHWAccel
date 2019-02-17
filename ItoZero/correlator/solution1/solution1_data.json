@@ -20,8 +20,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "5",
     "IsCombLogic": "0",
-    "II": "16",
-    "Latency": "15",
+    "II": "1",
+    "Latency": "2",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -36,16 +36,8 @@
   },
   "Files": {
     "CSource": ["..\/..\/ItoZero.cpp"],
-    "Vhdl": [
-      "impl\/vhdl\/ItoZero_data_reg_bkb.vhd",
-      "impl\/vhdl\/ItoZero_data_reg_bkb_ram.vhd",
-      "impl\/vhdl\/ItoZero.vhd"
-    ],
-    "Verilog": [
-      "impl\/verilog\/ItoZero_data_reg_bkb.v",
-      "impl\/verilog\/ItoZero_data_reg_bkb_ram.v",
-      "impl\/verilog\/ItoZero.v"
-    ],
+    "Vhdl": ["impl\/vhdl\/ItoZero.vhd"],
+    "Verilog": ["impl\/verilog\/ItoZero.v"],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -198,29 +190,29 @@
     "Hierarchy": {"ModuleName": "ItoZero"},
     "Metrics": {"ItoZero": {
         "Latency": {
-          "LatencyBest": "15",
-          "LatencyAvg": "15",
-          "LatencyWorst": "15",
-          "PipelineII": "16",
-          "PipelineDepth": "16",
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
+          "PipelineII": "1",
+          "PipelineDepth": "3",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "1.43"
+          "Estimate": "0.48"
         },
         "Area": {
-          "BRAM_18K": "1",
-          "FF": "455",
-          "LUT": "590",
+          "FF": "154",
+          "LUT": "266",
+          "BRAM_18K": "0",
           "DSP48E": "0"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-10 20:21:40 EST",
+    "Time": "2019-02-16 17:21:36 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

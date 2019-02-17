@@ -7,20 +7,18 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Analyzing design file 'ItoZero.cpp' ...
+WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:13 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121575 ; free virtual = 256559
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 121572 ; free virtual = 256559
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:41 ; elapsed = 00:00:13 . Memory (MB): peak = 366.852 ; gain = 13.375 ; free physical = 119791 ; free virtual = 256275
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 366.852 ; gain = 13.375 ; free physical = 119786 ; free virtual = 256273
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 121559 ; free virtual = 256548
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.188 ; gain = 13.711 ; free physical = 119775 ; free virtual = 256265
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.234 ; gain = 13.762 ; free physical = 121553 ; free virtual = 256543
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'ItoZero' (ItoZero.cpp:28).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA' (ItoZero.cpp:105) in function 'ItoZero' completely.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:16 . Memory (MB): peak = 367.188 ; gain = 13.711 ; free physical = 119770 ; free virtual = 256260
 INFO: [XFORM 203-101] Partitioning array 'data_reg_i.V'  in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121525 ; free virtual = 256518
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:00:18 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121522 ; free virtual = 256517
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:17 . Memory (MB): peak = 494.848 ; gain = 141.371 ; free physical = 119743 ; free virtual = 256235
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:17 . Memory (MB): peak = 494.848 ; gain = 141.371 ; free physical = 119740 ; free virtual = 256232
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'ItoZero' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -28,34 +26,29 @@ INFO: [HLS 200-42] -- Implementing module 'ItoZero'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'ItoZero'.
-WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between axis write on port 'o_data_V_data_V' (ItoZero.cpp:100) and axis write on port 'o_data_V_data_V' (ItoZero.cpp:81).
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_4', ItoZero.cpp:108) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 16.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 17.72 seconds; current allocated memory: 81.454 MB.
+INFO: [HLS 200-111]  Elapsed time: 17.3 seconds; current allocated memory: 78.187 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 81.919 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 78.321 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'ItoZero'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/i_data_V_data_V' to 'axis'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/i_data_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/i_data_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/i_data_V_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/o_data_V_data_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/o_data_V_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/start_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'ItoZero' to 'ap_ctrl_none'.
-INFO: [SYN 201-210] Renamed object name 'ItoZero_data_reg_q_V' to 'ItoZero_data_reg_bkb' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ItoZero'.
-INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 82.655 MB.
-INFO: [RTMG 210-278] Implementing memory 'ItoZero_data_reg_bkb_ram (RAM)' using block RAMs with reset.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:46 ; elapsed = 00:00:19 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 121519 ; free virtual = 256516
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 78.868 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 494.848 ; gain = 141.371 ; free physical = 119741 ; free virtual = 256236
 INFO: [SYSC 207-301] Generating SystemC RTL for ItoZero.
 INFO: [VHDL 208-304] Generating VHDL RTL for ItoZero.
 INFO: [VLOG 209-307] Generating Verilog RTL for ItoZero.
-INFO: [HLS 200-112] Total elapsed time: 18.71 seconds; peak allocated memory: 82.655 MB.
+INFO: [HLS 200-112] Total elapsed time: 17.93 seconds; peak allocated memory: 78.868 MB.

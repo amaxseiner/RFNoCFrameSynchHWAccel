@@ -12,10 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.600-0500" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_reg_q_V_load_4', ItoZero.cpp:108) on array 'data_reg_q_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_reg_q_V'." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.329-0500" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between axis write on port 'o_data_V_data_V' (ItoZero.cpp:100) and axis write on port 'o_data_V_data_V' (ItoZero.cpp:81)." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:39.290-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-02-10T20:21:22.259-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-02-16T17:21:35.678-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-02-16T17:21:31.560-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
