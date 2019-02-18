@@ -29155,8 +29155,8 @@ inline bool operator!=(
  };
 #pragma empty_line
  struct bigSemiComplex{
-  ap_fixed<32,22> i;
-  ap_fixed<32,22> q;
+  ap_fixed<16,11> i;
+  ap_fixed<16,11> q;
  };
 #pragma line 22 "correlator.cpp" 2
 #pragma empty_line
@@ -29173,38 +29173,35 @@ void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data,
 #pragma HLS INTERFACE axis port=i_data
 #pragma HLS PIPELINE II=1
 #pragma empty_line
- bigSemiComplex corrResult[256];
+static bigSemiComplex corrResult[256];
 #pragma HLS ARRAY_PARTITION variable=corrResult complete dim=1
 #pragma HLS RESET variable=corrResult
 #pragma empty_line
- ap_int<1> corrResultValid[256];
+static ap_int<1> corrResultValid[256];
 #pragma HLS ARRAY_PARTITION variable=corrResultValid complete dim=1
 #pragma HLS RESET variable=corrResultValid
 #pragma empty_line
-#pragma empty_line
- static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
 #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 #pragma empty_line
-#pragma empty_line
- semiComplex window[16];
+static semiComplex window[16];
 #pragma HLS ARRAY_PARTITION variable=window complete dim=1
 #pragma HLS RESET variable=window
 #pragma empty_line
  rfnoc_axis out_sample;
 #pragma empty_line
-  ap_uint<10> out_sample_cnt;
+  static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
 #pragma empty_line
- ap_uint<32> loadCount;
+ static ap_uint<32> loadCount;
 #pragma HLS RESET variable=loadCount
 #pragma empty_line
  rfnoc_axis tmp_data;
 #pragma empty_line
-  ap_uint<32> readResCount;
+  static ap_uint<32> readResCount;
 #pragma HLS RESET variable=readResCount
 #pragma empty_line
-#pragma empty_line
- ap_uint<10> load_cnt;
+ static ap_uint<10> load_cnt;
 #pragma HLS RESET variable=load_cnt
 #pragma empty_line
  enum correlatorState {ST_IDLE = 0, ST_CORRELATE};
@@ -29223,7 +29220,6 @@ if(corrResultValid[readResCount]){
 }
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
   switch(currentState) {
     case ST_IDLE:
   if(start)
@@ -29235,10 +29231,10 @@ if(corrResultValid[readResCount]){
 #pragma empty_line
      case ST_CORRELATE:
   if(!i_data.empty()){
-   SHIFT_DATA: for(int i = 16 -1; i > 0 ; i--){
+   SHIFT_DATA: for(int a = 16 -1; a > 0; a--){
 #pragma HLS UNROLL
- window[i].q = window[i - 1].q;
-    window[i].i = window[i - 1].i;
+ window[a].q = window[a - 1].q;
+    window[a].i = window[a - 1].i;
    }
    loadCount++;
    i_data.read(tmp_data);
@@ -29246,9 +29242,9 @@ if(corrResultValid[readResCount]){
    window[0].i = tmp_data.data.range(31,16);
 #pragma empty_line
    CORRELATE_DATA: for(int a = 0;a<16;a++){
-#pragma HLS PIPELINE
- corrResult[loadCount+a].i += window[a].i * preamble[a];
-    corrResult[loadCount+a].q += window[a].q * preamble[a];
+#pragma HLS UNROLL
+#pragma empty_line
+ corrResult[loadCount+a].q += window[a].q * preamble[a];
    }
    if(loadCount - 16 >= 0){
     corrResultValid[loadCount - 16] = 1;
@@ -29256,5 +29252,4 @@ if(corrResultValid[readResCount]){
   }
   break;
     }
-#pragma empty_line
 }

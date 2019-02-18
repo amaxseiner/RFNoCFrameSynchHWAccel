@@ -37,11 +37,6 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/rfnoc.h</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
@@ -50,6 +45,16 @@
 			<name>source/correlator.cpp</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
+		</link>
+		<link>
+			<name>source/correlatorSim.h</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h</location>
+		</link>
+		<link>
+			<name>testbench/correlatorTB.cpp</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

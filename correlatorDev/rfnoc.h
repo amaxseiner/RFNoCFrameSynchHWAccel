@@ -26,8 +26,8 @@
 #include "ap_int.h"
 
  struct rfnoc_axis{
-     ap_int<32>       data;
-     ap_uint<1>       last;
+     ap_int<32> data;
+     ap_uint<1> last;
    };
 
  struct semiComplex{
@@ -36,6 +36,6 @@
  };
 
  struct bigSemiComplex{
-	 ap_fixed<32,22> i;
-	 ap_fixed<32,22> q;
+	 ap_fixed<16,11> i;
+	 ap_fixed<16,11> q;
  };
