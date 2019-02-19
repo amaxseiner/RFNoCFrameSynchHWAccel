@@ -2,7 +2,6 @@
 #include "ap_fixed.h"
 #include <fstream>
 
-
 using namespace std;
 
 #define maxSize 256
@@ -98,11 +97,11 @@ ap_fixed<16,11> corrSeq[16] = {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
 rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
-void correlate(ofstream *result,ap_int<32> pos,ap_uint<4> phaseClass);
+void correlate(ofstream *result, ap_uint<4> phaseClass);
 void shiftPhaseClass(semiComplex newVal, ap_uint<4> phaseClass);
 
 
-void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream *result, ap_uint<4> phaseClass){
+void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ofstream *result, ap_uint<4> phaseClass){
 	// take in the input data and turn it into I and Q samples
 	semiComplex num;
 
@@ -111,7 +110,7 @@ void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos, ofstream
 
 	shiftPhaseClass(num,phaseClass);
 	*result << ",";
-	correlate(result,pos,phaseClass);
+	correlate(result,phaseClass);
 
 	return;
 }
@@ -360,8 +359,7 @@ void correlate(ofstream *result, ap_uint<4> phaseClass){
 		}
 		Phase15[0] = temp;
 		break;
-	default:
-		//we got issues;
+
 	}
 }
 

@@ -6,7 +6,10 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-18T01:17:30.346-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-18T01:16:55.974-0500"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
@@ -18,7 +21,12 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="make: Warning: File '/dev/null' has modification time 8952 s in the future&#xA;../../../../correlatorTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="correlator" solutionName="solution1" date="2019-02-18T01:28:21.335-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 9555 s in the future&#xA;../../../../correlatorTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;make: warning:  Clock skew detected.  Your build may be incomplete." projectName="correlator" solutionName="solution1" date="2019-02-18T01:18:18.772-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 9604 s in the future&#xA;../../../../correlatorTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;../../../../correlator.cpp:27:123: error: ‘phaseClass’ was not declared in this scope&#xA;../../../../correlator.cpp:27:123: error: template argument 1 is invalid&#xA;../../../../correlator.cpp:27:111: error: template argument 1 is invalid&#xA;make: *** [obj/correlator.o] Error 1" projectName="correlator" solutionName="solution1" date="2019-02-18T01:17:30.327-0500" type="Warning"/>
+        <logs message="make: Warning: File '/dev/null' has modification time 9637 s in the future&#xA;In file included from ../../../../correlatorTB.cpp:3:0:&#xA;../../../../correlatorSim.h: In function ‘void correlate(std::ofstream*, ap_uint&lt;4>)’:&#xA;../../../../correlatorSim.h:364:2: error: expected primary-expression before ‘}’ token&#xA;../../../../correlatorSim.h:364:2: error: expected ‘;’ before ‘}’ token&#xA;../../../../correlatorTB.cpp: At global scope:&#xA;../../../../correlatorTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;make: *** [obj/correlatorTB.o] Error 1" projectName="correlator" solutionName="solution1" date="2019-02-18T01:16:55.936-0500" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

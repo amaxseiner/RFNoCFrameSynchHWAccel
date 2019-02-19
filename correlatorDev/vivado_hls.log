@@ -1,33 +1,17 @@
-INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sat Feb 16 15:42:01 EST 2019
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-MS-7917' (Linux_x86_64 version 4.15.0-45-generic) on Mon Feb 18 01:28:19 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev'
 INFO: [HLS 200-10] Opening project '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator'.
-INFO: [HLS 200-10] Adding design file 'correlator.cpp' to the project
 INFO: [HLS 200-10] Opening solution '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
-INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 714 ; free virtual = 2492
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 710 ; free virtual = 2492
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 367.469 ; gain = 14.004 ; free physical = 678 ; free virtual = 2476
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 495.387 ; gain = 141.922 ; free physical = 668 ; free virtual = 2468
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlator' (correlator.cpp:27).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA' (correlator.cpp:94) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'CORRELATE_DATA' (correlator.cpp:104) in function 'correlator' completely.
-INFO: [XFORM 203-101] Partitioning array 'corrResult.i.V'  in dimension 1 completely.
-WARNING: [XFORM 203-104] Completely partitioning array 'corrResult.q.V'  accessed through non-constant indices on dimension 1 (correlator.cpp:107:31), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-INFO: [XFORM 203-101] Partitioning array 'corrResult.q.V'  in dimension 1 completely.
-WARNING: [XFORM 203-104] Completely partitioning array 'corrResultValid.V'  accessed through non-constant indices on dimension 1 (correlator.cpp:72:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-INFO: [XFORM 203-101] Partitioning array 'corrResultValid.V'  in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'window.i.V'  in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'window.q.V'  in dimension 1 completely.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i1P.i8' into 'correlator'.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i16P.i8' into 'correlator'.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i16P.i8' into 'correlator'.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:05 ; elapsed = 00:01:47 . Memory (MB): peak = 622.836 ; gain = 269.371 ; free physical = 654 ; free virtual = 2448
-/opt/Xilinx/Vivado/2017.4/bin/loader: line 194: 13555 Killed                  "$RDI_PROG" "$@"
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../correlatorTB.cpp in debug mode
+   Generating csim.exe
+make: Warning: File '/dev/null' has modification time 8952 s in the future
+../../../../correlatorTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]
+make: warning:  Clock skew detected.  Your build may be incomplete.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

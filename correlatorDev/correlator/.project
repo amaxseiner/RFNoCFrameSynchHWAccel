@@ -42,11 +42,6 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/correlator.cpp</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
-		</link>
-		<link>
 			<name>source/correlatorSim.h</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h</location>
