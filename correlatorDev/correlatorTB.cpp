@@ -19,16 +19,16 @@ int main(char argc,char **arg){
 		ap_uint<4> phaseClass = a%4;
 		rfnoc_axis axi;
 		inFile>> setw(16) >> test;
-		result << a;
+		/*result << a;
 		result << ",";
 		result << setw(16) << test;
-		result << ",";
+		result << ",";*/
 		axi.data.range(15,0) = test.V;
 		correlation(axi,&streamArrayOut[a],&result,phaseClass);
 		//result << setw(32) << streamArrayOut[a].data;
-		result << endl;
+		//result << endl;
 	}
 
-
+	displayOutput(&result);
 
 }

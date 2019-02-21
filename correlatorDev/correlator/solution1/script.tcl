@@ -5,6 +5,7 @@
 ############################################################
 open_project correlator
 set_top correlator
+add_files corrData.dat
 add_files correlatorSim.h
 add_files -tb correlatorTB.cpp
 open_solution "solution1"
