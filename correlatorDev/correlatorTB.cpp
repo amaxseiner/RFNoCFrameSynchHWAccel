@@ -11,17 +11,24 @@ int main(char argc,char **arg){
 	ifstream inFile;
 	inFile.open("inputCorrr.dat");
 	inFile >> fixed >> setbase(10) >> setprecision(8);
-
+	int count;
+	count = 0;
 	ofstream result;
 	result.open("result.csv", ios::out);
 	result << right << fixed << setbase(10) << setprecision(16);
-	for(int a=0;a<5370;a++){
-		ap_uint<4> phaseClass = 0;
+	for(int a=0;a<5376;a++){
+		ap_uint<4> phaseClass = a%16;
 		rfnoc_axis axi;
 		inFile>> setw(16) >> test;
 		axi.data.range(15,0) = test.V;
-		result << a;
-		result << ",";
+		/*if(a%16 == 0){
+
+			result << count;
+			result << ",";
+			result << a;
+			result << ",";
+			count += 1;
+		}*/
 		/*
 		result << setw(16) << test;
 		//result << ",";

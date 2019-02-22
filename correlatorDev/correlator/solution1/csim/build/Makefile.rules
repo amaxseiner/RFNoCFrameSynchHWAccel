@@ -132,6 +132,11 @@ ifndef HLS_DDS_LIB_PATH
   HLS_DDS_LIB_PATH = $(AUTOPILOT_TOOL)/dds_v6_0
 endif
 
+ifndef HLS_MATHHLS_LIB_PATH
+  HLS_MATHHLS_LIB_PATH = $(AUTOPILOT_ROOT)/$(AUTOPILOT_MACH)/lib/csim
+endif
+
+
 ifdef __USE_CLANG__
 ifdef AP_CLANG_PATH
 CC      = $(AP_CLANG_PATH)/clang
@@ -167,6 +172,7 @@ OPENCVLIB = $(HLS_OPENCV_LIB_PATH)
 FFTLIB = $(HLS_FFT_LIB_PATH)
 FIRLIB = $(HLS_FIR_LIB_PATH)
 DDSLIB = $(HLS_DDS_LIB_PATH)
+MATHHLSLIB = $(HLS_MATHHLS_LIB_PATH)
 DEFINE =
 ATBG_CFLAG = -DSST_SIM_ENABLE -DSST_ATBG_ENABLE
 IFLAG += -I $(INCPATH) -I "$(SYSCINC)"
@@ -176,6 +182,25 @@ IFLAG += -I "$(AUTOPILOT_ROOT)/include"
 IFLAG += -I "$(AUTOPILOT_TECH)/generic/SystemC/AESL_comp"
 LFLAG += -Wl,--as-needed
 LFLAG += -Wl,-rpath,"$(SYSCLIB)" -L "$(SYSCLIB)" -lsystemc -lpthread
+
+ifdef __SIM_MATHHLS__
+
+  ifdef __USE_CLANG__ 
+    LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39
+  else 
+    LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC46
+  endif
+
+  ifndef __SIM_MATHSTD__ 
+    ifdef __USE_CLANG__ 
+      LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-CLANG39
+    else 
+      LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC46
+    endif
+  endif
+
+  export LD_LIBRARY_PATH := ${LD_LIBRARY_PATH}:$(MATHHLSLIB)
+endif
 
 ifdef __SIM_FPO__
 #LFLAG += -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v6_1_bitacc_cmodel -z muldefs
@@ -229,7 +254,7 @@ else
 CFLAG += -D__USE_XOPEN2K8
 DFLAG += -D__USE_XOPEN2K8
 endif
-	
+
 
 ifndef HLS_SOURCES
   # Find all .cpp, .cp, .cxx, .cc, .c++, .c, .C in current directory and in $(HLS_RtlSCDir).

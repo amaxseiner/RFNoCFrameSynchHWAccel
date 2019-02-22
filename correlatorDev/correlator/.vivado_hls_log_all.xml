@@ -7,6 +7,8 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-22T14:09:30.364-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-22T13:44:42.516-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-21T19:57:00.424-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-21T19:56:35.607-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="correlator" solutionName="solution1" date="2019-02-21T19:44:06.546-0500"/>

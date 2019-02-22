@@ -33,66 +33,66 @@ static bigSemiComplex resPhase0[windowSize];
 static bigSemiComplex Phase0[windowSize];
 
 static semiComplex phaseClass1[windowSize];
-static semiComplex resPhase1[windowSize];
-static semiComplex Phase1[windowSize];
+static bigSemiComplex resPhase1[windowSize];
+static bigSemiComplex Phase1[windowSize];
 
 static semiComplex phaseClass2[windowSize];
-static semiComplex resPhase2[windowSize];
-static semiComplex Phase2[windowSize];
+static bigSemiComplex resPhase2[windowSize];
+static bigSemiComplex Phase2[windowSize];
 
 static semiComplex phaseClass3[windowSize];
-static semiComplex resPhase3[windowSize];
-static semiComplex Phase3[windowSize];
+static bigSemiComplex resPhase3[windowSize];
+static bigSemiComplex Phase3[windowSize];
 
 static semiComplex phaseClass4[windowSize];
-static semiComplex resPhase4[windowSize];
-static semiComplex Phase4[windowSize];
+static bigSemiComplex resPhase4[windowSize];
+static bigSemiComplex Phase4[windowSize];
 
 static semiComplex phaseClass5[windowSize];
-static semiComplex resPhase5[windowSize];
-static semiComplex Phase5[windowSize];
+static bigSemiComplex resPhase5[windowSize];
+static bigSemiComplex Phase5[windowSize];
 
 static semiComplex phaseClass6[windowSize];
-static semiComplex resPhase6[windowSize];
-static semiComplex Phase6[windowSize];
+static bigSemiComplex resPhase6[windowSize];
+static bigSemiComplex Phase6[windowSize];
 
 static semiComplex phaseClass7[windowSize];
-static semiComplex resPhase7[windowSize];
-static semiComplex Phase7[windowSize];
+static bigSemiComplex resPhase7[windowSize];
+static bigSemiComplex Phase7[windowSize];
 
 static semiComplex phaseClass8[windowSize];
-static semiComplex resPhase8[windowSize];
-static semiComplex Phase8[windowSize];
+static bigSemiComplex resPhase8[windowSize];
+static bigSemiComplex Phase8[windowSize];
 
 static semiComplex phaseClass9[windowSize];
-static semiComplex resPhase9[windowSize];
-static semiComplex Phase9[windowSize];
+static bigSemiComplex resPhase9[windowSize];
+static bigSemiComplex Phase9[windowSize];
 
 static semiComplex phaseClass10[windowSize];
-static semiComplex resPhase10[windowSize];
-static semiComplex Phase10[windowSize];
+static bigSemiComplex resPhase10[windowSize];
+static bigSemiComplex Phase10[windowSize];
 
 static semiComplex phaseClass11[windowSize];
-static semiComplex resPhase11[windowSize];
-static semiComplex Phase11[windowSize];
+static bigSemiComplex resPhase11[windowSize];
+static bigSemiComplex Phase11[windowSize];
 
 static semiComplex phaseClass12[windowSize];
-static semiComplex resPhase12[windowSize];
-static semiComplex Phase12[windowSize];
+static bigSemiComplex resPhase12[windowSize];
+static bigSemiComplex Phase12[windowSize];
 
 static semiComplex phaseClass13[windowSize];
-static semiComplex resPhase13[windowSize];
-static semiComplex Phase13[windowSize];
+static bigSemiComplex resPhase13[windowSize];
+static bigSemiComplex Phase13[windowSize];
 
 static semiComplex phaseClass14[windowSize];
-static semiComplex resPhase14[windowSize];
-static semiComplex Phase14[windowSize];
+static bigSemiComplex resPhase14[windowSize];
+static bigSemiComplex Phase14[windowSize];
 
 static semiComplex phaseClass15[windowSize];
-static semiComplex resPhase15[windowSize];
-static semiComplex Phase15[windowSize];
+static bigSemiComplex resPhase15[windowSize];
+static bigSemiComplex Phase15[windowSize];
 
-ap_fixed<16,11> corrSeq[16] = {1,1,1,1,0,0,0,1,0,1,0,0,1,0,1};
+ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
 
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
@@ -121,18 +121,20 @@ void displayOutput(ofstream *result){
 }
 
 void correlate(ofstream *result, ap_uint<4> phaseClass){
-	semiComplex temp;
+	bigSemiComplex temp;
 	temp.i=0;
 	temp.q=0;
 	switch(phaseClass){
 	case 0:
-		for(int a =15;a>0;a--){
+		for(int a =15;a>=0;a--){
 			resPhase0[a].i = corrSeq[a] * phaseClass0[a].i;
 			resPhase0[a].q = corrSeq[a] * phaseClass0[a].q;
-			/*result << setw(16) << phaseClass0[a].q;
-			*result << ",";
-			*result << setw(16) << corrSeq[a];
-			*result << ",";*/
+			if(phaseClass0[a].q > 0){
+				/*result << setw(16) << phaseClass0[a].q;
+				*result << ",";
+				*result << setw(16) << corrSeq[a];
+				*result << ",";*/
+			}
 		}
 		for(int a=0;a<16;a++){
 			temp.i += resPhase0[a].i;
@@ -142,8 +144,11 @@ void correlate(ofstream *result, ap_uint<4> phaseClass){
 		for(int a=15;a>0;a--){
 			Phase0[a] = Phase0[a-1];
 		}
+		//if(temp.q > 0){
+		//*result << endl;
 		*result << setw(16) << temp.q;
 		*result << endl;
+		//}
 		Phase0[0] = temp;
 		break;
 	case 1:
