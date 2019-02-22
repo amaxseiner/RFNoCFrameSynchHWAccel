@@ -29,8 +29,8 @@ struct reallyBigSemiComplex{
 };
 
 static semiComplex phaseClass0[windowSize];
-static semiComplex resPhase0[windowSize];
-static semiComplex Phase0[windowSize];
+static bigSemiComplex resPhase0[windowSize];
+static bigSemiComplex Phase0[windowSize];
 
 static semiComplex phaseClass1[windowSize];
 static semiComplex resPhase1[windowSize];
@@ -92,7 +92,7 @@ static semiComplex phaseClass15[windowSize];
 static semiComplex resPhase15[windowSize];
 static semiComplex Phase15[windowSize];
 
-ap_fixed<16,11> corrSeq[16] = {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+ap_fixed<16,11> corrSeq[16] = {1,1,1,1,0,0,0,1,0,1,0,0,1,0,1};
 
 void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
@@ -122,6 +122,7 @@ void displayOutput(ofstream *result){
 
 void correlate(ofstream *result, ap_uint<4> phaseClass){
 	semiComplex temp;
+	bigSemiComplex fag;
 	temp.i=0;
 	temp.q=0;
 	switch(phaseClass){
@@ -129,23 +130,22 @@ void correlate(ofstream *result, ap_uint<4> phaseClass){
 		for(int a =15;a>0;a--){
 			resPhase0[a].i = corrSeq[a] * phaseClass0[a].i;
 			resPhase0[a].q = corrSeq[a] * phaseClass0[a].q;
-			*result << setw(16) << phaseClass0[a].q;
+			/*result << setw(16) << phaseClass0[a].q;
 			*result << ",";
 			*result << setw(16) << corrSeq[a];
-			*result << ",";
+			*result << ",";*/
 		}
-		*result << endl;
 		for(int a=0;a<16;a++){
-			temp.i += resPhase0[a].i;
-			temp.q += resPhase0[a].q;
+			fag.i += resPhase0[a].i;
+			fag.q += resPhase0[a].q;
 		}
 
 		for(int a=15;a>0;a--){
 			Phase0[a] = Phase0[a-1];
 		}
-		*result << setw(16) << temp.q;
+		*result << setw(16) << fag.q;
 		*result << endl;
-		Phase0[0] = temp;
+		Phase0[0] = fag;
 		break;
 	case 1:
 		for(int a =15;a>0;a--){
@@ -385,8 +385,13 @@ void shiftPhaseClass(semiComplex newVal, ap_uint<4> phaseClass, ofstream *result
 	case 0:
 		for(int a =15;a>0;a--){
 			phaseClass0[a] = phaseClass0[a-1];
+			//*result << setw(16) << phaseClass0[a-1].q;
+			//*result << ",";
+
 		}
 		phaseClass0[0] = newVal;
+		//*result << setw(16) << newVal.q;
+		//*result << endl;
 		break;
 	case 1:
 		for(int a =15;a>0;a--){

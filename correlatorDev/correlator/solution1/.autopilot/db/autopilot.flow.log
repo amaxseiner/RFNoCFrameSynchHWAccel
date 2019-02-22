@@ -1,183 +1,181 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Tue Feb 19 19:07:01 EST 2019
-Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Thu Feb 21 21:02:55 EST 2019
+INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-Command     config_clock returned 0; 0 sec.
-Execute     open_platform DefaultPlatform 
-Command     open_platform returned 0; 0 sec.
-Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
-Command       ap_source returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
-Command       ap_source returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
-Command         ap_source returned 0; 0.01 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.01 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
-Command       ap_source returned 0; 0 sec.
-Execute       get_default_platform 
-Command       get_default_platform returned 0; 0 sec.
-Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
-Command       config_chip_info returned 0; 0 sec.
-Execute       config_chip_info -quiet -speed medium 
-Command       config_chip_info returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.01 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.02 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.09 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.12 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.13 sec.
-Command     ap_source returned 0; 0.13 sec.
-Execute     open_platform DefaultPlatform 
-Command     open_platform returned 0; 0 sec.
-Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
-Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.02 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     set_part xc7k160tfbg484-1 
-Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
-Execute         get_default_platform 
-Command         get_default_platform returned 0; 0 sec.
-Execute         license_isbetapart xc7k160t 
-Command         license_isbetapart returned 1; 0.01 sec.
-Execute         get_default_platform 
-Command         get_default_platform returned 0; 0 sec.
-Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
-Command         config_chip_info returned 0; 0 sec.
-Execute         config_chip_info -quiet -speed slow 
-Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.02 sec.
-Execute       add_library xilinx/kintex7/kintex7_fpv6 
-Execute         get_default_platform 
-Command         get_default_platform returned 0; 0 sec.
-Command       add_library returned 0; 0 sec.
+INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.lib 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.lib 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed medium 
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.06 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     set_part xc7k160tfbg484-1 
+INFO: [HLS 200-100] Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         license_isbetapart xc7k160t 
+INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0 sec.
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       add_library xilinx/kintex7/kintex7_fpv6 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-Execute       get_default_platform 
-Command       get_default_platform returned 0; 0 sec.
-Command     set_part returned 0; 0.07 sec.
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
-Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
-Command     config_chip_info returned 0; 0 sec.
-Execute     config_chip_info -quiet -speed slow 
-Command     config_chip_info returned 0; 0 sec.
-Execute     config_rtl -encoding=onehot -reset=state -reset_level=high 
-Command     config_rtl returned 0; 0 sec.
-Execute     config_interface -m_axi_offset=off -register_io=off 
-Command     config_interface returned 0; 0 sec.
-Command   open_solution returned 0; 0.24 sec.
-Execute   csim_design -setup -clean -compiler gcc -use_gcc -quiet 
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     set_part returned 0; 0.04 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_rtl -encoding=onehot -reset=state -reset_level=high 
+INFO: [HLS 200-100] Command     config_rtl returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     config_interface -m_axi_offset=off -register_io=off 
+INFO: [HLS 200-100] Command     config_interface returned 0; 0 sec.
+INFO: [HLS 200-100] Command   open_solution returned 0; 0.18 sec.
+INFO: [HLS 200-100] Execute   csim_design -setup -clean -compiler gcc -use_gcc -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
-Command     is_xip returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/corrData.dat 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/corrData.dat 
-Command     is_xip returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h 
-Command     is_xip returned 0; 0 sec.
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source csim/.lst_opt.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
+INFO: [HLS 200-100] Command     is_xip returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h 
+INFO: [HLS 200-100] Command     is_xip returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat 
+INFO: [HLS 200-100] Command     is_xip returned 0; 0 sec.
 INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command   csim_design returned 0; 2.19 sec.
-Command ap_source returned 0; 2.43 sec.
-Execute cleanup_all 
-Command cleanup_all returned 0; 0 sec.
+INFO: [HLS 200-100] Command   csim_design returned 0; 1.8 sec.
+INFO: [HLS 200-100] Command ap_source returned 0; 1.99 sec.
+INFO: [HLS 200-100] Execute cleanup_all 
+INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.

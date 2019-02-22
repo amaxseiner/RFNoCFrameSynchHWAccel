@@ -9,26 +9,29 @@ int main(char argc,char **arg){
 	rfnoc_axis streamArrayOut[256];
 	ap_fixed<16,11> test;
 	ifstream inFile;
-	inFile.open("corrData.dat");
+	inFile.open("inputCorrr.dat");
 	inFile >> fixed >> setbase(10) >> setprecision(8);
 
 	ofstream result;
 	result.open("result.csv", ios::out);
 	result << right << fixed << setbase(10) << setprecision(16);
-	for(int a=0;a<223;a++){
-		ap_uint<4> phaseClass = a%4;
+	for(int a=0;a<5370;a++){
+		ap_uint<4> phaseClass = 0;
 		rfnoc_axis axi;
 		inFile>> setw(16) >> test;
-		/*result << a;
-		result << ",";
-		result << setw(16) << test;
-		result << ",";*/
 		axi.data.range(15,0) = test.V;
+		result << a;
+		result << ",";
+		/*
+		result << setw(16) << test;
+		//result << ",";
+		result << endl;*/
+
 		correlation(axi,&streamArrayOut[a],&result,phaseClass);
 		//result << setw(32) << streamArrayOut[a].data;
 		//result << endl;
 	}
 
-	displayOutput(&result);
+	//displayOutput(&result);
 
 }

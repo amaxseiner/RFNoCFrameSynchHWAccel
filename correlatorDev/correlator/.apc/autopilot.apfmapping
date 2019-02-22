@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="corrData.dat" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/corrData.dat"/>
     <originFiles name="correlatorSim.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h"/>
+    <originFiles name="inputCorrr.dat" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat"/>
   </source>
   <testbench>
     <originFiles name="correlatorTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"/>
