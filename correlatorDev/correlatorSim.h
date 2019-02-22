@@ -122,7 +122,6 @@ void displayOutput(ofstream *result){
 
 void correlate(ofstream *result, ap_uint<4> phaseClass){
 	semiComplex temp;
-	bigSemiComplex fag;
 	temp.i=0;
 	temp.q=0;
 	switch(phaseClass){
@@ -136,16 +135,16 @@ void correlate(ofstream *result, ap_uint<4> phaseClass){
 			*result << ",";*/
 		}
 		for(int a=0;a<16;a++){
-			fag.i += resPhase0[a].i;
-			fag.q += resPhase0[a].q;
+			temp.i += resPhase0[a].i;
+			temp.q += resPhase0[a].q;
 		}
 
 		for(int a=15;a>0;a--){
 			Phase0[a] = Phase0[a-1];
 		}
-		*result << setw(16) << fag.q;
+		*result << setw(16) << temp.q;
 		*result << endl;
-		Phase0[0] = fag;
+		Phase0[0] = temp;
 		break;
 	case 1:
 		for(int a =15;a>0;a--){
