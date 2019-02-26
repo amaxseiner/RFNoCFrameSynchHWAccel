@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[SIM 211-2]" severity="INFO" keynum="SIM_2_1569" content="*************** CSIM start ***************" tag=""/>
+	<Message prefix="[SIM 211-4]" severity="INFO" keynum="SIM_4_1577" content="CSIM will launch GCC as the compiler." tag=""/>
+	<Message prefix="[SIM 211-100]" severity="ERROR" keynum="SIM_100_1591" content="CSim failed with errors." tag=""/>
+	<Message prefix="[SIM 211-3]" severity="INFO" keynum="SIM_3_1588" content="*************** CSIM finish ***************" tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="4
+    while executing
+&quot;source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/csim.tcl&quot;
+    invoked from within
+&quot;hls::main /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/csim.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

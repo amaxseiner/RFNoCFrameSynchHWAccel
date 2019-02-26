@@ -20,19 +20,22 @@
 
 #include <hls_stream.h>
 #include "ap_int.h"
+#include "ap_fixed.h"
 #include "rfnoc.h"
 
-#define COR_SIZE_16
 
 
-void averaging (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
+
+void matched (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
 {
 
-#ifdef COR_SIZE_16
+
 const int COR_SIZE = 16;
-#endif
+const int windowSize =16;
+
 
 #pragma HLS RESOURCE variable=o_data latency=1
+//#pragma HLS INTERFACE ap_hs port=pnseq_in
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
@@ -50,14 +53,11 @@ static ap_int<16> data_reg_q[COR_SIZE];
   static ap_uint<1> firstLoad;
 #pragma HLS RESET variable=firstLoad
 
-  static ap_uint<1> pn_seq[512];
-#pragma HLS ARRAY_PARTITION variable=pn_seq complete dim=1
-
   rfnoc_axis tmp_data;
 
-  static ap_uint<10> load_cnt;
-#pragma HLS RESET variable=load_cnt
   static ap_uint<24> data_valid_reg;
+  static ap_int<16> zeros;
+  zeros = 0;
 
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
@@ -67,48 +67,39 @@ static ap_int<16> data_reg_q[COR_SIZE];
   static writeState currentwrState;
 #pragma HLS RESET variable=currentwrState
 
+  static semiComplex window[windowSize];
+  #pragma HLS ARRAY_PARTITION variable=window complete dim=1
+  #pragma HLS RESET variable=window
 
-// Output write state machine
-  switch(currentwrState) {
-      case ST_NOWRITE:
-          if(data_valid_reg[11])
-                  currentwrState = ST_WRITE;
-          break;
-      case ST_WRITE:
-
-          out_sample.data.range(15,0) = data_reg_q[11];
-          out_sample.data(31,16) = data_reg_i[11];
-          o_data.write(out_sample);
-
-          break;
-  }
-
-  data_valid_reg.range(23,1) = data_valid_reg.range(22,0);
-// Read and shift state machine
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
   switch(currentState) {
     case ST_IDLE:
-          if(start) // wait for start signal. The same start signal is used to load PN sequence generator
-  		currentState = ST_LOAD;
-		firstLoad = 1;
-          break;
+        if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
+        	currentState = ST_LOAD;
+
+        }
+        break;
     case ST_LOAD:
-	if(!i_data.empty()){
-		if(firstLoad == 0){
-			SHIFT_DATA: for(int i = COR_SIZE-1 ; i > 0 ; i--){
-		          #pragma HLS UNROLL
-		                data_reg_i[i] = data_reg_i[i - 1];
-		                data_reg_q[i] = data_reg_q[i - 1];}
+    	i_data.read(tmp_data);
+		SHIFT_DATA: for(int a = windowSize-1; a > 0; a--){
+			#pragma HLS UNROLL
+			window[a].q = window[a - 1].q;
+			window[a].i = window[a - 1].i;
 		}
 		i_data.read(tmp_data);
-		data_reg_q[0] = tmp_data.data.range(15,0); // IM
-		data_reg_i[0] = tmp_data.data.range(31,16); // RE 
-		data_valid_reg[0] = 1;   // shift in valid pulse
-		firstLoad = 0;
-		
-	} else {
-		data_valid_reg[0] = 0;
-	}
+		window[0].q = tmp_data.data.range(15,0); // IM
+		window[0].i = tmp_data.data.range(31,16); // RE
+
+
+
+
+
+    	out_sample.data.range(31,16) = zeros.range(15,0);
+    	out_sample.data.range(15,0) = tmp_data.data.range(15,0);
+    	//out_sample.data= tmp_data.data;
+    	out_sample.last=tmp_data.last;
+
+    	o_data.write(out_sample);
 	break;
     }
 

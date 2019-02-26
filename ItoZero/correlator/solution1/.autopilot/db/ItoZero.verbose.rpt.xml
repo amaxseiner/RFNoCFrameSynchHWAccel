@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ItoZero'" level="0">
-<item name = "Date">Sat Feb 16 17:21:35 2019
+<item name = "Date">Tue Feb 19 18:47:09 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -117,9 +117,9 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter1_currentState_load_reg_94">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter1_currentState_load_reg_110">1, 0, 1, 0</column>
 <column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_94">1, 0, 1, 0</column>
+<column name="currentState_load_reg_110">1, 0, 1, 0</column>
 <column name="i_data_V_data_V_0_payload_A">32, 0, 32, 0</column>
 <column name="i_data_V_data_V_0_payload_B">32, 0, 32, 0</column>
 <column name="i_data_V_data_V_0_sel_rd">1, 0, 1, 0</column>

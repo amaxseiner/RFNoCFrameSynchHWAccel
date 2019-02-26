@@ -27174,9 +27174,9 @@ _ssdm_op_SpecReset( currentwrState, 1, "");
         break;
     case ST_LOAD:
      i_data.read(tmp_data);
+     out_sample.data.range(31,16) = zeros.range(15,0);
+     out_sample.data.range(15,0) = tmp_data.data.range(15,0);
 
-
-     out_sample.data= tmp_data.data;
      out_sample.last=tmp_data.last;
 
      o_data.write(out_sample);

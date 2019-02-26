@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="matchedRee" solutionName="solution1" date="2019-02-23T11:15:50.496-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed with errors." projectName="matchedRee" solutionName="solution1" date="2019-02-23T11:05:06.611-0500"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.190-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.174-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.156-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.141-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.135-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.085-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.066-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.051-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.031-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.020-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.998-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.984-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.966-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.951-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_7' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.931-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_8' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.917-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_9' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.899-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_10' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.883-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_11' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.864-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_12' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.856-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_13' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.837-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_14' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.819-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'currentState' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.812-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

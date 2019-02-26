@@ -70,7 +70,7 @@
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" period="5"/>
+        <clock name="default" default="false" period="5"/>
     </clockList>
 </solution>
 
