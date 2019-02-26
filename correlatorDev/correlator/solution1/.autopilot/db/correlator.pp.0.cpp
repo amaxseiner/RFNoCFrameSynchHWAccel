@@ -144,7 +144,7 @@ extern "C" {
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "correlator.cpp" 2
-# 18 "correlator.cpp"
+# 13 "correlator.cpp"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 1
 # 66 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
@@ -315,7 +315,9 @@ class stream
 };
 
 }
-# 19 "correlator.cpp" 2
+# 14 "correlator.cpp" 2
+# 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 1
+# 51 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_int.h" 1
 # 60 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_int.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_half.h" 1
@@ -26958,9 +26960,10 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
   }
 
 };
-# 20 "correlator.cpp" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 1
-# 55 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h"
+# 52 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 2
+
+
+
 # 1 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed_special.h" 1
 # 66 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed_special.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
@@ -29141,7 +29144,7 @@ inline bool operator!=(
 
 }
 # 56 "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 2
-# 21 "correlator.cpp" 2
+# 15 "correlator.cpp" 2
 # 1 "./rfnoc.h" 1
 # 28 "./rfnoc.h"
  struct rfnoc_axis{
@@ -29155,45 +29158,188 @@ inline bool operator!=(
  };
 
  struct bigSemiComplex{
-  ap_fixed<16,11> i;
-  ap_fixed<16,11> q;
+  ap_fixed<32,22> i;
+  ap_fixed<32,22> q;
  };
-# 22 "correlator.cpp" 2
+# 16 "correlator.cpp" 2
 
 
 
 
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start)
+void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<4> phaseClass,ap_uint<1> start)
 {
+
 
 #pragma HLS RESOURCE variable=o_data latency=1
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
+
 #pragma HLS PIPELINE II=1
 
-static bigSemiComplex corrResult[256];
-#pragma HLS ARRAY_PARTITION variable=corrResult complete dim=1
-#pragma HLS RESET variable=corrResult
+static semiComplex phaseClass0[16];
 
-static ap_int<1> corrResultValid[256];
+
+static bigSemiComplex resPhase0[16];
+
+
+static bigSemiComplex Phase0[16];
+
+
+static semiComplex phaseClass1[16];
+
+
+static bigSemiComplex resPhase1[16];
+
+
+static bigSemiComplex Phase1[16];
+
+
+static semiComplex phaseClass2[16];
+
+
+static bigSemiComplex resPhase2[16];
+
+
+static bigSemiComplex Phase2[16];
+
+
+static semiComplex phaseClass3[16];
+
+
+static bigSemiComplex resPhase3[16];
+
+
+static bigSemiComplex Phase3[16];
+
+
+static semiComplex phaseClass4[16];
+
+
+static bigSemiComplex resPhase4[16];
+
+
+static bigSemiComplex Phase4[16];
+
+
+static semiComplex phaseClass5[16];
+
+
+static bigSemiComplex resPhase5[16];
+
+
+static bigSemiComplex Phase5[16];
+
+
+static semiComplex phaseClass6[16];
+
+
+static bigSemiComplex resPhase6[16];
+
+
+static bigSemiComplex Phase6[16];
+
+
+static semiComplex phaseClass7[16];
+
+
+static bigSemiComplex resPhase7[16];
+
+
+static bigSemiComplex Phase7[16];
+
+
+static semiComplex phaseClass8[16];
+
+
+static bigSemiComplex resPhase8[16];
+
+
+static bigSemiComplex Phase8[16];
+
+
+static semiComplex phaseClass9[16];
+
+
+static bigSemiComplex resPhase9[16];
+
+
+static bigSemiComplex Phase9[16];
+
+
+static semiComplex phaseClass10[16];
+
+
+static bigSemiComplex resPhase10[16];
+
+
+static bigSemiComplex Phase10[16];
+
+
+static semiComplex phaseClass11[16];
+
+
+static bigSemiComplex resPhase11[16];
+
+
+static bigSemiComplex Phase11[16];
+
+
+static semiComplex phaseClass12[16];
+
+
+static bigSemiComplex resPhase12[16];
+
+
+static bigSemiComplex Phase12[16];
+
+
+static semiComplex phaseClass13[16];
+
+
+static bigSemiComplex resPhase13[16];
+
+
+static bigSemiComplex Phase13[16];
+
+
+static semiComplex phaseClass14[16];
+
+
+static bigSemiComplex resPhase14[16];
+
+
+static bigSemiComplex Phase14[16];
+
+
+static semiComplex phaseClass15[16];
+
+
+static bigSemiComplex resPhase15[16];
+
+
+static bigSemiComplex Phase15[16];
+
+
+static semiComplex newVal;
+
+
+static ap_uint<2> phaseClassValid[16];
 #pragma HLS ARRAY_PARTITION variable=corrResultValid complete dim=1
 #pragma HLS RESET variable=corrResultValid
 
-static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
-#pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
+ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
+#pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
-static semiComplex window[16];
-#pragma HLS ARRAY_PARTITION variable=window complete dim=1
-#pragma HLS RESET variable=window
+ rfnoc_axis classType;
 
- rfnoc_axis out_sample;
+  rfnoc_axis out_sample;
 
   static ap_uint<10> out_sample_cnt;
 #pragma HLS RESET variable=out_sample_cnt
 
- static ap_uint<32> loadCount;
+ static ap_int<32> loadCount;
 #pragma HLS RESET variable=loadCount
 
  rfnoc_axis tmp_data;
@@ -29201,55 +29347,354 @@ static semiComplex window[16];
   static ap_uint<32> readResCount;
 #pragma HLS RESET variable=readResCount
 
- static ap_uint<10> load_cnt;
-#pragma HLS RESET variable=load_cnt
 
- enum correlatorState {ST_IDLE = 0, ST_CORRELATE};
-  static correlatorState currentState;
+
+
+
+ static bigSemiComplex corHelper;
+
+
+
+  enum loadState {ST_IDLE = 0, ST_LOAD };
+  static loadState currentState;
 #pragma HLS RESET variable=currentState
 
+ for(int i=0;i<16;i++){
+  if(phaseClassValid[i] == 1){
+   corHelper.i=0;
+   corHelper.q=0;
+   switch(i){
+   case 0:
+    correlateData0: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
 
-if(corrResultValid[readResCount]){
- if(corrResult[readResCount].q > 100){
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass0[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass0[a].q);
+     if(a>0)
+      Phase0[a] = Phase0[a-1];
+    }
+    Phase0[0] = corHelper;
+    if(corHelper > 4){
+     out_sample.data = loadCount;
+     o_data.write(out_sample);
+    }
+   break;
+   case 1:
+    correlateData1: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
 
-  out_sample.data = readResCount;
-  o_data.write(out_sample);
-  out_sample_cnt++;
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass1[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass1[a].q);
+     if(a>0)
+      Phase1[a] = Phase1[a-1];
+    }
+    Phase1[0] = corHelper;
+    break;
+   case 2:
+    correlateData2: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass2[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass2[a].q);
+     if(a>0)
+      Phase2[a] = Phase2[a-1];
+    }
+    Phase2[0] = corHelper;
+    break;
+   case 3:
+    correlateData3: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass3[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass3[a].q);
+     if(a>0)
+      Phase3[a] = Phase3[a-1];
+    }
+    Phase3[0] = corHelper;
+
+    break;
+   case 4:
+    correlateData4: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass4[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass4[a].q);
+     if(a>0)
+      Phase4[a] = Phase4[a-1];
+    }
+    Phase4[0] = corHelper;
+    break;
+   case 5:
+    correlateData5: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass5[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass5[a].q);
+     if(a>0)
+      Phase5[a] = Phase5[a-1];
+    }
+    Phase5[0] = corHelper;
+    break;
+   case 6:
+    correlateData6: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass6[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass6[a].q);
+     if(a>0)
+      Phase6[a] = Phase6[a-1];
+    }
+    Phase6[0] = corHelper;
+    break;
+   case 7:
+    correlateData7: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass7[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass7[a].q);
+     if(a>0)
+      Phase7[a] = Phase7[a-1];
+    }
+    Phase7[0] = corHelper;
+    break;
+   case 8:
+    correlateData8: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass8[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass8[a].q);
+     if(a>0)
+      Phase8[a] = Phase8[a-1];
+    }
+    Phase8[0] = corHelper;
+    break;
+   case 9:
+    correlateData9: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass9[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass9[a].q);
+     if(a>0)
+      Phase9[a] = Phase9[a-1];
+    }
+    Phase9[0] = corHelper;
+    break;
+   case 10:
+    correlateData10: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass10[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass10[a].q);
+     if(a>0)
+      Phase10[a] = Phase10[a-1];
+    }
+    Phase10[0] = corHelper;
+    break;
+   case 11:
+    correlateData11: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass11[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass11[a].q);
+     if(a>0)
+      Phase11[a] = Phase11[a-1];
+    }
+    Phase11[0] = corHelper;
+    break;
+   case 12:
+    correlateData12: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass12[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass12[a].q);
+     if(a>0)
+      Phase12[a] = Phase12[a-1];
+    }
+    Phase12[0] = corHelper;
+    break;
+   case 13:
+    correlateData13: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass13[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass13[a].q);
+     if(a>0)
+      Phase13[a] = Phase13[a-1];
+    }
+    Phase13[0] = corHelper;
+    break;
+   case 14:
+    correlateData14: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass14[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass14[a].q);
+     if(a>0)
+      Phase13[a] = Phase14[a-1];
+    }
+    Phase14[0] = corHelper;
+    break;
+   case 15:
+    correlateData15: for(int a =15;a>=0;a--){
+#pragma HLS pipeline
+
+ corHelper.i = corHelper.i + (corrSeq[a] * phaseClass15[a].i);
+     corHelper.q = corHelper.q + (corrSeq[a] * phaseClass15[a].q);
+     if(a>0)
+      Phase15[a] = Phase15[a-1];
+    }
+    Phase15[0] = corHelper;
+    break;
+   }
+
+  }
  }
- readResCount++;
-}
 
 
-  switch(currentState) {
-    case ST_IDLE:
+
+ switch(currentState) {
+ case ST_IDLE:
   if(start)
-   currentState = ST_CORRELATE;
+   currentState = ST_LOAD;
   break;
-
-
-
-
-     case ST_CORRELATE:
+  case ST_LOAD:
   if(!i_data.empty()){
-   SHIFT_DATA: for(int a = 16 -1; a > 0; a--){
+   i_data.read(tmp_data);
+   newVal.q = tmp_data.data.range(15,0);
+   newVal.i = tmp_data.data.range(31,16);
+   switch(phaseClass){
+   case 0:
+    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 #pragma HLS UNROLL
- window[a].q = window[a - 1].q;
-    window[a].i = window[a - 1].i;
+ phaseClass0[a] = phaseClass0[a-1];
+    }
+    phaseClass0[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 1:
+    SHIFT_DATA1: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass1[a] = phaseClass1[a-1];
+    }
+    phaseClass1[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 2:
+    SHIFT_DATA2: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass2[a] = phaseClass2[a-1];
+    }
+    phaseClass2[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 3:
+    SHIFT_DATA3: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass3[a] = phaseClass3[a-1];
+    }
+    phaseClass3[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 4:
+    SHIFT_DATA4: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass4[a] = phaseClass4[a-1];
+    }
+    phaseClass4[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 5:
+    SHIFT_DATA5: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass5[a] = phaseClass5[a-1];
+    }
+    phaseClass5[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 6:
+    SHIFT_DATA6: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass6[a] = phaseClass6[a-1];
+    }
+    phaseClass6[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 7:
+    SHIFT_DATA7: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass7[a] = phaseClass7[a-1];
+    }
+    phaseClass7[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 8:
+    SHIFT_DATA8: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass8[a] = phaseClass8[a-1];
+    }
+    phaseClass8[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 9:
+    SHIFT_DATA9: for(int a=16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass9[a] = phaseClass9[a-1];
+    }
+    phaseClass9[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 10:
+    SHIFT_DATA10: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass10[a] = phaseClass10[a-1];
+    }
+    phaseClass10[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 11:
+    SHIFT_DATA11: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass11[a] = phaseClass11[a-1];
+    }
+    phaseClass11[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 12:
+    SHIFT_DATA12: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass12[a] = phaseClass12[a-1];
+    }
+    phaseClass12[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 13:
+    SHIFT_DATA13: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass13[a] = phaseClass13[a-1];
+    }
+    phaseClass13[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 14:
+    SHIFT_DATA14: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass14[a] = phaseClass14[a-1];
+    }
+    phaseClass14[0] = newVal;
+
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 15:
+    SHIFT_DATA15: for(int a =16 -1;a>0;a--){
+#pragma HLS UNROLL
+ phaseClass15[a] = phaseClass15[a-1];
+    }
+    phaseClass15[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
    }
    loadCount++;
-   i_data.read(tmp_data);
-   window[0].q = tmp_data.data.range(15,0);
-   window[0].i = tmp_data.data.range(31,16);
-
-   CORRELATE_DATA: for(int a = 0;a<16;a++){
-#pragma HLS UNROLL
-
- corrResult[loadCount+a].q += window[a].q * preamble[a];
-   }
-   if(loadCount - 16 >= 0){
-    corrResultValid[loadCount - 16] = 1;
-   }
   }
+  currentState = ST_LOAD;
   break;
-    }
+ }
 }

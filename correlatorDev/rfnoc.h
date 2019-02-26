@@ -36,6 +36,6 @@
  };
 
  struct bigSemiComplex{
-	 ap_fixed<16,11> i;
-	 ap_fixed<16,11> q;
+	 ap_fixed<32,22> i;
+	 ap_fixed<32,22> q;
  };

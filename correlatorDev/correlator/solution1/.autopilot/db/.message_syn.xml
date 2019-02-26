@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;correlator.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 714 ; free virtual = 2492" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 710 ; free virtual = 2492" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 367.469 ; gain = 14.004 ; free physical = 678 ; free virtual = 2476" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 495.387 ; gain = 141.922 ; free physical = 668 ; free virtual = 2468" tag=""/>
-	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;correlator&apos; (correlator.cpp:27)." tag=""/>
-	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;SHIFT_DATA&apos; (correlator.cpp:94) in function &apos;correlator&apos; completely." tag=""/>
-	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;CORRELATE_DATA&apos; (correlator.cpp:104) in function &apos;correlator&apos; completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;corrResult.i.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-104]" severity="WARNING" keynum="694" content="Completely partitioning array &apos;corrResult.q.V&apos;  accessed through non-constant indices on dimension 1 (correlator.cpp:107:31), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;corrResult.q.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-104]" severity="WARNING" keynum="694" content="Completely partitioning array &apos;corrResultValid.V&apos;  accessed through non-constant indices on dimension 1 (correlator.cpp:72:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;corrResultValid.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;preamble.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;window.i.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;window.q.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;aesl_mux_load.256i1P.i8&apos; into &apos;correlator&apos;." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;aesl_mux_load.256i16P.i8&apos; into &apos;correlator&apos;." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;aesl_mux_load.256i16P.i8&apos; into &apos;correlator&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:02:05 ; elapsed = 00:01:47 . Memory (MB): peak = 622.836 ; gain = 269.371 ; free physical = 654 ; free virtual = 2448" tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="Failed checking during preprocessing.
+    while executing
+&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/csynth.tcl&quot;
+    invoked from within
+&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/csynth.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
 </Messages>
