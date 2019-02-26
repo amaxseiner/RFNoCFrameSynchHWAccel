@@ -29189,7 +29189,6 @@ inline bool operator!=(
 void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<4> phaseClass,ap_uint<1> start)
 {
 
-
 _ssdm_op_SpecResource(&o_data, "", "", "", 1, "", "", "", "", "");
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -29197,154 +29196,154 @@ _ssdm_op_SpecInterface(&i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0,
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
-static ap_fixed<16,11> phaseClass0[8];
+static ap_fixed<16,11> phaseClass0[16];
 _ssdm_SpecArrayPartition( phaseClass0, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase0[8];
+static ap_fixed<32,22> resPhase0[16];
 _ssdm_SpecArrayPartition( resPhase0, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase0[8];
+static ap_fixed<32,22> Phase0[16];
 _ssdm_SpecArrayPartition( Phase0, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass1[8];
+static ap_fixed<16,11> phaseClass1[16];
 _ssdm_SpecArrayPartition( phaseClass1, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase1[8];
+static ap_fixed<32,22> resPhase1[16];
 _ssdm_SpecArrayPartition( resPhase1, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase1[8];
+static ap_fixed<32,22> Phase1[16];
 _ssdm_SpecArrayPartition( Phase1, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass2[8];
+static ap_fixed<16,11> phaseClass2[16];
 _ssdm_SpecArrayPartition( phaseClass2, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase2[8];
+static ap_fixed<32,22> resPhase2[16];
 _ssdm_SpecArrayPartition( resPhase2, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase2[8];
+static ap_fixed<32,22> Phase2[16];
 _ssdm_SpecArrayPartition( Phase2, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass3[8];
+static ap_fixed<16,11> phaseClass3[16];
 _ssdm_SpecArrayPartition( phaseClass3, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase3[8];
+static ap_fixed<32,22> resPhase3[16];
 _ssdm_SpecArrayPartition( resPhase3, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase3[8];
+static ap_fixed<32,22> Phase3[16];
 _ssdm_SpecArrayPartition( Phase3, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass4[8];
+static ap_fixed<16,11> phaseClass4[16];
 _ssdm_SpecArrayPartition( phaseClass4, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase4[8];
+static ap_fixed<32,22> resPhase4[16];
 _ssdm_SpecArrayPartition( resPhase4, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase4[8];
+static ap_fixed<32,22> Phase4[16];
 _ssdm_SpecArrayPartition( Phase4, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass5[8];
+static ap_fixed<16,11> phaseClass5[16];
 _ssdm_SpecArrayPartition( phaseClass5, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase5[8];
+static ap_fixed<32,22> resPhase5[16];
 _ssdm_SpecArrayPartition( resPhase5, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase5[8];
+static ap_fixed<32,22> Phase5[16];
 _ssdm_SpecArrayPartition( Phase5, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass6[8];
+static ap_fixed<16,11> phaseClass6[16];
 _ssdm_SpecArrayPartition( phaseClass6, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase6[8];
+static ap_fixed<32,22> resPhase6[16];
 _ssdm_SpecArrayPartition( resPhase6, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase6[8];
+static ap_fixed<32,22> Phase6[16];
 _ssdm_SpecArrayPartition( Phase6, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass7[8];
+static ap_fixed<16,11> phaseClass7[16];
 _ssdm_SpecArrayPartition( phaseClass7, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase7[8];
+static ap_fixed<32,22> resPhase7[16];
 _ssdm_SpecArrayPartition( resPhase7, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase7[8];
+static ap_fixed<32,22> Phase7[16];
 _ssdm_SpecArrayPartition( Phase7, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass8[8];
+static ap_fixed<16,11> phaseClass8[16];
 _ssdm_SpecArrayPartition( phaseClass8, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase8[8];
+static ap_fixed<32,22> resPhase8[16];
 _ssdm_SpecArrayPartition( resPhase8, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase8[8];
+static ap_fixed<32,22> Phase8[16];
 _ssdm_SpecArrayPartition( Phase8, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass9[8];
+static ap_fixed<16,11> phaseClass9[16];
 _ssdm_SpecArrayPartition( phaseClass9, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase9[8];
+static ap_fixed<32,22> resPhase9[16];
 _ssdm_SpecArrayPartition( resPhase9, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase9[8];
+static ap_fixed<32,22> Phase9[16];
 _ssdm_SpecArrayPartition( Phase9, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass10[8];
+static ap_fixed<16,11> phaseClass10[16];
 _ssdm_SpecArrayPartition( phaseClass10, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase10[8];
+static ap_fixed<32,22> resPhase10[16];
 _ssdm_SpecArrayPartition( resPhase10, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase10[8];
+static ap_fixed<32,22> Phase10[16];
 _ssdm_SpecArrayPartition( Phase10, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass11[8];
+static ap_fixed<16,11> phaseClass11[16];
 _ssdm_SpecArrayPartition( phaseClass11, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase11[8];
+static ap_fixed<32,22> resPhase11[16];
 _ssdm_SpecArrayPartition( resPhase11, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase11[8];
+static ap_fixed<32,22> Phase11[16];
 _ssdm_SpecArrayPartition( Phase11, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass12[8];
+static ap_fixed<16,11> phaseClass12[16];
 _ssdm_SpecArrayPartition( phaseClass12, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase12[8];
+static ap_fixed<32,22> resPhase12[16];
 _ssdm_SpecArrayPartition( resPhase12, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase12[8];
+static ap_fixed<32,22> Phase12[16];
 _ssdm_SpecArrayPartition( Phase12, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass13[8];
+static ap_fixed<16,11> phaseClass13[16];
 _ssdm_SpecArrayPartition( phaseClass13, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase13[8];
+static ap_fixed<32,22> resPhase13[16];
 _ssdm_SpecArrayPartition( resPhase13, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase13[8];
+static ap_fixed<32,22> Phase13[16];
 _ssdm_SpecArrayPartition( Phase13, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass14[8];
+static ap_fixed<16,11> phaseClass14[16];
 _ssdm_SpecArrayPartition( phaseClass14, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase14[8];
+static ap_fixed<32,22> resPhase14[16];
 _ssdm_SpecArrayPartition( resPhase14, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase14[8];
+static ap_fixed<32,22> Phase14[16];
 _ssdm_SpecArrayPartition( Phase14, 1, "COMPLETE", 0, "");
 
-static ap_fixed<16,11> phaseClass15[8];
+static ap_fixed<16,11> phaseClass15[16];
 _ssdm_SpecArrayPartition( phaseClass15, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> resPhase15[8];
+static ap_fixed<32,22> resPhase15[16];
 _ssdm_SpecArrayPartition( resPhase15, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase15[8];
+static ap_fixed<32,22> Phase15[16];
 _ssdm_SpecArrayPartition( Phase15, 1, "COMPLETE", 0, "");
 
 static ap_fixed<16,11> newVal;
 _ssdm_op_SpecReset( &newVal, 1,  "");
 
-static ap_uint<1> phaseClassValid[8];
+static ap_uint<1> phaseClassValid[16];
 _ssdm_SpecArrayPartition( phaseClassValid, 1, "COMPLETE", 0, "");
 _ssdm_op_SpecReset( phaseClassValid, 1,  "");
 
@@ -29370,8 +29369,11 @@ _ssdm_op_SpecReset( &readResCount, 1,  "");
   static correlatorState corState;
 _ssdm_op_SpecReset( corState, 1,  "");
 
- static ap_fixed<32,22> corHelper;
-_ssdm_op_SpecReset( &corHelper, 1,  "");
+ static ap_fixed<32,22> corHelperI;
+_ssdm_op_SpecReset( &corHelperI, 1,  "");
+
+ static ap_fixed<32,22> corHelperQ;
+_ssdm_op_SpecReset( &corHelperQ, 1,  "");
 
 
  enum loadState {ST_IDLE = 0, ST_LOAD };
@@ -29385,100 +29387,187 @@ case ST_CORRELATE:
 
   switch(phaseClass){
   case 0:
-   correlateData0: for(int a =8 -1;a>=0;a--){
+   correlateData0: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass0[a]);
+     corHelperI = corHelperI + (phaseClass0[a]);
 
-
-
+    if(a>0)
+     Phase0[a] = Phase0[a-1];
    }
-   Phase0[0] = corHelper;
-   if(corHelper > 4){
+   Phase0[0] = corHelperI;
+   if(corHelperI >= 5){
     out_sample.data = loadCount;
     o_data.write(out_sample);
    }
   break;
   case 1:
-   correlateData1: for(int a =8 -1;a>=0;a--){
+   correlateData1: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass1[a]);
+     corHelperI = corHelperI + (phaseClass1[a]);
 
-
-
+    if(a>0)
+     Phase1[a] = Phase1[a-1];
    }
-   Phase1[0] = corHelper;
+   Phase1[0] = corHelperI;
 
    break;
   case 2:
-   correlateData2: for(int a =8 -1;a>=0;a--){
+   correlateData2: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass2[a]);
+     corHelperI = corHelperI + (phaseClass2[a]);
 
-
-
+    if(a>0)
+     Phase2[a] = Phase2[a-1];
    }
-   Phase2[0] = corHelper;
+   Phase2[0] = corHelperI;
    break;
   case 3:
-   correlateData3: for(int a =8 -1;a>=0;a--){
+   correlateData3: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass3[a]);
+     corHelperI = corHelperI + (phaseClass3[a]);
 
-
-
+    if(a>0)
+     Phase3[a] = Phase3[a-1];
    }
-   Phase3[0] = corHelper;
+   Phase3[0] = corHelperI;
 
    break;
   case 4:
-   correlateData4: for(int a =8 -1;a>=0;a--){
+   correlateData4: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass4[a]);
+     corHelperI = corHelperI + (phaseClass4[a]);
 
-
-
+    if(a>0)
+     Phase4[a] = Phase4[a-1];
    }
-   Phase4[0] = corHelper;
+   Phase4[0] = corHelperI;
    break;
   case 5:
-   correlateData5: for(int a =8 -1;a>=0;a--){
+   correlateData5: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass5[a]);
+     corHelperI = corHelperI + (phaseClass5[a]);
 
-
-
+    if(a>0)
+     Phase5[a] = Phase5[a-1];
    }
-   Phase5[0] = corHelper;
+   Phase5[0] = corHelperI;
    break;
   case 6:
-   correlateData6: for(int a =8 -1;a>=0;a--){
+   correlateData6: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass6[a]);
+     corHelperI = corHelperI + (phaseClass6[a]);
 
-
-
+    if(a>0)
+     Phase6[a] = Phase6[a-1];
    }
-   Phase6[0] = corHelper;
+   Phase6[0] = corHelperI;
    break;
   case 7:
-   correlateData7: for(int a =8 -1;a>=0;a--){
+   correlateData7: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelper = corHelper + (phaseClass7[a]);
+     corHelperI = corHelperI + (phaseClass7[a]);
 
-
-
+    if(a>0)
+     Phase7[a] = Phase7[a-1];
    }
-   Phase7[0] = corHelper;
+   Phase7[0] = corHelperI;
    break;
-#389 "correlator.cpp"
+  case 8:
+   correlateData8: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass8[a]);
+
+    if(a>0)
+     Phase8[a] = Phase8[a-1];
+   }
+   Phase8[0] = corHelperI;
+   break;
+  case 9:
+   correlateData9: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass9[a]);
+
+    if(a>0)
+     Phase9[a] = Phase9[a-1];
+   }
+   Phase9[0] = corHelperI;
+   break;
+  case 10:
+   correlateData10: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass10[a]);
+
+    if(a>0)
+     Phase10[a] = Phase10[a-1];
+   }
+   Phase10[0] = corHelperI;
+   break;
+  case 11:
+   correlateData11: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass11[a]);
+
+    if(a>0)
+     Phase11[a] = Phase11[a-1];
+   }
+   Phase11[0] = corHelperI;
+   break;
+  case 12:
+   correlateData12: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass12[a]);
+
+    if(a>0)
+     Phase12[a] = Phase12[a-1];
+   }
+   Phase12[0] = corHelperI;
+   break;
+  case 13:
+   correlateData13: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass13[a]);
+
+    if(a>0)
+     Phase13[a] = Phase13[a-1];
+   }
+   Phase13[0] = corHelperI;
+   break;
+  case 14:
+   correlateData14: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass14[a]);
+
+    if(a>0)
+     Phase14[a] = Phase14[a-1];
+   }
+   Phase14[0] = corHelperI;
+   break;
+  case 15:
+   correlateData15: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass15[a]);
+
+    if(a>0)
+     Phase15[a] = Phase15[a-1];
+   }
+   Phase15[0] = corHelperI;
+   break;
  }
 }
 
@@ -29498,7 +29587,7 @@ _ssdm_Unroll(0,0,0, "");
 
    switch(phaseClass){
    case 0:
-    SHIFT_DATA0: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
     }
@@ -29506,7 +29595,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 1:
-    SHIFT_DATA1: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA1: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass1[a] = phaseClass1[a-1];
     }
@@ -29514,7 +29603,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 2:
-    SHIFT_DATA2: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA2: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass2[a] = phaseClass2[a-1];
     }
@@ -29522,7 +29611,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 3:
-    SHIFT_DATA3: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA3: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass3[a] = phaseClass3[a-1];
     }
@@ -29530,7 +29619,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 4:
-    SHIFT_DATA4: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA4: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass4[a] = phaseClass4[a-1];
     }
@@ -29538,7 +29627,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 5:
-    SHIFT_DATA5: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA5: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass5[a] = phaseClass5[a-1];
     }
@@ -29546,7 +29635,7 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 6:
-    SHIFT_DATA6: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA6: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass6[a] = phaseClass6[a-1];
     }
@@ -29554,18 +29643,81 @@ _ssdm_Unroll(0,0,0, "");
     phaseClassValid[phaseClass] = 1;
     break;
    case 7:
-    SHIFT_DATA7: for(int a =8 -1;a>0;a--){
+    SHIFT_DATA7: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass7[a] = phaseClass7[a-1];
     }
     phaseClass7[0] = newVal;
     phaseClassValid[phaseClass] = 1;
     break;
-#536 "correlator.cpp"
-   }
-   loadCount++;
-   corState = ST_CORRELATE;
+   case 8:
+    SHIFT_DATA8: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass8[a] = phaseClass8[a-1];
+    }
+    phaseClass8[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 9:
+    SHIFT_DATA9: for(int a=16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass9[a] = phaseClass9[a-1];
+    }
+    phaseClass9[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 10:
+    SHIFT_DATA10: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass10[a] = phaseClass10[a-1];
+    }
+    phaseClass10[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 11:
+    SHIFT_DATA11: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass11[a] = phaseClass11[a-1];
+    }
+    phaseClass11[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 12:
+    SHIFT_DATA12: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass12[a] = phaseClass12[a-1];
+    }
+    phaseClass12[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 13:
+    SHIFT_DATA13: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass13[a] = phaseClass13[a-1];
+    }
+    phaseClass13[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 14:
+    SHIFT_DATA14: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass14[a] = phaseClass14[a-1];
+    }
+    phaseClass14[0] = newVal;
 
+    phaseClassValid[phaseClass] = 1;
+    break;
+   case 15:
+    SHIFT_DATA15: for(int a =16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass15[a] = phaseClass15[a-1];
+    }
+    phaseClass15[0] = newVal;
+    phaseClassValid[phaseClass] = 1;
+    break;
+   }
+   loadCount= loadCount + 1;
+   corState = ST_CORRELATE;
   }
   currentState = ST_LOAD;
   break;

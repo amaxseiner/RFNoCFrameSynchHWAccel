@@ -1146,5 +1146,3 @@
 #pragma line 1 "./rfnoc.h" 1 ::: 29156
 #pragma line 28 "./rfnoc.h" ::: 29157
 #pragma line 4 "correlator.cpp" 2 ::: 29172
-#pragma line 389 "correlator.cpp" ::: 29470
-#pragma line 536 "correlator.cpp" ::: 29553

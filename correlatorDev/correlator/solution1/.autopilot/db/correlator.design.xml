@@ -11,10 +11,10 @@
 <Name>correlator</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>0.62</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>1.25</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
-<EstimatedClockPeriod>4.32</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.16</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>3</Best-caseLatency>
@@ -28,8 +28,8 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<FF>950</FF>
-<LUT>1478</LUT>
+<FF>3814</FF>
+<LUT>4534</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>

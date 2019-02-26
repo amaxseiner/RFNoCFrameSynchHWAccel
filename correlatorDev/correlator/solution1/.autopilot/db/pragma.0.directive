@@ -411,13 +411,66 @@
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="corHelper"/>
+<option name="variable" positionalBoolean="4" value="corHelperI"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="corHelperQ"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="currentState"/>
 </pragma>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlator" label="">
+<pragma name="UNROLL"/>
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
 <pragma name="UNROLL"/>
