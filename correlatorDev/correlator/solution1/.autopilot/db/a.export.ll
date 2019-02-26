@@ -10,12 +10,33 @@ target triple = "x86_64-unknown-linux-gnu"
 @phaseClassValid_V_2 = internal global i1 false
 @phaseClassValid_V_1 = internal global i1 false
 @phaseClassValid_V_0 = internal global i1 false
+@phaseClass7_V_3 = internal unnamed_addr global i16 0
+@phaseClass7_V_2 = internal unnamed_addr global i16 0
+@phaseClass7_V_1 = internal unnamed_addr global i16 0
 @phaseClass7_V_0 = internal unnamed_addr global i16 0
+@phaseClass6_V_3 = internal unnamed_addr global i16 0
+@phaseClass6_V_2 = internal unnamed_addr global i16 0
+@phaseClass6_V_1 = internal unnamed_addr global i16 0
 @phaseClass6_V_0 = internal unnamed_addr global i16 0
+@phaseClass5_V_3 = internal unnamed_addr global i16 0
+@phaseClass5_V_2 = internal unnamed_addr global i16 0
+@phaseClass5_V_1 = internal unnamed_addr global i16 0
 @phaseClass5_V_0 = internal unnamed_addr global i16 0
+@phaseClass4_V_3 = internal unnamed_addr global i16 0
+@phaseClass4_V_2 = internal unnamed_addr global i16 0
+@phaseClass4_V_1 = internal unnamed_addr global i16 0
 @phaseClass4_V_0 = internal unnamed_addr global i16 0
+@phaseClass3_V_3 = internal unnamed_addr global i16 0
+@phaseClass3_V_2 = internal unnamed_addr global i16 0
+@phaseClass3_V_1 = internal unnamed_addr global i16 0
 @phaseClass3_V_0 = internal unnamed_addr global i16 0
+@phaseClass2_V_3 = internal unnamed_addr global i16 0
+@phaseClass2_V_2 = internal unnamed_addr global i16 0
+@phaseClass2_V_1 = internal unnamed_addr global i16 0
 @phaseClass2_V_0 = internal unnamed_addr global i16 0
+@phaseClass1_V_3 = internal unnamed_addr global i16 0
+@phaseClass1_V_2 = internal unnamed_addr global i16 0
+@phaseClass1_V_1 = internal unnamed_addr global i16 0
 @phaseClass1_V_0 = internal unnamed_addr global i16 0
 @phaseClass0_V_3 = internal unnamed_addr global i16 0
 @phaseClass0_V_2 = internal unnamed_addr global i16 0
@@ -41,7 +62,7 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i4 %phaseClass_V, i1 %start_V) {
-.preheader705.preheader:
+.preheader845.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !88
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !92
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !96
@@ -70,135 +91,325 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2
   %phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2
   %out_sample_data_V = load i32* @loadCount_V, align 4
-  br i1 %corState_load, label %0, label %._crit_edge957
+  %phaseClass1_V_3_load = load i16* @phaseClass1_V_3, align 2
+  %phaseClass1_V_2_load = load i16* @phaseClass1_V_2, align 2
+  %phaseClass1_V_1_load = load i16* @phaseClass1_V_1, align 2
+  %phaseClass1_V_0_load = load i16* @phaseClass1_V_0, align 2
+  %phaseClass2_V_3_load = load i16* @phaseClass2_V_3, align 2
+  %phaseClass2_V_2_load = load i16* @phaseClass2_V_2, align 2
+  %phaseClass2_V_1_load = load i16* @phaseClass2_V_1, align 2
+  %phaseClass2_V_0_load = load i16* @phaseClass2_V_0, align 2
+  %phaseClass3_V_3_load = load i16* @phaseClass3_V_3, align 2
+  %phaseClass3_V_2_load = load i16* @phaseClass3_V_2, align 2
+  %phaseClass3_V_1_load = load i16* @phaseClass3_V_1, align 2
+  %phaseClass3_V_0_load = load i16* @phaseClass3_V_0, align 2
+  %phaseClass4_V_3_load = load i16* @phaseClass4_V_3, align 2
+  %phaseClass4_V_2_load = load i16* @phaseClass4_V_2, align 2
+  %phaseClass4_V_1_load = load i16* @phaseClass4_V_1, align 2
+  %phaseClass4_V_0_load = load i16* @phaseClass4_V_0, align 2
+  %phaseClass5_V_3_load = load i16* @phaseClass5_V_3, align 2
+  %phaseClass5_V_2_load = load i16* @phaseClass5_V_2, align 2
+  %phaseClass5_V_1_load = load i16* @phaseClass5_V_1, align 2
+  %phaseClass5_V_0_load = load i16* @phaseClass5_V_0, align 2
+  %phaseClass6_V_3_load = load i16* @phaseClass6_V_3, align 2
+  %phaseClass6_V_2_load = load i16* @phaseClass6_V_2, align 2
+  %phaseClass6_V_1_load = load i16* @phaseClass6_V_1, align 2
+  %phaseClass6_V_0_load = load i16* @phaseClass6_V_0, align 2
+  %phaseClass7_V_3_load = load i16* @phaseClass7_V_3, align 2
+  %phaseClass7_V_2_load = load i16* @phaseClass7_V_2, align 2
+  %phaseClass7_V_1_load = load i16* @phaseClass7_V_1, align 2
+  %phaseClass7_V_0_load = load i16* @phaseClass7_V_0, align 2
+  br i1 %corState_load, label %0, label %._crit_edge1097
 
-; <label>:0                                       ; preds = %.preheader705.preheader
-  %cond = icmp eq i4 %phaseClass_V_read, 0
-  br i1 %cond, label %.preheader562.0, label %._crit_edge958
-
-.preheader562.0:                                  ; preds = %0
+; <label>:0                                       ; preds = %.preheader845.preheader
   %corHelper_V_load = load i32* @corHelper_V, align 4
-  %tmp_7_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_3_load, i5 0)
-  %tmp_7_4_cast = sext i21 %tmp_7_4 to i22
-  %tmp_7_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_2_load, i5 0)
-  %tmp_7_5_cast = sext i21 %tmp_7_5 to i32
-  %tmp_7_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_1_load, i5 0)
-  %tmp_7_6_cast = sext i21 %tmp_7_6 to i23
-  %tmp_7_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_0_load, i5 0)
-  %tmp_7_7_cast = sext i21 %tmp_7_7 to i22
-  %tmp3 = add i32 %tmp_7_5_cast, %corHelper_V_load
-  %tmp5 = add i22 %tmp_7_7_cast, %tmp_7_4_cast
+  switch i4 %phaseClass_V_read, label %._crit_edge1098 [
+    i4 0, label %.preheader702.0
+    i4 1, label %.preheader701.0
+    i4 2, label %.preheader700.0
+    i4 3, label %.preheader699.0
+    i4 4, label %.preheader698.0
+    i4 5, label %.preheader697.0
+    i4 6, label %.preheader696.0
+    i4 7, label %.preheader695.0
+  ]
+
+.preheader702.0:                                  ; preds = %0
+  %tmp_20_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_3_load, i5 0)
+  %tmp_20_4_cast = sext i21 %tmp_20_4 to i22
+  %tmp_20_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_2_load, i5 0)
+  %tmp_20_5_cast = sext i21 %tmp_20_5 to i32
+  %tmp_20_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_1_load, i5 0)
+  %tmp_20_6_cast = sext i21 %tmp_20_6 to i23
+  %tmp_20_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_0_load, i5 0)
+  %tmp_20_7_cast = sext i21 %tmp_20_7 to i22
+  %tmp3 = add i32 %tmp_20_5_cast, %corHelper_V_load
+  %tmp5 = add i22 %tmp_20_7_cast, %tmp_20_4_cast
   %tmp5_cast = sext i22 %tmp5 to i23
-  %tmp4 = add i23 %tmp_7_6_cast, %tmp5_cast
+  %tmp4 = add i23 %tmp_20_6_cast, %tmp5_cast
   %tmp4_cast = sext i23 %tmp4 to i32
   %p_Val2_2_7 = add i32 %tmp3, %tmp4_cast
   store i32 %p_Val2_2_7, i32* @corHelper_V, align 4
-  %tmp_4 = icmp sgt i32 %p_Val2_2_7, 4096
-  br i1 %tmp_4, label %1, label %._crit_edge960
+  %tmp_s = icmp sgt i32 %p_Val2_2_7, 4096
+  br i1 %tmp_s, label %1, label %._crit_edge1100
 
-; <label>:1                                       ; preds = %.preheader562.0
+; <label>:1                                       ; preds = %.preheader702.0
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 undef)
-  br label %._crit_edge960
+  br label %._crit_edge1100
 
-._crit_edge960:                                   ; preds = %1, %.preheader562.0
-  br label %._crit_edge958
+._crit_edge1100:                                  ; preds = %1, %.preheader702.0
+  br label %._crit_edge1098
 
-._crit_edge958:                                   ; preds = %._crit_edge960, %0
-  br label %._crit_edge957
+.preheader701.0:                                  ; preds = %0
+  %tmp_24_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_3_load, i5 0)
+  %tmp_24_4_cast = sext i21 %tmp_24_4 to i32
+  %tmp_24_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_2_load, i5 0)
+  %tmp_24_5_cast = sext i21 %tmp_24_5 to i23
+  %tmp_24_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_1_load, i5 0)
+  %tmp_24_6_cast = sext i21 %tmp_24_6 to i22
+  %tmp_24_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_0_load, i5 0)
+  %tmp_24_7_cast = sext i21 %tmp_24_7 to i22
+  %tmp6 = add i32 %tmp_24_4_cast, %corHelper_V_load
+  %tmp8 = add i22 %tmp_24_7_cast, %tmp_24_6_cast
+  %tmp8_cast = sext i22 %tmp8 to i23
+  %tmp7 = add i23 %tmp_24_5_cast, %tmp8_cast
+  %tmp7_cast = sext i23 %tmp7 to i32
+  %p_Val2_5_7 = add i32 %tmp6, %tmp7_cast
+  store i32 %p_Val2_5_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
 
-._crit_edge957:                                   ; preds = %._crit_edge958, %.preheader705.preheader
-  %corState_flag = phi i1 [ false, %._crit_edge958 ], [ true, %.preheader705.preheader ]
+.preheader700.0:                                  ; preds = %0
+  %tmp_28_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_3_load, i5 0)
+  %tmp_28_4_cast = sext i21 %tmp_28_4 to i32
+  %tmp_28_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_2_load, i5 0)
+  %tmp_28_5_cast = sext i21 %tmp_28_5 to i23
+  %tmp_28_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_1_load, i5 0)
+  %tmp_28_6_cast = sext i21 %tmp_28_6 to i22
+  %tmp_28_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_0_load, i5 0)
+  %tmp_28_7_cast = sext i21 %tmp_28_7 to i22
+  %tmp9 = add i32 %tmp_28_4_cast, %corHelper_V_load
+  %tmp1 = add i22 %tmp_28_7_cast, %tmp_28_6_cast
+  %tmp11_cast = sext i22 %tmp1 to i23
+  %tmp2 = add i23 %tmp_28_5_cast, %tmp11_cast
+  %tmp10_cast = sext i23 %tmp2 to i32
+  %p_Val2_8_7 = add i32 %tmp9, %tmp10_cast
+  store i32 %p_Val2_8_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+.preheader699.0:                                  ; preds = %0
+  %tmp_32_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_3_load, i5 0)
+  %tmp_32_4_cast = sext i21 %tmp_32_4 to i32
+  %tmp_32_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_2_load, i5 0)
+  %tmp_32_5_cast = sext i21 %tmp_32_5 to i23
+  %tmp_32_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_1_load, i5 0)
+  %tmp_32_6_cast = sext i21 %tmp_32_6 to i22
+  %tmp_32_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_0_load, i5 0)
+  %tmp_32_7_cast = sext i21 %tmp_32_7 to i22
+  %tmp10 = add i32 %tmp_32_4_cast, %corHelper_V_load
+  %tmp11 = add i22 %tmp_32_7_cast, %tmp_32_6_cast
+  %tmp14_cast = sext i22 %tmp11 to i23
+  %tmp12 = add i23 %tmp_32_5_cast, %tmp14_cast
+  %tmp13_cast = sext i23 %tmp12 to i32
+  %p_Val2_11_7 = add i32 %tmp10, %tmp13_cast
+  store i32 %p_Val2_11_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+.preheader698.0:                                  ; preds = %0
+  %tmp_36_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_3_load, i5 0)
+  %tmp_36_4_cast = sext i21 %tmp_36_4 to i32
+  %tmp_36_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_2_load, i5 0)
+  %tmp_36_5_cast = sext i21 %tmp_36_5 to i23
+  %tmp_36_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_1_load, i5 0)
+  %tmp_36_6_cast = sext i21 %tmp_36_6 to i22
+  %tmp_36_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_0_load, i5 0)
+  %tmp_36_7_cast = sext i21 %tmp_36_7 to i22
+  %tmp13 = add i32 %tmp_36_4_cast, %corHelper_V_load
+  %tmp14 = add i22 %tmp_36_7_cast, %tmp_36_6_cast
+  %tmp17_cast = sext i22 %tmp14 to i23
+  %tmp15 = add i23 %tmp_36_5_cast, %tmp17_cast
+  %tmp16_cast = sext i23 %tmp15 to i32
+  %p_Val2_14_7 = add i32 %tmp13, %tmp16_cast
+  store i32 %p_Val2_14_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+.preheader697.0:                                  ; preds = %0
+  %tmp_40_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_3_load, i5 0)
+  %tmp_40_4_cast = sext i21 %tmp_40_4 to i32
+  %tmp_40_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_2_load, i5 0)
+  %tmp_40_5_cast = sext i21 %tmp_40_5 to i23
+  %tmp_40_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_1_load, i5 0)
+  %tmp_40_6_cast = sext i21 %tmp_40_6 to i22
+  %tmp_40_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_0_load, i5 0)
+  %tmp_40_7_cast = sext i21 %tmp_40_7 to i22
+  %tmp16 = add i32 %tmp_40_4_cast, %corHelper_V_load
+  %tmp17 = add i22 %tmp_40_7_cast, %tmp_40_6_cast
+  %tmp20_cast = sext i22 %tmp17 to i23
+  %tmp18 = add i23 %tmp_40_5_cast, %tmp20_cast
+  %tmp19_cast = sext i23 %tmp18 to i32
+  %p_Val2_17_7 = add i32 %tmp16, %tmp19_cast
+  store i32 %p_Val2_17_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+.preheader696.0:                                  ; preds = %0
+  %tmp_44_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_3_load, i5 0)
+  %tmp_44_4_cast = sext i21 %tmp_44_4 to i32
+  %tmp_44_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_2_load, i5 0)
+  %tmp_44_5_cast = sext i21 %tmp_44_5 to i23
+  %tmp_44_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_1_load, i5 0)
+  %tmp_44_6_cast = sext i21 %tmp_44_6 to i22
+  %tmp_44_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_0_load, i5 0)
+  %tmp_44_7_cast = sext i21 %tmp_44_7 to i22
+  %tmp19 = add i32 %tmp_44_4_cast, %corHelper_V_load
+  %tmp20 = add i22 %tmp_44_7_cast, %tmp_44_6_cast
+  %tmp23_cast = sext i22 %tmp20 to i23
+  %tmp21 = add i23 %tmp_44_5_cast, %tmp23_cast
+  %tmp22_cast = sext i23 %tmp21 to i32
+  %p_Val2_20_7 = add i32 %tmp19, %tmp22_cast
+  store i32 %p_Val2_20_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+.preheader695.0:                                  ; preds = %0
+  %tmp_48_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_3_load, i5 0)
+  %tmp_48_4_cast = sext i21 %tmp_48_4 to i32
+  %tmp_48_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_2_load, i5 0)
+  %tmp_48_5_cast = sext i21 %tmp_48_5 to i23
+  %tmp_48_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_1_load, i5 0)
+  %tmp_48_6_cast = sext i21 %tmp_48_6 to i22
+  %tmp_48_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_0_load, i5 0)
+  %tmp_48_7_cast = sext i21 %tmp_48_7 to i22
+  %tmp22 = add i32 %tmp_48_4_cast, %corHelper_V_load
+  %tmp23 = add i22 %tmp_48_7_cast, %tmp_48_6_cast
+  %tmp26_cast = sext i22 %tmp23 to i23
+  %tmp24 = add i23 %tmp_48_5_cast, %tmp26_cast
+  %tmp25_cast = sext i23 %tmp24 to i32
+  %p_Val2_23_7 = add i32 %tmp22, %tmp25_cast
+  store i32 %p_Val2_23_7, i32* @corHelper_V, align 4
+  br label %._crit_edge1098
+
+._crit_edge1098:                                  ; preds = %.preheader695.0, %.preheader696.0, %.preheader697.0, %.preheader698.0, %.preheader699.0, %.preheader700.0, %.preheader701.0, %._crit_edge1100, %0
+  br label %._crit_edge1097
+
+._crit_edge1097:                                  ; preds = %._crit_edge1098, %.preheader845.preheader
+  %corState_flag = phi i1 [ false, %._crit_edge1098 ], [ true, %.preheader845.preheader ]
   %currentState_load = load i1* @currentState, align 1
   br i1 %currentState_load, label %4, label %2
 
-; <label>:2                                       ; preds = %._crit_edge957
-  br i1 %start_V_read, label %3, label %._crit_edge962
+; <label>:2                                       ; preds = %._crit_edge1097
+  br i1 %start_V_read, label %3, label %._crit_edge1109
 
 ; <label>:3                                       ; preds = %2
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge962
+  br label %._crit_edge1109
 
-._crit_edge962:                                   ; preds = %3, %2
-  br label %._crit_edge961
+._crit_edge1109:                                  ; preds = %3, %2
+  br label %._crit_edge1108
 
-; <label>:4                                       ; preds = %._crit_edge957
+; <label>:4                                       ; preds = %._crit_edge1097
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %5, label %._crit_edge963
+  br i1 %tmp, label %5, label %._crit_edge1110
 
 ; <label>:5                                       ; preds = %4
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_data_V = extractvalue { i32, i1 } %empty, 0
-  %tmp_2 = call i11 @_ssdm_op_PartSelect.i11.i32.i32.i32(i32 %tmp_data_V, i32 16, i32 26)
-  %tmp_s = call i16 @_ssdm_op_BitConcatenate.i16.i11.i5(i11 %tmp_2, i5 0)
-  store i16 %tmp_s, i16* @newVal_V, align 2
-  switch i4 %phaseClass_V_read, label %._crit_edge964 [
-    i4 0, label %.preheader561.0
-    i4 1, label %.preheader560.0
-    i4 2, label %.preheader559.0
-    i4 3, label %.preheader558.0
-    i4 4, label %.preheader557.0
-    i4 5, label %.preheader556.0
-    i4 6, label %.preheader555.0
+  %tmp_1 = call i11 @_ssdm_op_PartSelect.i11.i32.i32.i32(i32 %tmp_data_V, i32 16, i32 26)
+  %tmp_2 = call i16 @_ssdm_op_BitConcatenate.i16.i11.i5(i11 %tmp_1, i5 0)
+  store i16 %tmp_2, i16* @newVal_V, align 2
+  switch i4 %phaseClass_V_read, label %._crit_edge1111 [
+    i4 0, label %.preheader694.0
+    i4 1, label %.preheader693.0
+    i4 2, label %.preheader692.0
+    i4 3, label %.preheader691.0
+    i4 4, label %.preheader690.0
+    i4 5, label %.preheader689.0
+    i4 6, label %.preheader688.0
     i4 7, label %.preheader.0
   ]
 
-.preheader561.0:                                  ; preds = %5
+.preheader694.0:                                  ; preds = %5
   store i16 %phaseClass0_V_2_load, i16* @phaseClass0_V_3, align 2
   store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 2
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
-  store i16 %tmp_s, i16* @phaseClass0_V_0, align 16
+  store i16 %tmp_2, i16* @phaseClass0_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_0, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader560.0:                                  ; preds = %5
+.preheader693.0:                                  ; preds = %5
+  store i16 %phaseClass1_V_2_load, i16* @phaseClass1_V_3, align 2
+  store i16 %phaseClass1_V_1_load, i16* @phaseClass1_V_2, align 2
+  store i16 %phaseClass1_V_0_load, i16* @phaseClass1_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass1_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_1, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader559.0:                                  ; preds = %5
+.preheader692.0:                                  ; preds = %5
+  store i16 %phaseClass2_V_2_load, i16* @phaseClass2_V_3, align 2
+  store i16 %phaseClass2_V_1_load, i16* @phaseClass2_V_2, align 2
+  store i16 %phaseClass2_V_0_load, i16* @phaseClass2_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass2_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_2, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader558.0:                                  ; preds = %5
+.preheader691.0:                                  ; preds = %5
+  store i16 %phaseClass3_V_2_load, i16* @phaseClass3_V_3, align 2
+  store i16 %phaseClass3_V_1_load, i16* @phaseClass3_V_2, align 2
+  store i16 %phaseClass3_V_0_load, i16* @phaseClass3_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass3_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_3, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader557.0:                                  ; preds = %5
+.preheader690.0:                                  ; preds = %5
+  store i16 %phaseClass4_V_2_load, i16* @phaseClass4_V_3, align 2
+  store i16 %phaseClass4_V_1_load, i16* @phaseClass4_V_2, align 2
+  store i16 %phaseClass4_V_0_load, i16* @phaseClass4_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass4_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_4, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader556.0:                                  ; preds = %5
+.preheader689.0:                                  ; preds = %5
+  store i16 %phaseClass5_V_2_load, i16* @phaseClass5_V_3, align 2
+  store i16 %phaseClass5_V_1_load, i16* @phaseClass5_V_2, align 2
+  store i16 %phaseClass5_V_0_load, i16* @phaseClass5_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass5_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_5, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-.preheader555.0:                                  ; preds = %5
+.preheader688.0:                                  ; preds = %5
+  store i16 %phaseClass6_V_2_load, i16* @phaseClass6_V_3, align 2
+  store i16 %phaseClass6_V_1_load, i16* @phaseClass6_V_2, align 2
+  store i16 %phaseClass6_V_0_load, i16* @phaseClass6_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass6_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_6, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
 .preheader.0:                                     ; preds = %5
+  store i16 %phaseClass7_V_2_load, i16* @phaseClass7_V_3, align 2
+  store i16 %phaseClass7_V_1_load, i16* @phaseClass7_V_2, align 2
+  store i16 %phaseClass7_V_0_load, i16* @phaseClass7_V_1, align 2
+  store i16 %tmp_2, i16* @phaseClass7_V_0, align 16
   store i1 true, i1* @phaseClassValid_V_7, align 1
-  br label %._crit_edge964
+  br label %._crit_edge1111
 
-._crit_edge964:                                   ; preds = %.preheader.0, %.preheader555.0, %.preheader556.0, %.preheader557.0, %.preheader558.0, %.preheader559.0, %.preheader560.0, %.preheader561.0, %5
-  %tmp_1 = add nsw i32 %out_sample_data_V, 1
-  store i32 %tmp_1, i32* @loadCount_V, align 4
-  br label %._crit_edge963
+._crit_edge1111:                                  ; preds = %.preheader.0, %.preheader688.0, %.preheader689.0, %.preheader690.0, %.preheader691.0, %.preheader692.0, %.preheader693.0, %.preheader694.0, %5
+  %tmp_3 = add nsw i32 %out_sample_data_V, 1
+  store i32 %tmp_3, i32* @loadCount_V, align 4
+  br label %._crit_edge1110
 
-._crit_edge963:                                   ; preds = %._crit_edge964, %4
-  %corState_flag_1 = phi i1 [ true, %._crit_edge964 ], [ %corState_flag, %4 ]
-  %corState_new_1 = phi i1 [ true, %._crit_edge964 ], [ false, %4 ]
+._crit_edge1110:                                  ; preds = %._crit_edge1111, %4
+  %corState_flag_1 = phi i1 [ true, %._crit_edge1111 ], [ %corState_flag, %4 ]
+  %corState_new_1 = phi i1 [ true, %._crit_edge1111 ], [ false, %4 ]
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge961
+  br label %._crit_edge1108
 
-._crit_edge961:                                   ; preds = %._crit_edge963, %._crit_edge962
-  %corState_flag_2 = phi i1 [ %corState_flag_1, %._crit_edge963 ], [ %corState_flag, %._crit_edge962 ]
-  %corState_new_2 = phi i1 [ %corState_new_1, %._crit_edge963 ], [ false, %._crit_edge962 ]
-  br i1 %corState_flag_2, label %mergeST, label %._crit_edge961.new
+._crit_edge1108:                                  ; preds = %._crit_edge1110, %._crit_edge1109
+  %corState_flag_2 = phi i1 [ %corState_flag_1, %._crit_edge1110 ], [ %corState_flag, %._crit_edge1109 ]
+  %corState_new_2 = phi i1 [ %corState_new_1, %._crit_edge1110 ], [ false, %._crit_edge1109 ]
+  br i1 %corState_flag_2, label %mergeST, label %._crit_edge1108.new
 
-mergeST:                                          ; preds = %._crit_edge961
+mergeST:                                          ; preds = %._crit_edge1108
   store i1 %corState_new_2, i1* @corState, align 1
-  br label %._crit_edge961.new
+  br label %._crit_edge1108.new
 
-._crit_edge961.new:                               ; preds = %mergeST, %._crit_edge961
+._crit_edge1108.new:                              ; preds = %mergeST, %._crit_edge1108
   ret void
 }
 

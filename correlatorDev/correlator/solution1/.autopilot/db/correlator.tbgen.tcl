@@ -89,6 +89,34 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass1_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass1_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass1_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass1_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass2_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass2_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass2_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass2_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass3_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass3_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass3_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass3_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass4_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass4_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass4_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass4_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass5_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass5_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass5_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass5_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass6_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass6_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass6_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass6_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass7_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass7_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass7_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass7_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "corHelper_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
@@ -116,6 +144,34 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
 		loadCount_V {Type IO LastRead -1 FirstWrite -1}
+		phaseClass1_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass1_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass1_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass1_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass2_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass2_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass2_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass2_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass3_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass3_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass3_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass3_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass4_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass4_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass4_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass4_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass5_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass5_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass5_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass5_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass6_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass6_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass6_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass6_V_0 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass7_V_3 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass7_V_2 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass7_V_1 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass7_V_0 {Type IO LastRead -1 FirstWrite -1}
 		corHelper_V {Type IO LastRead -1 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}

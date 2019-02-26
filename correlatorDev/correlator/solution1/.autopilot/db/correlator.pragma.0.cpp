@@ -29399,6 +29399,85 @@ case ST_CORRELATE:
     o_data.write(out_sample);
    }
   break;
+  case 1:
+   correlateData1: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass1[a]);
+
+
+
+   }
+   Phase1[0] = corHelper;
+
+   break;
+  case 2:
+   correlateData2: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass2[a]);
+
+
+
+   }
+   Phase2[0] = corHelper;
+   break;
+  case 3:
+   correlateData3: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass3[a]);
+
+
+
+   }
+   Phase3[0] = corHelper;
+
+   break;
+  case 4:
+   correlateData4: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass4[a]);
+
+
+
+   }
+   Phase4[0] = corHelper;
+   break;
+  case 5:
+   correlateData5: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass5[a]);
+
+
+
+   }
+   Phase5[0] = corHelper;
+   break;
+  case 6:
+   correlateData6: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass6[a]);
+
+
+
+   }
+   Phase6[0] = corHelper;
+   break;
+  case 7:
+   correlateData7: for(int a =8 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a]>0)
+     corHelper = corHelper + (phaseClass7[a]);
+
+
+
+   }
+   Phase7[0] = corHelper;
+   break;
 #389 "correlator.cpp"
  }
 }

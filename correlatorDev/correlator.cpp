@@ -218,88 +218,88 @@ case ST_CORRELATE:
 				out_sample.data = loadCount;//maybe not this but something like it as an output.
 				o_data.write(out_sample);
 			}
-		break;/*
+		break;
 		case 1:
-			correlateData1: for(int a =15;a>=0;a--){
+			correlateData1: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass1[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass1[a].q);
-				/*if(a>0)
-					Phase1[a] = Phase1[a-1];
+				//if(a>0)
+				//	Phase1[a] = Phase1[a-1];
 			}
 			Phase1[0] = corHelper;
 
 			break;
 		case 2:
-			correlateData2: for(int a =15;a>=0;a--){
+			correlateData2: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass2[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass2[a].q);
-				/*if(a>0)
-					Phase2[a] = Phase2[a-1];
+				//if(a>0)
+				//	Phase2[a] = Phase2[a-1];
 			}
 			Phase2[0] = corHelper;
 			break;
 		case 3:
-			correlateData3: for(int a =15;a>=0;a--){
+			correlateData3: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass3[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass3[a].q);
-				if(a>0)
-					Phase3[a] = Phase3[a-1];
+				//if(a>0)
+				//	Phase3[a] = Phase3[a-1];
 			}
 			Phase3[0] = corHelper;
 
 			break;
 		case 4:
-			correlateData4: for(int a =15;a>=0;a--){
+			correlateData4: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass4[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass4[a].q);
-				if(a>0)
-					Phase4[a] = Phase4[a-1];
+				//if(a>0)
+				//	Phase4[a] = Phase4[a-1];
 			}
 			Phase4[0] = corHelper;
 			break;
 		case 5:
-			correlateData5: for(int a =15;a>=0;a--){
+			correlateData5: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass5[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass5[a].q);
-				if(a>0)
-					Phase5[a] = Phase5[a-1];
+				//if(a>0)
+				//	Phase5[a] = Phase5[a-1];
 			}
 			Phase5[0] = corHelper;
 			break;
 		case 6:
-			correlateData6: for(int a =15;a>=0;a--){
+			correlateData6: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass6[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass6[a].q);
-				if(a>0)
-					Phase6[a] = Phase6[a-1];
+				//if(a>0)
+				//	Phase6[a] = Phase6[a-1];
 			}
 			Phase6[0] = corHelper;
 			break;
 		case 7:
-			correlateData7: for(int a =15;a>=0;a--){
+			correlateData7: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass7[a]);
 				//corHelper.q = corHelper.q + (corrSeq[a] * phaseClass7[a].q);
-				if(a>0)
-					Phase7[a] = Phase7[a-1];
+				//if(a>0)
+				//	Phase7[a] = Phase7[a-1];
 			}
 			Phase7[0] = corHelper;
-			break;
+			break;/*
 		case 8:
-			correlateData8: for(int a =15;a>=0;a--){
+			correlateData8: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass8[a]);
@@ -310,7 +310,7 @@ case ST_CORRELATE:
 			Phase8[0] = corHelper;
 			break;
 		case 9:
-			correlateData9: for(int a =15;a>=0;a--){
+			correlateData9: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass9[a]);
@@ -321,7 +321,7 @@ case ST_CORRELATE:
 			Phase9[0] = corHelper;
 			break;
 		case 10:
-			correlateData10: for(int a =15;a>=0;a--){
+			correlateData10: for(int a =windowSize-1;a>=0;a--){
 				#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass10[a]);
@@ -332,7 +332,7 @@ case ST_CORRELATE:
 			Phase10[0] = corHelper;
 			break;
 		case 11:
-			correlateData11: for(int a =15;a>=0;a--){
+			correlateData11: for(int a =windowSize-1;a>=0;a--){
 				#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass11[a]);
@@ -343,7 +343,7 @@ case ST_CORRELATE:
 			Phase11[0] = corHelper;
 			break;
 		case 12:
-			correlateData12: for(int a =15;a>=0;a--){
+			correlateData12: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass12[a]);
@@ -354,7 +354,7 @@ case ST_CORRELATE:
 			Phase12[0] = corHelper;
 			break;
 		case 13:
-			correlateData13: for(int a =15;a>=0;a--){
+			correlateData13: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass13[a]);
@@ -365,7 +365,7 @@ case ST_CORRELATE:
 			Phase13[0] = corHelper;
 			break;
 		case 14:
-			correlateData14: for(int a =15;a>=0;a--){
+			correlateData14: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass14[a]);
@@ -376,7 +376,7 @@ case ST_CORRELATE:
 			Phase14[0] = corHelper;
 			break;
 		case 15:
-			correlateData15: for(int a =15;a>=0;a--){
+			correlateData15: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
 					corHelper = corHelper + (phaseClass15[a]);
