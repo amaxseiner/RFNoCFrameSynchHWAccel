@@ -6,7 +6,7 @@
 open_project matchedRee
 set_top MatcherRee
 add_files matchedRee/matcherSim.h
-add_files -tb matchedRee/.apc/matcherTB.cpp
+add_files -tb matchedRee/matcherTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1} -tool vivado
 create_clock -period 10 -name default

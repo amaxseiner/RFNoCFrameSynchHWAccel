@@ -7,6 +7,7 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="matchedRee" solutionName="solution1" date="2019-02-27T12:46:35.220-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="matchedRee" solutionName="solution1" date="2019-02-23T11:15:50.496-0500"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed with errors." projectName="matchedRee" solutionName="solution1" date="2019-02-23T11:05:06.611-0500"/>
       </csimLog>
@@ -42,7 +43,9 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="make: Warning: File '/dev/null' has modification time 13007 s in the future&#xA;In file included from ../../../matcherTB.cpp:3:0:&#xA;../../../matcherSim.h: In function ‘void matchation(rfnoc_axis, rfnoc_axis*, std::ofstream*)’:&#xA;../../../matcherSim.h:39:13: error: too few arguments to function ‘void shifter(semiComplex, ap_uint&lt;4>, std::ofstream*)’&#xA;../../../matcherSim.h:32:6: note: declared here&#xA;../../../matcherSim.h: In function ‘void matchate(std::ofstream*)’:&#xA;../../../matcherSim.h:45:2: error: ‘bigSemiComplex’ was not declared in this scope&#xA;../../../matcherSim.h:45:17: error: expected ‘;’ before ‘temp’&#xA;../../../matcherSim.h:46:2: error: ‘temp’ was not declared in this scope&#xA;../../../matcherTB.cpp: At global scope:&#xA;../../../matcherTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;make: *** [obj/matcherTB.o] Error 1" projectName="matchedRee" solutionName="solution1" date="2019-02-27T12:46:35.193-0500" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
