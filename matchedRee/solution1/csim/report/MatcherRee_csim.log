@@ -1,18 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../matcherTB.cpp in debug mode
-csim.mk:73: recipe for target 'obj/matcherTB.o' failed
-make: Warning: File '/dev/null' has modification time 13007 s in the future
-In file included from ../../../matcherTB.cpp:3:0:
-../../../matcherSim.h: In function ‘void matchation(rfnoc_axis, rfnoc_axis*, std::ofstream*)’:
-../../../matcherSim.h:39:13: error: too few arguments to function ‘void shifter(semiComplex, ap_uint<4>, std::ofstream*)’
-../../../matcherSim.h:32:6: note: declared here
-../../../matcherSim.h: In function ‘void matchate(std::ofstream*)’:
-../../../matcherSim.h:45:2: error: ‘bigSemiComplex’ was not declared in this scope
-../../../matcherSim.h:45:17: error: expected ‘;’ before ‘temp’
-../../../matcherSim.h:46:2: error: ‘temp’ was not declared in this scope
-../../../matcherTB.cpp: At global scope:
-../../../matcherTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]
-make: *** [obj/matcherTB.o] Error 1
-CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

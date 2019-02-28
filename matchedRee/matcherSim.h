@@ -18,6 +18,11 @@ struct semiComplex{
 	ap_fixed<16,11> q;
 };
 
+struct bigSemiComplex{
+	ap_fixed<32,22> i;
+	ap_fixed<32,22> q;
+};
+
 static semiComplex buffer[windowSize];
 static semiComplex output;
 
@@ -29,7 +34,7 @@ void matchation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
 semiComplex toComplexFromStream(rfnoc_axis dat);
 rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
 void matchate(ofstream *result);
-void shifter(semiComplex newVal, ap_uint<4> phaseClass,ofstream *result);
+void shifter(semiComplex newVal);
 void displayOutput(ofstream *result);
 
 void matchation(rfnoc_axis i_data, rfnoc_axis *o_data, ofstream *result){
@@ -43,8 +48,8 @@ void matchation(rfnoc_axis i_data, rfnoc_axis *o_data, ofstream *result){
 
 void matchate(ofstream *result){
 	bigSemiComplex temp;
-	temp.i=0;
-	temp.q=0;
+	temp.i=0.0;
+	temp.q=0.0;
 	for(int a=0;a<16;a++){
 		temp.i+=buffer[(15-a)].i*corrSeq[a];
 		temp.q+=buffer[(15-a)].q*corrSeq[a];

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="matcherSim.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/matcherSim.h"/>
+    <originFiles name="matcherSim.h" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherSim.h"/>
   </source>
   <testbench>
-    <originFiles name="matcherTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/matcherTB.cpp"/>
+    <originFiles name="matcherTB.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherTB.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
