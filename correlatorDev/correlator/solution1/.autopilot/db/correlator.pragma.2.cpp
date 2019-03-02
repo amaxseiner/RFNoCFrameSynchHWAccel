@@ -29722,7 +29722,7 @@ _ssdm_Unroll(0,0,0, "");
   case ST_LOAD:
   if(!i_data.empty()){
    i_data.read(tmp_data);
-   out_sample.data = phaseClass;
+   out_sample.data = tmp_data.data;
    o_data.write(out_sample);
 
 
