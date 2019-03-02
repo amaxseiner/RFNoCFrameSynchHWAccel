@@ -6,10 +6,11 @@
 #define windowSize 16
 #define curThres 5
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<4> phaseClass,ap_uint<1> start)
+void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start, ap_uint<4> phaseClass)
 {
 
 #pragma HLS RESOURCE variable=o_data latency=1
+//#pragma HLS INTERFACE axis port=phaseClassIn
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
@@ -163,6 +164,10 @@ static ap_fixed<32,22> Phase15[windowSize];
 static ap_fixed<16,11> newVal;
 #pragma HLS RESET variable=newVal
 
+//static ap_uint<4> phaseClass;
+//#pragma HLS RESET variable=phaseClass
+
+
 static ap_uint<1> phaseClassValid[windowSize];
 #pragma HLS ARRAY_PARTITION variable=phaseClassValid complete dim=1
 #pragma HLS RESET variable=phaseClassValid
@@ -216,10 +221,10 @@ case ST_CORRELATE:
 					Phase0[a] = Phase0[a-1];
 			}
 			Phase0[0] = corHelperI;
-			if(corHelperI >= curThres){
+			/*if(corHelperI >= curThres){
 				out_sample.data = loadCount;//maybe not this but something like it as an output.
 				o_data.write(out_sample);
-			}
+			}*/
 		break;
 		case 1:
 			correlateData1: for(int a =windowSize-1;a>=0;a--){
@@ -402,6 +407,10 @@ case ST_CORRELATE:
 	 case ST_LOAD: // whenever there is valid input data, shift it in
 		if(!i_data.empty()){
 			i_data.read(tmp_data);
+			out_sample.data = phaseClass;
+			o_data.write(out_sample);
+			//if(!phaseClassIn.empty())
+				//phaseClassIn.read(phaseClass);
 			//newVal.q = tmp_data.data.range(15,0); // IM
 			newVal = tmp_data.data.range(31,16); // RE
 

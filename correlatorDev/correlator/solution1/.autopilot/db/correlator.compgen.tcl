@@ -87,21 +87,6 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 5 \
-    name phaseClass_V \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_phaseClass_V \
-    op interface \
-    ports { phaseClass_V { I 4 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6 \
     name start_V \
     type other \
     dir I \
@@ -110,6 +95,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_start_V \
     op interface \
     ports { start_V { I 1 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 6 \
+    name phaseClass_V \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_phaseClass_V \
+    op interface \
+    ports { phaseClass_V { I 4 vector } } \
 } "
 }
 

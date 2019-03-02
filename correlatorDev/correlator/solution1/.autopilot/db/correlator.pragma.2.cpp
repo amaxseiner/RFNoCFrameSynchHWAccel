@@ -29321,10 +29321,11 @@ inline bool operator!=(
 
 
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<4> phaseClass,ap_uint<1> start)
+void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start, ap_uint<4> phaseClass)
 {
 
 _ssdm_op_SpecResource(&o_data, "", "", "", 1, "", "", "", "", "");
+
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -29478,6 +29479,10 @@ _ssdm_SpecArrayPartition( Phase15, 1, "COMPLETE", 0, "");
 static ap_fixed<16,11> newVal;
 _ssdm_op_SpecReset( &newVal, 1, "");
 
+
+
+
+
 static ap_uint<1> phaseClassValid[16];
 _ssdm_SpecArrayPartition( phaseClassValid, 1, "COMPLETE", 0, "");
 _ssdm_op_SpecReset( phaseClassValid, 1, "");
@@ -29531,10 +29536,10 @@ _ssdm_Unroll(0,0,0, "");
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
-   if(corHelperI >= 5){
-    out_sample.data = loadCount;
-    o_data.write(out_sample);
-   }
+
+
+
+
   break;
   case 1:
    correlateData1: for(int a =16 -1;a>=0;a--){
@@ -29717,6 +29722,10 @@ _ssdm_Unroll(0,0,0, "");
   case ST_LOAD:
   if(!i_data.empty()){
    i_data.read(tmp_data);
+   out_sample.data = phaseClass;
+   o_data.write(out_sample);
+
+
 
    newVal = tmp_data.data.range(31,16);
 

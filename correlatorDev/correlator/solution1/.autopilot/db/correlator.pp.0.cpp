@@ -29166,10 +29166,11 @@ inline bool operator!=(
 
 
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<4> phaseClass,ap_uint<1> start)
+void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start, ap_uint<4> phaseClass)
 {
 
 #pragma HLS RESOURCE variable=o_data latency=1
+
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
@@ -29323,6 +29324,10 @@ static ap_fixed<32,22> Phase15[16];
 static ap_fixed<16,11> newVal;
 #pragma HLS RESET variable=newVal
 
+
+
+
+
 static ap_uint<1> phaseClassValid[16];
 #pragma HLS ARRAY_PARTITION variable=phaseClassValid complete dim=1
 #pragma HLS RESET variable=phaseClassValid
@@ -29376,10 +29381,10 @@ case ST_CORRELATE:
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
-   if(corHelperI >= 5){
-    out_sample.data = loadCount;
-    o_data.write(out_sample);
-   }
+
+
+
+
   break;
   case 1:
    correlateData1: for(int a =16 -1;a>=0;a--){
@@ -29562,6 +29567,10 @@ case ST_CORRELATE:
   case ST_LOAD:
   if(!i_data.empty()){
    i_data.read(tmp_data);
+   out_sample.data = phaseClass;
+   o_data.write(out_sample);
+
+
 
    newVal = tmp_data.data.range(31,16);
 

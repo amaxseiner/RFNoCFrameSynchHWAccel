@@ -1,9 +1,9 @@
 set C_TypeInfoList {{ 
-"correlator" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"phaseClass": [[],"1"] }, {"start": [[],"2"] }],[],""], 
+"correlator" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"start": [[],"1"] }, {"phaseClass": [[],"2"] }],[],""], 
 "0": [ "stream<rfnoc_axis>", {"hls_type": {"stream": [[[[],"3"]],"4"]}}], 
-"3": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "5"]},{ "last": [[], "2"]}],""]}], 
-"2": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"1": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
+"2": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
+"3": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "5"]},{ "last": [[], "1"]}],""]}], 
 "5": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
 "4": ["hls", ""]
 }}
@@ -23,16 +23,16 @@ set C_modelArgList {
 	{ i_data_V_last_V int 1 regular {axi_s 0 volatile  { i_data Last } }  }
 	{ o_data_V_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_V_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
-	{ phaseClass_V int 4 regular  }
 	{ start_V int 1 regular  }
+	{ phaseClass_V int 4 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "i_data_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "i_data.V.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "o_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "o_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "o_data_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "o_data.V.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "phaseClass_V", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "phaseClass.V","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "start_V", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "start.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
+ 	{ "Name" : "start_V", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "start.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "phaseClass_V", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "phaseClass.V","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
 set portNum 12
 set portList { 
@@ -46,8 +46,8 @@ set portList {
 	{ o_data_TVALID sc_out sc_logic 1 outvld 3 } 
 	{ o_data_TREADY sc_in sc_logic 1 outacc 3 } 
 	{ o_data_TLAST sc_out sc_lv 1 signal 3 } 
-	{ phaseClass_V sc_in sc_lv 4 signal 4 } 
-	{ start_V sc_in sc_lv 1 signal 5 } 
+	{ start_V sc_in sc_lv 1 signal 4 } 
+	{ phaseClass_V sc_in sc_lv 4 signal 5 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -60,8 +60,8 @@ set NewPortList {[
  	{ "name": "o_data_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "o_data_V_last_V", "role": "default" }} , 
  	{ "name": "o_data_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "o_data_V_last_V", "role": "default" }} , 
  	{ "name": "o_data_TLAST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "o_data_V_last_V", "role": "default" }} , 
- 	{ "name": "phaseClass_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "phaseClass_V", "role": "default" }} , 
- 	{ "name": "start_V", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "start_V", "role": "default" }}  ]}
+ 	{ "name": "start_V", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "start_V", "role": "default" }} , 
+ 	{ "name": "phaseClass_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "phaseClass_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
@@ -81,9 +81,10 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "o_data_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "o_data_V_last_V", "Type" : "Axis", "Direction" : "O"},
-			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "corState", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO"},
@@ -92,7 +93,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass1_V_15", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass1_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass1_V_10", "Type" : "OVld", "Direction" : "IO"},
@@ -342,7 +342,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "Phase15_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
@@ -487,18 +486,20 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass15_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass15_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass15_V_4", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClassValid_V_15", "Type" : "Vld", "Direction" : "O"}]}]}
+			{"Name" : "phaseClassValid_V_15", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	correlator {
 		i_data_V_data_V {Type I LastRead 0 FirstWrite -1}
 		i_data_V_last_V {Type I LastRead 0 FirstWrite -1}
-		o_data_V_data_V {Type O LastRead -1 FirstWrite 2}
-		o_data_V_last_V {Type O LastRead -1 FirstWrite 2}
-		phaseClass_V {Type I LastRead 0 FirstWrite -1}
+		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
+		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
 		start_V {Type I LastRead 0 FirstWrite -1}
+		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		corState {Type IO LastRead -1 FirstWrite -1}
+		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
@@ -507,7 +508,6 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
-		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		phaseClass1_V_15 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass1_V_13 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass1_V_10 {Type IO LastRead -1 FirstWrite -1}
@@ -757,7 +757,6 @@ set ArgLastReadFirstWriteLatency {
 		Phase15_V_2 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_1 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_0 {Type IO LastRead -1 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
 		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
@@ -902,12 +901,13 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass15_V_6 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass15_V_5 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass15_V_4 {Type IO LastRead -1 FirstWrite -1}
-		phaseClassValid_V_15 {Type O LastRead -1 FirstWrite -1}}}
+		phaseClassValid_V_15 {Type O LastRead -1 FirstWrite -1}
+		loadCount_V {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "3"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
@@ -920,8 +920,8 @@ set Spec2ImplPortList {
 	i_data_V_last_V { axis {  { i_data_TVALID in_vld 0 1 }  { i_data_TREADY in_acc 1 1 }  { i_data_TLAST in_data 0 1 } } }
 	o_data_V_data_V { axis {  { o_data_TDATA out_data 1 32 } } }
 	o_data_V_last_V { axis {  { o_data_TVALID out_vld 1 1 }  { o_data_TREADY out_acc 0 1 }  { o_data_TLAST out_data 1 1 } } }
-	phaseClass_V { ap_none {  { phaseClass_V in_data 0 4 } } }
 	start_V { ap_none {  { start_V in_data 0 1 } } }
+	phaseClass_V { ap_none {  { phaseClass_V in_data 0 4 } } }
 }
 
 set busDeadlockParameterList { 

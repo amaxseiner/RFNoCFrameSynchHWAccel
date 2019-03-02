@@ -21,7 +21,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "1",
-    "Latency": "3",
+    "Latency": "2",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -163,14 +163,14 @@
       "width": "1",
       "isVector": "true"
     },
-    "phaseClass_V": {
-      "dir": "in",
-      "width": "4"
-    },
     "start_V": {
       "dir": "in",
       "width": "1",
       "isVector": "true"
+    },
+    "phaseClass_V": {
+      "dir": "in",
+      "width": "4"
     }
   },
   "CPorts": {
@@ -185,23 +185,23 @@
     "o_data_V_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
+      "firstOutLatency": "1"
     },
     "o_data_V_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
-    },
-    "phaseClass_V": {
-      "interfaceRef": "phaseClass_V",
-      "dir": "in",
-      "dataWidth": "4",
-      "handshakeRef": "ap_none"
+      "firstOutLatency": "1"
     },
     "start_V": {
       "interfaceRef": "start_V",
       "dir": "in",
       "dataWidth": "1",
+      "handshakeRef": "ap_none"
+    },
+    "phaseClass_V": {
+      "interfaceRef": "phaseClass_V",
+      "dir": "in",
+      "dataWidth": "4",
       "handshakeRef": "ap_none"
     }
   },
@@ -209,11 +209,11 @@
     "Hierarchy": {"ModuleName": "correlator"},
     "Metrics": {"correlator": {
         "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "3",
-          "LatencyWorst": "3",
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
           "PipelineII": "1",
-          "PipelineDepth": "4",
+          "PipelineDepth": "3",
           "PipelineType": "function"
         },
         "Timing": {
@@ -222,16 +222,16 @@
           "Estimate": "6.16"
         },
         "Area": {
+          "FF": "3572",
+          "LUT": "4388",
           "BRAM_18K": "0",
-          "FF": "3814",
-          "LUT": "4534",
           "DSP48E": "0"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-26 16:10:23 EST",
+    "Time": "2019-03-02 14:34:11 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
