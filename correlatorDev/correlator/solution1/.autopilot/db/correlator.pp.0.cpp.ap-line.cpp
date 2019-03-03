@@ -29349,10 +29349,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
   static ap_uint<32> readResCount;
 #pragma HLS RESET variable=readResCount
 #pragma empty_line
- enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
-  static correlatorState corState;
-#pragma empty_line
-  static ap_fixed<16,11> corHelperI;
+ static ap_fixed<16,11> corHelperI;
 #pragma HLS RESET variable=corHelperI
 #pragma empty_line
  static ap_fixed<32,22> corHelperQ;
@@ -29370,7 +29367,6 @@ switch(currentState) {
 case ST_IDLE:
  if(start){
   currentState = ST_LOAD;
-  corState = ST_WAIT;
  }
  break;
  case ST_LOAD:
@@ -29387,22 +29383,23 @@ case ST_IDLE:
   switch(phaseClass){
   case 0:
    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
-#pragma HLS UNROLL
- phaseClass0[a] = phaseClass0[a-1];
+#pragma empty_line
+    phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
   }
-  loadCount= loadCount + 1;
   currentState = ST_CORRELATEl;
+ } else {
+  currentState = ST_LOAD;
  }
  break;
  case ST_CORRELATEl:
   correlateData0: for(int a =16 -1;a>=0;a--){
-#pragma HLS UNROLL
- if(corrSeq[a]>0)
+#pragma empty_line
+   if(corrSeq[a]>0)
     corHelperI = corHelperI + (phaseClass0[a]);
 #pragma empty_line
    if(a>0)
@@ -29415,5 +29412,5 @@ case ST_IDLE:
   currentState = ST_LOAD;
   break;
 }
-#pragma line 580 "correlator.cpp"
+#pragma line 577 "correlator.cpp"
 }

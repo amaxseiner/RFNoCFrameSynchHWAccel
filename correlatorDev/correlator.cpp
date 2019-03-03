@@ -189,9 +189,6 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
   static ap_uint<32> readResCount;
 #pragma HLS RESET variable=readResCount
 
-  enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
-  static correlatorState corState;
-
   static ap_fixed<16,11> corHelperI;
 #pragma HLS RESET variable=corHelperI
 
@@ -210,7 +207,6 @@ switch(currentState) {
 case ST_IDLE:
 	if(start){ // wait for start signal.
 		currentState = ST_LOAD;
-		corState = ST_WAIT;
 	}
 	break;
  case ST_LOAD: // whenever there is valid input data, shift it in
@@ -227,7 +223,7 @@ case ST_IDLE:
 		switch(phaseClass){
 		case 0:
 			SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
-				#pragma HLS UNROLL
+				//#pragma HLS UNROLL
 				phaseClass0[a] = phaseClass0[a-1];
 			}
 			phaseClass0[0] = newVal;
@@ -235,13 +231,14 @@ case ST_IDLE:
 
 
 		}
-		loadCount= loadCount + 1;
 		currentState = ST_CORRELATEl;
+	} else {
+		currentState = ST_LOAD;
 	}
 	break;
  case ST_CORRELATEl:
 		correlateData0: for(int a =windowSize-1;a>=0;a--){
-		#pragma HLS UNROLL
+		//#pragma HLS UNROLL
 			if(corrSeq[a]>0)
 				corHelperI = corHelperI + (phaseClass0[a]);
 			//corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);

@@ -102,7 +102,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "Phase0_V_5", "Type" : "OVld", "Direction" : "IO"},
@@ -140,7 +139,6 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
-		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_6 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_7 {Type O LastRead -1 FirstWrite -1}
 		Phase0_V_5 {Type IO LastRead -1 FirstWrite -1}

@@ -419,11 +419,5 @@
 <option name="variable" positionalBoolean="4" value="currentState"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="UNROLL"/>
-</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>
