@@ -205,11 +205,12 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 switch(corState){
 case ST_WAIT:
 	corState = ST_WAIT;
-	break;
-case ST_CORRELATE:
 	out_sample.data.range(0,0) = 1;
 	out_sample.last = 0;
 	o_data.write(out_sample);
+	break;
+case ST_CORRELATE:
+
 		//update corr helper
 		switch(phaseClass){
 		case 0:

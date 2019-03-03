@@ -29385,11 +29385,12 @@ _ssdm_op_SpecReset( currentState, 1,  "");
 switch(corState){
 case ST_WAIT:
  corState = ST_WAIT;
- break;
-case ST_CORRELATE:
  out_sample.data.range(0,0) = 1;
  out_sample.last = 0;
  o_data.write(out_sample);
+ break;
+case ST_CORRELATE:
+
 
   switch(phaseClass){
   case 0:

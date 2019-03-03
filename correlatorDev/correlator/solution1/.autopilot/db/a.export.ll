@@ -588,10 +588,13 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %phaseClass15_V_2_loa = load i16* @phaseClass15_V_2, align 2
   %phaseClass15_V_1_loa = load i16* @phaseClass15_V_1, align 2
   %phaseClass15_V_0_loa = load i16* @phaseClass15_V_0, align 2
-  br i1 %corState_load, label %0, label %._crit_edge1420
+  br i1 %corState_load, label %1, label %0
 
 ; <label>:0                                       ; preds = %.preheader1158.preheader
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 1, i1 false)
+  br label %._crit_edge1420
+
+; <label>:1                                       ; preds = %.preheader1158.preheader
   %corHelperI_V_load = load i32* @corHelperI_V, align 4
   switch i4 %phaseClass_V_read, label %._crit_edge1421 [
     i4 0, label %.preheader1015.0
@@ -612,7 +615,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
     i4 -1, label %.preheader1000.0
   ]
 
-.preheader1015.0:                                 ; preds = %0
+.preheader1015.0:                                 ; preds = %1
   %tmp_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_15_loa, i5 0)
   %tmp_2_cast = sext i21 %tmp_2 to i22
   %tmp_36_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass0_V_13_loa, i5 0)
@@ -660,7 +663,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_2_4, i32* @Phase0_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1014.0:                                 ; preds = %0
+.preheader1014.0:                                 ; preds = %1
   %tmp_4 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_15_loa, i5 0)
   %tmp_4_cast = sext i21 %tmp_4 to i22
   %tmp_41_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass1_V_13_loa, i5 0)
@@ -708,7 +711,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_5_4, i32* @Phase1_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1013.0:                                 ; preds = %0
+.preheader1013.0:                                 ; preds = %1
   %tmp_6 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_15_loa, i5 0)
   %tmp_6_cast = sext i21 %tmp_6 to i22
   %tmp_46_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass2_V_13_loa, i5 0)
@@ -756,7 +759,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_8_4, i32* @Phase2_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1012.0:                                 ; preds = %0
+.preheader1012.0:                                 ; preds = %1
   %tmp_8 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_15_loa, i5 0)
   %tmp_8_cast = sext i21 %tmp_8 to i22
   %tmp_51_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass3_V_13_loa, i5 0)
@@ -804,7 +807,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_11_4, i32* @Phase3_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1011.0:                                 ; preds = %0
+.preheader1011.0:                                 ; preds = %1
   %tmp_1 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_15_loa, i5 0)
   %tmp_10_cast = sext i21 %tmp_1 to i22
   %tmp_56_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass4_V_13_loa, i5 0)
@@ -852,7 +855,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_14_4, i32* @Phase4_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1010.0:                                 ; preds = %0
+.preheader1010.0:                                 ; preds = %1
   %tmp_3 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_15_loa, i5 0)
   %tmp_12_cast = sext i21 %tmp_3 to i22
   %tmp_61_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass5_V_13_loa, i5 0)
@@ -900,7 +903,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_17_4, i32* @Phase5_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1009.0:                                 ; preds = %0
+.preheader1009.0:                                 ; preds = %1
   %tmp_5 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_15_loa, i5 0)
   %tmp_14_cast = sext i21 %tmp_5 to i22
   %tmp_66_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass6_V_13_loa, i5 0)
@@ -948,7 +951,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_20_4, i32* @Phase6_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1008.0:                                 ; preds = %0
+.preheader1008.0:                                 ; preds = %1
   %tmp_7 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_15_loa, i5 0)
   %tmp_16_cast = sext i21 %tmp_7 to i22
   %tmp_71_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass7_V_13_loa, i5 0)
@@ -996,7 +999,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_23_4, i32* @Phase7_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1007.0:                                 ; preds = %0
+.preheader1007.0:                                 ; preds = %1
   %tmp_9 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass8_V_15_loa, i5 0)
   %tmp_18_cast = sext i21 %tmp_9 to i22
   %tmp_76_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass8_V_13_loa, i5 0)
@@ -1044,7 +1047,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_26_4, i32* @Phase8_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1006.0:                                 ; preds = %0
+.preheader1006.0:                                 ; preds = %1
   %tmp_10 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass9_V_15_loa, i5 0)
   %tmp_20_cast = sext i21 %tmp_10 to i22
   %tmp_81_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass9_V_13_loa, i5 0)
@@ -1092,7 +1095,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_29_4, i32* @Phase9_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1005.0:                                 ; preds = %0
+.preheader1005.0:                                 ; preds = %1
   %tmp_11 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass10_V_15_lo, i5 0)
   %tmp_22_cast = sext i21 %tmp_11 to i22
   %tmp_86_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass10_V_13_lo, i5 0)
@@ -1140,7 +1143,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_32_4, i32* @Phase10_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1004.0:                                 ; preds = %0
+.preheader1004.0:                                 ; preds = %1
   %tmp_12 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass11_V_15_lo, i5 0)
   %tmp_24_cast = sext i21 %tmp_12 to i22
   %tmp_91_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass11_V_13_lo, i5 0)
@@ -1188,7 +1191,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_35_4, i32* @Phase11_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1003.0:                                 ; preds = %0
+.preheader1003.0:                                 ; preds = %1
   %tmp_13 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass12_V_15_lo, i5 0)
   %tmp_26_cast = sext i21 %tmp_13 to i22
   %tmp_96_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass12_V_13_lo, i5 0)
@@ -1236,7 +1239,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_38_4, i32* @Phase12_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1002.0:                                 ; preds = %0
+.preheader1002.0:                                 ; preds = %1
   %tmp_14 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass13_V_15_lo, i5 0)
   %tmp_28_cast = sext i21 %tmp_14 to i22
   %tmp_101_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass13_V_13_lo, i5 0)
@@ -1284,7 +1287,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_41_4, i32* @Phase13_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1001.0:                                 ; preds = %0
+.preheader1001.0:                                 ; preds = %1
   %tmp_15 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass14_V_15_lo, i5 0)
   %tmp_30_cast = sext i21 %tmp_15 to i22
   %tmp_106_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass14_V_13_lo, i5 0)
@@ -1332,7 +1335,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_44_4, i32* @Phase14_V_0, align 16
   br label %._crit_edge1421
 
-.preheader1000.0:                                 ; preds = %0
+.preheader1000.0:                                 ; preds = %1
   %tmp_16 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass15_V_15_lo, i5 0)
   %tmp_32_cast = sext i21 %tmp_16 to i22
   %tmp_111_2 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %phaseClass15_V_13_lo, i5 0)
@@ -1380,26 +1383,26 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i32 %p_Val2_47_4, i32* @Phase15_V_0, align 16
   br label %._crit_edge1421
 
-._crit_edge1421:                                  ; preds = %.preheader1000.0, %.preheader1001.0, %.preheader1002.0, %.preheader1003.0, %.preheader1004.0, %.preheader1005.0, %.preheader1006.0, %.preheader1007.0, %.preheader1008.0, %.preheader1009.0, %.preheader1010.0, %.preheader1011.0, %.preheader1012.0, %.preheader1013.0, %.preheader1014.0, %.preheader1015.0, %0
+._crit_edge1421:                                  ; preds = %.preheader1000.0, %.preheader1001.0, %.preheader1002.0, %.preheader1003.0, %.preheader1004.0, %.preheader1005.0, %.preheader1006.0, %.preheader1007.0, %.preheader1008.0, %.preheader1009.0, %.preheader1010.0, %.preheader1011.0, %.preheader1012.0, %.preheader1013.0, %.preheader1014.0, %.preheader1015.0, %1
   br label %._crit_edge1420
 
-._crit_edge1420:                                  ; preds = %._crit_edge1421, %.preheader1158.preheader
-  %corState_flag = phi i1 [ false, %._crit_edge1421 ], [ true, %.preheader1158.preheader ]
+._crit_edge1420:                                  ; preds = %._crit_edge1421, %0
+  %corState_flag = phi i1 [ false, %._crit_edge1421 ], [ true, %0 ]
   %currentState_load = load i1* @currentState, align 1
-  br i1 %currentState_load, label %3, label %1
+  br i1 %currentState_load, label %4, label %2
 
-; <label>:1                                       ; preds = %._crit_edge1420
-  br i1 %start_V_read, label %2, label %._crit_edge1454
+; <label>:2                                       ; preds = %._crit_edge1420
+  br i1 %start_V_read, label %3, label %._crit_edge1454
 
-; <label>:2                                       ; preds = %1
+; <label>:3                                       ; preds = %2
   store i1 true, i1* @currentState, align 1
   br label %._crit_edge1454
 
-; <label>:3                                       ; preds = %._crit_edge1420
+; <label>:4                                       ; preds = %._crit_edge1420
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %4, label %._crit_edge1456
+  br i1 %tmp, label %5, label %._crit_edge1456
 
-; <label>:4                                       ; preds = %3
+; <label>:5                                       ; preds = %4
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_data_V = extractvalue { i32, i1 } %empty, 0
   %tmp_113 = trunc i32 %tmp_data_V to i16
@@ -1423,7 +1426,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
     i4 -1, label %.preheader.0
   ]
 
-.preheader999.0:                                  ; preds = %4
+.preheader999.0:                                  ; preds = %5
   %phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 4
   store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2
   store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4
@@ -1451,7 +1454,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_0, align 1
   br label %._crit_edge1457
 
-.preheader998.0:                                  ; preds = %4
+.preheader998.0:                                  ; preds = %5
   %phaseClass1_V_14_loa = load i16* @phaseClass1_V_14, align 4
   store i16 %phaseClass1_V_14_loa, i16* @phaseClass1_V_15, align 2
   store i16 %phaseClass1_V_13_loa, i16* @phaseClass1_V_14, align 4
@@ -1479,7 +1482,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_1, align 1
   br label %._crit_edge1457
 
-.preheader997.0:                                  ; preds = %4
+.preheader997.0:                                  ; preds = %5
   %phaseClass2_V_14_loa = load i16* @phaseClass2_V_14, align 4
   store i16 %phaseClass2_V_14_loa, i16* @phaseClass2_V_15, align 2
   store i16 %phaseClass2_V_13_loa, i16* @phaseClass2_V_14, align 4
@@ -1507,7 +1510,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_2, align 1
   br label %._crit_edge1457
 
-.preheader996.0:                                  ; preds = %4
+.preheader996.0:                                  ; preds = %5
   %phaseClass3_V_14_loa = load i16* @phaseClass3_V_14, align 4
   store i16 %phaseClass3_V_14_loa, i16* @phaseClass3_V_15, align 2
   store i16 %phaseClass3_V_13_loa, i16* @phaseClass3_V_14, align 4
@@ -1535,7 +1538,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_3, align 1
   br label %._crit_edge1457
 
-.preheader995.0:                                  ; preds = %4
+.preheader995.0:                                  ; preds = %5
   %phaseClass4_V_14_loa = load i16* @phaseClass4_V_14, align 4
   store i16 %phaseClass4_V_14_loa, i16* @phaseClass4_V_15, align 2
   store i16 %phaseClass4_V_13_loa, i16* @phaseClass4_V_14, align 4
@@ -1563,7 +1566,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_4, align 1
   br label %._crit_edge1457
 
-.preheader994.0:                                  ; preds = %4
+.preheader994.0:                                  ; preds = %5
   %phaseClass5_V_14_loa = load i16* @phaseClass5_V_14, align 4
   store i16 %phaseClass5_V_14_loa, i16* @phaseClass5_V_15, align 2
   store i16 %phaseClass5_V_13_loa, i16* @phaseClass5_V_14, align 4
@@ -1591,7 +1594,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_5, align 1
   br label %._crit_edge1457
 
-.preheader993.0:                                  ; preds = %4
+.preheader993.0:                                  ; preds = %5
   %phaseClass6_V_14_loa = load i16* @phaseClass6_V_14, align 4
   store i16 %phaseClass6_V_14_loa, i16* @phaseClass6_V_15, align 2
   store i16 %phaseClass6_V_13_loa, i16* @phaseClass6_V_14, align 4
@@ -1619,7 +1622,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_6, align 1
   br label %._crit_edge1457
 
-.preheader992.0:                                  ; preds = %4
+.preheader992.0:                                  ; preds = %5
   %phaseClass7_V_14_loa = load i16* @phaseClass7_V_14, align 4
   store i16 %phaseClass7_V_14_loa, i16* @phaseClass7_V_15, align 2
   store i16 %phaseClass7_V_13_loa, i16* @phaseClass7_V_14, align 4
@@ -1647,7 +1650,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_7, align 1
   br label %._crit_edge1457
 
-.preheader991.0:                                  ; preds = %4
+.preheader991.0:                                  ; preds = %5
   %phaseClass8_V_14_loa = load i16* @phaseClass8_V_14, align 4
   store i16 %phaseClass8_V_14_loa, i16* @phaseClass8_V_15, align 2
   store i16 %phaseClass8_V_13_loa, i16* @phaseClass8_V_14, align 4
@@ -1675,7 +1678,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_8, align 1
   br label %._crit_edge1457
 
-.preheader990.0:                                  ; preds = %4
+.preheader990.0:                                  ; preds = %5
   %phaseClass9_V_14_loa = load i16* @phaseClass9_V_14, align 4
   store i16 %phaseClass9_V_14_loa, i16* @phaseClass9_V_15, align 2
   store i16 %phaseClass9_V_13_loa, i16* @phaseClass9_V_14, align 4
@@ -1703,7 +1706,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_9, align 1
   br label %._crit_edge1457
 
-.preheader989.0:                                  ; preds = %4
+.preheader989.0:                                  ; preds = %5
   %phaseClass10_V_14_lo = load i16* @phaseClass10_V_14, align 4
   store i16 %phaseClass10_V_14_lo, i16* @phaseClass10_V_15, align 2
   store i16 %phaseClass10_V_13_lo, i16* @phaseClass10_V_14, align 4
@@ -1731,7 +1734,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_10, align 1
   br label %._crit_edge1457
 
-.preheader988.0:                                  ; preds = %4
+.preheader988.0:                                  ; preds = %5
   %phaseClass11_V_14_lo = load i16* @phaseClass11_V_14, align 4
   store i16 %phaseClass11_V_14_lo, i16* @phaseClass11_V_15, align 2
   store i16 %phaseClass11_V_13_lo, i16* @phaseClass11_V_14, align 4
@@ -1759,7 +1762,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_11, align 1
   br label %._crit_edge1457
 
-.preheader987.0:                                  ; preds = %4
+.preheader987.0:                                  ; preds = %5
   %phaseClass12_V_14_lo = load i16* @phaseClass12_V_14, align 4
   store i16 %phaseClass12_V_14_lo, i16* @phaseClass12_V_15, align 2
   store i16 %phaseClass12_V_13_lo, i16* @phaseClass12_V_14, align 4
@@ -1787,7 +1790,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_12, align 1
   br label %._crit_edge1457
 
-.preheader986.0:                                  ; preds = %4
+.preheader986.0:                                  ; preds = %5
   %phaseClass13_V_14_lo = load i16* @phaseClass13_V_14, align 4
   store i16 %phaseClass13_V_14_lo, i16* @phaseClass13_V_15, align 2
   store i16 %phaseClass13_V_13_lo, i16* @phaseClass13_V_14, align 4
@@ -1815,7 +1818,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_13, align 1
   br label %._crit_edge1457
 
-.preheader985.0:                                  ; preds = %4
+.preheader985.0:                                  ; preds = %5
   %phaseClass14_V_14_lo = load i16* @phaseClass14_V_14, align 4
   store i16 %phaseClass14_V_14_lo, i16* @phaseClass14_V_15, align 2
   store i16 %phaseClass14_V_13_lo, i16* @phaseClass14_V_14, align 4
@@ -1843,7 +1846,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_14, align 1
   br label %._crit_edge1457
 
-.preheader.0:                                     ; preds = %4
+.preheader.0:                                     ; preds = %5
   %phaseClass15_V_14_lo = load i16* @phaseClass15_V_14, align 4
   store i16 %phaseClass15_V_14_lo, i16* @phaseClass15_V_15, align 2
   store i16 %phaseClass15_V_13_lo, i16* @phaseClass15_V_14, align 4
@@ -1871,21 +1874,21 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i1 true, i1* @phaseClassValid_V_15, align 1
   br label %._crit_edge1457
 
-._crit_edge1457:                                  ; preds = %.preheader.0, %.preheader985.0, %.preheader986.0, %.preheader987.0, %.preheader988.0, %.preheader989.0, %.preheader990.0, %.preheader991.0, %.preheader992.0, %.preheader993.0, %.preheader994.0, %.preheader995.0, %.preheader996.0, %.preheader997.0, %.preheader998.0, %.preheader999.0, %4
+._crit_edge1457:                                  ; preds = %.preheader.0, %.preheader985.0, %.preheader986.0, %.preheader987.0, %.preheader988.0, %.preheader989.0, %.preheader990.0, %.preheader991.0, %.preheader992.0, %.preheader993.0, %.preheader994.0, %.preheader995.0, %.preheader996.0, %.preheader997.0, %.preheader998.0, %.preheader999.0, %5
   %loadCount_V_load = load i32* @loadCount_V, align 4
   %tmp_s = add i32 %loadCount_V_load, 1
   store i32 %tmp_s, i32* @loadCount_V, align 4
   br label %._crit_edge1456
 
-._crit_edge1456:                                  ; preds = %._crit_edge1457, %3
-  %corState_flag_2 = phi i1 [ true, %._crit_edge1457 ], [ %corState_flag, %3 ]
-  %corState_new_2 = phi i1 [ true, %._crit_edge1457 ], [ false, %3 ]
+._crit_edge1456:                                  ; preds = %._crit_edge1457, %4
+  %corState_flag_2 = phi i1 [ true, %._crit_edge1457 ], [ %corState_flag, %4 ]
+  %corState_new_2 = phi i1 [ true, %._crit_edge1457 ], [ false, %4 ]
   store i1 true, i1* @currentState, align 1
   br label %._crit_edge1454
 
-._crit_edge1454:                                  ; preds = %._crit_edge1456, %2, %1
-  %corState_flag_3 = phi i1 [ %corState_flag_2, %._crit_edge1456 ], [ true, %2 ], [ %corState_flag, %1 ]
-  %corState_new_3 = phi i1 [ %corState_new_2, %._crit_edge1456 ], [ false, %2 ], [ false, %1 ]
+._crit_edge1454:                                  ; preds = %._crit_edge1456, %3, %2
+  %corState_flag_3 = phi i1 [ %corState_flag_2, %._crit_edge1456 ], [ true, %3 ], [ %corState_flag, %2 ]
+  %corState_new_3 = phi i1 [ %corState_new_2, %._crit_edge1456 ], [ false, %3 ], [ false, %2 ]
   br i1 %corState_flag_3, label %mergeST, label %._crit_edge1454.new
 
 mergeST:                                          ; preds = %._crit_edge1454

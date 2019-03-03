@@ -328,7 +328,7 @@ struct correlator : public sc_module {
     sc_signal< sc_lv<1> > corState_load_reg_7607;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
     sc_signal< sc_lv<1> > ap_reg_pp0_iter1_corState_load_reg_7607;
-    sc_signal< bool > ap_predicate_op498_read_state1;
+    sc_signal< bool > ap_predicate_op499_read_state1;
     sc_signal< bool > ap_block_state1_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state2_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state2_io;
@@ -875,7 +875,7 @@ struct correlator : public sc_module {
     sc_signal< sc_logic > ap_enable_pp0;
     sc_signal< bool > ap_condition_782;
     sc_signal< bool > ap_condition_526;
-    sc_signal< bool > ap_condition_1729;
+    sc_signal< bool > ap_condition_3375;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<1> ap_ST_fsm_pp0_stage0;
@@ -919,7 +919,7 @@ struct correlator : public sc_module {
     void thread_ap_block_state2_pp0_stage0_iter1();
     void thread_ap_block_state3_io();
     void thread_ap_block_state3_pp0_stage0_iter2();
-    void thread_ap_condition_1729();
+    void thread_ap_condition_3375();
     void thread_ap_condition_526();
     void thread_ap_condition_782();
     void thread_ap_enable_pp0();
@@ -934,7 +934,7 @@ struct correlator : public sc_module {
     void thread_ap_phi_reg_pp0_iter0_corState_flag_reg_940();
     void thread_ap_phi_reg_pp0_iter0_corState_new_2_reg_962();
     void thread_ap_phi_reg_pp0_iter0_corState_new_3_reg_988();
-    void thread_ap_predicate_op498_read_state1();
+    void thread_ap_predicate_op499_read_state1();
     void thread_ap_reset_idle_pp0();
     void thread_ap_rst_n_inv();
     void thread_corState_load_load_fu_1008_p1();
