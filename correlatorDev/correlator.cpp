@@ -202,10 +202,172 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
   enum loadState {ST_IDLE = 0, ST_LOAD };
   static loadState currentState;
 #pragma HLS RESET variable=currentState
-switch(corState){
+
+
+// Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
+
+	switch(currentState) {
+	case ST_IDLE:
+		if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
+			currentState = ST_LOAD;
+			corState = ST_WAIT;
+		}
+		break;
+	 case ST_LOAD: // whenever there is valid input data, shift it in
+		if(!i_data.empty()){
+			i_data.read(tmp_data);
+			//out_sample.data.range(3,0) = phaseClass;
+			//out_sample.last = tmp_data.last;
+			//o_data.write(out_sample);
+			//if(!phaseClassIn.empty())
+				//phaseClassIn.read(phaseClass);
+			//newVal.q = tmp_data.data.range(31,16); // IM
+			newVal.V = tmp_data.data.range(15,0); // RE
+
+			switch(phaseClass){
+			case 0:
+				SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass0[a] = phaseClass0[a-1];
+				}
+				phaseClass0[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 1:
+				SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass1[a] = phaseClass1[a-1];
+				}
+				phaseClass1[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 2:
+				SHIFT_DATA2: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass2[a] = phaseClass2[a-1];
+				}
+				phaseClass2[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+
+				break;
+			case 3:
+				SHIFT_DATA3: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass3[a] = phaseClass3[a-1];
+				}
+				phaseClass3[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 4:
+				SHIFT_DATA4: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass4[a] = phaseClass4[a-1];
+				}
+				phaseClass4[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 5:
+				SHIFT_DATA5: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass5[a] = phaseClass5[a-1];
+				}
+				phaseClass5[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 6:
+				SHIFT_DATA6: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass6[a] = phaseClass6[a-1];
+				}
+				phaseClass6[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 7:
+				SHIFT_DATA7: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass7[a] = phaseClass7[a-1];
+				}
+				phaseClass7[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 8:
+				SHIFT_DATA8: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass8[a] = phaseClass8[a-1];
+				}
+				phaseClass8[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 9:
+				SHIFT_DATA9: for(int a=windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass9[a] = phaseClass9[a-1];
+				}
+				phaseClass9[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 10:
+				SHIFT_DATA10: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass10[a] = phaseClass10[a-1];
+				}
+				phaseClass10[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 11:
+				SHIFT_DATA11: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass11[a] = phaseClass11[a-1];
+				}
+				phaseClass11[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 12:
+				SHIFT_DATA12: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass12[a] = phaseClass12[a-1];
+				}
+				phaseClass12[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 13:
+				SHIFT_DATA13: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass13[a] = phaseClass13[a-1];
+				}
+				phaseClass13[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 14:
+				SHIFT_DATA14: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass14[a] = phaseClass14[a-1];
+				}
+				phaseClass14[0] = newVal;
+
+				phaseClassValid[phaseClass] = 1;
+				break;
+			case 15:
+				SHIFT_DATA15: for(int a =windowSize-1;a>0;a--){
+					#pragma HLS UNROLL
+					phaseClass15[a] = phaseClass15[a-1];
+				}
+				phaseClass15[0] = newVal;
+				phaseClassValid[phaseClass] = 1;
+				break;
+			}
+			loadCount= loadCount + 1;
+			corState = ST_CORRELATE;
+		}
+		currentState = ST_LOAD;
+		break;
+	}
+
+
+	switch(corState){
 case ST_WAIT:
 	corState = ST_WAIT;
-	out_sample.data.range(0,0) = 1;
+	out_sample.data = 1;
 	out_sample.last = 0;
 	o_data.write(out_sample);
 	break;
@@ -400,163 +562,5 @@ case ST_CORRELATE:
 	}
 }
 
-
-// Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
-
-	switch(currentState) {
-	case ST_IDLE:
-		if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
-			currentState = ST_LOAD;
-			corState = ST_WAIT;
-		}
-		break;
-	 case ST_LOAD: // whenever there is valid input data, shift it in
-		if(!i_data.empty()){
-			i_data.read(tmp_data);
-			//out_sample.data.range(3,0) = phaseClass;
-			//out_sample.last = tmp_data.last;
-			//o_data.write(out_sample);
-			//if(!phaseClassIn.empty())
-				//phaseClassIn.read(phaseClass);
-			//newVal.q = tmp_data.data.range(31,16); // IM
-			newVal.V = tmp_data.data.range(15,0); // RE
-
-			switch(phaseClass){
-			case 0:
-				SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass0[a] = phaseClass0[a-1];
-				}
-				phaseClass0[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 1:
-				SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass1[a] = phaseClass1[a-1];
-				}
-				phaseClass1[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 2:
-				SHIFT_DATA2: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass2[a] = phaseClass2[a-1];
-				}
-				phaseClass2[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-
-				break;
-			case 3:
-				SHIFT_DATA3: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass3[a] = phaseClass3[a-1];
-				}
-				phaseClass3[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 4:
-				SHIFT_DATA4: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass4[a] = phaseClass4[a-1];
-				}
-				phaseClass4[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 5:
-				SHIFT_DATA5: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass5[a] = phaseClass5[a-1];
-				}
-				phaseClass5[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 6:
-				SHIFT_DATA6: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass6[a] = phaseClass6[a-1];
-				}
-				phaseClass6[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 7:
-				SHIFT_DATA7: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass7[a] = phaseClass7[a-1];
-				}
-				phaseClass7[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 8:
-				SHIFT_DATA8: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass8[a] = phaseClass8[a-1];
-				}
-				phaseClass8[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 9:
-				SHIFT_DATA9: for(int a=windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass9[a] = phaseClass9[a-1];
-				}
-				phaseClass9[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 10:
-				SHIFT_DATA10: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass10[a] = phaseClass10[a-1];
-				}
-				phaseClass10[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 11:
-				SHIFT_DATA11: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass11[a] = phaseClass11[a-1];
-				}
-				phaseClass11[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 12:
-				SHIFT_DATA12: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass12[a] = phaseClass12[a-1];
-				}
-				phaseClass12[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 13:
-				SHIFT_DATA13: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass13[a] = phaseClass13[a-1];
-				}
-				phaseClass13[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 14:
-				SHIFT_DATA14: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass14[a] = phaseClass14[a-1];
-				}
-				phaseClass14[0] = newVal;
-
-				phaseClassValid[phaseClass] = 1;
-				break;
-			case 15:
-				SHIFT_DATA15: for(int a =windowSize-1;a>0;a--){
-					#pragma HLS UNROLL
-					phaseClass15[a] = phaseClass15[a-1];
-				}
-				phaseClass15[0] = newVal;
-				phaseClassValid[phaseClass] = 1;
-				break;
-			}
-			loadCount= loadCount + 1;
-			corState = ST_CORRELATE;
-		}
-		currentState = ST_LOAD;
-		break;
-	}
 }
+
