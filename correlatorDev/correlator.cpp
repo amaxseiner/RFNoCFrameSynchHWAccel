@@ -161,7 +161,7 @@ static ap_fixed<32,22> resPhase15[windowSize];
 static ap_fixed<32,22> Phase15[windowSize];
 #pragma HLS ARRAY_PARTITION variable=Phase15 complete dim=1
 
-static ap_int<16> newVal;
+static ap_fixed<16,11> newVal;
 #pragma HLS RESET variable=newVal
 
 //static ap_uint<4> phaseClass;
@@ -218,7 +218,7 @@ case ST_IDLE:
 		//if(!phaseClassIn.empty())
 			//phaseClassIn.read(phaseClass);
 		//newVal.q = tmp_data.data.range(31,16); // IM
-		newVal = tmp_data.data.range(15,0); // RE
+		newVal.V = tmp_data.data.range(15,0); // RE
 		corHelperI = 0;
 		switch(phaseClass){
 		case 0:
@@ -229,7 +229,7 @@ case ST_IDLE:
 			phaseClass0[0] = newVal;
 			//phaseClassValid[phaseClass] = 1;
 		}
-		out_sample.data.range(15,0) = newVal;
+		out_sample.data.range(15,0) = newVal.V;
 		//out_sample.last = 0;
 		o_data.write(out_sample);
 

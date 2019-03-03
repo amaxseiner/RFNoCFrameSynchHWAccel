@@ -29476,7 +29476,7 @@ _ssdm_SpecArrayPartition( resPhase15, 1, "COMPLETE", 0, "");
 static ap_fixed<32,22> Phase15[16];
 _ssdm_SpecArrayPartition( Phase15, 1, "COMPLETE", 0, "");
 
-static ap_int<16> newVal;
+static ap_fixed<16,11> newVal;
 _ssdm_op_SpecReset( &newVal, 1, "");
 
 
@@ -29533,7 +29533,7 @@ case ST_IDLE:
 
 
 
-  newVal = tmp_data.data.range(15,0);
+  newVal.V = tmp_data.data.range(15,0);
   corHelperI = 0;
   switch(phaseClass){
   case 0:
@@ -29544,7 +29544,7 @@ case ST_IDLE:
    phaseClass0[0] = newVal;
 
   }
-  out_sample.data.range(15,0) = newVal;
+  out_sample.data.range(15,0) = newVal.V;
 
   o_data.write(out_sample);
 
