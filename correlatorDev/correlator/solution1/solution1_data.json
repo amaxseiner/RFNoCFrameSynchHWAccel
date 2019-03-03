@@ -219,11 +219,11 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.69"
+          "Estimate": "6.58"
         },
         "Area": {
-          "FF": "370",
-          "LUT": "330",
+          "FF": "384",
+          "LUT": "446",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -231,7 +231,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-03 17:22:48 EST",
+    "Time": "2019-03-03 17:33:20 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

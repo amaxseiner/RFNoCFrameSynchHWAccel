@@ -29399,15 +29399,16 @@ case ST_IDLE:
 
 
   newVal.V = tmp_data.data.range(15,0);
-  corHelperI = 0;
   switch(phaseClass){
   case 0:
    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
-
-    phaseClass0[a] = phaseClass0[a-1];
+#pragma HLS UNROLL
+ phaseClass0[a] = phaseClass0[a-1];
+    if(a==1){
+     phaseClass0[0] = newVal;
+     currentState = ST_CORRELATEl;
+    }
    }
-   phaseClass0[0] = newVal;
-   currentState = ST_CORRELATEl;
 
   }
 
@@ -29416,10 +29417,11 @@ case ST_IDLE:
  }
  break;
  case ST_CORRELATEl:
+  corHelperI = 0;
   correlateData0: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
 
-   if(corrSeq[a]>0)
-    corHelperI = corHelperI + (phaseClass0[a]);
+ corHelperI = corHelperI + (phaseClass0[a]);
 
    if(a>0)
     Phase0[a] = Phase0[a-1];
@@ -29434,5 +29436,5 @@ case ST_IDLE:
   currentState = ST_LOAD;
   break;
 }
-#579 "correlator.cpp"
+#581 "correlator.cpp"
 }
