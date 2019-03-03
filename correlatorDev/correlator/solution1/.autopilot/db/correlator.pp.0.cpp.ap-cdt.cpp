@@ -29585,7 +29585,7 @@ case ST_CORRELATE:
    currentState = ST_LOAD;
   break;
   case ST_LOAD:
-#pragma empty_line
+  if(!i_data.empty()){
    i_data.read(tmp_data);
 #pragma empty_line
 #pragma empty_line
@@ -29731,7 +29731,7 @@ case ST_CORRELATE:
    }
    loadCount= loadCount + 1;
    corState = ST_CORRELATE;
-#pragma empty_line
+  }
   currentState = ST_LOAD;
   break;
  }

@@ -405,7 +405,7 @@ case ST_CORRELATE:
 			currentState = ST_LOAD;
 		break;
 	 case ST_LOAD: // whenever there is valid input data, shift it in
-		//if(!i_data.empty()){
+		if(!i_data.empty()){
 			i_data.read(tmp_data);
 			//out_sample.data.range(3,0) = phaseClass;
 			//out_sample.last = tmp_data.last;
@@ -551,7 +551,7 @@ case ST_CORRELATE:
 			}
 			loadCount= loadCount + 1;
 			corState = ST_CORRELATE;
-		//}
+		}
 		currentState = ST_LOAD;
 		break;
 	}

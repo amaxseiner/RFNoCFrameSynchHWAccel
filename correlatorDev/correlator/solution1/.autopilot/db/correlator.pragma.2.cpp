@@ -29720,7 +29720,7 @@ _ssdm_Unroll(0,0,0, "");
    currentState = ST_LOAD;
   break;
   case ST_LOAD:
-
+  if(!i_data.empty()){
    i_data.read(tmp_data);
 
 
@@ -29866,7 +29866,7 @@ _ssdm_Unroll(0,0,0, "");
    }
    loadCount= loadCount + 1;
    corState = ST_CORRELATE;
-
+  }
   currentState = ST_LOAD;
   break;
  }
