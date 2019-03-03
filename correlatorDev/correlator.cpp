@@ -221,8 +221,9 @@ case ST_CORRELATE:
 			}
 			Phase0[0] = corHelperI;
 			//if(corHelperI >= curThres){
-			out_sample.data.range(31,0) = corHelperI.range(31,0);//maybe not this but something like it as an output.
-			o_data.write(out_sample);// always output for TB
+			//out_sample.data.range(31,0) = corHelperI.range(31,0);//maybe not this but something like it as an output.
+			//out_sample.last = 0;
+			//o_data.write(out_sample);// always output for TB
 
 		break;
 		case 1:
@@ -407,7 +408,7 @@ case ST_CORRELATE:
 		//if(!i_data.empty()){
 			i_data.read(tmp_data);
 			//out_sample.data.range(3,0) = phaseClass;
-			out_sample.last = tmp_data.last;
+			//out_sample.last = tmp_data.last;
 			//o_data.write(out_sample);
 			//if(!phaseClassIn.empty())
 				//phaseClassIn.read(phaseClass);
@@ -438,6 +439,9 @@ case ST_CORRELATE:
 				}
 				phaseClass2[0] = newVal;
 				phaseClassValid[phaseClass] = 1;
+				out_sample.data.range(3,0) = phaseClass;
+				out_sample.last = tmp_data.last;
+				o_data.write(out_sample);
 				break;
 			case 3:
 				SHIFT_DATA3: for(int a =windowSize-1;a>0;a--){

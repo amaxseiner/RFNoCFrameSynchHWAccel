@@ -29401,8 +29401,9 @@ case ST_CORRELATE:
    }
    Phase0[0] = corHelperI;
 
-   out_sample.data.range(31,0) = corHelperI.range(31,0);
-   o_data.write(out_sample);
+
+
+
 
   break;
   case 1:
@@ -29587,7 +29588,7 @@ case ST_CORRELATE:
 
    i_data.read(tmp_data);
 
-   out_sample.last = tmp_data.last;
+
 
 
 
@@ -29618,6 +29619,9 @@ case ST_CORRELATE:
     }
     phaseClass2[0] = newVal;
     phaseClassValid[phaseClass] = 1;
+    out_sample.data.range(3,0) = phaseClass;
+    out_sample.last = tmp_data.last;
+    o_data.write(out_sample);
     break;
    case 3:
     SHIFT_DATA3: for(int a =16 -1;a>0;a--){
