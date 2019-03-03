@@ -84,7 +84,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "corState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO"},
@@ -342,6 +341,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "Phase15_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
@@ -494,12 +494,11 @@ set ArgLastReadFirstWriteLatency {
 	correlator {
 		i_data_V_data_V {Type I LastRead 0 FirstWrite -1}
 		i_data_V_last_V {Type I LastRead 0 FirstWrite -1}
-		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
-		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
+		o_data_V_data_V {Type O LastRead -1 FirstWrite 2}
+		o_data_V_last_V {Type O LastRead -1 FirstWrite 2}
 		start_V {Type I LastRead 0 FirstWrite -1}
 		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		corState {Type IO LastRead -1 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
@@ -757,6 +756,7 @@ set ArgLastReadFirstWriteLatency {
 		Phase15_V_2 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_1 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_0 {Type IO LastRead -1 FirstWrite -1}
+		currentState {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
 		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
@@ -907,7 +907,7 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
+	{"Name" : "Latency", "Min" : "3", "Max" : "3"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 

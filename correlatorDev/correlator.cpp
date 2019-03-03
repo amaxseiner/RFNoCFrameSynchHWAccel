@@ -220,10 +220,10 @@ case ST_CORRELATE:
 					Phase0[a] = Phase0[a-1];
 			}
 			Phase0[0] = corHelperI;
-			/*if(corHelperI >= curThres){
-				out_sample.data = loadCount;//maybe not this but something like it as an output.
-				o_data.write(out_sample);
-			}*/
+			//if(corHelperI >= curThres){
+			out_sample.data.range(31,0) = corHelperI.range(31,0);//maybe not this but something like it as an output.
+			o_data.write(out_sample);// always output for TB
+
 		break;
 		case 1:
 			correlateData1: for(int a =windowSize-1;a>=0;a--){
@@ -406,13 +406,13 @@ case ST_CORRELATE:
 	 case ST_LOAD: // whenever there is valid input data, shift it in
 		//if(!i_data.empty()){
 			i_data.read(tmp_data);
-			out_sample.data.range(3,0) = phaseClass;
+			//out_sample.data.range(3,0) = phaseClass;
 			out_sample.last = tmp_data.last;
-			o_data.write(out_sample);
+			//o_data.write(out_sample);
 			//if(!phaseClassIn.empty())
 				//phaseClassIn.read(phaseClass);
-			//newVal.q = tmp_data.data.range(15,0); // IM
-			newVal = tmp_data.data.range(31,16); // RE
+			//newVal.q = tmp_data.data.range(31,16); // IM
+			newVal = tmp_data.data.range(15,0); // RE
 
 			switch(phaseClass){
 			case 0:

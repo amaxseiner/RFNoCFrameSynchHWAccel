@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlator'" level="0">
-<item name = "Date">Sun Mar  3 14:04:39 2019
+<item name = "Date">Sun Mar  3 14:17:25 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 2, 1, 1, function</column>
+<column name="">3, 3, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">

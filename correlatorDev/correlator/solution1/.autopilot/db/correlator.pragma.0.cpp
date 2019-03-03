@@ -29401,8 +29401,8 @@ case ST_CORRELATE:
    }
    Phase0[0] = corHelperI;
 
-
-
+   out_sample.data.range(31,0) = corHelperI.range(31,0);
+   o_data.write(out_sample);
 
   break;
   case 1:
@@ -29586,13 +29586,13 @@ case ST_CORRELATE:
   case ST_LOAD:
 
    i_data.read(tmp_data);
-   out_sample.data.range(3,0) = phaseClass;
+
    out_sample.last = tmp_data.last;
-   o_data.write(out_sample);
 
 
 
-   newVal = tmp_data.data.range(31,16);
+
+   newVal = tmp_data.data.range(15,0);
 
    switch(phaseClass){
    case 0:
