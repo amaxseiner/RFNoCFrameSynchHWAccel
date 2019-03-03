@@ -29368,6 +29368,9 @@ case ST_WAIT:
  corState = ST_WAIT;
  break;
 case ST_CORRELATE:
+ out_sample.data.range(3,0) = phaseClass;
+ out_sample.last = tmp_data.last;
+ o_data.write(out_sample);
 #pragma empty_line
   switch(phaseClass){
   case 0:
@@ -29599,9 +29602,7 @@ case ST_CORRELATE:
     }
     phaseClass2[0] = newVal;
     phaseClassValid[phaseClass] = 1;
-    out_sample.data.range(3,0) = phaseClass;
-    out_sample.last = tmp_data.last;
-    o_data.write(out_sample);
+#pragma empty_line
     break;
    case 3:
     SHIFT_DATA3: for(int a =16 -1;a>0;a--){

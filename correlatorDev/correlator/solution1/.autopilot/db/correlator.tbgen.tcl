@@ -2,9 +2,9 @@ set C_TypeInfoList {{
 "correlator" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"start": [[],"1"] }, {"phaseClass": [[],"2"] }],[],""], 
 "0": [ "stream<rfnoc_axis>", {"hls_type": {"stream": [[[[],"3"]],"4"]}}], 
 "2": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "3": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "5"]},{ "last": [[], "1"]}],""]}], 
-"5": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
+"5": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "4": ["hls", ""]
 }}
 set moduleName correlator
@@ -84,7 +84,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "corState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO"},
@@ -342,6 +341,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "Phase15_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase15_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
@@ -499,7 +499,6 @@ set ArgLastReadFirstWriteLatency {
 		start_V {Type I LastRead 0 FirstWrite -1}
 		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		corState {Type IO LastRead -1 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
@@ -757,6 +756,7 @@ set ArgLastReadFirstWriteLatency {
 		Phase15_V_2 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_1 {Type IO LastRead -1 FirstWrite -1}
 		Phase15_V_0 {Type IO LastRead -1 FirstWrite -1}
+		currentState {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
 		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
