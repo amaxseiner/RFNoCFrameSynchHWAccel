@@ -29413,7 +29413,7 @@ _ssdm_Unroll(0,0,0, "");
   }
 
  } else {
-  currentState = ST_LOAD;
+  currentState = ST_CORRELATEl;
  }
  break;
  case ST_CORRELATEl:
@@ -29430,10 +29430,10 @@ _ssdm_Unroll(0,0,0, "");
     out_sample.data.range(15,0) = corHelperI.V;
 
     o_data.write(out_sample);
+    currentState = ST_LOAD;
    }
   }
 
-  currentState = ST_LOAD;
   break;
 }
 #581 "correlator.cpp"

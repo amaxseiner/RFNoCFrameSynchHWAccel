@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Sun Mar 03 17:32:59 EST 2019
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Sun Mar 03 17:40:32 EST 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Command     config_clock returned 0; 0 sec.
@@ -17,7 +17,7 @@ Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/inte
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
@@ -62,7 +62,7 @@ Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Command     import_lib returned 0; 0.02 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
@@ -82,13 +82,13 @@ Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.07 sec.
+Command           ap_source returned 0; 0.08 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0.11 sec.
@@ -101,8 +101,8 @@ Command     open_platform returned 0; 0 sec.
 Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
@@ -122,8 +122,8 @@ Command       ap_source returned 0; 0 sec.
 Command     import_lib returned 0; 0.02 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
 Execute     set_part xc7k160tfbg484-1 
 Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute         get_default_platform 
@@ -145,8 +145,8 @@ Command         open_platform returned 0; 0 sec.
 Execute         import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
 Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
@@ -158,12 +158,12 @@ Execute                 source /opt/Xilinx/Vivado/2017.4/common/technology/xilin
 Command                 ap_source returned 0; 0 sec.
 Command               ap_source returned 0; 0 sec.
 Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command               ap_source returned 0; 0.01 sec.
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         import_lib returned 0; 0.01 sec.
+Command         import_lib returned 0; 0.02 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command           ap_source returned 0; 0 sec.
@@ -183,7 +183,7 @@ Execute     config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level
 Command     config_rtl returned 0; 0 sec.
 Execute     config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0 
 Command     config_interface returned 0; 0 sec.
-Command   open_solution returned 0; 0.22 sec.
+Command   open_solution returned 0; 0.24 sec.
 Execute   set_part xc7k160tfbg484-1 
 Execute     add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute       get_default_platform 
@@ -206,7 +206,7 @@ Execute       import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kint
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
@@ -222,7 +222,7 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
 Command       import_lib returned 0; 0.02 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
@@ -235,7 +235,7 @@ Command   set_part returned 0; 0.06 sec.
 Execute   create_clock -period 10 -name default 
 Command   create_clock returned 0; 0 sec.
 Execute   config_rtl -encoding onehot -reset state -reset_level high 
-Command   config_rtl returned 0; 0.01 sec.
+Command   config_rtl returned 0; 0 sec.
 Execute   config_interface -m_axi_offset off -register_io off 
 Command   config_interface returned 0; 0 sec.
 Execute   csynth_design 
@@ -254,11 +254,11 @@ Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "correlator.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E correlator.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp
-Command       clang returned 0; 0.88 sec.
+Command       clang returned 0; 0.89 sec.
 INFO: [HLS 200-0] Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp"  -o "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/useless.bc"  
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/useless.bc
-Command       clang returned 0; 1.49 sec.
+Command       clang returned 0; 1.51 sec.
 INFO: [HLS 200-0] GCC PP time: 2 seconds per iteration
 Execute       list_core -type functional_unit 
 Command       list_core returned 0; 0 sec.
@@ -274,7 +274,7 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __tmp;
-Command       cdt returned 0; 9.8 sec.
+Command       cdt returned 0; 9.83 sec.
 INFO: [HLS 200-0] Marker-Pragma convertor: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp.ap-cdt.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
 Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
@@ -289,16 +289,16 @@ Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Processing labels
 Execute       clang  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc
-Command       clang returned 0; 1.57 sec.
+Command       clang returned 0; 1.59 sec.
 Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/ve_warning.tcl 
 Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-10] Validating synthesis directives ...
 Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 495 ; free virtual = 2191
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:35 ; elapsed = 00:00:16 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 627 ; free virtual = 2349
 INFO: [HLS 200-0] Linking Release ...
 Execute       llvm-ld /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bc -hls-opt -except-internalize correlator -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
-Command       llvm-ld returned 0; 0.49 sec.
+Command       llvm-ld returned 0; 0.48 sec.
 Execute       disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
 Execute         is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.bc 
 Command         is_encrypted returned 0; 0 sec.
@@ -308,15 +308,15 @@ INFO: [HLS 200-0] Linking Debug ...
 Execute       llvm-ld /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc -hls-opt -except-internalize correlator -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g 
 Command       llvm-ld returned 0; 0.48 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 493 ; free virtual = 2193
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 628 ; free virtual = 2349
 Execute       ::config_rtl 
-Command       config_rtl returned 0; 0.01 sec.
+Command       config_rtl returned 0; 0 sec.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
 Execute         cleanup_all_models 
 Command         cleanup_all_models returned 0; 0 sec.
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform returned 0; 0.03 sec.
+Command         transform returned 0; 0.04 sec.
 Execute         llvm-ld /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lfloatconversion -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.0 
 Command         llvm-ld returned 0; 0.47 sec.
 INFO: [HLS 200-0] Running Standard Transforms...
@@ -326,15 +326,15 @@ Execute         disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlat
 Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc 
 Command           is_encrypted returned 0; 0 sec.
 Command         disassemble returned 0; 0.44 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:39 ; elapsed = 00:00:19 . Memory (MB): peak = 367.293 ; gain = 13.828 ; free physical = 479 ; free virtual = 2183
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 367.293 ; gain = 13.828 ; free physical = 613 ; free virtual = 2338
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-0] Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-Command         transform returned 0; 0.13 sec.
+Command         transform returned 0; 0.12 sec.
 INFO: [HLS 200-0] Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-Command         transform returned 0; 0.03 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:39 ; elapsed = 00:00:19 . Memory (MB): peak = 494.836 ; gain = 141.371 ; free physical = 472 ; free virtual = 2177
+Command         transform returned 0; 0.04 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 494.836 ; gain = 141.371 ; free physical = 607 ; free virtual = 2333
 INFO: [HLS 200-0] Compiler optimizing ...
 INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc to /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.bc
 INFO: [HLS 200-0] Presyn 1...
@@ -401,18 +401,18 @@ Execute         disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlat
 Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc 
 Command           is_encrypted returned 0; 0 sec.
 Command         disassemble returned 0; 0.44 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:20 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 443 ; free virtual = 2151
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:20 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 577 ; free virtual = 2307
 INFO: [HLS 200-0] Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Command         transform returned 0; 0.12 sec.
 Execute         disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 
 Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.43 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:20 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 439 ; free virtual = 2149
+Command         disassemble returned 0; 0.42 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:20 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 573 ; free virtual = 2304
 INFO: [HLS 200-0] Finish building internal data model.
-Command       opt_and_import_c returned 0; 2.63 sec.
-Command     elaborate returned 0; 19.9 sec.
+Command       opt_and_import_c returned 0; 2.62 sec.
+Command     elaborate returned 0; 19.91 sec.
 Execute     autosyn 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-0] Synthesizing C/C++ design ...
@@ -451,7 +451,7 @@ INFO: [SCHED 204-61] Pipelining function 'correlator'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule returned 0; 0.05 sec.
-INFO: [HLS 200-111]  Elapsed time: 20.49 seconds; current allocated memory: 86.451 MB.
+INFO: [HLS 200-111]  Elapsed time: 20.54 seconds; current allocated memory: 86.448 MB.
 Execute       report -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.sched.rpt -verbose -f 
 Command       report returned 0; 0.01 sec.
 Execute       db_write -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.sched.adb -f 
@@ -493,18 +493,18 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind returned 0; 0.02 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 86.860 MB.
+Command       bind returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 86.856 MB.
 Execute       report -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.bind.rpt -verbose -f 
 Command       report returned 0; 0.02 sec.
 Execute       db_write -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bind.adb -f 
-Command       db_write returned 0; 0.01 sec.
+Command       db_write returned 0; 0 sec.
 INFO: [HLS 200-0] Finish binding correlator.
 Execute       get_model_list correlator -filter all-wo-channel 
 Command       get_model_list returned 0; 0 sec.
 INFO: [HLS 200-0] Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess correlator 
-Command       rtl_gen_preprocess returned 0; 0 sec.
+Command       rtl_gen_preprocess returned 0; 0.01 sec.
 INFO: [HLS 200-0] Model list for RTL generation: correlator
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlator'
@@ -520,7 +520,7 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/phaseClass_V' t
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlator' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
 Command       create_rtl_model returned 0; 0.03 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 87.482 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 87.478 MB.
 Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       gen_rtl correlator -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/correlator -synmodules correlator 
@@ -528,19 +528,19 @@ Command       gen_rtl returned 0; 0 sec.
 Execute       gen_rtl correlator -istop -style xilinx -f -lang vhdl -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/vhdl/correlator 
 Command       gen_rtl returned 0; 0.03 sec.
 Execute       gen_rtl correlator -istop -style xilinx -f -lang vlog -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlator 
-Command       gen_rtl returned 0; 0.02 sec.
+Command       gen_rtl returned 0; 0.01 sec.
 Execute       export_constraint_db -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl -f -tool general 
 Command       export_constraint_db returned 0; 0 sec.
 Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.design.xml -verbose -f -dv 
-Command       report returned 0; 0.02 sec.
+Command       report returned 0; 0.03 sec.
 Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.sdaccel.xml -verbose -f -sdaccel 
 Command       report returned 0; 0.05 sec.
 Execute       gen_tb_info correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator -p /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db 
 Command       gen_tb_info returned 0; 0 sec.
 Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.rpt -f 
-Command       report returned 0; 0.01 sec.
-Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.xml -f -x 
 Command       report returned 0; 0.02 sec.
+Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.xml -f -x 
+Command       report returned 0; 0.01 sec.
 Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.rpt -verbose -f 
 Command       report returned 0; 0.04 sec.
 Execute       db_write -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.adb -f 
@@ -592,12 +592,12 @@ Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/in
 Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
 Command               ap_source returned 0; 0 sec.
 Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command               ap_source returned 0; 0 sec.
-Command             ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
@@ -606,11 +606,11 @@ Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.11 sec.
+Command           ap_source returned 0; 0.1 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Command       ap_source returned 0; 0.11 sec.
+Command         ap_source returned 0; 0.1 sec.
+Command       ap_source returned 0; 0.1 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
@@ -645,7 +645,7 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
 Command               ap_source returned 0; 0 sec.
@@ -653,22 +653,22 @@ Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/
 Command               ap_source returned 0; 0.01 sec.
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.07 sec.
+Command             ap_source returned 0; 0.08 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.11 sec.
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.1 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Command       ap_source returned 0; 0.11 sec.
+Command         ap_source returned 0; 0.1 sec.
+Command       ap_source returned 0; 0.1 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
@@ -719,12 +719,12 @@ Execute       sc_get_clocks correlator
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:00:21 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 437 ; free virtual = 2148
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:39 ; elapsed = 00:00:21 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 571 ; free virtual = 2303
 INFO: [SYSC 207-301] Generating SystemC RTL for correlator.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlator.
-Command     autosyn returned 0; 0.72 sec.
-Command   csynth_design returned 0; 20.62 sec.
-Command ap_source returned 0; 20.92 sec.
+Command     autosyn returned 0; 0.73 sec.
+Command   csynth_design returned 0; 20.64 sec.
+Command ap_source returned 0; 20.95 sec.
 Execute cleanup_all 
-Command cleanup_all returned 0; 0 sec.
+Command cleanup_all returned 0; 0.01 sec.

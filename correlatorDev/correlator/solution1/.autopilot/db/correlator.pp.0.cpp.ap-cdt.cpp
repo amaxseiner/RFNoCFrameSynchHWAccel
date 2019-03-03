@@ -29413,7 +29413,7 @@ case ST_IDLE:
   }
 #pragma empty_line
  } else {
-  currentState = ST_LOAD;
+  currentState = ST_CORRELATEl;
  }
  break;
  case ST_CORRELATEl:
@@ -29430,10 +29430,10 @@ case ST_IDLE:
     out_sample.data.range(15,0) = corHelperI.V;
 #pragma empty_line
     o_data.write(out_sample);
+    currentState = ST_LOAD;
    }
   }
 #pragma empty_line
-  currentState = ST_LOAD;
   break;
 }
 #pragma line 581 "correlator.cpp"

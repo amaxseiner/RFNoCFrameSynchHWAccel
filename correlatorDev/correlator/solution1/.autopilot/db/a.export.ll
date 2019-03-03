@@ -45,7 +45,7 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader579.preheader:
+.preheader580.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !75
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !79
@@ -84,13 +84,13 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2
   %phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2
   %phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2
-  switch i2 %currentState_load, label %._crit_edge838 [
+  switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
-    i2 -2, label %6
+    i2 -2, label %.loopexit.loopexit
   ]
 
-; <label>:0                                       ; preds = %.preheader579.preheader
+; <label>:0                                       ; preds = %.preheader580.preheader
   br i1 %start_V_read, label %1, label %._crit_edge839
 
 ; <label>:1                                       ; preds = %0
@@ -98,9 +98,9 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   br label %._crit_edge839
 
 ._crit_edge839:                                   ; preds = %1, %0
-  br label %._crit_edge838
+  br label %.loopexit
 
-; <label>:2                                       ; preds = %.preheader579.preheader
+; <label>:2                                       ; preds = %.preheader580.preheader
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
   br i1 %tmp, label %3, label %4
 
@@ -110,7 +110,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %tmp_15 = trunc i32 %tmp_data_V_3 to i16
   store i16 %tmp_15, i16* @newVal_V, align 2
   %cond = icmp eq i4 %phaseClass_V_read, 0
-  br i1 %cond, label %.preheader.0, label %.loopexit
+  br i1 %cond, label %.preheader.0, label %.loopexit437
 
 .preheader.0:                                     ; preds = %3
   store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2
@@ -130,19 +130,19 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
   store i16 %tmp_15, i16* @phaseClass0_V_0, align 16
   store i2 -2, i2* @currentState, align 1
-  br label %.loopexit
+  br label %.loopexit437
 
-.loopexit:                                        ; preds = %.preheader.0, %3
+.loopexit437:                                     ; preds = %.preheader.0, %3
   br label %5
 
 ; <label>:4                                       ; preds = %2
-  store i2 1, i2* @currentState, align 1
+  store i2 -2, i2* @currentState, align 1
   br label %5
 
-; <label>:5                                       ; preds = %4, %.loopexit
-  br label %._crit_edge838
+; <label>:5                                       ; preds = %4, %.loopexit437
+  br label %.loopexit
 
-; <label>:6                                       ; preds = %.preheader579.preheader
+.loopexit.loopexit:                               ; preds = %.preheader580.preheader
   %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2
   %Phase0_V_6_load = load i16* @Phase0_V_6, align 4
   store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2
@@ -178,9 +178,9 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %tmp_data_V = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_3_s, i32 0, i32 15)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 undef)
   store i2 1, i2* @currentState, align 1
-  br label %._crit_edge838
+  br label %.loopexit
 
-._crit_edge838:                                   ; preds = %6, %5, %._crit_edge839, %.preheader579.preheader
+.loopexit:                                        ; preds = %.loopexit.loopexit, %5, %._crit_edge839, %.preheader580.preheader
   ret void
 }
 

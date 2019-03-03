@@ -49,7 +49,7 @@ declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 ; [#uses=0]
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader579.preheader:
+.preheader580.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !71
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !75
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !79
@@ -92,13 +92,13 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2, !dbg !2135 ; [#uses=2 type=i16] [debug line = 388:5@226:2]
   %phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2, !dbg !2135 ; [#uses=2 type=i16] [debug line = 388:5@226:2]
   %phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2, !dbg !2135 ; [#uses=2 type=i16] [debug line = 388:5@226:2]
-  switch i2 %currentState_load, label %._crit_edge838 [
+  switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
-    i2 -2, label %6
+    i2 -2, label %.loopexit.loopexit
   ], !dbg !3325                                   ; [debug line = 206:1]
 
-; <label>:0                                       ; preds = %.preheader579.preheader
+; <label>:0                                       ; preds = %.preheader580.preheader
   br i1 %start_V_read, label %1, label %._crit_edge839, !dbg !3326 ; [debug line = 208:5]
 
 ; <label>:1                                       ; preds = %0
@@ -106,9 +106,9 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   br label %._crit_edge839, !dbg !3329            ; [debug line = 210:2]
 
 ._crit_edge839:                                   ; preds = %1, %0
-  br label %._crit_edge838, !dbg !3330            ; [debug line = 211:2]
+  br label %.loopexit, !dbg !3330                 ; [debug line = 211:2]
 
-; <label>:2                                       ; preds = %.preheader579.preheader
+; <label>:2                                       ; preds = %.preheader580.preheader
   call void @llvm.dbg.value(metadata !{i32* %i_data_V_data_V}, i64 0, metadata !3331), !dbg !3336 ; [debug line = 112:48@213:6] [debug variable = stream<rfnoc_axis>.V.data.V]
   call void @llvm.dbg.value(metadata !{i1* %i_data_V_last_V}, i64 0, metadata !3338), !dbg !3336 ; [debug line = 112:48@213:6] [debug variable = stream<rfnoc_axis>.V.last.V]
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1), !dbg !3340 ; [#uses=1 type=i1] [debug line = 113:20@213:6]
@@ -125,7 +125,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %tmp_15 = trunc i32 %tmp_data_V_3 to i16, !dbg !3363 ; [#uses=2 type=i16] [debug line = 1207:91@946:12@221:14]
   store i16 %tmp_15, i16* @newVal_V, align 2, !dbg !3362 ; [debug line = 221:14]
   %cond = icmp eq i4 %phaseClass_V_read, 0, !dbg !3364 ; [#uses=1 type=i1] [debug line = 222:10]
-  br i1 %cond, label %.preheader.0, label %.loopexit, !dbg !3364 ; [debug line = 222:10]
+  br i1 %cond, label %.preheader.0, label %.loopexit437, !dbg !3364 ; [debug line = 222:10]
 
 .preheader.0:                                     ; preds = %3
   store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2, !dbg !2135 ; [debug line = 388:5@226:2]
@@ -145,19 +145,19 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2, !dbg !2135 ; [debug line = 388:5@226:2]
   store i16 %tmp_15, i16* @phaseClass0_V_0, align 16, !dbg !3365 ; [debug line = 388:5@228:6]
   store i2 -2, i2* @currentState, align 1, !dbg !3368 ; [debug line = 229:6]
-  br label %.loopexit
+  br label %.loopexit437
 
-.loopexit:                                        ; preds = %.preheader.0, %3
+.loopexit437:                                     ; preds = %.preheader.0, %3
   br label %5, !dbg !3369                         ; [debug line = 235:2]
 
 ; <label>:4                                       ; preds = %2
-  store i2 1, i2* @currentState, align 1, !dbg !3370 ; [debug line = 236:3]
+  store i2 -2, i2* @currentState, align 1, !dbg !3370 ; [debug line = 236:3]
   br label %5
 
-; <label>:5                                       ; preds = %4, %.loopexit
-  br label %._crit_edge838, !dbg !3372            ; [debug line = 238:2]
+; <label>:5                                       ; preds = %4, %.loopexit437
+  br label %.loopexit, !dbg !3372                 ; [debug line = 238:2]
 
-; <label>:6                                       ; preds = %.preheader579.preheader
+.loopexit.loopexit:                               ; preds = %.preheader580.preheader
   %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2, !dbg !3373 ; [#uses=1 type=i16] [debug line = 675:0@773:5@1400:0@244:15]
   %Phase0_V_6_load = load i16* @Phase0_V_6, align 4, !dbg !3387 ; [#uses=1 type=i16] [debug line = 388:5@247:5]
   store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2, !dbg !3387 ; [debug line = 388:5@247:5]
@@ -195,11 +195,11 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void @llvm.dbg.value(metadata !{i1* %o_data_V_last_V}, i64 0, metadata !3412), !dbg !3410 ; [debug line = 144:48@252:5] [debug variable = stream<rfnoc_axis>.V.last.V]
   call void @llvm.dbg.value(metadata !{i32 %tmp_data_V}, i64 0, metadata !3413), !dbg !3416 ; [debug line = 145:31@252:5] [debug variable = tmp.data.V]
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 undef), !dbg !3417 ; [debug line = 146:9@252:5]
-  store i2 1, i2* @currentState, align 1, !dbg !3418 ; [debug line = 256:3]
-  br label %._crit_edge838, !dbg !3419            ; [debug line = 257:3]
+  store i2 1, i2* @currentState, align 1, !dbg !3418 ; [debug line = 253:5]
+  br label %.loopexit
 
-._crit_edge838:                                   ; preds = %6, %5, %._crit_edge839, %.preheader579.preheader
-  ret void, !dbg !3420                            ; [debug line = 581:1]
+.loopexit:                                        ; preds = %.loopexit.loopexit, %5, %._crit_edge839, %.preheader580.preheader
+  ret void, !dbg !3419                            ; [debug line = 581:1]
 }
 
 ; [#uses=1]
@@ -3699,6 +3699,5 @@ entry:
 !3415 = metadata !{i32 786443, metadata !3409, i32 144, i32 79, metadata !105, i32 12} ; [ DW_TAG_lexical_block ]
 !3416 = metadata !{i32 145, i32 31, metadata !3415, metadata !3411}
 !3417 = metadata !{i32 146, i32 9, metadata !3415, metadata !3411}
-!3418 = metadata !{i32 256, i32 3, metadata !3324, null}
-!3419 = metadata !{i32 257, i32 3, metadata !3324, null}
-!3420 = metadata !{i32 581, i32 1, metadata !2122, null}
+!3418 = metadata !{i32 253, i32 5, metadata !3401, null}
+!3419 = metadata !{i32 581, i32 1, metadata !2122, null}

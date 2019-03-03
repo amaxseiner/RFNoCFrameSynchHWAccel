@@ -233,7 +233,7 @@ case ST_IDLE:
 		}
 
 	} else {
-		currentState = ST_LOAD;
+		currentState = ST_CORRELATEl;
 	}
 	break;
  case ST_CORRELATEl:
@@ -250,10 +250,10 @@ case ST_IDLE:
 				out_sample.data.range(15,0) = corHelperI.V;
 				//out_sample.last = 0;
 				o_data.write(out_sample);
+				currentState = ST_LOAD;
 			}
 		}
 
-		currentState = ST_LOAD;
 		break;
 }
 		/*case 1:

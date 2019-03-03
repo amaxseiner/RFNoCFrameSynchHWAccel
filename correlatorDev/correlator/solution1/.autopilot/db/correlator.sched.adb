@@ -2492,7 +2492,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>253</lineNumber>
 						<contextFuncName>correlator</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2507,7 +2507,7 @@
 											<first>correlator.cpp</first>
 											<second>correlator</second>
 										</first>
-										<second>256</second>
+										<second>253</second>
 									</item>
 								</second>
 							</item>
@@ -2534,27 +2534,13 @@
 						<type>0</type>
 						<id>109</id>
 						<name></name>
-						<fileName>correlator.cpp</fileName>
-						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>257</lineNumber>
-						<contextFuncName>correlator</contextFuncName>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
 						<inlineStackInfo>
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item>
-								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>correlator.cpp</first>
-											<second>correlator</second>
-										</first>
-										<second>257</second>
-									</item>
-								</second>
-							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -4281,7 +4267,7 @@
 				<Obj>
 					<type>3</type>
 					<id>73</id>
-					<name>.preheader579.preheader</name>
+					<name>.preheader580.preheader</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4322,7 +4308,7 @@
 				<Obj>
 					<type>3</type>
 					<id>110</id>
-					<name></name>
+					<name>.loopexit.loopexit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4496,7 +4482,7 @@
 				<Obj>
 					<type>3</type>
 					<id>144</id>
-					<name>.loopexit</name>
+					<name>.loopexit437</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -4612,7 +4598,7 @@
 				<Obj>
 					<type>3</type>
 					<id>155</id>
-					<name>._crit_edge838</name>
+					<name>.loopexit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -5154,7 +5140,7 @@
 			<item class_id_reference="20" object_id="_204">
 				<id>255</id>
 				<edge_type>1</edge_type>
-				<source_obj>183</source_obj>
+				<source_obj>186</source_obj>
 				<sink_obj>114</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_205">
