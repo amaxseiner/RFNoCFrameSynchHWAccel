@@ -121,7 +121,7 @@ wire   [31:0] p_Result_s_fu_520_p5;
 reg    ap_block_pp0_stage0_subdone;
 reg   [1:0] ap_phi_mux_storemerge_phi_fu_165_p4;
 wire   [1:0] ap_phi_reg_pp0_iter0_storemerge_reg_162;
-wire   [15:0] tmp_4_fu_373_p3;
+wire   [15:0] p_Val2_s_fu_373_p3;
 wire   [15:0] p_Val2_4_4_fu_355_p2;
 reg    ap_block_pp0_stage0_01001;
 wire   [15:0] tmp9_fu_319_p2;
@@ -310,7 +310,7 @@ always @ (posedge ap_clk) begin
         phaseClass0_V_0[15] <= 1'b0;
     end else begin
         if (((currentState_load_reg_537 == 2'd1) & (cond_reg_555 == 1'd1) & (tmp_reg_541 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-                        phaseClass0_V_0[15 : 5] <= tmp_4_fu_373_p3[15 : 5];
+                        phaseClass0_V_0[15 : 5] <= p_Val2_s_fu_373_p3[15 : 5];
         end
     end
 end
@@ -852,9 +852,11 @@ assign o_data_V_last_V_1_state_cmp_full = ((o_data_V_last_V_1_state != 2'd1) ? 1
 
 assign o_data_V_last_V_1_vld_out = o_data_V_last_V_1_state[1'd0];
 
-assign p_Result_s_fu_520_p5 = {{ap_const_lv32_0[31:16]}, {tmp_4_fu_373_p3}};
+assign p_Result_s_fu_520_p5 = {{ap_const_lv32_0[31:16]}, {p_Val2_s_fu_373_p3}};
 
 assign p_Val2_4_4_fu_355_p2 = (tmp4_fu_349_p2 + tmp7_fu_325_p2);
+
+assign p_Val2_s_fu_373_p3 = {{tmp_1_reg_550}, {5'd0}};
 
 assign start_V_read_read_fu_128_p2 = start_V;
 
@@ -873,8 +875,6 @@ assign tmp8_fu_313_p2 = (phaseClass0_V_2 + phaseClass0_V_1);
 assign tmp9_fu_319_p2 = (phaseClass0_V_3 + phaseClass0_V_8);
 
 assign tmp_1_fu_191_p1 = i_data_TDATA[10:0];
-
-assign tmp_4_fu_373_p3 = {{tmp_1_reg_550}, {5'd0}};
 
 assign tmp_nbreadreq_fu_134_p4 = i_data_TVALID;
 

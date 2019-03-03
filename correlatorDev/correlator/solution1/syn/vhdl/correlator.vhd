@@ -129,7 +129,7 @@ architecture behav of correlator is
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
     signal ap_phi_mux_storemerge_phi_fu_165_p4 : STD_LOGIC_VECTOR (1 downto 0);
     signal ap_phi_reg_pp0_iter0_storemerge_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
-    signal tmp_4_fu_373_p3 : STD_LOGIC_VECTOR (15 downto 0);
+    signal p_Val2_s_fu_373_p3 : STD_LOGIC_VECTOR (15 downto 0);
     signal p_Val2_4_4_fu_355_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal tmp9_fu_319_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -339,7 +339,7 @@ begin
                 phaseClass0_V_0(15) <= '0';
             else
                 if (((currentState_load_reg_537 = ap_const_lv2_1) and (cond_reg_555 = ap_const_lv1_1) and (tmp_reg_541 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                                        phaseClass0_V_0(15 downto 5) <= tmp_4_fu_373_p3(15 downto 5);
+                                        phaseClass0_V_0(15 downto 5) <= p_Val2_s_fu_373_p3(15 downto 5);
                 end if; 
             end if;
         end if;
@@ -990,8 +990,9 @@ begin
     end process;
 
     o_data_V_last_V_1_vld_out <= o_data_V_last_V_1_state(0);
-    p_Result_s_fu_520_p5 <= (ap_const_lv32_0(31 downto 16) & tmp_4_fu_373_p3);
+    p_Result_s_fu_520_p5 <= (ap_const_lv32_0(31 downto 16) & p_Val2_s_fu_373_p3);
     p_Val2_4_4_fu_355_p2 <= std_logic_vector(unsigned(tmp4_fu_349_p2) + unsigned(tmp7_fu_325_p2));
+    p_Val2_s_fu_373_p3 <= (tmp_1_reg_550 & ap_const_lv5_0);
     start_V_read_read_fu_128_p2 <= start_V;
     tmp1_fu_331_p2 <= std_logic_vector(unsigned(corHelperI_V) + unsigned(phaseClass0_V_15));
     tmp2_fu_337_p2 <= std_logic_vector(unsigned(phaseClass0_V_13) + unsigned(phaseClass0_V_0));
@@ -1001,6 +1002,5 @@ begin
     tmp8_fu_313_p2 <= std_logic_vector(unsigned(phaseClass0_V_2) + unsigned(phaseClass0_V_1));
     tmp9_fu_319_p2 <= std_logic_vector(unsigned(phaseClass0_V_3) + unsigned(phaseClass0_V_8));
     tmp_1_fu_191_p1 <= i_data_TDATA(11 - 1 downto 0);
-    tmp_4_fu_373_p3 <= (tmp_1_reg_550 & ap_const_lv5_0);
     tmp_nbreadreq_fu_134_p4 <= (0=>(i_data_TVALID), others=>'-');
 end behav;

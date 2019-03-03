@@ -29409,7 +29409,7 @@ case ST_IDLE:
    phaseClass0[0] = newVal;
 #pragma empty_line
   }
-  out_sample.data.range(15,0) = newVal.V;
+  out_sample.data.range(15,0) = newVal.range(15,0);
 #pragma empty_line
   o_data.write(out_sample);
 #pragma empty_line

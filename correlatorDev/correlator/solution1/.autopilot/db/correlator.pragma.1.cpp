@@ -29409,7 +29409,7 @@ case ST_IDLE:
    phaseClass0[0] = newVal;
 
   }
-  out_sample.data.range(15,0) = newVal.V;
+  out_sample.data.range(15,0) = newVal.range(15,0);
 
   o_data.write(out_sample);
 

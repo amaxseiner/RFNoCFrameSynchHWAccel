@@ -119,7 +119,7 @@ struct correlator : public sc_module {
     sc_signal< bool > ap_block_pp0_stage0_subdone;
     sc_signal< sc_lv<2> > ap_phi_mux_storemerge_phi_fu_165_p4;
     sc_signal< sc_lv<2> > ap_phi_reg_pp0_iter0_storemerge_reg_162;
-    sc_signal< sc_lv<16> > tmp_4_fu_373_p3;
+    sc_signal< sc_lv<16> > p_Val2_s_fu_373_p3;
     sc_signal< sc_lv<16> > p_Val2_4_4_fu_355_p2;
     sc_signal< bool > ap_block_pp0_stage0_01001;
     sc_signal< sc_lv<16> > tmp9_fu_319_p2;
@@ -202,6 +202,7 @@ struct correlator : public sc_module {
     void thread_o_data_V_last_V_1_vld_out();
     void thread_p_Result_s_fu_520_p5();
     void thread_p_Val2_4_4_fu_355_p2();
+    void thread_p_Val2_s_fu_373_p3();
     void thread_start_V_read_read_fu_128_p2();
     void thread_tmp1_fu_331_p2();
     void thread_tmp2_fu_337_p2();
@@ -211,7 +212,6 @@ struct correlator : public sc_module {
     void thread_tmp8_fu_313_p2();
     void thread_tmp9_fu_319_p2();
     void thread_tmp_1_fu_191_p1();
-    void thread_tmp_4_fu_373_p3();
     void thread_tmp_nbreadreq_fu_134_p4();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();

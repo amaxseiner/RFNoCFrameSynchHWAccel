@@ -238,11 +238,14 @@ correlator::correlator(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( o_data_V_last_V_1_state );
 
     SC_METHOD(thread_p_Result_s_fu_520_p5);
-    sensitive << ( tmp_4_fu_373_p3 );
+    sensitive << ( p_Val2_s_fu_373_p3 );
 
     SC_METHOD(thread_p_Val2_4_4_fu_355_p2);
     sensitive << ( tmp4_fu_349_p2 );
     sensitive << ( tmp7_fu_325_p2 );
+
+    SC_METHOD(thread_p_Val2_s_fu_373_p3);
+    sensitive << ( tmp_1_reg_550 );
 
     SC_METHOD(thread_start_V_read_read_fu_128_p2);
     sensitive << ( start_V );
@@ -279,9 +282,6 @@ correlator::correlator(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_tmp_1_fu_191_p1);
     sensitive << ( i_data_TDATA );
-
-    SC_METHOD(thread_tmp_4_fu_373_p3);
-    sensitive << ( tmp_1_reg_550 );
 
     SC_METHOD(thread_tmp_nbreadreq_fu_134_p4);
     sensitive << ( i_data_TVALID );
@@ -422,7 +422,7 @@ correlator::correlator(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_block_pp0_stage0_subdone, "ap_block_pp0_stage0_subdone");
     sc_trace(mVcdFile, ap_phi_mux_storemerge_phi_fu_165_p4, "ap_phi_mux_storemerge_phi_fu_165_p4");
     sc_trace(mVcdFile, ap_phi_reg_pp0_iter0_storemerge_reg_162, "ap_phi_reg_pp0_iter0_storemerge_reg_162");
-    sc_trace(mVcdFile, tmp_4_fu_373_p3, "tmp_4_fu_373_p3");
+    sc_trace(mVcdFile, p_Val2_s_fu_373_p3, "p_Val2_s_fu_373_p3");
     sc_trace(mVcdFile, p_Val2_4_4_fu_355_p2, "p_Val2_4_4_fu_355_p2");
     sc_trace(mVcdFile, ap_block_pp0_stage0_01001, "ap_block_pp0_stage0_01001");
     sc_trace(mVcdFile, tmp9_fu_319_p2, "tmp9_fu_319_p2");
@@ -602,7 +602,7 @@ void correlator::thread_ap_clk_no_reset_() {
              esl_seteq<1,1,1>(ap_const_lv1_1, tmp_reg_541.read()) && 
              esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
              esl_seteq<1,1,1>(ap_const_lv1_1, cond_reg_555.read()))) {
-            phaseClass0_V_0 = tmp_4_fu_373_p3.read();
+            phaseClass0_V_0 = p_Val2_s_fu_373_p3.read();
         }
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
@@ -1086,11 +1086,15 @@ void correlator::thread_o_data_V_last_V_1_vld_out() {
 }
 
 void correlator::thread_p_Result_s_fu_520_p5() {
-    p_Result_s_fu_520_p5 = esl_partset<32,32,16,32,32>(ap_const_lv32_0, tmp_4_fu_373_p3.read(), ap_const_lv32_0, ap_const_lv32_F);
+    p_Result_s_fu_520_p5 = esl_partset<32,32,16,32,32>(ap_const_lv32_0, p_Val2_s_fu_373_p3.read(), ap_const_lv32_0, ap_const_lv32_F);
 }
 
 void correlator::thread_p_Val2_4_4_fu_355_p2() {
     p_Val2_4_4_fu_355_p2 = (!tmp4_fu_349_p2.read().is_01() || !tmp7_fu_325_p2.read().is_01())? sc_lv<16>(): (sc_biguint<16>(tmp4_fu_349_p2.read()) + sc_biguint<16>(tmp7_fu_325_p2.read()));
+}
+
+void correlator::thread_p_Val2_s_fu_373_p3() {
+    p_Val2_s_fu_373_p3 = esl_concat<11,5>(tmp_1_reg_550.read(), ap_const_lv5_0);
 }
 
 void correlator::thread_start_V_read_read_fu_128_p2() {
@@ -1127,10 +1131,6 @@ void correlator::thread_tmp9_fu_319_p2() {
 
 void correlator::thread_tmp_1_fu_191_p1() {
     tmp_1_fu_191_p1 = i_data_TDATA.read().range(11-1, 0);
-}
-
-void correlator::thread_tmp_4_fu_373_p3() {
-    tmp_4_fu_373_p3 = esl_concat<11,5>(tmp_1_reg_550.read(), ap_const_lv5_0);
 }
 
 void correlator::thread_tmp_nbreadreq_fu_134_p4() {
