@@ -222,8 +222,8 @@
           "Estimate": "6.16"
         },
         "Area": {
-          "FF": "3604",
-          "LUT": "4388",
+          "FF": "3638",
+          "LUT": "4461",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -231,7 +231,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-02 14:46:47 EST",
+    "Time": "2019-03-03 13:58:50 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

@@ -167,7 +167,6 @@ static ap_fixed<16,11> newVal;
 //static ap_uint<4> phaseClass;
 //#pragma HLS RESET variable=phaseClass
 
-
 static ap_uint<1> phaseClassValid[windowSize];
 #pragma HLS ARRAY_PARTITION variable=phaseClassValid complete dim=1
 #pragma HLS RESET variable=phaseClassValid
@@ -405,9 +404,10 @@ case ST_CORRELATE:
 			currentState = ST_LOAD;
 		break;
 	 case ST_LOAD: // whenever there is valid input data, shift it in
-		if(!i_data.empty()){
+		//if(!i_data.empty()){
 			i_data.read(tmp_data);
-			out_sample.data = tmp_data.data;
+			out_sample.data.range(31,0) = tmp_data.data.range(31,0);
+			out_sample.last = tmp_data.last;
 			o_data.write(out_sample);
 			//if(!phaseClassIn.empty())
 				//phaseClassIn.read(phaseClass);
@@ -547,7 +547,7 @@ case ST_CORRELATE:
 			}
 			loadCount= loadCount + 1;
 			corState = ST_CORRELATE;
-		}
+		//}
 		currentState = ST_LOAD;
 		break;
 	}

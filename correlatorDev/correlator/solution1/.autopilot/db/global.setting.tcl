@@ -11,7 +11,7 @@ set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
 set FftOrFirFlag 0
-set NbRWValue 1
+set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 0

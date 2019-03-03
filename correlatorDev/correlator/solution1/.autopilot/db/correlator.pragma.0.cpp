@@ -29347,7 +29347,6 @@ static ap_fixed<16,11> newVal;
 
 
 
-
 static ap_uint<1> phaseClassValid[16];
 #pragma HLS ARRAY_PARTITION variable=phaseClassValid complete dim=1
 #pragma HLS RESET variable=phaseClassValid
@@ -29585,9 +29584,10 @@ case ST_CORRELATE:
    currentState = ST_LOAD;
   break;
   case ST_LOAD:
-  if(!i_data.empty()){
+
    i_data.read(tmp_data);
-   out_sample.data = tmp_data.data;
+   out_sample.data.range(31,0) = tmp_data.data.range(31,0);
+   out_sample.last = tmp_data.last;
    o_data.write(out_sample);
 
 
@@ -29727,7 +29727,7 @@ case ST_CORRELATE:
    }
    loadCount= loadCount + 1;
    corState = ST_CORRELATE;
-  }
+
   currentState = ST_LOAD;
   break;
  }

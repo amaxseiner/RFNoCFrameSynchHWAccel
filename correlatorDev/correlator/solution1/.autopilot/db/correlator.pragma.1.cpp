@@ -29347,7 +29347,6 @@ _ssdm_op_SpecReset( &newVal, 1,  "");
 
 
 
-
 static ap_uint<1> phaseClassValid[16];
 _ssdm_SpecArrayPartition( phaseClassValid, 1, "COMPLETE", 0, "");
 _ssdm_op_SpecReset( phaseClassValid, 1,  "");
@@ -29585,9 +29584,10 @@ _ssdm_Unroll(0,0,0, "");
    currentState = ST_LOAD;
   break;
   case ST_LOAD:
-  if(!i_data.empty()){
+
    i_data.read(tmp_data);
-   out_sample.data = tmp_data.data;
+   out_sample.data.range(31,0) = tmp_data.data.range(31,0);
+   out_sample.last = tmp_data.last;
    o_data.write(out_sample);
 
 
@@ -29727,7 +29727,7 @@ _ssdm_Unroll(0,0,0, "");
    }
    loadCount= loadCount + 1;
    corState = ST_CORRELATE;
-  }
+
   currentState = ST_LOAD;
   break;
  }

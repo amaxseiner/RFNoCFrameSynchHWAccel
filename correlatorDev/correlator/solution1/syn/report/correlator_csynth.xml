@@ -34,8 +34,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>3604</FF>
-<LUT>4388</LUT>
+<FF>3638</FF>
+<LUT>4461</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -76,7 +76,7 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
@@ -88,7 +88,7 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
@@ -100,7 +100,7 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
@@ -112,7 +112,7 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>data</Attribute>
