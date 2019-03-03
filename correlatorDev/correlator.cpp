@@ -223,7 +223,7 @@ case ST_IDLE:
 			//phaseClassIn.read(phaseClass);
 		//newVal.q = tmp_data.data.range(31,16); // IM
 		newVal.V = tmp_data.data.range(15,0); // RE
-
+		corHelperI = 0;
 		switch(phaseClass){
 		case 0:
 			SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
@@ -232,7 +232,7 @@ case ST_IDLE:
 			}
 			phaseClass0[0] = newVal;
 			//phaseClassValid[phaseClass] = 1;
-			corHelperI = 0;
+
 			correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)
@@ -246,7 +246,7 @@ case ST_IDLE:
 			//out_sample.last = 0;
 			o_data.write(out_sample);
 			break;
-		case 1:
+		/*case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
 				#pragma HLS UNROLL
 				phaseClass1[a] = phaseClass1[a-1];
@@ -368,7 +368,7 @@ case ST_IDLE:
 			phaseClass15[0] = newVal;
 			phaseClassValid[phaseClass] = 1;
 			break;
-		}
+		}*/
 		loadCount= loadCount + 1;
 		corState = ST_CORRELATE;
 	}
@@ -572,6 +572,6 @@ case ST_IDLE:
 			}
 			Phase15[0] = corHelperI;
 			break;
-		}
-	}*/
+		}*/
+	}
 }
