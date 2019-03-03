@@ -29514,7 +29514,7 @@ _ssdm_op_SpecReset( &corHelperI, 1, "");
 _ssdm_op_SpecReset( &corHelperQ, 1, "");
 
 
- enum loadState {ST_IDLE = 0, ST_LOAD };
+ enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
   static loadState currentState;
 _ssdm_op_SpecReset( currentState, 1, "");
 
@@ -29548,26 +29548,27 @@ _ssdm_Unroll(0,0,0, "");
    phaseClass0[0] = newVal;
 
 
-   correlateData0: for(int a =16 -1;a>=0;a--){
+
+  }
+  loadCount= loadCount + 1;
+  currentState = ST_CORRELATEl;
+ }
+ break;
+ case ST_CORRELATEl:
+  correlateData0: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass0[a]);
+    corHelperI = corHelperI + (phaseClass0[a]);
 
-    if(a>0)
-     Phase0[a] = Phase0[a-1];
-   }
-   Phase0[0] = corHelperI;
-   out_sample.data.range(15,0) = corHelperI.V;
+   if(a>0)
+    Phase0[a] = Phase0[a-1];
+  }
+  Phase0[0] = corHelperI;
+  out_sample.data.range(15,0) = corHelperI.V;
 
-   o_data.write(out_sample);
-   break;
-# 372 "correlator.cpp"
- loadCount= loadCount + 1;
-  corState = ST_CORRELATE;
- }
- currentState = ST_LOAD;
- break;
+  o_data.write(out_sample);
+  currentState = ST_LOAD;
+  break;
 }
-# 576 "correlator.cpp"
- }
+# 580 "correlator.cpp"
 }

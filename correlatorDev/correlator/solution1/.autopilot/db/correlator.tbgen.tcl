@@ -84,22 +84,25 @@ set RtlHierarchyInfo {[
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_11", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_8", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "corHelperI_V", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "Phase0_V_5", "Type" : "OVld", "Direction" : "IO"},
@@ -107,8 +110,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "Phase0_V_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "Phase0_V_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "corHelperI_V", "Type" : "Vld", "Direction" : "O"}]}]}
+			{"Name" : "Phase0_V_0", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -120,22 +122,25 @@ set ArgLastReadFirstWriteLatency {
 		start_V {Type I LastRead 0 FirstWrite -1}
 		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
-		newVal_V {Type O LastRead -1 FirstWrite -1}
-		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_11 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_9 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_8 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_7 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
-		phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_3 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
+		newVal_V {Type O LastRead -1 FirstWrite -1}
+		corHelperI_V {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_11 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_9 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_7 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
+		phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
+		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_6 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_7 {Type O LastRead -1 FirstWrite -1}
 		Phase0_V_5 {Type IO LastRead -1 FirstWrite -1}
@@ -143,8 +148,7 @@ set ArgLastReadFirstWriteLatency {
 		Phase0_V_3 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_1 {Type IO LastRead -1 FirstWrite -1}
-		Phase0_V_0 {Type IO LastRead -1 FirstWrite -1}
-		corHelperI_V {Type O LastRead -1 FirstWrite -1}}}
+		Phase0_V_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

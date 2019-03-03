@@ -199,7 +199,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 #pragma HLS RESET variable=corHelperQ
 
 // may add load state later, not neccessary right now
-  enum loadState {ST_IDLE = 0, ST_LOAD };
+  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 
@@ -233,19 +233,28 @@ case ST_IDLE:
 			phaseClass0[0] = newVal;
 			//phaseClassValid[phaseClass] = 1;
 
-			correlateData0: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-				if(corrSeq[a]>0)
-					corHelperI = corHelperI + (phaseClass0[a]);
-				//corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
-				if(a>0)
-					Phase0[a] = Phase0[a-1];
-			}
-			Phase0[0] = corHelperI;
-			out_sample.data.range(15,0) = corHelperI.V;
-			//out_sample.last = 0;
-			o_data.write(out_sample);
-			break;
+
+		}
+		loadCount= loadCount + 1;
+		currentState = ST_CORRELATEl;
+	}
+	break;
+ case ST_CORRELATEl:
+		correlateData0: for(int a =windowSize-1;a>=0;a--){
+		#pragma HLS UNROLL
+			if(corrSeq[a]>0)
+				corHelperI = corHelperI + (phaseClass0[a]);
+			//corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+			if(a>0)
+				Phase0[a] = Phase0[a-1];
+		}
+		Phase0[0] = corHelperI;
+		out_sample.data.range(15,0) = corHelperI.V;
+		//out_sample.last = 0;
+		o_data.write(out_sample);
+		currentState = ST_LOAD;
+		break;
+}
 		/*case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
 				#pragma HLS UNROLL
@@ -369,12 +378,7 @@ case ST_IDLE:
 			phaseClassValid[phaseClass] = 1;
 			break;
 		}*/
-		loadCount= loadCount + 1;
-		corState = ST_CORRELATE;
-	}
-	currentState = ST_LOAD;
-	break;
-}
+
 
 /*
 	switch(corState){
@@ -573,5 +577,4 @@ case ST_IDLE:
 			Phase15[0] = corHelperI;
 			break;
 		}*/
-	}
 }
