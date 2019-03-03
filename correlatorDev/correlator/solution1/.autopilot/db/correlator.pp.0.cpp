@@ -29378,7 +29378,7 @@ case ST_IDLE:
 
 
 
-  newVal.V = tmp_data.data.range(15,0);
+  newVal = tmp_data.data.range(15,0);
   corHelperI = 0;
   switch(phaseClass){
   case 0:

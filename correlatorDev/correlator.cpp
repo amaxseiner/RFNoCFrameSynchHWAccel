@@ -218,7 +218,7 @@ case ST_IDLE:
 		//if(!phaseClassIn.empty())
 			//phaseClassIn.read(phaseClass);
 		//newVal.q = tmp_data.data.range(31,16); // IM
-		newVal.V = tmp_data.data.range(15,0); // RE
+		newVal = tmp_data.data.range(15,0); // RE
 		corHelperI = 0;
 		switch(phaseClass){
 		case 0:
