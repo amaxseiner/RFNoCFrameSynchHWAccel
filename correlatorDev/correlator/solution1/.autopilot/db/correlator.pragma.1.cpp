@@ -29386,172 +29386,172 @@ _ssdm_op_SpecReset( currentState, 1,  "");
 
 
 
- switch(currentState) {
- case ST_IDLE:
-  if(start){
-   currentState = ST_LOAD;
-   corState = ST_WAIT;
-  }
-  break;
-  case ST_LOAD:
-  if(!i_data.empty()){
-   i_data.read(tmp_data);
+switch(currentState) {
+case ST_IDLE:
+ if(start){
+  currentState = ST_LOAD;
+  corState = ST_WAIT;
+ }
+ break;
+ case ST_LOAD:
+ if(!i_data.empty()){
+  i_data.read(tmp_data);
+
+  out_sample.last = tmp_data.last;
 
 
 
 
+  newVal.V = tmp_data.data.range(15,0);
 
-
-   newVal.V = tmp_data.data.range(15,0);
-
-   switch(phaseClass){
-   case 0:
-    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
+  switch(phaseClass){
+  case 0:
+   SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
-    }
-    phaseClass0[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 1:
-    SHIFT_DATA1: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass0[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 1:
+   SHIFT_DATA1: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass1[a] = phaseClass1[a-1];
-    }
-    phaseClass1[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 2:
-    SHIFT_DATA2: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass1[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 2:
+   SHIFT_DATA2: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass2[a] = phaseClass2[a-1];
-    }
-    phaseClass2[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
+   }
+   phaseClass2[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
 
-    break;
-   case 3:
-    SHIFT_DATA3: for(int a =16 -1;a>0;a--){
+   break;
+  case 3:
+   SHIFT_DATA3: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass3[a] = phaseClass3[a-1];
-    }
-    phaseClass3[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 4:
-    SHIFT_DATA4: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass3[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 4:
+   SHIFT_DATA4: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass4[a] = phaseClass4[a-1];
-    }
-    phaseClass4[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 5:
-    SHIFT_DATA5: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass4[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 5:
+   SHIFT_DATA5: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass5[a] = phaseClass5[a-1];
-    }
-    phaseClass5[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 6:
-    SHIFT_DATA6: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass5[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 6:
+   SHIFT_DATA6: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass6[a] = phaseClass6[a-1];
-    }
-    phaseClass6[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 7:
-    SHIFT_DATA7: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass6[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 7:
+   SHIFT_DATA7: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass7[a] = phaseClass7[a-1];
-    }
-    phaseClass7[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 8:
-    SHIFT_DATA8: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass7[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 8:
+   SHIFT_DATA8: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass8[a] = phaseClass8[a-1];
-    }
-    phaseClass8[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 9:
-    SHIFT_DATA9: for(int a=16 -1;a>0;a--){
+   }
+   phaseClass8[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 9:
+   SHIFT_DATA9: for(int a=16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass9[a] = phaseClass9[a-1];
-    }
-    phaseClass9[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 10:
-    SHIFT_DATA10: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass9[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 10:
+   SHIFT_DATA10: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass10[a] = phaseClass10[a-1];
-    }
-    phaseClass10[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 11:
-    SHIFT_DATA11: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass10[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 11:
+   SHIFT_DATA11: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass11[a] = phaseClass11[a-1];
-    }
-    phaseClass11[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 12:
-    SHIFT_DATA12: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass11[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 12:
+   SHIFT_DATA12: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass12[a] = phaseClass12[a-1];
-    }
-    phaseClass12[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 13:
-    SHIFT_DATA13: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass12[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 13:
+   SHIFT_DATA13: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass13[a] = phaseClass13[a-1];
-    }
-    phaseClass13[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 14:
-    SHIFT_DATA14: for(int a =16 -1;a>0;a--){
+   }
+   phaseClass13[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 14:
+   SHIFT_DATA14: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass14[a] = phaseClass14[a-1];
-    }
-    phaseClass14[0] = newVal;
+   }
+   phaseClass14[0] = newVal;
 
-    phaseClassValid[phaseClass] = 1;
-    break;
-   case 15:
-    SHIFT_DATA15: for(int a =16 -1;a>0;a--){
+   phaseClassValid[phaseClass] = 1;
+   break;
+  case 15:
+   SHIFT_DATA15: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass15[a] = phaseClass15[a-1];
-    }
-    phaseClass15[0] = newVal;
-    phaseClassValid[phaseClass] = 1;
-    break;
    }
-   loadCount= loadCount + 1;
-   corState = ST_CORRELATE;
+   phaseClass15[0] = newVal;
+   phaseClassValid[phaseClass] = 1;
+   break;
   }
-  currentState = ST_LOAD;
-  break;
+  loadCount= loadCount + 1;
+  corState = ST_CORRELATE;
  }
+ currentState = ST_LOAD;
+ break;
+}
 
 
  switch(corState){
-case ST_WAIT:
- corState = ST_WAIT;
- out_sample.data = 1;
- out_sample.last = 0;
- o_data.write(out_sample);
- break;
-case ST_CORRELATE:
+ case ST_WAIT:
+  corState = ST_WAIT;
+  out_sample.data.range(3,0) = phaseClass;
+
+  o_data.write(out_sample);
+  break;
+ case ST_CORRELATE:
 
 
   switch(phaseClass){
@@ -29739,7 +29739,6 @@ _ssdm_Unroll(0,0,0, "");
    }
    Phase15[0] = corHelperI;
    break;
+  }
  }
-}
-
 }
