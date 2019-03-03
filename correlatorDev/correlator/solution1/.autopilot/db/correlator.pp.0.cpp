@@ -29576,7 +29576,7 @@ case ST_CORRELATE:
 
 
 
-   newVal = tmp_data.data.range(15,0);
+   newVal.V = tmp_data.data.range(15,0);
 
    switch(phaseClass){
    case 0:

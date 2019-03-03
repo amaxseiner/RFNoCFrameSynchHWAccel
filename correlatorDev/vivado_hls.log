@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sun Mar 03 14:38:39 EST 2019
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-45-generic) on Sun Mar 03 14:41:57 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev'
 INFO: [HLS 200-10] Opening project '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator'.
@@ -10,12 +10,12 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:19 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 583 ; free virtual = 2277
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 555 ; free virtual = 2276
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:41 ; elapsed = 00:00:19 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 454 ; free virtual = 2174
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:21 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 438 ; free virtual = 2168
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 367.344 ; gain = 13.879 ; free physical = 556 ; free virtual = 2259
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 367.301 ; gain = 13.832 ; free physical = 424 ; free virtual = 2153
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 495.312 ; gain = 141.848 ; free physical = 543 ; free virtual = 2253
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 495.262 ; gain = 141.793 ; free physical = 411 ; free virtual = 2146
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlator' (correlator.cpp:9).
 INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:217) in function 'correlator' completely.
 INFO: [XFORM 203-501] Unrolling loop 'correlateData1' (correlator.cpp:233) in function 'correlator' completely.
@@ -100,8 +100,8 @@ INFO: [XFORM 203-101] Partitioning array 'Phase15.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'phaseClassValid.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
 INFO: [XFORM 203-11] Balancing expressions in function 'correlator' (correlator.cpp:9)...240 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:25 . Memory (MB): peak = 495.312 ; gain = 141.848 ; free physical = 509 ; free virtual = 2230
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:26 . Memory (MB): peak = 558.836 ; gain = 205.371 ; free physical = 442 ; free virtual = 2163
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:00:25 . Memory (MB): peak = 495.262 ; gain = 141.793 ; free physical = 372 ; free virtual = 2108
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:00:27 . Memory (MB): peak = 558.840 ; gain = 205.371 ; free physical = 298 ; free virtual = 2034
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'correlator' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -111,13 +111,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'correlator'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 27.16 seconds; current allocated memory: 179.667 MB.
+INFO: [HLS 200-111]  Elapsed time: 27.38 seconds; current allocated memory: 177.660 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 183.595 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 181.578 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlator'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -130,9 +130,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/start_V' to 'ap
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/phaseClass_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlator' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
-INFO: [HLS 200-111]  Elapsed time: 0.74 seconds; current allocated memory: 188.546 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:51 ; elapsed = 00:00:31 . Memory (MB): peak = 622.836 ; gain = 269.371 ; free physical = 402 ; free virtual = 2127
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 186.522 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:32 . Memory (MB): peak = 622.840 ; gain = 269.371 ; free physical = 267 ; free virtual = 2026
 INFO: [SYSC 207-301] Generating SystemC RTL for correlator.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlator.
-INFO: [HLS 200-112] Total elapsed time: 31.42 seconds; peak allocated memory: 188.546 MB.
+INFO: [HLS 200-112] Total elapsed time: 31.59 seconds; peak allocated memory: 186.522 MB.

@@ -29576,7 +29576,7 @@ case ST_CORRELATE:
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-   newVal = tmp_data.data.range(15,0);
+   newVal.V = tmp_data.data.range(15,0);
 #pragma empty_line
    switch(phaseClass){
    case 0:

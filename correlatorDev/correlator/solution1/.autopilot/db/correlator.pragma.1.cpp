@@ -29596,7 +29596,7 @@ _ssdm_Unroll(0,0,0, "");
 
 
 
-   newVal = tmp_data.data.range(15,0);
+   newVal.V = tmp_data.data.range(15,0);
 
    switch(phaseClass){
    case 0:
