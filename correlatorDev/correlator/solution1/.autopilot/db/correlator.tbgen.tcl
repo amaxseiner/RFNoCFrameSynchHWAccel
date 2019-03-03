@@ -100,7 +100,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "corHelperI_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "Phase0_V_5", "Type" : "OVld", "Direction" : "IO"},
@@ -109,6 +108,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "Phase0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "corHelperI_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass1_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass1_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass1_V_5", "Type" : "OVld", "Direction" : "IO"},
@@ -272,7 +272,6 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
-		corHelperI_V {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_6 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_7 {Type O LastRead -1 FirstWrite -1}
 		Phase0_V_5 {Type IO LastRead -1 FirstWrite -1}
@@ -281,6 +280,7 @@ set ArgLastReadFirstWriteLatency {
 		Phase0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_1 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_0 {Type IO LastRead -1 FirstWrite -1}
+		corHelperI_V {Type O LastRead -1 FirstWrite -1}
 		phaseClass1_V_6 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass1_V_7 {Type O LastRead -1 FirstWrite -1}
 		phaseClass1_V_5 {Type IO LastRead -1 FirstWrite -1}

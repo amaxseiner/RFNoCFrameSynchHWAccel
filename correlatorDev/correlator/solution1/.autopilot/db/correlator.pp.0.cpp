@@ -29392,6 +29392,7 @@ case ST_IDLE:
    }
    phaseClass0[0] = newVal;
 
+   corHelperI = 0;
    correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a]>0)
@@ -29534,5 +29535,5 @@ case ST_IDLE:
  currentState = ST_LOAD;
  break;
 }
-# 576 "correlator.cpp"
+# 577 "correlator.cpp"
 }

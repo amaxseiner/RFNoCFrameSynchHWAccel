@@ -232,6 +232,7 @@ case ST_IDLE:
 			}
 			phaseClass0[0] = newVal;
 			//phaseClassValid[phaseClass] = 1;
+			corHelperI = 0;
 			correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 				if(corrSeq[a]>0)

@@ -29412,6 +29412,7 @@ _ssdm_Unroll(0,0,0, "");
    }
    phaseClass0[0] = newVal;
 
+   corHelperI = 0;
    correlateData0: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
@@ -29554,5 +29555,5 @@ _ssdm_Unroll(0,0,0, "");
  currentState = ST_LOAD;
  break;
 }
-#576 "correlator.cpp"
+#577 "correlator.cpp"
 }

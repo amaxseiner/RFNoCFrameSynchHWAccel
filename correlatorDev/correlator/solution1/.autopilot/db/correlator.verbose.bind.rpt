@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Sun Mar  3 15:42:16 2019
+* Date:           Sun Mar  3 15:48:22 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      7.63|        1.25|
+    |ap_clk  |  10.00|      6.58|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -87,291 +87,291 @@ ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phaseClass_V_read = call i4 @_ssdm_
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1" [correlator.cpp:204]
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %2, label %0" [correlator.cpp:209]
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge1060" [correlator.cpp:211]
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge1073" [correlator.cpp:211]
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:212]
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)" [correlator.cpp:217]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %tmp, label %3, label %._crit_edge1061" [correlator.cpp:217]
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %tmp, label %3, label %._crit_edge1074" [correlator.cpp:217]
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [correlator.cpp:218]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [correlator.cpp:218]
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [correlator.cpp:218]
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %tmp_data_V_1 to i16" [correlator.cpp:225]
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @newVal_V, align 2" [correlator.cpp:225]
-ST_1 : Operation 17 [1/1] (1.15ns)   --->   "switch i4 %phaseClass_V_read, label %._crit_edge1062 [
-    i4 0, label %.preheader658.0
-    i4 1, label %.preheader657.0
-    i4 2, label %.preheader656.0
-    i4 3, label %.preheader655.0
-    i4 4, label %.preheader654.0
-    i4 5, label %.preheader653.0
-    i4 6, label %.preheader652.0
-    i4 7, label %.preheader651.0
-    i4 -8, label %.preheader650.0
-    i4 -7, label %.preheader649.0
-    i4 -6, label %.preheader648.0
-    i4 -5, label %.preheader647.0
-    i4 -4, label %.preheader646.0
-    i4 -3, label %.preheader645.0
-    i4 -2, label %.preheader644.0
+ST_1 : Operation 17 [1/1] (1.15ns)   --->   "switch i4 %phaseClass_V_read, label %._crit_edge1075 [
+    i4 0, label %.preheader671.0
+    i4 1, label %.preheader670.0
+    i4 2, label %.preheader669.0
+    i4 3, label %.preheader668.0
+    i4 4, label %.preheader667.0
+    i4 5, label %.preheader666.0
+    i4 6, label %.preheader665.0
+    i4 7, label %.preheader664.0
+    i4 -8, label %.preheader663.0
+    i4 -7, label %.preheader662.0
+    i4 -6, label %.preheader661.0
+    i4 -5, label %.preheader660.0
+    i4 -4, label %.preheader659.0
+    i4 -3, label %.preheader658.0
+    i4 -2, label %.preheader657.0
     i4 -1, label %.preheader.0
   ]" [correlator.cpp:227]
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_15, align 1" [correlator.cpp:368]
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_14, align 1" [correlator.cpp:360]
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_13, align 1" [correlator.cpp:351]
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_12, align 1" [correlator.cpp:343]
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_11, align 1" [correlator.cpp:335]
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_10, align 1" [correlator.cpp:327]
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_9, align 1" [correlator.cpp:319]
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_8, align 1" [correlator.cpp:311]
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_7, align 1" [correlator.cpp:303]
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_6, align 1" [correlator.cpp:295]
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_5, align 1" [correlator.cpp:287]
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_4, align 1" [correlator.cpp:279]
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_3, align 1" [correlator.cpp:271]
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_2, align 1" [correlator.cpp:262]
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_1, align 1" [correlator.cpp:254]
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:374]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_15, align 1" [correlator.cpp:369]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_14, align 1" [correlator.cpp:361]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_13, align 1" [correlator.cpp:352]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_12, align 1" [correlator.cpp:344]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_11, align 1" [correlator.cpp:336]
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_10, align 1" [correlator.cpp:328]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_9, align 1" [correlator.cpp:320]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_8, align 1" [correlator.cpp:312]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_7, align 1" [correlator.cpp:304]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_6, align 1" [correlator.cpp:296]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_5, align 1" [correlator.cpp:288]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_4, align 1" [correlator.cpp:280]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_3, align 1" [correlator.cpp:272]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_2, align 1" [correlator.cpp:263]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "store i1 true, i1* @phaseClassValid_V_1, align 1" [correlator.cpp:255]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:375]
 
- <State 2> : 7.63ns
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%phaseClass15_V_6_loa = load i16* @phaseClass15_V_6, align 4" [correlator.cpp:365]
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_6_loa, i16* @phaseClass15_V_7, align 2" [correlator.cpp:365]
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%phaseClass15_V_5_loa = load i16* @phaseClass15_V_5, align 2" [correlator.cpp:365]
-ST_2 : Operation 37 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_5_loa, i16* @phaseClass15_V_6, align 4" [correlator.cpp:365]
-ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%phaseClass15_V_4_loa = load i16* @phaseClass15_V_4, align 8" [correlator.cpp:365]
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_4_loa, i16* @phaseClass15_V_5, align 2" [correlator.cpp:365]
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%phaseClass15_V_3_loa = load i16* @phaseClass15_V_3, align 2" [correlator.cpp:365]
-ST_2 : Operation 41 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_3_loa, i16* @phaseClass15_V_4, align 8" [correlator.cpp:365]
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%phaseClass15_V_2_loa = load i16* @phaseClass15_V_2, align 4" [correlator.cpp:365]
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_2_loa, i16* @phaseClass15_V_3, align 2" [correlator.cpp:365]
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%phaseClass15_V_1_loa = load i16* @phaseClass15_V_1, align 2" [correlator.cpp:365]
-ST_2 : Operation 45 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_1_loa, i16* @phaseClass15_V_2, align 4" [correlator.cpp:365]
-ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%phaseClass15_V_0_loa = load i16* @phaseClass15_V_0, align 16" [correlator.cpp:365]
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_0_loa, i16* @phaseClass15_V_1, align 2" [correlator.cpp:365]
-ST_2 : Operation 48 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass15_V_0, align 16" [correlator.cpp:367]
-ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:369]
-ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%phaseClass14_V_6_loa = load i16* @phaseClass14_V_6, align 4" [correlator.cpp:356]
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_6_loa, i16* @phaseClass14_V_7, align 2" [correlator.cpp:356]
-ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%phaseClass14_V_5_loa = load i16* @phaseClass14_V_5, align 2" [correlator.cpp:356]
-ST_2 : Operation 53 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_5_loa, i16* @phaseClass14_V_6, align 4" [correlator.cpp:356]
-ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%phaseClass14_V_4_loa = load i16* @phaseClass14_V_4, align 8" [correlator.cpp:356]
-ST_2 : Operation 55 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_4_loa, i16* @phaseClass14_V_5, align 2" [correlator.cpp:356]
-ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%phaseClass14_V_3_loa = load i16* @phaseClass14_V_3, align 2" [correlator.cpp:356]
-ST_2 : Operation 57 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_3_loa, i16* @phaseClass14_V_4, align 8" [correlator.cpp:356]
-ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%phaseClass14_V_2_loa = load i16* @phaseClass14_V_2, align 4" [correlator.cpp:356]
-ST_2 : Operation 59 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_2_loa, i16* @phaseClass14_V_3, align 2" [correlator.cpp:356]
-ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%phaseClass14_V_1_loa = load i16* @phaseClass14_V_1, align 2" [correlator.cpp:356]
-ST_2 : Operation 61 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_1_loa, i16* @phaseClass14_V_2, align 4" [correlator.cpp:356]
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%phaseClass14_V_0_loa = load i16* @phaseClass14_V_0, align 16" [correlator.cpp:356]
-ST_2 : Operation 63 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_0_loa, i16* @phaseClass14_V_1, align 2" [correlator.cpp:356]
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass14_V_0, align 16" [correlator.cpp:358]
-ST_2 : Operation 65 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:361]
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%phaseClass13_V_6_loa = load i16* @phaseClass13_V_6, align 4" [correlator.cpp:348]
-ST_2 : Operation 67 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_6_loa, i16* @phaseClass13_V_7, align 2" [correlator.cpp:348]
-ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%phaseClass13_V_5_loa = load i16* @phaseClass13_V_5, align 2" [correlator.cpp:348]
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_5_loa, i16* @phaseClass13_V_6, align 4" [correlator.cpp:348]
-ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%phaseClass13_V_4_loa = load i16* @phaseClass13_V_4, align 8" [correlator.cpp:348]
-ST_2 : Operation 71 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_4_loa, i16* @phaseClass13_V_5, align 2" [correlator.cpp:348]
-ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%phaseClass13_V_3_loa = load i16* @phaseClass13_V_3, align 2" [correlator.cpp:348]
-ST_2 : Operation 73 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_3_loa, i16* @phaseClass13_V_4, align 8" [correlator.cpp:348]
-ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%phaseClass13_V_2_loa = load i16* @phaseClass13_V_2, align 4" [correlator.cpp:348]
-ST_2 : Operation 75 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_2_loa, i16* @phaseClass13_V_3, align 2" [correlator.cpp:348]
-ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%phaseClass13_V_1_loa = load i16* @phaseClass13_V_1, align 2" [correlator.cpp:348]
-ST_2 : Operation 77 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_1_loa, i16* @phaseClass13_V_2, align 4" [correlator.cpp:348]
-ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%phaseClass13_V_0_loa = load i16* @phaseClass13_V_0, align 16" [correlator.cpp:348]
-ST_2 : Operation 79 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_0_loa, i16* @phaseClass13_V_1, align 2" [correlator.cpp:348]
-ST_2 : Operation 80 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass13_V_0, align 16" [correlator.cpp:350]
-ST_2 : Operation 81 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:352]
-ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%phaseClass12_V_6_loa = load i16* @phaseClass12_V_6, align 4" [correlator.cpp:340]
-ST_2 : Operation 83 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_6_loa, i16* @phaseClass12_V_7, align 2" [correlator.cpp:340]
-ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%phaseClass12_V_5_loa = load i16* @phaseClass12_V_5, align 2" [correlator.cpp:340]
-ST_2 : Operation 85 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_5_loa, i16* @phaseClass12_V_6, align 4" [correlator.cpp:340]
-ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%phaseClass12_V_4_loa = load i16* @phaseClass12_V_4, align 8" [correlator.cpp:340]
-ST_2 : Operation 87 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_4_loa, i16* @phaseClass12_V_5, align 2" [correlator.cpp:340]
-ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%phaseClass12_V_3_loa = load i16* @phaseClass12_V_3, align 2" [correlator.cpp:340]
-ST_2 : Operation 89 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_3_loa, i16* @phaseClass12_V_4, align 8" [correlator.cpp:340]
-ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%phaseClass12_V_2_loa = load i16* @phaseClass12_V_2, align 4" [correlator.cpp:340]
-ST_2 : Operation 91 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_2_loa, i16* @phaseClass12_V_3, align 2" [correlator.cpp:340]
-ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%phaseClass12_V_1_loa = load i16* @phaseClass12_V_1, align 2" [correlator.cpp:340]
-ST_2 : Operation 93 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_1_loa, i16* @phaseClass12_V_2, align 4" [correlator.cpp:340]
-ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%phaseClass12_V_0_loa = load i16* @phaseClass12_V_0, align 16" [correlator.cpp:340]
-ST_2 : Operation 95 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_0_loa, i16* @phaseClass12_V_1, align 2" [correlator.cpp:340]
-ST_2 : Operation 96 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass12_V_0, align 16" [correlator.cpp:342]
-ST_2 : Operation 97 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:344]
-ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%phaseClass11_V_6_loa = load i16* @phaseClass11_V_6, align 4" [correlator.cpp:332]
-ST_2 : Operation 99 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_6_loa, i16* @phaseClass11_V_7, align 2" [correlator.cpp:332]
-ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%phaseClass11_V_5_loa = load i16* @phaseClass11_V_5, align 2" [correlator.cpp:332]
-ST_2 : Operation 101 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_5_loa, i16* @phaseClass11_V_6, align 4" [correlator.cpp:332]
-ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%phaseClass11_V_4_loa = load i16* @phaseClass11_V_4, align 8" [correlator.cpp:332]
-ST_2 : Operation 103 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_4_loa, i16* @phaseClass11_V_5, align 2" [correlator.cpp:332]
-ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%phaseClass11_V_3_loa = load i16* @phaseClass11_V_3, align 2" [correlator.cpp:332]
-ST_2 : Operation 105 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_3_loa, i16* @phaseClass11_V_4, align 8" [correlator.cpp:332]
-ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%phaseClass11_V_2_loa = load i16* @phaseClass11_V_2, align 4" [correlator.cpp:332]
-ST_2 : Operation 107 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_2_loa, i16* @phaseClass11_V_3, align 2" [correlator.cpp:332]
-ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%phaseClass11_V_1_loa = load i16* @phaseClass11_V_1, align 2" [correlator.cpp:332]
-ST_2 : Operation 109 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_1_loa, i16* @phaseClass11_V_2, align 4" [correlator.cpp:332]
-ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%phaseClass11_V_0_loa = load i16* @phaseClass11_V_0, align 16" [correlator.cpp:332]
-ST_2 : Operation 111 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_0_loa, i16* @phaseClass11_V_1, align 2" [correlator.cpp:332]
-ST_2 : Operation 112 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass11_V_0, align 16" [correlator.cpp:334]
-ST_2 : Operation 113 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:336]
-ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%phaseClass10_V_6_loa = load i16* @phaseClass10_V_6, align 4" [correlator.cpp:324]
-ST_2 : Operation 115 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_6_loa, i16* @phaseClass10_V_7, align 2" [correlator.cpp:324]
-ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%phaseClass10_V_5_loa = load i16* @phaseClass10_V_5, align 2" [correlator.cpp:324]
-ST_2 : Operation 117 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_5_loa, i16* @phaseClass10_V_6, align 4" [correlator.cpp:324]
-ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%phaseClass10_V_4_loa = load i16* @phaseClass10_V_4, align 8" [correlator.cpp:324]
-ST_2 : Operation 119 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_4_loa, i16* @phaseClass10_V_5, align 2" [correlator.cpp:324]
-ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%phaseClass10_V_3_loa = load i16* @phaseClass10_V_3, align 2" [correlator.cpp:324]
-ST_2 : Operation 121 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_3_loa, i16* @phaseClass10_V_4, align 8" [correlator.cpp:324]
-ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%phaseClass10_V_2_loa = load i16* @phaseClass10_V_2, align 4" [correlator.cpp:324]
-ST_2 : Operation 123 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_2_loa, i16* @phaseClass10_V_3, align 2" [correlator.cpp:324]
-ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%phaseClass10_V_1_loa = load i16* @phaseClass10_V_1, align 2" [correlator.cpp:324]
-ST_2 : Operation 125 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_1_loa, i16* @phaseClass10_V_2, align 4" [correlator.cpp:324]
-ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%phaseClass10_V_0_loa = load i16* @phaseClass10_V_0, align 16" [correlator.cpp:324]
-ST_2 : Operation 127 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_0_loa, i16* @phaseClass10_V_1, align 2" [correlator.cpp:324]
-ST_2 : Operation 128 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass10_V_0, align 16" [correlator.cpp:326]
-ST_2 : Operation 129 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:328]
-ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%phaseClass9_V_6_load = load i16* @phaseClass9_V_6, align 4" [correlator.cpp:316]
-ST_2 : Operation 131 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_6_load, i16* @phaseClass9_V_7, align 2" [correlator.cpp:316]
-ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%phaseClass9_V_5_load = load i16* @phaseClass9_V_5, align 2" [correlator.cpp:316]
-ST_2 : Operation 133 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_5_load, i16* @phaseClass9_V_6, align 4" [correlator.cpp:316]
-ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%phaseClass9_V_4_load = load i16* @phaseClass9_V_4, align 8" [correlator.cpp:316]
-ST_2 : Operation 135 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_4_load, i16* @phaseClass9_V_5, align 2" [correlator.cpp:316]
-ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%phaseClass9_V_3_load = load i16* @phaseClass9_V_3, align 2" [correlator.cpp:316]
-ST_2 : Operation 137 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_3_load, i16* @phaseClass9_V_4, align 8" [correlator.cpp:316]
-ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%phaseClass9_V_2_load = load i16* @phaseClass9_V_2, align 4" [correlator.cpp:316]
-ST_2 : Operation 139 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_2_load, i16* @phaseClass9_V_3, align 2" [correlator.cpp:316]
-ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%phaseClass9_V_1_load = load i16* @phaseClass9_V_1, align 2" [correlator.cpp:316]
-ST_2 : Operation 141 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_1_load, i16* @phaseClass9_V_2, align 4" [correlator.cpp:316]
-ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%phaseClass9_V_0_load = load i16* @phaseClass9_V_0, align 16" [correlator.cpp:316]
-ST_2 : Operation 143 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_0_load, i16* @phaseClass9_V_1, align 2" [correlator.cpp:316]
-ST_2 : Operation 144 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass9_V_0, align 16" [correlator.cpp:318]
-ST_2 : Operation 145 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:320]
-ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%phaseClass8_V_6_load = load i16* @phaseClass8_V_6, align 4" [correlator.cpp:308]
-ST_2 : Operation 147 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_6_load, i16* @phaseClass8_V_7, align 2" [correlator.cpp:308]
-ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%phaseClass8_V_5_load = load i16* @phaseClass8_V_5, align 2" [correlator.cpp:308]
-ST_2 : Operation 149 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_5_load, i16* @phaseClass8_V_6, align 4" [correlator.cpp:308]
-ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%phaseClass8_V_4_load = load i16* @phaseClass8_V_4, align 8" [correlator.cpp:308]
-ST_2 : Operation 151 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_4_load, i16* @phaseClass8_V_5, align 2" [correlator.cpp:308]
-ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%phaseClass8_V_3_load = load i16* @phaseClass8_V_3, align 2" [correlator.cpp:308]
-ST_2 : Operation 153 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_3_load, i16* @phaseClass8_V_4, align 8" [correlator.cpp:308]
-ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%phaseClass8_V_2_load = load i16* @phaseClass8_V_2, align 4" [correlator.cpp:308]
-ST_2 : Operation 155 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_2_load, i16* @phaseClass8_V_3, align 2" [correlator.cpp:308]
-ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%phaseClass8_V_1_load = load i16* @phaseClass8_V_1, align 2" [correlator.cpp:308]
-ST_2 : Operation 157 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_1_load, i16* @phaseClass8_V_2, align 4" [correlator.cpp:308]
-ST_2 : Operation 158 [1/1] (0.00ns)   --->   "%phaseClass8_V_0_load = load i16* @phaseClass8_V_0, align 16" [correlator.cpp:308]
-ST_2 : Operation 159 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_0_load, i16* @phaseClass8_V_1, align 2" [correlator.cpp:308]
-ST_2 : Operation 160 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass8_V_0, align 16" [correlator.cpp:310]
-ST_2 : Operation 161 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:312]
-ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%phaseClass7_V_6_load = load i16* @phaseClass7_V_6, align 4" [correlator.cpp:300]
-ST_2 : Operation 163 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_6_load, i16* @phaseClass7_V_7, align 2" [correlator.cpp:300]
-ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%phaseClass7_V_5_load = load i16* @phaseClass7_V_5, align 2" [correlator.cpp:300]
-ST_2 : Operation 165 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_5_load, i16* @phaseClass7_V_6, align 4" [correlator.cpp:300]
-ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%phaseClass7_V_4_load = load i16* @phaseClass7_V_4, align 8" [correlator.cpp:300]
-ST_2 : Operation 167 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_4_load, i16* @phaseClass7_V_5, align 2" [correlator.cpp:300]
-ST_2 : Operation 168 [1/1] (0.00ns)   --->   "%phaseClass7_V_3_load = load i16* @phaseClass7_V_3, align 2" [correlator.cpp:300]
-ST_2 : Operation 169 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_3_load, i16* @phaseClass7_V_4, align 8" [correlator.cpp:300]
-ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%phaseClass7_V_2_load = load i16* @phaseClass7_V_2, align 4" [correlator.cpp:300]
-ST_2 : Operation 171 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_2_load, i16* @phaseClass7_V_3, align 2" [correlator.cpp:300]
-ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%phaseClass7_V_1_load = load i16* @phaseClass7_V_1, align 2" [correlator.cpp:300]
-ST_2 : Operation 173 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_1_load, i16* @phaseClass7_V_2, align 4" [correlator.cpp:300]
-ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%phaseClass7_V_0_load = load i16* @phaseClass7_V_0, align 16" [correlator.cpp:300]
-ST_2 : Operation 175 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_0_load, i16* @phaseClass7_V_1, align 2" [correlator.cpp:300]
-ST_2 : Operation 176 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass7_V_0, align 16" [correlator.cpp:302]
-ST_2 : Operation 177 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:304]
-ST_2 : Operation 178 [1/1] (0.00ns)   --->   "%phaseClass6_V_6_load = load i16* @phaseClass6_V_6, align 4" [correlator.cpp:292]
-ST_2 : Operation 179 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_6_load, i16* @phaseClass6_V_7, align 2" [correlator.cpp:292]
-ST_2 : Operation 180 [1/1] (0.00ns)   --->   "%phaseClass6_V_5_load = load i16* @phaseClass6_V_5, align 2" [correlator.cpp:292]
-ST_2 : Operation 181 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_5_load, i16* @phaseClass6_V_6, align 4" [correlator.cpp:292]
-ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%phaseClass6_V_4_load = load i16* @phaseClass6_V_4, align 8" [correlator.cpp:292]
-ST_2 : Operation 183 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_4_load, i16* @phaseClass6_V_5, align 2" [correlator.cpp:292]
-ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%phaseClass6_V_3_load = load i16* @phaseClass6_V_3, align 2" [correlator.cpp:292]
-ST_2 : Operation 185 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_3_load, i16* @phaseClass6_V_4, align 8" [correlator.cpp:292]
-ST_2 : Operation 186 [1/1] (0.00ns)   --->   "%phaseClass6_V_2_load = load i16* @phaseClass6_V_2, align 4" [correlator.cpp:292]
-ST_2 : Operation 187 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_2_load, i16* @phaseClass6_V_3, align 2" [correlator.cpp:292]
-ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%phaseClass6_V_1_load = load i16* @phaseClass6_V_1, align 2" [correlator.cpp:292]
-ST_2 : Operation 189 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_1_load, i16* @phaseClass6_V_2, align 4" [correlator.cpp:292]
-ST_2 : Operation 190 [1/1] (0.00ns)   --->   "%phaseClass6_V_0_load = load i16* @phaseClass6_V_0, align 16" [correlator.cpp:292]
-ST_2 : Operation 191 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_0_load, i16* @phaseClass6_V_1, align 2" [correlator.cpp:292]
-ST_2 : Operation 192 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass6_V_0, align 16" [correlator.cpp:294]
-ST_2 : Operation 193 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:296]
-ST_2 : Operation 194 [1/1] (0.00ns)   --->   "%phaseClass5_V_6_load = load i16* @phaseClass5_V_6, align 4" [correlator.cpp:284]
-ST_2 : Operation 195 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_6_load, i16* @phaseClass5_V_7, align 2" [correlator.cpp:284]
-ST_2 : Operation 196 [1/1] (0.00ns)   --->   "%phaseClass5_V_5_load = load i16* @phaseClass5_V_5, align 2" [correlator.cpp:284]
-ST_2 : Operation 197 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_5_load, i16* @phaseClass5_V_6, align 4" [correlator.cpp:284]
-ST_2 : Operation 198 [1/1] (0.00ns)   --->   "%phaseClass5_V_4_load = load i16* @phaseClass5_V_4, align 8" [correlator.cpp:284]
-ST_2 : Operation 199 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_4_load, i16* @phaseClass5_V_5, align 2" [correlator.cpp:284]
-ST_2 : Operation 200 [1/1] (0.00ns)   --->   "%phaseClass5_V_3_load = load i16* @phaseClass5_V_3, align 2" [correlator.cpp:284]
-ST_2 : Operation 201 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_3_load, i16* @phaseClass5_V_4, align 8" [correlator.cpp:284]
-ST_2 : Operation 202 [1/1] (0.00ns)   --->   "%phaseClass5_V_2_load = load i16* @phaseClass5_V_2, align 4" [correlator.cpp:284]
-ST_2 : Operation 203 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_2_load, i16* @phaseClass5_V_3, align 2" [correlator.cpp:284]
-ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%phaseClass5_V_1_load = load i16* @phaseClass5_V_1, align 2" [correlator.cpp:284]
-ST_2 : Operation 205 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_1_load, i16* @phaseClass5_V_2, align 4" [correlator.cpp:284]
-ST_2 : Operation 206 [1/1] (0.00ns)   --->   "%phaseClass5_V_0_load = load i16* @phaseClass5_V_0, align 16" [correlator.cpp:284]
-ST_2 : Operation 207 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_0_load, i16* @phaseClass5_V_1, align 2" [correlator.cpp:284]
-ST_2 : Operation 208 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass5_V_0, align 16" [correlator.cpp:286]
-ST_2 : Operation 209 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:288]
-ST_2 : Operation 210 [1/1] (0.00ns)   --->   "%phaseClass4_V_6_load = load i16* @phaseClass4_V_6, align 4" [correlator.cpp:276]
-ST_2 : Operation 211 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_6_load, i16* @phaseClass4_V_7, align 2" [correlator.cpp:276]
-ST_2 : Operation 212 [1/1] (0.00ns)   --->   "%phaseClass4_V_5_load = load i16* @phaseClass4_V_5, align 2" [correlator.cpp:276]
-ST_2 : Operation 213 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_5_load, i16* @phaseClass4_V_6, align 4" [correlator.cpp:276]
-ST_2 : Operation 214 [1/1] (0.00ns)   --->   "%phaseClass4_V_4_load = load i16* @phaseClass4_V_4, align 8" [correlator.cpp:276]
-ST_2 : Operation 215 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_4_load, i16* @phaseClass4_V_5, align 2" [correlator.cpp:276]
-ST_2 : Operation 216 [1/1] (0.00ns)   --->   "%phaseClass4_V_3_load = load i16* @phaseClass4_V_3, align 2" [correlator.cpp:276]
-ST_2 : Operation 217 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_3_load, i16* @phaseClass4_V_4, align 8" [correlator.cpp:276]
-ST_2 : Operation 218 [1/1] (0.00ns)   --->   "%phaseClass4_V_2_load = load i16* @phaseClass4_V_2, align 4" [correlator.cpp:276]
-ST_2 : Operation 219 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_2_load, i16* @phaseClass4_V_3, align 2" [correlator.cpp:276]
-ST_2 : Operation 220 [1/1] (0.00ns)   --->   "%phaseClass4_V_1_load = load i16* @phaseClass4_V_1, align 2" [correlator.cpp:276]
-ST_2 : Operation 221 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_1_load, i16* @phaseClass4_V_2, align 4" [correlator.cpp:276]
-ST_2 : Operation 222 [1/1] (0.00ns)   --->   "%phaseClass4_V_0_load = load i16* @phaseClass4_V_0, align 16" [correlator.cpp:276]
-ST_2 : Operation 223 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_0_load, i16* @phaseClass4_V_1, align 2" [correlator.cpp:276]
-ST_2 : Operation 224 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass4_V_0, align 16" [correlator.cpp:278]
-ST_2 : Operation 225 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:280]
-ST_2 : Operation 226 [1/1] (0.00ns)   --->   "%phaseClass3_V_6_load = load i16* @phaseClass3_V_6, align 4" [correlator.cpp:268]
-ST_2 : Operation 227 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_6_load, i16* @phaseClass3_V_7, align 2" [correlator.cpp:268]
-ST_2 : Operation 228 [1/1] (0.00ns)   --->   "%phaseClass3_V_5_load = load i16* @phaseClass3_V_5, align 2" [correlator.cpp:268]
-ST_2 : Operation 229 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_5_load, i16* @phaseClass3_V_6, align 4" [correlator.cpp:268]
-ST_2 : Operation 230 [1/1] (0.00ns)   --->   "%phaseClass3_V_4_load = load i16* @phaseClass3_V_4, align 8" [correlator.cpp:268]
-ST_2 : Operation 231 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_4_load, i16* @phaseClass3_V_5, align 2" [correlator.cpp:268]
-ST_2 : Operation 232 [1/1] (0.00ns)   --->   "%phaseClass3_V_3_load = load i16* @phaseClass3_V_3, align 2" [correlator.cpp:268]
-ST_2 : Operation 233 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_3_load, i16* @phaseClass3_V_4, align 8" [correlator.cpp:268]
-ST_2 : Operation 234 [1/1] (0.00ns)   --->   "%phaseClass3_V_2_load = load i16* @phaseClass3_V_2, align 4" [correlator.cpp:268]
-ST_2 : Operation 235 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_2_load, i16* @phaseClass3_V_3, align 2" [correlator.cpp:268]
-ST_2 : Operation 236 [1/1] (0.00ns)   --->   "%phaseClass3_V_1_load = load i16* @phaseClass3_V_1, align 2" [correlator.cpp:268]
-ST_2 : Operation 237 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_1_load, i16* @phaseClass3_V_2, align 4" [correlator.cpp:268]
-ST_2 : Operation 238 [1/1] (0.00ns)   --->   "%phaseClass3_V_0_load = load i16* @phaseClass3_V_0, align 16" [correlator.cpp:268]
-ST_2 : Operation 239 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_0_load, i16* @phaseClass3_V_1, align 2" [correlator.cpp:268]
-ST_2 : Operation 240 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass3_V_0, align 16" [correlator.cpp:270]
-ST_2 : Operation 241 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:272]
-ST_2 : Operation 242 [1/1] (0.00ns)   --->   "%phaseClass2_V_6_load = load i16* @phaseClass2_V_6, align 4" [correlator.cpp:259]
-ST_2 : Operation 243 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_6_load, i16* @phaseClass2_V_7, align 2" [correlator.cpp:259]
-ST_2 : Operation 244 [1/1] (0.00ns)   --->   "%phaseClass2_V_5_load = load i16* @phaseClass2_V_5, align 2" [correlator.cpp:259]
-ST_2 : Operation 245 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_5_load, i16* @phaseClass2_V_6, align 4" [correlator.cpp:259]
-ST_2 : Operation 246 [1/1] (0.00ns)   --->   "%phaseClass2_V_4_load = load i16* @phaseClass2_V_4, align 8" [correlator.cpp:259]
-ST_2 : Operation 247 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_4_load, i16* @phaseClass2_V_5, align 2" [correlator.cpp:259]
-ST_2 : Operation 248 [1/1] (0.00ns)   --->   "%phaseClass2_V_3_load = load i16* @phaseClass2_V_3, align 2" [correlator.cpp:259]
-ST_2 : Operation 249 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_3_load, i16* @phaseClass2_V_4, align 8" [correlator.cpp:259]
-ST_2 : Operation 250 [1/1] (0.00ns)   --->   "%phaseClass2_V_2_load = load i16* @phaseClass2_V_2, align 4" [correlator.cpp:259]
-ST_2 : Operation 251 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_2_load, i16* @phaseClass2_V_3, align 2" [correlator.cpp:259]
-ST_2 : Operation 252 [1/1] (0.00ns)   --->   "%phaseClass2_V_1_load = load i16* @phaseClass2_V_1, align 2" [correlator.cpp:259]
-ST_2 : Operation 253 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_1_load, i16* @phaseClass2_V_2, align 4" [correlator.cpp:259]
-ST_2 : Operation 254 [1/1] (0.00ns)   --->   "%phaseClass2_V_0_load = load i16* @phaseClass2_V_0, align 16" [correlator.cpp:259]
-ST_2 : Operation 255 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_0_load, i16* @phaseClass2_V_1, align 2" [correlator.cpp:259]
-ST_2 : Operation 256 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass2_V_0, align 16" [correlator.cpp:261]
-ST_2 : Operation 257 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:264]
-ST_2 : Operation 258 [1/1] (0.00ns)   --->   "%phaseClass1_V_6_load = load i16* @phaseClass1_V_6, align 4" [correlator.cpp:251]
-ST_2 : Operation 259 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_6_load, i16* @phaseClass1_V_7, align 2" [correlator.cpp:251]
-ST_2 : Operation 260 [1/1] (0.00ns)   --->   "%phaseClass1_V_5_load = load i16* @phaseClass1_V_5, align 2" [correlator.cpp:251]
-ST_2 : Operation 261 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_5_load, i16* @phaseClass1_V_6, align 4" [correlator.cpp:251]
-ST_2 : Operation 262 [1/1] (0.00ns)   --->   "%phaseClass1_V_4_load = load i16* @phaseClass1_V_4, align 8" [correlator.cpp:251]
-ST_2 : Operation 263 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_4_load, i16* @phaseClass1_V_5, align 2" [correlator.cpp:251]
-ST_2 : Operation 264 [1/1] (0.00ns)   --->   "%phaseClass1_V_3_load = load i16* @phaseClass1_V_3, align 2" [correlator.cpp:251]
-ST_2 : Operation 265 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_3_load, i16* @phaseClass1_V_4, align 8" [correlator.cpp:251]
-ST_2 : Operation 266 [1/1] (0.00ns)   --->   "%phaseClass1_V_2_load = load i16* @phaseClass1_V_2, align 4" [correlator.cpp:251]
-ST_2 : Operation 267 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_2_load, i16* @phaseClass1_V_3, align 2" [correlator.cpp:251]
-ST_2 : Operation 268 [1/1] (0.00ns)   --->   "%phaseClass1_V_1_load = load i16* @phaseClass1_V_1, align 2" [correlator.cpp:251]
-ST_2 : Operation 269 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_1_load, i16* @phaseClass1_V_2, align 4" [correlator.cpp:251]
-ST_2 : Operation 270 [1/1] (0.00ns)   --->   "%phaseClass1_V_0_load = load i16* @phaseClass1_V_0, align 16" [correlator.cpp:251]
-ST_2 : Operation 271 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_0_load, i16* @phaseClass1_V_1, align 2" [correlator.cpp:251]
-ST_2 : Operation 272 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass1_V_0, align 16" [correlator.cpp:253]
-ST_2 : Operation 273 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:255]
+ <State 2> : 6.58ns
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%phaseClass15_V_6_loa = load i16* @phaseClass15_V_6, align 4" [correlator.cpp:366]
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_6_loa, i16* @phaseClass15_V_7, align 2" [correlator.cpp:366]
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%phaseClass15_V_5_loa = load i16* @phaseClass15_V_5, align 2" [correlator.cpp:366]
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_5_loa, i16* @phaseClass15_V_6, align 4" [correlator.cpp:366]
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%phaseClass15_V_4_loa = load i16* @phaseClass15_V_4, align 8" [correlator.cpp:366]
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_4_loa, i16* @phaseClass15_V_5, align 2" [correlator.cpp:366]
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%phaseClass15_V_3_loa = load i16* @phaseClass15_V_3, align 2" [correlator.cpp:366]
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_3_loa, i16* @phaseClass15_V_4, align 8" [correlator.cpp:366]
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%phaseClass15_V_2_loa = load i16* @phaseClass15_V_2, align 4" [correlator.cpp:366]
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_2_loa, i16* @phaseClass15_V_3, align 2" [correlator.cpp:366]
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%phaseClass15_V_1_loa = load i16* @phaseClass15_V_1, align 2" [correlator.cpp:366]
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_1_loa, i16* @phaseClass15_V_2, align 4" [correlator.cpp:366]
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%phaseClass15_V_0_loa = load i16* @phaseClass15_V_0, align 16" [correlator.cpp:366]
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "store i16 %phaseClass15_V_0_loa, i16* @phaseClass15_V_1, align 2" [correlator.cpp:366]
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass15_V_0, align 16" [correlator.cpp:368]
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:370]
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%phaseClass14_V_6_loa = load i16* @phaseClass14_V_6, align 4" [correlator.cpp:357]
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_6_loa, i16* @phaseClass14_V_7, align 2" [correlator.cpp:357]
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%phaseClass14_V_5_loa = load i16* @phaseClass14_V_5, align 2" [correlator.cpp:357]
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_5_loa, i16* @phaseClass14_V_6, align 4" [correlator.cpp:357]
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%phaseClass14_V_4_loa = load i16* @phaseClass14_V_4, align 8" [correlator.cpp:357]
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_4_loa, i16* @phaseClass14_V_5, align 2" [correlator.cpp:357]
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%phaseClass14_V_3_loa = load i16* @phaseClass14_V_3, align 2" [correlator.cpp:357]
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_3_loa, i16* @phaseClass14_V_4, align 8" [correlator.cpp:357]
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%phaseClass14_V_2_loa = load i16* @phaseClass14_V_2, align 4" [correlator.cpp:357]
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_2_loa, i16* @phaseClass14_V_3, align 2" [correlator.cpp:357]
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%phaseClass14_V_1_loa = load i16* @phaseClass14_V_1, align 2" [correlator.cpp:357]
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_1_loa, i16* @phaseClass14_V_2, align 4" [correlator.cpp:357]
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%phaseClass14_V_0_loa = load i16* @phaseClass14_V_0, align 16" [correlator.cpp:357]
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "store i16 %phaseClass14_V_0_loa, i16* @phaseClass14_V_1, align 2" [correlator.cpp:357]
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass14_V_0, align 16" [correlator.cpp:359]
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:362]
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%phaseClass13_V_6_loa = load i16* @phaseClass13_V_6, align 4" [correlator.cpp:349]
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_6_loa, i16* @phaseClass13_V_7, align 2" [correlator.cpp:349]
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%phaseClass13_V_5_loa = load i16* @phaseClass13_V_5, align 2" [correlator.cpp:349]
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_5_loa, i16* @phaseClass13_V_6, align 4" [correlator.cpp:349]
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%phaseClass13_V_4_loa = load i16* @phaseClass13_V_4, align 8" [correlator.cpp:349]
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_4_loa, i16* @phaseClass13_V_5, align 2" [correlator.cpp:349]
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%phaseClass13_V_3_loa = load i16* @phaseClass13_V_3, align 2" [correlator.cpp:349]
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_3_loa, i16* @phaseClass13_V_4, align 8" [correlator.cpp:349]
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%phaseClass13_V_2_loa = load i16* @phaseClass13_V_2, align 4" [correlator.cpp:349]
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_2_loa, i16* @phaseClass13_V_3, align 2" [correlator.cpp:349]
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%phaseClass13_V_1_loa = load i16* @phaseClass13_V_1, align 2" [correlator.cpp:349]
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_1_loa, i16* @phaseClass13_V_2, align 4" [correlator.cpp:349]
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%phaseClass13_V_0_loa = load i16* @phaseClass13_V_0, align 16" [correlator.cpp:349]
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "store i16 %phaseClass13_V_0_loa, i16* @phaseClass13_V_1, align 2" [correlator.cpp:349]
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass13_V_0, align 16" [correlator.cpp:351]
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:353]
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%phaseClass12_V_6_loa = load i16* @phaseClass12_V_6, align 4" [correlator.cpp:341]
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_6_loa, i16* @phaseClass12_V_7, align 2" [correlator.cpp:341]
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%phaseClass12_V_5_loa = load i16* @phaseClass12_V_5, align 2" [correlator.cpp:341]
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_5_loa, i16* @phaseClass12_V_6, align 4" [correlator.cpp:341]
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%phaseClass12_V_4_loa = load i16* @phaseClass12_V_4, align 8" [correlator.cpp:341]
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_4_loa, i16* @phaseClass12_V_5, align 2" [correlator.cpp:341]
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%phaseClass12_V_3_loa = load i16* @phaseClass12_V_3, align 2" [correlator.cpp:341]
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_3_loa, i16* @phaseClass12_V_4, align 8" [correlator.cpp:341]
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%phaseClass12_V_2_loa = load i16* @phaseClass12_V_2, align 4" [correlator.cpp:341]
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_2_loa, i16* @phaseClass12_V_3, align 2" [correlator.cpp:341]
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%phaseClass12_V_1_loa = load i16* @phaseClass12_V_1, align 2" [correlator.cpp:341]
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_1_loa, i16* @phaseClass12_V_2, align 4" [correlator.cpp:341]
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%phaseClass12_V_0_loa = load i16* @phaseClass12_V_0, align 16" [correlator.cpp:341]
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "store i16 %phaseClass12_V_0_loa, i16* @phaseClass12_V_1, align 2" [correlator.cpp:341]
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass12_V_0, align 16" [correlator.cpp:343]
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:345]
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%phaseClass11_V_6_loa = load i16* @phaseClass11_V_6, align 4" [correlator.cpp:333]
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_6_loa, i16* @phaseClass11_V_7, align 2" [correlator.cpp:333]
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%phaseClass11_V_5_loa = load i16* @phaseClass11_V_5, align 2" [correlator.cpp:333]
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_5_loa, i16* @phaseClass11_V_6, align 4" [correlator.cpp:333]
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%phaseClass11_V_4_loa = load i16* @phaseClass11_V_4, align 8" [correlator.cpp:333]
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_4_loa, i16* @phaseClass11_V_5, align 2" [correlator.cpp:333]
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%phaseClass11_V_3_loa = load i16* @phaseClass11_V_3, align 2" [correlator.cpp:333]
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_3_loa, i16* @phaseClass11_V_4, align 8" [correlator.cpp:333]
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%phaseClass11_V_2_loa = load i16* @phaseClass11_V_2, align 4" [correlator.cpp:333]
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_2_loa, i16* @phaseClass11_V_3, align 2" [correlator.cpp:333]
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%phaseClass11_V_1_loa = load i16* @phaseClass11_V_1, align 2" [correlator.cpp:333]
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_1_loa, i16* @phaseClass11_V_2, align 4" [correlator.cpp:333]
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%phaseClass11_V_0_loa = load i16* @phaseClass11_V_0, align 16" [correlator.cpp:333]
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "store i16 %phaseClass11_V_0_loa, i16* @phaseClass11_V_1, align 2" [correlator.cpp:333]
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass11_V_0, align 16" [correlator.cpp:335]
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:337]
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%phaseClass10_V_6_loa = load i16* @phaseClass10_V_6, align 4" [correlator.cpp:325]
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_6_loa, i16* @phaseClass10_V_7, align 2" [correlator.cpp:325]
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%phaseClass10_V_5_loa = load i16* @phaseClass10_V_5, align 2" [correlator.cpp:325]
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_5_loa, i16* @phaseClass10_V_6, align 4" [correlator.cpp:325]
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%phaseClass10_V_4_loa = load i16* @phaseClass10_V_4, align 8" [correlator.cpp:325]
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_4_loa, i16* @phaseClass10_V_5, align 2" [correlator.cpp:325]
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%phaseClass10_V_3_loa = load i16* @phaseClass10_V_3, align 2" [correlator.cpp:325]
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_3_loa, i16* @phaseClass10_V_4, align 8" [correlator.cpp:325]
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%phaseClass10_V_2_loa = load i16* @phaseClass10_V_2, align 4" [correlator.cpp:325]
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_2_loa, i16* @phaseClass10_V_3, align 2" [correlator.cpp:325]
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%phaseClass10_V_1_loa = load i16* @phaseClass10_V_1, align 2" [correlator.cpp:325]
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_1_loa, i16* @phaseClass10_V_2, align 4" [correlator.cpp:325]
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%phaseClass10_V_0_loa = load i16* @phaseClass10_V_0, align 16" [correlator.cpp:325]
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "store i16 %phaseClass10_V_0_loa, i16* @phaseClass10_V_1, align 2" [correlator.cpp:325]
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass10_V_0, align 16" [correlator.cpp:327]
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:329]
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%phaseClass9_V_6_load = load i16* @phaseClass9_V_6, align 4" [correlator.cpp:317]
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_6_load, i16* @phaseClass9_V_7, align 2" [correlator.cpp:317]
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%phaseClass9_V_5_load = load i16* @phaseClass9_V_5, align 2" [correlator.cpp:317]
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_5_load, i16* @phaseClass9_V_6, align 4" [correlator.cpp:317]
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%phaseClass9_V_4_load = load i16* @phaseClass9_V_4, align 8" [correlator.cpp:317]
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_4_load, i16* @phaseClass9_V_5, align 2" [correlator.cpp:317]
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%phaseClass9_V_3_load = load i16* @phaseClass9_V_3, align 2" [correlator.cpp:317]
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_3_load, i16* @phaseClass9_V_4, align 8" [correlator.cpp:317]
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%phaseClass9_V_2_load = load i16* @phaseClass9_V_2, align 4" [correlator.cpp:317]
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_2_load, i16* @phaseClass9_V_3, align 2" [correlator.cpp:317]
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%phaseClass9_V_1_load = load i16* @phaseClass9_V_1, align 2" [correlator.cpp:317]
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_1_load, i16* @phaseClass9_V_2, align 4" [correlator.cpp:317]
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%phaseClass9_V_0_load = load i16* @phaseClass9_V_0, align 16" [correlator.cpp:317]
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "store i16 %phaseClass9_V_0_load, i16* @phaseClass9_V_1, align 2" [correlator.cpp:317]
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass9_V_0, align 16" [correlator.cpp:319]
+ST_2 : Operation 145 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:321]
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%phaseClass8_V_6_load = load i16* @phaseClass8_V_6, align 4" [correlator.cpp:309]
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_6_load, i16* @phaseClass8_V_7, align 2" [correlator.cpp:309]
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%phaseClass8_V_5_load = load i16* @phaseClass8_V_5, align 2" [correlator.cpp:309]
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_5_load, i16* @phaseClass8_V_6, align 4" [correlator.cpp:309]
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%phaseClass8_V_4_load = load i16* @phaseClass8_V_4, align 8" [correlator.cpp:309]
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_4_load, i16* @phaseClass8_V_5, align 2" [correlator.cpp:309]
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%phaseClass8_V_3_load = load i16* @phaseClass8_V_3, align 2" [correlator.cpp:309]
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_3_load, i16* @phaseClass8_V_4, align 8" [correlator.cpp:309]
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%phaseClass8_V_2_load = load i16* @phaseClass8_V_2, align 4" [correlator.cpp:309]
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_2_load, i16* @phaseClass8_V_3, align 2" [correlator.cpp:309]
+ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%phaseClass8_V_1_load = load i16* @phaseClass8_V_1, align 2" [correlator.cpp:309]
+ST_2 : Operation 157 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_1_load, i16* @phaseClass8_V_2, align 4" [correlator.cpp:309]
+ST_2 : Operation 158 [1/1] (0.00ns)   --->   "%phaseClass8_V_0_load = load i16* @phaseClass8_V_0, align 16" [correlator.cpp:309]
+ST_2 : Operation 159 [1/1] (0.00ns)   --->   "store i16 %phaseClass8_V_0_load, i16* @phaseClass8_V_1, align 2" [correlator.cpp:309]
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass8_V_0, align 16" [correlator.cpp:311]
+ST_2 : Operation 161 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:313]
+ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%phaseClass7_V_6_load = load i16* @phaseClass7_V_6, align 4" [correlator.cpp:301]
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_6_load, i16* @phaseClass7_V_7, align 2" [correlator.cpp:301]
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%phaseClass7_V_5_load = load i16* @phaseClass7_V_5, align 2" [correlator.cpp:301]
+ST_2 : Operation 165 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_5_load, i16* @phaseClass7_V_6, align 4" [correlator.cpp:301]
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%phaseClass7_V_4_load = load i16* @phaseClass7_V_4, align 8" [correlator.cpp:301]
+ST_2 : Operation 167 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_4_load, i16* @phaseClass7_V_5, align 2" [correlator.cpp:301]
+ST_2 : Operation 168 [1/1] (0.00ns)   --->   "%phaseClass7_V_3_load = load i16* @phaseClass7_V_3, align 2" [correlator.cpp:301]
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_3_load, i16* @phaseClass7_V_4, align 8" [correlator.cpp:301]
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%phaseClass7_V_2_load = load i16* @phaseClass7_V_2, align 4" [correlator.cpp:301]
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_2_load, i16* @phaseClass7_V_3, align 2" [correlator.cpp:301]
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%phaseClass7_V_1_load = load i16* @phaseClass7_V_1, align 2" [correlator.cpp:301]
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_1_load, i16* @phaseClass7_V_2, align 4" [correlator.cpp:301]
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%phaseClass7_V_0_load = load i16* @phaseClass7_V_0, align 16" [correlator.cpp:301]
+ST_2 : Operation 175 [1/1] (0.00ns)   --->   "store i16 %phaseClass7_V_0_load, i16* @phaseClass7_V_1, align 2" [correlator.cpp:301]
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass7_V_0, align 16" [correlator.cpp:303]
+ST_2 : Operation 177 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:305]
+ST_2 : Operation 178 [1/1] (0.00ns)   --->   "%phaseClass6_V_6_load = load i16* @phaseClass6_V_6, align 4" [correlator.cpp:293]
+ST_2 : Operation 179 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_6_load, i16* @phaseClass6_V_7, align 2" [correlator.cpp:293]
+ST_2 : Operation 180 [1/1] (0.00ns)   --->   "%phaseClass6_V_5_load = load i16* @phaseClass6_V_5, align 2" [correlator.cpp:293]
+ST_2 : Operation 181 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_5_load, i16* @phaseClass6_V_6, align 4" [correlator.cpp:293]
+ST_2 : Operation 182 [1/1] (0.00ns)   --->   "%phaseClass6_V_4_load = load i16* @phaseClass6_V_4, align 8" [correlator.cpp:293]
+ST_2 : Operation 183 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_4_load, i16* @phaseClass6_V_5, align 2" [correlator.cpp:293]
+ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%phaseClass6_V_3_load = load i16* @phaseClass6_V_3, align 2" [correlator.cpp:293]
+ST_2 : Operation 185 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_3_load, i16* @phaseClass6_V_4, align 8" [correlator.cpp:293]
+ST_2 : Operation 186 [1/1] (0.00ns)   --->   "%phaseClass6_V_2_load = load i16* @phaseClass6_V_2, align 4" [correlator.cpp:293]
+ST_2 : Operation 187 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_2_load, i16* @phaseClass6_V_3, align 2" [correlator.cpp:293]
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%phaseClass6_V_1_load = load i16* @phaseClass6_V_1, align 2" [correlator.cpp:293]
+ST_2 : Operation 189 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_1_load, i16* @phaseClass6_V_2, align 4" [correlator.cpp:293]
+ST_2 : Operation 190 [1/1] (0.00ns)   --->   "%phaseClass6_V_0_load = load i16* @phaseClass6_V_0, align 16" [correlator.cpp:293]
+ST_2 : Operation 191 [1/1] (0.00ns)   --->   "store i16 %phaseClass6_V_0_load, i16* @phaseClass6_V_1, align 2" [correlator.cpp:293]
+ST_2 : Operation 192 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass6_V_0, align 16" [correlator.cpp:295]
+ST_2 : Operation 193 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:297]
+ST_2 : Operation 194 [1/1] (0.00ns)   --->   "%phaseClass5_V_6_load = load i16* @phaseClass5_V_6, align 4" [correlator.cpp:285]
+ST_2 : Operation 195 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_6_load, i16* @phaseClass5_V_7, align 2" [correlator.cpp:285]
+ST_2 : Operation 196 [1/1] (0.00ns)   --->   "%phaseClass5_V_5_load = load i16* @phaseClass5_V_5, align 2" [correlator.cpp:285]
+ST_2 : Operation 197 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_5_load, i16* @phaseClass5_V_6, align 4" [correlator.cpp:285]
+ST_2 : Operation 198 [1/1] (0.00ns)   --->   "%phaseClass5_V_4_load = load i16* @phaseClass5_V_4, align 8" [correlator.cpp:285]
+ST_2 : Operation 199 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_4_load, i16* @phaseClass5_V_5, align 2" [correlator.cpp:285]
+ST_2 : Operation 200 [1/1] (0.00ns)   --->   "%phaseClass5_V_3_load = load i16* @phaseClass5_V_3, align 2" [correlator.cpp:285]
+ST_2 : Operation 201 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_3_load, i16* @phaseClass5_V_4, align 8" [correlator.cpp:285]
+ST_2 : Operation 202 [1/1] (0.00ns)   --->   "%phaseClass5_V_2_load = load i16* @phaseClass5_V_2, align 4" [correlator.cpp:285]
+ST_2 : Operation 203 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_2_load, i16* @phaseClass5_V_3, align 2" [correlator.cpp:285]
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%phaseClass5_V_1_load = load i16* @phaseClass5_V_1, align 2" [correlator.cpp:285]
+ST_2 : Operation 205 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_1_load, i16* @phaseClass5_V_2, align 4" [correlator.cpp:285]
+ST_2 : Operation 206 [1/1] (0.00ns)   --->   "%phaseClass5_V_0_load = load i16* @phaseClass5_V_0, align 16" [correlator.cpp:285]
+ST_2 : Operation 207 [1/1] (0.00ns)   --->   "store i16 %phaseClass5_V_0_load, i16* @phaseClass5_V_1, align 2" [correlator.cpp:285]
+ST_2 : Operation 208 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass5_V_0, align 16" [correlator.cpp:287]
+ST_2 : Operation 209 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:289]
+ST_2 : Operation 210 [1/1] (0.00ns)   --->   "%phaseClass4_V_6_load = load i16* @phaseClass4_V_6, align 4" [correlator.cpp:277]
+ST_2 : Operation 211 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_6_load, i16* @phaseClass4_V_7, align 2" [correlator.cpp:277]
+ST_2 : Operation 212 [1/1] (0.00ns)   --->   "%phaseClass4_V_5_load = load i16* @phaseClass4_V_5, align 2" [correlator.cpp:277]
+ST_2 : Operation 213 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_5_load, i16* @phaseClass4_V_6, align 4" [correlator.cpp:277]
+ST_2 : Operation 214 [1/1] (0.00ns)   --->   "%phaseClass4_V_4_load = load i16* @phaseClass4_V_4, align 8" [correlator.cpp:277]
+ST_2 : Operation 215 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_4_load, i16* @phaseClass4_V_5, align 2" [correlator.cpp:277]
+ST_2 : Operation 216 [1/1] (0.00ns)   --->   "%phaseClass4_V_3_load = load i16* @phaseClass4_V_3, align 2" [correlator.cpp:277]
+ST_2 : Operation 217 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_3_load, i16* @phaseClass4_V_4, align 8" [correlator.cpp:277]
+ST_2 : Operation 218 [1/1] (0.00ns)   --->   "%phaseClass4_V_2_load = load i16* @phaseClass4_V_2, align 4" [correlator.cpp:277]
+ST_2 : Operation 219 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_2_load, i16* @phaseClass4_V_3, align 2" [correlator.cpp:277]
+ST_2 : Operation 220 [1/1] (0.00ns)   --->   "%phaseClass4_V_1_load = load i16* @phaseClass4_V_1, align 2" [correlator.cpp:277]
+ST_2 : Operation 221 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_1_load, i16* @phaseClass4_V_2, align 4" [correlator.cpp:277]
+ST_2 : Operation 222 [1/1] (0.00ns)   --->   "%phaseClass4_V_0_load = load i16* @phaseClass4_V_0, align 16" [correlator.cpp:277]
+ST_2 : Operation 223 [1/1] (0.00ns)   --->   "store i16 %phaseClass4_V_0_load, i16* @phaseClass4_V_1, align 2" [correlator.cpp:277]
+ST_2 : Operation 224 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass4_V_0, align 16" [correlator.cpp:279]
+ST_2 : Operation 225 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:281]
+ST_2 : Operation 226 [1/1] (0.00ns)   --->   "%phaseClass3_V_6_load = load i16* @phaseClass3_V_6, align 4" [correlator.cpp:269]
+ST_2 : Operation 227 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_6_load, i16* @phaseClass3_V_7, align 2" [correlator.cpp:269]
+ST_2 : Operation 228 [1/1] (0.00ns)   --->   "%phaseClass3_V_5_load = load i16* @phaseClass3_V_5, align 2" [correlator.cpp:269]
+ST_2 : Operation 229 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_5_load, i16* @phaseClass3_V_6, align 4" [correlator.cpp:269]
+ST_2 : Operation 230 [1/1] (0.00ns)   --->   "%phaseClass3_V_4_load = load i16* @phaseClass3_V_4, align 8" [correlator.cpp:269]
+ST_2 : Operation 231 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_4_load, i16* @phaseClass3_V_5, align 2" [correlator.cpp:269]
+ST_2 : Operation 232 [1/1] (0.00ns)   --->   "%phaseClass3_V_3_load = load i16* @phaseClass3_V_3, align 2" [correlator.cpp:269]
+ST_2 : Operation 233 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_3_load, i16* @phaseClass3_V_4, align 8" [correlator.cpp:269]
+ST_2 : Operation 234 [1/1] (0.00ns)   --->   "%phaseClass3_V_2_load = load i16* @phaseClass3_V_2, align 4" [correlator.cpp:269]
+ST_2 : Operation 235 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_2_load, i16* @phaseClass3_V_3, align 2" [correlator.cpp:269]
+ST_2 : Operation 236 [1/1] (0.00ns)   --->   "%phaseClass3_V_1_load = load i16* @phaseClass3_V_1, align 2" [correlator.cpp:269]
+ST_2 : Operation 237 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_1_load, i16* @phaseClass3_V_2, align 4" [correlator.cpp:269]
+ST_2 : Operation 238 [1/1] (0.00ns)   --->   "%phaseClass3_V_0_load = load i16* @phaseClass3_V_0, align 16" [correlator.cpp:269]
+ST_2 : Operation 239 [1/1] (0.00ns)   --->   "store i16 %phaseClass3_V_0_load, i16* @phaseClass3_V_1, align 2" [correlator.cpp:269]
+ST_2 : Operation 240 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass3_V_0, align 16" [correlator.cpp:271]
+ST_2 : Operation 241 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:273]
+ST_2 : Operation 242 [1/1] (0.00ns)   --->   "%phaseClass2_V_6_load = load i16* @phaseClass2_V_6, align 4" [correlator.cpp:260]
+ST_2 : Operation 243 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_6_load, i16* @phaseClass2_V_7, align 2" [correlator.cpp:260]
+ST_2 : Operation 244 [1/1] (0.00ns)   --->   "%phaseClass2_V_5_load = load i16* @phaseClass2_V_5, align 2" [correlator.cpp:260]
+ST_2 : Operation 245 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_5_load, i16* @phaseClass2_V_6, align 4" [correlator.cpp:260]
+ST_2 : Operation 246 [1/1] (0.00ns)   --->   "%phaseClass2_V_4_load = load i16* @phaseClass2_V_4, align 8" [correlator.cpp:260]
+ST_2 : Operation 247 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_4_load, i16* @phaseClass2_V_5, align 2" [correlator.cpp:260]
+ST_2 : Operation 248 [1/1] (0.00ns)   --->   "%phaseClass2_V_3_load = load i16* @phaseClass2_V_3, align 2" [correlator.cpp:260]
+ST_2 : Operation 249 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_3_load, i16* @phaseClass2_V_4, align 8" [correlator.cpp:260]
+ST_2 : Operation 250 [1/1] (0.00ns)   --->   "%phaseClass2_V_2_load = load i16* @phaseClass2_V_2, align 4" [correlator.cpp:260]
+ST_2 : Operation 251 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_2_load, i16* @phaseClass2_V_3, align 2" [correlator.cpp:260]
+ST_2 : Operation 252 [1/1] (0.00ns)   --->   "%phaseClass2_V_1_load = load i16* @phaseClass2_V_1, align 2" [correlator.cpp:260]
+ST_2 : Operation 253 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_1_load, i16* @phaseClass2_V_2, align 4" [correlator.cpp:260]
+ST_2 : Operation 254 [1/1] (0.00ns)   --->   "%phaseClass2_V_0_load = load i16* @phaseClass2_V_0, align 16" [correlator.cpp:260]
+ST_2 : Operation 255 [1/1] (0.00ns)   --->   "store i16 %phaseClass2_V_0_load, i16* @phaseClass2_V_1, align 2" [correlator.cpp:260]
+ST_2 : Operation 256 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass2_V_0, align 16" [correlator.cpp:262]
+ST_2 : Operation 257 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:265]
+ST_2 : Operation 258 [1/1] (0.00ns)   --->   "%phaseClass1_V_6_load = load i16* @phaseClass1_V_6, align 4" [correlator.cpp:252]
+ST_2 : Operation 259 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_6_load, i16* @phaseClass1_V_7, align 2" [correlator.cpp:252]
+ST_2 : Operation 260 [1/1] (0.00ns)   --->   "%phaseClass1_V_5_load = load i16* @phaseClass1_V_5, align 2" [correlator.cpp:252]
+ST_2 : Operation 261 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_5_load, i16* @phaseClass1_V_6, align 4" [correlator.cpp:252]
+ST_2 : Operation 262 [1/1] (0.00ns)   --->   "%phaseClass1_V_4_load = load i16* @phaseClass1_V_4, align 8" [correlator.cpp:252]
+ST_2 : Operation 263 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_4_load, i16* @phaseClass1_V_5, align 2" [correlator.cpp:252]
+ST_2 : Operation 264 [1/1] (0.00ns)   --->   "%phaseClass1_V_3_load = load i16* @phaseClass1_V_3, align 2" [correlator.cpp:252]
+ST_2 : Operation 265 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_3_load, i16* @phaseClass1_V_4, align 8" [correlator.cpp:252]
+ST_2 : Operation 266 [1/1] (0.00ns)   --->   "%phaseClass1_V_2_load = load i16* @phaseClass1_V_2, align 4" [correlator.cpp:252]
+ST_2 : Operation 267 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_2_load, i16* @phaseClass1_V_3, align 2" [correlator.cpp:252]
+ST_2 : Operation 268 [1/1] (0.00ns)   --->   "%phaseClass1_V_1_load = load i16* @phaseClass1_V_1, align 2" [correlator.cpp:252]
+ST_2 : Operation 269 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_1_load, i16* @phaseClass1_V_2, align 4" [correlator.cpp:252]
+ST_2 : Operation 270 [1/1] (0.00ns)   --->   "%phaseClass1_V_0_load = load i16* @phaseClass1_V_0, align 16" [correlator.cpp:252]
+ST_2 : Operation 271 [1/1] (0.00ns)   --->   "store i16 %phaseClass1_V_0_load, i16* @phaseClass1_V_1, align 2" [correlator.cpp:252]
+ST_2 : Operation 272 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass1_V_0, align 16" [correlator.cpp:254]
+ST_2 : Operation 273 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:256]
 ST_2 : Operation 274 [1/1] (0.00ns)   --->   "%phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 4" [correlator.cpp:231]
 ST_2 : Operation 275 [1/1] (0.00ns)   --->   "%phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2" [correlator.cpp:231]
 ST_2 : Operation 276 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4" [correlator.cpp:231]
@@ -402,65 +402,63 @@ ST_2 : Operation 300 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_1_load, i
 ST_2 : Operation 301 [1/1] (0.00ns)   --->   "%phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 16" [correlator.cpp:231]
 ST_2 : Operation 302 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2" [correlator.cpp:231]
 ST_2 : Operation 303 [1/1] (0.00ns)   --->   "store i16 %tmp_1, i16* @phaseClass0_V_0, align 16" [correlator.cpp:233]
-ST_2 : Operation 304 [1/1] (0.00ns)   --->   "%corHelperI_V_load = load i16* @corHelperI_V, align 2" [correlator.cpp:238]
-ST_2 : Operation 305 [1/1] (0.00ns)   --->   "%Phase0_V_6_load = load i16* @Phase0_V_6, align 4" [correlator.cpp:241]
-ST_2 : Operation 306 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2" [correlator.cpp:241]
-ST_2 : Operation 307 [1/1] (0.00ns)   --->   "%Phase0_V_5_load = load i16* @Phase0_V_5, align 2" [correlator.cpp:241]
-ST_2 : Operation 308 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_5_load, i16* @Phase0_V_6, align 4" [correlator.cpp:241]
-ST_2 : Operation 309 [1/1] (0.00ns)   --->   "%Phase0_V_4_load = load i16* @Phase0_V_4, align 8" [correlator.cpp:241]
-ST_2 : Operation 310 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_4_load, i16* @Phase0_V_5, align 2" [correlator.cpp:241]
-ST_2 : Operation 311 [1/1] (0.00ns)   --->   "%Phase0_V_3_load = load i16* @Phase0_V_3, align 2" [correlator.cpp:241]
-ST_2 : Operation 312 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_3_load, i16* @Phase0_V_4, align 8" [correlator.cpp:241]
-ST_2 : Operation 313 [1/1] (0.00ns)   --->   "%Phase0_V_2_load = load i16* @Phase0_V_2, align 4" [correlator.cpp:241]
-ST_2 : Operation 314 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_2_load, i16* @Phase0_V_3, align 2" [correlator.cpp:241]
-ST_2 : Operation 315 [1/1] (0.00ns)   --->   "%Phase0_V_1_load = load i16* @Phase0_V_1, align 2" [correlator.cpp:241]
-ST_2 : Operation 316 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_1_load, i16* @Phase0_V_2, align 4" [correlator.cpp:241]
-ST_2 : Operation 317 [1/1] (0.00ns)   --->   "%Phase0_V_0_load = load i16* @Phase0_V_0, align 16" [correlator.cpp:241]
-ST_2 : Operation 318 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_0_load, i16* @Phase0_V_1, align 2" [correlator.cpp:241]
-ST_2 : Operation 319 [1/1] (1.48ns)   --->   "%tmp8 = add i16 %phaseClass0_V_1_load, %phaseClass0_V_0_load" [correlator.cpp:238]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 320 [1/1] (1.48ns)   --->   "%tmp9 = add i16 %phaseClass0_V_2_load, %phaseClass0_V_7_load" [correlator.cpp:238]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 321 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %tmp9, %tmp8" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 322 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %corHelperI_V_load, %phaseClass0_V_14_loa" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 323 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i16 %phaseClass0_V_12_loa, %tmp_1" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 324 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp3 = add i16 %tmp2, %phaseClass0_V_9_load" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 325 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp4 = add i16 %tmp3, %tmp1" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 326 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_3_4 = add i16 %tmp4, %tmp7" [correlator.cpp:238]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 327 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2" [correlator.cpp:238]
-ST_2 : Operation 328 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @Phase0_V_0, align 16" [correlator.cpp:243]
-ST_2 : Operation 329 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_3_4, i32 0, i32 15)" [correlator.cpp:244]
-ST_2 : Operation 330 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:246]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_2 : Operation 331 [1/1] (0.00ns)   --->   "br label %._crit_edge1062" [correlator.cpp:247]
+ST_2 : Operation 304 [1/1] (0.00ns)   --->   "%Phase0_V_6_load = load i16* @Phase0_V_6, align 4" [correlator.cpp:242]
+ST_2 : Operation 305 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2" [correlator.cpp:242]
+ST_2 : Operation 306 [1/1] (0.00ns)   --->   "%Phase0_V_5_load = load i16* @Phase0_V_5, align 2" [correlator.cpp:242]
+ST_2 : Operation 307 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_5_load, i16* @Phase0_V_6, align 4" [correlator.cpp:242]
+ST_2 : Operation 308 [1/1] (0.00ns)   --->   "%Phase0_V_4_load = load i16* @Phase0_V_4, align 8" [correlator.cpp:242]
+ST_2 : Operation 309 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_4_load, i16* @Phase0_V_5, align 2" [correlator.cpp:242]
+ST_2 : Operation 310 [1/1] (0.00ns)   --->   "%Phase0_V_3_load = load i16* @Phase0_V_3, align 2" [correlator.cpp:242]
+ST_2 : Operation 311 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_3_load, i16* @Phase0_V_4, align 8" [correlator.cpp:242]
+ST_2 : Operation 312 [1/1] (0.00ns)   --->   "%Phase0_V_2_load = load i16* @Phase0_V_2, align 4" [correlator.cpp:242]
+ST_2 : Operation 313 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_2_load, i16* @Phase0_V_3, align 2" [correlator.cpp:242]
+ST_2 : Operation 314 [1/1] (0.00ns)   --->   "%Phase0_V_1_load = load i16* @Phase0_V_1, align 2" [correlator.cpp:242]
+ST_2 : Operation 315 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_1_load, i16* @Phase0_V_2, align 4" [correlator.cpp:242]
+ST_2 : Operation 316 [1/1] (0.00ns)   --->   "%Phase0_V_0_load = load i16* @Phase0_V_0, align 16" [correlator.cpp:242]
+ST_2 : Operation 317 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_0_load, i16* @Phase0_V_1, align 2" [correlator.cpp:242]
+ST_2 : Operation 318 [1/1] (1.48ns)   --->   "%tmp7 = add i16 %phaseClass0_V_1_load, %phaseClass0_V_0_load" [correlator.cpp:239]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 319 [1/1] (1.48ns)   --->   "%tmp8 = add i16 %phaseClass0_V_2_load, %phaseClass0_V_7_load" [correlator.cpp:239]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 320 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp6 = add i16 %tmp8, %tmp7" [correlator.cpp:239]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 321 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %phaseClass0_V_12_loa, %phaseClass0_V_9_load" [correlator.cpp:239]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 322 [1/1] (1.48ns)   --->   "%tmp2 = add i16 %phaseClass0_V_14_loa, %tmp_1" [correlator.cpp:239]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 323 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp9 = add i16 %tmp2, %tmp1" [correlator.cpp:239]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 324 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_3_4 = add i16 %tmp9, %tmp6" [correlator.cpp:239]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 325 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2" [correlator.cpp:239]
+ST_2 : Operation 326 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @Phase0_V_0, align 16" [correlator.cpp:244]
+ST_2 : Operation 327 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_3_4, i32 0, i32 15)" [correlator.cpp:245]
+ST_2 : Operation 328 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:247]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 329 [1/1] (0.00ns)   --->   "br label %._crit_edge1075" [correlator.cpp:248]
 
  <State 3> : 1.78ns
-ST_3 : Operation 332 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !77"
-ST_3 : Operation 333 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !81"
-ST_3 : Operation 334 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !85"
-ST_3 : Operation 335 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !89"
-ST_3 : Operation 336 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !93"
-ST_3 : Operation 337 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !99"
-ST_3 : Operation 338 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind"
-ST_3 : Operation 339 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [correlator.cpp:12]
-ST_3 : Operation 340 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:14]
-ST_3 : Operation 341 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:15]
-ST_3 : Operation 342 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:16]
-ST_3 : Operation 343 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [correlator.cpp:18]
-ST_3 : Operation 344 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:165]
-ST_3 : Operation 345 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @phaseClassValid_V_1, i1* @phaseClassValid_V_2, i1* @phaseClassValid_V_3, i1* @phaseClassValid_V_4, i1* @phaseClassValid_V_5, i1* @phaseClassValid_V_6, i1* @phaseClassValid_V_7, i1* @phaseClassValid_V_8, i1* @phaseClassValid_V_9, i1* @phaseClassValid_V_10, i1* @phaseClassValid_V_11, i1* @phaseClassValid_V_12, i1* @phaseClassValid_V_13, i1* @phaseClassValid_V_14, i1* @phaseClassValid_V_15, i32 1, [1 x i8]* @p_str)" [correlator.cpp:172]
-ST_3 : Operation 346 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:182]
-ST_3 : Operation 347 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:185]
-ST_3 : Operation 348 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:190]
-ST_3 : Operation 349 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:196]
-ST_3 : Operation 350 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:199]
-ST_3 : Operation 351 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:204]
-ST_3 : Operation 352 [1/1] (0.00ns)   --->   "br label %._crit_edge1060" [correlator.cpp:214]
-ST_3 : Operation 353 [1/1] (0.00ns)   --->   "br label %._crit_edge1059" [correlator.cpp:215]
-ST_3 : Operation 354 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:246]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_3 : Operation 355 [1/1] (0.00ns)   --->   "%loadCount_V_load = load i32* @loadCount_V, align 4" [correlator.cpp:371]
-ST_3 : Operation 356 [1/1] (1.78ns)   --->   "%tmp_s = add i32 %loadCount_V_load, 1" [correlator.cpp:371]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 357 [1/1] (0.00ns)   --->   "store i32 %tmp_s, i32* @loadCount_V, align 4" [correlator.cpp:371]
-ST_3 : Operation 358 [1/1] (0.00ns)   --->   "br label %._crit_edge1061" [correlator.cpp:373]
-ST_3 : Operation 359 [1/1] (0.00ns)   --->   "br label %._crit_edge1059" [correlator.cpp:375]
-ST_3 : Operation 360 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:576]
+ST_3 : Operation 330 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !85"
+ST_3 : Operation 331 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !89"
+ST_3 : Operation 332 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !93"
+ST_3 : Operation 333 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !97"
+ST_3 : Operation 334 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !101"
+ST_3 : Operation 335 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !107"
+ST_3 : Operation 336 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind"
+ST_3 : Operation 337 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [correlator.cpp:12]
+ST_3 : Operation 338 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:14]
+ST_3 : Operation 339 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:15]
+ST_3 : Operation 340 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:16]
+ST_3 : Operation 341 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [correlator.cpp:18]
+ST_3 : Operation 342 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:165]
+ST_3 : Operation 343 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @phaseClassValid_V_1, i1* @phaseClassValid_V_2, i1* @phaseClassValid_V_3, i1* @phaseClassValid_V_4, i1* @phaseClassValid_V_5, i1* @phaseClassValid_V_6, i1* @phaseClassValid_V_7, i1* @phaseClassValid_V_8, i1* @phaseClassValid_V_9, i1* @phaseClassValid_V_10, i1* @phaseClassValid_V_11, i1* @phaseClassValid_V_12, i1* @phaseClassValid_V_13, i1* @phaseClassValid_V_14, i1* @phaseClassValid_V_15, i32 1, [1 x i8]* @p_str)" [correlator.cpp:172]
+ST_3 : Operation 344 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:182]
+ST_3 : Operation 345 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:185]
+ST_3 : Operation 346 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:190]
+ST_3 : Operation 347 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:196]
+ST_3 : Operation 348 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:199]
+ST_3 : Operation 349 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:204]
+ST_3 : Operation 350 [1/1] (0.00ns)   --->   "br label %._crit_edge1073" [correlator.cpp:214]
+ST_3 : Operation 351 [1/1] (0.00ns)   --->   "br label %._crit_edge1072" [correlator.cpp:215]
+ST_3 : Operation 352 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:247]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 353 [1/1] (0.00ns)   --->   "%loadCount_V_load = load i32* @loadCount_V, align 4" [correlator.cpp:372]
+ST_3 : Operation 354 [1/1] (1.78ns)   --->   "%tmp_s = add i32 %loadCount_V_load, 1" [correlator.cpp:372]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 355 [1/1] (0.00ns)   --->   "store i32 %tmp_s, i32* @loadCount_V, align 4" [correlator.cpp:372]
+ST_3 : Operation 356 [1/1] (0.00ns)   --->   "br label %._crit_edge1074" [correlator.cpp:374]
+ST_3 : Operation 357 [1/1] (0.00ns)   --->   "br label %._crit_edge1072" [correlator.cpp:376]
+ST_3 : Operation 358 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:577]
 
 
 ============================================================
@@ -497,7 +495,6 @@ Port [ phaseClass0_V_3]:  wired=0; compound=0; hidden=1; nouse=0; global=1; stat
 Port [ phaseClass0_V_2]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ phaseClass0_V_1]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ phaseClass0_V_0]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
-Port [ corHelperI_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ Phase0_V_6]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ Phase0_V_7]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_vld:ce=0
 Port [ Phase0_V_5]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
@@ -506,6 +503,7 @@ Port [ Phase0_V_3]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1;
 Port [ Phase0_V_2]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ Phase0_V_1]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ Phase0_V_0]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ corHelperI_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_vld:ce=0
 Port [ phaseClass1_V_6]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ phaseClass1_V_7]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_vld:ce=0
 Port [ phaseClass1_V_5]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
@@ -948,62 +946,60 @@ StgValue_300         (store        ) [ 0000]
 phaseClass0_V_0_load (load         ) [ 0000]
 StgValue_302         (store        ) [ 0000]
 StgValue_303         (store        ) [ 0000]
-corHelperI_V_load    (load         ) [ 0000]
 Phase0_V_6_load      (load         ) [ 0000]
-StgValue_306         (store        ) [ 0000]
+StgValue_305         (store        ) [ 0000]
 Phase0_V_5_load      (load         ) [ 0000]
-StgValue_308         (store        ) [ 0000]
+StgValue_307         (store        ) [ 0000]
 Phase0_V_4_load      (load         ) [ 0000]
-StgValue_310         (store        ) [ 0000]
+StgValue_309         (store        ) [ 0000]
 Phase0_V_3_load      (load         ) [ 0000]
-StgValue_312         (store        ) [ 0000]
+StgValue_311         (store        ) [ 0000]
 Phase0_V_2_load      (load         ) [ 0000]
-StgValue_314         (store        ) [ 0000]
+StgValue_313         (store        ) [ 0000]
 Phase0_V_1_load      (load         ) [ 0000]
-StgValue_316         (store        ) [ 0000]
+StgValue_315         (store        ) [ 0000]
 Phase0_V_0_load      (load         ) [ 0000]
-StgValue_318         (store        ) [ 0000]
-tmp8                 (add          ) [ 0000]
-tmp9                 (add          ) [ 0000]
+StgValue_317         (store        ) [ 0000]
 tmp7                 (add          ) [ 0000]
+tmp8                 (add          ) [ 0000]
+tmp6                 (add          ) [ 0000]
 tmp1                 (add          ) [ 0000]
 tmp2                 (add          ) [ 0000]
-tmp3                 (add          ) [ 0000]
-tmp4                 (add          ) [ 0000]
+tmp9                 (add          ) [ 0000]
 p_Val2_3_4           (add          ) [ 0000]
-StgValue_327         (store        ) [ 0000]
-StgValue_328         (store        ) [ 0000]
+StgValue_325         (store        ) [ 0000]
+StgValue_326         (store        ) [ 0000]
 p_Result_s           (partset      ) [ 0101]
-StgValue_331         (br           ) [ 0000]
+StgValue_329         (br           ) [ 0000]
+StgValue_330         (specbitsmap  ) [ 0000]
+StgValue_331         (specbitsmap  ) [ 0000]
 StgValue_332         (specbitsmap  ) [ 0000]
 StgValue_333         (specbitsmap  ) [ 0000]
 StgValue_334         (specbitsmap  ) [ 0000]
 StgValue_335         (specbitsmap  ) [ 0000]
-StgValue_336         (specbitsmap  ) [ 0000]
-StgValue_337         (specbitsmap  ) [ 0000]
-StgValue_338         (spectopmodule) [ 0000]
-StgValue_339         (specresource ) [ 0000]
+StgValue_336         (spectopmodule) [ 0000]
+StgValue_337         (specresource ) [ 0000]
+StgValue_338         (specinterface) [ 0000]
+StgValue_339         (specinterface) [ 0000]
 StgValue_340         (specinterface) [ 0000]
-StgValue_341         (specinterface) [ 0000]
-StgValue_342         (specinterface) [ 0000]
-StgValue_343         (specpipeline ) [ 0000]
+StgValue_341         (specpipeline ) [ 0000]
+StgValue_342         (specreset    ) [ 0000]
+StgValue_343         (specreset    ) [ 0000]
 StgValue_344         (specreset    ) [ 0000]
 StgValue_345         (specreset    ) [ 0000]
 StgValue_346         (specreset    ) [ 0000]
 StgValue_347         (specreset    ) [ 0000]
 StgValue_348         (specreset    ) [ 0000]
 StgValue_349         (specreset    ) [ 0000]
-StgValue_350         (specreset    ) [ 0000]
-StgValue_351         (specreset    ) [ 0000]
-StgValue_352         (br           ) [ 0000]
-StgValue_353         (br           ) [ 0000]
-StgValue_354         (write        ) [ 0000]
+StgValue_350         (br           ) [ 0000]
+StgValue_351         (br           ) [ 0000]
+StgValue_352         (write        ) [ 0000]
 loadCount_V_load     (load         ) [ 0000]
 tmp_s                (add          ) [ 0000]
-StgValue_357         (store        ) [ 0000]
-StgValue_358         (br           ) [ 0000]
-StgValue_359         (br           ) [ 0000]
-StgValue_360         (ret          ) [ 0000]
+StgValue_355         (store        ) [ 0000]
+StgValue_356         (br           ) [ 0000]
+StgValue_357         (br           ) [ 0000]
+StgValue_358         (ret          ) [ 0000]
 </LifeTime>
 
 <model>
@@ -1216,84 +1212,84 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="46" class="1000" name="corHelperI_V">
+<comp id="46" class="1000" name="Phase0_V_6">
 <pin_list>
 <pin id="47" dir="1" index="0" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="corHelperI_V"/></StgValue>
-</bind>
-</comp>
-
-<comp id="48" class="1000" name="Phase0_V_6">
-<pin_list>
-<pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_6"/></StgValue>
 </bind>
 </comp>
 
-<comp id="50" class="1000" name="Phase0_V_7">
+<comp id="48" class="1000" name="Phase0_V_7">
 <pin_list>
-<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_7"/></StgValue>
 </bind>
 </comp>
 
-<comp id="52" class="1000" name="Phase0_V_5">
+<comp id="50" class="1000" name="Phase0_V_5">
 <pin_list>
-<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_5"/></StgValue>
 </bind>
 </comp>
 
-<comp id="54" class="1000" name="Phase0_V_4">
+<comp id="52" class="1000" name="Phase0_V_4">
 <pin_list>
-<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_4"/></StgValue>
 </bind>
 </comp>
 
-<comp id="56" class="1000" name="Phase0_V_3">
+<comp id="54" class="1000" name="Phase0_V_3">
 <pin_list>
-<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_3"/></StgValue>
 </bind>
 </comp>
 
-<comp id="58" class="1000" name="Phase0_V_2">
+<comp id="56" class="1000" name="Phase0_V_2">
 <pin_list>
-<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_2"/></StgValue>
 </bind>
 </comp>
 
-<comp id="60" class="1000" name="Phase0_V_1">
+<comp id="58" class="1000" name="Phase0_V_1">
 <pin_list>
-<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="Phase0_V_1"/></StgValue>
 </bind>
 </comp>
 
-<comp id="62" class="1000" name="Phase0_V_0">
+<comp id="60" class="1000" name="Phase0_V_0">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Phase0_V_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="corHelperI_V">
 <pin_list>
 <pin id="63" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Phase0_V_0"/></StgValue>
+<StgValue><ssdm name="corHelperI_V"/></StgValue>
 </bind>
 </comp>
 
@@ -2925,7 +2921,7 @@ StgValue_360         (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="StgValue_330/2 "/>
+<opset="StgValue_328/2 "/>
 </bind>
 </comp>
 
@@ -6117,21 +6113,10 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1844" class="1004" name="corHelperI_V_load_load_fu_1844">
+<comp id="1844" class="1004" name="Phase0_V_6_load_load_fu_1844">
 <pin_list>
 <pin id="1845" dir="0" index="0" bw="16" slack="0"/>
 <pin id="1846" dir="1" index="1" bw="16" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) " fcode="load"/>
-<opset="corHelperI_V_load/2 "/>
-</bind>
-</comp>
-
-<comp id="1848" class="1004" name="Phase0_V_6_load_load_fu_1848">
-<pin_list>
-<pin id="1849" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1850" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6139,22 +6124,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1852" class="1004" name="StgValue_306_store_fu_1852">
+<comp id="1848" class="1004" name="StgValue_305_store_fu_1848">
 <pin_list>
-<pin id="1853" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1854" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1855" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1849" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1850" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1851" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_306/2 "/>
+<opset="StgValue_305/2 "/>
 </bind>
 </comp>
 
-<comp id="1858" class="1004" name="Phase0_V_5_load_load_fu_1858">
+<comp id="1854" class="1004" name="Phase0_V_5_load_load_fu_1854">
 <pin_list>
-<pin id="1859" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1860" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1855" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1856" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6162,22 +6147,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1862" class="1004" name="StgValue_308_store_fu_1862">
+<comp id="1858" class="1004" name="StgValue_307_store_fu_1858">
 <pin_list>
-<pin id="1863" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1864" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1865" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1859" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1860" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1861" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_308/2 "/>
+<opset="StgValue_307/2 "/>
 </bind>
 </comp>
 
-<comp id="1868" class="1004" name="Phase0_V_4_load_load_fu_1868">
+<comp id="1864" class="1004" name="Phase0_V_4_load_load_fu_1864">
 <pin_list>
-<pin id="1869" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1870" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1865" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1866" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6185,22 +6170,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1872" class="1004" name="StgValue_310_store_fu_1872">
+<comp id="1868" class="1004" name="StgValue_309_store_fu_1868">
 <pin_list>
-<pin id="1873" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1874" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1875" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1869" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1870" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1871" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_310/2 "/>
+<opset="StgValue_309/2 "/>
 </bind>
 </comp>
 
-<comp id="1878" class="1004" name="Phase0_V_3_load_load_fu_1878">
+<comp id="1874" class="1004" name="Phase0_V_3_load_load_fu_1874">
 <pin_list>
-<pin id="1879" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1880" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1875" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1876" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6208,22 +6193,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1882" class="1004" name="StgValue_312_store_fu_1882">
+<comp id="1878" class="1004" name="StgValue_311_store_fu_1878">
 <pin_list>
-<pin id="1883" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1884" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1885" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1879" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1880" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1881" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_312/2 "/>
+<opset="StgValue_311/2 "/>
 </bind>
 </comp>
 
-<comp id="1888" class="1004" name="Phase0_V_2_load_load_fu_1888">
+<comp id="1884" class="1004" name="Phase0_V_2_load_load_fu_1884">
 <pin_list>
-<pin id="1889" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1890" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1885" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1886" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6231,22 +6216,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1892" class="1004" name="StgValue_314_store_fu_1892">
+<comp id="1888" class="1004" name="StgValue_313_store_fu_1888">
 <pin_list>
-<pin id="1893" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1894" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1895" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1889" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1890" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1891" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_314/2 "/>
+<opset="StgValue_313/2 "/>
 </bind>
 </comp>
 
-<comp id="1898" class="1004" name="Phase0_V_1_load_load_fu_1898">
+<comp id="1894" class="1004" name="Phase0_V_1_load_load_fu_1894">
 <pin_list>
-<pin id="1899" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1900" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1895" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1896" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6254,22 +6239,22 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1902" class="1004" name="StgValue_316_store_fu_1902">
+<comp id="1898" class="1004" name="StgValue_315_store_fu_1898">
 <pin_list>
-<pin id="1903" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1904" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1905" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1899" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1900" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1901" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_316/2 "/>
+<opset="StgValue_315/2 "/>
 </bind>
 </comp>
 
-<comp id="1908" class="1004" name="Phase0_V_0_load_load_fu_1908">
+<comp id="1904" class="1004" name="Phase0_V_0_load_load_fu_1904">
 <pin_list>
-<pin id="1909" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1910" dir="1" index="1" bw="16" slack="0"/>
+<pin id="1905" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1906" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6277,47 +6262,23 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1912" class="1004" name="StgValue_318_store_fu_1912">
+<comp id="1908" class="1004" name="StgValue_317_store_fu_1908">
 <pin_list>
-<pin id="1913" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1914" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1915" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1909" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1910" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1911" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_318/2 "/>
+<opset="StgValue_317/2 "/>
 </bind>
 </comp>
 
-<comp id="1918" class="1004" name="tmp8_fu_1918">
+<comp id="1914" class="1004" name="tmp7_fu_1914">
 <pin_list>
-<pin id="1919" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1920" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1921" dir="1" index="2" bw="16" slack="0"/>
-</pin_list>
-<bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp8/2 "/>
-</bind>
-</comp>
-
-<comp id="1924" class="1004" name="tmp9_fu_1924">
-<pin_list>
-<pin id="1925" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1926" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1927" dir="1" index="2" bw="16" slack="0"/>
-</pin_list>
-<bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp9/2 "/>
-</bind>
-</comp>
-
-<comp id="1930" class="1004" name="tmp7_fu_1930">
-<pin_list>
-<pin id="1931" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1932" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1933" dir="1" index="2" bw="16" slack="0"/>
+<pin id="1915" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1916" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1917" dir="1" index="2" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -6325,11 +6286,35 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1936" class="1004" name="tmp1_fu_1936">
+<comp id="1920" class="1004" name="tmp8_fu_1920">
 <pin_list>
-<pin id="1937" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1938" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1939" dir="1" index="2" bw="16" slack="0"/>
+<pin id="1921" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1922" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1923" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp8/2 "/>
+</bind>
+</comp>
+
+<comp id="1926" class="1004" name="tmp6_fu_1926">
+<pin_list>
+<pin id="1927" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1928" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1929" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp6/2 "/>
+</bind>
+</comp>
+
+<comp id="1932" class="1004" name="tmp1_fu_1932">
+<pin_list>
+<pin id="1933" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1934" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1935" dir="1" index="2" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -6337,11 +6322,11 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1942" class="1004" name="tmp2_fu_1942">
+<comp id="1938" class="1004" name="tmp2_fu_1938">
 <pin_list>
-<pin id="1943" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1944" dir="0" index="1" bw="16" slack="1"/>
-<pin id="1945" dir="1" index="2" bw="16" slack="0"/>
+<pin id="1939" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1940" dir="0" index="1" bw="16" slack="1"/>
+<pin id="1941" dir="1" index="2" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -6349,35 +6334,23 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1947" class="1004" name="tmp3_fu_1947">
+<comp id="1943" class="1004" name="tmp9_fu_1943">
 <pin_list>
-<pin id="1948" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1949" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1950" dir="1" index="2" bw="16" slack="0"/>
+<pin id="1944" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1945" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1946" dir="1" index="2" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp3/2 "/>
+<opset="tmp9/2 "/>
 </bind>
 </comp>
 
-<comp id="1953" class="1004" name="tmp4_fu_1953">
+<comp id="1949" class="1004" name="p_Val2_3_4_fu_1949">
 <pin_list>
-<pin id="1954" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1955" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1956" dir="1" index="2" bw="16" slack="0"/>
-</pin_list>
-<bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp4/2 "/>
-</bind>
-</comp>
-
-<comp id="1959" class="1004" name="p_Val2_3_4_fu_1959">
-<pin_list>
-<pin id="1960" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1961" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1962" dir="1" index="2" bw="16" slack="0"/>
+<pin id="1950" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1951" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1952" dir="1" index="2" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -6385,38 +6358,38 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1965" class="1004" name="StgValue_327_store_fu_1965">
+<comp id="1955" class="1004" name="StgValue_325_store_fu_1955">
 <pin_list>
-<pin id="1966" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1967" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1968" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1956" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1957" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1958" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_327/2 "/>
+<opset="StgValue_325/2 "/>
 </bind>
 </comp>
 
-<comp id="1971" class="1004" name="StgValue_328_store_fu_1971">
+<comp id="1961" class="1004" name="StgValue_326_store_fu_1961">
 <pin_list>
-<pin id="1972" dir="0" index="0" bw="16" slack="0"/>
-<pin id="1973" dir="0" index="1" bw="16" slack="0"/>
-<pin id="1974" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1962" dir="0" index="0" bw="16" slack="0"/>
+<pin id="1963" dir="0" index="1" bw="16" slack="0"/>
+<pin id="1964" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_328/2 "/>
+<opset="StgValue_326/2 "/>
 </bind>
 </comp>
 
-<comp id="1977" class="1004" name="p_Result_s_fu_1977">
+<comp id="1967" class="1004" name="p_Result_s_fu_1967">
 <pin_list>
-<pin id="1978" dir="0" index="0" bw="32" slack="0"/>
-<pin id="1979" dir="0" index="1" bw="1" slack="0"/>
-<pin id="1980" dir="0" index="2" bw="16" slack="0"/>
-<pin id="1981" dir="0" index="3" bw="1" slack="0"/>
-<pin id="1982" dir="0" index="4" bw="5" slack="0"/>
-<pin id="1983" dir="1" index="5" bw="32" slack="0"/>
+<pin id="1968" dir="0" index="0" bw="32" slack="0"/>
+<pin id="1969" dir="0" index="1" bw="1" slack="0"/>
+<pin id="1970" dir="0" index="2" bw="16" slack="0"/>
+<pin id="1971" dir="0" index="3" bw="1" slack="0"/>
+<pin id="1972" dir="0" index="4" bw="5" slack="0"/>
+<pin id="1973" dir="1" index="5" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="partset(1003) " fcode="partset"/>
@@ -6424,10 +6397,10 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1990" class="1004" name="loadCount_V_load_load_fu_1990">
+<comp id="1980" class="1004" name="loadCount_V_load_load_fu_1980">
 <pin_list>
-<pin id="1991" dir="0" index="0" bw="32" slack="0"/>
-<pin id="1992" dir="1" index="1" bw="32" slack="0"/>
+<pin id="1981" dir="0" index="0" bw="32" slack="0"/>
+<pin id="1982" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -6435,11 +6408,11 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="1994" class="1004" name="tmp_s_fu_1994">
+<comp id="1984" class="1004" name="tmp_s_fu_1984">
 <pin_list>
-<pin id="1995" dir="0" index="0" bw="32" slack="0"/>
-<pin id="1996" dir="0" index="1" bw="1" slack="0"/>
-<pin id="1997" dir="1" index="2" bw="32" slack="0"/>
+<pin id="1985" dir="0" index="0" bw="32" slack="0"/>
+<pin id="1986" dir="0" index="1" bw="1" slack="0"/>
+<pin id="1987" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -6447,82 +6420,82 @@ StgValue_360         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="2000" class="1004" name="StgValue_357_store_fu_2000">
+<comp id="1990" class="1004" name="StgValue_355_store_fu_1990">
 <pin_list>
-<pin id="2001" dir="0" index="0" bw="32" slack="0"/>
-<pin id="2002" dir="0" index="1" bw="32" slack="0"/>
-<pin id="2003" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="1991" dir="0" index="0" bw="32" slack="0"/>
+<pin id="1992" dir="0" index="1" bw="32" slack="0"/>
+<pin id="1993" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_357/3 "/>
+<opset="StgValue_355/3 "/>
 </bind>
 </comp>
 
-<comp id="2006" class="1005" name="phaseClass_V_read_reg_2006">
+<comp id="1996" class="1005" name="phaseClass_V_read_reg_1996">
 <pin_list>
-<pin id="2007" dir="0" index="0" bw="4" slack="1"/>
-<pin id="2008" dir="1" index="1" bw="4" slack="2147483647"/>
+<pin id="1997" dir="0" index="0" bw="4" slack="1"/>
+<pin id="1998" dir="1" index="1" bw="4" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="phaseClass_V_read "/>
 </bind>
 </comp>
 
-<comp id="2010" class="1005" name="start_V_read_reg_2010">
+<comp id="2000" class="1005" name="start_V_read_reg_2000">
 <pin_list>
-<pin id="2011" dir="0" index="0" bw="1" slack="2"/>
-<pin id="2012" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="2001" dir="0" index="0" bw="1" slack="2"/>
+<pin id="2002" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="start_V_read "/>
 </bind>
 </comp>
 
-<comp id="2014" class="1005" name="currentState_load_reg_2014">
+<comp id="2004" class="1005" name="currentState_load_reg_2004">
 <pin_list>
-<pin id="2015" dir="0" index="0" bw="1" slack="1"/>
-<pin id="2016" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="2005" dir="0" index="0" bw="1" slack="1"/>
+<pin id="2006" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="currentState_load "/>
 </bind>
 </comp>
 
-<comp id="2018" class="1005" name="tmp_reg_2018">
+<comp id="2008" class="1005" name="tmp_reg_2008">
 <pin_list>
-<pin id="2019" dir="0" index="0" bw="1" slack="1"/>
-<pin id="2020" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="2009" dir="0" index="0" bw="1" slack="1"/>
+<pin id="2010" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="tmp "/>
 </bind>
 </comp>
 
-<comp id="2022" class="1005" name="tmp_last_V_reg_2022">
+<comp id="2012" class="1005" name="tmp_last_V_reg_2012">
 <pin_list>
-<pin id="2023" dir="0" index="0" bw="1" slack="1"/>
-<pin id="2024" dir="1" index="1" bw="1" slack="1"/>
+<pin id="2013" dir="0" index="0" bw="1" slack="1"/>
+<pin id="2014" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opset="tmp_last_V "/>
 </bind>
 </comp>
 
-<comp id="2027" class="1005" name="tmp_1_reg_2027">
+<comp id="2017" class="1005" name="tmp_1_reg_2017">
 <pin_list>
-<pin id="2028" dir="0" index="0" bw="16" slack="1"/>
-<pin id="2029" dir="1" index="1" bw="16" slack="1"/>
+<pin id="2018" dir="0" index="0" bw="16" slack="1"/>
+<pin id="2019" dir="1" index="1" bw="16" slack="1"/>
 </pin_list>
 <bind>
 <opset="tmp_1 "/>
 </bind>
 </comp>
 
-<comp id="2048" class="1005" name="p_Result_s_reg_2048">
+<comp id="2038" class="1005" name="p_Result_s_reg_2038">
 <pin_list>
-<pin id="2049" dir="0" index="0" bw="32" slack="1"/>
-<pin id="2050" dir="1" index="1" bw="32" slack="1"/>
+<pin id="2039" dir="0" index="0" bw="32" slack="1"/>
+<pin id="2040" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="p_Result_s "/>
@@ -7386,159 +7359,153 @@ StgValue_360         (ret          ) [ 0000]
 
 <net id="1847"><net_src comp="46" pin="0"/><net_sink comp="1844" pin=0"/></net>
 
-<net id="1851"><net_src comp="48" pin="0"/><net_sink comp="1848" pin=0"/></net>
+<net id="1852"><net_src comp="1844" pin="1"/><net_sink comp="1848" pin=0"/></net>
 
-<net id="1856"><net_src comp="1848" pin="1"/><net_sink comp="1852" pin=0"/></net>
+<net id="1853"><net_src comp="48" pin="0"/><net_sink comp="1848" pin=1"/></net>
 
-<net id="1857"><net_src comp="50" pin="0"/><net_sink comp="1852" pin=1"/></net>
+<net id="1857"><net_src comp="50" pin="0"/><net_sink comp="1854" pin=0"/></net>
 
-<net id="1861"><net_src comp="52" pin="0"/><net_sink comp="1858" pin=0"/></net>
+<net id="1862"><net_src comp="1854" pin="1"/><net_sink comp="1858" pin=0"/></net>
 
-<net id="1866"><net_src comp="1858" pin="1"/><net_sink comp="1862" pin=0"/></net>
+<net id="1863"><net_src comp="46" pin="0"/><net_sink comp="1858" pin=1"/></net>
 
-<net id="1867"><net_src comp="48" pin="0"/><net_sink comp="1862" pin=1"/></net>
+<net id="1867"><net_src comp="52" pin="0"/><net_sink comp="1864" pin=0"/></net>
 
-<net id="1871"><net_src comp="54" pin="0"/><net_sink comp="1868" pin=0"/></net>
+<net id="1872"><net_src comp="1864" pin="1"/><net_sink comp="1868" pin=0"/></net>
 
-<net id="1876"><net_src comp="1868" pin="1"/><net_sink comp="1872" pin=0"/></net>
+<net id="1873"><net_src comp="50" pin="0"/><net_sink comp="1868" pin=1"/></net>
 
-<net id="1877"><net_src comp="52" pin="0"/><net_sink comp="1872" pin=1"/></net>
+<net id="1877"><net_src comp="54" pin="0"/><net_sink comp="1874" pin=0"/></net>
 
-<net id="1881"><net_src comp="56" pin="0"/><net_sink comp="1878" pin=0"/></net>
+<net id="1882"><net_src comp="1874" pin="1"/><net_sink comp="1878" pin=0"/></net>
 
-<net id="1886"><net_src comp="1878" pin="1"/><net_sink comp="1882" pin=0"/></net>
+<net id="1883"><net_src comp="52" pin="0"/><net_sink comp="1878" pin=1"/></net>
 
-<net id="1887"><net_src comp="54" pin="0"/><net_sink comp="1882" pin=1"/></net>
+<net id="1887"><net_src comp="56" pin="0"/><net_sink comp="1884" pin=0"/></net>
 
-<net id="1891"><net_src comp="58" pin="0"/><net_sink comp="1888" pin=0"/></net>
+<net id="1892"><net_src comp="1884" pin="1"/><net_sink comp="1888" pin=0"/></net>
 
-<net id="1896"><net_src comp="1888" pin="1"/><net_sink comp="1892" pin=0"/></net>
+<net id="1893"><net_src comp="54" pin="0"/><net_sink comp="1888" pin=1"/></net>
 
-<net id="1897"><net_src comp="56" pin="0"/><net_sink comp="1892" pin=1"/></net>
+<net id="1897"><net_src comp="58" pin="0"/><net_sink comp="1894" pin=0"/></net>
 
-<net id="1901"><net_src comp="60" pin="0"/><net_sink comp="1898" pin=0"/></net>
+<net id="1902"><net_src comp="1894" pin="1"/><net_sink comp="1898" pin=0"/></net>
 
-<net id="1906"><net_src comp="1898" pin="1"/><net_sink comp="1902" pin=0"/></net>
+<net id="1903"><net_src comp="56" pin="0"/><net_sink comp="1898" pin=1"/></net>
 
-<net id="1907"><net_src comp="58" pin="0"/><net_sink comp="1902" pin=1"/></net>
+<net id="1907"><net_src comp="60" pin="0"/><net_sink comp="1904" pin=0"/></net>
 
-<net id="1911"><net_src comp="62" pin="0"/><net_sink comp="1908" pin=0"/></net>
+<net id="1912"><net_src comp="1904" pin="1"/><net_sink comp="1908" pin=0"/></net>
 
-<net id="1916"><net_src comp="1908" pin="1"/><net_sink comp="1912" pin=0"/></net>
+<net id="1913"><net_src comp="58" pin="0"/><net_sink comp="1908" pin=1"/></net>
 
-<net id="1917"><net_src comp="60" pin="0"/><net_sink comp="1912" pin=1"/></net>
+<net id="1918"><net_src comp="1819" pin="1"/><net_sink comp="1914" pin=0"/></net>
 
-<net id="1922"><net_src comp="1819" pin="1"/><net_sink comp="1918" pin=0"/></net>
+<net id="1919"><net_src comp="1829" pin="1"/><net_sink comp="1914" pin=1"/></net>
 
-<net id="1923"><net_src comp="1829" pin="1"/><net_sink comp="1918" pin=1"/></net>
+<net id="1924"><net_src comp="1809" pin="1"/><net_sink comp="1920" pin=0"/></net>
 
-<net id="1928"><net_src comp="1809" pin="1"/><net_sink comp="1924" pin=0"/></net>
+<net id="1925"><net_src comp="1759" pin="1"/><net_sink comp="1920" pin=1"/></net>
 
-<net id="1929"><net_src comp="1759" pin="1"/><net_sink comp="1924" pin=1"/></net>
+<net id="1930"><net_src comp="1920" pin="2"/><net_sink comp="1926" pin=0"/></net>
 
-<net id="1934"><net_src comp="1924" pin="2"/><net_sink comp="1930" pin=0"/></net>
+<net id="1931"><net_src comp="1914" pin="2"/><net_sink comp="1926" pin=1"/></net>
 
-<net id="1935"><net_src comp="1918" pin="2"/><net_sink comp="1930" pin=1"/></net>
+<net id="1936"><net_src comp="1709" pin="1"/><net_sink comp="1932" pin=0"/></net>
 
-<net id="1940"><net_src comp="1844" pin="1"/><net_sink comp="1936" pin=0"/></net>
+<net id="1937"><net_src comp="1739" pin="1"/><net_sink comp="1932" pin=1"/></net>
 
-<net id="1941"><net_src comp="1695" pin="1"/><net_sink comp="1936" pin=1"/></net>
+<net id="1942"><net_src comp="1695" pin="1"/><net_sink comp="1938" pin=0"/></net>
 
-<net id="1946"><net_src comp="1709" pin="1"/><net_sink comp="1942" pin=0"/></net>
+<net id="1947"><net_src comp="1938" pin="2"/><net_sink comp="1943" pin=0"/></net>
 
-<net id="1951"><net_src comp="1942" pin="2"/><net_sink comp="1947" pin=0"/></net>
+<net id="1948"><net_src comp="1932" pin="2"/><net_sink comp="1943" pin=1"/></net>
 
-<net id="1952"><net_src comp="1739" pin="1"/><net_sink comp="1947" pin=1"/></net>
+<net id="1953"><net_src comp="1943" pin="2"/><net_sink comp="1949" pin=0"/></net>
 
-<net id="1957"><net_src comp="1947" pin="2"/><net_sink comp="1953" pin=0"/></net>
+<net id="1954"><net_src comp="1926" pin="2"/><net_sink comp="1949" pin=1"/></net>
 
-<net id="1958"><net_src comp="1936" pin="2"/><net_sink comp="1953" pin=1"/></net>
+<net id="1959"><net_src comp="1949" pin="2"/><net_sink comp="1955" pin=0"/></net>
 
-<net id="1963"><net_src comp="1953" pin="2"/><net_sink comp="1959" pin=0"/></net>
+<net id="1960"><net_src comp="62" pin="0"/><net_sink comp="1955" pin=1"/></net>
 
-<net id="1964"><net_src comp="1930" pin="2"/><net_sink comp="1959" pin=1"/></net>
+<net id="1965"><net_src comp="1949" pin="2"/><net_sink comp="1961" pin=0"/></net>
 
-<net id="1969"><net_src comp="1959" pin="2"/><net_sink comp="1965" pin=0"/></net>
+<net id="1966"><net_src comp="60" pin="0"/><net_sink comp="1961" pin=1"/></net>
 
-<net id="1970"><net_src comp="46" pin="0"/><net_sink comp="1965" pin=1"/></net>
+<net id="1974"><net_src comp="380" pin="0"/><net_sink comp="1967" pin=0"/></net>
 
-<net id="1975"><net_src comp="1959" pin="2"/><net_sink comp="1971" pin=0"/></net>
+<net id="1975"><net_src comp="382" pin="0"/><net_sink comp="1967" pin=1"/></net>
 
-<net id="1976"><net_src comp="62" pin="0"/><net_sink comp="1971" pin=1"/></net>
+<net id="1976"><net_src comp="1949" pin="2"/><net_sink comp="1967" pin=2"/></net>
 
-<net id="1984"><net_src comp="380" pin="0"/><net_sink comp="1977" pin=0"/></net>
+<net id="1977"><net_src comp="384" pin="0"/><net_sink comp="1967" pin=3"/></net>
 
-<net id="1985"><net_src comp="382" pin="0"/><net_sink comp="1977" pin=1"/></net>
+<net id="1978"><net_src comp="386" pin="0"/><net_sink comp="1967" pin=4"/></net>
 
-<net id="1986"><net_src comp="1959" pin="2"/><net_sink comp="1977" pin=2"/></net>
+<net id="1979"><net_src comp="1967" pin="5"/><net_sink comp="442" pin=3"/></net>
 
-<net id="1987"><net_src comp="384" pin="0"/><net_sink comp="1977" pin=3"/></net>
+<net id="1983"><net_src comp="334" pin="0"/><net_sink comp="1980" pin=0"/></net>
 
-<net id="1988"><net_src comp="386" pin="0"/><net_sink comp="1977" pin=4"/></net>
+<net id="1988"><net_src comp="1980" pin="1"/><net_sink comp="1984" pin=0"/></net>
 
-<net id="1989"><net_src comp="1977" pin="5"/><net_sink comp="442" pin=3"/></net>
+<net id="1989"><net_src comp="344" pin="0"/><net_sink comp="1984" pin=1"/></net>
 
-<net id="1993"><net_src comp="334" pin="0"/><net_sink comp="1990" pin=0"/></net>
+<net id="1994"><net_src comp="1984" pin="2"/><net_sink comp="1990" pin=0"/></net>
 
-<net id="1998"><net_src comp="1990" pin="1"/><net_sink comp="1994" pin=0"/></net>
+<net id="1995"><net_src comp="334" pin="0"/><net_sink comp="1990" pin=1"/></net>
 
-<net id="1999"><net_src comp="344" pin="0"/><net_sink comp="1994" pin=1"/></net>
+<net id="1999"><net_src comp="412" pin="2"/><net_sink comp="1996" pin=0"/></net>
 
-<net id="2004"><net_src comp="1994" pin="2"/><net_sink comp="2000" pin=0"/></net>
+<net id="2003"><net_src comp="418" pin="2"/><net_sink comp="2000" pin=0"/></net>
 
-<net id="2005"><net_src comp="334" pin="0"/><net_sink comp="2000" pin=1"/></net>
+<net id="2007"><net_src comp="458" pin="1"/><net_sink comp="2004" pin=0"/></net>
 
-<net id="2009"><net_src comp="412" pin="2"/><net_sink comp="2006" pin=0"/></net>
+<net id="2011"><net_src comp="424" pin="4"/><net_sink comp="2008" pin=0"/></net>
 
-<net id="2013"><net_src comp="418" pin="2"/><net_sink comp="2010" pin=0"/></net>
+<net id="2015"><net_src comp="466" pin="1"/><net_sink comp="2012" pin=0"/></net>
 
-<net id="2017"><net_src comp="458" pin="1"/><net_sink comp="2014" pin=0"/></net>
+<net id="2016"><net_src comp="2012" pin="1"/><net_sink comp="442" pin=4"/></net>
 
-<net id="2021"><net_src comp="424" pin="4"/><net_sink comp="2018" pin=0"/></net>
+<net id="2020"><net_src comp="470" pin="1"/><net_sink comp="2017" pin=0"/></net>
 
-<net id="2025"><net_src comp="466" pin="1"/><net_sink comp="2022" pin=0"/></net>
+<net id="2021"><net_src comp="2017" pin="1"/><net_sink comp="640" pin=0"/></net>
 
-<net id="2026"><net_src comp="2022" pin="1"/><net_sink comp="442" pin=4"/></net>
+<net id="2022"><net_src comp="2017" pin="1"/><net_sink comp="715" pin=0"/></net>
 
-<net id="2030"><net_src comp="470" pin="1"/><net_sink comp="2027" pin=0"/></net>
+<net id="2023"><net_src comp="2017" pin="1"/><net_sink comp="790" pin=0"/></net>
 
-<net id="2031"><net_src comp="2027" pin="1"/><net_sink comp="640" pin=0"/></net>
+<net id="2024"><net_src comp="2017" pin="1"/><net_sink comp="865" pin=0"/></net>
 
-<net id="2032"><net_src comp="2027" pin="1"/><net_sink comp="715" pin=0"/></net>
+<net id="2025"><net_src comp="2017" pin="1"/><net_sink comp="940" pin=0"/></net>
 
-<net id="2033"><net_src comp="2027" pin="1"/><net_sink comp="790" pin=0"/></net>
+<net id="2026"><net_src comp="2017" pin="1"/><net_sink comp="1015" pin=0"/></net>
 
-<net id="2034"><net_src comp="2027" pin="1"/><net_sink comp="865" pin=0"/></net>
+<net id="2027"><net_src comp="2017" pin="1"/><net_sink comp="1090" pin=0"/></net>
 
-<net id="2035"><net_src comp="2027" pin="1"/><net_sink comp="940" pin=0"/></net>
+<net id="2028"><net_src comp="2017" pin="1"/><net_sink comp="1165" pin=0"/></net>
 
-<net id="2036"><net_src comp="2027" pin="1"/><net_sink comp="1015" pin=0"/></net>
+<net id="2029"><net_src comp="2017" pin="1"/><net_sink comp="1240" pin=0"/></net>
 
-<net id="2037"><net_src comp="2027" pin="1"/><net_sink comp="1090" pin=0"/></net>
+<net id="2030"><net_src comp="2017" pin="1"/><net_sink comp="1315" pin=0"/></net>
 
-<net id="2038"><net_src comp="2027" pin="1"/><net_sink comp="1165" pin=0"/></net>
+<net id="2031"><net_src comp="2017" pin="1"/><net_sink comp="1390" pin=0"/></net>
 
-<net id="2039"><net_src comp="2027" pin="1"/><net_sink comp="1240" pin=0"/></net>
+<net id="2032"><net_src comp="2017" pin="1"/><net_sink comp="1465" pin=0"/></net>
 
-<net id="2040"><net_src comp="2027" pin="1"/><net_sink comp="1315" pin=0"/></net>
+<net id="2033"><net_src comp="2017" pin="1"/><net_sink comp="1540" pin=0"/></net>
 
-<net id="2041"><net_src comp="2027" pin="1"/><net_sink comp="1390" pin=0"/></net>
+<net id="2034"><net_src comp="2017" pin="1"/><net_sink comp="1615" pin=0"/></net>
 
-<net id="2042"><net_src comp="2027" pin="1"/><net_sink comp="1465" pin=0"/></net>
+<net id="2035"><net_src comp="2017" pin="1"/><net_sink comp="1690" pin=0"/></net>
 
-<net id="2043"><net_src comp="2027" pin="1"/><net_sink comp="1540" pin=0"/></net>
+<net id="2036"><net_src comp="2017" pin="1"/><net_sink comp="1839" pin=0"/></net>
 
-<net id="2044"><net_src comp="2027" pin="1"/><net_sink comp="1615" pin=0"/></net>
+<net id="2037"><net_src comp="2017" pin="1"/><net_sink comp="1938" pin=1"/></net>
 
-<net id="2045"><net_src comp="2027" pin="1"/><net_sink comp="1690" pin=0"/></net>
+<net id="2041"><net_src comp="1967" pin="5"/><net_sink comp="2038" pin=0"/></net>
 
-<net id="2046"><net_src comp="2027" pin="1"/><net_sink comp="1839" pin=0"/></net>
-
-<net id="2047"><net_src comp="2027" pin="1"/><net_sink comp="1942" pin=1"/></net>
-
-<net id="2051"><net_src comp="1977" pin="5"/><net_sink comp="2048" pin=0"/></net>
-
-<net id="2052"><net_src comp="2048" pin="1"/><net_sink comp="442" pin=3"/></net>
+<net id="2042"><net_src comp="2038" pin="1"/><net_sink comp="442" pin=3"/></net>
 
 </net_list>
 
@@ -7566,7 +7533,6 @@ StgValue_360         (ret          ) [ 0000]
 	Port: phaseClass0_V_2 | {2 }
 	Port: phaseClass0_V_1 | {2 }
 	Port: phaseClass0_V_0 | {2 }
-	Port: corHelperI_V | {2 }
 	Port: Phase0_V_6 | {2 }
 	Port: Phase0_V_7 | {2 }
 	Port: Phase0_V_5 | {2 }
@@ -7575,6 +7541,7 @@ StgValue_360         (ret          ) [ 0000]
 	Port: Phase0_V_2 | {2 }
 	Port: Phase0_V_1 | {2 }
 	Port: Phase0_V_0 | {2 }
+	Port: corHelperI_V | {2 }
 	Port: phaseClass1_V_6 | {2 }
 	Port: phaseClass1_V_7 | {2 }
 	Port: phaseClass1_V_5 | {2 }
@@ -7732,7 +7699,6 @@ StgValue_360         (ret          ) [ 0000]
 	Port: correlator : phaseClass0_V_2 | {2 }
 	Port: correlator : phaseClass0_V_1 | {2 }
 	Port: correlator : phaseClass0_V_0 | {2 }
-	Port: correlator : corHelperI_V | {2 }
 	Port: correlator : Phase0_V_6 | {2 }
 	Port: correlator : Phase0_V_5 | {2 }
 	Port: correlator : Phase0_V_4 | {2 }
@@ -7971,28 +7937,27 @@ StgValue_360         (ret          ) [ 0000]
 		StgValue_298 : 1
 		StgValue_300 : 1
 		StgValue_302 : 1
-		StgValue_306 : 1
-		StgValue_308 : 1
-		StgValue_310 : 1
-		StgValue_312 : 1
-		StgValue_314 : 1
-		StgValue_316 : 1
-		StgValue_318 : 1
+		StgValue_305 : 1
+		StgValue_307 : 1
+		StgValue_309 : 1
+		StgValue_311 : 1
+		StgValue_313 : 1
+		StgValue_315 : 1
+		StgValue_317 : 1
+		tmp7 : 1
 		tmp8 : 1
-		tmp9 : 1
-		tmp7 : 2
+		tmp6 : 2
 		tmp1 : 1
 		tmp2 : 1
-		tmp3 : 2
-		tmp4 : 3
-		p_Val2_3_4 : 4
-		StgValue_327 : 5
+		tmp9 : 2
+		p_Val2_3_4 : 3
+		StgValue_325 : 4
+		StgValue_326 : 4
+		p_Result_s : 4
 		StgValue_328 : 5
-		p_Result_s : 5
-		StgValue_330 : 6
 	State 3
 		tmp_s : 1
-		StgValue_357 : 2
+		StgValue_355 : 2
 
 
 ============================================================
@@ -8003,15 +7968,14 @@ StgValue_360         (ret          ) [ 0000]
 |----------|-------------------------------|---------|---------|
 | Operation|        Functional Unit        |    FF   |   LUT   |
 |----------|-------------------------------|---------|---------|
-|          |          tmp8_fu_1918         |    0    |    23   |
-|          |          tmp9_fu_1924         |    0    |    23   |
-|          |          tmp7_fu_1930         |    0    |    16   |
-|          |          tmp1_fu_1936         |    0    |    16   |
-|    add   |          tmp2_fu_1942         |    0    |    16   |
-|          |          tmp3_fu_1947         |    0    |    16   |
-|          |          tmp4_fu_1953         |    0    |    16   |
-|          |       p_Val2_3_4_fu_1959      |    0    |    16   |
-|          |         tmp_s_fu_1994         |    0    |    39   |
+|          |          tmp7_fu_1914         |    0    |    23   |
+|          |          tmp8_fu_1920         |    0    |    23   |
+|          |          tmp6_fu_1926         |    0    |    16   |
+|    add   |          tmp1_fu_1932         |    0    |    16   |
+|          |          tmp2_fu_1938         |    0    |    23   |
+|          |          tmp9_fu_1943         |    0    |    16   |
+|          |       p_Val2_3_4_fu_1949      |    0    |    16   |
+|          |         tmp_s_fu_1984         |    0    |    39   |
 |----------|-------------------------------|---------|---------|
 |          | phaseClass_V_read_read_fu_412 |    0    |    0    |
 |   read   |    start_V_read_read_fu_418   |    0    |    0    |
@@ -8026,9 +7990,9 @@ StgValue_360         (ret          ) [ 0000]
 |----------|-------------------------------|---------|---------|
 |   trunc  |          tmp_1_fu_470         |    0    |    0    |
 |----------|-------------------------------|---------|---------|
-|  partset |       p_Result_s_fu_1977      |    0    |    0    |
+|  partset |       p_Result_s_fu_1967      |    0    |    0    |
 |----------|-------------------------------|---------|---------|
-|   Total  |                               |    0    |   181   |
+|   Total  |                               |    0    |   172   |
 |----------|-------------------------------|---------|---------|
 
 Memories:
@@ -8038,13 +8002,13 @@ N/A
 +--------------------------+--------+
 |                          |   FF   |
 +--------------------------+--------+
-|currentState_load_reg_2014|    1   |
-|    p_Result_s_reg_2048   |   32   |
-|phaseClass_V_read_reg_2006|    4   |
-|   start_V_read_reg_2010  |    1   |
-|      tmp_1_reg_2027      |   16   |
-|    tmp_last_V_reg_2022   |    1   |
-|       tmp_reg_2018       |    1   |
+|currentState_load_reg_2004|    1   |
+|    p_Result_s_reg_2038   |   32   |
+|phaseClass_V_read_reg_1996|    4   |
+|   start_V_read_reg_2000  |    1   |
+|      tmp_1_reg_2017      |   16   |
+|    tmp_last_V_reg_2012   |    1   |
+|       tmp_reg_2008       |    1   |
 +--------------------------+--------+
 |           Total          |   56   |
 +--------------------------+--------+
@@ -8064,10 +8028,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    -   |    0   |   181  |
+|  Function |    -   |    0   |   172  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    -   |    9   |
 |  Register |    -   |   56   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    1   |   56   |   190  |
+|   Total   |    1   |   56   |   181  |
 +-----------+--------+--------+--------+
