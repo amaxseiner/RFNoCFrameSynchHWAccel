@@ -29371,9 +29371,8 @@ _ssdm_op_SpecReset( &readResCount, 1,  "");
 
  enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
   static correlatorState corState;
-_ssdm_op_SpecReset( corState, 1,  "");
 
- static ap_fixed<32,22> corHelperI;
+  static ap_fixed<32,22> corHelperI;
 _ssdm_op_SpecReset( &corHelperI, 1,  "");
 
  static ap_fixed<32,22> corHelperQ;
@@ -29388,8 +29387,8 @@ case ST_WAIT:
  corState = ST_WAIT;
  break;
 case ST_CORRELATE:
- out_sample.data.range(3,0) = phaseClass;
- out_sample.last = tmp_data.last;
+ out_sample.data.range(0,0) = 1;
+ out_sample.last = 0;
  o_data.write(out_sample);
 
   switch(phaseClass){
@@ -29403,6 +29402,7 @@ _ssdm_Unroll(0,0,0, "");
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
+
 
 
 
@@ -29584,8 +29584,10 @@ _ssdm_Unroll(0,0,0, "");
 
  switch(currentState) {
  case ST_IDLE:
-  if(start)
+  if(start){
    currentState = ST_LOAD;
+   corState = ST_WAIT;
+  }
   break;
   case ST_LOAD:
   if(!i_data.empty()){

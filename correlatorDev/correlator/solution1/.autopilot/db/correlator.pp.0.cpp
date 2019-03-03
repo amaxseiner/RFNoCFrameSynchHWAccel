@@ -29351,9 +29351,8 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 
  enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
   static correlatorState corState;
-#pragma HLS RESET variable=corState
 
- static ap_fixed<32,22> corHelperI;
+  static ap_fixed<32,22> corHelperI;
 #pragma HLS RESET variable=corHelperI
 
  static ap_fixed<32,22> corHelperQ;
@@ -29368,8 +29367,8 @@ case ST_WAIT:
  corState = ST_WAIT;
  break;
 case ST_CORRELATE:
- out_sample.data.range(3,0) = phaseClass;
- out_sample.last = tmp_data.last;
+ out_sample.data.range(0,0) = 1;
+ out_sample.last = 0;
  o_data.write(out_sample);
 
   switch(phaseClass){
@@ -29383,6 +29382,7 @@ case ST_CORRELATE:
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
+
 
 
 
@@ -29564,8 +29564,10 @@ case ST_CORRELATE:
 
  switch(currentState) {
  case ST_IDLE:
-  if(start)
+  if(start){
    currentState = ST_LOAD;
+   corState = ST_WAIT;
+  }
   break;
   case ST_LOAD:
   if(!i_data.empty()){

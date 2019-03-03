@@ -191,7 +191,6 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 
   enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
   static correlatorState corState;
-#pragma HLS RESET variable=corState
 
   static ap_fixed<32,22> corHelperI;
 #pragma HLS RESET variable=corHelperI
@@ -208,8 +207,8 @@ case ST_WAIT:
 	corState = ST_WAIT;
 	break;
 case ST_CORRELATE:
-	out_sample.data.range(3,0) = phaseClass;
-	out_sample.last = tmp_data.last;
+	out_sample.data.range(0,0) = 1;
+	out_sample.last = 0;
 	o_data.write(out_sample);
 		//update corr helper
 		switch(phaseClass){
@@ -223,6 +222,7 @@ case ST_CORRELATE:
 					Phase0[a] = Phase0[a-1];
 			}
 			Phase0[0] = corHelperI;
+			//out_sample.data.range(31,0) = corHelperI.V;
 			//if(corHelperI >= curThres){
 			//out_sample.data.range(31,0) = corHelperI.range(31,0);//maybe not this but something like it as an output.
 			//out_sample.last = 0;
@@ -404,8 +404,10 @@ case ST_CORRELATE:
 
 	switch(currentState) {
 	case ST_IDLE:
-		if(start) // wait for start signal. The same start signal is used to load PN sequence generator
+		if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
 			currentState = ST_LOAD;
+			corState = ST_WAIT;
+		}
 		break;
 	 case ST_LOAD: // whenever there is valid input data, shift it in
 		if(!i_data.empty()){

@@ -406,11 +406,6 @@
 </directive>
 <directive functionLabel="" functionName="correlator" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="corState"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlator" label="">
-<pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="corHelperI"/>
 </pragma>
 </directive>
