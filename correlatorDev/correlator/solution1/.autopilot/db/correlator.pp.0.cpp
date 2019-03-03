@@ -29183,7 +29183,7 @@ static ap_fixed<16,11> phaseClass0[16];
 static ap_fixed<32,22> resPhase0[16];
 #pragma HLS ARRAY_PARTITION variable=resPhase0 complete dim=1
 
-static ap_fixed<32,22> Phase0[16];
+static ap_fixed<16,11> Phase0[16];
 #pragma HLS ARRAY_PARTITION variable=Phase0 complete dim=1
 
 static ap_fixed<16,11> phaseClass1[16];
@@ -29352,7 +29352,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
  enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
   static correlatorState corState;
 
-  static ap_fixed<32,22> corHelperI;
+  static ap_fixed<16,11> corHelperI;
 #pragma HLS RESET variable=corHelperI
 
  static ap_fixed<32,22> corHelperQ;
@@ -29391,7 +29391,7 @@ case ST_IDLE:
  phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
-   phaseClassValid[phaseClass] = 1;
+
    correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a]>0)
@@ -29401,7 +29401,7 @@ case ST_IDLE:
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
-   out_sample.data.range(31,0) = corHelperI.V;
+   out_sample.data.range(15,0) = corHelperI.V;
 
    o_data.write(out_sample);
    break;

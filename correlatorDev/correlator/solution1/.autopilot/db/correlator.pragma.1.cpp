@@ -29203,7 +29203,7 @@ _ssdm_SpecArrayPartition( phaseClass0, 1, "COMPLETE", 0, "");
 static ap_fixed<32,22> resPhase0[16];
 _ssdm_SpecArrayPartition( resPhase0, 1, "COMPLETE", 0, "");
 
-static ap_fixed<32,22> Phase0[16];
+static ap_fixed<16,11> Phase0[16];
 _ssdm_SpecArrayPartition( Phase0, 1, "COMPLETE", 0, "");
 
 static ap_fixed<16,11> phaseClass1[16];
@@ -29372,7 +29372,7 @@ _ssdm_op_SpecReset( &readResCount, 1,  "");
  enum correlatorState {ST_WAIT = 0, ST_CORRELATE };
   static correlatorState corState;
 
-  static ap_fixed<32,22> corHelperI;
+  static ap_fixed<16,11> corHelperI;
 _ssdm_op_SpecReset( &corHelperI, 1,  "");
 
  static ap_fixed<32,22> corHelperQ;
@@ -29411,7 +29411,7 @@ _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
-   phaseClassValid[phaseClass] = 1;
+
    correlateData0: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a]>0)
@@ -29421,7 +29421,7 @@ _ssdm_Unroll(0,0,0, "");
      Phase0[a] = Phase0[a-1];
    }
    Phase0[0] = corHelperI;
-   out_sample.data.range(31,0) = corHelperI.V;
+   out_sample.data.range(15,0) = corHelperI.V;
 
    o_data.write(out_sample);
    break;
