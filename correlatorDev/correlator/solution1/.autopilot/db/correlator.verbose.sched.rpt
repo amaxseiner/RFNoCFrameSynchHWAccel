@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Sun Mar  3 16:55:21 2019
+* Date:           Sun Mar  3 17:02:56 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -82,122 +82,123 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
- <State 1> : 2.12ns
+ <State 1> : 8.69ns
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)"
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%currentState_load = load i2* @currentState, align 1" [correlator.cpp:201]
-ST_1 : Operation 7 [1/1] (1.08ns)   --->   "switch i2 %currentState_load, label %._crit_edge899 [
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2" [correlator.cpp:227]
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%phaseClass0_V_10_loa = load i16* @phaseClass0_V_10, align 2" [correlator.cpp:227]
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%phaseClass0_V_8_load = load i16* @phaseClass0_V_8, align 2" [correlator.cpp:227]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%phaseClass0_V_3_load = load i16* @phaseClass0_V_3, align 2" [correlator.cpp:227]
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2" [correlator.cpp:227]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2" [correlator.cpp:227]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2" [correlator.cpp:227]
+ST_1 : Operation 14 [1/1] (1.08ns)   --->   "switch i2 %currentState_load, label %._crit_edge874 [
     i2 0, label %0
     i2 1, label %2
     i2 -2, label %.preheader.0
   ]" [correlator.cpp:206]
-ST_1 : Operation 8 [1/1] (1.06ns)   --->   "store i2 1, i2* @currentState, align 1" [correlator.cpp:251]
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)" [correlator.cpp:213]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_1 : Operation 10 [1/1] (1.06ns)   --->   "br i1 %tmp, label %3, label %._crit_edge901" [correlator.cpp:213]
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [correlator.cpp:214]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [correlator.cpp:214]
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [correlator.cpp:214]
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %tmp_data_V_1 to i11" [correlator.cpp:214]
-ST_1 : Operation 15 [1/1] (1.08ns)   --->   "%cond = icmp eq i4 %phaseClass_V_read, 0" [correlator.cpp:223]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "br i1 %cond, label %.preheader498.0, label %._crit_edge902" [correlator.cpp:223]
-ST_1 : Operation 17 [1/1] (1.06ns)   --->   "br label %._crit_edge901" [correlator.cpp:237]
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%storemerge = phi i2 [ -2, %._crit_edge902 ], [ 1, %2 ]"
-ST_1 : Operation 19 [1/1] (1.06ns)   --->   "store i2 %storemerge, i2* @currentState, align 1" [correlator.cpp:238]
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge900" [correlator.cpp:208]
-ST_1 : Operation 21 [1/1] (1.06ns)   --->   "store i2 1, i2* @currentState, align 1" [correlator.cpp:209]
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%corHelperI_V_load = load i16* @corHelperI_V, align 2" [correlator.cpp:245]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2" [correlator.cpp:245]
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%Phase0_V_6_load = load i16* @Phase0_V_6, align 4" [correlator.cpp:248]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2" [correlator.cpp:248]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%Phase0_V_5_load = load i16* @Phase0_V_5, align 2" [correlator.cpp:248]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_5_load, i16* @Phase0_V_6, align 4" [correlator.cpp:248]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%Phase0_V_4_load = load i16* @Phase0_V_4, align 8" [correlator.cpp:248]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_4_load, i16* @Phase0_V_5, align 2" [correlator.cpp:248]
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%Phase0_V_3_load = load i16* @Phase0_V_3, align 2" [correlator.cpp:248]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_3_load, i16* @Phase0_V_4, align 8" [correlator.cpp:248]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%Phase0_V_2_load = load i16* @Phase0_V_2, align 4" [correlator.cpp:248]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_2_load, i16* @Phase0_V_3, align 2" [correlator.cpp:248]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%Phase0_V_1_load = load i16* @Phase0_V_1, align 2" [correlator.cpp:248]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_1_load, i16* @Phase0_V_2, align 4" [correlator.cpp:248]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%Phase0_V_0_load = load i16* @Phase0_V_0, align 16" [correlator.cpp:248]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_0_load, i16* @Phase0_V_1, align 2" [correlator.cpp:248]
+ST_1 : Operation 31 [1/1] (1.48ns)   --->   "%tmp8 = add i16 %phaseClass0_V_2_load, %phaseClass0_V_1_load" [correlator.cpp:245]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (1.48ns)   --->   "%tmp9 = add i16 %phaseClass0_V_3_load, %phaseClass0_V_8_load" [correlator.cpp:245]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %tmp9, %tmp8" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %corHelperI_V_load, %phaseClass0_V_15_loa" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 35 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i16 %phaseClass0_V_13_loa, %phaseClass0_V_0_load" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 36 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp3 = add i16 %tmp2, %phaseClass0_V_10_loa" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 37 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp4 = add i16 %tmp3, %tmp1" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 38 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_3_4 = add i16 %tmp4, %tmp7" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 39 [1/1] (1.06ns)   --->   "store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2" [correlator.cpp:245]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @Phase0_V_0, align 16" [correlator.cpp:250]
+ST_1 : Operation 41 [1/1] (1.06ns)   --->   "store i2 1, i2* @currentState, align 1" [correlator.cpp:251]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)" [correlator.cpp:213]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 43 [1/1] (1.06ns)   --->   "br i1 %tmp, label %3, label %._crit_edge876" [correlator.cpp:213]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [correlator.cpp:214]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [correlator.cpp:214]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [correlator.cpp:214]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_Val2_1 = trunc i32 %tmp_data_V_1 to i16" [correlator.cpp:221]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "store i16 %p_Val2_1, i16* @newVal_V, align 2" [correlator.cpp:221]
+ST_1 : Operation 49 [1/1] (1.06ns)   --->   "store i16 0, i16* @corHelperI_V, align 2" [correlator.cpp:222]
+ST_1 : Operation 50 [1/1] (1.08ns)   --->   "%cond = icmp eq i4 %phaseClass_V_read, 0" [correlator.cpp:223]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %cond, label %.preheader473.0, label %._crit_edge877" [correlator.cpp:223]
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 4" [correlator.cpp:227]
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2" [correlator.cpp:227]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4" [correlator.cpp:227]
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%phaseClass0_V_12_loa = load i16* @phaseClass0_V_12, align 8" [correlator.cpp:227]
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_12_loa, i16* @phaseClass0_V_13, align 2" [correlator.cpp:227]
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%phaseClass0_V_11_loa = load i16* @phaseClass0_V_11, align 2" [correlator.cpp:227]
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_11_loa, i16* @phaseClass0_V_12, align 8" [correlator.cpp:227]
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_10_loa, i16* @phaseClass0_V_11, align 2" [correlator.cpp:227]
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%phaseClass0_V_9_load = load i16* @phaseClass0_V_9, align 2" [correlator.cpp:227]
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_9_load, i16* @phaseClass0_V_10, align 4" [correlator.cpp:227]
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_8_load, i16* @phaseClass0_V_9, align 2" [correlator.cpp:227]
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%phaseClass0_V_7_load = load i16* @phaseClass0_V_7, align 2" [correlator.cpp:227]
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_7_load, i16* @phaseClass0_V_8, align 16" [correlator.cpp:227]
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%phaseClass0_V_6_load = load i16* @phaseClass0_V_6, align 4" [correlator.cpp:227]
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_6_load, i16* @phaseClass0_V_7, align 2" [correlator.cpp:227]
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%phaseClass0_V_5_load = load i16* @phaseClass0_V_5, align 2" [correlator.cpp:227]
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_5_load, i16* @phaseClass0_V_6, align 4" [correlator.cpp:227]
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%phaseClass0_V_4_load = load i16* @phaseClass0_V_4, align 8" [correlator.cpp:227]
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_4_load, i16* @phaseClass0_V_5, align 2" [correlator.cpp:227]
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_3_load, i16* @phaseClass0_V_4, align 8" [correlator.cpp:227]
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_2_load, i16* @phaseClass0_V_3, align 2" [correlator.cpp:227]
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 4" [correlator.cpp:227]
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2" [correlator.cpp:227]
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i32 %tmp_data_V_1 to i11" [correlator.cpp:214]
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_s = call i16 @_ssdm_op_BitConcatenate.i16.i11.i5(i11 %tmp_2, i5 0)" [correlator.cpp:229]
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "store i16 %tmp_s, i16* @phaseClass0_V_0, align 16" [correlator.cpp:229]
+ST_1 : Operation 78 [1/1] (1.06ns)   --->   "br label %._crit_edge876" [correlator.cpp:237]
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%storemerge = phi i2 [ -2, %._crit_edge877 ], [ 1, %2 ]"
+ST_1 : Operation 80 [1/1] (1.06ns)   --->   "store i2 %storemerge, i2* @currentState, align 1" [correlator.cpp:238]
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge875" [correlator.cpp:208]
+ST_1 : Operation 82 [1/1] (1.06ns)   --->   "store i2 1, i2* @currentState, align 1" [correlator.cpp:209]
 
- <State 2> : 8.69ns
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2" [correlator.cpp:227]
-ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%phaseClass0_V_10_loa = load i16* @phaseClass0_V_10, align 2" [correlator.cpp:227]
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%phaseClass0_V_8_load = load i16* @phaseClass0_V_8, align 2" [correlator.cpp:227]
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%phaseClass0_V_3_load = load i16* @phaseClass0_V_3, align 2" [correlator.cpp:227]
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2" [correlator.cpp:227]
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2" [correlator.cpp:227]
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2" [correlator.cpp:227]
-ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%corHelperI_V_load = load i16* @corHelperI_V, align 2" [correlator.cpp:245]
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2" [correlator.cpp:245]
-ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%Phase0_V_6_load = load i16* @Phase0_V_6, align 4" [correlator.cpp:248]
-ST_2 : Operation 32 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2" [correlator.cpp:248]
-ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%Phase0_V_5_load = load i16* @Phase0_V_5, align 2" [correlator.cpp:248]
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_5_load, i16* @Phase0_V_6, align 4" [correlator.cpp:248]
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%Phase0_V_4_load = load i16* @Phase0_V_4, align 8" [correlator.cpp:248]
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_4_load, i16* @Phase0_V_5, align 2" [correlator.cpp:248]
-ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%Phase0_V_3_load = load i16* @Phase0_V_3, align 2" [correlator.cpp:248]
-ST_2 : Operation 38 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_3_load, i16* @Phase0_V_4, align 8" [correlator.cpp:248]
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%Phase0_V_2_load = load i16* @Phase0_V_2, align 4" [correlator.cpp:248]
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_2_load, i16* @Phase0_V_3, align 2" [correlator.cpp:248]
-ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%Phase0_V_1_load = load i16* @Phase0_V_1, align 2" [correlator.cpp:248]
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_1_load, i16* @Phase0_V_2, align 4" [correlator.cpp:248]
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%Phase0_V_0_load = load i16* @Phase0_V_0, align 16" [correlator.cpp:248]
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "store i16 %Phase0_V_0_load, i16* @Phase0_V_1, align 2" [correlator.cpp:248]
-ST_2 : Operation 45 [1/1] (1.48ns)   --->   "%tmp8 = add i16 %phaseClass0_V_2_load, %phaseClass0_V_1_load" [correlator.cpp:245]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 46 [1/1] (1.48ns)   --->   "%tmp9 = add i16 %phaseClass0_V_3_load, %phaseClass0_V_8_load" [correlator.cpp:245]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 47 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %tmp9, %tmp8" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 48 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %corHelperI_V_load, %phaseClass0_V_15_loa" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 49 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i16 %phaseClass0_V_13_loa, %phaseClass0_V_0_load" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 50 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp3 = add i16 %tmp2, %phaseClass0_V_10_loa" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 51 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%tmp4 = add i16 %tmp3, %tmp1" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 52 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_4_4 = add i16 %tmp4, %tmp7" [correlator.cpp:245]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 53 [1/1] (1.06ns)   --->   "store i16 %p_Val2_4_4, i16* @corHelperI_V, align 2" [correlator.cpp:245]
-ST_2 : Operation 54 [1/1] (0.00ns)   --->   "store i16 %p_Val2_4_4, i16* @Phase0_V_0, align 16" [correlator.cpp:250]
-ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%p_Val2_s = call i16 @_ssdm_op_BitConcatenate.i16.i11.i5(i11 %tmp_1, i5 0)" [correlator.cpp:221]
-ST_2 : Operation 56 [1/1] (0.00ns)   --->   "store i16 %p_Val2_s, i16* @newVal_V, align 2" [correlator.cpp:221]
-ST_2 : Operation 57 [1/1] (1.06ns)   --->   "store i16 0, i16* @corHelperI_V, align 2" [correlator.cpp:222]
-ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 4" [correlator.cpp:227]
-ST_2 : Operation 59 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2" [correlator.cpp:227]
-ST_2 : Operation 60 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4" [correlator.cpp:227]
-ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%phaseClass0_V_12_loa = load i16* @phaseClass0_V_12, align 8" [correlator.cpp:227]
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_12_loa, i16* @phaseClass0_V_13, align 2" [correlator.cpp:227]
-ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%phaseClass0_V_11_loa = load i16* @phaseClass0_V_11, align 2" [correlator.cpp:227]
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_11_loa, i16* @phaseClass0_V_12, align 8" [correlator.cpp:227]
-ST_2 : Operation 65 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_10_loa, i16* @phaseClass0_V_11, align 2" [correlator.cpp:227]
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%phaseClass0_V_9_load = load i16* @phaseClass0_V_9, align 2" [correlator.cpp:227]
-ST_2 : Operation 67 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_9_load, i16* @phaseClass0_V_10, align 4" [correlator.cpp:227]
-ST_2 : Operation 68 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_8_load, i16* @phaseClass0_V_9, align 2" [correlator.cpp:227]
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%phaseClass0_V_7_load = load i16* @phaseClass0_V_7, align 2" [correlator.cpp:227]
-ST_2 : Operation 70 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_7_load, i16* @phaseClass0_V_8, align 16" [correlator.cpp:227]
-ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%phaseClass0_V_6_load = load i16* @phaseClass0_V_6, align 4" [correlator.cpp:227]
-ST_2 : Operation 72 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_6_load, i16* @phaseClass0_V_7, align 2" [correlator.cpp:227]
-ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%phaseClass0_V_5_load = load i16* @phaseClass0_V_5, align 2" [correlator.cpp:227]
-ST_2 : Operation 74 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_5_load, i16* @phaseClass0_V_6, align 4" [correlator.cpp:227]
-ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%phaseClass0_V_4_load = load i16* @phaseClass0_V_4, align 8" [correlator.cpp:227]
-ST_2 : Operation 76 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_4_load, i16* @phaseClass0_V_5, align 2" [correlator.cpp:227]
-ST_2 : Operation 77 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_3_load, i16* @phaseClass0_V_4, align 8" [correlator.cpp:227]
-ST_2 : Operation 78 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_2_load, i16* @phaseClass0_V_3, align 2" [correlator.cpp:227]
-ST_2 : Operation 79 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 4" [correlator.cpp:227]
-ST_2 : Operation 80 [1/1] (0.00ns)   --->   "store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2" [correlator.cpp:227]
-ST_2 : Operation 81 [1/1] (0.00ns)   --->   "store i16 %p_Val2_s, i16* @phaseClass0_V_0, align 16" [correlator.cpp:229]
-ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_s, i32 0, i32 15)" [correlator.cpp:232]
-ST_2 : Operation 83 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:234]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ <State 2> : 0.00ns
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_1, i32 0, i32 15)" [correlator.cpp:232]
+ST_2 : Operation 84 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:234]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
  <State 3> : 0.00ns
-ST_3 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !88"
-ST_3 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !92"
-ST_3 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !96"
-ST_3 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !100"
-ST_3 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !104"
-ST_3 : Operation 89 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !110"
-ST_3 : Operation 90 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind"
-ST_3 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [correlator.cpp:12]
-ST_3 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:14]
-ST_3 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:15]
-ST_3 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:16]
-ST_3 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [correlator.cpp:18]
-ST_3 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:165]
-ST_3 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)" [correlator.cpp:172]
-ST_3 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:182]
-ST_3 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:185]
-ST_3 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:190]
-ST_3 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:193]
-ST_3 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:196]
-ST_3 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i2* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:201]
-ST_3 : Operation 104 [1/1] (0.00ns)   --->   "br label %._crit_edge899" [correlator.cpp:252]
-ST_3 : Operation 105 [1/1] (0.00ns)   --->   "br label %._crit_edge902" [correlator.cpp:231]
-ST_3 : Operation 106 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:234]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_3 : Operation 107 [1/1] (0.00ns)   --->   "br label %._crit_edge899" [correlator.cpp:240]
-ST_3 : Operation 108 [1/1] (0.00ns)   --->   "br label %._crit_edge900" [correlator.cpp:210]
-ST_3 : Operation 109 [1/1] (0.00ns)   --->   "br label %._crit_edge899" [correlator.cpp:211]
-ST_3 : Operation 110 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:576]
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !84"
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !88"
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !92"
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !96"
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100"
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106"
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind"
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [correlator.cpp:12]
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:14]
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:15]
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:16]
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [correlator.cpp:18]
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:165]
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)" [correlator.cpp:172]
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:182]
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:185]
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:190]
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:193]
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:196]
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i2* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:201]
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:252]
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "br label %._crit_edge877" [correlator.cpp:231]
+ST_3 : Operation 107 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [correlator.cpp:234]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:240]
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "br label %._crit_edge875" [correlator.cpp:210]
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:211]
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:576]
 
 
 ============================================================
@@ -205,21 +206,17 @@ ST_3 : Operation 110 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:576]
 ============================================================
 Target clock period: 10ns, clock uncertainty: 1.25ns.
 
- <State 1>: 2.12ns
-The critical path consists of the following:
-	axis request on port 'i_data_V_data_V' (correlator.cpp:213) [95]  (0 ns)
-	multiplexor before 'phi' operation ('storemerge') [138]  (1.06 ns)
-	'phi' operation ('storemerge') [138]  (0 ns)
-	'store' operation (correlator.cpp:238) of variable 'storemerge' on static variable 'currentState' [139]  (1.06 ns)
-
- <State 2>: 8.69ns
+ <State 1>: 8.69ns
 The critical path consists of the following:
 	'load' operation ('phaseClass0_V_13_loa', correlator.cpp:227) on static variable 'phaseClass0_V_13' [57]  (0 ns)
 	'add' operation ('tmp2', correlator.cpp:245) [86]  (0 ns)
 	'add' operation ('tmp3', correlator.cpp:245) [87]  (2.54 ns)
 	'add' operation ('tmp4', correlator.cpp:245) [88]  (2.54 ns)
-	'add' operation ('p_Val2_4_4', correlator.cpp:245) [89]  (2.54 ns)
-	'store' operation (correlator.cpp:245) of variable 'p_Val2_4_4', correlator.cpp:245 on static variable 'corHelperI_V' [90]  (1.06 ns)
+	'add' operation ('p_Val2_3_4', correlator.cpp:245) [89]  (2.54 ns)
+	'store' operation (correlator.cpp:245) of variable 'p_Val2_3_4', correlator.cpp:245 on static variable 'corHelperI_V' [90]  (1.06 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
 
  <State 3>: 0ns
 The critical path consists of the following:

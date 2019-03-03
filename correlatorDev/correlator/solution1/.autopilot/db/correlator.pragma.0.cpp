@@ -29341,7 +29341,7 @@ static ap_fixed<32,22> resPhase15[16];
 static ap_fixed<32,22> Phase15[16];
 #pragma HLS ARRAY_PARTITION variable=Phase15 complete dim=1
 
-static ap_fixed<16,11> newVal;
+static ap_int<16> newVal;
 #pragma HLS RESET variable=&newVal
 
 
@@ -29409,7 +29409,7 @@ case ST_IDLE:
    phaseClass0[0] = newVal;
 
   }
-  out_sample.data.range(15,0) = newVal.range(15,0);
+  out_sample.data.range(15,0) = newVal;
 
   o_data.write(out_sample);
 
