@@ -227,13 +227,10 @@ case ST_IDLE:
 				phaseClass0[a] = phaseClass0[a-1];
 			}
 			phaseClass0[0] = newVal;
+			currentState = ST_CORRELATEl;
 			//phaseClassValid[phaseClass] = 1;
 		}
-		out_sample.data.range(15,0) = newVal.V;
-		//out_sample.last = 0;
-		o_data.write(out_sample);
 
-		currentState = ST_CORRELATEl;
 	} else {
 		currentState = ST_LOAD;
 	}
@@ -246,8 +243,14 @@ case ST_IDLE:
 			//corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
 			if(a>0)
 				Phase0[a] = Phase0[a-1];
+			else{
+				Phase0[0] = corHelperI;
+				out_sample.data.range(15,0) = corHelperI.V;
+				//out_sample.last = 0;
+				o_data.write(out_sample);
+			}
 		}
-		Phase0[0] = corHelperI;
+
 		currentState = ST_LOAD;
 		break;
 }

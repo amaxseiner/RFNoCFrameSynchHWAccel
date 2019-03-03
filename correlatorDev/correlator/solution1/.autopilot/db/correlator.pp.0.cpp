@@ -29387,13 +29387,10 @@ case ST_IDLE:
     phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
+   currentState = ST_CORRELATEl;
 
   }
-  out_sample.data.range(15,0) = newVal.V;
 
-  o_data.write(out_sample);
-
-  currentState = ST_CORRELATEl;
  } else {
   currentState = ST_LOAD;
  }
@@ -29406,10 +29403,16 @@ case ST_IDLE:
 
    if(a>0)
     Phase0[a] = Phase0[a-1];
+   else{
+    Phase0[0] = corHelperI;
+    out_sample.data.range(15,0) = corHelperI.V;
+
+    o_data.write(out_sample);
+   }
   }
-  Phase0[0] = corHelperI;
+
   currentState = ST_LOAD;
   break;
 }
-# 576 "correlator.cpp"
+# 579 "correlator.cpp"
 }
