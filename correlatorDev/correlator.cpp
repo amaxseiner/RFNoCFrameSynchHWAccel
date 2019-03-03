@@ -198,7 +198,6 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 // may add load state later, not neccessary right now
   enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
   static loadState currentState;
-#pragma HLS RESET variable=currentState
 
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage

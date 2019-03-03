@@ -29513,7 +29513,6 @@ _ssdm_op_SpecReset( &corHelperQ, 1, "");
 
  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
   static loadState currentState;
-_ssdm_op_SpecReset( currentState, 1, "");
 
 
 
@@ -29571,5 +29570,5 @@ _ssdm_Unroll(0,0,0, "");
 
   break;
 }
-# 581 "correlator.cpp"
+# 580 "correlator.cpp"
 }

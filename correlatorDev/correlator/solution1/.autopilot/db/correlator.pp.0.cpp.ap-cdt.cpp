@@ -29378,7 +29378,6 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 #pragma empty_line
  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
   static loadState currentState;
-#pragma HLS RESET variable=currentState
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -29436,5 +29435,5 @@ case ST_IDLE:
 #pragma empty_line
   break;
 }
-#pragma line 581 "correlator.cpp"
+#pragma line 580 "correlator.cpp"
 }

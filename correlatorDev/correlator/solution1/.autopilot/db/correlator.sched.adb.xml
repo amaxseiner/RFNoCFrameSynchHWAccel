@@ -3,13 +3,13 @@
 
 <trans_list>
 
-<trans id="131" from="1" to="2">
+<trans id="130" from="1" to="2">
 <condition id="53">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="132" from="2" to="3">
+<trans id="131" from="2" to="3">
 <condition id="54">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -74,9 +74,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="57" bw="16" op_0_bw="16">
+<Node id="56" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:23  %phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 2
+.preheader580.preheader:22  %phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_14_loa"/></StgValue>
@@ -89,9 +89,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="58" bw="16" op_0_bw="16">
+<Node id="57" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:24  %phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2
+.preheader580.preheader:23  %phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_13_loa"/></StgValue>
@@ -104,9 +104,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="16" op_0_bw="16">
+<Node id="58" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:25  %phaseClass0_V_12_loa = load i16* @phaseClass0_V_12, align 2
+.preheader580.preheader:24  %phaseClass0_V_12_loa = load i16* @phaseClass0_V_12, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_12_loa"/></StgValue>
@@ -119,9 +119,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="16" op_0_bw="16">
+<Node id="59" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:26  %phaseClass0_V_11_loa = load i16* @phaseClass0_V_11, align 2
+.preheader580.preheader:25  %phaseClass0_V_11_loa = load i16* @phaseClass0_V_11, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_11_loa"/></StgValue>
@@ -134,9 +134,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="61" bw="16" op_0_bw="16">
+<Node id="60" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:27  %phaseClass0_V_10_loa = load i16* @phaseClass0_V_10, align 2
+.preheader580.preheader:26  %phaseClass0_V_10_loa = load i16* @phaseClass0_V_10, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_10_loa"/></StgValue>
@@ -149,9 +149,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="62" bw="16" op_0_bw="16">
+<Node id="61" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:28  %phaseClass0_V_9_load = load i16* @phaseClass0_V_9, align 2
+.preheader580.preheader:27  %phaseClass0_V_9_load = load i16* @phaseClass0_V_9, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_9_load"/></StgValue>
@@ -164,9 +164,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="16" op_0_bw="16">
+<Node id="62" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:29  %phaseClass0_V_8_load = load i16* @phaseClass0_V_8, align 2
+.preheader580.preheader:28  %phaseClass0_V_8_load = load i16* @phaseClass0_V_8, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_8_load"/></StgValue>
@@ -179,9 +179,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="16" op_0_bw="16">
+<Node id="63" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:30  %phaseClass0_V_7_load = load i16* @phaseClass0_V_7, align 2
+.preheader580.preheader:29  %phaseClass0_V_7_load = load i16* @phaseClass0_V_7, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_7_load"/></StgValue>
@@ -194,9 +194,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="16" op_0_bw="16">
+<Node id="64" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:31  %phaseClass0_V_6_load = load i16* @phaseClass0_V_6, align 2
+.preheader580.preheader:30  %phaseClass0_V_6_load = load i16* @phaseClass0_V_6, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_6_load"/></StgValue>
@@ -209,9 +209,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="16" op_0_bw="16">
+<Node id="65" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:32  %phaseClass0_V_5_load = load i16* @phaseClass0_V_5, align 2
+.preheader580.preheader:31  %phaseClass0_V_5_load = load i16* @phaseClass0_V_5, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_5_load"/></StgValue>
@@ -224,9 +224,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="16" op_0_bw="16">
+<Node id="66" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:33  %phaseClass0_V_4_load = load i16* @phaseClass0_V_4, align 2
+.preheader580.preheader:32  %phaseClass0_V_4_load = load i16* @phaseClass0_V_4, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_4_load"/></StgValue>
@@ -239,9 +239,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="16" op_0_bw="16">
+<Node id="67" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:34  %phaseClass0_V_3_load = load i16* @phaseClass0_V_3, align 2
+.preheader580.preheader:33  %phaseClass0_V_3_load = load i16* @phaseClass0_V_3, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_3_load"/></StgValue>
@@ -254,9 +254,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="16" op_0_bw="16">
+<Node id="68" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:35  %phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2
+.preheader580.preheader:34  %phaseClass0_V_2_load = load i16* @phaseClass0_V_2, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_2_load"/></StgValue>
@@ -269,9 +269,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="16" op_0_bw="16">
+<Node id="69" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:36  %phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2
+.preheader580.preheader:35  %phaseClass0_V_1_load = load i16* @phaseClass0_V_1, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_1_load"/></StgValue>
@@ -284,9 +284,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="16" op_0_bw="16">
+<Node id="70" bw="16" op_0_bw="16">
 <![CDATA[
-.preheader580.preheader:37  %phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2
+.preheader580.preheader:36  %phaseClass0_V_0_load = load i16* @phaseClass0_V_0, align 2
 
 ]]></Node>
 <StgValue><ssdm name="phaseClass0_V_0_load"/></StgValue>
@@ -299,9 +299,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="0" op_0_bw="2" op_1_bw="0" op_2_bw="2" op_3_bw="0" op_4_bw="2" op_5_bw="0" op_6_bw="2" op_7_bw="0">
+<Node id="71" bw="0" op_0_bw="2" op_1_bw="0" op_2_bw="2" op_3_bw="0" op_4_bw="2" op_5_bw="0" op_6_bw="2" op_7_bw="0">
 <![CDATA[
-.preheader580.preheader:38  switch i2 %currentState_load, label %.loopexit [
+.preheader580.preheader:37  switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
     i2 -2, label %.loopexit.loopexit
@@ -319,7 +319,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="74" bw="16" op_0_bw="16">
+<Node id="73" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:0  %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2
 
@@ -335,7 +335,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="89" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="88" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:15  %tmp1 = add i16 %phaseClass0_V_2_load, %phaseClass0_V_1_load
 
@@ -351,7 +351,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="90" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="89" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:16  %tmp2 = add i16 %phaseClass0_V_3_load, %phaseClass0_V_4_load
 
@@ -367,7 +367,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="91" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="90" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:17  %tmp3 = add i16 %tmp2, %tmp1
 
@@ -383,7 +383,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="92" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="91" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:18  %tmp4 = add i16 %phaseClass0_V_7_load, %phaseClass0_V_8_load
 
@@ -399,7 +399,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="93" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="92" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:19  %tmp5 = add i16 %phaseClass0_V_5_load, %phaseClass0_V_6_load
 
@@ -415,7 +415,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="94" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="93" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:20  %tmp6 = add i16 %tmp5, %tmp4
 
@@ -431,7 +431,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="96" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="95" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:22  %tmp8 = add i16 %phaseClass0_V_15_loa, %phaseClass0_V_13_loa
 
@@ -447,7 +447,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="97" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="96" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:23  %tmp9 = add i16 %phaseClass0_V_14_loa, %phaseClass0_V_11_loa
 
@@ -463,7 +463,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="98" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="97" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:24  %tmp10 = add i16 %tmp9, %tmp8
 
@@ -479,7 +479,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="99" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="98" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:25  %tmp11 = add i16 %phaseClass0_V_12_loa, %phaseClass0_V_9_load
 
@@ -495,7 +495,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="100" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="99" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:26  %tmp12 = add i16 %phaseClass0_V_10_loa, %phaseClass0_V_0_load
 
@@ -511,7 +511,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="101" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="100" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:27  %tmp13 = add i16 %tmp12, %tmp11
 
@@ -527,7 +527,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="102" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="101" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:28  %tmp14 = add i16 %tmp13, %tmp10
 
@@ -543,7 +543,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="108" bw="0" op_0_bw="2" op_1_bw="2">
+<Node id="107" bw="0" op_0_bw="2" op_1_bw="2">
 <![CDATA[
 .loopexit.loopexit:34  store i2 1, i2* @currentState, align 1
 
@@ -559,7 +559,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="111" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="1" op_3_bw="32">
+<Node id="110" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="1" op_3_bw="32">
 <![CDATA[
 :0  %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
 
@@ -575,7 +575,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="112" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="111" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
 :1  br i1 %tmp, label %3, label %4
 
@@ -592,7 +592,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="114" bw="0" op_0_bw="2" op_1_bw="2">
+<Node id="113" bw="0" op_0_bw="2" op_1_bw="2">
 <![CDATA[
 :0  store i2 -2, i2* @currentState, align 1
 
@@ -609,7 +609,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="117" bw="33" op_0_bw="33" op_1_bw="32" op_2_bw="1">
+<Node id="116" bw="33" op_0_bw="33" op_1_bw="32" op_2_bw="1">
 <![CDATA[
 :0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
 
@@ -626,7 +626,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="118" bw="32" op_0_bw="33">
+<Node id="117" bw="32" op_0_bw="33">
 <![CDATA[
 :1  %tmp_data_V_3 = extractvalue { i32, i1 } %empty, 0
 
@@ -643,7 +643,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="119" bw="16" op_0_bw="32">
+<Node id="118" bw="16" op_0_bw="32">
 <![CDATA[
 :2  %tmp_15 = trunc i32 %tmp_data_V_3 to i16
 
@@ -660,7 +660,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="120" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="119" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 :3  store i16 %tmp_15, i16* @newVal_V, align 2
 
@@ -677,7 +677,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="121" bw="1" op_0_bw="4" op_1_bw="4">
+<Node id="120" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
 :4  %cond = icmp eq i4 %phaseClass_V_read, 0
 
@@ -694,7 +694,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="122" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="121" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
 :5  br i1 %cond, label %.preheader.0, label %.loopexit437
 
@@ -712,7 +712,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="124" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="123" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:0  store i16 %phaseClass0_V_14_loa, i16* @phaseClass0_V_15, align 2
 
@@ -730,7 +730,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="125" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="124" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:1  store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4
 
@@ -748,7 +748,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="126" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="125" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:2  store i16 %phaseClass0_V_12_loa, i16* @phaseClass0_V_13, align 2
 
@@ -766,7 +766,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="127" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="126" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:3  store i16 %phaseClass0_V_11_loa, i16* @phaseClass0_V_12, align 8
 
@@ -784,7 +784,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="128" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="127" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:4  store i16 %phaseClass0_V_10_loa, i16* @phaseClass0_V_11, align 2
 
@@ -802,7 +802,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="129" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="128" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:5  store i16 %phaseClass0_V_9_load, i16* @phaseClass0_V_10, align 4
 
@@ -820,7 +820,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="130" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="129" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:6  store i16 %phaseClass0_V_8_load, i16* @phaseClass0_V_9, align 2
 
@@ -838,7 +838,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="131" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="130" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:7  store i16 %phaseClass0_V_7_load, i16* @phaseClass0_V_8, align 16
 
@@ -856,7 +856,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="132" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="131" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:8  store i16 %phaseClass0_V_6_load, i16* @phaseClass0_V_7, align 2
 
@@ -874,7 +874,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="133" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="132" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:9  store i16 %phaseClass0_V_5_load, i16* @phaseClass0_V_6, align 4
 
@@ -892,7 +892,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="134" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="133" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:10  store i16 %phaseClass0_V_4_load, i16* @phaseClass0_V_5, align 2
 
@@ -910,7 +910,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="135" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="134" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:11  store i16 %phaseClass0_V_3_load, i16* @phaseClass0_V_4, align 8
 
@@ -928,7 +928,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="136" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="135" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:12  store i16 %phaseClass0_V_2_load, i16* @phaseClass0_V_3, align 2
 
@@ -946,7 +946,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="137" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="136" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:13  store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 4
 
@@ -964,7 +964,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="138" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="137" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:14  store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
 
@@ -982,7 +982,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="139" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="138" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .preheader.0:15  store i16 %tmp_15, i16* @phaseClass0_V_0, align 16
 
@@ -1000,7 +1000,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="140" bw="0" op_0_bw="2" op_1_bw="2">
+<Node id="139" bw="0" op_0_bw="2" op_1_bw="2">
 <![CDATA[
 .preheader.0:16  store i2 -2, i2* @currentState, align 1
 
@@ -1016,7 +1016,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="147" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="146" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
 :0  br i1 %start_V_read, label %1, label %._crit_edge839
 
@@ -1033,7 +1033,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="149" bw="0" op_0_bw="2" op_1_bw="2">
+<Node id="148" bw="0" op_0_bw="2" op_1_bw="2">
 <![CDATA[
 :0  store i2 1, i2* @currentState, align 1
 
@@ -1052,7 +1052,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="75" bw="16" op_0_bw="16">
+<Node id="74" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:1  %Phase0_V_6_load = load i16* @Phase0_V_6, align 4
 
@@ -1068,7 +1068,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="76" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="75" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:2  store i16 %Phase0_V_6_load, i16* @Phase0_V_7, align 2
 
@@ -1084,7 +1084,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="77" bw="16" op_0_bw="16">
+<Node id="76" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:3  %Phase0_V_5_load = load i16* @Phase0_V_5, align 2
 
@@ -1100,7 +1100,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="78" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="77" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:4  store i16 %Phase0_V_5_load, i16* @Phase0_V_6, align 4
 
@@ -1116,7 +1116,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="16" op_0_bw="16">
+<Node id="78" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:5  %Phase0_V_4_load = load i16* @Phase0_V_4, align 8
 
@@ -1132,7 +1132,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="79" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:6  store i16 %Phase0_V_4_load, i16* @Phase0_V_5, align 2
 
@@ -1148,7 +1148,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="81" bw="16" op_0_bw="16">
+<Node id="80" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:7  %Phase0_V_3_load = load i16* @Phase0_V_3, align 2
 
@@ -1164,7 +1164,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="82" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="81" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:8  store i16 %Phase0_V_3_load, i16* @Phase0_V_4, align 8
 
@@ -1180,7 +1180,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="83" bw="16" op_0_bw="16">
+<Node id="82" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:9  %Phase0_V_2_load = load i16* @Phase0_V_2, align 4
 
@@ -1196,7 +1196,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="84" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="83" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:10  store i16 %Phase0_V_2_load, i16* @Phase0_V_3, align 2
 
@@ -1212,7 +1212,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="85" bw="16" op_0_bw="16">
+<Node id="84" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:11  %Phase0_V_1_load = load i16* @Phase0_V_1, align 2
 
@@ -1228,7 +1228,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="86" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="85" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:12  store i16 %Phase0_V_1_load, i16* @Phase0_V_2, align 4
 
@@ -1244,7 +1244,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="87" bw="16" op_0_bw="16">
+<Node id="86" bw="16" op_0_bw="16">
 <![CDATA[
 .loopexit.loopexit:13  %Phase0_V_0_load = load i16* @Phase0_V_0, align 16
 
@@ -1260,7 +1260,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="88" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="87" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:14  store i16 %Phase0_V_0_load, i16* @Phase0_V_1, align 2
 
@@ -1276,7 +1276,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="95" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="94" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:21  %tmp7 = add i16 %tmp6, %tmp3
 
@@ -1292,7 +1292,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="103" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="102" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:29  %p_Val2_3_s = add i16 %tmp14, %tmp7
 
@@ -1308,7 +1308,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="104" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="103" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:30  store i16 %p_Val2_3_s, i16* @corHelperI_V, align 2
 
@@ -1324,7 +1324,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="105" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="104" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
 .loopexit.loopexit:31  store i16 %p_Val2_3_s, i16* @Phase0_V_0, align 16
 
@@ -1340,7 +1340,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="106" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="16" op_3_bw="32" op_4_bw="32">
+<Node id="105" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="16" op_3_bw="32" op_4_bw="32">
 <![CDATA[
 .loopexit.loopexit:32  %tmp_data_V = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_3_s, i32 0, i32 15)
 
@@ -1356,7 +1356,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="107" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
+<Node id="106" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
 .loopexit.loopexit:33  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 undef)
 
@@ -1652,22 +1652,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="105" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="56" bw="0" op_0_bw="0" op_1_bw="2" op_2_bw="32" op_3_bw="0">
-<![CDATA[
-.preheader580.preheader:22  call void (...)* @_ssdm_op_SpecReset(i2* @currentState, i32 1, [1 x i8]* @p_str) nounwind
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="106" st_id="3" stage="1" lat="2">
+<operation id="105" st_id="3" stage="1" lat="2">
 <core>AXI4Stream</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="0">
@@ -1675,9 +1660,25 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="107" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
+<Node id="106" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
 .loopexit.loopexit:33  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 undef)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="106" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp><literal name="currentState_load" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="108" bw="0" op_0_bw="0">
+<![CDATA[
+.loopexit.loopexit:35  br label %.loopexit
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1686,29 +1687,13 @@
 <operation id="107" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
-<or_exp><and_exp><literal name="currentState_load" val="2"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="109" bw="0" op_0_bw="0">
-<![CDATA[
-.loopexit.loopexit:35  br label %.loopexit
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="108" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
 <condition id="29">
 <or_exp><and_exp><literal name="currentState_load" val="1"/>
 <literal name="tmp" val="0"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="115" bw="0" op_0_bw="0">
+<Node id="114" bw="0" op_0_bw="0">
 <![CDATA[
 :1  br label %5
 
@@ -1716,7 +1701,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="109" st_id="3" stage="1" lat="1">
+<operation id="108" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="31">
@@ -1726,7 +1711,7 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="141" bw="0" op_0_bw="0">
+<Node id="140" bw="0" op_0_bw="0">
 <![CDATA[
 .preheader.0:17  br label %.loopexit437
 
@@ -1734,7 +1719,7 @@
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="110" st_id="3" stage="1" lat="1">
+<operation id="109" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="33">
@@ -1743,9 +1728,25 @@
 </and_exp></or_exp>
 </condition>
 
-<Node id="143" bw="0" op_0_bw="0">
+<Node id="142" bw="0" op_0_bw="0">
 <![CDATA[
 .loopexit437:0  br label %5
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="110" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="34">
+<or_exp><and_exp><literal name="currentState_load" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="144" bw="0" op_0_bw="0">
+<![CDATA[
+:0  br label %.loopexit
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1754,14 +1755,15 @@
 <operation id="111" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="34">
-<or_exp><and_exp><literal name="currentState_load" val="1"/>
+<condition id="32">
+<or_exp><and_exp><literal name="currentState_load" val="0"/>
+<literal name="start_V_read" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="145" bw="0" op_0_bw="0">
+<Node id="149" bw="0" op_0_bw="0">
 <![CDATA[
-:0  br label %.loopexit
+:1  br label %._crit_edge839
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1770,15 +1772,14 @@
 <operation id="112" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="32">
+<condition id="35">
 <or_exp><and_exp><literal name="currentState_load" val="0"/>
-<literal name="start_V_read" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="150" bw="0" op_0_bw="0">
+<Node id="151" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %._crit_edge839
+._crit_edge839:0  br label %.loopexit
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1787,27 +1788,11 @@
 <operation id="113" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="35">
-<or_exp><and_exp><literal name="currentState_load" val="0"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="152" bw="0" op_0_bw="0">
-<![CDATA[
-._crit_edge839:0  br label %.loopexit
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="114" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
 <condition id="27">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="154" bw="0">
+<Node id="153" bw="0">
 <![CDATA[
 .loopexit:0  ret void
 

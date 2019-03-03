@@ -68,7 +68,6 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
   %currentState_load = load i2* @currentState, align 1
-  call void (...)* @_ssdm_op_SpecReset(i2* @currentState, i32 1, [1 x i8]* @p_str) nounwind
   %phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 2
   %phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2
   %phaseClass0_V_12_loa = load i16* @phaseClass0_V_12, align 2
