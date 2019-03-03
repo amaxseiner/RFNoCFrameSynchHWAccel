@@ -208,7 +208,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 
 switch(currentState) {
 case ST_IDLE:
-	if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
+	if(start){ // wait for start signal.
 		currentState = ST_LOAD;
 		corState = ST_WAIT;
 	}
@@ -232,6 +232,18 @@ case ST_IDLE:
 			}
 			phaseClass0[0] = newVal;
 			phaseClassValid[phaseClass] = 1;
+			correlateData0: for(int a =windowSize-1;a>=0;a--){
+			#pragma HLS UNROLL
+				if(corrSeq[a]>0)
+					corHelperI = corHelperI + (phaseClass0[a]);
+				//corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+				if(a>0)
+					Phase0[a] = Phase0[a-1];
+			}
+			Phase0[0] = corHelperI;
+			out_sample.data.range(31,0) = corHelperI.V;
+			//out_sample.last = 0;
+			o_data.write(out_sample);
 			break;
 		case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
@@ -363,7 +375,7 @@ case ST_IDLE:
 	break;
 }
 
-
+/*
 	switch(corState){
 	case ST_WAIT:
 		corState = ST_WAIT;
@@ -560,5 +572,5 @@ case ST_IDLE:
 			Phase15[0] = corHelperI;
 			break;
 		}
-	}
+	}*/
 }

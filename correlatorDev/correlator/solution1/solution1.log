@@ -9,45 +9,30 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:19 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 479 ; free virtual = 1804
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:21 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 476 ; free virtual = 1804
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 514 ; free virtual = 2006
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 500 ; free virtual = 1999
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 367.297 ; gain = 13.832 ; free physical = 458 ; free virtual = 1791
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:20 . Memory (MB): peak = 367.285 ; gain = 13.820 ; free physical = 483 ; free virtual = 1983
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 452 ; free virtual = 1786
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:20 . Memory (MB): peak = 495.242 ; gain = 141.777 ; free physical = 477 ; free virtual = 1978
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlator' (correlator.cpp:9).
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (correlator.cpp:229) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA1' (correlator.cpp:237) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA2' (correlator.cpp:245) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA3' (correlator.cpp:254) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA4' (correlator.cpp:262) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA5' (correlator.cpp:270) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA6' (correlator.cpp:278) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA7' (correlator.cpp:286) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA8' (correlator.cpp:294) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA9' (correlator.cpp:302) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA10' (correlator.cpp:310) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA11' (correlator.cpp:318) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA12' (correlator.cpp:326) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA13' (correlator.cpp:334) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA14' (correlator.cpp:342) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA15' (correlator.cpp:351) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:379) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData1' (correlator.cpp:396) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData2' (correlator.cpp:408) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData3' (correlator.cpp:419) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData4' (correlator.cpp:431) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData5' (correlator.cpp:442) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData6' (correlator.cpp:453) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData7' (correlator.cpp:464) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData8' (correlator.cpp:475) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData9' (correlator.cpp:486) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData10' (correlator.cpp:497) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData11' (correlator.cpp:508) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData12' (correlator.cpp:519) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData13' (correlator.cpp:530) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData14' (correlator.cpp:541) in function 'correlator' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData15' (correlator.cpp:552) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:235) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA1' (correlator.cpp:249) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA2' (correlator.cpp:257) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA3' (correlator.cpp:266) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA4' (correlator.cpp:274) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA5' (correlator.cpp:282) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA6' (correlator.cpp:290) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA7' (correlator.cpp:298) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA8' (correlator.cpp:306) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA9' (correlator.cpp:314) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA10' (correlator.cpp:322) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA11' (correlator.cpp:330) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA12' (correlator.cpp:338) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA13' (correlator.cpp:346) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA14' (correlator.cpp:354) in function 'correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA15' (correlator.cpp:363) in function 'correlator' completely.
 INFO: [XFORM 203-101] Partitioning array 'phaseClass0.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'resPhase0.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'Phase0.V'  in dimension 1 completely.
@@ -98,9 +83,9 @@ INFO: [XFORM 203-101] Partitioning array 'resPhase15.V'  in dimension 1 complete
 INFO: [XFORM 203-101] Partitioning array 'Phase15.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'phaseClassValid.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
-INFO: [XFORM 203-11] Balancing expressions in function 'correlator' (correlator.cpp:9)...240 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:00:25 . Memory (MB): peak = 495.258 ; gain = 141.793 ; free physical = 432 ; free virtual = 1772
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:00:27 . Memory (MB): peak = 558.836 ; gain = 205.371 ; free physical = 308 ; free virtual = 1667
+INFO: [XFORM 203-11] Balancing expressions in function 'correlator' (correlator.cpp:9)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 495.242 ; gain = 141.777 ; free physical = 444 ; free virtual = 1949
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:22 . Memory (MB): peak = 495.242 ; gain = 141.777 ; free physical = 432 ; free virtual = 1938
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'correlator' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -110,13 +95,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'correlator'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 30.49 seconds; current allocated memory: 184.599 MB.
+INFO: [HLS 200-111]  Elapsed time: 22.57 seconds; current allocated memory: 104.141 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.34 seconds; current allocated memory: 195.038 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 105.333 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlator'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -129,9 +114,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/start_V' to 'ap
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/phaseClass_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlator' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
-INFO: [HLS 200-111]  Elapsed time: 1.54 seconds; current allocated memory: 203.501 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 558.836 ; gain = 205.371 ; free physical = 267 ; free virtual = 1662
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 106.742 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:00:24 . Memory (MB): peak = 495.242 ; gain = 141.777 ; free physical = 413 ; free virtual = 1923
 INFO: [SYSC 207-301] Generating SystemC RTL for correlator.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlator.
-INFO: [HLS 200-112] Total elapsed time: 37.75 seconds; peak allocated memory: 203.501 MB.
+INFO: [HLS 200-112] Total elapsed time: 23.57 seconds; peak allocated memory: 106.742 MB.

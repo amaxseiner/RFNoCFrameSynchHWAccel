@@ -29412,6 +29412,18 @@ _ssdm_Unroll(0,0,0, "");
    }
    phaseClass0[0] = newVal;
    phaseClassValid[phaseClass] = 1;
+   correlateData0: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a]>0)
+     corHelperI = corHelperI + (phaseClass0[a]);
+
+    if(a>0)
+     Phase0[a] = Phase0[a-1];
+   }
+   Phase0[0] = corHelperI;
+   out_sample.data.range(31,0) = corHelperI.V;
+
+   o_data.write(out_sample);
    break;
   case 1:
    SHIFT_DATA1: for(int a =16 -1;a>0;a--){
@@ -29542,203 +29554,5 @@ _ssdm_Unroll(0,0,0, "");
  currentState = ST_LOAD;
  break;
 }
-
-
- switch(corState){
- case ST_WAIT:
-  corState = ST_WAIT;
-  out_sample.data.range(3,0) = phaseClass;
-
-  o_data.write(out_sample);
-  break;
- case ST_CORRELATE:
-
-
-  switch(phaseClass){
-  case 0:
-   correlateData0: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass0[a]);
-
-    if(a>0)
-     Phase0[a] = Phase0[a-1];
-   }
-   Phase0[0] = corHelperI;
-
-
-
-
-
-
-  break;
-  case 1:
-   correlateData1: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass1[a]);
-
-    if(a>0)
-     Phase1[a] = Phase1[a-1];
-   }
-   Phase1[0] = corHelperI;
-
-   break;
-  case 2:
-   correlateData2: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass2[a]);
-
-    if(a>0)
-     Phase2[a] = Phase2[a-1];
-   }
-   Phase2[0] = corHelperI;
-   break;
-  case 3:
-   correlateData3: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass3[a]);
-
-    if(a>0)
-     Phase3[a] = Phase3[a-1];
-   }
-   Phase3[0] = corHelperI;
-
-   break;
-  case 4:
-   correlateData4: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass4[a]);
-
-    if(a>0)
-     Phase4[a] = Phase4[a-1];
-   }
-   Phase4[0] = corHelperI;
-   break;
-  case 5:
-   correlateData5: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass5[a]);
-
-    if(a>0)
-     Phase5[a] = Phase5[a-1];
-   }
-   Phase5[0] = corHelperI;
-   break;
-  case 6:
-   correlateData6: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass6[a]);
-
-    if(a>0)
-     Phase6[a] = Phase6[a-1];
-   }
-   Phase6[0] = corHelperI;
-   break;
-  case 7:
-   correlateData7: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass7[a]);
-
-    if(a>0)
-     Phase7[a] = Phase7[a-1];
-   }
-   Phase7[0] = corHelperI;
-   break;
-  case 8:
-   correlateData8: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass8[a]);
-
-    if(a>0)
-     Phase8[a] = Phase8[a-1];
-   }
-   Phase8[0] = corHelperI;
-   break;
-  case 9:
-   correlateData9: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass9[a]);
-
-    if(a>0)
-     Phase9[a] = Phase9[a-1];
-   }
-   Phase9[0] = corHelperI;
-   break;
-  case 10:
-   correlateData10: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass10[a]);
-
-    if(a>0)
-     Phase10[a] = Phase10[a-1];
-   }
-   Phase10[0] = corHelperI;
-   break;
-  case 11:
-   correlateData11: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass11[a]);
-
-    if(a>0)
-     Phase11[a] = Phase11[a-1];
-   }
-   Phase11[0] = corHelperI;
-   break;
-  case 12:
-   correlateData12: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass12[a]);
-
-    if(a>0)
-     Phase12[a] = Phase12[a-1];
-   }
-   Phase12[0] = corHelperI;
-   break;
-  case 13:
-   correlateData13: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass13[a]);
-
-    if(a>0)
-     Phase13[a] = Phase13[a-1];
-   }
-   Phase13[0] = corHelperI;
-   break;
-  case 14:
-   correlateData14: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass14[a]);
-
-    if(a>0)
-     Phase14[a] = Phase14[a-1];
-   }
-   Phase14[0] = corHelperI;
-   break;
-  case 15:
-   correlateData15: for(int a =16 -1;a>=0;a--){
-_ssdm_Unroll(0,0,0, "");
- if(corrSeq[a]>0)
-     corHelperI = corHelperI + (phaseClass15[a]);
-
-    if(a>0)
-     Phase15[a] = Phase15[a-1];
-   }
-   Phase15[0] = corHelperI;
-   break;
-  }
- }
+#576 "correlator.cpp"
 }
