@@ -29586,7 +29586,7 @@ case ST_CORRELATE:
   case ST_LOAD:
 #pragma empty_line
    i_data.read(tmp_data);
-   out_sample.data.range(31,0) = tmp_data.data.range(31,0);
+   out_sample.data.range(3,0) = phaseClass;
    out_sample.last = tmp_data.last;
    o_data.write(out_sample);
 #pragma empty_line
