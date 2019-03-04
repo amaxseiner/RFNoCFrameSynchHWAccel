@@ -42,9 +42,24 @@
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/inputCorrr.dat</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat</location>
+		</link>
+		<link>
+			<name>source/matched.cpp</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matched.cpp</location>
+		</link>
+		<link>
 			<name>source/matcherSim.h</name>
 			<type>1</type>
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matcherSim.h</location>
+		</link>
+		<link>
+			<name>source/results.csv</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/results.csv</location>
 		</link>
 		<link>
 			<name>testbench/matcherTB.cpp</name>

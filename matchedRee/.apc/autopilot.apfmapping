@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
+    <originFiles name="inputCorrr.dat" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\inputCorrr.dat"/>
     <originFiles name="matcherSim.h" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherSim.h"/>
+    <originFiles name="results.csv" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\results.csv"/>
+    <originFiles name="matched.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matched.cpp"/>
   </source>
   <testbench>
     <originFiles name="matcherTB.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherTB.cpp"/>

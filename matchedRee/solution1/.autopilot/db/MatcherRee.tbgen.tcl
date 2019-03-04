@@ -59,10 +59,10 @@ set NewPortList {[
  	{ "name": "start_V", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "start_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"],
 		"CDFG" : "MatcherRee",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -79,16 +79,23 @@ set RtlHierarchyInfo {[
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_14", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_13", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_12", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_11", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_10", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_8", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "buffI_V_7", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffI_V_6", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "buffI_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "buffQ_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffI_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_4", "Type" : "OVld", "Direction" : "IO"},
@@ -101,20 +108,34 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffI_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffQ_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffI_V_0", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U6", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U7", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U8", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U9", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U10", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U11", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U12", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U13", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mul_mudEe_U14", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U0", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U1", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U2", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U3", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U4", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U5", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U6", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U7", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U8", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U9", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U10", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U11", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U12", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U13", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U14", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U15", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U16", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U17", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U18", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mubkb_U19", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U20", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U21", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U22", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U23", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U24", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U25", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U26", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.MatcherRee_mac_mucud_U27", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -126,16 +147,23 @@ set ArgLastReadFirstWriteLatency {
 		start_V {Type I LastRead 0 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_14 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_14 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_13 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_13 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_12 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_12 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_11 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_11 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_10 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_10 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_9 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_9 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_8 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_8 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_7 {Type IO LastRead -1 FirstWrite -1}
+		buffI_V_7 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_6 {Type IO LastRead -1 FirstWrite -1}
 		buffI_V_6 {Type IO LastRead -1 FirstWrite -1}
-		buffI_V_7 {Type O LastRead -1 FirstWrite -1}
 		buffQ_V_5 {Type IO LastRead -1 FirstWrite -1}
 		buffI_V_5 {Type IO LastRead -1 FirstWrite -1}
 		buffQ_V_4 {Type IO LastRead -1 FirstWrite -1}

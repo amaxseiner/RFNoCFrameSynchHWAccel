@@ -39,11 +39,8 @@ const int COR_SIZE = 16;
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 #pragma HLS PIPELINE II=1
-static ap_int<16> data_reg_i[COR_SIZE];
-#pragma HLS RESET variable=data_reg_i
-#pragma HLS ARRAY_PARTITION variable=data_reg_i complete dim=1
-static ap_int<16> data_reg_q[COR_SIZE];
-#pragma HLS RESET variable=data_reg_q
+
+
 
   rfnoc_axis out_sample;
 
@@ -51,6 +48,7 @@ static ap_int<16> data_reg_q[COR_SIZE];
 #pragma HLS RESET variable=out_sample_cnt
   static ap_uint<1> firstLoad;
 #pragma HLS RESET variable=firstLoad
+
 
   rfnoc_axis tmp_data;
   static ap_int<16> zeros;
@@ -60,16 +58,12 @@ static ap_int<16> data_reg_q[COR_SIZE];
   static ap_fixed<16,11> buffQ[16]= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
   #pragma HLS ARRAY_PARTITION variable=buffQ complete dim=1
 
-
-
   static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
   #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 
-  //static ap_fixed<16,11> matchQ[16]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-  //#pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
-
-
   static ap_fixed<16,11> matchQSum = 0.0;
+  static ap_fixed<16,11> matchISum = 0.0;
+
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
 #pragma HLS RESET variable=currentState
@@ -99,16 +93,16 @@ static ap_int<16> data_reg_q[COR_SIZE];
 		buffI[0] = tmp_data.data.range(31,16);
 		//calculate the 16 pre * buffs
 		matchQSum = 0.0;
+		matchISum = 0.0;
 		CAL_MATCH: for(int b = 0; b<16; b++){
-			matchQSum = matchQSum+ (buffQ[15-b] * preamble[b]);
+			matchQSum = matchQSum + (buffQ[b] * preamble[b]);
+			matchISum = matchISum + (buffI[b] * preamble[b]);
 		}
 
 
 
-    	out_sample.data.range(31,16) = tmp_data.data.range(15,0);
+    	out_sample.data.range(31,16) = matchISum.range(15,0);
     	out_sample.data.range(15,0) = matchQSum.range(15,0);
-
-
     	o_data.write(out_sample);
 	break;
     }

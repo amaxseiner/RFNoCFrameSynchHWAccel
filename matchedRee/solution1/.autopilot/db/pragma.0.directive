@@ -31,23 +31,6 @@
 </directive>
 <directive functionLabel="" functionName="MatcherRee" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="data_reg_i"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="data_reg_i"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="data_reg_q"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="out_sample_cnt"/>
 </pragma>
 </directive>

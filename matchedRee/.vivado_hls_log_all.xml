@@ -6,44 +6,50 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="matchedRee" solutionName="solution1" date="2019-02-27T14:26:05.402-0500"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.190-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.174-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.156-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.141-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.135-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.085-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.066-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.051-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.031-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:05.020-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.998-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.984-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.966-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.951-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_7' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.931-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_8' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.917-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_9' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.899-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_10' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.883-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_11' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.864-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_12' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.856-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_13' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.837-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_14' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.819-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'currentState' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-02-22T12:51:04.812-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.513-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_0' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.497-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.497-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_1' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.482-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.466-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_2' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.466-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.451-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_3' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.435-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.419-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_4' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.388-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.372-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_5' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.372-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.341-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_6' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.341-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_7' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.326-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_7' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.326-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_8' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.310-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_8' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.310-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_9' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.279-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_9' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.279-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_10' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.263-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_10' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.247-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_11' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.232-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_11' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.216-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_12' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.201-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_12' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.185-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_13' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.169-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_13' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.154-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffI_V_14' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.138-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'buffQ_V_14' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.107-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'currentState' is power-on initialization." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:58.091-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:50.521-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-02T17:03:30.527-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="make: Warning: File '/dev/null' has modification time 13007 s in the future&#xA;In file included from ../../../matcherTB.cpp:3:0:&#xA;../../../matcherSim.h: In function ‘void matchation(rfnoc_axis, rfnoc_axis*, std::ofstream*)’:&#xA;../../../matcherSim.h:39:13: error: too few arguments to function ‘void shifter(semiComplex, ap_uint&lt;4>, std::ofstream*)’&#xA;../../../matcherSim.h:32:6: note: declared here&#xA;../../../matcherSim.h: In function ‘void matchate(std::ofstream*)’:&#xA;../../../matcherSim.h:45:2: error: ‘bigSemiComplex’ was not declared in this scope&#xA;../../../matcherSim.h:45:17: error: expected ‘;’ before ‘temp’&#xA;../../../matcherSim.h:46:2: error: ‘temp’ was not declared in this scope&#xA;../../../matcherTB.cpp: At global scope:&#xA;../../../matcherTB.cpp:7:5: warning: first argument of ‘int main(char, char**)’ should be ‘int’ [-Wmain]&#xA;make: *** [obj/matcherTB.o] Error 1" projectName="matchedRee" solutionName="solution1" date="2019-02-27T12:46:35.193-0500" type="Warning"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
