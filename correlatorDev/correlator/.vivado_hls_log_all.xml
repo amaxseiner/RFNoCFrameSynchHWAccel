@@ -12,7 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-03T17:45:05.906-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/phaseClass_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-03-04T23:38:33.268-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-04T23:38:33.243-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

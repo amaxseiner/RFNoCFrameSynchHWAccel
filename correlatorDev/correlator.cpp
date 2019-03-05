@@ -211,28 +211,21 @@ case ST_IDLE:
  case ST_LOAD: // whenever there is valid input data, shift it in
 	if(!i_data.empty()){
 		i_data.read(tmp_data);
-		//out_sample.data.range(3,0) = phaseClass;
 		out_sample.last = tmp_data.last;
-		//o_data.write(out_sample);
-		//if(!phaseClassIn.empty())
-			//phaseClassIn.read(phaseClass);
-		//newVal.q = tmp_data.data.range(31,16); // IM
+
 		newVal.V = tmp_data.data.range(15,0); // RE
-		switch(phaseClass){
-		case 0:
-			SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
-				#pragma HLS UNROLL
-				phaseClass0[a] = phaseClass0[a-1];
-				if(a==1){
-					phaseClass0[0] = newVal;
-					currentState = ST_CORRELATEl;
-				}
+
+		SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass0[a] = phaseClass0[a-1];
+			if(a==1){
+				phaseClass0[0] = newVal;
+				currentState = ST_CORRELATEl;
 			}
-			//phaseClassValid[phaseClass] = 1;
 		}
 
 	} else {
-		currentState = ST_CORRELATEl;
+		currentState = ST_LOAD;
 	}
 	break;
  case ST_CORRELATEl:
