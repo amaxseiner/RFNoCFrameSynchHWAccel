@@ -5,8 +5,8 @@
 ############################################################
 open_project correlator
 set_top correlator
-add_files rfnoc.h
 add_files correlator.cpp
+add_files rfnoc.h
 open_solution "solution1"
 set_part {xc7k160tfbg484-1}
 create_clock -period 10 -name default

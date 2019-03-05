@@ -24,7 +24,7 @@ set C_modelArgList {
 	{ o_data_V_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_V_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
 	{ start_V int 1 regular  }
-	{ phaseClass_V int 4 regular  }
+	{ phaseClass_V int 4 unused  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -67,7 +67,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "correlator",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -101,8 +101,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "Phase0_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "Phase0_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "Phase0_V_7", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_6", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "Phase0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "Phase0_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "Phase0_V_3", "Type" : "OVld", "Direction" : "IO"},
@@ -119,7 +121,7 @@ set ArgLastReadFirstWriteLatency {
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
 		start_V {Type I LastRead 0 FirstWrite -1}
-		phaseClass_V {Type I LastRead 0 FirstWrite -1}
+		phaseClass_V {Type I LastRead -1 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
@@ -138,8 +140,10 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
 		phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
+		Phase0_V_8 {Type IO LastRead -1 FirstWrite -1}
+		Phase0_V_9 {Type O LastRead -1 FirstWrite -1}
+		Phase0_V_7 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_6 {Type IO LastRead -1 FirstWrite -1}
-		Phase0_V_7 {Type O LastRead -1 FirstWrite -1}
 		Phase0_V_5 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_4 {Type IO LastRead -1 FirstWrite -1}
 		Phase0_V_3 {Type IO LastRead -1 FirstWrite -1}
