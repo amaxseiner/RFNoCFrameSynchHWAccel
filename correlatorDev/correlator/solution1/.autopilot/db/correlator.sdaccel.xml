@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlator'" level="0">
-<item name = "Date">Wed Mar  6 15:02:57 2019
+<item name = "Date">Wed Mar  6 15:12:07 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -182,6 +182,7 @@
 <column name="'tmp7', correlator.cpp:230">add, 1.49, 1.49, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'tmp6', correlator.cpp:230">add, 2.54, 4.03, -, -, -, -, -, -, -, -, -, -, -</column>
 <column name="'p_Val2_3_4', correlator.cpp:230">add, 2.54, 6.58, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="correlator.cpp:235">store, 0.00, 6.58, &apos;p_Val2_3_4&apos;, correlator.cpp:230, -, -, -, -, -, -, -, &apos;Phase0_V_0&apos;, -, -</column>
 </table>
 </item>
 </section>

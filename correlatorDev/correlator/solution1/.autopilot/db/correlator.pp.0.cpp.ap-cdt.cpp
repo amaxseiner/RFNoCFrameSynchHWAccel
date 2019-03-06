@@ -29400,7 +29400,7 @@ switch(currentState) {
     phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
-   corHelperI = 0;
+#pragma empty_line
    correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma empty_line
     if(a==16 -1)

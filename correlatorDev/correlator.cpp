@@ -220,7 +220,7 @@ switch(currentState) {
 				phaseClass0[a] = phaseClass0[a-1];
 			}
 			phaseClass0[0] = newVal;
-			corHelperI = 0;
+			//corHelperI = 0;
 			correlateData0: for(int a =windowSize-1;a>=0;a--){
 				//#pragma HLS UNROLL
 				if(a==windowSize-1)

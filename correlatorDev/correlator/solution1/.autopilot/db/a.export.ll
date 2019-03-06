@@ -44,7 +44,7 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader598.preheader:
+.preheader585.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !77
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !81
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !85
@@ -69,21 +69,21 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind
   br i1 %currentState_load, label %2, label %0
 
-; <label>:0                                       ; preds = %.preheader598.preheader
-  br i1 %start_V_read, label %1, label %._crit_edge857
+; <label>:0                                       ; preds = %.preheader585.preheader
+  br i1 %start_V_read, label %1, label %._crit_edge844
 
 ; <label>:1                                       ; preds = %0
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge857
+  br label %._crit_edge844
 
-._crit_edge857:                                   ; preds = %1, %0
-  br label %._crit_edge856
+._crit_edge844:                                   ; preds = %1, %0
+  br label %._crit_edge843
 
-; <label>:2                                       ; preds = %.preheader598.preheader
+; <label>:2                                       ; preds = %.preheader585.preheader
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %._crit_edge859.0, label %._crit_edge858
+  br i1 %tmp, label %._crit_edge846.0, label %._crit_edge845
 
-._crit_edge859.0:                                 ; preds = %2
+._crit_edge846.0:                                 ; preds = %2
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
   %tmp_last_V = extractvalue { i32, i1 } %empty, 1
@@ -145,12 +145,12 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %p_Result_s = call i32 @llvm.part.set.i32.i16(i32 undef, i16 %p_Val2_3_4, i32 0, i32 15)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge858
+  br label %._crit_edge845
 
-._crit_edge858:                                   ; preds = %._crit_edge859.0, %2
-  br label %._crit_edge856
+._crit_edge845:                                   ; preds = %._crit_edge846.0, %2
+  br label %._crit_edge843
 
-._crit_edge856:                                   ; preds = %._crit_edge858, %._crit_edge857
+._crit_edge843:                                   ; preds = %._crit_edge845, %._crit_edge844
   ret void
 }
 

@@ -29380,7 +29380,7 @@ switch(currentState) {
     phaseClass0[a] = phaseClass0[a-1];
    }
    phaseClass0[0] = newVal;
-   corHelperI = 0;
+
    correlateData0: for(int a =16 -1;a>=0;a--){
 
     if(a==16 -1)

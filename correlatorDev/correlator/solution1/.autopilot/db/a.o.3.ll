@@ -48,7 +48,7 @@ declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 ; [#uses=0]
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader598.preheader:
+.preheader585.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !77
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !81
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !85
@@ -77,24 +77,24 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind, !dbg !2140 ; [debug line = 201:1]
   br i1 %currentState_load, label %2, label %0, !dbg !2141 ; [debug line = 206:1]
 
-; <label>:0                                       ; preds = %.preheader598.preheader
-  br i1 %start_V_read, label %1, label %._crit_edge857, !dbg !2142 ; [debug line = 208:6]
+; <label>:0                                       ; preds = %.preheader585.preheader
+  br i1 %start_V_read, label %1, label %._crit_edge844, !dbg !2142 ; [debug line = 208:6]
 
 ; <label>:1                                       ; preds = %0
   store i1 true, i1* @currentState, align 1, !dbg !2144 ; [debug line = 209:4]
-  br label %._crit_edge857, !dbg !2146            ; [debug line = 210:3]
+  br label %._crit_edge844, !dbg !2146            ; [debug line = 210:3]
 
-._crit_edge857:                                   ; preds = %1, %0
-  br label %._crit_edge856, !dbg !2147            ; [debug line = 211:2]
+._crit_edge844:                                   ; preds = %1, %0
+  br label %._crit_edge843, !dbg !2147            ; [debug line = 211:2]
 
-; <label>:2                                       ; preds = %.preheader598.preheader
+; <label>:2                                       ; preds = %.preheader585.preheader
   call void @llvm.dbg.value(metadata !{i32* %i_data_V_data_V}, i64 0, metadata !2148), !dbg !2153 ; [debug line = 112:48@213:7] [debug variable = stream<rfnoc_axis>.V.data.V]
   call void @llvm.dbg.value(metadata !{i1* %i_data_V_last_V}, i64 0, metadata !2155), !dbg !2153 ; [debug line = 112:48@213:7] [debug variable = stream<rfnoc_axis>.V.last.V]
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1), !dbg !2157 ; [#uses=1 type=i1] [debug line = 113:20@213:7]
   call void @llvm.dbg.value(metadata !{i1 %tmp}, i64 0, metadata !2159), !dbg !2157 ; [debug line = 113:20@213:7] [debug variable = tmp]
-  br i1 %tmp, label %._crit_edge859.0, label %._crit_edge858, !dbg !2154 ; [debug line = 213:7]
+  br i1 %tmp, label %._crit_edge846.0, label %._crit_edge845, !dbg !2154 ; [debug line = 213:7]
 
-._crit_edge859.0:                                 ; preds = %2
+._crit_edge846.0:                                 ; preds = %2
   call void @llvm.dbg.value(metadata !{i32* %i_data_V_data_V}, i64 0, metadata !2160), !dbg !2164 ; [debug line = 123:48@214:4] [debug variable = stream<rfnoc_axis>.V.data.V]
   call void @llvm.dbg.value(metadata !{i1* %i_data_V_last_V}, i64 0, metadata !2167), !dbg !2164 ; [debug line = 123:48@214:4] [debug variable = stream<rfnoc_axis>.V.last.V]
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V), !dbg !2168 ; [#uses=2 type={ i32, i1 }] [debug line = 125:9@214:4]
@@ -168,12 +168,12 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void @llvm.dbg.value(metadata !{i1 %tmp_last_V}, i64 0, metadata !3414), !dbg !3413 ; [debug line = 145:31@240:4] [debug variable = tmp.last.V]
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V), !dbg !3415 ; [debug line = 146:9@240:4]
   store i1 true, i1* @currentState, align 1, !dbg !3416 ; [debug line = 244:4]
-  br label %._crit_edge858, !dbg !3417            ; [debug line = 247:3]
+  br label %._crit_edge845, !dbg !3417            ; [debug line = 247:3]
 
-._crit_edge858:                                   ; preds = %._crit_edge859.0, %2
-  br label %._crit_edge856, !dbg !3418            ; [debug line = 248:2]
+._crit_edge845:                                   ; preds = %._crit_edge846.0, %2
+  br label %._crit_edge843, !dbg !3418            ; [debug line = 248:2]
 
-._crit_edge856:                                   ; preds = %._crit_edge858, %._crit_edge857
+._crit_edge843:                                   ; preds = %._crit_edge845, %._crit_edge844
   ret void, !dbg !3419                            ; [debug line = 593:1]
 }
 
