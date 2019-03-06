@@ -222,14 +222,16 @@ switch(currentState) {
 			}
 			phaseClass0[0] = newVal;
 			currentState = ST_CORRELATEl;
+			out_sample.data.range(3,0) = phaseClass;
+			o_data.write(out_sample);
 
 		} else {
 			currentState = ST_LOAD;
 		}
 		break;
 	 case ST_CORRELATEl:
-		 out_sample.data.range(3,0) = phaseClass;
-		 o_data.write(out_sample);
+		 //out_sample.data.range(3,0) = phaseClass;
+		 //o_data.write(out_sample);
 		 corHelperI = 0;
 		 correlateData0: for(int a =windowSize-1;a>=0;a--){
 		 	#pragma HLS UNROLL
