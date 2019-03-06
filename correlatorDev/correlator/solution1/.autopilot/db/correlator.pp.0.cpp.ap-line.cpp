@@ -40543,7 +40543,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 #pragma HLS RESET variable=corHelperQ
 #pragma empty_line
 // may add load state later, not neccessary right now
-  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl };
+  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl, ST_SEND };
   static loadState currentState;
 #pragma empty_line
 #pragma empty_line
@@ -40553,49 +40553,51 @@ switch(currentState) {
  case ST_IDLE:
   if(start){ // wait for start signal.
    currentState = ST_LOAD;
-  }
-  break;
-  case ST_LOAD: // whenever there is valid input data, shift it in
+ }
+ break;
+ case ST_LOAD: // whenever there is valid input data, shift it in
   if(!i_data.empty()){
    i_data.read(tmp_data);
    out_sample.last = tmp_data.last;
 #pragma empty_line
    newVal.V = tmp_data.data.range(15,0); // RE
 #pragma empty_line
-   SHIFT_DATA0: for(int a =16 -1;a>0;a--){
+  SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 #pragma HLS UNROLL
  phaseClass0[a] = phaseClass0[a-1];
 #pragma empty_line
-   }
-   phaseClass0[0] = newVal;
-   currentState = ST_CORRELATEl;
-   out_sample.data.range(3,0) = phaseClass;
-   o_data.write(out_sample);
+  }
+  phaseClass0[0] = newVal;
+  currentState = ST_CORRELATEl;
+#pragma empty_line
 #pragma empty_line
   } else {
    currentState = ST_LOAD;
   }
-  break;
-  case ST_CORRELATEl:
-   //out_sample.data.range(3,0) = phaseClass;
-   //o_data.write(out_sample);
-   corHelperI = 0;
-   correlateData0: for(int a =16 -1;a>=0;a--){
+ break;
+ case ST_CORRELATEl:
+  //out_sample.data.range(3,0) = phaseClass;
+  //o_data.write(out_sample);
+  corHelperI = 0;
+  correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] > 0)
     corHelperI = corHelperI + (phaseClass0[a]);
-   //corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+    //corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
    if(a>0)
     Phase0[a] = Phase0[a-1];
    else{
     Phase0[0] = corHelperI;
-    out_sample.data.range(15,0) = corHelperI.V;
-    //out_sample.last = 0;
-    //o_data.write(out_sample);
-    currentState = ST_LOAD;
-   }
- }
 #pragma empty_line
+    currentState = ST_SEND;
+   }
+  }
+#pragma empty_line
+ break;
+ case ST_SEND:
+  out_sample.data.range(15,0) = corHelperI.V;
+  out_sample.last = 0;
+  o_data.write(out_sample);
  break;
 }
   /*case 1:

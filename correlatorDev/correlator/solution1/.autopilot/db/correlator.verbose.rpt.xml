@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlator'" level="0">
-<item name = "Date">Tue Mar  5 23:44:22 2019
+<item name = "Date">Tue Mar  5 23:50:06 2019
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">correlator</item>
@@ -47,12 +47,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 32</column>
+<column name="Expression">-, -, 159, 154</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 75</column>
-<column name="Register">-, -, 90, -</column>
+<column name="Multiplexer">-, -, -, 87</column>
+<column name="Register">-, -, 352, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -77,19 +77,23 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="p_Val2_3_4_fu_328_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp1_fu_310_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp2_fu_316_p2">+, 0, 53, 21, 16, 16</column>
+<column name="tmp6_fu_304_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp7_fu_292_p2">+, 0, 53, 21, 16, 16</column>
+<column name="tmp8_fu_298_p2">+, 0, 53, 21, 16, 16</column>
+<column name="tmp9_fu_322_p2">+, 0, 0, 16, 16, 16</column>
 <column name="ap_block_state1_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_io">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_io">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op102_write_state3">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op47_read_state1">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op80_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_243">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_405">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op45_read_state1">and, 0, 0, 2, 1, 1</column>
 <column name="o_data_V_data_V_1_load_A">and, 0, 0, 2, 1, 1</column>
 <column name="o_data_V_data_V_1_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_V_last_V_1_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_V_last_V_1_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_nbreadreq_fu_130_p4">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_nbreadreq_fu_126_p4">and, 0, 0, 2, 1, 0</column>
 <column name="o_data_V_data_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
-<column name="o_data_V_last_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
 <column name="ap_block_pp0_stage0_flag00001001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_flag00011001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
@@ -98,13 +102,13 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="currentState">9, 2, 2, 4</column>
+<column name="currentState">15, 3, 2, 6</column>
 <column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="o_data_V_data_V_1_data_out">9, 2, 32, 64</column>
 <column name="o_data_V_data_V_1_state">15, 3, 2, 6</column>
-<column name="o_data_V_last_V_1_data_out">9, 2, 1, 2</column>
 <column name="o_data_V_last_V_1_state">15, 3, 2, 6</column>
+<column name="storemerge_phi_fu_158_p4">15, 3, 2, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -112,23 +116,33 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter1_currentState_load_reg_517">2, 0, 2, 0</column>
-<column name="ap_reg_pp0_iter1_tmp_reg_521">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter1_currentState_load_reg_527">2, 0, 2, 0</column>
+<column name="corHelperI_V">16, 0, 16, 0</column>
 <column name="currentState">2, 0, 2, 0</column>
-<column name="currentState_load_reg_517">2, 0, 2, 0</column>
+<column name="currentState_load_reg_527">2, 0, 2, 0</column>
 <column name="o_data_V_data_V_1_payload_A">32, 0, 32, 0</column>
 <column name="o_data_V_data_V_1_payload_B">32, 0, 32, 0</column>
 <column name="o_data_V_data_V_1_sel_rd">1, 0, 1, 0</column>
 <column name="o_data_V_data_V_1_sel_wr">1, 0, 1, 0</column>
 <column name="o_data_V_data_V_1_state">2, 0, 2, 0</column>
-<column name="o_data_V_last_V_1_payload_A">1, 0, 1, 0</column>
-<column name="o_data_V_last_V_1_payload_B">1, 0, 1, 0</column>
 <column name="o_data_V_last_V_1_sel_rd">1, 0, 1, 0</column>
-<column name="o_data_V_last_V_1_sel_wr">1, 0, 1, 0</column>
 <column name="o_data_V_last_V_1_state">2, 0, 2, 0</column>
-<column name="phaseClass_V_read_reg_508">4, 0, 4, 0</column>
-<column name="tmp_last_V_reg_525">1, 0, 1, 0</column>
-<column name="tmp_reg_521">1, 0, 1, 0</column>
+<column name="phaseClass0_V_0">16, 0, 16, 0</column>
+<column name="phaseClass0_V_1">16, 0, 16, 0</column>
+<column name="phaseClass0_V_10">16, 0, 16, 0</column>
+<column name="phaseClass0_V_11">16, 0, 16, 0</column>
+<column name="phaseClass0_V_12">16, 0, 16, 0</column>
+<column name="phaseClass0_V_13">16, 0, 16, 0</column>
+<column name="phaseClass0_V_14">16, 0, 16, 0</column>
+<column name="phaseClass0_V_15">16, 0, 16, 0</column>
+<column name="phaseClass0_V_2">16, 0, 16, 0</column>
+<column name="phaseClass0_V_3">16, 0, 16, 0</column>
+<column name="phaseClass0_V_4">16, 0, 16, 0</column>
+<column name="phaseClass0_V_5">16, 0, 16, 0</column>
+<column name="phaseClass0_V_6">16, 0, 16, 0</column>
+<column name="phaseClass0_V_7">16, 0, 16, 0</column>
+<column name="phaseClass0_V_8">16, 0, 16, 0</column>
+<column name="phaseClass0_V_9">16, 0, 16, 0</column>
 </table>
 </item>
 </section>
