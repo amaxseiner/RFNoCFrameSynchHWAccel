@@ -5,7 +5,7 @@
   Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-MS-7917' (Linux_x86_64 version 4.15.0-45-generic) on Mon Mar 04 23:14:59 EST 2019
+INFO: [HLS 200-10] For user 'alex' on host 'alex-MS-7917' (Linux_x86_64 version 4.15.0-45-generic) on Tue Mar 05 23:23:22 EST 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator'
 INFO: [HLS 200-10] Bringing up Vivado HLS GUI ... 

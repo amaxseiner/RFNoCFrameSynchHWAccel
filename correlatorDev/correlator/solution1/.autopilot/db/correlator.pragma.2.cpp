@@ -40607,37 +40607,39 @@ _ssdm_op_SpecReset( &corHelperQ, 1, "");
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
 
 switch(currentState) {
-case ST_IDLE:
- if(start){ // wait for start signal.
-  currentState = ST_LOAD;
- }
- break;
- case ST_LOAD: // whenever there is valid input data, shift it in
- if(!i_data.empty()){
-  i_data.read(tmp_data);
-  out_sample.last = tmp_data.last;
+ case ST_IDLE:
+  if(start){ // wait for start signal.
+   currentState = ST_LOAD;
+  }
+  break;
+  case ST_LOAD: // whenever there is valid input data, shift it in
+  if(!i_data.empty()){
+   i_data.read(tmp_data);
+   out_sample.last = tmp_data.last;
 
-  newVal.V = tmp_data.data.range(15,0); // RE
+   newVal.V = tmp_data.data.range(15,0); // RE
 
-  SHIFT_DATA0: for(int a =16 -1;a>0;a--){
+   SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
-   if(a==1){
-    phaseClass0[0] = newVal;
-    currentState = ST_CORRELATEl;
+    if(a==1){
+     phaseClass0[0] = newVal;
+     currentState = ST_CORRELATEl;
+    }
    }
-  }
 
- } else {
-  currentState = ST_LOAD;
- }
- break;
- case ST_CORRELATEl:
-  corHelperI = 0;
-  correlateData0: for(int a =16 -1;a>=0;a--){
+  } else {
+   currentState = ST_LOAD;
+  }
+  break;
+  case ST_CORRELATEl:
+   out_sample.data.range(3,0) = phaseClass;
+   o_data.write(out_sample);
+   corHelperI = 0;
+   correlateData0: for(int a =16 -1;a>=0;a--){
 _ssdm_Unroll(0,0,0, "");
- //if(corrSeq[a]>0)
-   corHelperI = corHelperI + (phaseClass0[a]);
+ if(corrSeq[a] > 0)
+    corHelperI = corHelperI + (phaseClass0[a]);
    //corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
    if(a>0)
     Phase0[a] = Phase0[a-1];
@@ -40645,12 +40647,12 @@ _ssdm_Unroll(0,0,0, "");
     Phase0[0] = corHelperI;
     out_sample.data.range(15,0) = corHelperI.V;
     //out_sample.last = 0;
-    o_data.write(out_sample);
+    //o_data.write(out_sample);
     currentState = ST_LOAD;
    }
-  }
+ }
 
-  break;
+ break;
 }
   /*case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
