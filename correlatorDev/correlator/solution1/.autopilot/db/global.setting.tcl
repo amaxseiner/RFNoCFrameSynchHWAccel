@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../../correlator.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
+set DirectiveFile {/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
