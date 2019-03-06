@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1551848879000">
+  <ports id="1" name="i_data_V_data_V" type="PortType" lineNumber="9" originalName="i_data.V.data.V" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="32">
+    <inlineStackInfo fileName="correlator.cpp" linenumber="9" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+    <dataOutputObjs>nbreadreq</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="i_data_V_last_V" type="PortType" lineNumber="9" originalName="i_data.V.last.V" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="1">
+    <inlineStackInfo fileName="correlator.cpp" linenumber="9" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+    <dataOutputObjs>nbreadreq</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="o_data_V_data_V" type="PortType" lineNumber="9" originalName="o_data.V.data.V" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="32" direction="DirOut">
+    <inlineStackInfo fileName="correlator.cpp" linenumber="9" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="o_data_V_last_V" type="PortType" lineNumber="9" originalName="o_data.V.last.V" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="1" direction="DirOut">
+    <inlineStackInfo fileName="correlator.cpp" linenumber="9" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="5" name="start_V" type="PortType" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="phaseClass_V" type="PortType" bitwidth="4"/>
+  <edges id="149" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="150" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="151" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="152" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="153" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="154" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="155" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="156" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="157" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="171" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="173" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="175" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="178" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="179" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="184" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="187" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="188" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="192" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="193" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="195" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="197" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="198" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.5"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.4/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.6"/>
+  <edges id="200" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.6"/>
+  <edges id="201" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.7"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.4/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.8"/>
+  <edges id="203" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.8"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.9"/>
+  <edges id="205" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.9"/>
+  <edges id="206" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.10"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.4/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.11"/>
+  <edges id="208" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.11"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.12"/>
+  <edges id="210" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.12"/>
+  <edges id="211" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.13"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.4/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.14"/>
+  <edges id="213" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.14"/>
+  <edges id="214" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.15"/>
+  <edges id="215" source_obj="//@regions.0/@basic_blocks.4/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.16"/>
+  <edges id="216" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.16"/>
+  <edges id="217" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.17"/>
+  <edges id="218" source_obj="//@regions.0/@basic_blocks.4/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.18"/>
+  <edges id="219" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.18"/>
+  <edges id="220" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.19"/>
+  <edges id="221" source_obj="//@regions.0/@basic_blocks.4/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.20"/>
+  <edges id="222" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.20"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.21"/>
+  <edges id="224" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.21"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.22"/>
+  <edges id="226" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.22"/>
+  <edges id="227" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.23"/>
+  <edges id="228" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.23"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="230" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="232" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.25"/>
+  <edges id="234" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.26"/>
+  <edges id="245" source_obj="//@regions.0/@basic_blocks.4/@node_objs.28" sink_obj="//@ports.2"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.4/@node_objs.28" sink_obj="//@ports.3"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.4/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.28"/>
+  <edges id="250" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.29"/>
+  <edges id="252" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="253" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="254" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="255" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="256" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="257" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="258" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="259" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="261" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="262" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="263" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="264" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="265" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="267" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="268" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="270" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="271" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="272" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="273" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="274" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="275" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="276" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="277" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="279" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="280" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="282" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="283" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="287" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="289" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="290" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="291" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="292" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="293" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="295" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="298" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="299" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="300" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="303" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="304" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="431" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="432" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="433" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="434" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="435" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="436" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="437" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.25"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="400" pipe_depth="3" RegionName="correlator">
+    <basic_blocks id="65" name=".preheader591.preheader" type="BlockType">
+      <controlOutputObjs>.loopexit</controlOutputObjs>
+      <controlOutputObjs>block_139</controlOutputObjs>
+      <controlOutputObjs>block_99</controlOutputObjs>
+      <controlOutputObjs>._crit_edge842.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="start_V_read" bitwidth="1" opcode="read" m_display="0">
+        <dataInputObjs>start_V</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="currentState_load" lineNumber="205" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="2" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="205" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="phaseClass0_V_13_loa" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="phaseClass0_V_10_loa" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="phaseClass0_V_8_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="phaseClass0_V_3_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="phaseClass0_V_2_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="phaseClass0_V_1_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="phaseClass0_V_0_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="node_64" lineNumber="205" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="switch" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="205" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <controlInputObjs>.loopexit</controlInputObjs>
+        <controlInputObjs>block_139</controlInputObjs>
+        <controlInputObjs>block_99</controlInputObjs>
+        <controlInputObjs>._crit_edge842.0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>205</validLinenumbers>
+        <validLinenumbers>220</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="96" name="._crit_edge842.0" type="BlockType">
+      <controlInputObjs>.preheader591.preheader</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="phaseClass0_V_15_loa" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="Phase0_V_8_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="node_68" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="Phase0_V_7_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="node_70" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="Phase0_V_6_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="node_72" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="Phase0_V_5_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="node_74" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="Phase0_V_4_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="node_76" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="Phase0_V_3_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="node_78" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="Phase0_V_2_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="node_80" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="Phase0_V_1_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="node_82" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="Phase0_V_0_load" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="node_84" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="tmp7" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="tmp8" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp6" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp1" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="tmp2" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="tmp9" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="p_Val2_3_4" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="node_92" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="node_93" lineNumber="245" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="245" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="node_94" lineNumber="247" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="247" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="node_95" opcode="br" nodeLabel="2" m_display="0">
+        <controlInputObjs>.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>240</validLinenumbers>
+        <validLinenumbers>243</validLinenumbers>
+        <validLinenumbers>245</validLinenumbers>
+        <validLinenumbers>247</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="99" name="block_99" type="BlockType">
+      <controlInputObjs>.preheader591.preheader</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_135</controlOutputObjs>
+      <controlOutputObjs>block_102</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="tmp" lineNumber="212" originalName="tmp" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="1" opcode="nbreadreq" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="212" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>i_data_V_data_V</dataInputObjs>
+        <dataInputObjs>i_data_V_last_V</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="node_98" lineNumber="212" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="212" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>nbreadreq</dataInputObjs>
+        <controlInputObjs>block_102</controlInputObjs>
+        <controlInputObjs>block_135</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>212</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="102" name="block_102" type="BlockType">
+      <controlInputObjs>block_99</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_137</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="node_100" lineNumber="230" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="230" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="node_101" opcode="br" nodeLabel="2" m_display="0">
+        <controlInputObjs>block_137</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>230</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="135" name="block_135" type="BlockType">
+      <controlInputObjs>block_99</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_137</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="empty" lineNumber="213" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="33" opcode="read" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="213" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>i_data_V_data_V</dataInputObjs>
+        <dataInputObjs>i_data_V_last_V</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="node_106" lineNumber="216" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="216" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>read</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="phaseClass0_V_14_loa" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="node_108" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="node_109" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="phaseClass0_V_12_loa" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="node_111" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="phaseClass0_V_11_loa" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="node_113" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="node_114" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="phaseClass0_V_9_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="node_116" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="node_117" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="phaseClass0_V_7_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="node_119" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="phaseClass0_V_6_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="node_121" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="phaseClass0_V_5_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="node_123" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="phaseClass0_V_4_load" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="node_125" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="node_126" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="node_127" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="node_128" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="node_129" lineNumber="220" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="node_130" lineNumber="223" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="223" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>read</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="node_131" lineNumber="224" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="224" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="p_Result_s" lineNumber="225" originalName="__Result__" fileName="correlator.cpp" fileDirectory=".." rtlName="p_Result_s_fu_493_p5" contextFuncName="correlator" bitwidth="32" opcode="partset" nodeLabel="1" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="225" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="node_133" lineNumber="227" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="write" nodeLabel="1" nodeLatency="1" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="227" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>partset</dataInputObjs>
+        <dataOutputObjs>o_data_V_data_V</dataOutputObjs>
+        <dataOutputObjs>o_data_V_last_V</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="node_134" lineNumber="229" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="229" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <controlInputObjs>block_137</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>213</validLinenumbers>
+        <validLinenumbers>216</validLinenumbers>
+        <validLinenumbers>220</validLinenumbers>
+        <validLinenumbers>223</validLinenumbers>
+        <validLinenumbers>224</validLinenumbers>
+        <validLinenumbers>225</validLinenumbers>
+        <validLinenumbers>227</validLinenumbers>
+        <validLinenumbers>229</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="137" name="block_137" type="BlockType">
+      <controlInputObjs>block_102</controlInputObjs>
+      <controlInputObjs>block_135</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="node_136" lineNumber="232" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="232" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <controlInputObjs>.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>232</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="139" name="block_139" type="BlockType">
+      <controlInputObjs>.preheader591.preheader</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_142</controlOutputObjs>
+      <controlOutputObjs>._crit_edge841</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="node_138" lineNumber="207" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="207" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>read</dataInputObjs>
+        <controlInputObjs>._crit_edge841</controlInputObjs>
+        <controlInputObjs>block_142</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>207</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="142" name="block_142" type="BlockType">
+      <controlInputObjs>block_139</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge841</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="node_140" lineNumber="208" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="208" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="node_141" lineNumber="209" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="209" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <controlInputObjs>._crit_edge841</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>208</validLinenumbers>
+        <validLinenumbers>209</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="144" name="._crit_edge841" type="BlockType">
+      <controlInputObjs>block_139</controlInputObjs>
+      <controlInputObjs>block_142</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="node_143" lineNumber="210" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="210" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <controlInputObjs>.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>210</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="146" name=".loopexit" type="BlockType">
+      <controlInputObjs>.preheader591.preheader</controlInputObjs>
+      <controlInputObjs>._crit_edge842.0</controlInputObjs>
+      <controlInputObjs>block_137</controlInputObjs>
+      <controlInputObjs>._crit_edge841</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="node_145" lineNumber="578" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="ret" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="578" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>578</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="p_Result_s_reg_518">
+    <nodeIds>132</nodeIds>
+  </regnodes>
+  <regnodes realName="currentState_load_reg_510">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="start_V_read_reg_506">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_514">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp1_fu_303">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp9_fu_315">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp6_fu_297">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_349">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp8_fu_291">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_493">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp2_fu_309">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp7_fu_285">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_1_fu_345">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_3_4_fu_321">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="Phase0_V_8_load_load_fu_195">
+    <nodeIds>67</nodeIds>
+  </ioNodes>
+  <ioNodes realName="start_V_read_read_fu_118">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_24_store_fu_239">
+    <nodeIds>76</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_72_store_fu_475">
+    <nodeIds>129</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_2_load_load_fu_255">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_62_store_fu_421">
+    <nodeIds>119</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_51_store_fu_363">
+    <nodeIds>108</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_3_load_load_fu_175">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_42_store_fu_339">
+    <nodeIds>94</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_57_store_fu_395">
+    <nodeIds>114</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_54_store_fu_379">
+    <nodeIds>111</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_2_load_load_fu_179">
+    <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_3_load_load_fu_245">
+    <nodeIds>77</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_0_load_load_fu_187">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_12_loa_load_fu_375">
+    <nodeIds>110</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_4_load_load_fu_447">
+    <nodeIds>124</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_70_store_fu_463">
+    <nodeIds>127</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_16_store_fu_199">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_4_load_load_fu_235">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_71_store_fu_469">
+    <nodeIds>128</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_1_load_load_fu_183">
+    <nodeIds>62</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_5_load_load_fu_437">
+    <nodeIds>122</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_64_store_fu_431">
+    <nodeIds>121</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_22_store_fu_229">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_40_store_fu_327">
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_5_load_load_fu_225">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_59_store_fu_405">
+    <nodeIds>116</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_15_loa_load_fu_191">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_nbreadreq_fu_124">
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_6_load_load_fu_427">
+    <nodeIds>120</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_20_store_fu_219">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_18_store_fu_209">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_41_store_fu_333">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_28_store_fu_259">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_11_loa_load_fu_385">
+    <nodeIds>112</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_7_load_load_fu_417">
+    <nodeIds>118</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_52_store_fu_369">
+    <nodeIds>109</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_6_load_load_fu_215">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_60_store_fu_411">
+    <nodeIds>117</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_10_loa_load_fu_167">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_66_store_fu_441">
+    <nodeIds>123</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_13_loa_load_fu_163">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_9_load_load_fu_401">
+    <nodeIds>115</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_30_store_fu_269">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_69_store_fu_457">
+    <nodeIds>126</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_7_load_load_fu_205">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="currentState_load_load_fu_159">
+    <nodeIds>56</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_0_load_load_fu_275">
+    <nodeIds>83</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_32_store_fu_279">
+    <nodeIds>84</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_26_store_fu_249">
+    <nodeIds>78</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_68_store_fu_451">
+    <nodeIds>125</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_store_fu_153">
+    <nodeIds>100</nodeIds>
+    <nodeIds>140</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_49_store_fu_353">
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="empty_read_fu_134">
+    <nodeIds>103</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Phase0_V_1_load_load_fu_265">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_142">
+    <nodeIds>133</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_14_loa_load_fu_359">
+    <nodeIds>107</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_56_store_fu_389">
+    <nodeIds>113</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_74_store_fu_487">
+    <nodeIds>131</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_73_store_fu_481">
+    <nodeIds>130</nodeIds>
+  </ioNodes>
+  <ioNodes realName="phaseClass0_V_8_load_load_fu_171">
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioPorts name="i_data_V_data_V">
+    <contents name="nbreadreq">
+      <nodeIds>97</nodeIds>
+    </contents>
+    <contents name="read">
+      <nodeIds>103</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="i_data_V_last_V">
+    <contents name="nbreadreq">
+      <nodeIds>97</nodeIds>
+    </contents>
+    <contents name="read">
+      <nodeIds>103</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="o_data_V_data_V">
+    <contents name="write">
+      <nodeIds>133</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="o_data_V_last_V">
+    <contents name="write">
+      <nodeIds>133</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="phaseClass_V"/>
+  <ioPorts name="start_V">
+    <contents name="read">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="2"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="43"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="44"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="correlator" mII="1" mDepth="3" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2" mMaxLatency="-1">
+      <basicBlocks>65</basicBlocks>
+      <basicBlocks>96</basicBlocks>
+      <basicBlocks>99</basicBlocks>
+      <basicBlocks>102</basicBlocks>
+      <basicBlocks>135</basicBlocks>
+      <basicBlocks>137</basicBlocks>
+      <basicBlocks>139</basicBlocks>
+      <basicBlocks>142</basicBlocks>
+      <basicBlocks>144</basicBlocks>
+      <basicBlocks>146</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

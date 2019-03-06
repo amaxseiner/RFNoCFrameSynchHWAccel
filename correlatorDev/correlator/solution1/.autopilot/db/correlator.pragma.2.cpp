@@ -40619,14 +40619,16 @@ switch(currentState) {
 
    newVal.V = tmp_data.data.range(15,0); // RE
 
-  SHIFT_DATA0: for(int a =16 -1;a>0;a--){
+   SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
 
-  }
-  phaseClass0[0] = newVal;
-  currentState = ST_CORRELATEl;
-
+   }
+   phaseClass0[0] = newVal;
+   currentState = ST_CORRELATEl;
+   out_sample.data.range(1,0) = 1;
+   out_sample.last = 0;
+   o_data.write(out_sample);
 
   } else {
    currentState = ST_LOAD;
@@ -40640,7 +40642,7 @@ _ssdm_Unroll(0,0,0, "");
 _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] > 0)
     corHelperI = corHelperI + (phaseClass0[a]);
-    //corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+    // corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
    if(a > 0)
     Phase0[a] = Phase0[a-1];
    else{
@@ -40652,9 +40654,7 @@ _ssdm_Unroll(0,0,0, "");
 
  break;
  case ST_SEND:
-  out_sample.data.range(3,0) = phaseClass;
-  out_sample.last = 0;
-  o_data.write(out_sample);
+
  break;
 }
   /*case 1:
