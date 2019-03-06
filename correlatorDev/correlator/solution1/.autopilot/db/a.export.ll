@@ -80,7 +80,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
-    i2 -2, label %._crit_edge845.0
+    i2 -2, label %._crit_edge846.0
   ]
 
 ; <label>:0                                       ; preds = %.preheader594.preheader
@@ -95,7 +95,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
 
 ; <label>:2                                       ; preds = %.preheader594.preheader
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %3, label %4
+  br i1 %tmp, label %3, label %._crit_edge845
 
 ; <label>:3                                       ; preds = %2
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
@@ -126,19 +126,16 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 4
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
   store i16 %tmp_1, i16* @phaseClass0_V_0, align 16
-  store i2 -2, i2* @currentState, align 1
   %p_Result_s = call i32 @llvm.part.set.i32.i4(i32 undef, i4 %phaseClass_V_read, i32 0, i32 3)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 false)
-  br label %5
+  br label %._crit_edge845
 
-; <label>:4                                       ; preds = %2
-  store i2 1, i2* @currentState, align 1
-  br label %5
-
-; <label>:5                                       ; preds = %4, %3
+._crit_edge845:                                   ; preds = %3, %2
+  %storemerge = phi i2 [ -2, %3 ], [ 1, %2 ]
+  store i2 %storemerge, i2* @currentState, align 1
   br label %.loopexit
 
-._crit_edge845.0:                                 ; preds = %.preheader594.preheader
+._crit_edge846.0:                                 ; preds = %.preheader594.preheader
   %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2
   %Phase0_V_8_load = load i16* @Phase0_V_8, align 16
   store i16 %Phase0_V_8_load, i16* @Phase0_V_9, align 2
@@ -170,7 +167,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i2 -1, i2* @currentState, align 1
   br label %.loopexit
 
-.loopexit:                                        ; preds = %._crit_edge845.0, %5, %._crit_edge844, %.preheader594.preheader
+.loopexit:                                        ; preds = %._crit_edge846.0, %._crit_edge845, %._crit_edge844, %.preheader594.preheader
   ret void
 }
 

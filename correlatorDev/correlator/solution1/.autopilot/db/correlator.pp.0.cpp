@@ -40568,10 +40568,11 @@ switch(currentState) {
 
    }
    phaseClass0[0] = newVal;
-   currentState = ST_CORRELATEl;
    out_sample.data.range(3,0) = phaseClass;
    out_sample.last = 0;
    o_data.write(out_sample);
+   currentState = ST_CORRELATEl;
+
 
   } else {
    currentState = ST_LOAD;
