@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Wed Mar 06 00:13:23 EST 2019
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Wed Mar 06 00:18:25 EST 2019
 INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
@@ -25,8 +25,8 @@ INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
@@ -42,7 +42,7 @@ INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       get_default_platform 
@@ -63,7 +63,7 @@ INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command     import_lib returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute     source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7.gen 
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
@@ -101,7 +101,7 @@ INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
 INFO: [HLS 200-100] Execute     import_lib /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6 
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
@@ -115,8 +115,8 @@ INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command     import_lib returned 0; 0.02 sec.
@@ -146,7 +146,7 @@ INFO: [HLS 200-100] Execute         import_lib /opt/Xilinx/Vivado_HLS/2017.2/com
 INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
 INFO: [HLS 200-100] Execute               source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
@@ -219,10 +219,10 @@ INFO: [HLS 200-100] Command               ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
-INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Command       import_lib returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
@@ -231,9 +231,9 @@ INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command     add_library returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute     get_default_platform 
 INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Command   set_part returned 0; 0.05 sec.
+INFO: [HLS 200-100] Command   set_part returned 0; 0.04 sec.
 INFO: [HLS 200-100] Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-100] Command   create_clock returned 0; 0 sec.
+INFO: [HLS 200-100] Command   create_clock returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute   config_rtl -encoding onehot -reset state -reset_level high 
 INFO: [HLS 200-100] Command   config_rtl returned 0; 0 sec.
 INFO: [HLS 200-100] Execute   config_interface -m_axi_offset off -register_io off 
@@ -270,7 +270,7 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __tmp;
-INFO: [HLS 200-100] Command       cdt returned 0; 7.62 sec.
+INFO: [HLS 200-100] Command       cdt returned 0; 7.19 sec.
 INFO: [HLS 200-0] Marker-Pragma convertor: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp.ap-cdt.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
 INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
@@ -279,20 +279,20 @@ INFO: [HLS 200-0] Pragma Handling...
 INFO: [HLS 200-0] Source preprocessing
 INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -CC -E /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I /opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp
-INFO: [HLS 200-100] Command       clang returned 0; 0.06 sec.
+INFO: [HLS 200-100] Command       clang returned 0; 0.07 sec.
 INFO: [HLS 200-0] Processing labels
 INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I /opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -g -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc
-INFO: [HLS 200-100] Command       clang returned 0; 0.5 sec.
+INFO: [HLS 200-100] Command       clang returned 0; 0.48 sec.
 INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/ve_warning.tcl 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-10] Validating synthesis directives ...
 INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 348.160 ; gain = 12.586 ; free physical = 4992 ; free virtual = 10579
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 348.156 ; gain = 12.586 ; free physical = 4837 ; free virtual = 10445
 INFO: [HLS 200-0] Linking Release ...
 INFO: [HLS 200-100] Execute       llvm-ld /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bc -disable-opt -L/opt/Xilinx/Vivado_HLS/2017.2/lnx64/lib -lm_basic -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
-INFO: [HLS 200-100] Command       llvm-ld returned 0; 0.08 sec.
+INFO: [HLS 200-100] Command       llvm-ld returned 0; 0.07 sec.
 INFO: [HLS 200-100] Execute       disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
 INFO: [HLS 200-100] Execute         is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.bc 
 INFO: [HLS 200-100] Command         is_encrypted returned 0; 0 sec.
@@ -303,34 +303,34 @@ INFO: [HLS 200-100] Execute       llvm-ld /home/alex/Documents/RFNoCFrameSynchHW
 INFO: [HLS 200-100] Command       llvm-ld returned 0; 0.08 sec.
 INFO: [HLS 200-100] Execute       disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g 
 INFO: [HLS 200-100] Execute         is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.bc 
-INFO: [HLS 200-100] Command         is_encrypted returned 0; 0.01 sec.
-INFO: [HLS 200-100] Command       disassemble returned 0; 0.06 sec.
+INFO: [HLS 200-100] Command         is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Command       disassemble returned 0; 0.05 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 348.160 ; gain = 12.586 ; free physical = 5015 ; free virtual = 10579
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 348.156 ; gain = 12.586 ; free physical = 4829 ; free virtual = 10446
 INFO: [HLS 200-100] Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 INFO: [HLS 200-100] Execute         cleanup_all_models 
 INFO: [HLS 200-100] Command         cleanup_all_models returned 0; 0 sec.
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [HLS 200-100] Execute         transform -promote-dbg-pointer /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -f 
-INFO: [HLS 200-100] Command         transform returned 0; 0.03 sec.
+INFO: [HLS 200-100] Command         transform returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute         llvm-ld /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado_HLS/2017.2/lnx64/lib -lfloatconversion -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.0 
 INFO: [HLS 200-100] Command         llvm-ld returned 0; 0.08 sec.
 INFO: [HLS 200-0] Running Standard Transforms...
 INFO: [HLS 200-100] Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top correlator -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.0.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-100] Command         transform returned 0; 0.11 sec.
+INFO: [HLS 200-100] Command         transform returned 0; 0.1 sec.
 INFO: [HLS 200-100] Execute         disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1 /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1 
 INFO: [HLS 200-100] Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc 
 INFO: [HLS 200-100] Command           is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Command         disassemble returned 0; 0.05 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 348.621 ; gain = 13.047 ; free physical = 4996 ; free virtual = 10567
+INFO: [HLS 200-100] Command         disassemble returned 0; 0.06 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 348.617 ; gain = 13.047 ; free physical = 4812 ; free virtual = 10434
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-0] Checking Synthesizability 1/2..
 INFO: [HLS 200-100] Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [HLS 200-100] Command         transform returned 0; 0.08 sec.
+INFO: [HLS 200-100] Command         transform returned 0; 0.06 sec.
 INFO: [HLS 200-0] Checking Synthesizability 2/2..
 INFO: [HLS 200-100] Execute         transform -syn-check /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-100] Command         transform returned 0; 0.02 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.156 ; gain = 140.582 ; free physical = 4990 ; free virtual = 10563
+INFO: [HLS 200-100] Command         transform returned 0; 0.03 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 476.152 ; gain = 140.582 ; free physical = 4804 ; free virtual = 10428
 INFO: [HLS 200-0] Compiler optimizing ...
 INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc to /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.bc
 INFO: [HLS 200-0] Presyn 1...
@@ -388,7 +388,7 @@ INFO: [XFORM 203-101] Partitioning array 'resPhase15.V'  in dimension 1 complete
 INFO: [XFORM 203-101] Partitioning array 'Phase15.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'phaseClassValid.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
-INFO: [HLS 200-100] Command         transform returned 0; 0.12 sec.
+INFO: [HLS 200-100] Command         transform returned 0; 0.11 sec.
 INFO: [HLS 200-0] Presyn 2...
 INFO: [HLS 200-100] Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-11] Balancing expressions in function 'correlator' (correlator.cpp:9)...13 expression(s) balanced.
@@ -397,18 +397,18 @@ INFO: [HLS 200-100] Execute         disassemble /home/alex/Documents/RFNoCFrameS
 INFO: [HLS 200-100] Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc 
 INFO: [HLS 200-100] Command           is_encrypted returned 0; 0 sec.
 INFO: [HLS 200-100] Command         disassemble returned 0; 0.05 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.578 ; gain = 141.004 ; free physical = 4955 ; free virtual = 10535
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.574 ; gain = 141.004 ; free physical = 4770 ; free virtual = 10402
 INFO: [HLS 200-0] Building ssdm...
 INFO: [HLS 200-100] Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -interface-gen -deadargelim -directive-preproc -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -norm-name -legalize -validate-dataflow -cdfg-build /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [HLS 200-100] Command         transform returned 0; 0.07 sec.
 INFO: [HLS 200-100] Execute         disassemble /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 
 INFO: [HLS 200-100] Execute           is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc 
 INFO: [HLS 200-100] Command           is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Command         disassemble returned 0; 0.04 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.578 ; gain = 141.004 ; free physical = 4950 ; free virtual = 10531
+INFO: [HLS 200-100] Command         disassemble returned 0; 0.03 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.574 ; gain = 141.004 ; free physical = 4765 ; free virtual = 10399
 INFO: [HLS 200-0] Finish building internal data model.
-INFO: [HLS 200-100] Command       opt_and_import_c returned 0; 0.72 sec.
-INFO: [HLS 200-100] Command     elaborate returned 0; 10.8 sec.
+INFO: [HLS 200-100] Command       opt_and_import_c returned 0; 0.69 sec.
+INFO: [HLS 200-100] Command     elaborate returned 0; 10.3 sec.
 INFO: [HLS 200-100] Execute     autosyn 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-0] Synthesizing C/C++ design ...
@@ -432,7 +432,7 @@ INFO: [HLS 200-0] Preprocessing Module: correlator ...
 INFO: [HLS 200-100] Execute       set_default_model correlator 
 INFO: [HLS 200-100] Command       set_default_model returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       cdfg_preprocess -model correlator 
-INFO: [HLS 200-100] Command       cdfg_preprocess returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command       cdfg_preprocess returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       rtl_gen_preprocess correlator 
 INFO: [HLS 200-100] Command       rtl_gen_preprocess returned 0; 0 sec.
 INFO: [HLS 200-0] Model list for synthesis: correlator
@@ -447,7 +447,7 @@ INFO: [SCHED 204-61] Pipelining function 'correlator'.
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
 INFO: [SCHED 204-11] Finished scheduling.
 INFO: [HLS 200-100] Command       schedule returned 0; 0.03 sec.
-INFO: [HLS 200-111]  Elapsed time: 11.27 seconds; current allocated memory: 85.527 MB.
+INFO: [HLS 200-111]  Elapsed time: 10.77 seconds; current allocated memory: 85.534 MB.
 INFO: [HLS 200-100] Execute       report -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.sched.rpt -verbose -f 
 INFO: [HLS 200-100] Command       report returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       db_write -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.sched.adb -f 
@@ -490,11 +490,11 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 INFO: [HLS 200-100] Command       bind returned 0; 0.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 85.908 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 85.917 MB.
 INFO: [HLS 200-100] Execute       report -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.bind.rpt -verbose -f 
 INFO: [HLS 200-100] Command       report returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute       db_write -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bind.adb -f 
-INFO: [HLS 200-100] Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-100] Command       db_write returned 0; 0.01 sec.
 INFO: [HLS 200-0] Finish binding correlator.
 INFO: [HLS 200-100] Execute       get_model_list correlator -filter all-wo-channel 
 INFO: [HLS 200-100] Command       get_model_list returned 0; 0 sec.
@@ -516,13 +516,13 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlator/phaseClass_V' t
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlator' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
 INFO: [HLS 200-100] Command       create_rtl_model returned 0; 0.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 86.511 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 86.531 MB.
 INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       gen_rtl correlator -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/correlator -synmodules correlator 
 INFO: [HLS 200-100] Command       gen_rtl returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       gen_rtl correlator -istop -style xilinx -f -lang vhdl -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/vhdl/correlator 
-INFO: [HLS 200-100] Command       gen_rtl returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command       gen_rtl returned 0; 0.02 sec.
 INFO: [HLS 200-100] Execute       gen_rtl correlator -istop -style xilinx -f -lang vlog -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlator 
 INFO: [HLS 200-100] Command       gen_rtl returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       export_constraint_db -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl -f -tool general 
@@ -538,7 +538,7 @@ INFO: [HLS 200-100] Command       report returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.xml -f -x 
 INFO: [HLS 200-100] Command       report returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       report -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.rpt -verbose -f 
-INFO: [HLS 200-100] Command       report returned 0; 0.02 sec.
+INFO: [HLS 200-100] Command       report returned 0; 0.03 sec.
 INFO: [HLS 200-100] Execute       db_write -model correlator -o /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.adb -f 
 INFO: [HLS 200-100] Command       db_write returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute       sc_get_clocks correlator 
@@ -593,20 +593,20 @@ INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
 INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.05 sec.
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.06 sec.
 INFO: [HLS 200-100] Execute             source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command           ap_source returned 0; 0.09 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command         ap_source returned 0; 0.09 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
 INFO: [HLS 200-100] Execute       source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
@@ -621,12 +621,12 @@ INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWA
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute       source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 476.578 ; gain = 141.004 ; free physical = 4944 ; free virtual = 10530
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 476.574 ; gain = 141.004 ; free physical = 4757 ; free virtual = 10396
 INFO: [SYSC 207-301] Generating SystemC RTL for correlator.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlator.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlator.
-INFO: [HLS 200-100] Command     autosyn returned 0; 0.32 sec.
-INFO: [HLS 200-100] Command   csynth_design returned 0; 11.12 sec.
-INFO: [HLS 200-100] Command ap_source returned 0; 11.35 sec.
+INFO: [HLS 200-100] Command     autosyn returned 0; 0.35 sec.
+INFO: [HLS 200-100] Command   csynth_design returned 0; 10.65 sec.
+INFO: [HLS 200-100] Command ap_source returned 0; 10.89 sec.
 INFO: [HLS 200-100] Execute cleanup_all 
-INFO: [HLS 200-100] Command cleanup_all returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.

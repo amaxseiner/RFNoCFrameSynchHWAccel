@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="correlator,hls_ip_2017_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=4.223667,HLS_SYN_LAT=2,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=86,HLS_SYN_LUT=118}" *)
+(* CORE_GENERATION_INFO="correlator,hls_ip_2017_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=4.223667,HLS_SYN_LAT=2,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=90,HLS_SYN_LUT=132}" *)
 
 module correlator (
         ap_clk,
@@ -57,50 +57,57 @@ wire    o_data_V_data_V_1_load_A;
 wire    o_data_V_data_V_1_load_B;
 reg   [1:0] o_data_V_data_V_1_state;
 wire    o_data_V_data_V_1_state_cmp_full;
-wire   [0:0] o_data_V_last_V_1_data_out;
+reg   [0:0] o_data_V_last_V_1_data_out;
 reg    o_data_V_last_V_1_vld_in;
 wire    o_data_V_last_V_1_vld_out;
 wire    o_data_V_last_V_1_ack_in;
 wire    o_data_V_last_V_1_ack_out;
+reg   [0:0] o_data_V_last_V_1_payload_A;
+reg   [0:0] o_data_V_last_V_1_payload_B;
 reg    o_data_V_last_V_1_sel_rd;
+reg    o_data_V_last_V_1_sel_wr;
 wire    o_data_V_last_V_1_sel;
+wire    o_data_V_last_V_1_load_A;
+wire    o_data_V_last_V_1_load_B;
 reg   [1:0] o_data_V_last_V_1_state;
+wire    o_data_V_last_V_1_state_cmp_full;
 reg   [1:0] currentState;
 reg    i_data_TDATA_blk_n;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
 wire    ap_block_pp0_stage0_flag00000000;
-wire   [1:0] currentState_load_load_fu_174_p1;
-wire   [0:0] tmp_nbreadreq_fu_134_p4;
+wire   [1:0] currentState_load_load_fu_171_p1;
+wire   [0:0] tmp_nbreadreq_fu_132_p4;
 reg    o_data_TDATA_blk_n;
 reg    ap_enable_reg_pp0_iter1;
-reg   [1:0] currentState_load_reg_535;
-reg   [0:0] tmp_reg_539;
+reg   [1:0] currentState_load_reg_536;
+reg   [0:0] tmp_reg_540;
 reg    ap_enable_reg_pp0_iter2;
-reg   [1:0] ap_reg_pp0_iter1_currentState_load_reg_535;
-reg   [0:0] ap_reg_pp0_iter1_tmp_reg_539;
-reg   [3:0] phaseClass_V_read_reg_526;
+reg   [1:0] ap_reg_pp0_iter1_currentState_load_reg_536;
+reg   [0:0] ap_reg_pp0_iter1_tmp_reg_540;
+reg   [3:0] phaseClass_V_read_reg_527;
 reg    ap_predicate_op46_read_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
-reg    ap_predicate_op80_write_state2;
+reg    ap_predicate_op81_write_state2;
 reg    ap_block_state2_io;
 reg    ap_block_state3_pp0_stage0_iter2;
-reg    ap_predicate_op101_write_state3;
+reg    ap_predicate_op102_write_state3;
 reg    ap_block_state3_io;
 reg    ap_block_pp0_stage0_flag00011001;
-wire   [0:0] start_V_read_read_fu_128_p2;
-wire   [31:0] p_Result_s_fu_514_p5;
+wire   [0:0] start_V_read_read_fu_126_p2;
+reg   [0:0] tmp_last_V_reg_544;
+wire   [31:0] p_Result_s_fu_515_p5;
 reg    ap_block_pp0_stage0_flag00011011;
-wire   [1:0] ap_phi_precharge_reg_pp0_iter0_storemerge_reg_163;
-reg   [1:0] storemerge_phi_fu_166_p4;
+wire   [1:0] ap_phi_precharge_reg_pp0_iter0_storemerge_reg_160;
+reg   [1:0] storemerge_phi_fu_163_p4;
 reg    ap_block_pp0_stage0_flag00001001;
 reg   [0:0] ap_NS_fsm;
 wire    ap_reset_idle_pp0;
 reg    ap_idle_pp0;
 wire    ap_enable_pp0;
-reg    ap_condition_256;
-reg    ap_condition_417;
+reg    ap_condition_261;
+reg    ap_condition_425;
 
 // power-on initialization
 initial begin
@@ -108,6 +115,7 @@ initial begin
 #0 o_data_V_data_V_1_sel_wr = 1'b0;
 #0 o_data_V_data_V_1_state = 2'd0;
 #0 o_data_V_last_V_1_sel_rd = 1'b0;
+#0 o_data_V_last_V_1_sel_wr = 1'b0;
 #0 o_data_V_last_V_1_state = 2'd0;
 #0 currentState = 2'd0;
 #0 ap_CS_fsm = 1'd1;
@@ -147,12 +155,12 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         currentState <= 2'd0;
     end else begin
-        if ((ap_condition_256 == 1'b1)) begin
-            if (((2'd0 == currentState_load_load_fu_174_p1) & (1'd1 == start_V_read_read_fu_128_p2))) begin
+        if ((ap_condition_261 == 1'b1)) begin
+            if (((2'd0 == currentState_load_load_fu_171_p1) & (1'd1 == start_V_read_read_fu_126_p2))) begin
                 currentState <= 2'd1;
             end else if ((2'd1 == currentState)) begin
-                currentState <= storemerge_phi_fu_166_p4;
-            end else if ((2'd2 == currentState_load_load_fu_174_p1)) begin
+                currentState <= storemerge_phi_fu_163_p4;
+            end else if ((2'd2 == currentState_load_load_fu_171_p1)) begin
                 currentState <= 2'd3;
             end
         end
@@ -207,6 +215,16 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
+        o_data_V_last_V_1_sel_wr <= 1'b0;
+    end else begin
+        if (((1'b1 == o_data_V_last_V_1_vld_in) & (1'b1 == o_data_V_last_V_1_ack_in))) begin
+            o_data_V_last_V_1_sel_wr <= ~o_data_V_last_V_1_sel_wr;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
         o_data_V_last_V_1_state <= 2'd0;
     end else begin
         if ((((1'b0 == o_data_V_last_V_1_vld_in) & (1'b1 == o_data_V_last_V_1_ack_out) & (2'd3 == o_data_V_last_V_1_state)) | ((1'b0 == o_data_V_last_V_1_vld_in) & (2'd2 == o_data_V_last_V_1_state)))) begin
@@ -223,28 +241,46 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
-        ap_reg_pp0_iter1_currentState_load_reg_535 <= currentState_load_reg_535;
-        ap_reg_pp0_iter1_tmp_reg_539 <= tmp_reg_539;
-        currentState_load_reg_535 <= currentState;
-        phaseClass_V_read_reg_526 <= phaseClass_V;
+        ap_reg_pp0_iter1_currentState_load_reg_536 <= currentState_load_reg_536;
+        ap_reg_pp0_iter1_tmp_reg_540 <= tmp_reg_540;
+        currentState_load_reg_536 <= currentState;
+        phaseClass_V_read_reg_527 <= phaseClass_V;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == o_data_V_data_V_1_load_A)) begin
-        o_data_V_data_V_1_payload_A <= p_Result_s_fu_514_p5;
+        o_data_V_data_V_1_payload_A <= p_Result_s_fu_515_p5;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == o_data_V_data_V_1_load_B)) begin
-        o_data_V_data_V_1_payload_B <= p_Result_s_fu_514_p5;
+        o_data_V_data_V_1_payload_B <= p_Result_s_fu_515_p5;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == o_data_V_last_V_1_load_A)) begin
+        o_data_V_last_V_1_payload_A <= tmp_last_V_reg_544;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == o_data_V_last_V_1_load_B)) begin
+        o_data_V_last_V_1_payload_B <= tmp_last_V_reg_544;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_predicate_op46_read_state1) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
+        tmp_last_V_reg_544 <= i_data_TLAST;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (2'd1 == currentState) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
-        tmp_reg_539 <= tmp_nbreadreq_fu_134_p4;
+        tmp_reg_540 <= tmp_nbreadreq_fu_132_p4;
     end
 end
 
@@ -259,7 +295,7 @@ end
 assign ap_reset_idle_pp0 = 1'b0;
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (2'd1 == currentState) & (1'd1 == tmp_nbreadreq_fu_134_p4))) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (2'd1 == currentState) & (1'd1 == tmp_nbreadreq_fu_132_p4))) begin
         i_data_TDATA_blk_n = i_data_TVALID;
     end else begin
         i_data_TDATA_blk_n = 1'b1;
@@ -275,7 +311,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (1'b1 == ap_enable_reg_pp0_iter1) & (2'd1 == currentState_load_reg_535) & (1'd1 == tmp_reg_539)) | ((ap_block_pp0_stage0_flag00000000 == 1'b0) & (1'b1 == ap_enable_reg_pp0_iter2) & (2'd1 == ap_reg_pp0_iter1_currentState_load_reg_535) & (1'd1 == ap_reg_pp0_iter1_tmp_reg_539)))) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (1'b1 == ap_enable_reg_pp0_iter1) & (2'd1 == currentState_load_reg_536) & (1'd1 == tmp_reg_540)) | ((ap_block_pp0_stage0_flag00000000 == 1'b0) & (1'b1 == ap_enable_reg_pp0_iter2) & (2'd1 == ap_reg_pp0_iter1_currentState_load_reg_536) & (1'd1 == ap_reg_pp0_iter1_tmp_reg_540)))) begin
         o_data_TDATA_blk_n = o_data_V_data_V_1_state[1'd1];
     end else begin
         o_data_TDATA_blk_n = 1'b1;
@@ -291,7 +327,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (1'b1 == ap_predicate_op80_write_state2) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (1'b1 == ap_predicate_op81_write_state2) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
         o_data_V_data_V_1_vld_in = 1'b1;
     end else begin
         o_data_V_data_V_1_vld_in = 1'b0;
@@ -299,7 +335,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (1'b1 == ap_predicate_op80_write_state2) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
+    if ((1'b1 == o_data_V_last_V_1_sel)) begin
+        o_data_V_last_V_1_data_out = o_data_V_last_V_1_payload_B;
+    end else begin
+        o_data_V_last_V_1_data_out = o_data_V_last_V_1_payload_A;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_enable_reg_pp0_iter1) & (1'b1 == ap_predicate_op81_write_state2) & (ap_block_pp0_stage0_flag00011001 == 1'b0))) begin
         o_data_V_last_V_1_vld_in = 1'b1;
     end else begin
         o_data_V_last_V_1_vld_in = 1'b0;
@@ -307,16 +351,16 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((ap_condition_417 == 1'b1)) begin
-        if ((1'd0 == tmp_nbreadreq_fu_134_p4)) begin
-            storemerge_phi_fu_166_p4 = 2'd1;
-        end else if ((1'd1 == tmp_nbreadreq_fu_134_p4)) begin
-            storemerge_phi_fu_166_p4 = 2'd2;
+    if ((ap_condition_425 == 1'b1)) begin
+        if ((1'd0 == tmp_nbreadreq_fu_132_p4)) begin
+            storemerge_phi_fu_163_p4 = 2'd1;
+        end else if ((1'd1 == tmp_nbreadreq_fu_132_p4)) begin
+            storemerge_phi_fu_163_p4 = 2'd2;
         end else begin
-            storemerge_phi_fu_166_p4 = ap_phi_precharge_reg_pp0_iter0_storemerge_reg_163;
+            storemerge_phi_fu_163_p4 = ap_phi_precharge_reg_pp0_iter0_storemerge_reg_160;
         end
     end else begin
-        storemerge_phi_fu_166_p4 = ap_phi_precharge_reg_pp0_iter0_storemerge_reg_163;
+        storemerge_phi_fu_163_p4 = ap_phi_precharge_reg_pp0_iter0_storemerge_reg_160;
     end
 end
 
@@ -352,13 +396,13 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_block_state2_io = ((1'b0 == o_data_V_data_V_1_ack_in) & (1'b1 == ap_predicate_op80_write_state2));
+    ap_block_state2_io = ((1'b0 == o_data_V_data_V_1_ack_in) & (1'b1 == ap_predicate_op81_write_state2));
 end
 
 assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state3_io = ((1'b0 == o_data_V_data_V_1_ack_in) & (1'b1 == ap_predicate_op101_write_state3));
+    ap_block_state3_io = ((1'b0 == o_data_V_data_V_1_ack_in) & (1'b1 == ap_predicate_op102_write_state3));
 end
 
 always @ (*) begin
@@ -366,34 +410,34 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_condition_256 = ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00011001 == 1'b0));
+    ap_condition_261 = ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00011001 == 1'b0));
 end
 
 always @ (*) begin
-    ap_condition_417 = ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (2'd1 == currentState));
+    ap_condition_425 = ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == 1'b1) & (ap_block_pp0_stage0_flag00000000 == 1'b0) & (2'd1 == currentState));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign ap_phi_precharge_reg_pp0_iter0_storemerge_reg_163 = 'bx;
+assign ap_phi_precharge_reg_pp0_iter0_storemerge_reg_160 = 'bx;
 
 always @ (*) begin
-    ap_predicate_op101_write_state3 = ((2'd1 == ap_reg_pp0_iter1_currentState_load_reg_535) & (1'd1 == ap_reg_pp0_iter1_tmp_reg_539));
+    ap_predicate_op102_write_state3 = ((2'd1 == ap_reg_pp0_iter1_currentState_load_reg_536) & (1'd1 == ap_reg_pp0_iter1_tmp_reg_540));
 end
 
 always @ (*) begin
-    ap_predicate_op46_read_state1 = ((2'd1 == currentState) & (1'd1 == tmp_nbreadreq_fu_134_p4));
+    ap_predicate_op46_read_state1 = ((2'd1 == currentState) & (1'd1 == tmp_nbreadreq_fu_132_p4));
 end
 
 always @ (*) begin
-    ap_predicate_op80_write_state2 = ((2'd1 == currentState_load_reg_535) & (1'd1 == tmp_reg_539));
+    ap_predicate_op81_write_state2 = ((2'd1 == currentState_load_reg_536) & (1'd1 == tmp_reg_540));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign currentState_load_load_fu_174_p1 = currentState;
+assign currentState_load_load_fu_171_p1 = currentState;
 
 assign o_data_TDATA = o_data_V_data_V_1_data_out;
 
@@ -419,16 +463,20 @@ assign o_data_V_last_V_1_ack_in = o_data_V_last_V_1_state[1'd1];
 
 assign o_data_V_last_V_1_ack_out = o_data_TREADY;
 
-assign o_data_V_last_V_1_data_out = 1'd0;
+assign o_data_V_last_V_1_load_A = (o_data_V_last_V_1_state_cmp_full & ~o_data_V_last_V_1_sel_wr);
+
+assign o_data_V_last_V_1_load_B = (o_data_V_last_V_1_sel_wr & o_data_V_last_V_1_state_cmp_full);
 
 assign o_data_V_last_V_1_sel = o_data_V_last_V_1_sel_rd;
 
+assign o_data_V_last_V_1_state_cmp_full = ((o_data_V_last_V_1_state != 2'd1) ? 1'b1 : 1'b0);
+
 assign o_data_V_last_V_1_vld_out = o_data_V_last_V_1_state[1'd0];
 
-assign p_Result_s_fu_514_p5 = {{ap_const_lv32_0[31:4]}, {phaseClass_V_read_reg_526}};
+assign p_Result_s_fu_515_p5 = {{ap_const_lv32_0[31:4]}, {phaseClass_V_read_reg_527}};
 
-assign start_V_read_read_fu_128_p2 = start_V;
+assign start_V_read_read_fu_126_p2 = start_V;
 
-assign tmp_nbreadreq_fu_134_p4 = i_data_TVALID;
+assign tmp_nbreadreq_fu_132_p4 = i_data_TVALID;
 
 endmodule //correlator

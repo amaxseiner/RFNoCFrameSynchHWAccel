@@ -206,7 +206,7 @@ switch(currentState) {
 	case ST_IDLE:
 		if(start){ // wait for start signal.
 			currentState = ST_LOAD;
-	}
+		}
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
 		if(!i_data.empty()){
@@ -222,7 +222,7 @@ switch(currentState) {
 			}
 			phaseClass0[0] = newVal;
 			out_sample.data.range(3,0) = phaseClass;
-			out_sample.last = 0;
+			//out_sample.last = 0;
 			o_data.write(out_sample);
 			currentState = ST_CORRELATEl;
 
