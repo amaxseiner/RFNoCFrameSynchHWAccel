@@ -40,21 +40,22 @@ target triple = "x86_64-unknown-linux-gnu"
 @p_str1 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
 @p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 
-declare i32 @llvm.part.set.i32.i2(i32, i2, i32, i32) nounwind readnone
+declare i32 @llvm.part.set.i32.i4(i32, i4, i32, i32) nounwind readnone
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader591.preheader:
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !77
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !81
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !85
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !89
-  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !93
-  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !99
+.preheader594.preheader:
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !76
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !80
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !84
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !88
+  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !92
+  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !98
   call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind
+  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
   %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
   call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
@@ -79,20 +80,20 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
-    i2 -2, label %._crit_edge842.0
+    i2 -2, label %._crit_edge845.0
   ]
 
-; <label>:0                                       ; preds = %.preheader591.preheader
-  br i1 %start_V_read, label %1, label %._crit_edge841
+; <label>:0                                       ; preds = %.preheader594.preheader
+  br i1 %start_V_read, label %1, label %._crit_edge844
 
 ; <label>:1                                       ; preds = %0
   store i2 1, i2* @currentState, align 1
-  br label %._crit_edge841
+  br label %._crit_edge844
 
-._crit_edge841:                                   ; preds = %1, %0
+._crit_edge844:                                   ; preds = %1, %0
   br label %.loopexit
 
-; <label>:2                                       ; preds = %.preheader591.preheader
+; <label>:2                                       ; preds = %.preheader594.preheader
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
   br i1 %tmp, label %3, label %4
 
@@ -126,7 +127,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
   store i16 %tmp_1, i16* @phaseClass0_V_0, align 16
   store i2 -2, i2* @currentState, align 1
-  %p_Result_s = call i32 @llvm.part.set.i32.i2(i32 undef, i2 1, i32 0, i32 1)
+  %p_Result_s = call i32 @llvm.part.set.i32.i4(i32 undef, i4 %phaseClass_V_read, i32 0, i32 3)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 false)
   br label %5
 
@@ -137,7 +138,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
 ; <label>:5                                       ; preds = %4, %3
   br label %.loopexit
 
-._crit_edge842.0:                                 ; preds = %.preheader591.preheader
+._crit_edge845.0:                                 ; preds = %.preheader594.preheader
   %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2
   %Phase0_V_8_load = load i16* @Phase0_V_8, align 16
   store i16 %Phase0_V_8_load, i16* @Phase0_V_9, align 2
@@ -169,7 +170,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i2 -1, i2* @currentState, align 1
   br label %.loopexit
 
-.loopexit:                                        ; preds = %._crit_edge842.0, %5, %._crit_edge841, %.preheader591.preheader
+.loopexit:                                        ; preds = %._crit_edge845.0, %5, %._crit_edge844, %.preheader594.preheader
   ret void
 }
 
@@ -219,6 +220,11 @@ entry:
   ret { i32, i1 } %mrv1
 }
 
+define weak i4 @_ssdm_op_Read.ap_auto.i4(i4) {
+entry:
+  ret i4 %0
+}
+
 define weak i1 @_ssdm_op_Read.ap_auto.i1(i1) {
 entry:
   ret i1 %0
@@ -233,9 +239,9 @@ entry:
 
 declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 
-!opencl.kernels = !{!0, !7, !7, !7, !13, !19, !22, !22, !13, !13, !13, !23, !29, !29, !13, !31, !33, !33, !35, !37, !37, !39, !39, !22, !41, !44, !47, !47, !13, !49, !13, !13, !51, !54, !54, !60, !62, !65, !67, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !69, !69, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13}
+!opencl.kernels = !{!0, !7, !7, !7, !13, !19, !22, !22, !13, !13, !13, !23, !29, !29, !13, !31, !33, !33, !35, !37, !37, !39, !39, !22, !41, !44, !47, !47, !13, !48, !13, !13, !50, !53, !53, !59, !61, !64, !66, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !68, !68, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13, !13}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!70}
+!llvm.map.gv = !{!69}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0}
@@ -282,61 +288,60 @@ declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 !42 = metadata !{metadata !"kernel_arg_type", metadata !"const struct rfnoc_axis &"}
 !43 = metadata !{metadata !"kernel_arg_name", metadata !"din"}
 !44 = metadata !{null, metadata !8, metadata !9, metadata !45, metadata !11, metadata !46, metadata !6}
-!45 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
+!45 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &"}
 !46 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
-!47 = metadata !{null, metadata !8, metadata !9, metadata !48, metadata !11, metadata !12, metadata !6}
-!48 = metadata !{metadata !"kernel_arg_type", metadata !"ap_ulong"}
-!49 = metadata !{null, metadata !8, metadata !9, metadata !50, metadata !11, metadata !12, metadata !6}
-!50 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 11, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!51 = metadata !{null, metadata !24, metadata !25, metadata !52, metadata !27, metadata !53, metadata !6}
-!52 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
-!53 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
-!54 = metadata !{null, metadata !55, metadata !56, metadata !57, metadata !58, metadata !59, metadata !6}
-!55 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
-!56 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!57 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
-!58 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!59 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
-!60 = metadata !{null, metadata !8, metadata !9, metadata !61, metadata !11, metadata !21, metadata !6}
-!61 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
-!62 = metadata !{null, metadata !8, metadata !9, metadata !63, metadata !11, metadata !64, metadata !6}
-!63 = metadata !{metadata !"kernel_arg_type", metadata !"struct rfnoc_axis &"}
-!64 = metadata !{metadata !"kernel_arg_name", metadata !"dout"}
-!65 = metadata !{null, metadata !8, metadata !9, metadata !42, metadata !11, metadata !66, metadata !6}
-!66 = metadata !{metadata !"kernel_arg_name", metadata !""}
-!67 = metadata !{null, metadata !8, metadata !9, metadata !68, metadata !11, metadata !21, metadata !6}
-!68 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
-!69 = metadata !{null, metadata !8, metadata !9, metadata !30, metadata !11, metadata !46, metadata !6}
-!70 = metadata !{metadata !71, [1 x i32]* @llvm_global_ctors_0}
-!71 = metadata !{metadata !72}
-!72 = metadata !{i32 0, i32 31, metadata !73}
-!73 = metadata !{metadata !74}
-!74 = metadata !{metadata !"llvm.global_ctors.0", metadata !75, metadata !"", i32 0, i32 31}
-!75 = metadata !{metadata !76}
-!76 = metadata !{i32 0, i32 0, i32 1}
-!77 = metadata !{metadata !78}
-!78 = metadata !{i32 0, i32 31, metadata !79}
-!79 = metadata !{metadata !80}
-!80 = metadata !{metadata !"i_data.V.data.V", metadata !75, metadata !"int32", i32 0, i32 31}
-!81 = metadata !{metadata !82}
-!82 = metadata !{i32 0, i32 0, metadata !83}
-!83 = metadata !{metadata !84}
-!84 = metadata !{metadata !"i_data.V.last.V", metadata !75, metadata !"uint1", i32 0, i32 0}
-!85 = metadata !{metadata !86}
-!86 = metadata !{i32 0, i32 31, metadata !87}
-!87 = metadata !{metadata !88}
-!88 = metadata !{metadata !"o_data.V.data.V", metadata !75, metadata !"int32", i32 0, i32 31}
-!89 = metadata !{metadata !90}
-!90 = metadata !{i32 0, i32 0, metadata !91}
-!91 = metadata !{metadata !92}
-!92 = metadata !{metadata !"o_data.V.last.V", metadata !75, metadata !"uint1", i32 0, i32 0}
-!93 = metadata !{metadata !94}
-!94 = metadata !{i32 0, i32 0, metadata !95}
-!95 = metadata !{metadata !96}
-!96 = metadata !{metadata !"start.V", metadata !97, metadata !"uint1", i32 0, i32 0}
-!97 = metadata !{metadata !98}
-!98 = metadata !{i32 0, i32 0, i32 0}
-!99 = metadata !{metadata !100}
-!100 = metadata !{i32 0, i32 3, metadata !101}
-!101 = metadata !{metadata !102}
-!102 = metadata !{metadata !"phaseClass.V", metadata !97, metadata !"uint4", i32 0, i32 3}
+!47 = metadata !{null, metadata !8, metadata !9, metadata !45, metadata !11, metadata !12, metadata !6}
+!48 = metadata !{null, metadata !8, metadata !9, metadata !49, metadata !11, metadata !12, metadata !6}
+!49 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 11, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!50 = metadata !{null, metadata !24, metadata !25, metadata !51, metadata !27, metadata !52, metadata !6}
+!51 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
+!52 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
+!53 = metadata !{null, metadata !54, metadata !55, metadata !56, metadata !57, metadata !58, metadata !6}
+!54 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
+!55 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!56 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
+!57 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!58 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
+!59 = metadata !{null, metadata !8, metadata !9, metadata !60, metadata !11, metadata !21, metadata !6}
+!60 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
+!61 = metadata !{null, metadata !8, metadata !9, metadata !62, metadata !11, metadata !63, metadata !6}
+!62 = metadata !{metadata !"kernel_arg_type", metadata !"struct rfnoc_axis &"}
+!63 = metadata !{metadata !"kernel_arg_name", metadata !"dout"}
+!64 = metadata !{null, metadata !8, metadata !9, metadata !42, metadata !11, metadata !65, metadata !6}
+!65 = metadata !{metadata !"kernel_arg_name", metadata !""}
+!66 = metadata !{null, metadata !8, metadata !9, metadata !67, metadata !11, metadata !21, metadata !6}
+!67 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
+!68 = metadata !{null, metadata !8, metadata !9, metadata !30, metadata !11, metadata !46, metadata !6}
+!69 = metadata !{metadata !70, [1 x i32]* @llvm_global_ctors_0}
+!70 = metadata !{metadata !71}
+!71 = metadata !{i32 0, i32 31, metadata !72}
+!72 = metadata !{metadata !73}
+!73 = metadata !{metadata !"llvm.global_ctors.0", metadata !74, metadata !"", i32 0, i32 31}
+!74 = metadata !{metadata !75}
+!75 = metadata !{i32 0, i32 0, i32 1}
+!76 = metadata !{metadata !77}
+!77 = metadata !{i32 0, i32 31, metadata !78}
+!78 = metadata !{metadata !79}
+!79 = metadata !{metadata !"i_data.V.data.V", metadata !74, metadata !"int32", i32 0, i32 31}
+!80 = metadata !{metadata !81}
+!81 = metadata !{i32 0, i32 0, metadata !82}
+!82 = metadata !{metadata !83}
+!83 = metadata !{metadata !"i_data.V.last.V", metadata !74, metadata !"uint1", i32 0, i32 0}
+!84 = metadata !{metadata !85}
+!85 = metadata !{i32 0, i32 31, metadata !86}
+!86 = metadata !{metadata !87}
+!87 = metadata !{metadata !"o_data.V.data.V", metadata !74, metadata !"int32", i32 0, i32 31}
+!88 = metadata !{metadata !89}
+!89 = metadata !{i32 0, i32 0, metadata !90}
+!90 = metadata !{metadata !91}
+!91 = metadata !{metadata !"o_data.V.last.V", metadata !74, metadata !"uint1", i32 0, i32 0}
+!92 = metadata !{metadata !93}
+!93 = metadata !{i32 0, i32 0, metadata !94}
+!94 = metadata !{metadata !95}
+!95 = metadata !{metadata !"start.V", metadata !96, metadata !"uint1", i32 0, i32 0}
+!96 = metadata !{metadata !97}
+!97 = metadata !{i32 0, i32 0, i32 0}
+!98 = metadata !{metadata !99}
+!99 = metadata !{i32 0, i32 3, metadata !100}
+!100 = metadata !{metadata !101}
+!101 = metadata !{metadata !"phaseClass.V", metadata !96, metadata !"uint4", i32 0, i32 3}

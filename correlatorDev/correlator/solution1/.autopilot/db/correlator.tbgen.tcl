@@ -24,7 +24,7 @@ set C_modelArgList {
 	{ o_data_V_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_V_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
 	{ start_V int 1 regular  }
-	{ phaseClass_V int 4 unused  }
+	{ phaseClass_V int 4 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -121,7 +121,7 @@ set ArgLastReadFirstWriteLatency {
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
 		start_V {Type I LastRead 0 FirstWrite -1}
-		phaseClass_V {Type I LastRead -1 FirstWrite -1}
+		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
 		phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
