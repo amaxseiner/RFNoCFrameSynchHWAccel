@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlator'" level="0">
-<item name = "Date">Tue Mar  5 23:28:50 2019
+<item name = "Date">Tue Mar  5 23:39:28 2019
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">correlator</item>
@@ -148,10 +148,9 @@
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'phaseClass0_V_8_load', correlator.cpp:220">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;phaseClass0_V_8&apos;, -, -</column>
-<column name="'tmp8', correlator.cpp:238">add, 1.68, 1.68, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'tmp6', correlator.cpp:238">add, 1.27, 2.95, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="'p_Val2_3_4', correlator.cpp:238">add, 1.27, 4.22, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="correlator.cpp:238">store, 0.00, 4.22, &apos;p_Val2_3_4&apos;, correlator.cpp:238, -, -, -, -, -, -, -, &apos;corHelperI_V&apos;, -, -</column>
+<column name="'tmp8', correlator.cpp:237">add, 1.68, 1.68, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp6', correlator.cpp:237">add, 1.27, 2.95, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'p_Val2_3_4', correlator.cpp:237">add, 1.27, 4.22, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

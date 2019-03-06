@@ -218,11 +218,10 @@ switch(currentState) {
 			SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
 				#pragma HLS UNROLL
 				phaseClass0[a] = phaseClass0[a-1];
-				if(a==1){
-					phaseClass0[0] = newVal;
-					currentState = ST_CORRELATEl;
-				}
+
 			}
+			phaseClass0[0] = newVal;
+			currentState = ST_CORRELATEl;
 
 		} else {
 			currentState = ST_LOAD;

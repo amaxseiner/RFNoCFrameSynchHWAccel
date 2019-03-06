@@ -40565,11 +40565,10 @@ switch(currentState) {
    SHIFT_DATA0: for(int a =16 -1;a>0;a--){
 #pragma HLS UNROLL
  phaseClass0[a] = phaseClass0[a-1];
-    if(a==1){
-     phaseClass0[0] = newVal;
-     currentState = ST_CORRELATEl;
-    }
+#pragma empty_line
    }
+   phaseClass0[0] = newVal;
+   currentState = ST_CORRELATEl;
 #pragma empty_line
   } else {
    currentState = ST_LOAD;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1551846530000">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1551847168000">
   <ports id="1" name="i_data_V_data_V" type="PortType" lineNumber="9" originalName="i_data.V.data.V" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="32">
     <inlineStackInfo fileName="correlator.cpp" linenumber="9" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
     <dataOutputObjs>nbreadreq</dataOutputObjs>
@@ -166,11 +166,11 @@
   <edges id="-1" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
   <edges id="-1" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.25"/>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="399" pipe_depth="3" RegionName="correlator">
-    <basic_blocks id="66" name=".preheader604.preheader" type="BlockType">
+    <basic_blocks id="66" name=".preheader603.preheader" type="BlockType">
       <controlOutputObjs>.loopexit</controlOutputObjs>
       <controlOutputObjs>block_138</controlOutputObjs>
       <controlOutputObjs>block_102</controlOutputObjs>
-      <controlOutputObjs>._crit_edge856.0</controlOutputObjs>
+      <controlOutputObjs>._crit_edge855.0</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="43" name="phaseClass_V_read" bitwidth="4" opcode="read" m_display="0">
         <dataInputObjs>phaseClass_V</dataInputObjs>
         <dataOutputObjs>partset</dataOutputObjs>
@@ -224,7 +224,7 @@
         <controlInputObjs>.loopexit</controlInputObjs>
         <controlInputObjs>block_138</controlInputObjs>
         <controlInputObjs>block_102</controlInputObjs>
-        <controlInputObjs>._crit_edge856.0</controlInputObjs>
+        <controlInputObjs>._crit_edge855.0</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
@@ -232,172 +232,172 @@
         <validLinenumbers>220</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="99" name="._crit_edge856.0" type="BlockType">
-      <controlInputObjs>.preheader604.preheader</controlInputObjs>
+    <basic_blocks id="99" name="._crit_edge855.0" type="BlockType">
+      <controlInputObjs>.preheader603.preheader</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>.loopexit</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="p_Result_s" lineNumber="232" originalName="__Result__" fileName="correlator.cpp" fileDirectory=".." rtlName="p_Result_s_fu_506_p5" contextFuncName="correlator" bitwidth="32" opcode="partset" nodeLabel="1" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="232" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="p_Result_s" lineNumber="231" originalName="__Result__" fileName="correlator.cpp" fileDirectory=".." rtlName="p_Result_s_fu_506_p5" contextFuncName="correlator" bitwidth="32" opcode="partset" nodeLabel="1" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="231" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="node_68" lineNumber="233" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="write" nodeLabel="1" nodeLatency="1" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="233" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="node_68" lineNumber="232" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="write" nodeLabel="1" nodeLatency="1" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="232" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>partset</dataInputObjs>
         <dataOutputObjs>o_data_V_data_V</dataOutputObjs>
         <dataOutputObjs>o_data_V_last_V</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="phaseClass0_V_15_loa" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="phaseClass0_V_15_loa" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="Phase0_V_8_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="Phase0_V_8_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="node_71" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="node_71" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="Phase0_V_7_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="Phase0_V_7_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="node_73" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="node_73" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="Phase0_V_6_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="Phase0_V_6_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="node_75" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="node_75" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="Phase0_V_5_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="Phase0_V_5_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="node_77" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="node_77" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="Phase0_V_4_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="Phase0_V_4_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="node_79" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="node_79" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="Phase0_V_3_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="Phase0_V_3_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="node_81" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="node_81" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="Phase0_V_2_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="Phase0_V_2_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="node_83" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="node_83" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="Phase0_V_1_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="Phase0_V_1_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="node_85" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="node_85" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="Phase0_V_0_load" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="Phase0_V_0_load" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="load" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="node_87" lineNumber="241" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="241" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="node_87" lineNumber="240" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="240" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp7" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataInputObjs>load</dataInputObjs>
-        <dataOutputObjs>add</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="tmp8" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp7" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="tmp6" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
-        <dataInputObjs>add</dataInputObjs>
-        <dataInputObjs>add</dataInputObjs>
-        <dataOutputObjs>add</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp1" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="tmp8" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="tmp2" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataInputObjs>load</dataInputObjs>
-        <dataOutputObjs>add</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="tmp9" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="tmp6" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="p_Val2_3_4" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp1" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="tmp2" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="tmp9" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="p_Val2_3_4" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="16" opcode="add" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="node_95" lineNumber="238" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="238" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="node_95" lineNumber="237" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="237" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>add</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="node_96" lineNumber="243" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="243" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="node_96" lineNumber="242" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="242" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>add</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="node_97" lineNumber="247" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="247" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="node_97" lineNumber="246" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="246" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="98" name="node_98" opcode="br" nodeLabel="2" m_display="0">
         <controlInputObjs>.loopexit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
+        <validLinenumbers>231</validLinenumbers>
         <validLinenumbers>232</validLinenumbers>
-        <validLinenumbers>233</validLinenumbers>
-        <validLinenumbers>238</validLinenumbers>
-        <validLinenumbers>241</validLinenumbers>
-        <validLinenumbers>243</validLinenumbers>
-        <validLinenumbers>247</validLinenumbers>
+        <validLinenumbers>237</validLinenumbers>
+        <validLinenumbers>240</validLinenumbers>
+        <validLinenumbers>242</validLinenumbers>
+        <validLinenumbers>246</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="102" name="block_102" type="BlockType">
-      <controlInputObjs>.preheader604.preheader</controlInputObjs>
+      <controlInputObjs>.preheader603.preheader</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
-      <controlOutputObjs>._crit_edge855.0</controlOutputObjs>
-      <controlOutputObjs>.loopexit462</controlOutputObjs>
+      <controlOutputObjs>block_132</controlOutputObjs>
+      <controlOutputObjs>._crit_edge854</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="100" name="tmp" lineNumber="212" originalName="tmp" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="1" opcode="nbreadreq" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="212" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>i_data_V_data_V</dataInputObjs>
@@ -408,18 +408,18 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="101" name="node_101" lineNumber="212" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="212" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>nbreadreq</dataInputObjs>
-        <controlInputObjs>.loopexit462</controlInputObjs>
-        <controlInputObjs>._crit_edge855.0</controlInputObjs>
+        <controlInputObjs>._crit_edge854</controlInputObjs>
+        <controlInputObjs>block_132</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
         <validLinenumbers>212</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="132" name="._crit_edge855.0" type="BlockType">
+    <basic_blocks id="132" name="block_132" type="BlockType">
       <controlInputObjs>block_102</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
-      <controlOutputObjs>.loopexit462</controlOutputObjs>
+      <controlOutputObjs>._crit_edge854</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="103" name="empty" lineNumber="213" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" bitwidth="33" opcode="read" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="213" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>i_data_V_data_V</dataInputObjs>
@@ -523,54 +523,56 @@
         <inlineStackInfo fileName="correlator.cpp" linenumber="220" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>load</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="node_130" lineNumber="222" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="222" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="node_130" lineNumber="223" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="223" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>read</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="node_131" opcode="br" m_display="0">
-        <controlInputObjs>.loopexit462</controlInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="node_131" lineNumber="226" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="226" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+        <controlInputObjs>._crit_edge854</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
         <validLinenumbers>213</validLinenumbers>
         <validLinenumbers>216</validLinenumbers>
         <validLinenumbers>220</validLinenumbers>
-        <validLinenumbers>222</validLinenumbers>
+        <validLinenumbers>223</validLinenumbers>
+        <validLinenumbers>226</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="136" name=".loopexit462" type="BlockType">
+    <basic_blocks id="136" name="._crit_edge854" type="BlockType">
       <controlInputObjs>block_102</controlInputObjs>
-      <controlInputObjs>._crit_edge855.0</controlInputObjs>
+      <controlInputObjs>block_132</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>.loopexit</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="133" name="storemerge" bitwidth="2" opcode="phi" m_display="0">
         <dataOutputObjs>store</dataOutputObjs>
-        <controlInputObjs>._crit_edge855.0</controlInputObjs>
+        <controlInputObjs>block_132</controlInputObjs>
         <controlInputObjs>block_102</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="node_134" lineNumber="223" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="223" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="node_134" lineNumber="227" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="227" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>phi</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="node_135" lineNumber="230" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="230" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="node_135" lineNumber="229" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="229" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <controlInputObjs>.loopexit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
-        <validLinenumbers>223</validLinenumbers>
-        <validLinenumbers>230</validLinenumbers>
+        <validLinenumbers>227</validLinenumbers>
+        <validLinenumbers>229</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="138" name="block_138" type="BlockType">
-      <controlInputObjs>.preheader604.preheader</controlInputObjs>
+      <controlInputObjs>.preheader603.preheader</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>block_141</controlOutputObjs>
-      <controlOutputObjs>._crit_edge854</controlOutputObjs>
+      <controlOutputObjs>._crit_edge853</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="137" name="node_137" lineNumber="207" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="207" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <dataInputObjs>read</dataInputObjs>
-        <controlInputObjs>._crit_edge854</controlInputObjs>
+        <controlInputObjs>._crit_edge853</controlInputObjs>
         <controlInputObjs>block_141</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
@@ -580,21 +582,21 @@
     <basic_blocks id="141" name="block_141" type="BlockType">
       <controlInputObjs>block_138</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>._crit_edge854</controlOutputObjs>
+      <controlOutputObjs>._crit_edge853</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="139" name="node_139" lineNumber="208" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="store" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="208" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="140" name="node_140" lineNumber="209" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="br" nodeLabel="2" m_display="0">
         <inlineStackInfo fileName="correlator.cpp" linenumber="209" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
-        <controlInputObjs>._crit_edge854</controlInputObjs>
+        <controlInputObjs>._crit_edge853</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
         <validLinenumbers>208</validLinenumbers>
         <validLinenumbers>209</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="143" name="._crit_edge854" type="BlockType">
+    <basic_blocks id="143" name="._crit_edge853" type="BlockType">
       <controlInputObjs>block_138</controlInputObjs>
       <controlInputObjs>block_141</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
@@ -609,19 +611,19 @@
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="145" name=".loopexit" type="BlockType">
-      <controlInputObjs>.preheader604.preheader</controlInputObjs>
-      <controlInputObjs>._crit_edge856.0</controlInputObjs>
-      <controlInputObjs>.loopexit462</controlInputObjs>
+      <controlInputObjs>.preheader603.preheader</controlInputObjs>
+      <controlInputObjs>._crit_edge855.0</controlInputObjs>
       <controlInputObjs>._crit_edge854</controlInputObjs>
+      <controlInputObjs>._crit_edge853</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="node_144" lineNumber="575" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="ret" nodeLabel="2" m_display="0">
-        <inlineStackInfo fileName="correlator.cpp" linenumber="575" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="node_144" lineNumber="574" fileName="correlator.cpp" fileDirectory=".." contextFuncName="correlator" opcode="ret" nodeLabel="2" m_display="0">
+        <inlineStackInfo fileName="correlator.cpp" linenumber="574" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev" functionName="correlator"/>
       </node_objs>
       <fileValidLineNumbers fileName="correlator.cpp">
-        <validLinenumbers>575</validLinenumbers>
+        <validLinenumbers>574</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>

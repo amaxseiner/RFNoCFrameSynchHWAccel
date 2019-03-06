@@ -47,7 +47,7 @@ declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V, i4 %phaseClass_V) {
-.preheader604.preheader:
+.preheader603.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !80
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !84
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !88
@@ -80,24 +80,24 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   switch i2 %currentState_load, label %.loopexit [
     i2 0, label %0
     i2 1, label %2
-    i2 -2, label %._crit_edge856.0
+    i2 -2, label %._crit_edge855.0
   ]
 
-; <label>:0                                       ; preds = %.preheader604.preheader
-  br i1 %start_V_read, label %1, label %._crit_edge854
+; <label>:0                                       ; preds = %.preheader603.preheader
+  br i1 %start_V_read, label %1, label %._crit_edge853
 
 ; <label>:1                                       ; preds = %0
   store i2 1, i2* @currentState, align 1
-  br label %._crit_edge854
+  br label %._crit_edge853
 
-._crit_edge854:                                   ; preds = %1, %0
+._crit_edge853:                                   ; preds = %1, %0
   br label %.loopexit
 
-; <label>:2                                       ; preds = %.preheader604.preheader
+; <label>:2                                       ; preds = %.preheader603.preheader
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %._crit_edge855.0, label %.loopexit462
+  br i1 %tmp, label %3, label %._crit_edge854
 
-._crit_edge855.0:                                 ; preds = %2
+; <label>:3                                       ; preds = %2
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_data_V_2 = extractvalue { i32, i1 } %empty, 0
   %tmp_1 = trunc i32 %tmp_data_V_2 to i16
@@ -126,14 +126,14 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i16 %phaseClass0_V_1_load, i16* @phaseClass0_V_2, align 4
   store i16 %phaseClass0_V_0_load, i16* @phaseClass0_V_1, align 2
   store i16 %tmp_1, i16* @phaseClass0_V_0, align 16
-  br label %.loopexit462
+  br label %._crit_edge854
 
-.loopexit462:                                     ; preds = %._crit_edge855.0, %2
-  %storemerge = phi i2 [ -2, %._crit_edge855.0 ], [ 1, %2 ]
+._crit_edge854:                                   ; preds = %3, %2
+  %storemerge = phi i2 [ -2, %3 ], [ 1, %2 ]
   store i2 %storemerge, i2* @currentState, align 1
   br label %.loopexit
 
-._crit_edge856.0:                                 ; preds = %.preheader604.preheader
+._crit_edge855.0:                                 ; preds = %.preheader603.preheader
   %p_Result_s = call i32 @llvm.part.set.i32.i4(i32 undef, i4 %phaseClass_V_read, i32 0, i32 3)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 undef)
   %phaseClass0_V_15_loa = load i16* @phaseClass0_V_15, align 2
@@ -167,7 +167,7 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   store i2 1, i2* @currentState, align 1
   br label %.loopexit
 
-.loopexit:                                        ; preds = %._crit_edge856.0, %.loopexit462, %._crit_edge854, %.preheader604.preheader
+.loopexit:                                        ; preds = %._crit_edge855.0, %._crit_edge854, %._crit_edge853, %.preheader603.preheader
   ret void
 }
 
