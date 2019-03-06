@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Tue Feb 26 16:10:21 2019
+* Date:           Mon Mar  4 23:38:33 2019
 
-* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      6.16|        1.25|
+    |ap_clk  |  10.00|      5.50|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |    3|    3|    1|    1| function |
+    |    2|    2|    1|    1| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -49,18 +49,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       0|    4209|
+|Expression       |        -|      -|     265|     290|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     197|
-|Register         |        0|      -|    3814|     128|
+|Multiplexer      |        -|      -|       -|      81|
+|Register         |        -|      -|     353|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|    3814|    4534|
+|Total            |        0|      0|     618|     371|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
-|Utilization (%)  |        0|      0|       1|       4|
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |
 +-----------------+---------+-------+--------+--------+
 
 + Detail: 
@@ -77,515 +77,94 @@
     N/A
 
     * Expression: 
-    +----------------------------------+----------+-------+---+----+------------+------------+
-    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +----------------------------------+----------+-------+---+----+------------+------------+
-    |p_Val2_11_4_fu_7234_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_14_4_fu_7117_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_17_4_fu_7000_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_20_4_fu_6883_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_23_4_fu_6766_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_26_4_fu_6649_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_29_4_fu_6532_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_2_4_fu_7585_p2             |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_32_4_fu_6415_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_35_4_fu_6298_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_38_4_fu_6181_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_41_4_fu_6064_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_44_4_fu_5947_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_47_4_fu_5830_p2            |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_5_4_fu_7468_p2             |     +    |      0|  0|  32|          32|          32|
-    |p_Val2_8_4_fu_7351_p2             |     +    |      0|  0|  32|          32|          32|
-    |tmp100_fu_1739_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp101_fu_5938_p2                 |     +    |      0|  0|  32|          32|          32|
-    |tmp102_fu_1745_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp103_fu_1755_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp104_fu_1765_p2                 |     +    |      0|  0|  30|          23|          23|
-    |tmp105_fu_1775_p2                 |     +    |      0|  0|  31|          24|          24|
-    |tmp106_fu_5812_p2                 |     +    |      0|  0|  39|          32|          32|
-    |tmp107_fu_1613_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp108_fu_5821_p2                 |     +    |      0|  0|  32|          32|          32|
-    |tmp109_fu_1619_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp10_fu_7459_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp110_fu_1629_p2                 |     +    |      0|  0|  29|          22|          22|
-    |tmp111_fu_1639_p2                 |     +    |      0|  0|  30|          23|          23|
-    |tmp112_fu_1649_p2                 |     +    |      0|  0|  31|          24|          24|
-    |tmp11_fu_3383_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp12_fu_3393_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp13_fu_3403_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp14_fu_3413_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp15_fu_7333_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp16_fu_3251_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp17_fu_7342_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp18_fu_3257_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp19_fu_3267_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp1_fu_3509_p2                   |     +    |      0|  0|  29|          22|          22|
-    |tmp20_fu_3277_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp21_fu_3287_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp22_fu_7216_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp23_fu_3125_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp24_fu_7225_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp25_fu_3131_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp26_fu_3141_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp27_fu_3151_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp28_fu_3161_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp29_fu_7099_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp2_fu_3519_p2                   |     +    |      0|  0|  29|          22|          22|
-    |tmp30_fu_2999_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp31_fu_7108_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp32_fu_3005_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp33_fu_3015_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp34_fu_3025_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp35_fu_3035_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp36_fu_6982_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp37_fu_2873_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp38_fu_6991_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp39_fu_2879_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp3_fu_3529_p2                   |     +    |      0|  0|  30|          23|          23|
-    |tmp40_fu_2889_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp41_fu_2899_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp42_fu_2909_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp43_fu_6865_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp44_fu_2747_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp45_fu_6874_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp46_fu_2753_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp47_fu_2763_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp48_fu_2773_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp49_fu_2783_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp4_fu_3539_p2                   |     +    |      0|  0|  31|          24|          24|
-    |tmp50_fu_6748_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp51_fu_2621_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp52_fu_6757_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp53_fu_2627_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp54_fu_2637_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp55_fu_2647_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp56_fu_2657_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp57_fu_6631_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp58_fu_2495_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp59_fu_6640_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp5_fu_7450_p2                   |     +    |      0|  0|  39|          32|          32|
-    |tmp60_fu_2501_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp61_fu_2511_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp62_fu_2521_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp63_fu_2531_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp64_fu_6514_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp65_fu_2369_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp66_fu_6523_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp67_fu_2375_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp68_fu_2385_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp69_fu_2395_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp6_fu_3377_p2                   |     +    |      0|  0|  29|          22|          22|
-    |tmp70_fu_2405_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp71_fu_6397_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp72_fu_2243_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp73_fu_6406_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp74_fu_2249_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp75_fu_2259_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp76_fu_2269_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp77_fu_2279_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp78_fu_6280_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp79_fu_2117_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp7_fu_7576_p2                   |     +    |      0|  0|  32|          32|          32|
-    |tmp80_fu_6289_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp81_fu_2123_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp82_fu_2133_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp83_fu_2143_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp84_fu_2153_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp85_fu_6163_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp86_fu_1991_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp87_fu_6172_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp88_fu_1997_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp89_fu_2007_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp8_fu_7567_p2                   |     +    |      0|  0|  39|          32|          32|
-    |tmp90_fu_2017_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp91_fu_2027_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp92_fu_6046_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp93_fu_1865_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp94_fu_6055_p2                  |     +    |      0|  0|  32|          32|          32|
-    |tmp95_fu_1871_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp96_fu_1881_p2                  |     +    |      0|  0|  29|          22|          22|
-    |tmp97_fu_1891_p2                  |     +    |      0|  0|  30|          23|          23|
-    |tmp98_fu_1901_p2                  |     +    |      0|  0|  31|          24|          24|
-    |tmp99_fu_5929_p2                  |     +    |      0|  0|  39|          32|          32|
-    |tmp9_fu_3503_p2                   |     +    |      0|  0|  29|          22|          22|
-    |tmp_3_fu_7614_p2                  |     +    |      0|  0|  39|          32|           1|
-    |ap_block_state1_pp0_stage0_iter0  |    and   |      0|  0|   8|           1|           1|
-    |ap_block_state3_io                |    and   |      0|  0|   8|           1|           1|
-    |ap_block_state4_io                |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_3416                 |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_526                  |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_815                  |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op1286_write_state3  |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op1325_write_state4  |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op499_read_state1    |    and   |      0|  0|   8|           1|           1|
-    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
-    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
-    |tmp_nbreadreq_fu_922_p4           |    and   |      0|  0|   8|           1|           0|
-    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |tmp_s_fu_7603_p2                  |   icmp   |      0|  0|  18|          32|          13|
-    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
-    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   8|           1|           1|
-    |ap_block_state4_pp0_stage0_iter3  |    or    |      0|  0|   8|           1|           1|
-    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
-    +----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                             |          |      0|  0|4209|        3426|        3375|
-    +----------------------------------+----------+-------+---+----+------------+------------+
+    +----------------------------------+----------+-------+----+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+----+----+------------+------------+
+    |p_Val2_3_s_fu_432_p2              |     +    |      0|   0|  16|          16|          16|
+    |tmp10_fu_402_p2                   |     +    |      0|   0|  16|          16|          16|
+    |tmp11_fu_408_p2                   |     +    |      0|   0|  16|          16|          16|
+    |tmp12_fu_414_p2                   |     +    |      0|  53|  21|          16|          16|
+    |tmp13_fu_420_p2                   |     +    |      0|   0|  16|          16|          16|
+    |tmp14_fu_426_p2                   |     +    |      0|   0|  16|          16|          16|
+    |tmp1_fu_348_p2                    |     +    |      0|   0|  16|          16|          16|
+    |tmp2_fu_354_p2                    |     +    |      0|  53|  21|          16|          16|
+    |tmp3_fu_360_p2                    |     +    |      0|   0|  16|          16|          16|
+    |tmp4_fu_366_p2                    |     +    |      0|   0|  16|          16|          16|
+    |tmp5_fu_372_p2                    |     +    |      0|  53|  21|          16|          16|
+    |tmp6_fu_378_p2                    |     +    |      0|   0|  16|          16|          16|
+    |tmp7_fu_384_p2                    |     +    |      0|   0|  16|          16|          16|
+    |tmp8_fu_390_p2                    |     +    |      0|  53|  21|          16|          16|
+    |tmp9_fu_396_p2                    |     +    |      0|  53|  21|          16|          16|
+    |ap_block_state1_pp0_stage0_iter0  |    and   |      0|   0|   2|           1|           1|
+    |ap_block_state2_io                |    and   |      0|   0|   2|           1|           1|
+    |ap_block_state3_io                |    and   |      0|   0|   2|           1|           1|
+    |ap_condition_440                  |    and   |      0|   0|   2|           1|           1|
+    |ap_predicate_op10_read_state1     |    and   |      0|   0|   2|           1|           1|
+    |o_data_V_data_V_1_load_A          |    and   |      0|   0|   2|           1|           1|
+    |o_data_V_data_V_1_load_B          |    and   |      0|   0|   2|           1|           1|
+    |tmp_nbreadreq_fu_124_p4           |    and   |      0|   0|   2|           1|           0|
+    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|   0|   1|           2|           1|
+    |ap_block_pp0_stage0_flag00001001  |    or    |      0|   0|   2|           1|           1|
+    |ap_block_pp0_stage0_flag00011001  |    or    |      0|   0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|   0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|   0|   2|           1|           2|
+    +----------------------------------+----------+-------+----+----+------------+------------+
+    |Total                             |          |      0| 265| 290|         254|         253|
+    +----------------------------------+----------+-------+----+----+------------+------------+
 
     * Multiplexer: 
-    +------------------------------------------+----+-----------+-----+-----------+
-    |                   Name                   | LUT| Input Size| Bits| Total Bits|
-    +------------------------------------------+----+-----------+-----+-----------+
-    |ap_phi_mux_corState_flag_1_phi_fu_965_p4  |  15|          3|    1|          3|
-    |ap_phi_mux_corState_flag_2_phi_fu_987_p4  |  15|          3|    1|          3|
-    |ap_phi_mux_corState_flag_phi_fu_954_p4    |  15|          3|    1|          3|
-    |ap_phi_mux_corState_new_1_phi_fu_976_p4   |  15|          3|    1|          3|
-    |ap_phi_mux_corState_new_2_phi_fu_999_p4   |  15|          3|    1|          3|
-    |corHelperI_V                              |  65|         16|   32|        512|
-    |i_data_TDATA_blk_n                        |   9|          2|    1|          2|
-    |o_data_TDATA_blk_n                        |   9|          2|    1|          2|
-    |o_data_V_data_V_1_data_out                |   9|          2|   32|         64|
-    |o_data_V_data_V_1_state                   |  15|          3|    2|          6|
-    |o_data_V_last_V_1_state                   |  15|          3|    2|          6|
-    +------------------------------------------+----+-----------+-----+-----------+
-    |Total                                     | 197|         43|   75|        607|
-    +------------------------------------------+----+-----------+-----+-----------+
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |currentState                |   9|          2|    2|          4|
+    |i_data_TDATA_blk_n          |   9|          2|    1|          2|
+    |o_data_TDATA_blk_n          |   9|          2|    1|          2|
+    |o_data_V_data_V_1_data_out  |   9|          2|   32|         64|
+    |o_data_V_data_V_1_state     |  15|          3|    2|          6|
+    |o_data_V_last_V_1_state     |  15|          3|    2|          6|
+    |storemerge_phi_fu_156_p4    |  15|          3|    2|          6|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  81|         17|   42|         90|
+    +----------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------------------+----+----+-----+-----------+
-    |               Name              | FF | LUT| Bits| Const Bits|
-    +---------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                        |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3          |   1|   0|    1|          0|
-    |ap_reg_pp0_iter2_tmp_s_reg_7886  |   1|   0|    1|          0|
-    |corHelperI_V                     |  32|   0|   32|          0|
-    |corState                         |   1|   0|    1|          0|
-    |corState_load_reg_7634           |   1|   0|    1|          0|
-    |currentState                     |   1|   0|    1|          0|
-    |currentState_load_reg_7878       |   1|   0|    1|          0|
-    |loadCount_V                      |  32|   0|   32|          0|
-    |o_data_V_data_V_1_payload_A      |  32|   0|   32|          0|
-    |o_data_V_data_V_1_payload_B      |  32|   0|   32|          0|
-    |o_data_V_data_V_1_sel_rd         |   1|   0|    1|          0|
-    |o_data_V_data_V_1_sel_wr         |   1|   0|    1|          0|
-    |o_data_V_data_V_1_state          |   2|   0|    2|          0|
-    |o_data_V_last_V_1_sel_rd         |   1|   0|    1|          0|
-    |o_data_V_last_V_1_state          |   2|   0|    2|          0|
-    |phaseClass0_V_0                  |  11|   0|   16|          5|
-    |phaseClass0_V_1                  |  11|   0|   16|          5|
-    |phaseClass0_V_10                 |  11|   0|   16|          5|
-    |phaseClass0_V_11                 |  11|   0|   16|          5|
-    |phaseClass0_V_12                 |  11|   0|   16|          5|
-    |phaseClass0_V_13                 |  11|   0|   16|          5|
-    |phaseClass0_V_14                 |  11|   0|   16|          5|
-    |phaseClass0_V_15                 |  11|   0|   16|          5|
-    |phaseClass0_V_2                  |  11|   0|   16|          5|
-    |phaseClass0_V_2_load_reg_7638    |  11|   0|   16|          5|
-    |phaseClass0_V_3                  |  11|   0|   16|          5|
-    |phaseClass0_V_4                  |  11|   0|   16|          5|
-    |phaseClass0_V_5                  |  11|   0|   16|          5|
-    |phaseClass0_V_6                  |  11|   0|   16|          5|
-    |phaseClass0_V_7                  |  11|   0|   16|          5|
-    |phaseClass0_V_8                  |  11|   0|   16|          5|
-    |phaseClass0_V_9                  |  11|   0|   16|          5|
-    |phaseClass10_V_0                 |  11|   0|   16|          5|
-    |phaseClass10_V_1                 |  11|   0|   16|          5|
-    |phaseClass10_V_10                |  11|   0|   16|          5|
-    |phaseClass10_V_11                |  11|   0|   16|          5|
-    |phaseClass10_V_12                |  11|   0|   16|          5|
-    |phaseClass10_V_13                |  11|   0|   16|          5|
-    |phaseClass10_V_14                |  11|   0|   16|          5|
-    |phaseClass10_V_15                |  11|   0|   16|          5|
-    |phaseClass10_V_2                 |  11|   0|   16|          5|
-    |phaseClass10_V_2_loa_reg_7688    |  11|   0|   16|          5|
-    |phaseClass10_V_3                 |  11|   0|   16|          5|
-    |phaseClass10_V_4                 |  11|   0|   16|          5|
-    |phaseClass10_V_5                 |  11|   0|   16|          5|
-    |phaseClass10_V_6                 |  11|   0|   16|          5|
-    |phaseClass10_V_7                 |  11|   0|   16|          5|
-    |phaseClass10_V_8                 |  11|   0|   16|          5|
-    |phaseClass10_V_9                 |  11|   0|   16|          5|
-    |phaseClass11_V_0                 |  11|   0|   16|          5|
-    |phaseClass11_V_1                 |  11|   0|   16|          5|
-    |phaseClass11_V_10                |  11|   0|   16|          5|
-    |phaseClass11_V_11                |  11|   0|   16|          5|
-    |phaseClass11_V_12                |  11|   0|   16|          5|
-    |phaseClass11_V_13                |  11|   0|   16|          5|
-    |phaseClass11_V_14                |  11|   0|   16|          5|
-    |phaseClass11_V_15                |  11|   0|   16|          5|
-    |phaseClass11_V_2                 |  11|   0|   16|          5|
-    |phaseClass11_V_2_loa_reg_7693    |  11|   0|   16|          5|
-    |phaseClass11_V_3                 |  11|   0|   16|          5|
-    |phaseClass11_V_4                 |  11|   0|   16|          5|
-    |phaseClass11_V_5                 |  11|   0|   16|          5|
-    |phaseClass11_V_6                 |  11|   0|   16|          5|
-    |phaseClass11_V_7                 |  11|   0|   16|          5|
-    |phaseClass11_V_8                 |  11|   0|   16|          5|
-    |phaseClass11_V_9                 |  11|   0|   16|          5|
-    |phaseClass12_V_0                 |  11|   0|   16|          5|
-    |phaseClass12_V_1                 |  11|   0|   16|          5|
-    |phaseClass12_V_10                |  11|   0|   16|          5|
-    |phaseClass12_V_11                |  11|   0|   16|          5|
-    |phaseClass12_V_12                |  11|   0|   16|          5|
-    |phaseClass12_V_13                |  11|   0|   16|          5|
-    |phaseClass12_V_14                |  11|   0|   16|          5|
-    |phaseClass12_V_15                |  11|   0|   16|          5|
-    |phaseClass12_V_2                 |  11|   0|   16|          5|
-    |phaseClass12_V_2_loa_reg_7698    |  11|   0|   16|          5|
-    |phaseClass12_V_3                 |  11|   0|   16|          5|
-    |phaseClass12_V_4                 |  11|   0|   16|          5|
-    |phaseClass12_V_5                 |  11|   0|   16|          5|
-    |phaseClass12_V_6                 |  11|   0|   16|          5|
-    |phaseClass12_V_7                 |  11|   0|   16|          5|
-    |phaseClass12_V_8                 |  11|   0|   16|          5|
-    |phaseClass12_V_9                 |  11|   0|   16|          5|
-    |phaseClass13_V_0                 |  11|   0|   16|          5|
-    |phaseClass13_V_1                 |  11|   0|   16|          5|
-    |phaseClass13_V_10                |  11|   0|   16|          5|
-    |phaseClass13_V_11                |  11|   0|   16|          5|
-    |phaseClass13_V_12                |  11|   0|   16|          5|
-    |phaseClass13_V_13                |  11|   0|   16|          5|
-    |phaseClass13_V_14                |  11|   0|   16|          5|
-    |phaseClass13_V_15                |  11|   0|   16|          5|
-    |phaseClass13_V_2                 |  11|   0|   16|          5|
-    |phaseClass13_V_2_loa_reg_7703    |  11|   0|   16|          5|
-    |phaseClass13_V_3                 |  11|   0|   16|          5|
-    |phaseClass13_V_4                 |  11|   0|   16|          5|
-    |phaseClass13_V_5                 |  11|   0|   16|          5|
-    |phaseClass13_V_6                 |  11|   0|   16|          5|
-    |phaseClass13_V_7                 |  11|   0|   16|          5|
-    |phaseClass13_V_8                 |  11|   0|   16|          5|
-    |phaseClass13_V_9                 |  11|   0|   16|          5|
-    |phaseClass14_V_0                 |  11|   0|   16|          5|
-    |phaseClass14_V_1                 |  11|   0|   16|          5|
-    |phaseClass14_V_10                |  11|   0|   16|          5|
-    |phaseClass14_V_11                |  11|   0|   16|          5|
-    |phaseClass14_V_12                |  11|   0|   16|          5|
-    |phaseClass14_V_13                |  11|   0|   16|          5|
-    |phaseClass14_V_14                |  11|   0|   16|          5|
-    |phaseClass14_V_15                |  11|   0|   16|          5|
-    |phaseClass14_V_2                 |  11|   0|   16|          5|
-    |phaseClass14_V_2_loa_reg_7708    |  11|   0|   16|          5|
-    |phaseClass14_V_3                 |  11|   0|   16|          5|
-    |phaseClass14_V_4                 |  11|   0|   16|          5|
-    |phaseClass14_V_5                 |  11|   0|   16|          5|
-    |phaseClass14_V_6                 |  11|   0|   16|          5|
-    |phaseClass14_V_7                 |  11|   0|   16|          5|
-    |phaseClass14_V_8                 |  11|   0|   16|          5|
-    |phaseClass14_V_9                 |  11|   0|   16|          5|
-    |phaseClass15_V_0                 |  11|   0|   16|          5|
-    |phaseClass15_V_1                 |  11|   0|   16|          5|
-    |phaseClass15_V_10                |  11|   0|   16|          5|
-    |phaseClass15_V_11                |  11|   0|   16|          5|
-    |phaseClass15_V_12                |  11|   0|   16|          5|
-    |phaseClass15_V_13                |  11|   0|   16|          5|
-    |phaseClass15_V_14                |  11|   0|   16|          5|
-    |phaseClass15_V_15                |  11|   0|   16|          5|
-    |phaseClass15_V_2                 |  11|   0|   16|          5|
-    |phaseClass15_V_2_loa_reg_7713    |  11|   0|   16|          5|
-    |phaseClass15_V_3                 |  11|   0|   16|          5|
-    |phaseClass15_V_4                 |  11|   0|   16|          5|
-    |phaseClass15_V_5                 |  11|   0|   16|          5|
-    |phaseClass15_V_6                 |  11|   0|   16|          5|
-    |phaseClass15_V_7                 |  11|   0|   16|          5|
-    |phaseClass15_V_8                 |  11|   0|   16|          5|
-    |phaseClass15_V_9                 |  11|   0|   16|          5|
-    |phaseClass1_V_0                  |  11|   0|   16|          5|
-    |phaseClass1_V_1                  |  11|   0|   16|          5|
-    |phaseClass1_V_10                 |  11|   0|   16|          5|
-    |phaseClass1_V_11                 |  11|   0|   16|          5|
-    |phaseClass1_V_12                 |  11|   0|   16|          5|
-    |phaseClass1_V_13                 |  11|   0|   16|          5|
-    |phaseClass1_V_14                 |  11|   0|   16|          5|
-    |phaseClass1_V_15                 |  11|   0|   16|          5|
-    |phaseClass1_V_2                  |  11|   0|   16|          5|
-    |phaseClass1_V_2_load_reg_7643    |  11|   0|   16|          5|
-    |phaseClass1_V_3                  |  11|   0|   16|          5|
-    |phaseClass1_V_4                  |  11|   0|   16|          5|
-    |phaseClass1_V_5                  |  11|   0|   16|          5|
-    |phaseClass1_V_6                  |  11|   0|   16|          5|
-    |phaseClass1_V_7                  |  11|   0|   16|          5|
-    |phaseClass1_V_8                  |  11|   0|   16|          5|
-    |phaseClass1_V_9                  |  11|   0|   16|          5|
-    |phaseClass2_V_0                  |  11|   0|   16|          5|
-    |phaseClass2_V_1                  |  11|   0|   16|          5|
-    |phaseClass2_V_10                 |  11|   0|   16|          5|
-    |phaseClass2_V_11                 |  11|   0|   16|          5|
-    |phaseClass2_V_12                 |  11|   0|   16|          5|
-    |phaseClass2_V_13                 |  11|   0|   16|          5|
-    |phaseClass2_V_14                 |  11|   0|   16|          5|
-    |phaseClass2_V_15                 |  11|   0|   16|          5|
-    |phaseClass2_V_2                  |  11|   0|   16|          5|
-    |phaseClass2_V_2_load_reg_7648    |  11|   0|   16|          5|
-    |phaseClass2_V_3                  |  11|   0|   16|          5|
-    |phaseClass2_V_4                  |  11|   0|   16|          5|
-    |phaseClass2_V_5                  |  11|   0|   16|          5|
-    |phaseClass2_V_6                  |  11|   0|   16|          5|
-    |phaseClass2_V_7                  |  11|   0|   16|          5|
-    |phaseClass2_V_8                  |  11|   0|   16|          5|
-    |phaseClass2_V_9                  |  11|   0|   16|          5|
-    |phaseClass3_V_0                  |  11|   0|   16|          5|
-    |phaseClass3_V_1                  |  11|   0|   16|          5|
-    |phaseClass3_V_10                 |  11|   0|   16|          5|
-    |phaseClass3_V_11                 |  11|   0|   16|          5|
-    |phaseClass3_V_12                 |  11|   0|   16|          5|
-    |phaseClass3_V_13                 |  11|   0|   16|          5|
-    |phaseClass3_V_14                 |  11|   0|   16|          5|
-    |phaseClass3_V_15                 |  11|   0|   16|          5|
-    |phaseClass3_V_2                  |  11|   0|   16|          5|
-    |phaseClass3_V_2_load_reg_7653    |  11|   0|   16|          5|
-    |phaseClass3_V_3                  |  11|   0|   16|          5|
-    |phaseClass3_V_4                  |  11|   0|   16|          5|
-    |phaseClass3_V_5                  |  11|   0|   16|          5|
-    |phaseClass3_V_6                  |  11|   0|   16|          5|
-    |phaseClass3_V_7                  |  11|   0|   16|          5|
-    |phaseClass3_V_8                  |  11|   0|   16|          5|
-    |phaseClass3_V_9                  |  11|   0|   16|          5|
-    |phaseClass4_V_0                  |  11|   0|   16|          5|
-    |phaseClass4_V_1                  |  11|   0|   16|          5|
-    |phaseClass4_V_10                 |  11|   0|   16|          5|
-    |phaseClass4_V_11                 |  11|   0|   16|          5|
-    |phaseClass4_V_12                 |  11|   0|   16|          5|
-    |phaseClass4_V_13                 |  11|   0|   16|          5|
-    |phaseClass4_V_14                 |  11|   0|   16|          5|
-    |phaseClass4_V_15                 |  11|   0|   16|          5|
-    |phaseClass4_V_2                  |  11|   0|   16|          5|
-    |phaseClass4_V_2_load_reg_7658    |  11|   0|   16|          5|
-    |phaseClass4_V_3                  |  11|   0|   16|          5|
-    |phaseClass4_V_4                  |  11|   0|   16|          5|
-    |phaseClass4_V_5                  |  11|   0|   16|          5|
-    |phaseClass4_V_6                  |  11|   0|   16|          5|
-    |phaseClass4_V_7                  |  11|   0|   16|          5|
-    |phaseClass4_V_8                  |  11|   0|   16|          5|
-    |phaseClass4_V_9                  |  11|   0|   16|          5|
-    |phaseClass5_V_0                  |  11|   0|   16|          5|
-    |phaseClass5_V_1                  |  11|   0|   16|          5|
-    |phaseClass5_V_10                 |  11|   0|   16|          5|
-    |phaseClass5_V_11                 |  11|   0|   16|          5|
-    |phaseClass5_V_12                 |  11|   0|   16|          5|
-    |phaseClass5_V_13                 |  11|   0|   16|          5|
-    |phaseClass5_V_14                 |  11|   0|   16|          5|
-    |phaseClass5_V_15                 |  11|   0|   16|          5|
-    |phaseClass5_V_2                  |  11|   0|   16|          5|
-    |phaseClass5_V_2_load_reg_7663    |  11|   0|   16|          5|
-    |phaseClass5_V_3                  |  11|   0|   16|          5|
-    |phaseClass5_V_4                  |  11|   0|   16|          5|
-    |phaseClass5_V_5                  |  11|   0|   16|          5|
-    |phaseClass5_V_6                  |  11|   0|   16|          5|
-    |phaseClass5_V_7                  |  11|   0|   16|          5|
-    |phaseClass5_V_8                  |  11|   0|   16|          5|
-    |phaseClass5_V_9                  |  11|   0|   16|          5|
-    |phaseClass6_V_0                  |  11|   0|   16|          5|
-    |phaseClass6_V_1                  |  11|   0|   16|          5|
-    |phaseClass6_V_10                 |  11|   0|   16|          5|
-    |phaseClass6_V_11                 |  11|   0|   16|          5|
-    |phaseClass6_V_12                 |  11|   0|   16|          5|
-    |phaseClass6_V_13                 |  11|   0|   16|          5|
-    |phaseClass6_V_14                 |  11|   0|   16|          5|
-    |phaseClass6_V_15                 |  11|   0|   16|          5|
-    |phaseClass6_V_2                  |  11|   0|   16|          5|
-    |phaseClass6_V_2_load_reg_7668    |  11|   0|   16|          5|
-    |phaseClass6_V_3                  |  11|   0|   16|          5|
-    |phaseClass6_V_4                  |  11|   0|   16|          5|
-    |phaseClass6_V_5                  |  11|   0|   16|          5|
-    |phaseClass6_V_6                  |  11|   0|   16|          5|
-    |phaseClass6_V_7                  |  11|   0|   16|          5|
-    |phaseClass6_V_8                  |  11|   0|   16|          5|
-    |phaseClass6_V_9                  |  11|   0|   16|          5|
-    |phaseClass7_V_0                  |  11|   0|   16|          5|
-    |phaseClass7_V_1                  |  11|   0|   16|          5|
-    |phaseClass7_V_10                 |  11|   0|   16|          5|
-    |phaseClass7_V_11                 |  11|   0|   16|          5|
-    |phaseClass7_V_12                 |  11|   0|   16|          5|
-    |phaseClass7_V_13                 |  11|   0|   16|          5|
-    |phaseClass7_V_14                 |  11|   0|   16|          5|
-    |phaseClass7_V_15                 |  11|   0|   16|          5|
-    |phaseClass7_V_2                  |  11|   0|   16|          5|
-    |phaseClass7_V_2_load_reg_7673    |  11|   0|   16|          5|
-    |phaseClass7_V_3                  |  11|   0|   16|          5|
-    |phaseClass7_V_4                  |  11|   0|   16|          5|
-    |phaseClass7_V_5                  |  11|   0|   16|          5|
-    |phaseClass7_V_6                  |  11|   0|   16|          5|
-    |phaseClass7_V_7                  |  11|   0|   16|          5|
-    |phaseClass7_V_8                  |  11|   0|   16|          5|
-    |phaseClass7_V_9                  |  11|   0|   16|          5|
-    |phaseClass8_V_0                  |  11|   0|   16|          5|
-    |phaseClass8_V_1                  |  11|   0|   16|          5|
-    |phaseClass8_V_10                 |  11|   0|   16|          5|
-    |phaseClass8_V_11                 |  11|   0|   16|          5|
-    |phaseClass8_V_12                 |  11|   0|   16|          5|
-    |phaseClass8_V_13                 |  11|   0|   16|          5|
-    |phaseClass8_V_14                 |  11|   0|   16|          5|
-    |phaseClass8_V_15                 |  11|   0|   16|          5|
-    |phaseClass8_V_2                  |  11|   0|   16|          5|
-    |phaseClass8_V_2_load_reg_7678    |  11|   0|   16|          5|
-    |phaseClass8_V_3                  |  11|   0|   16|          5|
-    |phaseClass8_V_4                  |  11|   0|   16|          5|
-    |phaseClass8_V_5                  |  11|   0|   16|          5|
-    |phaseClass8_V_6                  |  11|   0|   16|          5|
-    |phaseClass8_V_7                  |  11|   0|   16|          5|
-    |phaseClass8_V_8                  |  11|   0|   16|          5|
-    |phaseClass8_V_9                  |  11|   0|   16|          5|
-    |phaseClass9_V_0                  |  11|   0|   16|          5|
-    |phaseClass9_V_1                  |  11|   0|   16|          5|
-    |phaseClass9_V_10                 |  11|   0|   16|          5|
-    |phaseClass9_V_11                 |  11|   0|   16|          5|
-    |phaseClass9_V_12                 |  11|   0|   16|          5|
-    |phaseClass9_V_13                 |  11|   0|   16|          5|
-    |phaseClass9_V_14                 |  11|   0|   16|          5|
-    |phaseClass9_V_15                 |  11|   0|   16|          5|
-    |phaseClass9_V_2                  |  11|   0|   16|          5|
-    |phaseClass9_V_2_load_reg_7683    |  11|   0|   16|          5|
-    |phaseClass9_V_3                  |  11|   0|   16|          5|
-    |phaseClass9_V_4                  |  11|   0|   16|          5|
-    |phaseClass9_V_5                  |  11|   0|   16|          5|
-    |phaseClass9_V_6                  |  11|   0|   16|          5|
-    |phaseClass9_V_7                  |  11|   0|   16|          5|
-    |phaseClass9_V_8                  |  11|   0|   16|          5|
-    |phaseClass9_V_9                  |  11|   0|   16|          5|
-    |phaseClass_V_read_reg_7630       |   4|   0|    4|          0|
-    |tmp100_reg_7728                  |  12|   0|   22|         10|
-    |tmp105_reg_7733                  |  14|   0|   24|         10|
-    |tmp107_reg_7718                  |  12|   0|   22|         10|
-    |tmp112_reg_7723                  |  14|   0|   24|         10|
-    |tmp14_reg_7863                   |  14|   0|   24|         10|
-    |tmp16_reg_7848                   |  12|   0|   22|         10|
-    |tmp21_reg_7853                   |  14|   0|   24|         10|
-    |tmp23_reg_7838                   |  12|   0|   22|         10|
-    |tmp28_reg_7843                   |  14|   0|   24|         10|
-    |tmp30_reg_7828                   |  12|   0|   22|         10|
-    |tmp35_reg_7833                   |  14|   0|   24|         10|
-    |tmp37_reg_7818                   |  12|   0|   22|         10|
-    |tmp42_reg_7823                   |  14|   0|   24|         10|
-    |tmp44_reg_7808                   |  12|   0|   22|         10|
-    |tmp49_reg_7813                   |  14|   0|   24|         10|
-    |tmp4_reg_7873                    |  14|   0|   24|         10|
-    |tmp51_reg_7798                   |  12|   0|   22|         10|
-    |tmp56_reg_7803                   |  14|   0|   24|         10|
-    |tmp58_reg_7788                   |  12|   0|   22|         10|
-    |tmp63_reg_7793                   |  14|   0|   24|         10|
-    |tmp65_reg_7778                   |  12|   0|   22|         10|
-    |tmp6_reg_7858                    |  12|   0|   22|         10|
-    |tmp70_reg_7783                   |  14|   0|   24|         10|
-    |tmp72_reg_7768                   |  12|   0|   22|         10|
-    |tmp77_reg_7773                   |  14|   0|   24|         10|
-    |tmp79_reg_7758                   |  12|   0|   22|         10|
-    |tmp84_reg_7763                   |  14|   0|   24|         10|
-    |tmp86_reg_7748                   |  12|   0|   22|         10|
-    |tmp91_reg_7753                   |  14|   0|   24|         10|
-    |tmp93_reg_7738                   |  12|   0|   22|         10|
-    |tmp98_reg_7743                   |  14|   0|   24|         10|
-    |tmp9_reg_7868                    |  12|   0|   22|         10|
-    |tmp_reg_7882                     |   1|   0|    1|          0|
-    |tmp_s_reg_7886                   |   1|   0|    1|          0|
-    |corState_load_reg_7634           |  64|  32|    1|          0|
-    |currentState_load_reg_7878       |  64|  32|    1|          0|
-    |phaseClass_V_read_reg_7630       |  64|  32|    4|          0|
-    |tmp_reg_7882                     |  64|  32|    1|          0|
-    +---------------------------------+----+----+-----+-----------+
-    |Total                            |3814| 128| 5245|       1680|
-    +---------------------------------+----+----+-----+-----------+
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_currentState_load_reg_562  |   2|   0|    2|          0|
+    |currentState                                |   2|   0|    2|          0|
+    |currentState_load_reg_562                   |   2|   0|    2|          0|
+    |o_data_V_data_V_1_payload_A                 |  32|   0|   32|          0|
+    |o_data_V_data_V_1_payload_B                 |  32|   0|   32|          0|
+    |o_data_V_data_V_1_sel_rd                    |   1|   0|    1|          0|
+    |o_data_V_data_V_1_sel_wr                    |   1|   0|    1|          0|
+    |o_data_V_data_V_1_state                     |   2|   0|    2|          0|
+    |o_data_V_last_V_1_sel_rd                    |   1|   0|    1|          0|
+    |o_data_V_last_V_1_state                     |   2|   0|    2|          0|
+    |phaseClass0_V_0                             |  16|   0|   16|          0|
+    |phaseClass0_V_1                             |  16|   0|   16|          0|
+    |phaseClass0_V_10                            |  16|   0|   16|          0|
+    |phaseClass0_V_11                            |  16|   0|   16|          0|
+    |phaseClass0_V_12                            |  16|   0|   16|          0|
+    |phaseClass0_V_13                            |  16|   0|   16|          0|
+    |phaseClass0_V_14                            |  16|   0|   16|          0|
+    |phaseClass0_V_15                            |  16|   0|   16|          0|
+    |phaseClass0_V_2                             |  16|   0|   16|          0|
+    |phaseClass0_V_3                             |  16|   0|   16|          0|
+    |phaseClass0_V_4                             |  16|   0|   16|          0|
+    |phaseClass0_V_5                             |  16|   0|   16|          0|
+    |phaseClass0_V_6                             |  16|   0|   16|          0|
+    |phaseClass0_V_7                             |  16|   0|   16|          0|
+    |phaseClass0_V_8                             |  16|   0|   16|          0|
+    |phaseClass0_V_9                             |  16|   0|   16|          0|
+    |tmp_15_reg_570                              |  16|   0|   16|          0|
+    |tmp_reg_566                                 |   1|   0|    1|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       | 353|   0|  353|          0|
+    +--------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -606,7 +185,7 @@
 |o_data_TVALID  | out |    1|     axis     | o_data_V_last_V |    pointer   |
 |o_data_TREADY  |  in |    1|     axis     | o_data_V_last_V |    pointer   |
 |o_data_TLAST   | out |    1|     axis     | o_data_V_last_V |    pointer   |
-|phaseClass_V   |  in |    4|    ap_none   |   phaseClass_V  |    scalar    |
 |start_V        |  in |    1|    ap_none   |     start_V     |    scalar    |
+|phaseClass_V   |  in |    4|    ap_none   |   phaseClass_V  |    scalar    |
 +---------------+-----+-----+--------------+-----------------+--------------+
 
