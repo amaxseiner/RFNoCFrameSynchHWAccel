@@ -198,6 +198,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 // may add load state later, not neccessary right now
   enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl, ST_SEND };
   static loadState currentState;
+#pragma HLS RESET variable=currentState
 
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
@@ -212,30 +213,40 @@ switch(currentState) {
 		if(!i_data.empty()){
 			i_data.read(tmp_data);
 			out_sample.last = tmp_data.last;
-
 			newVal.V = tmp_data.data.range(15,0); // RE
 
-			SHIFT_DATA0: for(int a =windowSize-1;a>0;a--){
-				#pragma HLS UNROLL
+			SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
+				//#pragma HLS UNROLL
 				phaseClass0[a] = phaseClass0[a-1];
-
 			}
 			phaseClass0[0] = newVal;
-			out_sample.data.range(3,0) = phaseClass;
-			//out_sample.last = 0;
+
+			correlateData0: for(int a =windowSize-1;a>=0;a--){
+				//#pragma HLS UNROLL
+				if(corrSeq[a] > 0)
+					corHelperI = corHelperI + (phaseClass0[a]);
+					// corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+				if(a > 0)
+					Phase0[a] = Phase0[a-1];
+				else{
+					Phase0[0] = corHelperI;
+				}
+			}
+			out_sample.data.range(15,0) = corHelperI.V;
+
 			o_data.write(out_sample);
-			currentState = ST_CORRELATEl;
-
-
-		} else {
+			//out_sample.data.range(3,0) = phaseClass;
+			//out_sample.last = 0;
+			//o_data.write(out_sample);
 			currentState = ST_LOAD;
+
+
 		}
 	break;
-	case ST_CORRELATEl:
-		//out_sample.data.range(3,0) = phaseClass;
-		//o_data.write(out_sample);
+	/*case ST_CORRELATEl:
 		corHelperI = 0;
-		correlateData0: for(int a =windowSize-1;a>=0;a--){
+
+		/*correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 			if(corrSeq[a] > 0)
 				corHelperI = corHelperI + (phaseClass0[a]);
@@ -247,12 +258,12 @@ switch(currentState) {
 
 				currentState = ST_SEND;
 			}
-		}
+		}*/
 
-	break;
+	/*break;
 	case ST_SEND:
 
-	break;
+	break;*/
 }
 		/*case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){

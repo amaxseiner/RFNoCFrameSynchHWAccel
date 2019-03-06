@@ -98,21 +98,6 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6 \
-    name phaseClass_V \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_phaseClass_V \
-    op interface \
-    ports { phaseClass_V { I 4 vector } } \
-} "
-}
-
 
 # Adapter definition:
 set PortName ap_clk
