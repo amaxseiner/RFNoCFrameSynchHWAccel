@@ -40584,7 +40584,7 @@ switch(currentState) {
  if(corrSeq[a] > 0)
     corHelperI = corHelperI + (phaseClass0[a]);
     //corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
-   if(a>0)
+   if(a > 0)
     Phase0[a] = Phase0[a-1];
    else{
     Phase0[0] = corHelperI;
@@ -40595,7 +40595,7 @@ switch(currentState) {
 #pragma empty_line
  break;
  case ST_SEND:
-  out_sample.data.range(15,0) = corHelperI.V;
+  out_sample.data.range(3,0) = phaseClass;
   out_sample.last = 0;
   o_data.write(out_sample);
  break;
