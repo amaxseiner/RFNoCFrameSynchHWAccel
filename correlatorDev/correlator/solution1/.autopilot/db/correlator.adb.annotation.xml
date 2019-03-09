@@ -1,5 +1,5 @@
 <annotationInfo>
-<item  id="62" filename="correlator.cpp" linenumber="218" name="tmp_2" contextFuncName="correlator" moduleName="correlator" rtlName="tmp_2_fu_366_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
-<item  id="63" filename="correlator.cpp" linenumber="218" name="p_Result_1" contextFuncName="correlator" moduleName="correlator" rtlName="p_Result_1_fu_370_p5" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
-<item  id="64" filename="correlator.cpp" linenumber="219" name="p_Result_s" contextFuncName="correlator" moduleName="correlator" rtlName="p_Result_s_fu_382_p5" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+<item  id="67" filename="correlator.cpp" linenumber="218" name="tmp_2" contextFuncName="correlator" moduleName="correlator" rtlName="tmp_2_fu_364_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+<item  id="68" filename="correlator.cpp" linenumber="218" name="p_Result_s" contextFuncName="correlator" moduleName="correlator" rtlName="p_Result_s_fu_368_p5" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+<item  id="69" filename="correlator.cpp" linenumber="219" name="p_Result_1" contextFuncName="correlator" moduleName="correlator" rtlName="p_Result_1_fu_380_p5" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
 </annotationInfo>

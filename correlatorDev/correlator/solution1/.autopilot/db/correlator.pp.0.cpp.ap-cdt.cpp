@@ -29417,18 +29417,14 @@ switch(currentState) {
    }
 #pragma empty_line
 #pragma empty_line
+   out_sample.data = loadCount;
+   o_data.write(out_sample);
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
-   currentState = ST_CORRELATEl;
+   currentState = ST_LOAD;
 #pragma empty_line
   }
- break;
- case ST_CORRELATEl:
-  out_sample.data = loadCount;
-  o_data.write(out_sample);
-  currentState = ST_LOAD;
  break;
 #pragma line 268 "correlator.cpp"
 }

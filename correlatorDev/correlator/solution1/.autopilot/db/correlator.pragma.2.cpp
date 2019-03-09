@@ -29552,18 +29552,14 @@ _ssdm_Unroll(0,0,0, "");
    }
 
 
+   out_sample.data = loadCount;
+   o_data.write(out_sample);
 
 
 
-
-   currentState = ST_CORRELATEl;
+   currentState = ST_LOAD;
 
   }
- break;
- case ST_CORRELATEl:
-  out_sample.data = loadCount;
-  o_data.write(out_sample);
-  currentState = ST_LOAD;
  break;
 # 268 "correlator.cpp"
 }

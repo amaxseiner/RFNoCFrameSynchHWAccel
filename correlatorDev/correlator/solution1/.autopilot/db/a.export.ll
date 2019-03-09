@@ -21,7 +21,7 @@ target triple = "x86_64-unknown-linux-gnu"
 @loadCount_V = internal global i32 0
 @llvm_global_ctors_1 = appending global [0 x void ()*] zeroinitializer
 @llvm_global_ctors_0 = appending global [0 x i32] zeroinitializer
-@currentState = internal unnamed_addr global i2 0, align 1
+@currentState = internal global i1 false
 @correlator_str = internal unnamed_addr constant [11 x i8] c"correlator\00"
 @corHelperI_V = internal global i16 0
 @p_str3 = private unnamed_addr constant [5 x i8] c"both\00", align 1
@@ -59,21 +59,16 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind
   call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
-  %currentState_load = load i2* @currentState, align 1
-  call void (...)* @_ssdm_op_SpecReset(i2* @currentState, i32 1, [1 x i8]* @p_str) nounwind
-  %p_Val2_1 = load i32* @loadCount_V, align 4
-  switch i2 %currentState_load, label %._crit_edge865 [
-    i2 0, label %0
-    i2 1, label %2
-    i2 -2, label %3
-  ]
+  %currentState_load = load i1* @currentState, align 1
+  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind
+  br i1 %currentState_load, label %2, label %0
 
 ; <label>:0                                       ; preds = %.preheader611.preheader
   br i1 %start_V_read, label %1, label %._crit_edge866
 
 ; <label>:1                                       ; preds = %0
   store i32 0, i32* @loadCount_V, align 4
-  store i2 1, i2* @currentState, align 1
+  store i1 true, i1* @currentState, align 1
   br label %._crit_edge866
 
 ._crit_edge866:                                   ; preds = %1, %0
@@ -85,13 +80,15 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
 
 ._crit_edge868.0:                                 ; preds = %2
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
-  %tmp_data_V = extractvalue { i32, i1 } %empty, 0
-  %tmp_1 = trunc i32 %tmp_data_V to i16
+  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
+  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
+  %tmp_1 = trunc i32 %tmp_data_V_1 to i16
   store i16 %tmp_1, i16* @newVal_V, align 2
+  %p_Val2_1 = load i32* @loadCount_V, align 4
   %tmp_2 = trunc i32 %p_Val2_1 to i31
-  %p_Result_1 = call i32 @llvm.part.set.i32.i31(i32 %p_Val2_1, i31 %tmp_2, i32 1, i32 31)
-  %p_Result_s = call i32 @llvm.part.set.i32.i2(i32 %p_Result_1, i2 1, i32 0, i32 1)
-  store i32 %p_Result_s, i32* @loadCount_V, align 4
+  %p_Result_s = call i32 @llvm.part.set.i32.i31(i32 %p_Val2_1, i31 %tmp_2, i32 1, i32 31)
+  %p_Result_1 = call i32 @llvm.part.set.i32.i2(i32 %p_Result_s, i2 1, i32 0, i32 1)
+  store i32 %p_Result_1, i32* @loadCount_V, align 4
   %phaseClass0_V_14_loa = load i16* @phaseClass0_V_14, align 4
   %phaseClass0_V_13_loa = load i16* @phaseClass0_V_13, align 2
   store i16 %phaseClass0_V_13_loa, i16* @phaseClass0_V_14, align 4
@@ -130,18 +127,14 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %tmp4 = add i16 %tmp5, %tmp6
   %p_Val2_5_4 = add i16 %tmp1, %tmp4
   store i16 %p_Val2_5_4, i16* @corHelperI_V, align 2
-  store i2 -2, i2* @currentState, align 1
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_1, i1 %tmp_last_V)
+  store i1 true, i1* @currentState, align 1
   br label %._crit_edge867
 
 ._crit_edge867:                                   ; preds = %._crit_edge868.0, %2
   br label %._crit_edge865
 
-; <label>:3                                       ; preds = %.preheader611.preheader
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Val2_1, i1 undef)
-  store i2 1, i2* @currentState, align 1
-  br label %._crit_edge865
-
-._crit_edge865:                                   ; preds = %3, %._crit_edge867, %._crit_edge866, %.preheader611.preheader
+._crit_edge865:                                   ; preds = %._crit_edge867, %._crit_edge866
   ret void
 }
 

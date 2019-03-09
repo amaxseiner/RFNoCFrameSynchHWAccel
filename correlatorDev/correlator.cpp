@@ -234,17 +234,17 @@ switch(currentState) {
 			}
 			//if(corHelperI > 0){
 			//}
-
+			out_sample.data = loadCount;
+			o_data.write(out_sample);
 			//out_sample.data.range(3,0) = phaseClass;
 			//out_sample.last = 0;
 			//o_data.write(out_sample);
-			currentState = ST_CORRELATEl;
+			currentState = ST_LOAD;
 
 		}
 	break;
-	case ST_CORRELATEl:
-		out_sample.data = loadCount;
-		o_data.write(out_sample);
+	/*case ST_CORRELATEl:
+
 		currentState = ST_LOAD;
 	break;
 		/*correlateData0: for(int a =windowSize-1;a>=0;a--){
