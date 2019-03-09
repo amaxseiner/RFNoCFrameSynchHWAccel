@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Sat Mar  9 14:13:52 2019
+* Date:           Sat Mar  9 14:22:39 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -217,10 +217,10 @@ IsGatedGlobalClock: 0
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1"
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %2, label %0" [correlator.cpp:206]
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge866" [correlator.cpp:208]
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge875" [correlator.cpp:208]
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:210]
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)" [correlator.cpp:214]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %tmp, label %._crit_edge868.0, label %._crit_edge867" [correlator.cpp:214]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %tmp, label %._crit_edge877.0, label %._crit_edge876" [correlator.cpp:214]
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [correlator.cpp:215]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [correlator.cpp:215]
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [correlator.cpp:215]
@@ -264,22 +264,22 @@ ST_1 : Operation 50 [1/1] (1.48ns)   --->   "%tmp6 = add i16 %tmp_1, %phaseClass
 ST_1 : Operation 51 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i16 %tmp5, %tmp6" [correlator.cpp:232]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 52 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_3_4 = add i16 %tmp1, %tmp4" [correlator.cpp:232]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 53 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2" [correlator.cpp:232]
-ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:242]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:243]
 
  <State 2> : 2.85ns
 ST_2 : Operation 55 [1/1] (1.06ns)   --->   "store i32 0, i32* @loadCount_V, align 4" [correlator.cpp:209]
 ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%loadCount_V_load = load i32* @loadCount_V, align 4" [correlator.cpp:218]
 ST_2 : Operation 57 [1/1] (1.78ns)   --->   "%out_sample_data_V = add i32 1, %loadCount_V_load" [correlator.cpp:218]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 58 [1/1] (1.06ns)   --->   "store i32 %out_sample_data_V, i32* @loadCount_V, align 4" [correlator.cpp:218]
-ST_2 : Operation 59 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:238]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 59 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:239]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
  <State 3> : 0.00ns
-ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !81"
-ST_3 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !85"
-ST_3 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !89"
-ST_3 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !93"
-ST_3 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !97"
-ST_3 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !103"
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !84"
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !88"
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !92"
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !96"
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100"
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106"
 ST_3 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @correlator_str) nounwind"
 ST_3 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [correlator.cpp:12]
 ST_3 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [correlator.cpp:14]
@@ -294,12 +294,12 @@ ST_3 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecRese
 ST_3 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @corHelperI_V, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:193]
 ST_3 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:196]
 ST_3 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:201]
-ST_3 : Operation 80 [1/1] (0.00ns)   --->   "br label %._crit_edge866" [correlator.cpp:211]
-ST_3 : Operation 81 [1/1] (0.00ns)   --->   "br label %._crit_edge865" [correlator.cpp:212]
-ST_3 : Operation 82 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:238]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br label %._crit_edge867" [correlator.cpp:244]
-ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br label %._crit_edge865" [correlator.cpp:245]
-ST_3 : Operation 85 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:591]
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "br label %._crit_edge875" [correlator.cpp:211]
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:212]
+ST_3 : Operation 82 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:239]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br label %._crit_edge876" [correlator.cpp:245]
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:246]
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:592]
 
 
 ============================================================

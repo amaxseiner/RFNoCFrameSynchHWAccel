@@ -29415,9 +29415,10 @@ switch(currentState) {
      corHelperI = corHelperI + (phaseClass0[a]);
 
    }
+   if(corHelperI > 0){
+    out_sample.data = loadCount;
 
-
-   out_sample.data = loadCount;
+   }
    o_data.write(out_sample);
 
 
@@ -29426,7 +29427,7 @@ switch(currentState) {
 
   }
  break;
-#268 "correlator.cpp"
+#269 "correlator.cpp"
 }
-#591 "correlator.cpp"
+#592 "correlator.cpp"
 }

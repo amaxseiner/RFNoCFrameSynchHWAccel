@@ -232,9 +232,10 @@ switch(currentState) {
 					corHelperI = corHelperI + (phaseClass0[a]);
 					// corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
 			}
-			//if(corHelperI > 0){
-			//}
-			out_sample.data = loadCount;
+			if(corHelperI > 0){
+				out_sample.data = loadCount;
+
+			}
 			o_data.write(out_sample);
 			//out_sample.data.range(3,0) = phaseClass;
 			//out_sample.last = 0;

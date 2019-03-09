@@ -29415,9 +29415,10 @@ switch(currentState) {
      corHelperI = corHelperI + (phaseClass0[a]);
 #pragma empty_line
    }
+   if(corHelperI > 0){
+    out_sample.data = loadCount;
 #pragma empty_line
-#pragma empty_line
-   out_sample.data = loadCount;
+   }
    o_data.write(out_sample);
 #pragma empty_line
 #pragma empty_line
@@ -29426,7 +29427,7 @@ switch(currentState) {
 #pragma empty_line
   }
  break;
-#pragma line 268 "correlator.cpp"
+#pragma line 269 "correlator.cpp"
 }
-#pragma line 591 "correlator.cpp"
+#pragma line 592 "correlator.cpp"
 }
