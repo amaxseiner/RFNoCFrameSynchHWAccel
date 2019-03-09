@@ -138,16 +138,16 @@ define void @correlator(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_dat
   %tmp4 = add i16 %tmp5, %tmp6, !dbg !3425        ; [#uses=1 type=i16] [debug line = 679:13@338:43@338:44@232:19]
   %p_Val2_3_4 = add i16 %tmp1, %tmp4, !dbg !3425  ; [#uses=1 type=i16] [debug line = 679:13@338:43@338:44@232:19]
   store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2, !dbg !3437 ; [debug line = 388:5@232:19]
-  call void @llvm.dbg.value(metadata !{i32* %o_data_V_data_V}, i64 0, metadata !3438), !dbg !3441 ; [debug line = 144:48@239:4] [debug variable = stream<rfnoc_axis>.V.data.V]
-  call void @llvm.dbg.value(metadata !{i1* %o_data_V_last_V}, i64 0, metadata !3443), !dbg !3441 ; [debug line = 144:48@239:4] [debug variable = stream<rfnoc_axis>.V.last.V]
-  call void @llvm.dbg.value(metadata !{i32 %out_sample_data_V}, i64 0, metadata !3444), !dbg !3447 ; [debug line = 145:31@239:4] [debug variable = tmp.data.V]
-  call void @llvm.dbg.value(metadata !{i1 %tmp_last_V}, i64 0, metadata !3448), !dbg !3447 ; [debug line = 145:31@239:4] [debug variable = tmp.last.V]
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V), !dbg !3449 ; [debug line = 146:9@239:4]
-  store i1 true, i1* @currentState, align 1, !dbg !3450 ; [debug line = 243:4]
-  br label %._crit_edge876, !dbg !3451            ; [debug line = 245:3]
+  call void @llvm.dbg.value(metadata !{i32* %o_data_V_data_V}, i64 0, metadata !3438), !dbg !3441 ; [debug line = 144:48@238:4] [debug variable = stream<rfnoc_axis>.V.data.V]
+  call void @llvm.dbg.value(metadata !{i1* %o_data_V_last_V}, i64 0, metadata !3443), !dbg !3441 ; [debug line = 144:48@238:4] [debug variable = stream<rfnoc_axis>.V.last.V]
+  call void @llvm.dbg.value(metadata !{i32 %out_sample_data_V}, i64 0, metadata !3444), !dbg !3447 ; [debug line = 145:31@238:4] [debug variable = tmp.data.V]
+  call void @llvm.dbg.value(metadata !{i1 %tmp_last_V}, i64 0, metadata !3448), !dbg !3447 ; [debug line = 145:31@238:4] [debug variable = tmp.last.V]
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V), !dbg !3449 ; [debug line = 146:9@238:4]
+  store i1 true, i1* @currentState, align 1, !dbg !3450 ; [debug line = 242:4]
+  br label %._crit_edge876, !dbg !3451            ; [debug line = 244:3]
 
 ._crit_edge876:                                   ; preds = %._crit_edge877.0, %2
-  br label %._crit_edge874, !dbg !3452            ; [debug line = 246:2]
+  br label %._crit_edge874, !dbg !3452            ; [debug line = 245:2]
 
 ._crit_edge874:                                   ; preds = %._crit_edge876, %._crit_edge875
   ret void, !dbg !3453                            ; [debug line = 592:1]
@@ -3668,7 +3668,7 @@ entry:
 !3439 = metadata !{i32 786689, metadata !3440, metadata !"this", metadata !118, i32 16777360, metadata !2179, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
 !3440 = metadata !{i32 786478, i32 0, metadata !117, metadata !"write", metadata !"write", metadata !"_ZN3hls6streamI10rfnoc_axisE5writeERKS1_", metadata !118, i32 144, metadata !1531, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1547, metadata !142, i32 144} ; [ DW_TAG_subprogram ]
 !3441 = metadata !{i32 144, i32 48, metadata !3440, metadata !3442}
-!3442 = metadata !{i32 239, i32 4, metadata !2182, null}
+!3442 = metadata !{i32 238, i32 4, metadata !2182, null}
 !3443 = metadata !{i32 790531, metadata !3439, metadata !"stream<rfnoc_axis>.V.last.V", null, i32 144, metadata !2172, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !3444 = metadata !{i32 790529, metadata !3445, metadata !"tmp.data.V", null, i32 145, metadata !2115, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
 !3445 = metadata !{i32 786688, metadata !3446, metadata !"tmp", metadata !118, i32 145, metadata !121, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
@@ -3676,7 +3676,7 @@ entry:
 !3447 = metadata !{i32 145, i32 31, metadata !3446, metadata !3442}
 !3448 = metadata !{i32 790529, metadata !3445, metadata !"tmp.last.V", null, i32 145, metadata !2127, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
 !3449 = metadata !{i32 146, i32 9, metadata !3446, metadata !3442}
-!3450 = metadata !{i32 243, i32 4, metadata !2182, null}
-!3451 = metadata !{i32 245, i32 3, metadata !2182, null}
-!3452 = metadata !{i32 246, i32 2, metadata !2155, null}
+!3450 = metadata !{i32 242, i32 4, metadata !2182, null}
+!3451 = metadata !{i32 244, i32 3, metadata !2182, null}
+!3452 = metadata !{i32 245, i32 2, metadata !2155, null}
 !3453 = metadata !{i32 592, i32 1, metadata !2140, null}

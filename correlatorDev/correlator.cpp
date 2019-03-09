@@ -1,4 +1,4 @@
-#include <hls_stream.h>
+#include "hls_stream.h"
 #include "ap_fixed.h"
 #include "rfnoc.h"
 
@@ -234,7 +234,6 @@ switch(currentState) {
 			}
 			if(corHelperI > 0){
 				out_sample.data = loadCount;
-
 			}
 			o_data.write(out_sample);
 			//out_sample.data.range(3,0) = phaseClass;
@@ -244,6 +243,7 @@ switch(currentState) {
 
 		}
 	break;
+}
 	/*case ST_CORRELATEl:
 
 		currentState = ST_LOAD;
@@ -266,7 +266,7 @@ switch(currentState) {
 	case ST_SEND:
 
 	break;*/
-}
+
 		/*case 1:
 			SHIFT_DATA1: for(int a =windowSize-1;a>0;a--){
 				#pragma HLS UNROLL

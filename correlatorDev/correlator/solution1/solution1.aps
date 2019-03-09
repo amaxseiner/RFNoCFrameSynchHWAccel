@@ -11,8 +11,9 @@
         <config_interface clock_enable="0" expose_global="0" m_axi_addr64="0" m_axi_offset="off" register_io="off" trim_dangling_port="0"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/kintex7/kintex7</Platform>
+            <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -48,8 +49,8 @@
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
-    <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
+    <Simulation argv="">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="true" compileChoice="gcc" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="auto" ldflags="" mflags="" compiledLibrary="">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -66,7 +67,7 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
-        <library value="xilinx/kintex7/kintex7_fpv6" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
     <clockList>
         <clock name="default" default="false" period="10"/>

@@ -34,7 +34,7 @@ int main(char argc,char **arg){
 		//result << ",";
 		result << endl;*/
 
-		correlation(axi,&streamArrayOut[a],&result,phaseClass);
+		//correlation(axi,&streamArrayOut[a],&result,phaseClass);
 		//result << setw(32) << streamArrayOut[a].data;
 		//result << endl;
 	}

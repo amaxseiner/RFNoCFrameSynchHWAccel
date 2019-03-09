@@ -1,0 +1,10 @@
+In file included from apatb_correlator.cpp:20:0:
+/opt/Xilinx/Vivado/2017.4/include/ap_stream.h:70:2: warning: #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-Wcpp]
+/opt/Xilinx/Vivado/2017.4/include/hls_stream.h: In function ‘void AESL_WRAP_correlator(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>, ap_uint<4>)’:
+/opt/Xilinx/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
+apatb_correlator.cpp:608:47: error: within this context
+apatb_correlator.cpp:121:13: error:   initializing argument 1 of ‘void correlator(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>, ap_uint<4>)’
+/opt/Xilinx/Vivado/2017.4/include/hls_stream.h:139:5: error: ‘hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]’ is private
+apatb_correlator.cpp:608:47: error: within this context
+apatb_correlator.cpp:121:13: error:   initializing argument 2 of ‘void correlator(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>, ap_uint<1>, ap_uint<4>)’
+make: *** [obj/apatb_correlator.o] Error 1

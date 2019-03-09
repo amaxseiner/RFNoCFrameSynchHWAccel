@@ -29417,7 +29417,6 @@ _ssdm_Unroll(0,0,0, "");
    }
    if(corHelperI > 0){
     out_sample.data = loadCount;
-
    }
    o_data.write(out_sample);
 
@@ -29427,7 +29426,6 @@ _ssdm_Unroll(0,0,0, "");
 
   }
  break;
-#269 "correlator.cpp"
 }
 #592 "correlator.cpp"
 }

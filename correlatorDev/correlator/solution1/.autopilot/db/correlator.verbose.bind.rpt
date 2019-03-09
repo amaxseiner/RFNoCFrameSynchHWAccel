@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Sat Mar  9 14:22:39 2019
+* Date:           Sat Mar  9 16:39:44 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -133,14 +133,14 @@ ST_1 : Operation 50 [1/1] (1.48ns)   --->   "%tmp6 = add i16 %tmp_1, %phaseClass
 ST_1 : Operation 51 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i16 %tmp5, %tmp6" [correlator.cpp:232]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 52 [1/1] (2.54ns) (root node of TernaryAdder)   --->   "%p_Val2_3_4 = add i16 %tmp1, %tmp4" [correlator.cpp:232]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.27> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 53 [1/1] (0.00ns)   --->   "store i16 %p_Val2_3_4, i16* @corHelperI_V, align 2" [correlator.cpp:232]
-ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:243]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:242]
 
  <State 2> : 2.85ns
 ST_2 : Operation 55 [1/1] (1.06ns)   --->   "store i32 0, i32* @loadCount_V, align 4" [correlator.cpp:209]
 ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%loadCount_V_load = load i32* @loadCount_V, align 4" [correlator.cpp:218]
 ST_2 : Operation 57 [1/1] (1.78ns)   --->   "%out_sample_data_V = add i32 1, %loadCount_V_load" [correlator.cpp:218]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 58 [1/1] (1.06ns)   --->   "store i32 %out_sample_data_V, i32* @loadCount_V, align 4" [correlator.cpp:218]
-ST_2 : Operation 59 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:239]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 59 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:238]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
  <State 3> : 0.00ns
 ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !84"
@@ -165,9 +165,9 @@ ST_3 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecRese
 ST_3 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [correlator.cpp:201]
 ST_3 : Operation 80 [1/1] (0.00ns)   --->   "br label %._crit_edge875" [correlator.cpp:211]
 ST_3 : Operation 81 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:212]
-ST_3 : Operation 82 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:239]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br label %._crit_edge876" [correlator.cpp:245]
-ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:246]
+ST_3 : Operation 82 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)" [correlator.cpp:238]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br label %._crit_edge876" [correlator.cpp:244]
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br label %._crit_edge874" [correlator.cpp:245]
 ST_3 : Operation 85 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:592]
 
 

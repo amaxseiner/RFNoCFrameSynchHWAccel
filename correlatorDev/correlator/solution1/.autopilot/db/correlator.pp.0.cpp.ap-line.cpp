@@ -29394,7 +29394,6 @@ switch(currentState) {
    }
    if(corHelperI > 0){
     out_sample.data = loadCount;
-#pragma empty_line
    }
    o_data.write(out_sample);
 #pragma empty_line
@@ -29404,7 +29403,6 @@ switch(currentState) {
 #pragma empty_line
   }
  break;
-#pragma line 269 "correlator.cpp"
 }
 #pragma line 592 "correlator.cpp"
 }

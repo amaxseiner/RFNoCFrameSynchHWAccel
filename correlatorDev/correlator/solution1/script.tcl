@@ -16,5 +16,5 @@ config_interface -m_axi_offset off -register_io off
 source "./correlator/solution1/directives.tcl"
 csim_design -clean -compiler gcc -setup
 csynth_design
-cosim_design
+cosim_design -compiler gcc
 export_design -format ip_catalog

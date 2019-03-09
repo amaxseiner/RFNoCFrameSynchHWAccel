@@ -29394,7 +29394,6 @@ switch(currentState) {
    }
    if(corHelperI > 0){
     out_sample.data = loadCount;
-
    }
    o_data.write(out_sample);
 
@@ -29404,7 +29403,6 @@ switch(currentState) {
 
   }
  break;
-# 269 "correlator.cpp"
 }
 # 592 "correlator.cpp"
 }
