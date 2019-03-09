@@ -29375,8 +29375,8 @@ switch(currentState) {
    i_data.read(tmp_data);
    out_sample.last = tmp_data.last;
    newVal.V = tmp_data.data.range(15,0);
-   loadCount.range(31,1)= loadCount.range(30,0);
-   loadCount.range(1,0) = 1;
+   loadCount = loadCount + 1;
+#pragma empty_line
    SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
 #pragma empty_line
     phaseClass0[a] = phaseClass0[a-1];

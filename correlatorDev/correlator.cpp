@@ -215,8 +215,8 @@ switch(currentState) {
 			i_data.read(tmp_data);
 			out_sample.last = tmp_data.last;
 			newVal.V = tmp_data.data.range(15,0); // RE
-			loadCount.range(31,1)= loadCount.range(30,0);
-			loadCount.range(1,0) = 1;
+			loadCount = loadCount + 1;
+			//loadCount.range(1,0) = 1;
 			SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
 				//#pragma HLS UNROLL
 				phaseClass0[a] = phaseClass0[a-1];

@@ -226,7 +226,7 @@
         },
         "Area": {
           "FF": "116",
-          "LUT": "219",
+          "LUT": "258",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -234,7 +234,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-09 14:10:27 EST",
+    "Time": "2019-03-09 14:13:53 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
