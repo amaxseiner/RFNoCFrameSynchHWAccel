@@ -206,6 +206,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 switch(currentState) {
 	case ST_IDLE:
 		if(start){ // wait for start signal.
+			loadCount = 0;
 			currentState = ST_LOAD;
 		}
 	break;
@@ -214,7 +215,8 @@ switch(currentState) {
 			i_data.read(tmp_data);
 			out_sample.last = tmp_data.last;
 			newVal.V = tmp_data.data.range(15,0); // RE
-
+			loadCount.range(31,1)= loadCount.range(30,0);
+			loadCount.range(1,0) = 1;
 			SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
 				//#pragma HLS UNROLL
 				phaseClass0[a] = phaseClass0[a-1];
@@ -229,27 +231,22 @@ switch(currentState) {
 				if(corrSeq[a] > 0)
 					corHelperI = corHelperI + (phaseClass0[a]);
 					// corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
-				if(a > 0)
-					Phase0[a] = Phase0[a-1];
-				else{
-					Phase0[0] = corHelperI;
-				}
 			}
-			if(corHelperI.V > 0)
-				out_sample.data = tmp_data.data;
+			//if(corHelperI > 0){
+			//}
 
-			o_data.write(out_sample);
 			//out_sample.data.range(3,0) = phaseClass;
 			//out_sample.last = 0;
 			//o_data.write(out_sample);
-			currentState = ST_LOAD;
-
+			currentState = ST_CORRELATEl;
 
 		}
 	break;
-	/*case ST_CORRELATEl:
-		corHelperI = 0;
-
+	case ST_CORRELATEl:
+		out_sample.data = loadCount;
+		o_data.write(out_sample);
+		currentState = ST_LOAD;
+	break;
 		/*correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 			if(corrSeq[a] > 0)

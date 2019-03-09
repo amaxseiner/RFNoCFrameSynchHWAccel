@@ -29521,6 +29521,7 @@ _ssdm_op_SpecReset( currentState, 1, "");
 switch(currentState) {
  case ST_IDLE:
   if(start){
+   loadCount = 0;
    currentState = ST_LOAD;
   }
  break;
@@ -29529,8 +29530,12 @@ switch(currentState) {
    i_data.read(tmp_data);
    out_sample.last = tmp_data.last;
    newVal.V = tmp_data.data.range(15,0);
-
+   loadCount.range(31,1)= loadCount.range(30,0);
+   loadCount.range(1,0) = 1;
    SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+# 220 "correlator.cpp"
+
 
     phaseClass0[a] = phaseClass0[a-1];
    }
@@ -29544,24 +29549,23 @@ switch(currentState) {
     if(corrSeq[a] > 0)
      corHelperI = corHelperI + (phaseClass0[a]);
 
-    if(a > 0)
-     Phase0[a] = Phase0[a-1];
-    else{
-     Phase0[0] = corHelperI;
-    }
    }
-   out_sample.data.range(15,0) = corHelperI.V;
-
-   o_data.write(out_sample);
 
 
 
-   currentState = ST_LOAD;
 
+
+
+   currentState = ST_CORRELATEl;
 
   }
  break;
-# 270 "correlator.cpp"
+ case ST_CORRELATEl:
+  out_sample.data = loadCount;
+  o_data.write(out_sample);
+  currentState = ST_LOAD;
+ break;
+# 268 "correlator.cpp"
 }
-# 593 "correlator.cpp"
+# 591 "correlator.cpp"
 }

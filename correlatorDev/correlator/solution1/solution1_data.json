@@ -12,10 +12,13 @@
     "Package": "fbg484",
     "Speed": "-1"
   },
-  "HlsSolution": {"Config": [
+  "HlsSolution": {
+    "Config": [
       "config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level=high",
       "config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0"
-    ]},
+    ],
+    "Directives": ["unroll correlator\/SHIFT_DATA0 {} {}"]
+  },
   "ClockInfo": {
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
@@ -222,8 +225,8 @@
           "Estimate": "6.58"
         },
         "Area": {
-          "FF": "339",
-          "LUT": "335",
+          "FF": "114",
+          "LUT": "179",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -231,7 +234,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-06 15:12:08 EST",
+    "Time": "2019-03-09 13:55:14 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

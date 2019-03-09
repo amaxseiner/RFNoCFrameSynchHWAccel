@@ -4,5 +4,7 @@
     <originFiles name="correlator.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"/>
     <originFiles name="rfnoc.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="correlatorTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

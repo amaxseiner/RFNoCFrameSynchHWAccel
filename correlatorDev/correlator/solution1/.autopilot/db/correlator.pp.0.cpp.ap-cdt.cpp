@@ -29386,6 +29386,7 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 switch(currentState) {
  case ST_IDLE:
   if(start){
+   loadCount = 0;
    currentState = ST_LOAD;
   }
  break;
@@ -29394,8 +29395,12 @@ switch(currentState) {
    i_data.read(tmp_data);
    out_sample.last = tmp_data.last;
    newVal.V = tmp_data.data.range(15,0);
-#pragma empty_line
+   loadCount.range(31,1)= loadCount.range(30,0);
+   loadCount.range(1,0) = 1;
    SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
+#pragma HLS UNROLL
+#pragma line 220 "correlator.cpp"
+
 #pragma empty_line
     phaseClass0[a] = phaseClass0[a-1];
    }
@@ -29409,24 +29414,23 @@ switch(currentState) {
     if(corrSeq[a] > 0)
      corHelperI = corHelperI + (phaseClass0[a]);
 #pragma empty_line
-    if(a > 0)
-     Phase0[a] = Phase0[a-1];
-    else{
-     Phase0[0] = corHelperI;
-    }
    }
-   out_sample.data.range(15,0) = corHelperI.V;
-#pragma empty_line
-   o_data.write(out_sample);
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-   currentState = ST_LOAD;
 #pragma empty_line
+#pragma empty_line
+#pragma empty_line
+   currentState = ST_CORRELATEl;
 #pragma empty_line
   }
  break;
-#pragma line 270 "correlator.cpp"
+ case ST_CORRELATEl:
+  out_sample.data = loadCount;
+  o_data.write(out_sample);
+  currentState = ST_LOAD;
+ break;
+#pragma line 268 "correlator.cpp"
 }
-#pragma line 593 "correlator.cpp"
+#pragma line 591 "correlator.cpp"
 }
