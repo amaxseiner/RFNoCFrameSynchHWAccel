@@ -235,7 +235,8 @@ switch(currentState) {
 					Phase0[0] = corHelperI;
 				}
 			}
-			out_sample.data.range(15,0) = corHelperI.V;
+			if(corHelperI.V > 0)
+				out_sample.data = tmp_data.data;
 
 			o_data.write(out_sample);
 			//out_sample.data.range(3,0) = phaseClass;
