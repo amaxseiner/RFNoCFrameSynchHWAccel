@@ -39,70 +39,61 @@ const int COR_SIZE = 16;
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 #pragma HLS PIPELINE II=1
-
-
-
   rfnoc_axis out_sample;
-
-  static ap_uint<10> out_sample_cnt;
-#pragma HLS RESET variable=out_sample_cnt
-  static ap_uint<1> firstLoad;
-#pragma HLS RESET variable=firstLoad
-
-
   rfnoc_axis tmp_data;
-  static ap_int<16> zeros;
-  zeros = 0;
-  static ap_fixed<16,11> buffI[16]= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
+
+//  static ap_uint<10> out_sample_cnt;
+//#pragma HLS RESET variable=out_sample_cnt
+//  static ap_uint<1> firstLoad;
+//#pragma HLS RESET variable=firstLoad
+
+
+
+  static ap_fixed<16,11> buffI[16];
   #pragma HLS ARRAY_PARTITION variable=buffI complete dim=1
-  static ap_fixed<16,11> buffQ[16]= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
+  static ap_fixed<16,11> buffQ[16];
   #pragma HLS ARRAY_PARTITION variable=buffQ complete dim=1
 
-  static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+  static ap_uint<1> preamble[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
   #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 
   static ap_fixed<16,11> matchQSum = 0.0;
   static ap_fixed<16,11> matchISum = 0.0;
+  static ap_uint<32> reg_data;
 
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
 #pragma HLS RESET variable=currentState
 
-  enum writeState {ST_NOWRITE = 0, ST_WRITE};
-  static writeState currentwrState;
-#pragma HLS RESET variable=currentwrState
+//  enum writeState {ST_NOWRITE = 0, ST_WRITE};
+//  static writeState currentwrState;
+//#pragma HLS RESET variable=currentwrState
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
   switch(currentState) {
     case ST_IDLE:
         if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
         	currentState = ST_LOAD;
-
         }
         break;
     case ST_LOAD:
     	i_data.read(tmp_data); //sets tmp_data to read in 32 bits
     	//shift data for new values
 		SHIFT_DATA: for(int a = 16-1; a > 0; a--){
-			#pragma HLS UNROLL
 			buffQ[a] = buffQ[a-1];
 			buffI[a] = buffI[a-1];
 		}
-
 		buffQ[0] = tmp_data.data.range(15,0);
 		buffI[0] = tmp_data.data.range(31,16);
-		//calculate the 16 pre * buffs
 		matchQSum = 0.0;
 		matchISum = 0.0;
 		CAL_MATCH: for(int b = 0; b<16; b++){
 			matchQSum = matchQSum + (buffQ[b] * preamble[b]);
 			matchISum = matchISum + (buffI[b] * preamble[b]);
 		}
-
-
-
-    	out_sample.data.range(31,16) = matchISum.range(15,0);
-    	out_sample.data.range(15,0) = matchQSum.range(15,0);
+		//reg_data = matchQSum;
+    	//out_sample.data.range(31,16) = matchISum.V;
+    	out_sample.data= matchQSum.range(15,0);
     	o_data.write(out_sample);
 	break;
     }

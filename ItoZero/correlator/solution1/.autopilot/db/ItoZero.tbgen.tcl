@@ -1,9 +1,9 @@
 set C_TypeInfoList {{ 
 "ItoZero" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"start": [[],"1"] }],[],""], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "0": [ "stream<rfnoc_axis>", {"hls_type": {"stream": [[[[],"2"]],"3"]}}], 
 "2": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "4"]},{ "last": [[], "1"]}],""]}], 
-"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
+"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
 "3": ["hls", ""]
 }}
 set moduleName ItoZero
@@ -62,7 +62,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "ItoZero",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",

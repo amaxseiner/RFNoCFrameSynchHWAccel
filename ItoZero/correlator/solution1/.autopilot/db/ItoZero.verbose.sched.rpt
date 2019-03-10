@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'ItoZero'
 ================================================================
-* Date:           Tue Feb 19 18:47:09 2019
+* Date:           Sat Mar  9 18:47:15 2019
 
-* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |   5.00|      0.48|        0.62|
+    |ap_clk  |   5.00|      1.40|        0.63|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -68,9 +68,9 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 3
-* Pipeline : 1
-  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Number of FSM states: 3
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 3, States = { 1 2 3 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -79,48 +79,115 @@ IsGatedGlobalClock: 0
 2 --> 
 	3  / true
 3 --> 
-
 * FSM state operations: 
 
- <State 1> : 0.48ns
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1" [ItoZero.cpp:62]
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %2, label %0" [ItoZero.cpp:69]
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge129" [ItoZero.cpp:71]
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [ItoZero.cpp:72]
-ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [ItoZero.cpp:77]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ <State 1>: 1.40ns
+ST_1: start_V_read (13)  [1/1] 0.00ns
+.preheader96.preheader:6  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
 
- <State 2> : 0.00ns
-ST_2 : Operation 10 [1/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [ItoZero.cpp:77]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [ItoZero.cpp:77]
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [ItoZero.cpp:77]
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %tmp_data_V_1 to i16" [ItoZero.cpp:79]
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %tmp)" [ItoZero.cpp:79]
-ST_2 : Operation 15 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [ItoZero.cpp:83]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1: currentState_load (23)  [1/1] 0.00ns  loc: ItoZero.cpp:62
+.preheader96.preheader:16  %currentState_load = load i1* @currentState, align 1
 
- <State 3> : 0.00ns
-ST_3 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !66"
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !70"
-ST_3 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !74"
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !78"
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !82"
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @ItoZero_str) nounwind"
-ST_3 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [ItoZero.cpp:35]
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:37]
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:38]
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:39]
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:40]
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)" [ItoZero.cpp:42]
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)" [ItoZero.cpp:45]
-ST_3 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:50]
-ST_3 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:52]
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:62]
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 0, i32 1, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:66]
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br label %._crit_edge129" [ItoZero.cpp:74]
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "br label %._crit_edge128" [ItoZero.cpp:75]
-ST_3 : Operation 35 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [ItoZero.cpp:83]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "br label %._crit_edge128" [ItoZero.cpp:84]
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [ItoZero.cpp:87]
+ST_1: StgValue_6 (26)  [1/1] 0.00ns  loc: ItoZero.cpp:69
+.preheader96.preheader:19  br i1 %currentState_load, label %2, label %0
+
+ST_1: StgValue_7 (28)  [1/1] 0.00ns  loc: ItoZero.cpp:71
+:0  br i1 %start_V_read, label %1, label %._crit_edge103
+
+ST_1: StgValue_8 (30)  [1/1] 0.00ns  loc: ItoZero.cpp:72
+:0  store i1 true, i1* @currentState, align 1
+
+ST_1: empty (35)  [2/2] 0.00ns  loc: ItoZero.cpp:77
+:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+
+
+ <State 2>: 0.00ns
+ST_2: empty (35)  [1/2] 0.00ns  loc: ItoZero.cpp:77
+:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+
+ST_2: tmp_data_V_1 (36)  [1/1] 0.00ns  loc: ItoZero.cpp:77
+:1  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
+
+ST_2: tmp_last_V (37)  [1/1] 0.00ns  loc: ItoZero.cpp:77
+:2  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
+
+ST_2: tmp (38)  [1/1] 0.00ns  loc: ItoZero.cpp:79
+:3  %tmp = trunc i32 %tmp_data_V_1 to i16
+
+ST_2: p_Result_s (39)  [1/1] 0.00ns  loc: ItoZero.cpp:79
+:4  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %tmp)
+
+ST_2: StgValue_15 (40)  [2/2] 0.00ns  loc: ItoZero.cpp:83
+:5  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_16 (7)  [1/1] 0.00ns
+.preheader96.preheader:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !66
+
+ST_3: StgValue_17 (8)  [1/1] 0.00ns
+.preheader96.preheader:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !70
+
+ST_3: StgValue_18 (9)  [1/1] 0.00ns
+.preheader96.preheader:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !74
+
+ST_3: StgValue_19 (10)  [1/1] 0.00ns
+.preheader96.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !78
+
+ST_3: StgValue_20 (11)  [1/1] 0.00ns
+.preheader96.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !82
+
+ST_3: StgValue_21 (12)  [1/1] 0.00ns
+.preheader96.preheader:5  call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @ItoZero_str) nounwind
+
+ST_3: StgValue_22 (14)  [1/1] 0.00ns  loc: ItoZero.cpp:35
+.preheader96.preheader:7  call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_3: StgValue_23 (15)  [1/1] 0.00ns  loc: ItoZero.cpp:37
+.preheader96.preheader:8  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_24 (16)  [1/1] 0.00ns  loc: ItoZero.cpp:38
+.preheader96.preheader:9  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_25 (17)  [1/1] 0.00ns  loc: ItoZero.cpp:39
+.preheader96.preheader:10  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_26 (18)  [1/1] 0.00ns  loc: ItoZero.cpp:40
+.preheader96.preheader:11  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_27 (19)  [1/1] 0.00ns  loc: ItoZero.cpp:42
+.preheader96.preheader:12  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)
+
+ST_3: StgValue_28 (20)  [1/1] 0.00ns  loc: ItoZero.cpp:45
+.preheader96.preheader:13  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)
+
+ST_3: StgValue_29 (21)  [1/1] 0.00ns  loc: ItoZero.cpp:50
+.preheader96.preheader:14  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_30 (22)  [1/1] 0.00ns  loc: ItoZero.cpp:52
+.preheader96.preheader:15  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_31 (24)  [1/1] 0.00ns  loc: ItoZero.cpp:62
+.preheader96.preheader:17  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_32 (25)  [1/1] 0.00ns  loc: ItoZero.cpp:66
+.preheader96.preheader:18  call void (...)* @_ssdm_op_SpecReset(i32 0, i32 1, [1 x i8]* @p_str) nounwind
+
+ST_3: StgValue_33 (31)  [1/1] 0.00ns  loc: ItoZero.cpp:74
+:1  br label %._crit_edge103
+
+ST_3: StgValue_34 (33)  [1/1] 0.00ns  loc: ItoZero.cpp:75
+._crit_edge103:0  br label %._crit_edge102
+
+ST_3: StgValue_35 (40)  [1/2] 0.00ns  loc: ItoZero.cpp:83
+:5  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
+
+ST_3: StgValue_36 (41)  [1/1] 0.00ns  loc: ItoZero.cpp:84
+:6  br label %._crit_edge102
+
+ST_3: StgValue_37 (43)  [1/1] 0.00ns  loc: ItoZero.cpp:87
+._crit_edge102:0  ret void
+
 
 
 ============================================================
@@ -128,10 +195,10 @@ ST_3 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [ItoZero.cpp:87]
 ============================================================
 Target clock period: 5ns, clock uncertainty: 0.625ns.
 
- <State 1>: 0.479ns
+ <State 1>: 1.4ns
 The critical path consists of the following:
 	'load' operation ('currentState_load', ItoZero.cpp:62) on static variable 'currentState' [23]  (0 ns)
-	blocking operation 0.479 ns on control path)
+	blocking operation 1.4 ns on control path)
 
  <State 2>: 0ns
 The critical path consists of the following:

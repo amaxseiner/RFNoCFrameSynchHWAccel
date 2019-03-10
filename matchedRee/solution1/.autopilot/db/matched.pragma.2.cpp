@@ -741,8 +741,7 @@ class stream
 
 
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 21 "matchedRee/matched.cpp" 2
-
+# 22 "matchedRee/matched.cpp" 2
 # 1 "D:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot\\ap_int.h" 1
 // -*- c++ -*-
 /*
@@ -33459,15 +33458,13 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 
 
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 22 "matchedRee/matched.cpp" 2
-
+# 23 "matchedRee/matched.cpp" 2
 # 1 "D:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot\\ap_fixed.h" 1
 
 
 
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 23 "matchedRee/matched.cpp" 2
-
+# 24 "matchedRee/matched.cpp" 2
 # 1 "matchedRee/rfnoc.h" 1
 // Copyright (c) 2017 - WINLAB, Rutgers University, USA
 //
@@ -33510,8 +33507,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
   ap_fixed<16,11> i;
   ap_fixed<16,11> q;
  };
-# 24 "matchedRee/matched.cpp" 2
-
+# 25 "matchedRee/matched.cpp" 2
 
 
 
@@ -33529,70 +33525,61 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0
 _ssdm_op_SpecInterface(&o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-
-
-
  rfnoc_axis out_sample;
+  rfnoc_axis tmp_data;
 
-  static ap_uint<10> out_sample_cnt;
-_ssdm_op_SpecReset( &out_sample_cnt, 1, "");
- static ap_uint<1> firstLoad;
-_ssdm_op_SpecReset( &firstLoad, 1, "");
+//  static ap_uint<10> out_sample_cnt;
+//#pragma HLS RESET variable=out_sample_cnt
+//  static ap_uint<1> firstLoad;
+//#pragma HLS RESET variable=firstLoad
 
 
- rfnoc_axis tmp_data;
-  static ap_int<16> zeros;
-  zeros = 0;
-  static ap_fixed<16,11> buffI[16]= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
+
+  static ap_fixed<16,11> buffI[16];
 _ssdm_SpecArrayPartition( buffI, 1, "COMPLETE", 0, "");
- static ap_fixed<16,11> buffQ[16]= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
+ static ap_fixed<16,11> buffQ[16];
 _ssdm_SpecArrayPartition( buffQ, 1, "COMPLETE", 0, "");
 
- static ap_fixed<16,11> preamble[16]= {1.5,2.5,3.7,4.9,5.3,6.4,5.7,4.4,3.8,2.9,2.3,3.3,4.6,5.6,6.6,6.5};
+ static ap_uint<1> preamble[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
 _ssdm_SpecArrayPartition( preamble, 1, "COMPLETE", 0, "");
 
  static ap_fixed<16,11> matchQSum = 0.0;
   static ap_fixed<16,11> matchISum = 0.0;
+  static ap_uint<32> reg_data;
 
   enum correlatorState {ST_IDLE = 0, ST_LOAD};
   static correlatorState currentState;
 _ssdm_op_SpecReset( currentState, 1, "");
 
- enum writeState {ST_NOWRITE = 0, ST_WRITE};
-  static writeState currentwrState;
-_ssdm_op_SpecReset( currentwrState, 1, "");
+//  enum writeState {ST_NOWRITE = 0, ST_WRITE};
+//  static writeState currentwrState;
+//#pragma HLS RESET variable=currentwrState
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
   switch(currentState) {
     case ST_IDLE:
         if(start){ // wait for start signal. The same start signal is used to load PN sequence generator
          currentState = ST_LOAD;
-
         }
         break;
     case ST_LOAD:
      i_data.read(tmp_data); //sets tmp_data to read in 32 bits
      //shift data for new values
   SHIFT_DATA: for(int a = 16-1; a > 0; a--){
-_ssdm_Unroll(0,0,0, "");
- buffQ[a] = buffQ[a-1];
+   buffQ[a] = buffQ[a-1];
    buffI[a] = buffI[a-1];
   }
-
   buffQ[0] = tmp_data.data.range(15,0);
   buffI[0] = tmp_data.data.range(31,16);
-  //calculate the 16 pre * buffs
   matchQSum = 0.0;
   matchISum = 0.0;
   CAL_MATCH: for(int b = 0; b<16; b++){
    matchQSum = matchQSum + (buffQ[b] * preamble[b]);
    matchISum = matchISum + (buffI[b] * preamble[b]);
   }
-
-
-
-     out_sample.data.range(31,16) = matchISum.range(15,0);
-     out_sample.data.range(15,0) = matchQSum.range(15,0);
+  //reg_data = matchQSum;
+     //out_sample.data.range(31,16) = matchISum.V;
+     out_sample.data= matchQSum.range(15,0);
      o_data.write(out_sample);
  break;
     }

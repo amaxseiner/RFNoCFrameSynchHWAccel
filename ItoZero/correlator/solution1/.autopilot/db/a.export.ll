@@ -1,9 +1,9 @@
-; ModuleID = '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/a.o.2.bc'
-target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
-target triple = "x86_64-unknown-linux-gnu"
+; ModuleID = 'D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/.autopilot/db/a.o.2.bc'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
+target triple = "i686-pc-mingw32"
 
-@llvm_global_ctors_1 = appending global [0 x void ()*] zeroinitializer
-@llvm_global_ctors_0 = appending global [0 x i32] zeroinitializer
+@llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a]
+@llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @currentState = internal unnamed_addr global i1 false, align 1
 @ItoZero_str = internal unnamed_addr constant [8 x i8] c"ItoZero\00"
 @p_str3 = private unnamed_addr constant [5 x i8] c"both\00", align 1
@@ -77,8 +77,10 @@ entry:
   ret i32 %empty_6
 }
 
+declare void @_GLOBAL__I_a() nounwind
+
 define void @ItoZero(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V, i1 %start_V) {
-.preheader99.preheader:
+.preheader96.preheader:
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !66
   call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !70
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !74
@@ -100,26 +102,26 @@ define void @ItoZero(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V
   call void (...)* @_ssdm_op_SpecReset(i32 0, i32 1, [1 x i8]* @p_str) nounwind
   br i1 %currentState_load, label %2, label %0
 
-; <label>:0                                       ; preds = %.preheader99.preheader
-  br i1 %start_V_read, label %1, label %._crit_edge129
+; <label>:0                                       ; preds = %.preheader96.preheader
+  br i1 %start_V_read, label %1, label %._crit_edge103
 
 ; <label>:1                                       ; preds = %0
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge129
+  br label %._crit_edge103
 
-._crit_edge129:                                   ; preds = %1, %0
-  br label %._crit_edge128
+._crit_edge103:                                   ; preds = %1, %0
+  br label %._crit_edge102
 
-; <label>:2                                       ; preds = %.preheader99.preheader
+; <label>:2                                       ; preds = %.preheader96.preheader
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
   %tmp_last_V = extractvalue { i32, i1 } %empty, 1
   %tmp = trunc i32 %tmp_data_V_1 to i16
   %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %tmp)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
-  br label %._crit_edge128
+  br label %._crit_edge102
 
-._crit_edge128:                                   ; preds = %2, %._crit_edge129
+._crit_edge102:                                   ; preds = %2, %._crit_edge103
   ret void
 }
 
@@ -186,7 +188,7 @@ define void @ItoZero(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V
 !56 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
 !57 = metadata !{null, metadata !8, metadata !9, metadata !58, metadata !11, metadata !15, metadata !6}
 !58 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<16> &"}
-!59 = metadata !{metadata !60, [0 x i32]* @llvm_global_ctors_0}
+!59 = metadata !{metadata !60, [1 x i32]* @llvm_global_ctors_0}
 !60 = metadata !{metadata !61}
 !61 = metadata !{i32 0, i32 31, metadata !62}
 !62 = metadata !{metadata !63}

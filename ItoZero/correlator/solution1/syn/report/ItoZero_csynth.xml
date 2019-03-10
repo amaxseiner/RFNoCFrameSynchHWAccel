@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4</Version>
+<Version>2017.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,7 +10,7 @@
 <Part>xc7k160tfbg484-1</Part>
 <TopModelName>ItoZero</TopModelName>
 <TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>0.62</ClockUncertainty>
+<ClockUncertainty>0.63</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
 </UserAssignments>
 
@@ -18,7 +18,7 @@
 <PipelineType>function</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>0.48</EstimatedClockPeriod>
+<EstimatedClockPeriod>1.40</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -35,7 +35,7 @@
 <AreaEstimates>
 <Resources>
 <FF>154</FF>
-<LUT>266</LUT>
+<LUT>148</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>

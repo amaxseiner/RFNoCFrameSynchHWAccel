@@ -30,16 +30,6 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="out_sample_cnt"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="firstLoad"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="buffI"/>
 <option name="complete" positionalBoolean="type" value=""/>
@@ -64,14 +54,6 @@
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="currentState"/>
 </pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="currentwrState"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="MatcherRee" label="">
-<pragma name="UNROLL"/>
 </directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

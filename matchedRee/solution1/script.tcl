@@ -5,10 +5,10 @@
 ############################################################
 open_project matchedRee
 set_top MatcherRee
-add_files matchedRee/inputCorrr.dat
-add_files matchedRee/matched.cpp
-add_files matchedRee/matcherSim.h
 add_files matchedRee/results.csv
+add_files matchedRee/matcherSim.h
+add_files matchedRee/matched.cpp
+add_files matchedRee/inputCorrr.dat
 add_files -tb matchedRee/matcherTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1} -tool vivado

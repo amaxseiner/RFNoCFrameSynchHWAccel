@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../../ItoZero.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/solution1.directive}
+set DirectiveFile {D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/solution1.directive}
 set TBFiles {verilog ../../ItoZeroTB.cpp bc ../../ItoZeroTB.cpp vhdl ../../ItoZeroTB.cpp sc ../../ItoZeroTB.cpp cas ../../ItoZeroTB.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

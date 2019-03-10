@@ -1,45 +1,44 @@
-INFO: [HLS 200-10] Running '/home/ece492fa18/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-45-generic) on Tue Feb 19 18:46:52 EST 2019
-INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
-INFO: [HLS 200-10] In directory '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero'
-INFO: [HLS 200-10] Opening project '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator'.
-INFO: [HLS 200-10] Adding design file 'ItoZero.cpp' to the project
-INFO: [HLS 200-10] Adding design file 'rfnoc.h' to the project
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'lance' on host 'lancecomp' (Windows NT_amd64 version 6.2) on Sat Mar 09 18:47:03 -0500 2019
+INFO: [HLS 200-10] In directory 'D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero'
+INFO: [HLS 200-10] Opening project 'D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator'.
 INFO: [HLS 200-10] Adding design file 'correlator/vivado_hls.log' to the project
+INFO: [HLS 200-10] Adding design file 'rfnoc.h' to the project
+INFO: [HLS 200-10] Adding design file 'ItoZero.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'ItoZeroTB.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1'.
+INFO: [HLS 200-10] Opening solution 'D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [HLS 200-10] Analyzing design file 'ItoZero.cpp' ... 
 WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-INFO: [HLS 200-10] Analyzing design file 'ItoZero.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:41 ; elapsed = 00:00:13 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 117548 ; free virtual = 256468
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:15 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 117545 ; free virtual = 256468
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 96.582 ; gain = 46.969
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 96.617 ; gain = 47.004
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:16 . Memory (MB): peak = 367.238 ; gain = 13.766 ; free physical = 117532 ; free virtual = 256457
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 107.281 ; gain = 57.668
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:16 . Memory (MB): peak = 367.238 ; gain = 13.766 ; free physical = 117525 ; free virtual = 256452
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 113.723 ; gain = 64.109
 INFO: [XFORM 203-101] Partitioning array 'data_reg_i.V'  in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 117475 ; free virtual = 256405
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 117489 ; free virtual = 256419
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 139.582 ; gain = 89.969
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 141.383 ; gain = 91.770
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'ItoZero' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'ItoZero'
+INFO: [HLS 200-10] -- Implementing module 'ItoZero' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'ItoZero'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 17.19 seconds; current allocated memory: 80.788 MB.
+INFO: [HLS 200-111]  Elapsed time: 13.206 seconds; current allocated memory: 93.818 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 80.946 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.155 seconds; current allocated memory: 93.953 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'ItoZero'
+INFO: [HLS 200-10] -- Generating RTL for module 'ItoZero' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
 INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/i_data_V_data_V' to 'axis' (register, both mode).
@@ -49,9 +48,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/o_data_V_last_V' t
 INFO: [RTGEN 206-500] Setting interface mode on port 'ItoZero/start_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'ItoZero' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ItoZero'.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 81.491 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 117488 ; free virtual = 256420
+INFO: [HLS 200-111]  Elapsed time: 0.093 seconds; current allocated memory: 94.412 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 141.383 ; gain = 91.770
 INFO: [SYSC 207-301] Generating SystemC RTL for ItoZero.
 INFO: [VHDL 208-304] Generating VHDL RTL for ItoZero.
 INFO: [VLOG 209-307] Generating Verilog RTL for ItoZero.
-INFO: [HLS 200-112] Total elapsed time: 17.88 seconds; peak allocated memory: 81.491 MB.
+INFO: [HLS 200-112] Total elapsed time: 14.308 seconds; peak allocated memory: 94.412 MB.
