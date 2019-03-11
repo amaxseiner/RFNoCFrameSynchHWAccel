@@ -1,16 +1,17 @@
 #include <iostream>
-#include "ap_int.h"
-#include "correlatorSim.h"
+#include <fstream>
+
+#include "correlator.h"
 
 using namespace std;
 
-int main(char argc,char **arg){
+int main(){
 	rfnoc_axis streamArrayIn[256];
 	rfnoc_axis streamArrayOut[256];
 	ap_fixed<16,11> test;
 	ifstream inFile;
 	inFile.open("inputCorrr.dat");
-	inFile >> fixed >> setbase(10) >> setprecision(8);
+	inFile >> fixed >> setbase(10) >> setprecision(16);
 	int count;
 	count = 0;
 	ofstream result;
@@ -19,24 +20,18 @@ int main(char argc,char **arg){
 	for(int a=0;a<5376;a++){
 		ap_uint<4> phaseClass = a%16;
 		rfnoc_axis axi;
-		inFile>> setw(16) >> test;
+		rfnoc_axis axiOut;
+
+		inFile >> setw(16) >> test;
 		axi.data.range(15,0) = test.V;
-		/*if(a%16 == 0){
-
-			result << count;
-			result << ",";
-			result << a;
-			result << ",";
-			count += 1;
-		}*/
-		/*
+		correlateTop(axi,axiOut,1,0);
+		result << a;
+		result << ",";
 		result << setw(16) << test;
-		//result << ",";
-		result << endl;*/
+		result << ",";
+		result << setw(32) << axiOut.data;
+		result << endl;
 
-		//correlation(axi,&streamArrayOut[a],&result,phaseClass);
-		//result << setw(32) << streamArrayOut[a].data;
-		//result << endl;
 	}
 
 	//displayOutput(&result);

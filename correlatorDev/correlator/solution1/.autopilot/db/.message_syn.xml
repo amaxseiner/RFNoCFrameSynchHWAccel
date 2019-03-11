@@ -1,112 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;correlator.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="correlator.cpp:251:3: warning: &apos;/*&apos; within block comment [-Wcomment]
-                /*correlateData0: for(int a =windowSize-1;a&gt;=0;a--){
-                ^
-1 warning generated." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from correlator.cpp:1:
-correlator.cpp:206:8: warning: enumeration values &apos;ST_CORRELATEl&apos; and &apos;ST_SEND&apos; not handled in switch [-Wswitch]
-switch(currentState) {
-       ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 474 ; free virtual = 3474" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:18 . Memory (MB): peak = 366.840 ; gain = 13.375 ; free physical = 471 ; free virtual = 3474" tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;UNROLL&apos; cannot be applied: Function &apos;correlator&apos; does not exist in any synthesis source file." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:33 ; elapsed = 00:00:15 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 802 ; free virtual = 4673" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 801 ; free virtual = 4682" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:19 . Memory (MB): peak = 367.324 ; gain = 13.859 ; free physical = 455 ; free virtual = 3461" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 367.383 ; gain = 13.914 ; free physical = 784 ; free virtual = 4670" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:19 . Memory (MB): peak = 495.273 ; gain = 141.809 ; free physical = 449 ; free virtual = 3455" tag=""/>
-	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;correlator&apos; (correlator.cpp:9)." tag=""/>
-	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;SHIFT_DATA0&apos; (correlator.cpp:220) in function &apos;correlator&apos; completely." tag=""/>
-	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;correlateData0&apos; (correlator.cpp:226) in function &apos;correlator&apos; completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass0.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase0.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase0.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass1.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase1.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase1.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass2.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase2.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase2.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass3.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase3.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase3.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass4.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase4.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase4.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass5.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase5.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase5.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass6.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase6.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase6.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass7.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase7.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase7.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass8.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase8.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase8.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass9.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase9.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase9.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass10.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase10.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase10.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass11.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase11.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase11.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass12.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase12.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase12.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass13.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase13.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase13.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass14.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase14.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase14.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClass15.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;resPhase15.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Phase15.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;phaseClassValid.V&apos;  in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;correlate::shiftPhaseClass&apos; into &apos;correlateTop&apos; (correlator.cpp:67) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;correlate::correlator&apos; into &apos;correlateTop&apos; (correlator.cpp:68) automatically." tag=""/>
+	<Message prefix="[SYNCHK 200-77]" severity="WARNING" keynum="590" content="The top function &apos;correlateTop&apos; (correlator.cpp:8) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops." tag=""/>
+	<Message prefix="[SYNCHK 200-10]" severity="INFO" keynum="597" content="0 error(s), 1 warning(s)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 495.289 ; gain = 141.820 ; free physical = 772 ; free virtual = 4663" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;correlate::shiftPhaseClass&apos; (correlator.cpp:86:2)." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;correlate::correlator&apos; (correlator.cpp:99:41)." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;SHIFT_DATA0&apos; (correlator.cpp:88) in function &apos;correlate::shiftPhaseClass&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;correlateData0&apos; (correlator.cpp:101) in function &apos;correlate::correlator&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;cor.phaseClass0.V&apos;  in dimension 1 completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;corrSeq.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;correlator&apos; (correlator.cpp:9)...7 expression(s) balanced." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:20 . Memory (MB): peak = 495.273 ; gain = 141.809 ; free physical = 414 ; free virtual = 3429" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:21 . Memory (MB): peak = 495.273 ; gain = 141.809 ; free physical = 411 ; free virtual = 3426" tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;correlate::shiftPhaseClass&apos; into &apos;correlateTop&apos; (correlator.cpp:67) automatically." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 495.289 ; gain = 141.820 ; free physical = 740 ; free virtual = 4635" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 495.289 ; gain = 141.820 ; free physical = 736 ; free virtual = 4632" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;correlator&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;correlateTop&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;correlator&apos;" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;correlateTop&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
-	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;correlator&apos;." tag=""/>
-	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;correlateTop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 20.56 seconds; current allocated memory: 87.202 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 18.91 seconds; current allocated memory: 89.283 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.03 seconds; current allocated memory: 87.479 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.02 seconds; current allocated memory: 89.478 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;correlator&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;correlateTop&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="431" content="Design contains AXI ports. Reset is fixed to synchronous and active low." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/i_data_V_data_V&apos; to &apos;axis&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/i_data_V_last_V&apos; to &apos;axis&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/o_data_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/o_data_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/start_V&apos; to &apos;ap_none&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlator/phaseClass_V&apos; to &apos;ap_none&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;correlator&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlator/phaseClass_V&apos; has no fanin or fanout and is left dangling.
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/i_data_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/i_data_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/o_data_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/o_data_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/start_V&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;correlateTop/phaseClass_V&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;correlateTop&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/i_data_last_V_TLAST&apos; has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;correlator&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 88.024 MB." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:40 ; elapsed = 00:00:21 . Memory (MB): peak = 495.273 ; gain = 141.809 ; free physical = 416 ; free virtual = 3433" tag=""/>
-	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for correlator." tag=""/>
-	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for correlator." tag=""/>
-	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for correlator." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 21.17 seconds; peak allocated memory: 88.024 MB." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/i_data_last_V_TVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/i_data_last_V_TREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_data_V_TDATA&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_data_V_TVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_data_V_TREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_last_V_TLAST&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_last_V_TVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;correlateTop/o_data_last_V_TREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;correlateTop&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 90.029 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 495.289 ; gain = 141.820 ; free physical = 747 ; free virtual = 4644" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for correlateTop." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for correlateTop." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for correlateTop." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 19.42 seconds; peak allocated memory: 90.029 MB." tag=""/>
 </Messages>

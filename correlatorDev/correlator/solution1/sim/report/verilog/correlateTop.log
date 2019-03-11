@@ -1,0 +1,11 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_correlateTop.cpp
+   Compiling correlator.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:66: recipe for target 'obj/correlator.cpp_pre.cpp.tb.o' failed
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

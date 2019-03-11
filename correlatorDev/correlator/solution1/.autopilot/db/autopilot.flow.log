@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Sat Mar 09 17:17:01 EST 2019
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Mon Mar 11 19:46:50 EDT 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Command     config_clock returned 0; 0 sec.
@@ -72,13 +72,13 @@ Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
@@ -101,8 +101,8 @@ Command     open_platform returned 0; 0 sec.
 Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
@@ -115,21 +115,21 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
 Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.02 sec.
+Command     import_lib returned 0; 0.01 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
 Execute     set_part xc7k160tfbg484-1 
 Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xc7k160t 
-Command         license_isbetapart returned 1; 0 sec.
+Command         license_isbetapart returned 1; 0.01 sec.
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
@@ -154,577 +154,32 @@ Command     config_chip_info returned 0; 0 sec.
 Execute     config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level=high 
 Command     config_rtl returned 0; 0 sec.
 Execute     config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0 
-Command     config_interface returned 0; 0 sec.
-Command   open_solution returned 0; 0.21 sec.
-Execute   export_design -rtl verilog -format ip_catalog 
+Command     config_interface returned 0; 0.01 sec.
+Command   open_solution returned 0; 0.22 sec.
+Execute   csim_design -setup -clean -compiler gcc -use_gcc -quiet 
 Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.1 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.1 sec.
-Command     ap_source returned 0; 0.1 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0.01 sec.
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.1 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.1 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0.01 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0.01 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.07 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.1 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.1 sec.
-Command     ap_source returned 0; 0.1 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0.01 sec.
-Command     ap_source returned 0; 0.01 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.1 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0.01 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0.01 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.08 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
-Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Command   export_design returned 0; 36.83 sec.
-Command ap_source returned 0; 37.04 sec.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp 
+Command     is_xip returned 0; 0 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h 
+Command     is_encrypted returned 0; 0 sec.
+Execute     is_xip /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h 
+Command     is_xip returned 0; 0 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design returned 0; 3 sec.
+Command ap_source returned 0; 3.23 sec.
 Execute cleanup_all 
 Command cleanup_all returned 0; 0 sec.

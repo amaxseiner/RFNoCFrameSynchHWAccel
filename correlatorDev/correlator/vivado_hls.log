@@ -6,8 +6,7 @@
 
 source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Mon Mar 11 17:34:57 EDT 2019
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Mon Mar 11 17:51:18 EDT 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator'
 INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
-INFO: [Common 17-206] Exiting vivado_hls at Mon Mar 11 17:39:03 2019...

@@ -1,3 +1,4 @@
    Build using "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/g++"
-   Compiling apatb_correlator.cpp
-Makefile.rules:382: recipe for target 'obj/apatb_correlator.o' failed
+   Compiling apatb_correlateTop.cpp
+   Compiling correlator.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:66: recipe for target 'obj/correlator.cpp_pre.cpp.tb.o' failed

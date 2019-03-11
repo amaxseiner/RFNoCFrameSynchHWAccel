@@ -26310,8 +26310,7 @@ class stream
 
 }
 # 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 1
-# 67 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h"
+# 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 1
 # 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
 # 74 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 1
@@ -50450,6 +50449,10 @@ public:
   }
 
 };
+# 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
+# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 1
+# 67 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h"
+# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
 # 68 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 2
 
 
@@ -52027,11 +52030,7 @@ inline bool operator!=(
 
 }
 # 72 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 2
-# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp" 2
-# 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h" 1
-# 26 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
-# 27 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h" 2
+# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
 
  struct rfnoc_axis{
      ap_int<32> data;
@@ -52047,14 +52046,31 @@ inline bool operator!=(
   ap_fixed<32,22> i;
   ap_fixed<32,22> q;
  };
-# 4 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp" 2
+
+
+
+static ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
+
+
+
+ void correlateTop(rfnoc_axis i_data, rfnoc_axis o_data, ap_uint<1> start, ap_uint<4> phaseClass);
+
+ class correlate{
+ public:
+  void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
+  ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
+  ap_fixed<16,11> phaseClass0[16];
+
+  ap_uint<1> corrSeq[16];
+
+ };
+# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp" 2
 
 
 
 
 
-void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data, ap_uint<1> start, ap_uint<4> phaseClass)
-{
+void correlateTop(rfnoc_axis i_data, rfnoc_axis o_data, ap_uint<1> start, ap_uint<4> phaseClass){
 
 #pragma HLS RESOURCE variable=o_data latency=1
 
@@ -52064,149 +52080,11 @@ void correlator (hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data,
 
 #pragma HLS PIPELINE II=1
 
-static ap_fixed<16,11> phaseClass0[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass0 complete dim=1
+static correlate cor;
 
-static ap_fixed<32,22> resPhase0[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase0 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0 complete dim=1
 
-static ap_fixed<16,11> Phase0[16];
-#pragma HLS ARRAY_PARTITION variable=Phase0 complete dim=1
-
-static ap_fixed<16,11> phaseClass1[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass1 complete dim=1
-
-static ap_fixed<32,22> resPhase1[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase1 complete dim=1
-
-static ap_fixed<32,22> Phase1[16];
-#pragma HLS ARRAY_PARTITION variable=Phase1 complete dim=1
-
-static ap_fixed<16,11> phaseClass2[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass2 complete dim=1
-
-static ap_fixed<32,22> resPhase2[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase2 complete dim=1
-
-static ap_fixed<32,22> Phase2[16];
-#pragma HLS ARRAY_PARTITION variable=Phase2 complete dim=1
-
-static ap_fixed<16,11> phaseClass3[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass3 complete dim=1
-
-static ap_fixed<32,22> resPhase3[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase3 complete dim=1
-
-static ap_fixed<32,22> Phase3[16];
-#pragma HLS ARRAY_PARTITION variable=Phase3 complete dim=1
-
-static ap_fixed<16,11> phaseClass4[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass4 complete dim=1
-
-static ap_fixed<32,22> resPhase4[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase4 complete dim=1
-
-static ap_fixed<32,22> Phase4[16];
-#pragma HLS ARRAY_PARTITION variable=Phase4 complete dim=1
-
-static ap_fixed<16,11> phaseClass5[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass5 complete dim=1
-
-static ap_fixed<32,22> resPhase5[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase5 complete dim=1
-
-static ap_fixed<32,22> Phase5[16];
-#pragma HLS ARRAY_PARTITION variable=Phase5 complete dim=1
-
-static ap_fixed<16,11> phaseClass6[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass6 complete dim=1
-
-static ap_fixed<32,22> resPhase6[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase6 complete dim=1
-
-static ap_fixed<32,22> Phase6[16];
-#pragma HLS ARRAY_PARTITION variable=Phase6 complete dim=1
-
-static ap_fixed<16,11> phaseClass7[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass7 complete dim=1
-
-static ap_fixed<32,22> resPhase7[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase7 complete dim=1
-
-static ap_fixed<32,22> Phase7[16];
-#pragma HLS ARRAY_PARTITION variable=Phase7 complete dim=1
-
-static ap_fixed<16,11> phaseClass8[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass8 complete dim=1
-
-static ap_fixed<32,22> resPhase8[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase8 complete dim=1
-
-static ap_fixed<32,22> Phase8[16];
-#pragma HLS ARRAY_PARTITION variable=Phase8 complete dim=1
-
-static ap_fixed<16,11> phaseClass9[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass9 complete dim=1
-
-static ap_fixed<32,22> resPhase9[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase9 complete dim=1
-
-static ap_fixed<32,22> Phase9[16];
-#pragma HLS ARRAY_PARTITION variable=Phase9 complete dim=1
-
-static ap_fixed<16,11> phaseClass10[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass10 complete dim=1
-
-static ap_fixed<32,22> resPhase10[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase10 complete dim=1
-
-static ap_fixed<32,22> Phase10[16];
-#pragma HLS ARRAY_PARTITION variable=Phase10 complete dim=1
-
-static ap_fixed<16,11> phaseClass11[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass11 complete dim=1
-
-static ap_fixed<32,22> resPhase11[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase11 complete dim=1
-
-static ap_fixed<32,22> Phase11[16];
-#pragma HLS ARRAY_PARTITION variable=Phase11 complete dim=1
-
-static ap_fixed<16,11> phaseClass12[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass12 complete dim=1
-
-static ap_fixed<32,22> resPhase12[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase12 complete dim=1
-
-static ap_fixed<32,22> Phase12[16];
-#pragma HLS ARRAY_PARTITION variable=Phase12 complete dim=1
-
-static ap_fixed<16,11> phaseClass13[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass13 complete dim=1
-
-static ap_fixed<32,22> resPhase13[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase13 complete dim=1
-
-static ap_fixed<32,22> Phase13[16];
-#pragma HLS ARRAY_PARTITION variable=Phase13 complete dim=1
-
-static ap_fixed<16,11> phaseClass14[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass14 complete dim=1
-
-static ap_fixed<32,22> resPhase14[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase14 complete dim=1
-
-static ap_fixed<32,22> Phase14[16];
-#pragma HLS ARRAY_PARTITION variable=Phase14 complete dim=1
-
-static ap_fixed<16,11> phaseClass15[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClass15 complete dim=1
-
-static ap_fixed<32,22> resPhase15[16];
-#pragma HLS ARRAY_PARTITION variable=resPhase15 complete dim=1
-
-static ap_fixed<32,22> Phase15[16];
-#pragma HLS ARRAY_PARTITION variable=Phase15 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
 static ap_fixed<16,11> newVal;
 #pragma HLS RESET variable=newVal
@@ -52214,27 +52092,15 @@ static ap_fixed<16,11> newVal;
 
 
 
-static ap_uint<1> phaseClassValid[16];
-#pragma HLS ARRAY_PARTITION variable=phaseClassValid complete dim=1
-#pragma HLS RESET variable=phaseClassValid
-
-static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
-#pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
   rfnoc_axis classType;
 
   rfnoc_axis out_sample;
 
-  static ap_uint<10> out_sample_cnt;
-#pragma HLS RESET variable=out_sample_cnt
-
   static ap_int<32> loadCount;
 #pragma HLS RESET variable=loadCount
 
   rfnoc_axis tmp_data;
-
-  static ap_uint<32> readResCount;
-#pragma HLS RESET variable=readResCount
 
   static ap_fixed<16,11> corHelperI;
 #pragma HLS RESET variable=corHelperI
@@ -52243,10 +52109,11 @@ static ap_uint<1> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1}
 #pragma HLS RESET variable=corHelperQ
 
 
-  enum loadState {ST_IDLE = 0, ST_LOAD, ST_CORRELATEl, ST_SEND };
+  enum loadState {ST_IDLE = 0, ST_LOAD };
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 
+static ap_fixed<16,11> out;
 
 
 
@@ -52258,39 +52125,51 @@ switch(currentState) {
   }
  break;
  case ST_LOAD:
-  if(!i_data.empty()){
-   i_data.read(tmp_data);
-   out_sample.last = tmp_data.last;
-   newVal.V = tmp_data.data.range(15,0);
-   loadCount = loadCount + 1;
 
-   SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
+  out_sample.last = i_data.last;
+  newVal.V = i_data.data.range(15,0);
+  loadCount = loadCount + 1;
+  cor.shiftPhaseClass(newVal,phaseClass);
+  out = cor.correlator(phaseClass);
 
-    phaseClass0[a] = phaseClass0[a-1];
-   }
-   phaseClass0[0] = newVal;
 
-   correlateData0: for(int a =16 -1;a>=0;a--){
-
-    if(a==16 -1)
-     corHelperI = 0;
-
-    if(corrSeq[a] > 0)
-     corHelperI = corHelperI + (phaseClass0[a]);
-
-   }
-   if(corHelperI > 0){
-    out_sample.data = loadCount;
-   }
-   o_data.write(out_sample);
+  if(out > 0){
+   o_data.data = loadCount;
+  }
 
 
 
-   currentState = ST_LOAD;
+
+  currentState = ST_LOAD;
+
+ break;
+}
+
+}
+
+void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass){
+ switch(phaseClass){
+ case 0:
+  SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
+
+   phaseClass0[a] = phaseClass0[a-1];
+  }
+  phaseClass0[0] = newValue;
+ }
+}
+
+ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){
+ ap_fixed<16,11> corHelperI;
+ corHelperI = 0;
+ switch(phaseClass){
+ case 0:
+  correlateData0: for(int a =16 -1;a>=0;a--){
+
+
+
+   corHelperI = corHelperI + (corrSeq[a]*phaseClass0[a]);
 
   }
- break;
-# 268 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"
-}
-# 591 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"
+ }
+ return corHelperI;
 }

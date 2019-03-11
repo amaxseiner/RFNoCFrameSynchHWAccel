@@ -1,20 +1,15 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Sat Mar 09 17:17:01 EST 2019
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Mon Mar 11 19:46:50 EDT 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev'
 INFO: [HLS 200-10] Opening project '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator'.
 INFO: [HLS 200-10] Opening solution '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Mar  9 17:17:14 2019...
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../correlatorTB.cpp in debug mode
+   Compiling ../../../../correlator.cpp in debug mode
+   Generating csim.exe
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

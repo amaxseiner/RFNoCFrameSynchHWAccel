@@ -1,0 +1,3 @@
+<annotationInfo>
+<item  id="52" filename="correlator.cpp" linenumber="66" name="tmp_2" contextFuncName="correlateTop" moduleName="correlateTop" rtlName="tmp_2_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+</annotationInfo>

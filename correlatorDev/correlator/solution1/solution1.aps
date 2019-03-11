@@ -9,12 +9,12 @@
         <clock default="false" name="default" period="10"/>
     </clockList>
     <config>
-        <schedule model="correlator"/>
+        <schedule model="correlateTop"/>
         <config_rtl encoding="onehot" header="" prefix="" reset="state" reset_async="0" reset_level="high"/>
         <config_interface clock_enable="0" expose_global="0" m_axi_addr64="0" m_axi_offset="off" register_io="off" trim_dangling_port="0"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/kintex7/kintex7</Platform>
             <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
             <customLibs/>
@@ -46,14 +46,14 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
+        <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="true" compileChoice="gcc" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="true" compileChoice="gcc" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>

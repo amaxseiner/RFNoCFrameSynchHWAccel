@@ -18805,6 +18805,2722 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
+# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+       
+# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+
+
+
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
+# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+       
+# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  class codecvt_base
+  {
+  public:
+    enum result
+    {
+      ok,
+      partial,
+      error,
+      noconv
+    };
+  };
+# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class __codecvt_abstract_base
+    : public locale::facet, public codecvt_base
+    {
+    public:
+
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+# 116 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+      result
+      out(state_type& __state, const intern_type* __from,
+   const intern_type* __from_end, const intern_type*& __from_next,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const
+      {
+ return this->do_out(__state, __from, __from_end, __from_next,
+       __to, __to_end, __to_next);
+      }
+# 155 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+      result
+      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
+       extern_type*& __to_next) const
+      { return this->do_unshift(__state, __to,__to_end,__to_next); }
+# 196 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+      result
+      in(state_type& __state, const extern_type* __from,
+  const extern_type* __from_end, const extern_type*& __from_next,
+  intern_type* __to, intern_type* __to_end,
+  intern_type*& __to_next) const
+      {
+ return this->do_in(__state, __from, __from_end, __from_next,
+      __to, __to_end, __to_next);
+      }
+
+      int
+      encoding() const throw()
+      { return this->do_encoding(); }
+
+      bool
+      always_noconv() const throw()
+      { return this->do_always_noconv(); }
+
+      int
+      length(state_type& __state, const extern_type* __from,
+      const extern_type* __end, size_t __max) const
+      { return this->do_length(__state, __from, __end, __max); }
+
+      int
+      max_length() const throw()
+      { return this->do_max_length(); }
+
+    protected:
+      explicit
+      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
+
+      virtual
+      ~__codecvt_abstract_base() { }
+# 237 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const = 0;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const = 0;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const = 0;
+
+      virtual int
+      do_encoding() const throw() = 0;
+
+      virtual bool
+      do_always_noconv() const throw() = 0;
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const = 0;
+
+      virtual int
+      do_max_length() const throw() = 0;
+    };
+# 276 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+   template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt
+    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
+    {
+    public:
+
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0)
+      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt() { }
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+
+      virtual int
+      do_encoding() const throw();
+
+      virtual bool
+      do_always_noconv() const throw();
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+    };
+
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
+
+
+  template<>
+    class codecvt<char, char, mbstate_t>
+    : public __codecvt_abstract_base<char, char, mbstate_t>
+    {
+    public:
+
+      typedef char intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0);
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt();
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+
+      virtual int
+      do_encoding() const throw();
+
+      virtual bool
+      do_always_noconv() const throw();
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+  };
+
+
+
+  template<>
+    class codecvt<wchar_t, char, mbstate_t>
+    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
+    {
+    public:
+
+      typedef wchar_t intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0);
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt();
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state,
+      const extern_type* __from, const extern_type* __from_end,
+      const extern_type*& __from_next,
+      intern_type* __to, intern_type* __to_end,
+      intern_type*& __to_next) const;
+
+      virtual
+      int do_encoding() const throw();
+
+      virtual
+      bool do_always_noconv() const throw();
+
+      virtual
+      int do_length(state_type&, const extern_type* __from,
+      const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+    };
+
+
+
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
+    {
+    public:
+      explicit
+      codecvt_byname(const char* __s, size_t __refs = 0)
+      : codecvt<_InternT, _ExternT, _StateT>(__refs)
+      {
+ if (__builtin_strcmp(__s, "C") != 0
+     && __builtin_strcmp(__s, "POSIX") != 0)
+   {
+     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
+     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
+   }
+      }
+
+    protected:
+      virtual
+      ~codecvt_byname() { }
+    };
+
+
+
+
+  extern template class codecvt_byname<char, char, mbstate_t>;
+
+  extern template
+    const codecvt<char, char, mbstate_t>&
+    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
+
+  extern template
+    bool
+    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
+
+
+  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
+
+  extern template
+    const codecvt<wchar_t, char, mbstate_t>&
+    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
+
+  extern template
+    bool
+    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
+
+
+
+
+}
+# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+       
+# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+
+
+# 1 "/usr/include/stdio.h" 1 3 4
+# 29 "/usr/include/stdio.h" 3 4
+extern "C" {
+
+
+
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 34 "/usr/include/stdio.h" 2 3 4
+# 74 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/libio.h" 1 3 4
+# 31 "/usr/include/libio.h" 3 4
+# 1 "/usr/include/_G_config.h" 1 3 4
+# 15 "/usr/include/_G_config.h" 3 4
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 16 "/usr/include/_G_config.h" 2 3 4
+
+
+
+
+
+typedef struct
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} _G_fpos_t;
+typedef struct
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} _G_fpos64_t;
+# 32 "/usr/include/libio.h" 2 3 4
+# 49 "/usr/include/libio.h" 3 4
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
+# 50 "/usr/include/libio.h" 2 3 4
+# 144 "/usr/include/libio.h" 3 4
+struct _IO_jump_t; struct _IO_FILE;
+
+
+
+
+
+typedef void _IO_lock_t;
+
+
+
+
+
+struct _IO_marker {
+  struct _IO_marker *_next;
+  struct _IO_FILE *_sbuf;
+
+
+
+  int _pos;
+# 173 "/usr/include/libio.h" 3 4
+};
+
+
+enum __codecvt_result
+{
+  __codecvt_ok,
+  __codecvt_partial,
+  __codecvt_error,
+  __codecvt_noconv
+};
+# 241 "/usr/include/libio.h" 3 4
+struct _IO_FILE {
+  int _flags;
+
+
+
+
+  char* _IO_read_ptr;
+  char* _IO_read_end;
+  char* _IO_read_base;
+  char* _IO_write_base;
+  char* _IO_write_ptr;
+  char* _IO_write_end;
+  char* _IO_buf_base;
+  char* _IO_buf_end;
+
+  char *_IO_save_base;
+  char *_IO_backup_base;
+  char *_IO_save_end;
+
+  struct _IO_marker *_markers;
+
+  struct _IO_FILE *_chain;
+
+  int _fileno;
+
+
+
+  int _flags2;
+
+  __off_t _old_offset;
+
+
+
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+
+
+
+  _IO_lock_t *_lock;
+# 289 "/usr/include/libio.h" 3 4
+  __off64_t _offset;
+
+
+
+
+
+
+
+  void *__pad1;
+  void *__pad2;
+  void *__pad3;
+  void *__pad4;
+
+  size_t __pad5;
+  int _mode;
+
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+
+};
+
+
+
+
+
+struct _IO_FILE_plus;
+
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+# 333 "/usr/include/libio.h" 3 4
+typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
+
+
+
+
+
+
+
+typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
+     size_t __n);
+
+
+
+
+
+
+
+typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
+
+
+typedef int __io_close_fn (void *__cookie);
+
+
+
+
+typedef __io_read_fn cookie_read_function_t;
+typedef __io_write_fn cookie_write_function_t;
+typedef __io_seek_fn cookie_seek_function_t;
+typedef __io_close_fn cookie_close_function_t;
+
+
+typedef struct
+{
+  __io_read_fn *read;
+  __io_write_fn *write;
+  __io_seek_fn *seek;
+  __io_close_fn *close;
+} _IO_cookie_io_functions_t;
+typedef _IO_cookie_io_functions_t cookie_io_functions_t;
+
+struct _IO_cookie_file;
+
+
+extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
+        void *__cookie, _IO_cookie_io_functions_t __fns);
+
+
+
+
+extern "C" {
+
+
+extern int __underflow (_IO_FILE *);
+extern int __uflow (_IO_FILE *);
+extern int __overflow (_IO_FILE *, int);
+# 429 "/usr/include/libio.h" 3 4
+extern int _IO_getc (_IO_FILE *__fp);
+extern int _IO_putc (int __c, _IO_FILE *__fp);
+extern int _IO_feof (_IO_FILE *__fp) throw ();
+extern int _IO_ferror (_IO_FILE *__fp) throw ();
+
+extern int _IO_peekc_locked (_IO_FILE *__fp);
+
+
+
+
+
+extern void _IO_flockfile (_IO_FILE *) throw ();
+extern void _IO_funlockfile (_IO_FILE *) throw ();
+extern int _IO_ftrylockfile (_IO_FILE *) throw ();
+# 459 "/usr/include/libio.h" 3 4
+extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
+   __gnuc_va_list, int *__restrict);
+extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
+    __gnuc_va_list);
+extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
+
+extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
+
+extern void _IO_free_backup_area (_IO_FILE *) throw ();
+# 521 "/usr/include/libio.h" 3 4
+}
+# 75 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+typedef __gnuc_va_list va_list;
+# 108 "/usr/include/stdio.h" 3 4
+
+
+typedef _G_fpos_t fpos_t;
+
+
+
+
+
+typedef _G_fpos64_t fpos64_t;
+# 164 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
+# 165 "/usr/include/stdio.h" 2 3 4
+
+
+
+extern struct _IO_FILE *stdin;
+extern struct _IO_FILE *stdout;
+extern struct _IO_FILE *stderr;
+
+
+
+
+
+
+
+extern int remove (const char *__filename) throw ();
+
+extern int rename (const char *__old, const char *__new) throw ();
+
+
+
+
+extern int renameat (int __oldfd, const char *__old, int __newfd,
+       const char *__new) throw ();
+
+
+
+
+
+
+
+
+extern FILE *tmpfile (void) ;
+# 205 "/usr/include/stdio.h" 3 4
+extern FILE *tmpfile64 (void) ;
+
+
+
+extern char *tmpnam (char *__s) throw () ;
+
+
+
+
+
+extern char *tmpnam_r (char *__s) throw () ;
+# 227 "/usr/include/stdio.h" 3 4
+extern char *tempnam (const char *__dir, const char *__pfx)
+     throw () __attribute__ ((__malloc__)) ;
+
+
+
+
+
+
+
+
+extern int fclose (FILE *__stream);
+
+
+
+
+extern int fflush (FILE *__stream);
+
+# 252 "/usr/include/stdio.h" 3 4
+extern int fflush_unlocked (FILE *__stream);
+# 262 "/usr/include/stdio.h" 3 4
+extern int fcloseall (void);
+
+
+
+
+
+
+
+
+
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) ;
+
+
+
+
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) ;
+# 295 "/usr/include/stdio.h" 3 4
+
+
+extern FILE *fopen64 (const char *__restrict __filename,
+        const char *__restrict __modes) ;
+extern FILE *freopen64 (const char *__restrict __filename,
+   const char *__restrict __modes,
+   FILE *__restrict __stream) ;
+
+
+
+
+extern FILE *fdopen (int __fd, const char *__modes) throw () ;
+
+
+
+
+
+extern FILE *fopencookie (void *__restrict __magic_cookie,
+     const char *__restrict __modes,
+     _IO_cookie_io_functions_t __io_funcs) throw () ;
+
+
+
+
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  throw () ;
+
+
+
+
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () ;
+
+
+
+
+
+
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
+
+
+
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) throw ();
+
+
+
+
+
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) throw ();
+
+
+extern void setlinebuf (FILE *__stream) throw ();
+
+
+
+
+
+
+
+
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
+
+
+
+
+extern int printf (const char *__restrict __format, ...);
+
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) throw ();
+
+
+
+
+
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
+
+
+
+
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
+
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) throw ();
+
+
+
+
+
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
+
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
+
+
+
+
+
+
+extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
+        __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0))) ;
+extern int __asprintf (char **__restrict __ptr,
+         const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
+extern int asprintf (char **__restrict __ptr,
+       const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
+
+
+
+
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) ;
+
+
+
+
+extern int scanf (const char *__restrict __format, ...) ;
+
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) throw ();
+# 463 "/usr/include/stdio.h" 3 4
+
+
+
+
+
+
+
+
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
+      __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
+
+
+
+
+
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
+
+
+extern int vsscanf (const char *__restrict __s,
+      const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
+# 522 "/usr/include/stdio.h" 3 4
+
+
+
+
+
+
+
+
+
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+
+
+
+
+
+extern int getchar (void);
+
+# 550 "/usr/include/stdio.h" 3 4
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+# 561 "/usr/include/stdio.h" 3 4
+extern int fgetc_unlocked (FILE *__stream);
+
+
+
+
+
+
+
+
+
+
+
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+
+
+
+
+
+extern int putchar (int __c);
+
+# 594 "/usr/include/stdio.h" 3 4
+extern int fputc_unlocked (int __c, FILE *__stream);
+
+
+
+
+
+
+
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+
+
+
+
+
+
+extern int getw (FILE *__stream);
+
+
+extern int putw (int __w, FILE *__stream);
+
+
+
+
+
+
+
+
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     ;
+# 638 "/usr/include/stdio.h" 3 4
+extern char *gets (char *__s) __attribute__ ((__deprecated__));
+
+
+# 649 "/usr/include/stdio.h" 3 4
+extern char *fgets_unlocked (char *__restrict __s, int __n,
+        FILE *__restrict __stream) ;
+# 665 "/usr/include/stdio.h" 3 4
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+          size_t *__restrict __n, int __delimiter,
+          FILE *__restrict __stream) ;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+        size_t *__restrict __n, int __delimiter,
+        FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern __ssize_t getline (char **__restrict __lineptr,
+       size_t *__restrict __n,
+       FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+
+
+
+
+
+extern int puts (const char *__s);
+
+
+
+
+
+
+extern int ungetc (int __c, FILE *__stream);
+
+
+
+
+
+
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) ;
+
+
+
+
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+
+# 726 "/usr/include/stdio.h" 3 4
+extern int fputs_unlocked (const char *__restrict __s,
+      FILE *__restrict __stream);
+# 737 "/usr/include/stdio.h" 3 4
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) ;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+
+
+
+
+
+
+
+
+extern int fseek (FILE *__stream, long int __off, int __whence);
+
+
+
+
+extern long int ftell (FILE *__stream) ;
+
+
+
+
+extern void rewind (FILE *__stream);
+
+# 773 "/usr/include/stdio.h" 3 4
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+
+
+
+
+extern __off_t ftello (FILE *__stream) ;
+# 792 "/usr/include/stdio.h" 3 4
+
+
+
+
+
+
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+
+
+
+
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+# 815 "/usr/include/stdio.h" 3 4
+
+
+
+extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
+extern __off64_t ftello64 (FILE *__stream) ;
+extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
+extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
+
+
+
+
+extern void clearerr (FILE *__stream) throw ();
+
+extern int feof (FILE *__stream) throw () ;
+
+extern int ferror (FILE *__stream) throw () ;
+
+
+
+
+extern void clearerr_unlocked (FILE *__stream) throw ();
+extern int feof_unlocked (FILE *__stream) throw () ;
+extern int ferror_unlocked (FILE *__stream) throw () ;
+
+
+
+
+
+
+
+
+extern void perror (const char *__s);
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+
+
+extern int _sys_nerr;
+extern const char *const _sys_errlist[];
+# 854 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+extern int fileno (FILE *__stream) throw () ;
+
+
+
+
+extern int fileno_unlocked (FILE *__stream) throw () ;
+# 872 "/usr/include/stdio.h" 3 4
+extern FILE *popen (const char *__command, const char *__modes) ;
+
+
+
+
+
+extern int pclose (FILE *__stream);
+
+
+
+
+
+extern char *ctermid (char *__s) throw ();
+
+
+
+
+
+extern char *cuserid (char *__s);
+
+
+
+
+struct obstack;
+
+
+extern int obstack_printf (struct obstack *__restrict __obstack,
+      const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
+extern int obstack_vprintf (struct obstack *__restrict __obstack,
+       const char *__restrict __format,
+       __gnuc_va_list __args)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+
+
+
+
+extern void flockfile (FILE *__stream) throw ();
+
+
+
+extern int ftrylockfile (FILE *__stream) throw () ;
+
+
+extern void funlockfile (FILE *__stream) throw ();
+# 942 "/usr/include/stdio.h" 3 4
+}
+# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
+# 92 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace std
+{
+  using ::FILE;
+  using ::fpos_t;
+
+  using ::clearerr;
+  using ::fclose;
+  using ::feof;
+  using ::ferror;
+  using ::fflush;
+  using ::fgetc;
+  using ::fgetpos;
+  using ::fgets;
+  using ::fopen;
+  using ::fprintf;
+  using ::fputc;
+  using ::fputs;
+  using ::fread;
+  using ::freopen;
+  using ::fscanf;
+  using ::fseek;
+  using ::fsetpos;
+  using ::ftell;
+  using ::fwrite;
+  using ::getc;
+  using ::getchar;
+  using ::gets;
+  using ::perror;
+  using ::printf;
+  using ::putc;
+  using ::putchar;
+  using ::puts;
+  using ::remove;
+  using ::rename;
+  using ::rewind;
+  using ::scanf;
+  using ::setbuf;
+  using ::setvbuf;
+  using ::sprintf;
+  using ::sscanf;
+  using ::tmpfile;
+  using ::tmpnam;
+  using ::ungetc;
+  using ::vfprintf;
+  using ::vprintf;
+  using ::vsprintf;
+}
+# 148 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace __gnu_cxx
+{
+# 166 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+  using ::snprintf;
+  using ::vfscanf;
+  using ::vscanf;
+  using ::vsnprintf;
+  using ::vsscanf;
+
+}
+
+namespace std
+{
+  using ::__gnu_cxx::snprintf;
+  using ::__gnu_cxx::vfscanf;
+  using ::__gnu_cxx::vscanf;
+  using ::__gnu_cxx::vsnprintf;
+  using ::__gnu_cxx::vsscanf;
+}
+# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
+# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+       
+# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+
+
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
+# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 3
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+       
+# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  typedef __gthread_mutex_t __c_lock;
+
+
+  typedef FILE __c_file;
+
+
+}
+# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  template<typename _CharT>
+    class __basic_file;
+
+
+  template<>
+    class __basic_file<char>
+    {
+
+      __c_file* _M_cfile;
+
+
+      bool _M_cfile_created;
+
+    public:
+      __basic_file(__c_lock* __lock = 0) throw ();
+
+      __basic_file*
+      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
+
+      __basic_file*
+      sys_open(__c_file* __file, ios_base::openmode);
+
+      __basic_file*
+      sys_open(int __fd, ios_base::openmode __mode) throw ();
+
+      __basic_file*
+      close();
+
+      __attribute__ ((__pure__)) bool
+      is_open() const throw ();
+
+      __attribute__ ((__pure__)) int
+      fd() throw ();
+
+      __attribute__ ((__pure__)) __c_file*
+      file() throw ();
+
+      ~__basic_file();
+
+      streamsize
+      xsputn(const char* __s, streamsize __n);
+
+      streamsize
+      xsputn_2(const char* __s1, streamsize __n1,
+        const char* __s2, streamsize __n2);
+
+      streamsize
+      xsgetn(char* __s, streamsize __n);
+
+      streamoff
+      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
+
+      int
+      sync();
+
+      streamsize
+      showmanyc();
+    };
+
+
+}
+# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+  template<typename _CharT, typename _Traits>
+    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef __basic_file<char> __file_type;
+      typedef typename traits_type::state_type __state_type;
+      typedef codecvt<char_type, char, __state_type> __codecvt_type;
+
+      friend class ios_base;
+
+    protected:
+
+
+      __c_lock _M_lock;
+
+
+      __file_type _M_file;
+
+
+      ios_base::openmode _M_mode;
+
+
+      __state_type _M_state_beg;
+
+
+
+
+      __state_type _M_state_cur;
+
+
+
+      __state_type _M_state_last;
+
+
+      char_type* _M_buf;
+
+
+
+
+
+
+      size_t _M_buf_size;
+
+
+      bool _M_buf_allocated;
+# 130 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      bool _M_reading;
+      bool _M_writing;
+
+
+
+
+
+
+
+      char_type _M_pback;
+      char_type* _M_pback_cur_save;
+      char_type* _M_pback_end_save;
+      bool _M_pback_init;
+
+
+
+      const __codecvt_type* _M_codecvt;
+
+
+
+
+
+
+      char* _M_ext_buf;
+
+
+
+
+      streamsize _M_ext_buf_size;
+
+
+
+
+
+
+      const char* _M_ext_next;
+      char* _M_ext_end;
+
+
+
+
+
+
+      void
+      _M_create_pback()
+      {
+ if (!_M_pback_init)
+   {
+     _M_pback_cur_save = this->gptr();
+     _M_pback_end_save = this->egptr();
+     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
+     _M_pback_init = true;
+   }
+      }
+
+
+
+
+
+
+      void
+      _M_destroy_pback() throw()
+      {
+ if (_M_pback_init)
+   {
+
+     _M_pback_cur_save += this->gptr() != this->eback();
+     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
+     _M_pback_init = false;
+   }
+      }
+
+    public:
+
+
+
+
+
+
+
+      basic_filebuf();
+
+
+
+
+      virtual
+      ~basic_filebuf()
+      { this->close(); }
+
+
+
+
+
+      bool
+      is_open() const throw()
+      { return _M_file.is_open(); }
+# 266 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      __filebuf_type*
+      open(const char* __s, ios_base::openmode __mode);
+# 293 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      __filebuf_type*
+      close();
+
+    protected:
+      void
+      _M_allocate_internal_buffer();
+
+      void
+      _M_destroy_internal_buffer() throw();
+
+
+      virtual streamsize
+      showmanyc();
+
+
+
+
+
+
+      virtual int_type
+      underflow();
+
+      virtual int_type
+      pbackfail(int_type __c = _Traits::eof());
+# 325 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      virtual int_type
+      overflow(int_type __c = _Traits::eof());
+
+
+
+      bool
+      _M_convert_to_external(char_type*, streamsize);
+# 345 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      virtual __streambuf_type*
+      setbuf(char_type* __s, streamsize __n);
+
+      virtual pos_type
+      seekoff(off_type __off, ios_base::seekdir __way,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      virtual pos_type
+      seekpos(pos_type __pos,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+
+      pos_type
+      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
+
+      int
+      _M_get_ext_pos(__state_type &__state);
+
+      virtual int
+      sync();
+
+      virtual void
+      imbue(const locale& __loc);
+
+      virtual streamsize
+      xsgetn(char_type* __s, streamsize __n);
+
+      virtual streamsize
+      xsputn(const char_type* __s, streamsize __n);
+
+
+      bool
+      _M_terminate_output();
+# 391 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      _M_set_buffer(streamsize __off)
+      {
+  const bool __testin = _M_mode & ios_base::in;
+  const bool __testout = _M_mode & ios_base::out;
+
+ if (__testin && __off > 0)
+   this->setg(_M_buf, _M_buf, _M_buf + __off);
+ else
+   this->setg(_M_buf, _M_buf, _M_buf);
+
+ if (__testout && __off == 0 && _M_buf_size > 1 )
+   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
+ else
+   this->setp(0, 0);
+      }
+    };
+# 419 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+  template<typename _CharT, typename _Traits>
+    class basic_ifstream : public basic_istream<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_istream<char_type, traits_type> __istream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+# 446 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+# 459 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      explicit
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 491 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      ~basic_ifstream()
+      { }
+# 501 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+
+
+
+
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+
+
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+# 530 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::in))
+   this->setstate(ios_base::failbit);
+ else
+
+
+   this->clear();
+      }
+# 568 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+# 587 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+  template<typename _CharT, typename _Traits>
+    class basic_ofstream : public basic_ostream<_CharT,_Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ostream<char_type, traits_type> __ostream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+# 614 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      basic_ofstream(): __ostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+# 628 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      explicit
+      basic_ofstream(const char* __s,
+       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
+      : __ostream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 662 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      ~basic_ofstream()
+      { }
+# 672 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+
+
+
+
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+
+
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+# 701 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::out))
+   this->setstate(ios_base::failbit);
+ else
+
+
+   this->clear();
+      }
+# 741 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+# 760 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+  template<typename _CharT, typename _Traits>
+    class basic_fstream : public basic_iostream<_CharT, _Traits>
+    {
+    public:
+
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ios<char_type, traits_type> __ios_type;
+      typedef basic_iostream<char_type, traits_type> __iostream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+# 788 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      basic_fstream()
+      : __iostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+# 800 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      explicit
+      basic_fstream(const char* __s,
+      ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __iostream_type(0), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 831 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      ~basic_fstream()
+      { }
+# 841 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+
+
+
+
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+
+
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+# 870 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::in | ios_base::out)
+      {
+ if (!_M_filebuf.open(__s, __mode))
+   this->setstate(ios_base::failbit);
+ else
+
+
+   this->clear();
+      }
+# 910 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+
+
+}
+
+# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
+# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+       
+# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_allocate_internal_buffer()
+    {
+
+
+      if (!_M_buf_allocated && !_M_buf)
+ {
+   _M_buf = new char_type[_M_buf_size];
+   _M_buf_allocated = true;
+ }
+    }
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_destroy_internal_buffer() throw()
+    {
+      if (_M_buf_allocated)
+ {
+   delete [] _M_buf;
+   _M_buf = 0;
+   _M_buf_allocated = false;
+ }
+      delete [] _M_ext_buf;
+      _M_ext_buf = 0;
+      _M_ext_buf_size = 0;
+      _M_ext_next = 0;
+      _M_ext_end = 0;
+    }
+
+  template<typename _CharT, typename _Traits>
+    basic_filebuf<_CharT, _Traits>::
+    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
+    _M_state_last(), _M_buf(0), _M_buf_size(8192),
+    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
+    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
+    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
+    _M_ext_end(0)
+    {
+      if (has_facet<__codecvt_type>(this->_M_buf_locale))
+ _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    open(const char* __s, ios_base::openmode __mode)
+    {
+      __filebuf_type *__ret = 0;
+      if (!this->is_open())
+ {
+   _M_file.open(__s, __mode);
+   if (this->is_open())
+     {
+       _M_allocate_internal_buffer();
+       _M_mode = __mode;
+
+
+       _M_reading = false;
+       _M_writing = false;
+       _M_set_buffer(-1);
+
+
+       _M_state_last = _M_state_cur = _M_state_beg;
+
+
+       if ((__mode & ios_base::ate)
+    && this->seekoff(0, ios_base::end, __mode)
+    == pos_type(off_type(-1)))
+  this->close();
+       else
+  __ret = this;
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    close()
+    {
+      if (!this->is_open())
+ return 0;
+
+      bool __testfail = false;
+      {
+
+ struct __close_sentry
+ {
+   basic_filebuf *__fb;
+   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
+   ~__close_sentry ()
+   {
+     __fb->_M_mode = ios_base::openmode(0);
+     __fb->_M_pback_init = false;
+     __fb->_M_destroy_internal_buffer();
+     __fb->_M_reading = false;
+     __fb->_M_writing = false;
+     __fb->_M_set_buffer(-1);
+     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
+   }
+ } __cs (this);
+
+ try
+   {
+     if (!_M_terminate_output())
+       __testfail = true;
+   }
+ catch(__cxxabiv1::__forced_unwind&)
+   {
+     _M_file.close();
+     throw;
+   }
+ catch(...)
+   { __testfail = true; }
+      }
+
+      if (!_M_file.close())
+ __testfail = true;
+
+      if (__testfail)
+ return 0;
+      else
+ return this;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    showmanyc()
+    {
+      streamsize __ret = -1;
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin && this->is_open())
+ {
+
+
+   __ret = this->egptr() - this->gptr();
+
+
+
+
+
+
+
+   if (__check_facet(_M_codecvt).encoding() >= 0)
+
+     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    underflow()
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+
+
+
+   _M_destroy_pback();
+
+   if (this->gptr() < this->egptr())
+     return traits_type::to_int_type(*this->gptr());
+
+
+   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+
+
+   bool __got_eof = false;
+
+   streamsize __ilen = 0;
+   codecvt_base::result __r = codecvt_base::ok;
+   if (__check_facet(_M_codecvt).always_noconv())
+     {
+       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
+          __buflen);
+       if (__ilen == 0)
+  __got_eof = true;
+     }
+   else
+     {
+
+
+       const int __enc = _M_codecvt->encoding();
+       streamsize __blen;
+       streamsize __rlen;
+       if (__enc > 0)
+  __blen = __rlen = __buflen * __enc;
+       else
+  {
+    __blen = __buflen + _M_codecvt->max_length() - 1;
+    __rlen = __buflen;
+  }
+       const streamsize __remainder = _M_ext_end - _M_ext_next;
+       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
+
+
+
+       if (_M_reading && this->egptr() == this->eback() && __remainder)
+  __rlen = 0;
+
+
+
+       if (_M_ext_buf_size < __blen)
+  {
+    char* __buf = new char[__blen];
+    if (__remainder)
+      __builtin_memcpy(__buf, _M_ext_next, __remainder);
+
+    delete [] _M_ext_buf;
+    _M_ext_buf = __buf;
+    _M_ext_buf_size = __blen;
+  }
+       else if (__remainder)
+  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+
+       _M_ext_next = _M_ext_buf;
+       _M_ext_end = _M_ext_buf + __remainder;
+       _M_state_last = _M_state_cur;
+
+       do
+  {
+    if (__rlen > 0)
+      {
+
+
+
+        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
+   {
+     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid")
+
+                          );
+   }
+        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
+        if (__elen == 0)
+   __got_eof = true;
+        else if (__elen == -1)
+   break;
+        _M_ext_end += __elen;
+      }
+
+    char_type* __iend = this->eback();
+    if (_M_ext_next < _M_ext_end)
+      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
+      _M_ext_end, _M_ext_next,
+      this->eback(),
+      this->eback() + __buflen, __iend);
+    if (__r == codecvt_base::noconv)
+      {
+        size_t __avail = _M_ext_end - _M_ext_buf;
+        __ilen = std::min(__avail, __buflen);
+        traits_type::copy(this->eback(),
+     reinterpret_cast<char_type*>
+     (_M_ext_buf), __ilen);
+        _M_ext_next = _M_ext_buf + __ilen;
+      }
+    else
+      __ilen = __iend - this->eback();
+
+
+
+
+    if (__r == codecvt_base::error)
+      break;
+
+    __rlen = 1;
+  }
+       while (__ilen == 0 && !__got_eof);
+     }
+
+   if (__ilen > 0)
+     {
+       _M_set_buffer(__ilen);
+       _M_reading = true;
+       __ret = traits_type::to_int_type(*this->gptr());
+     }
+   else if (__got_eof)
+     {
+
+
+
+       _M_set_buffer(-1);
+       _M_reading = false;
+
+
+       if (__r == codecvt_base::partial)
+  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file")
+                                       );
+     }
+   else if (__r == codecvt_base::error)
+     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file")
+                                    );
+   else
+     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file")
+                             );
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    pbackfail(int_type __i)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+
+
+   const bool __testpb = _M_pback_init;
+   const bool __testeof = traits_type::eq_int_type(__i, __ret);
+   int_type __tmp;
+   if (this->eback() < this->gptr())
+     {
+       this->gbump(-1);
+       __tmp = traits_type::to_int_type(*this->gptr());
+     }
+   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
+     {
+       __tmp = this->underflow();
+       if (traits_type::eq_int_type(__tmp, __ret))
+  return __ret;
+     }
+   else
+     {
+
+
+
+
+
+       return __ret;
+     }
+
+
+
+   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
+     __ret = __i;
+   else if (__testeof)
+     __ret = traits_type::not_eof(__i);
+   else if (!__testpb)
+     {
+       _M_create_pback();
+       _M_reading = true;
+       *this->gptr() = traits_type::to_char_type(__i);
+       __ret = __i;
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    overflow(int_type __c)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testeof = traits_type::eq_int_type(__c, __ret);
+      const bool __testout = _M_mode & ios_base::out;
+      if (__testout)
+ {
+          if (_M_reading)
+            {
+              _M_destroy_pback();
+              const int __gptr_off = _M_get_ext_pos(_M_state_last);
+              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
+                  == pos_type(off_type(-1)))
+                return __ret;
+            }
+   if (this->pbase() < this->pptr())
+     {
+
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+
+
+
+       if (_M_convert_to_external(this->pbase(),
+      this->pptr() - this->pbase()))
+  {
+    _M_set_buffer(0);
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+   else if (_M_buf_size > 1)
+     {
+
+
+
+       _M_set_buffer(0);
+       _M_writing = true;
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+       __ret = traits_type::not_eof(__c);
+     }
+   else
+     {
+
+       char_type __conv = traits_type::to_char_type(__c);
+       if (__testeof || _M_convert_to_external(&__conv, 1))
+  {
+    _M_writing = true;
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
+    {
+
+      streamsize __elen;
+      streamsize __plen;
+      if (__check_facet(_M_codecvt).always_noconv())
+ {
+   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
+   __plen = __ilen;
+ }
+      else
+ {
+
+
+   streamsize __blen = __ilen * _M_codecvt->max_length();
+   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
+
+   char* __bend;
+   const char_type* __iend;
+   codecvt_base::result __r;
+   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
+    __iend, __buf, __buf + __blen, __bend);
+
+   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
+     __blen = __bend - __buf;
+   else if (__r == codecvt_base::noconv)
+     {
+
+       __buf = reinterpret_cast<char*>(__ibuf);
+       __blen = __ilen;
+     }
+   else
+     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error")
+                           );
+
+   __elen = _M_file.xsputn(__buf, __blen);
+   __plen = __blen;
+
+
+   if (__r == codecvt_base::partial && __elen == __plen)
+     {
+       const char_type* __iresume = __iend;
+       streamsize __rlen = this->pptr() - __iend;
+       __r = _M_codecvt->out(_M_state_cur, __iresume,
+        __iresume + __rlen, __iend, __buf,
+        __buf + __blen, __bend);
+       if (__r != codecvt_base::error)
+  {
+    __rlen = __bend - __buf;
+    __elen = _M_file.xsputn(__buf, __rlen);
+    __plen = __rlen;
+  }
+       else
+  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error")
+                        );
+     }
+ }
+      return __elen == __plen;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsgetn(_CharT* __s, streamsize __n)
+    {
+
+      streamsize __ret = 0;
+      if (_M_pback_init)
+ {
+   if (__n > 0 && this->gptr() == this->eback())
+     {
+       *__s++ = *this->gptr();
+       this->gbump(1);
+       __ret = 1;
+       --__n;
+     }
+   _M_destroy_pback();
+ }
+      else if (_M_writing)
+ {
+    if (overflow() == traits_type::eof())
+      return __ret;
+    _M_set_buffer(-1);
+    _M_writing = false;
+  }
+
+
+
+
+      const bool __testin = _M_mode & ios_base::in;
+      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+
+      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
+     && __testin)
+   {
+
+     const streamsize __avail = this->egptr() - this->gptr();
+     if (__avail != 0)
+       {
+        traits_type::copy(__s, this->gptr(), __avail);
+         __s += __avail;
+        this->setg(this->eback(), this->gptr() + __avail,
+     this->egptr());
+        __ret += __avail;
+        __n -= __avail;
+       }
+
+
+
+     streamsize __len;
+     for (;;)
+       {
+         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
+           __n);
+         if (__len == -1)
+    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file")
+                                );
+         if (__len == 0)
+    break;
+
+         __n -= __len;
+         __ret += __len;
+         if (__n == 0)
+    break;
+
+         __s += __len;
+       }
+
+     if (__n == 0)
+       {
+         _M_set_buffer(0);
+         _M_reading = true;
+       }
+     else if (__len == 0)
+       {
+
+
+
+         _M_set_buffer(-1);
+         _M_reading = false;
+       }
+   }
+      else
+   __ret += __streambuf_type::xsgetn(__s, __n);
+
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsputn(const _CharT* __s, streamsize __n)
+    {
+      streamsize __ret = 0;
+
+
+
+      const bool __testout = _M_mode & ios_base::out;
+      if (__check_facet(_M_codecvt).always_noconv()
+     && __testout && !_M_reading)
+ {
+
+   const streamsize __chunk = 1ul << 10;
+   streamsize __bufavail = this->epptr() - this->pptr();
+
+
+   if (!_M_writing && _M_buf_size > 1)
+     __bufavail = _M_buf_size - 1;
+
+   const streamsize __limit = std::min(__chunk, __bufavail);
+   if (__n >= __limit)
+     {
+       const streamsize __buffill = this->pptr() - this->pbase();
+       const char* __buf = reinterpret_cast<const char*>(this->pbase());
+       __ret = _M_file.xsputn_2(__buf, __buffill,
+           reinterpret_cast<const char*>(__s),
+           __n);
+       if (__ret == __buffill + __n)
+  {
+    _M_set_buffer(0);
+    _M_writing = true;
+  }
+       if (__ret > __buffill)
+  __ret -= __buffill;
+       else
+  __ret = 0;
+     }
+   else
+     __ret = __streambuf_type::xsputn(__s, __n);
+ }
+       else
+  __ret = __streambuf_type::xsputn(__s, __n);
+       return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    setbuf(char_type* __s, streamsize __n)
+    {
+      if (!this->is_open())
+ {
+   if (__s == 0 && __n == 0)
+     _M_buf_size = 1;
+   else if (__s && __n > 0)
+     {
+# 702 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+       _M_buf = __s;
+       _M_buf_size = __n;
+     }
+ }
+      return this;
+    }
+
+
+
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
+    {
+      int __width = 0;
+      if (_M_codecvt)
+ __width = _M_codecvt->encoding();
+      if (__width < 0)
+ __width = 0;
+
+      pos_type __ret = pos_type(off_type(-1));
+      const bool __testfail = __off != 0 && __width <= 0;
+      if (this->is_open() && !__testfail)
+ {
+
+
+
+
+   bool __no_movement = __way == ios_base::cur && __off == 0
+     && (!_M_writing || _M_codecvt->always_noconv());
+
+
+   if (!__no_movement)
+     _M_destroy_pback();
+
+
+
+
+
+
+   __state_type __state = _M_state_beg;
+   off_type __computed_off = __off * __width;
+   if (_M_reading && __way == ios_base::cur)
+     {
+       __state = _M_state_last;
+       __computed_off += _M_get_ext_pos(__state);
+     }
+   if (!__no_movement)
+     __ret = _M_seek(__computed_off, __way, __state);
+   else
+     {
+       if (_M_writing)
+  __computed_off = this->pptr() - this->pbase();
+
+        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
+        if (__file_off != off_type(-1))
+  {
+    __ret = __file_off + __computed_off;
+    __ret.state(__state);
+  }
+     }
+ }
+      return __ret;
+    }
+
+
+
+
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekpos(pos_type __pos, ios_base::openmode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (this->is_open())
+ {
+
+   _M_destroy_pback();
+   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (_M_terminate_output())
+ {
+   off_type __file_off = _M_file.seekoff(__off, __way);
+   if (__file_off != off_type(-1))
+     {
+       _M_reading = false;
+       _M_writing = false;
+       _M_ext_next = _M_ext_end = _M_ext_buf;
+       _M_set_buffer(-1);
+       _M_state_cur = __state;
+       __ret = __file_off;
+       __ret.state(_M_state_cur);
+     }
+ }
+      return __ret;
+    }
+
+
+
+
+  template<typename _CharT, typename _Traits>
+    int basic_filebuf<_CharT, _Traits>::
+    _M_get_ext_pos(__state_type& __state)
+    {
+      if (_M_codecvt->always_noconv())
+        return this->gptr() - this->egptr();
+      else
+        {
+
+
+
+          const int __gptr_off =
+            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
+                               this->gptr() - this->eback());
+          return _M_ext_buf + __gptr_off - _M_ext_end;
+        }
+    }
+
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_terminate_output()
+    {
+
+      bool __testvalid = true;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __testvalid = false;
+ }
+
+
+      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
+   && __testvalid)
+ {
+
+
+
+   const size_t __blen = 128;
+   char __buf[__blen];
+   codecvt_base::result __r;
+   streamsize __ilen = 0;
+
+   do
+     {
+       char* __next;
+       __r = _M_codecvt->unshift(_M_state_cur, __buf,
+     __buf + __blen, __next);
+       if (__r == codecvt_base::error)
+  __testvalid = false;
+       else if (__r == codecvt_base::ok ||
+         __r == codecvt_base::partial)
+  {
+    __ilen = __next - __buf;
+    if (__ilen > 0)
+      {
+        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
+        if (__elen != __ilen)
+   __testvalid = false;
+      }
+  }
+     }
+   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
+
+   if (__testvalid)
+     {
+
+
+
+
+       const int_type __tmp = this->overflow();
+       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+  __testvalid = false;
+     }
+ }
+      return __testvalid;
+    }
+
+  template<typename _CharT, typename _Traits>
+    int
+    basic_filebuf<_CharT, _Traits>::
+    sync()
+    {
+
+
+      int __ret = 0;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __ret = -1;
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    imbue(const locale& __loc)
+    {
+      bool __testvalid = true;
+
+      const __codecvt_type* _M_codecvt_tmp = 0;
+      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
+ _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
+
+      if (this->is_open())
+ {
+
+   if ((_M_reading || _M_writing)
+       && __check_facet(_M_codecvt).encoding() == -1)
+     __testvalid = false;
+   else
+     {
+       if (_M_reading)
+  {
+    if (__check_facet(_M_codecvt).always_noconv())
+      {
+        if (_M_codecvt_tmp
+     && !__check_facet(_M_codecvt_tmp).always_noconv())
+   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
+                 != pos_type(off_type(-1));
+      }
+    else
+      {
+
+        _M_ext_next = _M_ext_buf
+   + _M_codecvt->length(_M_state_last, _M_ext_buf,
+          _M_ext_next,
+          this->gptr() - this->eback());
+        const streamsize __remainder = _M_ext_end - _M_ext_next;
+        if (__remainder)
+   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+
+        _M_ext_next = _M_ext_buf;
+        _M_ext_end = _M_ext_buf + __remainder;
+        _M_set_buffer(-1);
+        _M_state_last = _M_state_cur = _M_state_beg;
+      }
+  }
+       else if (_M_writing && (__testvalid = _M_terminate_output()))
+  _M_set_buffer(-1);
+     }
+ }
+
+      if (__testvalid)
+ _M_codecvt = _M_codecvt_tmp;
+      else
+ _M_codecvt = 0;
+    }
+
+
+
+
+  extern template class basic_filebuf<char>;
+  extern template class basic_ifstream<char>;
+  extern template class basic_ofstream<char>;
+  extern template class basic_fstream<char>;
+
+
+  extern template class basic_filebuf<wchar_t>;
+  extern template class basic_ifstream<wchar_t>;
+  extern template class basic_ofstream<wchar_t>;
+  extern template class basic_fstream<wchar_t>;
+
+
+
+
+}
+# 922 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
+
+# 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 1
 # 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
 # 74 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 1
@@ -20469,795 +23185,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 }
 # 60 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
-# 165 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h"
-# 1 "/usr/include/stdio.h" 1 3 4
-# 29 "/usr/include/stdio.h" 3 4
-extern "C" {
-
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-# 34 "/usr/include/stdio.h" 2 3 4
-# 74 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/libio.h" 1 3 4
-# 31 "/usr/include/libio.h" 3 4
-# 1 "/usr/include/_G_config.h" 1 3 4
-# 15 "/usr/include/_G_config.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-# 16 "/usr/include/_G_config.h" 2 3 4
-
-
-
-
-
-typedef struct
-{
-  __off_t __pos;
-  __mbstate_t __state;
-} _G_fpos_t;
-typedef struct
-{
-  __off64_t __pos;
-  __mbstate_t __state;
-} _G_fpos64_t;
-# 32 "/usr/include/libio.h" 2 3 4
-# 49 "/usr/include/libio.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
-# 50 "/usr/include/libio.h" 2 3 4
-# 144 "/usr/include/libio.h" 3 4
-struct _IO_jump_t; struct _IO_FILE;
-
-
-
-
-
-typedef void _IO_lock_t;
-
-
-
-
-
-struct _IO_marker {
-  struct _IO_marker *_next;
-  struct _IO_FILE *_sbuf;
-
-
-
-  int _pos;
-# 173 "/usr/include/libio.h" 3 4
-};
-
-
-enum __codecvt_result
-{
-  __codecvt_ok,
-  __codecvt_partial,
-  __codecvt_error,
-  __codecvt_noconv
-};
-# 241 "/usr/include/libio.h" 3 4
-struct _IO_FILE {
-  int _flags;
-
-
-
-
-  char* _IO_read_ptr;
-  char* _IO_read_end;
-  char* _IO_read_base;
-  char* _IO_write_base;
-  char* _IO_write_ptr;
-  char* _IO_write_end;
-  char* _IO_buf_base;
-  char* _IO_buf_end;
-
-  char *_IO_save_base;
-  char *_IO_backup_base;
-  char *_IO_save_end;
-
-  struct _IO_marker *_markers;
-
-  struct _IO_FILE *_chain;
-
-  int _fileno;
-
-
-
-  int _flags2;
-
-  __off_t _old_offset;
-
-
-
-  unsigned short _cur_column;
-  signed char _vtable_offset;
-  char _shortbuf[1];
-
-
-
-  _IO_lock_t *_lock;
-# 289 "/usr/include/libio.h" 3 4
-  __off64_t _offset;
-
-
-
-
-
-
-
-  void *__pad1;
-  void *__pad2;
-  void *__pad3;
-  void *__pad4;
-
-  size_t __pad5;
-  int _mode;
-
-  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
-
-};
-
-
-
-
-
-struct _IO_FILE_plus;
-
-extern struct _IO_FILE_plus _IO_2_1_stdin_;
-extern struct _IO_FILE_plus _IO_2_1_stdout_;
-extern struct _IO_FILE_plus _IO_2_1_stderr_;
-# 333 "/usr/include/libio.h" 3 4
-typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
-
-
-
-
-
-
-
-typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
-     size_t __n);
-
-
-
-
-
-
-
-typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
-
-
-typedef int __io_close_fn (void *__cookie);
-
-
-
-
-typedef __io_read_fn cookie_read_function_t;
-typedef __io_write_fn cookie_write_function_t;
-typedef __io_seek_fn cookie_seek_function_t;
-typedef __io_close_fn cookie_close_function_t;
-
-
-typedef struct
-{
-  __io_read_fn *read;
-  __io_write_fn *write;
-  __io_seek_fn *seek;
-  __io_close_fn *close;
-} _IO_cookie_io_functions_t;
-typedef _IO_cookie_io_functions_t cookie_io_functions_t;
-
-struct _IO_cookie_file;
-
-
-extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
-        void *__cookie, _IO_cookie_io_functions_t __fns);
-
-
-
-
-extern "C" {
-
-
-extern int __underflow (_IO_FILE *);
-extern int __uflow (_IO_FILE *);
-extern int __overflow (_IO_FILE *, int);
-# 429 "/usr/include/libio.h" 3 4
-extern int _IO_getc (_IO_FILE *__fp);
-extern int _IO_putc (int __c, _IO_FILE *__fp);
-extern int _IO_feof (_IO_FILE *__fp) throw ();
-extern int _IO_ferror (_IO_FILE *__fp) throw ();
-
-extern int _IO_peekc_locked (_IO_FILE *__fp);
-
-
-
-
-
-extern void _IO_flockfile (_IO_FILE *) throw ();
-extern void _IO_funlockfile (_IO_FILE *) throw ();
-extern int _IO_ftrylockfile (_IO_FILE *) throw ();
-# 459 "/usr/include/libio.h" 3 4
-extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
-   __gnuc_va_list, int *__restrict);
-extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
-    __gnuc_va_list);
-extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
-extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
-
-extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
-extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
-
-extern void _IO_free_backup_area (_IO_FILE *) throw ();
-# 521 "/usr/include/libio.h" 3 4
-}
-# 75 "/usr/include/stdio.h" 2 3 4
-
-
-
-
-typedef __gnuc_va_list va_list;
-# 108 "/usr/include/stdio.h" 3 4
-
-
-typedef _G_fpos_t fpos_t;
-
-
-
-
-
-typedef _G_fpos64_t fpos64_t;
-# 164 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
-# 165 "/usr/include/stdio.h" 2 3 4
-
-
-
-extern struct _IO_FILE *stdin;
-extern struct _IO_FILE *stdout;
-extern struct _IO_FILE *stderr;
-
-
-
-
-
-
-
-extern int remove (const char *__filename) throw ();
-
-extern int rename (const char *__old, const char *__new) throw ();
-
-
-
-
-extern int renameat (int __oldfd, const char *__old, int __newfd,
-       const char *__new) throw ();
-
-
-
-
-
-
-
-
-extern FILE *tmpfile (void) ;
-# 205 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile64 (void) ;
-
-
-
-extern char *tmpnam (char *__s) throw () ;
-
-
-
-
-
-extern char *tmpnam_r (char *__s) throw () ;
-# 227 "/usr/include/stdio.h" 3 4
-extern char *tempnam (const char *__dir, const char *__pfx)
-     throw () __attribute__ ((__malloc__)) ;
-
-
-
-
-
-
-
-
-extern int fclose (FILE *__stream);
-
-
-
-
-extern int fflush (FILE *__stream);
-
-# 252 "/usr/include/stdio.h" 3 4
-extern int fflush_unlocked (FILE *__stream);
-# 262 "/usr/include/stdio.h" 3 4
-extern int fcloseall (void);
-
-
-
-
-
-
-
-
-
-extern FILE *fopen (const char *__restrict __filename,
-      const char *__restrict __modes) ;
-
-
-
-
-extern FILE *freopen (const char *__restrict __filename,
-        const char *__restrict __modes,
-        FILE *__restrict __stream) ;
-# 295 "/usr/include/stdio.h" 3 4
-
-
-extern FILE *fopen64 (const char *__restrict __filename,
-        const char *__restrict __modes) ;
-extern FILE *freopen64 (const char *__restrict __filename,
-   const char *__restrict __modes,
-   FILE *__restrict __stream) ;
-
-
-
-
-extern FILE *fdopen (int __fd, const char *__modes) throw () ;
-
-
-
-
-
-extern FILE *fopencookie (void *__restrict __magic_cookie,
-     const char *__restrict __modes,
-     _IO_cookie_io_functions_t __io_funcs) throw () ;
-
-
-
-
-extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
-  throw () ;
-
-
-
-
-extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () ;
-
-
-
-
-
-
-extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
-
-
-
-extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
-      int __modes, size_t __n) throw ();
-
-
-
-
-
-extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
-         size_t __size) throw ();
-
-
-extern void setlinebuf (FILE *__stream) throw ();
-
-
-
-
-
-
-
-
-extern int fprintf (FILE *__restrict __stream,
-      const char *__restrict __format, ...);
-
-
-
-
-extern int printf (const char *__restrict __format, ...);
-
-extern int sprintf (char *__restrict __s,
-      const char *__restrict __format, ...) throw ();
-
-
-
-
-
-extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg);
-
-
-
-
-extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
-
-extern int vsprintf (char *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg) throw ();
-
-
-
-
-
-extern int snprintf (char *__restrict __s, size_t __maxlen,
-       const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
-
-extern int vsnprintf (char *__restrict __s, size_t __maxlen,
-        const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
-
-
-
-
-
-
-extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
-        __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0))) ;
-extern int __asprintf (char **__restrict __ptr,
-         const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-extern int asprintf (char **__restrict __ptr,
-       const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-
-
-
-
-extern int vdprintf (int __fd, const char *__restrict __fmt,
-       __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__printf__, 2, 0)));
-extern int dprintf (int __fd, const char *__restrict __fmt, ...)
-     __attribute__ ((__format__ (__printf__, 2, 3)));
-
-
-
-
-
-
-
-
-extern int fscanf (FILE *__restrict __stream,
-     const char *__restrict __format, ...) ;
-
-
-
-
-extern int scanf (const char *__restrict __format, ...) ;
-
-extern int sscanf (const char *__restrict __s,
-     const char *__restrict __format, ...) throw ();
-# 463 "/usr/include/stdio.h" 3 4
-
-
-
-
-
-
-
-
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
-      __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
-
-
-
-
-
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
-
-
-extern int vsscanf (const char *__restrict __s,
-      const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
-# 522 "/usr/include/stdio.h" 3 4
-
-
-
-
-
-
-
-
-
-extern int fgetc (FILE *__stream);
-extern int getc (FILE *__stream);
-
-
-
-
-
-extern int getchar (void);
-
-# 550 "/usr/include/stdio.h" 3 4
-extern int getc_unlocked (FILE *__stream);
-extern int getchar_unlocked (void);
-# 561 "/usr/include/stdio.h" 3 4
-extern int fgetc_unlocked (FILE *__stream);
-
-
-
-
-
-
-
-
-
-
-
-extern int fputc (int __c, FILE *__stream);
-extern int putc (int __c, FILE *__stream);
-
-
-
-
-
-extern int putchar (int __c);
-
-# 594 "/usr/include/stdio.h" 3 4
-extern int fputc_unlocked (int __c, FILE *__stream);
-
-
-
-
-
-
-
-extern int putc_unlocked (int __c, FILE *__stream);
-extern int putchar_unlocked (int __c);
-
-
-
-
-
-
-extern int getw (FILE *__stream);
-
-
-extern int putw (int __w, FILE *__stream);
-
-
-
-
-
-
-
-
-extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
-     ;
-# 638 "/usr/include/stdio.h" 3 4
-extern char *gets (char *__s) __attribute__ ((__deprecated__));
-
-
-# 649 "/usr/include/stdio.h" 3 4
-extern char *fgets_unlocked (char *__restrict __s, int __n,
-        FILE *__restrict __stream) ;
-# 665 "/usr/include/stdio.h" 3 4
-extern __ssize_t __getdelim (char **__restrict __lineptr,
-          size_t *__restrict __n, int __delimiter,
-          FILE *__restrict __stream) ;
-extern __ssize_t getdelim (char **__restrict __lineptr,
-        size_t *__restrict __n, int __delimiter,
-        FILE *__restrict __stream) ;
-
-
-
-
-
-
-
-extern __ssize_t getline (char **__restrict __lineptr,
-       size_t *__restrict __n,
-       FILE *__restrict __stream) ;
-
-
-
-
-
-
-
-
-extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-
-
-
-
-
-extern int puts (const char *__s);
-
-
-
-
-
-
-extern int ungetc (int __c, FILE *__stream);
-
-
-
-
-
-
-extern size_t fread (void *__restrict __ptr, size_t __size,
-       size_t __n, FILE *__restrict __stream) ;
-
-
-
-
-extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-        size_t __n, FILE *__restrict __s);
-
-# 726 "/usr/include/stdio.h" 3 4
-extern int fputs_unlocked (const char *__restrict __s,
-      FILE *__restrict __stream);
-# 737 "/usr/include/stdio.h" 3 4
-extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
-         size_t __n, FILE *__restrict __stream) ;
-extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
-          size_t __n, FILE *__restrict __stream);
-
-
-
-
-
-
-
-
-extern int fseek (FILE *__stream, long int __off, int __whence);
-
-
-
-
-extern long int ftell (FILE *__stream) ;
-
-
-
-
-extern void rewind (FILE *__stream);
-
-# 773 "/usr/include/stdio.h" 3 4
-extern int fseeko (FILE *__stream, __off_t __off, int __whence);
-
-
-
-
-extern __off_t ftello (FILE *__stream) ;
-# 792 "/usr/include/stdio.h" 3 4
-
-
-
-
-
-
-extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
-
-
-
-
-extern int fsetpos (FILE *__stream, const fpos_t *__pos);
-# 815 "/usr/include/stdio.h" 3 4
-
-
-
-extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
-extern __off64_t ftello64 (FILE *__stream) ;
-extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
-extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
-
-
-
-
-extern void clearerr (FILE *__stream) throw ();
-
-extern int feof (FILE *__stream) throw () ;
-
-extern int ferror (FILE *__stream) throw () ;
-
-
-
-
-extern void clearerr_unlocked (FILE *__stream) throw ();
-extern int feof_unlocked (FILE *__stream) throw () ;
-extern int ferror_unlocked (FILE *__stream) throw () ;
-
-
-
-
-
-
-
-
-extern void perror (const char *__s);
-
-
-
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
-# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
-extern int sys_nerr;
-extern const char *const sys_errlist[];
-
-
-extern int _sys_nerr;
-extern const char *const _sys_errlist[];
-# 854 "/usr/include/stdio.h" 2 3 4
-
-
-
-
-extern int fileno (FILE *__stream) throw () ;
-
-
-
-
-extern int fileno_unlocked (FILE *__stream) throw () ;
-# 872 "/usr/include/stdio.h" 3 4
-extern FILE *popen (const char *__command, const char *__modes) ;
-
-
-
-
-
-extern int pclose (FILE *__stream);
-
-
-
-
-
-extern char *ctermid (char *__s) throw ();
-
-
-
-
-
-extern char *cuserid (char *__s);
-
-
-
-
-struct obstack;
-
-
-extern int obstack_printf (struct obstack *__restrict __obstack,
-      const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
-extern int obstack_vprintf (struct obstack *__restrict __obstack,
-       const char *__restrict __format,
-       __gnuc_va_list __args)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
-
-
-
-
-
-extern void flockfile (FILE *__stream) throw ();
-
-
-
-extern int ftrylockfile (FILE *__stream) throw () ;
-
-
-extern void funlockfile (FILE *__stream) throw ();
-# 942 "/usr/include/stdio.h" 3 4
-}
-# 166 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
-
-
-
-
-
-
+# 172 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 1
 # 114 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 1 3 4
@@ -21343,74 +23271,6 @@ typedef uint64_t xuint64;
 # 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
        
 # 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 92 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace std
-{
-  using ::FILE;
-  using ::fpos_t;
-
-  using ::clearerr;
-  using ::fclose;
-  using ::feof;
-  using ::ferror;
-  using ::fflush;
-  using ::fgetc;
-  using ::fgetpos;
-  using ::fgets;
-  using ::fopen;
-  using ::fprintf;
-  using ::fputc;
-  using ::fputs;
-  using ::fread;
-  using ::freopen;
-  using ::fscanf;
-  using ::fseek;
-  using ::fsetpos;
-  using ::ftell;
-  using ::fwrite;
-  using ::getc;
-  using ::getchar;
-  using ::gets;
-  using ::perror;
-  using ::printf;
-  using ::putc;
-  using ::putchar;
-  using ::puts;
-  using ::remove;
-  using ::rename;
-  using ::rewind;
-  using ::scanf;
-  using ::setbuf;
-  using ::setvbuf;
-  using ::sprintf;
-  using ::sscanf;
-  using ::tmpfile;
-  using ::tmpnam;
-  using ::ungetc;
-  using ::vfprintf;
-  using ::vprintf;
-  using ::vsprintf;
-}
-# 148 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace __gnu_cxx
-{
-# 166 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-  using ::snprintf;
-  using ::vfscanf;
-  using ::vscanf;
-  using ::vsnprintf;
-  using ::vsscanf;
-
-}
-
-namespace std
-{
-  using ::__gnu_cxx::snprintf;
-  using ::__gnu_cxx::vfscanf;
-  using ::__gnu_cxx::vscanf;
-  using ::__gnu_cxx::vsnprintf;
-  using ::__gnu_cxx::vsscanf;
-}
 # 36 "/usr/include/x86_64-linux-gnu/gmp.h" 2
 # 58 "/usr/include/x86_64-linux-gnu/gmp.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
@@ -44945,9 +46805,7 @@ public:
   }
 
 };
-# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
-# 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h" 1
-
+# 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
 # 1 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 1
 # 67 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h"
 # 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
@@ -46528,2385 +48386,45 @@ inline bool operator!=(
 
 }
 # 72 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 2
-# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-       
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-       
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  class codecvt_base
-  {
-  public:
-    enum result
-    {
-      ok,
-      partial,
-      error,
-      noconv
-    };
-  };
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class __codecvt_abstract_base
-    : public locale::facet, public codecvt_base
-    {
-    public:
-
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-# 116 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      out(state_type& __state, const intern_type* __from,
-   const intern_type* __from_end, const intern_type*& __from_next,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const
-      {
- return this->do_out(__state, __from, __from_end, __from_next,
-       __to, __to_end, __to_next);
-      }
-# 155 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
-       extern_type*& __to_next) const
-      { return this->do_unshift(__state, __to,__to_end,__to_next); }
-# 196 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      in(state_type& __state, const extern_type* __from,
-  const extern_type* __from_end, const extern_type*& __from_next,
-  intern_type* __to, intern_type* __to_end,
-  intern_type*& __to_next) const
-      {
- return this->do_in(__state, __from, __from_end, __from_next,
-      __to, __to_end, __to_next);
-      }
-
-      int
-      encoding() const throw()
-      { return this->do_encoding(); }
-
-      bool
-      always_noconv() const throw()
-      { return this->do_always_noconv(); }
-
-      int
-      length(state_type& __state, const extern_type* __from,
-      const extern_type* __end, size_t __max) const
-      { return this->do_length(__state, __from, __end, __max); }
-
-      int
-      max_length() const throw()
-      { return this->do_max_length(); }
-
-    protected:
-      explicit
-      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
-
-      virtual
-      ~__codecvt_abstract_base() { }
-# 237 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const = 0;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const = 0;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const = 0;
-
-      virtual int
-      do_encoding() const throw() = 0;
-
-      virtual bool
-      do_always_noconv() const throw() = 0;
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const = 0;
-
-      virtual int
-      do_max_length() const throw() = 0;
-    };
-# 276 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-   template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt
-    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
-    {
-    public:
-
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0)
-      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt() { }
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-
-      virtual int
-      do_encoding() const throw();
-
-      virtual bool
-      do_always_noconv() const throw();
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-    };
-
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
-
-
-  template<>
-    class codecvt<char, char, mbstate_t>
-    : public __codecvt_abstract_base<char, char, mbstate_t>
-    {
-    public:
-
-      typedef char intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0);
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt();
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-
-      virtual int
-      do_encoding() const throw();
-
-      virtual bool
-      do_always_noconv() const throw();
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-  };
-
-
-
-  template<>
-    class codecvt<wchar_t, char, mbstate_t>
-    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
-    {
-    public:
-
-      typedef wchar_t intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0);
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt();
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state,
-      const extern_type* __from, const extern_type* __from_end,
-      const extern_type*& __from_next,
-      intern_type* __to, intern_type* __to_end,
-      intern_type*& __to_next) const;
-
-      virtual
-      int do_encoding() const throw();
-
-      virtual
-      bool do_always_noconv() const throw();
-
-      virtual
-      int do_length(state_type&, const extern_type* __from,
-      const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-    };
-
-
-
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
-    {
-    public:
-      explicit
-      codecvt_byname(const char* __s, size_t __refs = 0)
-      : codecvt<_InternT, _ExternT, _StateT>(__refs)
-      {
- if (__builtin_strcmp(__s, "C") != 0
-     && __builtin_strcmp(__s, "POSIX") != 0)
-   {
-     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
-     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
-   }
-      }
-
-    protected:
-      virtual
-      ~codecvt_byname() { }
-    };
-
-
-
-
-  extern template class codecvt_byname<char, char, mbstate_t>;
-
-  extern template
-    const codecvt<char, char, mbstate_t>&
-    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
-
-  extern template
-    bool
-    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
-
-
-  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
-
-  extern template
-    const codecvt<wchar_t, char, mbstate_t>&
-    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-
-  extern template
-    bool
-    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-
-
-
-
-}
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-       
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-       
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-       
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  typedef __gthread_mutex_t __c_lock;
-
-
-  typedef FILE __c_file;
-
-
-}
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  template<typename _CharT>
-    class __basic_file;
-
-
-  template<>
-    class __basic_file<char>
-    {
-
-      __c_file* _M_cfile;
-
-
-      bool _M_cfile_created;
-
-    public:
-      __basic_file(__c_lock* __lock = 0) throw ();
-
-      __basic_file*
-      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
-
-      __basic_file*
-      sys_open(__c_file* __file, ios_base::openmode);
-
-      __basic_file*
-      sys_open(int __fd, ios_base::openmode __mode) throw ();
-
-      __basic_file*
-      close();
-
-      __attribute__ ((__pure__)) bool
-      is_open() const throw ();
-
-      __attribute__ ((__pure__)) int
-      fd() throw ();
-
-      __attribute__ ((__pure__)) __c_file*
-      file() throw ();
-
-      ~__basic_file();
-
-      streamsize
-      xsputn(const char* __s, streamsize __n);
-
-      streamsize
-      xsputn_2(const char* __s1, streamsize __n1,
-        const char* __s2, streamsize __n2);
-
-      streamsize
-      xsgetn(char* __s, streamsize __n);
-
-      streamoff
-      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
-
-      int
-      sync();
-
-      streamsize
-      showmanyc();
-    };
-
-
-}
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef __basic_file<char> __file_type;
-      typedef typename traits_type::state_type __state_type;
-      typedef codecvt<char_type, char, __state_type> __codecvt_type;
-
-      friend class ios_base;
-
-    protected:
-
-
-      __c_lock _M_lock;
-
-
-      __file_type _M_file;
-
-
-      ios_base::openmode _M_mode;
-
-
-      __state_type _M_state_beg;
-
-
-
-
-      __state_type _M_state_cur;
-
-
-
-      __state_type _M_state_last;
-
-
-      char_type* _M_buf;
-
-
-
-
-
-
-      size_t _M_buf_size;
-
-
-      bool _M_buf_allocated;
-# 130 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      bool _M_reading;
-      bool _M_writing;
-
-
-
-
-
-
-
-      char_type _M_pback;
-      char_type* _M_pback_cur_save;
-      char_type* _M_pback_end_save;
-      bool _M_pback_init;
-
-
-
-      const __codecvt_type* _M_codecvt;
-
-
-
-
-
-
-      char* _M_ext_buf;
-
-
-
-
-      streamsize _M_ext_buf_size;
-
-
-
-
-
-
-      const char* _M_ext_next;
-      char* _M_ext_end;
-
-
-
-
-
-
-      void
-      _M_create_pback()
-      {
- if (!_M_pback_init)
-   {
-     _M_pback_cur_save = this->gptr();
-     _M_pback_end_save = this->egptr();
-     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
-     _M_pback_init = true;
-   }
-      }
-
-
-
-
-
-
-      void
-      _M_destroy_pback() throw()
-      {
- if (_M_pback_init)
-   {
-
-     _M_pback_cur_save += this->gptr() != this->eback();
-     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
-     _M_pback_init = false;
-   }
-      }
-
-    public:
-
-
-
-
-
-
-
-      basic_filebuf();
-
-
-
-
-      virtual
-      ~basic_filebuf()
-      { this->close(); }
-
-
-
-
-
-      bool
-      is_open() const throw()
-      { return _M_file.is_open(); }
-# 266 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      open(const char* __s, ios_base::openmode __mode);
-# 293 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      close();
-
-    protected:
-      void
-      _M_allocate_internal_buffer();
-
-      void
-      _M_destroy_internal_buffer() throw();
-
-
-      virtual streamsize
-      showmanyc();
-
-
-
-
-
-
-      virtual int_type
-      underflow();
-
-      virtual int_type
-      pbackfail(int_type __c = _Traits::eof());
-# 325 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      virtual int_type
-      overflow(int_type __c = _Traits::eof());
-
-
-
-      bool
-      _M_convert_to_external(char_type*, streamsize);
-# 345 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n);
-
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      virtual pos_type
-      seekpos(pos_type __pos,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-
-      pos_type
-      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
-
-      int
-      _M_get_ext_pos(__state_type &__state);
-
-      virtual int
-      sync();
-
-      virtual void
-      imbue(const locale& __loc);
-
-      virtual streamsize
-      xsgetn(char_type* __s, streamsize __n);
-
-      virtual streamsize
-      xsputn(const char_type* __s, streamsize __n);
-
-
-      bool
-      _M_terminate_output();
-# 391 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      _M_set_buffer(streamsize __off)
-      {
-  const bool __testin = _M_mode & ios_base::in;
-  const bool __testout = _M_mode & ios_base::out;
-
- if (__testin && __off > 0)
-   this->setg(_M_buf, _M_buf, _M_buf + __off);
- else
-   this->setg(_M_buf, _M_buf, _M_buf);
-
- if (__testout && __off == 0 && _M_buf_size > 1 )
-   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
- else
-   this->setp(0, 0);
-      }
-    };
-# 419 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_ifstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-# 446 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_ifstream() : __istream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-# 459 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 491 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_ifstream()
-      { }
-# 501 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-
-
-
-
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-
-
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-# 530 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s, ios_base::openmode __mode = ios_base::in)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::in))
-   this->setstate(ios_base::failbit);
- else
-
-
-   this->clear();
-      }
-# 568 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-# 587 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_ofstream : public basic_ostream<_CharT,_Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-# 614 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_ofstream(): __ostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-# 628 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_ofstream(const char* __s,
-       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
-      : __ostream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 662 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_ofstream()
-      { }
-# 672 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-
-
-
-
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-
-
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-# 701 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::out))
-   this->setstate(ios_base::failbit);
- else
-
-
-   this->clear();
-      }
-# 741 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-# 760 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_fstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ios<char_type, traits_type> __ios_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-# 788 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_fstream()
-      : __iostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-# 800 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_fstream(const char* __s,
-      ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __iostream_type(0), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 831 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_fstream()
-      { }
-# 841 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-
-
-
-
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-
-
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-# 870 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::in | ios_base::out)
-      {
- if (!_M_filebuf.open(__s, __mode))
-   this->setstate(ios_base::failbit);
- else
-
-
-   this->clear();
-      }
-# 910 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-
-
-}
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-       
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_allocate_internal_buffer()
-    {
-
-
-      if (!_M_buf_allocated && !_M_buf)
- {
-   _M_buf = new char_type[_M_buf_size];
-   _M_buf_allocated = true;
- }
-    }
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_destroy_internal_buffer() throw()
-    {
-      if (_M_buf_allocated)
- {
-   delete [] _M_buf;
-   _M_buf = 0;
-   _M_buf_allocated = false;
- }
-      delete [] _M_ext_buf;
-      _M_ext_buf = 0;
-      _M_ext_buf_size = 0;
-      _M_ext_next = 0;
-      _M_ext_end = 0;
-    }
-
-  template<typename _CharT, typename _Traits>
-    basic_filebuf<_CharT, _Traits>::
-    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
-    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
-    _M_state_last(), _M_buf(0), _M_buf_size(8192),
-    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
-    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
-    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
-    _M_ext_end(0)
-    {
-      if (has_facet<__codecvt_type>(this->_M_buf_locale))
- _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    open(const char* __s, ios_base::openmode __mode)
-    {
-      __filebuf_type *__ret = 0;
-      if (!this->is_open())
- {
-   _M_file.open(__s, __mode);
-   if (this->is_open())
-     {
-       _M_allocate_internal_buffer();
-       _M_mode = __mode;
-
-
-       _M_reading = false;
-       _M_writing = false;
-       _M_set_buffer(-1);
-
-
-       _M_state_last = _M_state_cur = _M_state_beg;
-
-
-       if ((__mode & ios_base::ate)
-    && this->seekoff(0, ios_base::end, __mode)
-    == pos_type(off_type(-1)))
-  this->close();
-       else
-  __ret = this;
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    close()
-    {
-      if (!this->is_open())
- return 0;
-
-      bool __testfail = false;
-      {
-
- struct __close_sentry
- {
-   basic_filebuf *__fb;
-   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
-   ~__close_sentry ()
-   {
-     __fb->_M_mode = ios_base::openmode(0);
-     __fb->_M_pback_init = false;
-     __fb->_M_destroy_internal_buffer();
-     __fb->_M_reading = false;
-     __fb->_M_writing = false;
-     __fb->_M_set_buffer(-1);
-     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
-   }
- } __cs (this);
-
- try
-   {
-     if (!_M_terminate_output())
-       __testfail = true;
-   }
- catch(__cxxabiv1::__forced_unwind&)
-   {
-     _M_file.close();
-     throw;
-   }
- catch(...)
-   { __testfail = true; }
-      }
-
-      if (!_M_file.close())
- __testfail = true;
-
-      if (__testfail)
- return 0;
-      else
- return this;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    showmanyc()
-    {
-      streamsize __ret = -1;
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin && this->is_open())
- {
-
-
-   __ret = this->egptr() - this->gptr();
-
-
-
-
-
-
-
-   if (__check_facet(_M_codecvt).encoding() >= 0)
-
-     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-
-
-
-   _M_destroy_pback();
-
-   if (this->gptr() < this->egptr())
-     return traits_type::to_int_type(*this->gptr());
-
-
-   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-
-
-   bool __got_eof = false;
-
-   streamsize __ilen = 0;
-   codecvt_base::result __r = codecvt_base::ok;
-   if (__check_facet(_M_codecvt).always_noconv())
-     {
-       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
-          __buflen);
-       if (__ilen == 0)
-  __got_eof = true;
-     }
-   else
-     {
-
-
-       const int __enc = _M_codecvt->encoding();
-       streamsize __blen;
-       streamsize __rlen;
-       if (__enc > 0)
-  __blen = __rlen = __buflen * __enc;
-       else
-  {
-    __blen = __buflen + _M_codecvt->max_length() - 1;
-    __rlen = __buflen;
-  }
-       const streamsize __remainder = _M_ext_end - _M_ext_next;
-       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
-
-
-
-       if (_M_reading && this->egptr() == this->eback() && __remainder)
-  __rlen = 0;
-
-
-
-       if (_M_ext_buf_size < __blen)
-  {
-    char* __buf = new char[__blen];
-    if (__remainder)
-      __builtin_memcpy(__buf, _M_ext_next, __remainder);
-
-    delete [] _M_ext_buf;
-    _M_ext_buf = __buf;
-    _M_ext_buf_size = __blen;
-  }
-       else if (__remainder)
-  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-
-       _M_ext_next = _M_ext_buf;
-       _M_ext_end = _M_ext_buf + __remainder;
-       _M_state_last = _M_state_cur;
-
-       do
-  {
-    if (__rlen > 0)
-      {
-
-
-
-        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
-   {
-     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid")
-
-                          );
-   }
-        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
-        if (__elen == 0)
-   __got_eof = true;
-        else if (__elen == -1)
-   break;
-        _M_ext_end += __elen;
-      }
-
-    char_type* __iend = this->eback();
-    if (_M_ext_next < _M_ext_end)
-      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
-      _M_ext_end, _M_ext_next,
-      this->eback(),
-      this->eback() + __buflen, __iend);
-    if (__r == codecvt_base::noconv)
-      {
-        size_t __avail = _M_ext_end - _M_ext_buf;
-        __ilen = std::min(__avail, __buflen);
-        traits_type::copy(this->eback(),
-     reinterpret_cast<char_type*>
-     (_M_ext_buf), __ilen);
-        _M_ext_next = _M_ext_buf + __ilen;
-      }
-    else
-      __ilen = __iend - this->eback();
-
-
-
-
-    if (__r == codecvt_base::error)
-      break;
-
-    __rlen = 1;
-  }
-       while (__ilen == 0 && !__got_eof);
-     }
-
-   if (__ilen > 0)
-     {
-       _M_set_buffer(__ilen);
-       _M_reading = true;
-       __ret = traits_type::to_int_type(*this->gptr());
-     }
-   else if (__got_eof)
-     {
-
-
-
-       _M_set_buffer(-1);
-       _M_reading = false;
-
-
-       if (__r == codecvt_base::partial)
-  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file")
-                                       );
-     }
-   else if (__r == codecvt_base::error)
-     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file")
-                                    );
-   else
-     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file")
-                             );
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    pbackfail(int_type __i)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-
-
-   const bool __testpb = _M_pback_init;
-   const bool __testeof = traits_type::eq_int_type(__i, __ret);
-   int_type __tmp;
-   if (this->eback() < this->gptr())
-     {
-       this->gbump(-1);
-       __tmp = traits_type::to_int_type(*this->gptr());
-     }
-   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
-     {
-       __tmp = this->underflow();
-       if (traits_type::eq_int_type(__tmp, __ret))
-  return __ret;
-     }
-   else
-     {
-
-
-
-
-
-       return __ret;
-     }
-
-
-
-   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
-     __ret = __i;
-   else if (__testeof)
-     __ret = traits_type::not_eof(__i);
-   else if (!__testpb)
-     {
-       _M_create_pback();
-       _M_reading = true;
-       *this->gptr() = traits_type::to_char_type(__i);
-       __ret = __i;
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    overflow(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testeof = traits_type::eq_int_type(__c, __ret);
-      const bool __testout = _M_mode & ios_base::out;
-      if (__testout)
- {
-          if (_M_reading)
-            {
-              _M_destroy_pback();
-              const int __gptr_off = _M_get_ext_pos(_M_state_last);
-              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
-                  == pos_type(off_type(-1)))
-                return __ret;
-            }
-   if (this->pbase() < this->pptr())
-     {
-
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-
-
-
-       if (_M_convert_to_external(this->pbase(),
-      this->pptr() - this->pbase()))
-  {
-    _M_set_buffer(0);
-    __ret = traits_type::not_eof(__c);
-  }
-     }
-   else if (_M_buf_size > 1)
-     {
-
-
-
-       _M_set_buffer(0);
-       _M_writing = true;
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-       __ret = traits_type::not_eof(__c);
-     }
-   else
-     {
-
-       char_type __conv = traits_type::to_char_type(__c);
-       if (__testeof || _M_convert_to_external(&__conv, 1))
-  {
-    _M_writing = true;
-    __ret = traits_type::not_eof(__c);
-  }
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
-    {
-
-      streamsize __elen;
-      streamsize __plen;
-      if (__check_facet(_M_codecvt).always_noconv())
- {
-   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
-   __plen = __ilen;
- }
-      else
- {
-
-
-   streamsize __blen = __ilen * _M_codecvt->max_length();
-   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
-
-   char* __bend;
-   const char_type* __iend;
-   codecvt_base::result __r;
-   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
-    __iend, __buf, __buf + __blen, __bend);
-
-   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
-     __blen = __bend - __buf;
-   else if (__r == codecvt_base::noconv)
-     {
-
-       __buf = reinterpret_cast<char*>(__ibuf);
-       __blen = __ilen;
-     }
-   else
-     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error")
-                           );
-
-   __elen = _M_file.xsputn(__buf, __blen);
-   __plen = __blen;
-
-
-   if (__r == codecvt_base::partial && __elen == __plen)
-     {
-       const char_type* __iresume = __iend;
-       streamsize __rlen = this->pptr() - __iend;
-       __r = _M_codecvt->out(_M_state_cur, __iresume,
-        __iresume + __rlen, __iend, __buf,
-        __buf + __blen, __bend);
-       if (__r != codecvt_base::error)
-  {
-    __rlen = __bend - __buf;
-    __elen = _M_file.xsputn(__buf, __rlen);
-    __plen = __rlen;
-  }
-       else
-  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error")
-                        );
-     }
- }
-      return __elen == __plen;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsgetn(_CharT* __s, streamsize __n)
-    {
-
-      streamsize __ret = 0;
-      if (_M_pback_init)
- {
-   if (__n > 0 && this->gptr() == this->eback())
-     {
-       *__s++ = *this->gptr();
-       this->gbump(1);
-       __ret = 1;
-       --__n;
-     }
-   _M_destroy_pback();
- }
-      else if (_M_writing)
- {
-    if (overflow() == traits_type::eof())
-      return __ret;
-    _M_set_buffer(-1);
-    _M_writing = false;
-  }
-
-
-
-
-      const bool __testin = _M_mode & ios_base::in;
-      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-
-      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
-     && __testin)
-   {
-
-     const streamsize __avail = this->egptr() - this->gptr();
-     if (__avail != 0)
-       {
-        traits_type::copy(__s, this->gptr(), __avail);
-         __s += __avail;
-        this->setg(this->eback(), this->gptr() + __avail,
-     this->egptr());
-        __ret += __avail;
-        __n -= __avail;
-       }
-
-
-
-     streamsize __len;
-     for (;;)
-       {
-         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
-           __n);
-         if (__len == -1)
-    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file")
-                                );
-         if (__len == 0)
-    break;
-
-         __n -= __len;
-         __ret += __len;
-         if (__n == 0)
-    break;
-
-         __s += __len;
-       }
-
-     if (__n == 0)
-       {
-         _M_set_buffer(0);
-         _M_reading = true;
-       }
-     else if (__len == 0)
-       {
-
-
-
-         _M_set_buffer(-1);
-         _M_reading = false;
-       }
-   }
-      else
-   __ret += __streambuf_type::xsgetn(__s, __n);
-
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsputn(const _CharT* __s, streamsize __n)
-    {
-      streamsize __ret = 0;
-
-
-
-      const bool __testout = _M_mode & ios_base::out;
-      if (__check_facet(_M_codecvt).always_noconv()
-     && __testout && !_M_reading)
- {
-
-   const streamsize __chunk = 1ul << 10;
-   streamsize __bufavail = this->epptr() - this->pptr();
-
-
-   if (!_M_writing && _M_buf_size > 1)
-     __bufavail = _M_buf_size - 1;
-
-   const streamsize __limit = std::min(__chunk, __bufavail);
-   if (__n >= __limit)
-     {
-       const streamsize __buffill = this->pptr() - this->pbase();
-       const char* __buf = reinterpret_cast<const char*>(this->pbase());
-       __ret = _M_file.xsputn_2(__buf, __buffill,
-           reinterpret_cast<const char*>(__s),
-           __n);
-       if (__ret == __buffill + __n)
-  {
-    _M_set_buffer(0);
-    _M_writing = true;
-  }
-       if (__ret > __buffill)
-  __ret -= __buffill;
-       else
-  __ret = 0;
-     }
-   else
-     __ret = __streambuf_type::xsputn(__s, __n);
- }
-       else
-  __ret = __streambuf_type::xsputn(__s, __n);
-       return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    setbuf(char_type* __s, streamsize __n)
-    {
-      if (!this->is_open())
- {
-   if (__s == 0 && __n == 0)
-     _M_buf_size = 1;
-   else if (__s && __n > 0)
-     {
-# 702 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-       _M_buf = __s;
-       _M_buf_size = __n;
-     }
- }
-      return this;
-    }
-
-
-
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
-    {
-      int __width = 0;
-      if (_M_codecvt)
- __width = _M_codecvt->encoding();
-      if (__width < 0)
- __width = 0;
-
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testfail = __off != 0 && __width <= 0;
-      if (this->is_open() && !__testfail)
- {
-
-
-
-
-   bool __no_movement = __way == ios_base::cur && __off == 0
-     && (!_M_writing || _M_codecvt->always_noconv());
-
-
-   if (!__no_movement)
-     _M_destroy_pback();
-
-
-
-
-
-
-   __state_type __state = _M_state_beg;
-   off_type __computed_off = __off * __width;
-   if (_M_reading && __way == ios_base::cur)
-     {
-       __state = _M_state_last;
-       __computed_off += _M_get_ext_pos(__state);
-     }
-   if (!__no_movement)
-     __ret = _M_seek(__computed_off, __way, __state);
-   else
-     {
-       if (_M_writing)
-  __computed_off = this->pptr() - this->pbase();
-
-        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
-        if (__file_off != off_type(-1))
-  {
-    __ret = __file_off + __computed_off;
-    __ret.state(__state);
-  }
-     }
- }
-      return __ret;
-    }
-
-
-
-
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekpos(pos_type __pos, ios_base::openmode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (this->is_open())
- {
-
-   _M_destroy_pback();
-   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (_M_terminate_output())
- {
-   off_type __file_off = _M_file.seekoff(__off, __way);
-   if (__file_off != off_type(-1))
-     {
-       _M_reading = false;
-       _M_writing = false;
-       _M_ext_next = _M_ext_end = _M_ext_buf;
-       _M_set_buffer(-1);
-       _M_state_cur = __state;
-       __ret = __file_off;
-       __ret.state(_M_state_cur);
-     }
- }
-      return __ret;
-    }
-
-
-
-
-  template<typename _CharT, typename _Traits>
-    int basic_filebuf<_CharT, _Traits>::
-    _M_get_ext_pos(__state_type& __state)
-    {
-      if (_M_codecvt->always_noconv())
-        return this->gptr() - this->egptr();
-      else
-        {
-
-
-
-          const int __gptr_off =
-            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
-                               this->gptr() - this->eback());
-          return _M_ext_buf + __gptr_off - _M_ext_end;
-        }
-    }
-
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_terminate_output()
-    {
-
-      bool __testvalid = true;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __testvalid = false;
- }
-
-
-      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
-   && __testvalid)
- {
-
-
-
-   const size_t __blen = 128;
-   char __buf[__blen];
-   codecvt_base::result __r;
-   streamsize __ilen = 0;
-
-   do
-     {
-       char* __next;
-       __r = _M_codecvt->unshift(_M_state_cur, __buf,
-     __buf + __blen, __next);
-       if (__r == codecvt_base::error)
-  __testvalid = false;
-       else if (__r == codecvt_base::ok ||
-         __r == codecvt_base::partial)
-  {
-    __ilen = __next - __buf;
-    if (__ilen > 0)
-      {
-        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
-        if (__elen != __ilen)
-   __testvalid = false;
-      }
-  }
-     }
-   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
-
-   if (__testvalid)
-     {
-
-
-
-
-       const int_type __tmp = this->overflow();
-       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-  __testvalid = false;
-     }
- }
-      return __testvalid;
-    }
-
-  template<typename _CharT, typename _Traits>
-    int
-    basic_filebuf<_CharT, _Traits>::
-    sync()
-    {
-
-
-      int __ret = 0;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __ret = -1;
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    imbue(const locale& __loc)
-    {
-      bool __testvalid = true;
-
-      const __codecvt_type* _M_codecvt_tmp = 0;
-      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
- _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
-
-      if (this->is_open())
- {
-
-   if ((_M_reading || _M_writing)
-       && __check_facet(_M_codecvt).encoding() == -1)
-     __testvalid = false;
-   else
-     {
-       if (_M_reading)
-  {
-    if (__check_facet(_M_codecvt).always_noconv())
-      {
-        if (_M_codecvt_tmp
-     && !__check_facet(_M_codecvt_tmp).always_noconv())
-   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
-                 != pos_type(off_type(-1));
-      }
-    else
-      {
-
-        _M_ext_next = _M_ext_buf
-   + _M_codecvt->length(_M_state_last, _M_ext_buf,
-          _M_ext_next,
-          this->gptr() - this->eback());
-        const streamsize __remainder = _M_ext_end - _M_ext_next;
-        if (__remainder)
-   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-
-        _M_ext_next = _M_ext_buf;
-        _M_ext_end = _M_ext_buf + __remainder;
-        _M_set_buffer(-1);
-        _M_state_last = _M_state_cur = _M_state_beg;
-      }
-  }
-       else if (_M_writing && (__testvalid = _M_terminate_output()))
-  _M_set_buffer(-1);
-     }
- }
-
-      if (__testvalid)
- _M_codecvt = _M_codecvt_tmp;
-      else
- _M_codecvt = 0;
-    }
-
-
-
-
-  extern template class basic_filebuf<char>;
-  extern template class basic_ifstream<char>;
-  extern template class basic_ofstream<char>;
-  extern template class basic_fstream<char>;
-
-
-  extern template class basic_filebuf<wchar_t>;
-  extern template class basic_ifstream<wchar_t>;
-  extern template class basic_ofstream<wchar_t>;
-  extern template class basic_fstream<wchar_t>;
-
-
-
-
-}
-# 922 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 4 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorSim.h" 2
-
-using namespace std;
-
-
-
-
+# 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
 
  struct rfnoc_axis{
      ap_int<32> data;
      ap_uint<1> last;
-};
+   };
 
-struct semiComplex{
- ap_fixed<16,11> i;
- ap_fixed<16,11> q;
-};
+ struct semiComplex{
+   ap_fixed<16,11> i;
+   ap_fixed<16,11> q;
+ };
 
-struct bigSemiComplex{
- ap_fixed<32,22> i;
- ap_fixed<32,22> q;
-};
+ struct bigSemiComplex{
+  ap_fixed<32,22> i;
+  ap_fixed<32,22> q;
+ };
 
-struct reallyBigSemiComplex{
- ap_fixed<48,33> i;
- ap_fixed<48,33> q;
-};
 
-static semiComplex phaseClass0[16];
-static bigSemiComplex resPhase0[16];
-static bigSemiComplex Phase0[16];
 
-static semiComplex phaseClass1[16];
-static bigSemiComplex resPhase1[16];
-static bigSemiComplex Phase1[16];
+static ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
 
-static semiComplex phaseClass2[16];
-static bigSemiComplex resPhase2[16];
-static bigSemiComplex Phase2[16];
 
-static semiComplex phaseClass3[16];
-static bigSemiComplex resPhase3[16];
-static bigSemiComplex Phase3[16];
 
-static semiComplex phaseClass4[16];
-static bigSemiComplex resPhase4[16];
-static bigSemiComplex Phase4[16];
+ void correlateTop(rfnoc_axis i_data, rfnoc_axis o_data, ap_uint<1> start, ap_uint<4> phaseClass);
 
-static semiComplex phaseClass5[16];
-static bigSemiComplex resPhase5[16];
-static bigSemiComplex Phase5[16];
+ class correlate{
+ public:
+  void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
+  ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
+  ap_fixed<16,11> phaseClass0[16];
 
-static semiComplex phaseClass6[16];
-static bigSemiComplex resPhase6[16];
-static bigSemiComplex Phase6[16];
+  ap_uint<1> corrSeq[16];
 
-static semiComplex phaseClass7[16];
-static bigSemiComplex resPhase7[16];
-static bigSemiComplex Phase7[16];
-
-static semiComplex phaseClass8[16];
-static bigSemiComplex resPhase8[16];
-static bigSemiComplex Phase8[16];
-
-static semiComplex phaseClass9[16];
-static bigSemiComplex resPhase9[16];
-static bigSemiComplex Phase9[16];
-
-static semiComplex phaseClass10[16];
-static bigSemiComplex resPhase10[16];
-static bigSemiComplex Phase10[16];
-
-static semiComplex phaseClass11[16];
-static bigSemiComplex resPhase11[16];
-static bigSemiComplex Phase11[16];
-
-static semiComplex phaseClass12[16];
-static bigSemiComplex resPhase12[16];
-static bigSemiComplex Phase12[16];
-
-static semiComplex phaseClass13[16];
-static bigSemiComplex resPhase13[16];
-static bigSemiComplex Phase13[16];
-
-static semiComplex phaseClass14[16];
-static bigSemiComplex resPhase14[16];
-static bigSemiComplex Phase14[16];
-
-static semiComplex phaseClass15[16];
-static bigSemiComplex resPhase15[16];
-static bigSemiComplex Phase15[16];
-
-ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
-
-void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ap_int<32> pos);
-semiComplex toComplexFromStream(rfnoc_axis dat);
-rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos);
-void correlate(ofstream *result, ap_uint<4> phaseClass);
-void shiftPhaseClass(semiComplex newVal, ap_uint<4> phaseClass,ofstream *result);
-void displayOutput(ofstream *result);
-
-void correlation(rfnoc_axis i_data, rfnoc_axis *o_data, ofstream *result, ap_uint<4> phaseClass){
-
- semiComplex num;
- num = toComplexFromStream(i_data);
-
- shiftPhaseClass(num,phaseClass,result);
-
- correlate(result,phaseClass);
- return;
-}
-
-void displayOutput(ofstream *result){
- for(int a;a<16;a++){
-  *result << setw(32) << Phase0[a].q;
-  *result << ",";
-  *result << endl;
- }
-}
-
-void correlate(ofstream *result, ap_uint<4> phaseClass){
- bigSemiComplex temp;
- temp.i=0;
- temp.q=0;
- switch(phaseClass){
- case 0:
-  for(int a =15;a>=0;a--){
-   resPhase0[a].i = corrSeq[a] * phaseClass0[a].i;
-   resPhase0[a].q = corrSeq[a] * phaseClass0[a].q;
-   if(phaseClass0[a].q > 0){
-
-
-
-
-   }
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase0[a].i;
-   temp.q += resPhase0[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase0[a] = Phase0[a-1];
-  }
-
-
-  *result << setw(16) << temp.q;
-  *result << endl;
-
-  Phase0[0] = temp;
-  break;
- case 1:
-  for(int a =15;a>0;a--){
-   resPhase1[a].i = corrSeq[a] * phaseClass1[a].i;
-   resPhase1[a].q = corrSeq[a] * phaseClass1[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase1[a].i;
-   temp.q += resPhase1[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase1[a] = Phase1[a-1];
-  }
-  Phase1[0] = temp;
-  break;
- case 2:
-  for(int a =15;a>0;a--){
-   resPhase2[a].i = corrSeq[a] * phaseClass2[a].i;
-   resPhase2[a].q = corrSeq[a] * phaseClass2[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase2[a].i;
-   temp.q += resPhase2[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase2[a] = Phase2[a-1];
-  }
-  Phase2[0] = temp;
-  break;
- case 3:
-  for(int a =15;a>0;a--){
-   resPhase3[a].i = corrSeq[a] * phaseClass3[a].i;
-   resPhase3[a].q = corrSeq[a] * phaseClass3[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase3[a].i;
-   temp.q += resPhase3[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase3[a] = Phase3[a-1];
-  }
-  Phase3[0] = temp;
-  break;
- case 4:
-  for(int a =15;a>0;a--){
-   resPhase4[a].i = corrSeq[a] * phaseClass4[a].i;
-   resPhase4[a].q = corrSeq[a] * phaseClass4[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase4[a].i;
-   temp.q += resPhase4[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase4[a] = Phase4[a-1];
-  }
-  Phase4[0] = temp;
-  break;
- case 5:
-  for(int a =15;a>0;a--){
-   resPhase5[a].i = corrSeq[a] * phaseClass5[a].i;
-   resPhase5[a].q = corrSeq[a] * phaseClass5[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase5[a].i;
-   temp.q += resPhase5[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase5[a] = Phase5[a-1];
-  }
-  Phase5[0] = temp;
-  break;
- case 6:
-  for(int a =15;a>0;a--){
-   resPhase6[a].i = corrSeq[a] * phaseClass6[a].i;
-   resPhase6[a].q = corrSeq[a] * phaseClass6[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase6[a].i;
-   temp.q += resPhase6[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase6[a] = Phase6[a-1];
-  }
-  Phase6[0] = temp;
-  break;
- case 7:
-  for(int a =15;a>0;a--){
-   resPhase7[a].i = corrSeq[a] * phaseClass7[a].i;
-   resPhase7[a].q = corrSeq[a] * phaseClass7[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase7[a].i;
-   temp.q += resPhase7[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase7[a] = Phase7[a-1];
-  }
-  Phase7[0] = temp;
-  break;
- case 8:
-  for(int a =15;a>0;a--){
-   resPhase8[a].i = corrSeq[a] * phaseClass8[a].i;
-   resPhase8[a].q = corrSeq[a] * phaseClass8[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase8[a].i;
-   temp.q += resPhase8[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase8[a] = Phase8[a-1];
-  }
-  Phase8[0] = temp;
-  break;
- case 9:
-  for(int a =15;a>0;a--){
-   resPhase9[a].i = corrSeq[a] * phaseClass9[a].i;
-   resPhase9[a].q = corrSeq[a] * phaseClass9[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase9[a].i;
-   temp.q += resPhase9[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase9[a] = Phase9[a-1];
-  }
-  Phase9[0] = temp;
-  break;
- case 10:
-  for(int a =15;a>0;a--){
-   resPhase10[a].i = corrSeq[a] * phaseClass10[a].i;
-   resPhase10[a].q = corrSeq[a] * phaseClass10[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase10[a].i;
-   temp.q += resPhase10[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase10[a] = Phase10[a-1];
-  }
-  Phase10[0] = temp;
-  break;
- case 11:
-  for(int a =15;a>0;a--){
-   resPhase11[a].i = corrSeq[a] * phaseClass11[a].i;
-   resPhase11[a].q = corrSeq[a] * phaseClass11[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase11[a].i;
-   temp.q += resPhase11[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase11[a] = Phase11[a-1];
-  }
-  Phase11[0] = temp;
-  break;
- case 12:
-  for(int a =15;a>0;a--){
-   resPhase12[a].i = corrSeq[a] * phaseClass12[a].i;
-   resPhase12[a].q = corrSeq[a] * phaseClass12[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase12[a].i;
-   temp.q += resPhase12[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase12[a] = Phase12[a-1];
-  }
-  Phase12[0] = temp;
-  break;
- case 13:
-  for(int a =15;a>0;a--){
-   resPhase13[a].i = corrSeq[a] * phaseClass13[a].i;
-   resPhase13[a].q = corrSeq[a] * phaseClass13[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase13[a].i;
-   temp.q += resPhase13[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase13[a] = Phase13[a-1];
-  }
-  Phase13[0] = temp;
-  break;
- case 14:
-  for(int a =15;a>0;a--){
-   resPhase14[a].i = corrSeq[a] * phaseClass14[a].i;
-   resPhase14[a].q = corrSeq[a] * phaseClass14[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase14[a].i;
-   temp.q += resPhase14[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase14[a] = Phase14[a-1];
-  }
-  Phase14[0] = temp;
-  break;
- case 15:
-  for(int a =15;a>0;a--){
-   resPhase15[a].i = corrSeq[a] * phaseClass15[a].i;
-   resPhase15[a].q = corrSeq[a] * phaseClass15[a].q;
-  }
-  for(int a=0;a<16;a++){
-   temp.i += resPhase15[a].i;
-   temp.q += resPhase15[a].q;
-  }
-
-  for(int a=15;a>0;a--){
-   Phase15[a] = Phase15[a-1];
-  }
-  Phase15[0] = temp;
-  break;
-
- }
-}
-
-void shiftPhaseClass(semiComplex newVal, ap_uint<4> phaseClass, ofstream *result){
-
-
-
-
- switch(phaseClass){
- case 0:
-  for(int a =15;a>0;a--){
-   phaseClass0[a] = phaseClass0[a-1];
-
-
-
-  }
-  phaseClass0[0] = newVal;
-
-
-  break;
- case 1:
-  for(int a =15;a>0;a--){
-   phaseClass1[a] = phaseClass1[a-1];
-  }
-  phaseClass1[0] = newVal;
-  break;
-
- case 2:
-  for(int a =15;a>0;a--){
-   phaseClass2[a] = phaseClass2[a-1];
-  }
-  phaseClass2[0] = newVal;
-  break;
-
- case 3:
-  for(int a =15;a>0;a--){
-   phaseClass3[a] = phaseClass3[a-1];
-  }
-  phaseClass3[0] = newVal;
-  break;
-
- case 4:
-  for(int a =15;a>0;a--){
-   phaseClass4[a] = phaseClass4[a-1];
-  }
-  phaseClass4[0] = newVal;
-  break;
- case 5:
-  for(int a =15;a>0;a--){
-   phaseClass5[a] = phaseClass5[a-1];
-  }
-  phaseClass5[0] = newVal;
-  break;
- case 6:
-  for(int a =15;a>0;a--){
-   phaseClass6[a] = phaseClass6[a-1];
-  }
-  phaseClass6[0] = newVal;
-  break;
- case 7:
-  for(int a =15;a>0;a--){
-   phaseClass7[a] = phaseClass7[a-1];
-  }
-  phaseClass7[0] = newVal;
-  break;
- case 8:
-  for(int a =15;a>0;a--){
-   phaseClass8[a] = phaseClass8[a-1];
-  }
-  phaseClass8[0] = newVal;
-  break;
- case 9:
-  for(int a =15;a>0;a--){
-   phaseClass9[a] = phaseClass9[a-1];
-  }
-  phaseClass9[0] = newVal;
-  break;
- case 10:
-  for(int a =15;a>0;a--){
-   phaseClass10[a] = phaseClass10[a-1];
-  }
-  phaseClass10[0] = newVal;
-  break;
- case 11:
-  for(int a =15;a>0;a--){
-   phaseClass11[a] = phaseClass11[a-1];
-  }
-  phaseClass11[0] = newVal;
-  break;
- case 12:
-  for(int a =15;a>0;a--){
-   phaseClass12[a] = phaseClass12[a-1];
-  }
-  phaseClass12[0] = newVal;
-  break;
- case 13:
-  for(int a =15;a>0;a--){
-   phaseClass13[a] = phaseClass13[a-1];
-  }
-  phaseClass13[0] = newVal;
-  break;
- case 14:
-  for(int a =15;a>0;a--){
-   phaseClass14[a] = phaseClass14[a-1];
-  }
-  phaseClass14[0] = newVal;
-  break;
- case 15:
-  for(int a =15;a>0;a--){
-   phaseClass15[a] = phaseClass15[a-1];
-  }
-  phaseClass15[0] = newVal;
-  break;
- }
-}
-
-
-semiComplex toComplexFromStream(rfnoc_axis dat){
- semiComplex res;
- res.i.V = dat.data.range(31,16);
- res.q.V = dat.data.range(15,0);
- return res;
-}
-
-rfnoc_axis toStreamFromComplex(semiComplex dat,ap_int<32> pos){
- rfnoc_axis rf;
- rf.data.range(31,16) = dat.i.V;
- rf.data.range(15,0) = dat.q.V;
- if(pos == 255){
-  rf.last = 1;
- } else {
-  rf.last = 0;
- }
- return rf;
-}
-# 4 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
+ };
+# 5 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
 
 using namespace std;
 
-int main(char argc,char **arg){
+int main(){
  rfnoc_axis streamArrayIn[256];
  rfnoc_axis streamArrayOut[256];
  ap_fixed<16,11> test;
@@ -48921,9 +48439,12 @@ int main(char argc,char **arg){
  for(int a=0;a<5376;a++){
   ap_uint<4> phaseClass = a%16;
   rfnoc_axis axi;
+  rfnoc_axis axiOut;
+
   inFile>> setw(16) >> test;
   axi.data.range(15,0) = test.V;
-# 40 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"
+  correlateTop(axi,axiOut,0,0);
+# 44 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"
  }
 
 

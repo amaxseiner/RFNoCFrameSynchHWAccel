@@ -21,7 +21,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../correlatorTB.cpp
+HLS_SOURCES = ../../../../correlatorTB.cpp ../../../../correlator.cpp
 
 TARGET := csim.exe
 
@@ -77,3 +77,9 @@ $(ObjDir)/correlatorTB.o: ../../../../correlatorTB.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/correlatorTB.d
+
+$(ObjDir)/correlator.o: ../../../../correlator.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../correlator.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/correlator.d

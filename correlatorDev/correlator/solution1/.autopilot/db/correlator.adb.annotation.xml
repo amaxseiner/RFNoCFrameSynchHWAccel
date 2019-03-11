@@ -1,3 +1,0 @@
-<annotationInfo>
-<item  id="67" filename="correlator.cpp" linenumber="218" name="out_sample_data_V" contextFuncName="correlator" moduleName="correlator" rtlName="out_sample_data_V_fu_356_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
-</annotationInfo>
