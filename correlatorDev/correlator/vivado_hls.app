@@ -3,7 +3,6 @@
   <files>
     <file name="correlator.cpp" sc="0" tb="false" cflags=""/>
     <file name="rfnoc.h" sc="0" tb="false" cflags=""/>
-    <file name="../../correlatorTB.cpp" sc="0" tb="1" cflags=""/>
   </files>
   <solutions>
     <solution name="solution1" status="active"/>

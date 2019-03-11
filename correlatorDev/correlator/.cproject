@@ -29,9 +29,8 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev"/>
+									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.443290518" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -48,9 +47,8 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev"/>
+									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1231425761" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -117,9 +115,8 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev"/>
+									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1186738721" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -131,9 +128,8 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev"/>
+									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.4/include/etc"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.814837486" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

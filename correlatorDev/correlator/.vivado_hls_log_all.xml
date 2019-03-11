@@ -12,10 +12,10 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/phaseClass_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-03-09T16:39:44.895-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-09T16:39:44.864-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] In file included from correlator.cpp:1:&#xA;correlator.cpp:206:8: warning: enumeration values 'ST_CORRELATEl' and 'ST_SEND' not handled in switch [-Wswitch]&#xA;switch(currentState) {&#xA;       ^&#xA;1 warning generated." projectName="correlator" solutionName="solution1" date="2019-03-09T16:39:40.475-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] correlator.cpp:251:3: warning: '/*' within block comment [-Wcomment]&#xA;                /*correlateData0: for(int a =windowSize-1;a>=0;a--){&#xA;                ^&#xA;1 warning generated." projectName="correlator" solutionName="solution1" date="2019-03-09T16:39:26.050-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/phaseClass_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-03-09T17:16:52.078-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-09T17:16:52.057-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from correlator.cpp:1:&#xA;correlator.cpp:206:8: warning: enumeration values 'ST_CORRELATEl' and 'ST_SEND' not handled in switch [-Wswitch]&#xA;switch(currentState) {&#xA;       ^&#xA;1 warning generated." projectName="correlator" solutionName="solution1" date="2019-03-09T17:16:47.910-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] correlator.cpp:251:3: warning: '/*' within block comment [-Wcomment]&#xA;                /*correlateData0: for(int a =windowSize-1;a>=0;a--){&#xA;                ^&#xA;1 warning generated." projectName="correlator" solutionName="solution1" date="2019-03-09T17:16:34.376-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
