@@ -1,5 +1,9 @@
 INFO: [COSIM-47] Using XSIM for RTL simulation.
 INFO: [COSIM-14] Instrumenting C test bench ...
+WARNING: [COSIM-75] Fifo port 'i_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM-75] Fifo port 'i_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM-75] Fifo port 'o_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM-75] Fifo port 'o_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
    Build using "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/g++"
    Compiling apatb_correlateTop.cpp
    Compiling correlator.cpp_pre.cpp.tb.cpp

@@ -5,9 +5,9 @@
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(rfnoc_axis i_data, rfnoc_axis o_data, ap_uint<1> start, ap_uint<4> phaseClass){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass){
 
-#pragma HLS RESOURCE variable=o_data latency=1
+//#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
@@ -61,16 +61,16 @@ switch(currentState) {
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
 		//i_data.read(tmp_data);
-		out_sample.last = i_data.last;
-		newVal.V = i_data.data.range(15,0); // RE
+		o_data->last = i_data->last;
+		newVal.V = i_data->data.range(15,0); // RE
 		loadCount = loadCount + 1;
 		cor.shiftPhaseClass(newVal,phaseClass);
 		out = cor.correlator(phaseClass);
 		//corHelperI = 0;
 
-		if(out > 0){
-			o_data.data = loadCount;
-		}
+
+		o_data->data = out.V;
+
 
 		//out_sample.data.range(3,0) = phaseClass;
 		//out_sample.last = 0;
@@ -84,7 +84,7 @@ switch(currentState) {
 
 void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass){
 	switch(phaseClass){
-	case 0:
+	case 8:
 		SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
 			//#pragma HLS UNROLL
 			phaseClass0[a] = phaseClass0[a-1];
@@ -94,19 +94,26 @@ void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass)
 }
 
 ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){
-	ap_fixed<16,11> corHelperI;
-	corHelperI = 0;
+	ap_fixed<16,11> corHelperINeg,corHelperIPos,res;
+	corHelperINeg = 0;
+	corHelperIPos = 0;
 	switch(phaseClass){
-	case 0:
+	case 8:
 		correlateData0: for(int a =windowSize-1;a>=0;a--){
 			//#pragma HLS UNROLL
-
-
-			corHelperI = corHelperI + (corrSeq[a]*phaseClass0[a]);
-				// corHelperI.q = corHelperI.q + (corrSeq[a] * phaseClass0[a].q);
+			if(corrSeq[a] == 1){
+				corHelperIPos = corHelperIPos + (phaseClass0[a]);
+			} else {
+				corHelperINeg = corHelperINeg + (phaseClass0[a]);
+			}
 		}
 	}
-	return corHelperI;
+	if(corHelperIPos > corHelperINeg){
+		res = corHelperIPos - corHelperINeg;
+	} else {
+		res = corHelperINeg - corHelperIPos;
+	}
+	return res;
 }
 
 

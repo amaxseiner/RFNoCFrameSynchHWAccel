@@ -2,6 +2,10 @@
 <Messages>
 	<Message prefix="[COSIM 212-47]" severity="INFO" keynum="COSIM_TCL_47_1115" content="Using XSIM for RTL simulation." tag=""/>
 	<Message prefix="[COSIM 212-14]" severity="INFO" keynum="COSIM_TCL_14_1084" content="Instrumenting C test bench ..." tag=""/>
+	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;i_data_data_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
+	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;i_data_last_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
+	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;o_data_data_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
+	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;o_data_last_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
 	<Message prefix="[COSIM 212-317]" severity="ERROR" keynum="COSIM_TCL_317_1189" content="C++ compile error." tag=""/>
 	<Message prefix="[COSIM 212-321]" severity="ERROR" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>
 	<Message prefix="[COSIM 212-321]" severity="ERROR" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>

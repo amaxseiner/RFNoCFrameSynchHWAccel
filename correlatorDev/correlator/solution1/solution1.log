@@ -7,7 +7,25 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [SIM 211-1] CSim file generation done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+WARNING: [COSIM 212-75] Fifo port 'i_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM 212-75] Fifo port 'i_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM 212-75] Fifo port 'o_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+WARNING: [COSIM 212-75] Fifo port 'o_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+command 'ap_source' returned error code
+    while executing
+"source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/cosim.tcl"
+    invoked from within
+"hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

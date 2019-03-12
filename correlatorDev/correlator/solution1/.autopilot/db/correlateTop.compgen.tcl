@@ -15,10 +15,10 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     name i_data_data_V \
     reset_level 0 \
     sync_rst true \
-    corename {} \
+    corename {i_data} \
     metadata {  } \
     op interface \
-    ports { i_data_data_V_TDATA { I 32 vector } i_data_data_V_TVALID { I 1 bit } i_data_data_V_TREADY { O 1 bit } } \
+    ports { i_data_TDATA { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'i_data_data_V'"
@@ -26,10 +26,67 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 2 \
+    name i_data_last_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {i_data} \
+    metadata {  } \
+    op interface \
+    ports { i_data_TVALID { I 1 bit } i_data_TREADY { O 1 bit } i_data_TLAST { I 1 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'i_data_last_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 3 \
+    name o_data_data_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {o_data} \
+    metadata {  } \
+    op interface \
+    ports { o_data_TDATA { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'o_data_data_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 4 \
+    name o_data_last_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {o_data} \
+    metadata {  } \
+    op interface \
+    ports { o_data_TVALID { O 1 bit } o_data_TREADY { I 1 bit } o_data_TLAST { O 1 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'o_data_last_V'"
+}
+}
+
+
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2 \
+    id 5 \
     name start_V \
     type other \
     dir I \
@@ -44,7 +101,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 3 \
+    id 6 \
     name phaseClass_V \
     type other \
     dir I \

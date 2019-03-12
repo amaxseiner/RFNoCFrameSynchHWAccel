@@ -48405,19 +48405,15 @@ inline bool operator!=(
 
 
 
-static ap_fixed<16,11> corrSeq[16] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1};
+static ap_int<2> corrSeq[16] = {-1,-1,-1,-1, 1, 1, 1, 1,-1, 1,-1, 1, 1,-1, 1,-1};
 
-
-
- void correlateTop(rfnoc_axis i_data, rfnoc_axis o_data, ap_uint<1> start, ap_uint<4> phaseClass);
+ void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass);
 
  class correlate{
  public:
   void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
   ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
   ap_fixed<16,11> phaseClass0[16];
-
-  ap_uint<1> corrSeq[16];
 
  };
 # 5 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
@@ -48428,9 +48424,11 @@ int main(){
  rfnoc_axis streamArrayIn[256];
  rfnoc_axis streamArrayOut[256];
  ap_fixed<16,11> test;
+ ap_fixed<16,11> test2;
+
  ifstream inFile;
- inFile.open("inputCorrr.dat");
- inFile >> fixed >> setbase(10) >> setprecision(8);
+ inFile.open("mFInputSig.csv");
+ inFile >> fixed >> setbase(10) >> setprecision(16);
  int count;
  count = 0;
  ofstream result;
@@ -48441,10 +48439,19 @@ int main(){
   rfnoc_axis axi;
   rfnoc_axis axiOut;
 
-  inFile>> setw(16) >> test;
+  inFile >> setw(16) >> test;
   axi.data.range(15,0) = test.V;
-  correlateTop(axi,axiOut,0,0);
-# 44 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"
+  correlateTop(&axi,&axiOut,1,phaseClass);
+  test2.V = axiOut.data.range(15,0);
+  if(phaseClass == 8){
+   result << a;
+   result << ",";
+   result << setw(16) << test;
+   result << ",";
+   result << setw(32) << test2;
+   result << endl;
+  }
+
  }
 
 

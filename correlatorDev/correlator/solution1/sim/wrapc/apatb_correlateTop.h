@@ -5,7 +5,7 @@
 // ==============================================================
 
 extern void AESL_WRAP_correlateTop (
-struct rfnoc_axis i_data,
-struct rfnoc_axis o_data,
+struct rfnoc_axis* i_data,
+struct rfnoc_axis* o_data,
 ap_uint<1> start,
 ap_uint<4> phaseClass);

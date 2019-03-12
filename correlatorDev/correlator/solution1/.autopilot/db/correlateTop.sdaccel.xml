@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Mon Mar 11 19:28:41 2019
+<item name = "Date">Tue Mar 12 15:26:01 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -16,14 +16,14 @@
 <item name = "Target clock period (ns)">10.00</item>
 <item name = "Clock uncertainty (ns)">1.25</item>
 <item name = "Target initiation interval">1</item>
-<item name = "Estimated clock period (ns)">2.85</item>
+<item name = "Estimated clock period (ns)">7.64</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 1, 1, 1, function</column>
+<column name="">3, 3, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">
@@ -46,12 +46,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 63</column>
+<column name="Expression">-, -, 0, 559</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 78</column>
-<column name="Register">-, -, 45, -</column>
+<column name="Multiplexer">-, -, -, 159</column>
+<column name="Register">0, -, 621, 64</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -76,34 +76,121 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="tmp_2_fu_124_p2">+, 0, 0, 39, 1, 32</column>
-<column name="ap_block_pp0_stage0_11001">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_311">and, 0, 0, 8, 1, 1</column>
+<column name="p_Val2_2_4_i_fu_400_p2">+, 0, 0, 16, 16, 16</column>
+<column name="p_Val2_5_1_i_fu_358_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp10_fu_382_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp11_fu_388_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp1_fu_322_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp2_fu_328_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp3_fu_352_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp4_fu_340_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp5_fu_346_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp6_fu_376_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp7_fu_364_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp8_fu_370_p2">+, 0, 0, 23, 16, 16</column>
+<column name="tmp9_fu_394_p2">+, 0, 0, 16, 16, 16</column>
+<column name="tmp_2_fu_447_p2">+, 0, 0, 39, 1, 32</column>
+<column name="tmp_fu_334_p2">+, 0, 0, 16, 16, 16</column>
+<column name="p_Val2_8_i_fu_418_p2">-, 0, 0, 23, 16, 16</column>
+<column name="p_Val2_9_i_fu_412_p2">-, 0, 0, 23, 16, 16</column>
+<column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state3_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state4_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_365">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_367">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="cond_i_fu_148_p2">icmp, 0, 0, 11, 4, 5</column>
+<column name="i_data_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="tmp_i_fu_406_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state4_pp0_stage0_iter3">or, 0, 0, 8, 1, 1</column>
+<column name="res_V_fu_424_p3">select, 0, 0, 16, 1, 16</column>
 <column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_1_reg_116">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_2_reg_127">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_1_reg_116">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_127">9, 2, 16, 32</column>
+<column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="i_data_data_V_0_data_out">9, 2, 32, 64</column>
 <column name="i_data_data_V_0_state">15, 3, 2, 6</column>
-<column name="i_data_data_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="i_data_last_V_0_data_out">9, 2, 1, 2</column>
 <column name="i_data_last_V_0_state">15, 3, 2, 6</column>
 <column name="loadCount_V">9, 2, 32, 64</column>
-<column name="o_data_data_V_0_state">15, 3, 2, 6</column>
-<column name="o_data_last_V_0_state">15, 3, 2, 6</column>
+<column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="o_data_data_V_1_data_out">9, 2, 32, 64</column>
+<column name="o_data_data_V_1_state">15, 3, 2, 6</column>
+<column name="o_data_last_V_1_data_out">9, 2, 1, 2</column>
+<column name="o_data_last_V_1_state">15, 3, 2, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_1_reg_116">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_2_reg_127">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_1_reg_116">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_127">16, 0, 16, 0</column>
+<column name="cond_i_reg_467">1, 0, 1, 0</column>
+<column name="cor_phaseClass0_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass0_V_9">16, 0, 16, 0</column>
 <column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_216">1, 0, 1, 0</column>
+<column name="currentState_load_reg_463">1, 0, 1, 0</column>
+<column name="i_data_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="i_data_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="i_data_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_data_V_0_sel_wr">1, 0, 1, 0</column>
 <column name="i_data_data_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="i_data_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="i_data_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_last_V_0_sel_wr">1, 0, 1, 0</column>
 <column name="i_data_last_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_last_V_tmp_reg_471">1, 0, 1, 0</column>
 <column name="loadCount_V">32, 0, 32, 0</column>
-<column name="o_data_data_V_0_state">2, 0, 2, 0</column>
-<column name="o_data_last_V_0_state">2, 0, 2, 0</column>
-<column name="start_V_read_reg_212">1, 0, 1, 0</column>
+<column name="o_data_data_V_1_payload_A">32, 0, 32, 0</column>
+<column name="o_data_data_V_1_payload_B">32, 0, 32, 0</column>
+<column name="o_data_data_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_data_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_data_V_1_state">2, 0, 2, 0</column>
+<column name="o_data_last_V_1_payload_A">1, 0, 1, 0</column>
+<column name="o_data_last_V_1_payload_B">1, 0, 1, 0</column>
+<column name="o_data_last_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_last_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_last_V_1_state">2, 0, 2, 0</column>
+<column name="start_V_read_reg_459">1, 0, 1, 0</column>
+<column name="currentState_load_reg_463">64, 32, 1, 0</column>
+<column name="start_V_read_reg_459">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -115,18 +202,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="ap_clk">in, 1, ap_ctrl_none, correlateTop, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_none, correlateTop, return value</column>
-<column name="i_data_data_V_TDATA">in, 32, axis, i_data_data_V, scalar</column>
-<column name="i_data_data_V_TVALID">in, 1, axis, i_data_data_V, scalar</column>
-<column name="i_data_data_V_TREADY">out, 1, axis, i_data_data_V, scalar</column>
-<column name="i_data_last_V_TLAST">in, 1, axis, i_data_last_V, scalar</column>
-<column name="i_data_last_V_TVALID">in, 1, axis, i_data_last_V, scalar</column>
-<column name="i_data_last_V_TREADY">out, 1, axis, i_data_last_V, scalar</column>
-<column name="o_data_data_V_TDATA">in, 32, axis, o_data_data_V, scalar</column>
-<column name="o_data_data_V_TVALID">in, 1, axis, o_data_data_V, scalar</column>
-<column name="o_data_data_V_TREADY">out, 1, axis, o_data_data_V, scalar</column>
-<column name="o_data_last_V_TLAST">in, 1, axis, o_data_last_V, scalar</column>
-<column name="o_data_last_V_TVALID">in, 1, axis, o_data_last_V, scalar</column>
-<column name="o_data_last_V_TREADY">out, 1, axis, o_data_last_V, scalar</column>
+<column name="i_data_TDATA">in, 32, axis, i_data_data_V, pointer</column>
+<column name="i_data_TVALID">in, 1, axis, i_data_last_V, pointer</column>
+<column name="i_data_TREADY">out, 1, axis, i_data_last_V, pointer</column>
+<column name="i_data_TLAST">in, 1, axis, i_data_last_V, pointer</column>
+<column name="o_data_TDATA">out, 32, axis, o_data_data_V, pointer</column>
+<column name="o_data_TVALID">out, 1, axis, o_data_last_V, pointer</column>
+<column name="o_data_TREADY">in, 1, axis, o_data_last_V, pointer</column>
+<column name="o_data_TLAST">out, 1, axis, o_data_last_V, pointer</column>
 <column name="start_V">in, 1, ap_none, start_V, scalar</column>
 <column name="phaseClass_V">in, 4, ap_none, phaseClass_V, scalar</column>
 </table>
@@ -134,12 +217,16 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">2.85</item>
+<item name = "Max Delay">7.64</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'loadCount_V_load', correlator.cpp:66">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
-<column name="'tmp_2', correlator.cpp:66">add, 1.78, 1.78, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="correlator.cpp:66">store, 1.06, 2.85, &apos;tmp_2&apos;, correlator.cpp:66, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
+<column name="'empty'">read, 0.00, 0.00, -, -, -, axis, read, &apos;i_data_data_V&apos;, -, -, -, -, -</column>
+<column name="'__Val2__'">extractvalue, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'op.V', correlator.cpp:65">trunc, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp11', correlator.cpp:107->correlator.cpp:68">add, 1.49, 1.49, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp9', correlator.cpp:107->correlator.cpp:68">add, 2.54, 4.03, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'p_Val2_2_4_i', correlator.cpp:107->correlator.cpp:68">add, 2.54, 6.58, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'__Val2__', correlator.cpp:107->correlator.cpp:68">phi, 1.06, 7.64, -, -, -, -, -, -, -, -, -, -, &apos;p_Val2_2_4_i&apos;, correlator.cpp:107-&gt;correlator.cpp:68</column>
 </table>
 </item>
 </section>
