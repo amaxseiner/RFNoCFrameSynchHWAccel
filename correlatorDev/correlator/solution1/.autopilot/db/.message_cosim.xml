@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message prefix="[COSIM 212-47]" severity="INFO" keynum="COSIM_TCL_47_1115" content="Using XSIM for RTL simulation." tag=""/>
-	<Message prefix="[COSIM 212-14]" severity="INFO" keynum="COSIM_TCL_14_1084" content="Instrumenting C test bench ..." tag=""/>
-	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;i_data_data_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
-	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;i_data_last_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
-	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;o_data_data_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
-	<Message prefix="[COSIM 212-75]" severity="WARNING" keynum="COSIM_TCL_75_1137" content="Fifo port &apos;o_data_last_V&apos; has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in &apos;set_directive_interface&apos; using the option &apos;-depth&apos;." tag=""/>
-	<Message prefix="[COSIM 212-317]" severity="ERROR" keynum="COSIM_TCL_317_1189" content="C++ compile error." tag=""/>
-	<Message prefix="[COSIM 212-321]" severity="ERROR" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>
-	<Message prefix="[COSIM 212-321]" severity="ERROR" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>
-	<Message prefix="[COSIM 212-331]" severity="ERROR" keynum="COSIM_TCL_331_1203" content="Aborting co-simulation: C simulation failed, compilation errors." tag=""/>
+	<Message prefix="[COSIM 212-345]" severity="ERROR" keynum="COSIM_TCL_345_1216" content="Cosim only supports the following &apos;ap_ctrl_none&apos; designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports." tag=""/>
 	<Message prefix="[COSIM 212-4]" severity="ERROR" keynum="COSIM_TCL_4_1074" content="*** C/RTL co-simulation finished: FAIL ***" tag=""/>
 	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="command &apos;ap_source&apos; returned error code
     while executing

@@ -7,16 +7,7 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-WARNING: [COSIM 212-75] Fifo port 'i_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'i_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'o_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'o_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-ERROR: [COSIM 212-317] C++ compile error.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports.
 ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
 command 'ap_source' returned error code
     while executing

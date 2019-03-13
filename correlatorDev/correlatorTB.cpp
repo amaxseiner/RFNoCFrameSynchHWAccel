@@ -12,24 +12,26 @@ int main(){
 	ap_fixed<16,11> test2;
 
 	ifstream inFile;
-	inFile.open("mFInputSig.csv");
+	inFile.open("forAl.csv");
 	inFile >> fixed >> setbase(10) >> setprecision(16);
 	int count;
 	count = 0;
 	ofstream result;
 	result.open("result.csv", ios::out);
 	result << right << fixed << setbase(10) << setprecision(16);
-	for(int a=0;a<5376;a++){
+	rfnoc_axis axi;
+	rfnoc_axis axiOut;
+	correlateTop(&axi,&axiOut,1,0);
+	for(int a=0;a<4383;a++){
 		ap_uint<4> phaseClass = a%16;
-		rfnoc_axis axi;
-		rfnoc_axis axiOut;
-
 		inFile >> setw(16) >> test;
 		axi.data.range(15,0) = test.V;
-		correlateTop(&axi,&axiOut,1,phaseClass);
+		correlateTop(&axi,&axiOut,0,phaseClass);
 		test2.V = axiOut.data.range(15,0);
-		if(phaseClass == 8){
+		if(test2 != 0){
 			result << a;
+			result << ",";
+			result << setw(16) << phaseClass;
 			result << ",";
 			result << setw(16) << test;
 			result << ",";

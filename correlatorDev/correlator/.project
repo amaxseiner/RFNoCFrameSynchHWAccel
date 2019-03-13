@@ -47,19 +47,14 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
 		</link>
 		<link>
+			<name>source/forAl.csv</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/forAl.csv</location>
+		</link>
+		<link>
 			<name>source/inputCorrr.dat</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat</location>
-		</link>
-		<link>
-			<name>source/mFInputSig.csv</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/mFInputSig.csv</location>
-		</link>
-		<link>
-			<name>source/rfnoc.h</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h</location>
 		</link>
 		<link>
 			<name>testbench/correlatorTB.cpp</name>

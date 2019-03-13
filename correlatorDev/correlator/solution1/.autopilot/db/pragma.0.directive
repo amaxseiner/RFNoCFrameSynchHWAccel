@@ -2,32 +2,27 @@
 <sourceFile name="">
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="INTERFACE">
-<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
-<option name="port" positionalBoolean="4" value="return"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="INTERFACE">
 <option name="axis" positionalBoolean="mode" value=""/>
+<option name="depth" value="1"/>
 <option name="port" positionalBoolean="4" value="o_data"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="INTERFACE">
 <option name="axis" positionalBoolean="mode" value=""/>
+<option name="depth" value="1"/>
 <option name="port" positionalBoolean="4" value="i_data"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTop" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="PIPELINE">
 <option name="II" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass0"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
@@ -44,7 +39,7 @@
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="loadCount"/>
+<option name="variable" positionalBoolean="4" value="loadCountPhase0"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
@@ -61,6 +56,12 @@
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="currentState"/>
 </pragma>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
 </directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

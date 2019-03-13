@@ -5,10 +5,9 @@
 ############################################################
 open_project correlator
 set_top correlateTop
-add_files rfnoc.h
-add_files mFInputSig.csv
-add_files inputCorrr.dat
 add_files correlator.cpp
+add_files forAl.csv
+add_files inputCorrr.dat
 add_files -tb correlatorTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1}

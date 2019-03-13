@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Tue Mar 12 15:26:42 EDT 2019
+INFO: [HLS 200-0] Workspace /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Wed Mar 13 17:39:32 EDT 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Command     config_clock returned 0; 0 sec.
@@ -26,7 +26,7 @@ Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
 Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
@@ -42,7 +42,7 @@ Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
 Command       ap_source returned 0; 0 sec.
 Execute       get_default_platform 
@@ -61,9 +61,9 @@ Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/inte
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
-Command     import_lib returned 0; 0.02 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.01 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
@@ -72,30 +72,30 @@ Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
 Command           ap_source returned 0; 0.08 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
+Command         ap_source returned 0; 0.12 sec.
 Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.11 sec.
-Command     ap_source returned 0; 0.11 sec.
+Command       ap_source returned 0; 0.12 sec.
+Command     ap_source returned 0; 0.12 sec.
 Execute     open_platform DefaultPlatform 
 Command     open_platform returned 0; 0 sec.
 Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
@@ -114,11 +114,11 @@ Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/in
 Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
-Command           ap_source returned 0; 0.01 sec.
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
-Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command       ap_source returned 0; 0.01 sec.
 Command     import_lib returned 0; 0.02 sec.
 Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
@@ -129,14 +129,14 @@ Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xc7k160t 
-Command         license_isbetapart returned 1; 0 sec.
+Command         license_isbetapart returned 1; 0.01 sec.
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
 Command         config_chip_info returned 0; 0 sec.
 Execute         config_chip_info -quiet -speed slow 
 Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.02 sec.
+Command       add_library returned 0; 0.01 sec.
 Execute       add_library xilinx/kintex7/kintex7_fpv6 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
@@ -144,7 +144,7 @@ Command       add_library returned 0; 0 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
-Command     set_part returned 0; 0.06 sec.
+Command     set_part returned 0; 0.07 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
 Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
@@ -155,7 +155,7 @@ Execute     config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level
 Command     config_rtl returned 0; 0 sec.
 Execute     config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0 
 Command     config_interface returned 0; 0 sec.
-Command   open_solution returned 0; 0.22 sec.
+Command   open_solution returned 0; 0.23 sec.
 Execute   cosim_design -compiler gcc -trace_level all -tool xsim 
 Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command     ap_source returned 0; 0 sec.
@@ -186,9 +186,9 @@ Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/inte
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0.01 sec.
-Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
 Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command           ap_source returned 0; 0.01 sec.
@@ -197,9 +197,9 @@ Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.07 sec.
+Command           ap_source returned 0; 0.08 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0.11 sec.
@@ -219,11 +219,9 @@ Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/cor
 Command     ap_source returned 0; 0 sec.
 Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp 
 Command     is_encrypted returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h 
-Command     is_encrypted returned 0; 0 sec.
-Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/mFInputSig.csv 
-Command     is_encrypted returned 0; 0 sec.
 Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat 
+Command     is_encrypted returned 0; 0.01 sec.
+Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/forAl.csv 
 Command     is_encrypted returned 0; 0 sec.
 Execute     is_encrypted /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp 
 Command     is_encrypted returned 0; 0 sec.
@@ -241,47 +239,10 @@ Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/cor
 Command     ap_source returned 0; 0 sec.
 Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.tbgen.tcl 
 Command     ap_source returned 0; 0 sec.
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-0] Marker-Pragma convertor: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/./sim/autowrap/testbench/correlatorTB.cpp_pre.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/./sim/autowrap/testbench/correlatorTB.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
-INFO: [HLS 200-0] Converting Markers to Pragmas...
-INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/correlatorTB.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/correlatorTB.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
-INFO: [HLS 200-0] Converting Pragmas to Markers...
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-0] Marker-Pragma convertor: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/./sim/autowrap/testbench/correlator.cpp_pre.cpp /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/./sim/autowrap/testbench/correlator.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
-INFO: [HLS 200-0] Converting Markers to Pragmas...
-INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/correlator.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/correlator.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
-INFO: [HLS 200-0] Converting Pragmas to Markers...
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/./sim/autowrap/testbench/tb.status.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-WARNING: [COSIM 212-75] Fifo port 'i_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'i_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'o_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM 212-75] Fifo port 'o_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-Execute     get_default_platform 
-Command     get_default_platform returned 0; 0 sec.
-ERROR: [COSIM 212-317] C++ compile error.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports.
 ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
-Command   cosim_design returned 2; 32.19 sec.
-Command ap_source returned 1; 32.41 sec.
+Command   cosim_design returned 2; 0.17 sec.
+Command ap_source returned 1; 0.41 sec.
 command 'ap_source' returned error code
     while executing
 "source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/cosim.tcl"

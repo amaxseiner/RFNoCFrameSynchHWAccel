@@ -29160,16 +29160,25 @@ inline bool operator!=(
 
 
 
-static ap_int<2> corrSeq[16] = {-1,-1,-1,-1, 1, 1, 1, 1,-1, 1,-1, 1, 1,-1, 1,-1};
+
+
+static ap_int<2> corrSeq[16] = {-1,1,-1,1,1,-1,1,-1, 1, 1, 1,1,-1,-1,-1,-1};
+
 
  void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass);
+
+ class phaseClass{
+ public:
+  ap_int<32> loadCount;
+  ap_fixed<16,11> phaseClassWindow[16];
+ };
 
  class correlate{
  public:
   void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
   ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
-  ap_fixed<16,11> phaseClass0[16];
-
+  phaseClass phaseArray[16];
+# 56 "./correlator.h"
  };
 # 3 "correlator.cpp" 2
 
@@ -29181,31 +29190,35 @@ void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_u
 
 
 
+#pragma HLS INTERFACE axis depth=1 port=o_data
+#pragma HLS INTERFACE axis depth=1 port=i_data
 #pragma HLS INTERFACE ap_ctrl_none port=return
-#pragma HLS INTERFACE axis port=o_data
-#pragma HLS INTERFACE axis port=i_data
+
 
 #pragma HLS PIPELINE II=1
 
 static correlate cor;
 
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0 complete dim=1
+
 
 #pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
 static ap_fixed<16,11> newVal;
 #pragma HLS RESET variable=newVal
 
+static ap_int<32> zeros;
 
 
 
 
- rfnoc_axis classType;
+
+  rfnoc_axis classType;
 
   rfnoc_axis out_sample;
 
-  static ap_int<32> loadCount;
-#pragma HLS RESET variable=loadCount
+  static ap_int<32> loadCountPhase0;
+#pragma HLS RESET variable=loadCountPhase0
+
 
  rfnoc_axis tmp_data;
 
@@ -29227,7 +29240,8 @@ static ap_fixed<16,11> out;
 switch(currentState) {
  case ST_IDLE:
   if(start){
-   loadCount = 0;
+   loadCountPhase0 = 0;
+   zeros = 0;
    currentState = ST_LOAD;
   }
  break;
@@ -29235,15 +29249,16 @@ switch(currentState) {
 
   o_data->last = i_data->last;
   newVal.V = i_data->data.range(15,0);
-  loadCount = loadCount + 1;
   cor.shiftPhaseClass(newVal,phaseClass);
   out = cor.correlator(phaseClass);
 
 
+  if(out < 250){
+   o_data->data = zeros;
+  } else {
+   o_data->data = cor.phaseArray[phaseClass].loadCount;
 
-  o_data->data = out.V;
-
-
+  }
 
 
 
@@ -29255,35 +29270,36 @@ switch(currentState) {
 }
 
 void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass){
- switch(phaseClass){
- case 8:
-  SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
 
-   phaseClass0[a] = phaseClass0[a-1];
-  }
-  phaseClass0[0] = newValue;
+ SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
+#pragma HLS UNROLL
+ this->phaseArray[phaseClass].phaseClassWindow[a] = this->phaseArray[phaseClass].phaseClassWindow[a-1];
+
+
  }
+ this->phaseArray[phaseClass].phaseClassWindow[0] = newValue;
+ this->phaseArray[phaseClass].loadCount+=32;
 }
 
 ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){
  ap_fixed<16,11> corHelperINeg,corHelperIPos,res;
  corHelperINeg = 0;
  corHelperIPos = 0;
- switch(phaseClass){
- case 8:
-  correlateData0: for(int a =16 -1;a>=0;a--){
-
-   if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass0[a]);
-   } else {
-    corHelperINeg = corHelperINeg + (phaseClass0[a]);
-   }
+ correlateData0: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a] == 1){
+   corHelperIPos = corHelperIPos + (this->phaseArray[phaseClass].phaseClassWindow[a]);
+  } else {
+   corHelperINeg = corHelperINeg + (this->phaseArray[phaseClass].phaseClassWindow[a]);
   }
  }
+
  if(corHelperIPos > corHelperINeg){
   res = corHelperIPos - corHelperINeg;
  } else {
   res = corHelperINeg - corHelperIPos;
  }
+ res = res*res;
+
  return res;
 }

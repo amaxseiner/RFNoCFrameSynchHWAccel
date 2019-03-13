@@ -1,15 +1,2 @@
-INFO: [COSIM-47] Using XSIM for RTL simulation.
-INFO: [COSIM-14] Instrumenting C test bench ...
-WARNING: [COSIM-75] Fifo port 'i_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM-75] Fifo port 'i_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM-75] Fifo port 'o_data_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-WARNING: [COSIM-75] Fifo port 'o_data_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-   Build using "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/g++"
-   Compiling apatb_correlateTop.cpp
-   Compiling correlator.cpp_pre.cpp.tb.cpp
-cosim.tv.mk:66: recipe for target 'obj/correlator.cpp_pre.cpp.tb.o' failed
-ERROR: [COSIM-317] C++ compile error.
-ERROR: [COSIM-321] EXE file generate failed.
-ERROR: [COSIM-321] EXE file generate failed.
-ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports.
 ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

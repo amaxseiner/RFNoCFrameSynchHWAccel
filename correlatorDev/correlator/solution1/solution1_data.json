@@ -23,8 +23,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
-    "II": "1",
-    "Latency": "3",
+    "II": "2",
+    "Latency": "5",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -39,8 +39,22 @@
   },
   "Files": {
     "CSource": ["..\/..\/correlator.cpp"],
-    "Vhdl": ["impl\/vhdl\/correlateTop.vhd"],
-    "Verilog": ["impl\/verilog\/correlateTop.v"],
+    "Vhdl": [
+      "impl\/vhdl\/correlateTop_cor_bkb.vhd",
+      "impl\/vhdl\/correlateTop_cor_bkb_ram.vhd",
+      "impl\/vhdl\/correlateTop_cor_qcK.vhd",
+      "impl\/vhdl\/correlateTop_cor_qcK_ram.vhd",
+      "impl\/vhdl\/correlateTop_mul_rcU.vhd",
+      "impl\/vhdl\/correlateTop.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/correlateTop_cor_bkb.v",
+      "impl\/verilog\/correlateTop_cor_bkb_ram.v",
+      "impl\/verilog\/correlateTop_cor_qcK.v",
+      "impl\/verilog\/correlateTop_cor_qcK_ram.v",
+      "impl\/verilog\/correlateTop_mul_rcU.v",
+      "impl\/verilog\/correlateTop.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -188,12 +202,12 @@
     "o_data_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
+      "firstOutLatency": "4"
     },
     "o_data_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
+      "firstOutLatency": "4"
     },
     "start_V": {
       "interfaceRef": "start_V",
@@ -212,29 +226,29 @@
     "Hierarchy": {"ModuleName": "correlateTop"},
     "Metrics": {"correlateTop": {
         "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "3",
-          "LatencyWorst": "3",
-          "PipelineII": "1",
-          "PipelineDepth": "4",
+          "LatencyBest": "5",
+          "LatencyAvg": "5",
+          "LatencyWorst": "5",
+          "PipelineII": "2",
+          "PipelineDepth": "6",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.64"
+          "Estimate": "8.13"
         },
         "Area": {
           "BRAM_18K": "0",
-          "FF": "621",
-          "LUT": "782",
-          "DSP48E": "0"
+          "DSP48E": "1",
+          "FF": "1135",
+          "LUT": "1382"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-12 15:26:02 EDT",
+    "Time": "2019-03-13 17:38:59 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
