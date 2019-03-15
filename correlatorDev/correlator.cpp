@@ -88,7 +88,116 @@ void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass)
 			phaseClass0[a] = phaseClass0[a-1];
 		}
 		phaseClass0[0] = newValue;
+		break;
+
+
+	case 1:
+		SHIFT_DATA1: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass1[a] = phaseClass1[a-1];
+		}
+		phaseClass1[0] = newValue;
+		break;
+	case 2:
+		SHIFT_DATA2: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass2[a] = phaseClass2[a-1];
+		}
+		phaseClass2[0] = newValue;
+		break;
+	case 3:
+		SHIFT_DATA3: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass3[a] = phaseClass3[a-1];
+		}
+		phaseClass3[0] = newValue;
+		break;
+	case 4:
+		SHIFT_DATA4: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass4[a] = phaseClass4[a-1];
+		}
+		phaseClass4[0] = newValue;
+		break;
+	case 5:
+		SHIFT_DATA5: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass5[a] = phaseClass5[a-1];
+		}
+		phaseClass5[0] = newValue;
+		break;
+	case 6:
+		SHIFT_DATA6: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass6[a] = phaseClass6[a-1];
+		}
+		phaseClass6[0] = newValue;
+		break;
+	case 7:
+		SHIFT_DATA7: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass7[a] = phaseClass7[a-1];
+		}
+		phaseClass7[0] = newValue;
+		break;
+	case 8:
+		SHIFT_DATA8: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass8[a] = phaseClass8[a-1];
+		}
+		phaseClass8[0] = newValue;
+		break;
+	case 9:
+		SHIFT_DATA9: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass9[a] = phaseClass9[a-1];
+		}
+		phaseClass9[0] = newValue;
+		break;
+	case 10:
+		SHIFT_DATA10: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass10[a] = phaseClass10[a-1];
+		}
+		phaseClass10[0] = newValue;
+		break;
+	case 11:
+		SHIFT_DATA11: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass11[a] = phaseClass11[a-1];
+		}
+		phaseClass11[0] = newValue;
+		break;
+	case 12:
+		SHIFT_DATA12: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass12[a] = phaseClass12[a-1];
+		}
+		phaseClass12[0] = newValue;
+		break;
+	case 13:
+		SHIFT_DATA13: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass13[a] = phaseClass13[a-1];
+		}
+		phaseClass13[0] = newValue;
+		break;
+	case 14:
+		SHIFT_DATA14: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass14[a] = phaseClass14[a-1];
+		}
+		phaseClass14[0] = newValue;
+		break;
+	case 15:
+		SHIFT_DATA15: for(int a = windowSize-1;a>0;a--){
+			#pragma HLS UNROLL
+			phaseClass15[a] = phaseClass15[a-1];
+		}
+		phaseClass15[0] = newValue;
+		break;
 	}
+
 }
 
 ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){

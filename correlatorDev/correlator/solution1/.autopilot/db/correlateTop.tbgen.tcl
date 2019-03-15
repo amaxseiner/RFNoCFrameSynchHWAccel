@@ -2,8 +2,8 @@ set C_TypeInfoList {{
 "correlateTop" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],{ "pointer": "0"}] }, {"o_data": [[],{ "pointer": "0"}] }, {"start": [[],"1"] }, {"phaseClass": [[],"2"] }],[],""], 
 "0": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "3"]},{ "last": [[], "1"]}],""]}], 
 "3": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
-"2": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}]
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
+"2": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}]
 }}
 set moduleName correlateTop
 set isCombinational 0
@@ -62,7 +62,7 @@ set NewPortList {[
  	{ "name": "phaseClass_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "phaseClass_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
 		"CDFG" : "correlateTop",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -84,7 +84,517 @@ set RtlHierarchyInfo {[
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_14"}]},
+			{"Name" : "cor_phaseClass0_V_15", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_15"}]},
+			{"Name" : "cor_phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_13"}]},
+			{"Name" : "cor_phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_12"}]},
+			{"Name" : "cor_phaseClass0_V_11", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_11"}]},
+			{"Name" : "cor_phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_10"}]},
+			{"Name" : "cor_phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_9"}]},
+			{"Name" : "cor_phaseClass0_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_8"}]},
+			{"Name" : "cor_phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_7"}]},
+			{"Name" : "cor_phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_6"}]},
+			{"Name" : "cor_phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_5"}]},
+			{"Name" : "cor_phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_4"}]},
+			{"Name" : "cor_phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_3"}]},
+			{"Name" : "cor_phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_2"}]},
+			{"Name" : "cor_phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_1"}]},
+			{"Name" : "cor_phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass0_V_0"}]},
+			{"Name" : "cor_phaseClass1_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_8"}]},
+			{"Name" : "cor_phaseClass1_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_9"}]},
+			{"Name" : "cor_phaseClass1_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_7"}]},
+			{"Name" : "cor_phaseClass1_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_6"}]},
+			{"Name" : "cor_phaseClass1_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_5"}]},
+			{"Name" : "cor_phaseClass1_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_4"}]},
+			{"Name" : "cor_phaseClass1_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_3"}]},
+			{"Name" : "cor_phaseClass1_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_2"}]},
+			{"Name" : "cor_phaseClass1_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_1"}]},
+			{"Name" : "cor_phaseClass1_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass1_V_0"}]},
+			{"Name" : "cor_phaseClass2_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_8"}]},
+			{"Name" : "cor_phaseClass2_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_9"}]},
+			{"Name" : "cor_phaseClass2_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_7"}]},
+			{"Name" : "cor_phaseClass2_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_6"}]},
+			{"Name" : "cor_phaseClass2_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_5"}]},
+			{"Name" : "cor_phaseClass2_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_4"}]},
+			{"Name" : "cor_phaseClass2_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_3"}]},
+			{"Name" : "cor_phaseClass2_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_2"}]},
+			{"Name" : "cor_phaseClass2_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_1"}]},
+			{"Name" : "cor_phaseClass2_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass2_V_0"}]},
+			{"Name" : "cor_phaseClass3_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_8"}]},
+			{"Name" : "cor_phaseClass3_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_9"}]},
+			{"Name" : "cor_phaseClass3_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_7"}]},
+			{"Name" : "cor_phaseClass3_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_6"}]},
+			{"Name" : "cor_phaseClass3_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_5"}]},
+			{"Name" : "cor_phaseClass3_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_4"}]},
+			{"Name" : "cor_phaseClass3_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_3"}]},
+			{"Name" : "cor_phaseClass3_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_2"}]},
+			{"Name" : "cor_phaseClass3_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_1"}]},
+			{"Name" : "cor_phaseClass3_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass3_V_0"}]},
+			{"Name" : "cor_phaseClass4_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_8"}]},
+			{"Name" : "cor_phaseClass4_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_9"}]},
+			{"Name" : "cor_phaseClass4_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_7"}]},
+			{"Name" : "cor_phaseClass4_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_6"}]},
+			{"Name" : "cor_phaseClass4_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_5"}]},
+			{"Name" : "cor_phaseClass4_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_4"}]},
+			{"Name" : "cor_phaseClass4_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_3"}]},
+			{"Name" : "cor_phaseClass4_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_2"}]},
+			{"Name" : "cor_phaseClass4_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_1"}]},
+			{"Name" : "cor_phaseClass4_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass4_V_0"}]},
+			{"Name" : "cor_phaseClass5_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_8"}]},
+			{"Name" : "cor_phaseClass5_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_9"}]},
+			{"Name" : "cor_phaseClass5_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_7"}]},
+			{"Name" : "cor_phaseClass5_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_6"}]},
+			{"Name" : "cor_phaseClass5_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_5"}]},
+			{"Name" : "cor_phaseClass5_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_4"}]},
+			{"Name" : "cor_phaseClass5_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_3"}]},
+			{"Name" : "cor_phaseClass5_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_2"}]},
+			{"Name" : "cor_phaseClass5_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_1"}]},
+			{"Name" : "cor_phaseClass5_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass5_V_0"}]},
+			{"Name" : "cor_phaseClass6_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_8"}]},
+			{"Name" : "cor_phaseClass6_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_9"}]},
+			{"Name" : "cor_phaseClass6_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_7"}]},
+			{"Name" : "cor_phaseClass6_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_6"}]},
+			{"Name" : "cor_phaseClass6_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_5"}]},
+			{"Name" : "cor_phaseClass6_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_4"}]},
+			{"Name" : "cor_phaseClass6_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_3"}]},
+			{"Name" : "cor_phaseClass6_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_2"}]},
+			{"Name" : "cor_phaseClass6_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_1"}]},
+			{"Name" : "cor_phaseClass6_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass6_V_0"}]},
+			{"Name" : "cor_phaseClass7_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_8"}]},
+			{"Name" : "cor_phaseClass7_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_9"}]},
+			{"Name" : "cor_phaseClass7_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_7"}]},
+			{"Name" : "cor_phaseClass7_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_6"}]},
+			{"Name" : "cor_phaseClass7_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_5"}]},
+			{"Name" : "cor_phaseClass7_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_4"}]},
+			{"Name" : "cor_phaseClass7_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_3"}]},
+			{"Name" : "cor_phaseClass7_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_2"}]},
+			{"Name" : "cor_phaseClass7_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_1"}]},
+			{"Name" : "cor_phaseClass7_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass7_V_0"}]},
+			{"Name" : "cor_phaseClass8_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_8"}]},
+			{"Name" : "cor_phaseClass8_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_9"}]},
+			{"Name" : "cor_phaseClass8_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_7"}]},
+			{"Name" : "cor_phaseClass8_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_6"}]},
+			{"Name" : "cor_phaseClass8_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_5"}]},
+			{"Name" : "cor_phaseClass8_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_4"}]},
+			{"Name" : "cor_phaseClass8_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_3"}]},
+			{"Name" : "cor_phaseClass8_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_2"}]},
+			{"Name" : "cor_phaseClass8_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_1"}]},
+			{"Name" : "cor_phaseClass8_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass8_V_0"}]},
+			{"Name" : "cor_phaseClass9_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_8"}]},
+			{"Name" : "cor_phaseClass9_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_9"}]},
+			{"Name" : "cor_phaseClass9_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_7"}]},
+			{"Name" : "cor_phaseClass9_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_6"}]},
+			{"Name" : "cor_phaseClass9_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_5"}]},
+			{"Name" : "cor_phaseClass9_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_4"}]},
+			{"Name" : "cor_phaseClass9_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_3"}]},
+			{"Name" : "cor_phaseClass9_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_2"}]},
+			{"Name" : "cor_phaseClass9_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_1"}]},
+			{"Name" : "cor_phaseClass9_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass9_V_0"}]},
+			{"Name" : "cor_phaseClass10_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_8"}]},
+			{"Name" : "cor_phaseClass10_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_9"}]},
+			{"Name" : "cor_phaseClass10_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_7"}]},
+			{"Name" : "cor_phaseClass10_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_6"}]},
+			{"Name" : "cor_phaseClass10_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_5"}]},
+			{"Name" : "cor_phaseClass10_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_4"}]},
+			{"Name" : "cor_phaseClass10_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_3"}]},
+			{"Name" : "cor_phaseClass10_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_2"}]},
+			{"Name" : "cor_phaseClass10_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_1"}]},
+			{"Name" : "cor_phaseClass10_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass10_V_0"}]},
+			{"Name" : "cor_phaseClass11_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_8"}]},
+			{"Name" : "cor_phaseClass11_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_9"}]},
+			{"Name" : "cor_phaseClass11_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_7"}]},
+			{"Name" : "cor_phaseClass11_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_6"}]},
+			{"Name" : "cor_phaseClass11_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_5"}]},
+			{"Name" : "cor_phaseClass11_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_4"}]},
+			{"Name" : "cor_phaseClass11_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_3"}]},
+			{"Name" : "cor_phaseClass11_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_2"}]},
+			{"Name" : "cor_phaseClass11_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_1"}]},
+			{"Name" : "cor_phaseClass11_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass11_V_0"}]},
+			{"Name" : "cor_phaseClass12_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_8"}]},
+			{"Name" : "cor_phaseClass12_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_9"}]},
+			{"Name" : "cor_phaseClass12_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_7"}]},
+			{"Name" : "cor_phaseClass12_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_6"}]},
+			{"Name" : "cor_phaseClass12_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_5"}]},
+			{"Name" : "cor_phaseClass12_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_4"}]},
+			{"Name" : "cor_phaseClass12_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_3"}]},
+			{"Name" : "cor_phaseClass12_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_2"}]},
+			{"Name" : "cor_phaseClass12_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_1"}]},
+			{"Name" : "cor_phaseClass12_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass12_V_0"}]},
+			{"Name" : "cor_phaseClass13_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_8"}]},
+			{"Name" : "cor_phaseClass13_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_9"}]},
+			{"Name" : "cor_phaseClass13_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_7"}]},
+			{"Name" : "cor_phaseClass13_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_6"}]},
+			{"Name" : "cor_phaseClass13_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_5"}]},
+			{"Name" : "cor_phaseClass13_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_4"}]},
+			{"Name" : "cor_phaseClass13_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_3"}]},
+			{"Name" : "cor_phaseClass13_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_2"}]},
+			{"Name" : "cor_phaseClass13_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_1"}]},
+			{"Name" : "cor_phaseClass13_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass13_V_0"}]},
+			{"Name" : "cor_phaseClass14_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_8"}]},
+			{"Name" : "cor_phaseClass14_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_9"}]},
+			{"Name" : "cor_phaseClass14_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_7"}]},
+			{"Name" : "cor_phaseClass14_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_6"}]},
+			{"Name" : "cor_phaseClass14_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_5"}]},
+			{"Name" : "cor_phaseClass14_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_4"}]},
+			{"Name" : "cor_phaseClass14_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_3"}]},
+			{"Name" : "cor_phaseClass14_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_2"}]},
+			{"Name" : "cor_phaseClass14_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_1"}]},
+			{"Name" : "cor_phaseClass14_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass14_V_0"}]},
+			{"Name" : "cor_phaseClass15_V_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_8"}]},
+			{"Name" : "cor_phaseClass15_V_9", "Type" : "Vld", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_9"}]},
+			{"Name" : "cor_phaseClass15_V_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_7"}]},
+			{"Name" : "cor_phaseClass15_V_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_6"}]},
+			{"Name" : "cor_phaseClass15_V_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_5"}]},
+			{"Name" : "cor_phaseClass15_V_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_4"}]},
+			{"Name" : "cor_phaseClass15_V_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_3"}]},
+			{"Name" : "cor_phaseClass15_V_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_2"}]},
+			{"Name" : "cor_phaseClass15_V_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_1"}]},
+			{"Name" : "cor_phaseClass15_V_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "StgValue_21_shiftPhaseClass_fu_430", "Port" : "cor_phaseClass15_V_0"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.StgValue_21_shiftPhaseClass_fu_430", "Parent" : "0",
+		"CDFG" : "shiftPhaseClass",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "1",
+		"VariableLatency" : "0",
+		"Port" : [
+			{"Name" : "newValue_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cor_phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_15", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "cor_phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_11", "Type" : "OVld", "Direction" : "IO"},
@@ -98,22 +608,173 @@ set RtlHierarchyInfo {[
 			{"Name" : "cor_phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "cor_phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.correlateTop_mul_bkb_U1", "Parent" : "0"}]}
+			{"Name" : "cor_phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass1_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass1_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass2_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass2_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass3_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass3_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass4_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass4_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass5_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass5_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass6_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass6_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass7_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass7_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass8_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass8_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass9_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass9_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass10_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass10_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass11_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass11_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass12_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass12_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass13_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass13_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass14_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass14_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_9", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass15_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass15_V_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.correlateTop_mul_bkb_U19", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	correlateTop {
-		i_data_data_V {Type I LastRead 0 FirstWrite -1}
-		i_data_last_V {Type I LastRead 0 FirstWrite -1}
-		o_data_data_V {Type O LastRead -1 FirstWrite 3}
-		o_data_last_V {Type O LastRead -1 FirstWrite 3}
-		start_V {Type I LastRead 0 FirstWrite -1}
-		phaseClass_V {Type I LastRead 0 FirstWrite -1}
+		i_data_data_V {Type I LastRead 1 FirstWrite -1}
+		i_data_last_V {Type I LastRead 1 FirstWrite -1}
+		o_data_data_V {Type O LastRead -1 FirstWrite 5}
+		o_data_last_V {Type O LastRead -1 FirstWrite 5}
+		start_V {Type I LastRead 1 FirstWrite -1}
+		phaseClass_V {Type I LastRead 1 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_15 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_11 {Type IO LastRead -1 FirstWrite -1}
@@ -127,13 +788,332 @@ set ArgLastReadFirstWriteLatency {
 		cor_phaseClass0_V_3 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_2 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}}}
+		cor_phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_0 {Type IO LastRead -1 FirstWrite -1}}
+	shiftPhaseClass {
+		newValue_V {Type I LastRead 0 FirstWrite -1}
+		phaseClass_V {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass0_V_14 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_15 {Type O LastRead -1 FirstWrite 0}
+		cor_phaseClass0_V_13 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_12 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_11 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_10 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_9 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_8 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_7 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_6 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_5 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_4 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_3 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_2 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_1 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass0_V_0 {Type IO LastRead 0 FirstWrite 0}
+		cor_phaseClass1_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass1_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass2_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass3_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass4_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass5_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass6_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass7_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass8_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass9_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass10_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass11_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass12_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass13_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass14_V_0 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_9 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass15_V_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "4", "Max" : "4"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
+	{"Name" : "Latency", "Min" : "6", "Max" : "6"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
 ]}
 
 set PipelineEnableSignalInfo {[

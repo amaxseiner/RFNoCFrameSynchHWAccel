@@ -1,4 +1,4 @@
-; ModuleID = '/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -8,6 +8,171 @@ target triple = "x86_64-unknown-linux-gnu"
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @currentState = internal unnamed_addr global i1 false, align 1
 @correlateTop_str = internal unnamed_addr constant [13 x i8] c"correlateTop\00"
+@cor_phaseClass9_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass9_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass8_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass7_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass6_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass5_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass4_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass3_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass2_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass15_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass14_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass13_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass12_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass11_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass10_V_0 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_9 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_8 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_7 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_6 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_5 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_4 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_3 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_10 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_1 = internal unnamed_addr global i16 0
+@cor_phaseClass1_V_0 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_9 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_8 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_7 = internal unnamed_addr global i16 0
@@ -16,6 +181,7 @@ target triple = "x86_64-unknown-linux-gnu"
 @cor_phaseClass0_V_4 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_3 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_2 = internal unnamed_addr global i16 0
+@cor_phaseClass0_V_15 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_14 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_13 = internal unnamed_addr global i16 0
 @cor_phaseClass0_V_12 = internal unnamed_addr global i16 0
@@ -28,58 +194,31 @@ target triple = "x86_64-unknown-linux-gnu"
 @p_str2 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @p_str = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
 
-declare i21 @llvm.part.select.i21(i21, i32, i32) nounwind readnone
-
-declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
-
-define void @correlateTop(i32* %i_data_data_V, i1* %i_data_last_V, i32* %o_data_data_V, i1* %o_data_last_V, i1 %start_V, i4 %phaseClass_V) {
-codeRepl:
+define internal fastcc void @shiftPhaseClass(i16 %newValue_V, i4 %phaseClass_V) {
   %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
-  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !84
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !88
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !92
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !96
-  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100
-  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106
-  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
-  %currentState_load = load i1* @currentState, align 1
-  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
-  %loadCount_V_load = load i32* @loadCount_V, align 4
-  br i1 %currentState_load, label %2, label %0
+  %newValue_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %newValue_V)
+  switch i4 %phaseClass_V_read, label %._crit_edge [
+    i4 0, label %.preheader63.0
+    i4 1, label %.preheader62.0
+    i4 2, label %.preheader61.0
+    i4 3, label %.preheader60.0
+    i4 4, label %.preheader59.0
+    i4 5, label %.preheader58.0
+    i4 6, label %.preheader57.0
+    i4 7, label %.preheader56.0
+    i4 -8, label %.preheader55.0
+    i4 -7, label %.preheader54.0
+    i4 -6, label %.preheader53.0
+    i4 -5, label %.preheader52.0
+    i4 -4, label %.preheader51.0
+    i4 -3, label %.preheader50.0
+    i4 -2, label %.preheader49.0
+    i4 -1, label %.preheader.0
+  ]
 
-; <label>:0                                       ; preds = %codeRepl
-  br i1 %start_V_read, label %1, label %._crit_edge80
-
-; <label>:1                                       ; preds = %0
-  store i32 0, i32* @loadCount_V, align 4
-  store i1 true, i1* @currentState, align 1
-  br label %._crit_edge80
-
-._crit_edge80:                                    ; preds = %1, %0
-  br label %._crit_edge79
-
-; <label>:2                                       ; preds = %codeRepl
-  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
-  %p_Val2_s = extractvalue { i32, i1 } %empty, 0
-  %i_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1
-  %tmp_1 = trunc i32 %p_Val2_s to i16
-  store i16 %tmp_1, i16* @newVal_V, align 2
-  %tmp_2 = add i32 32, %loadCount_V_load
-  store i32 %tmp_2, i32* @loadCount_V, align 4
-  %cond_i = icmp eq i4 %phaseClass_V_read, 0
-  br i1 %cond_i, label %.preheader.0.i, label %correlator.exit
-
-.preheader.0.i:                                   ; preds = %2
+.preheader63.0:                                   ; preds = %0
   %cor_phaseClass0_V_14 = load i16* @cor_phaseClass0_V_14, align 4
+  store i16 %cor_phaseClass0_V_14, i16* @cor_phaseClass0_V_15, align 2
   %cor_phaseClass0_V_13 = load i16* @cor_phaseClass0_V_13, align 2
   store i16 %cor_phaseClass0_V_13, i16* @cor_phaseClass0_V_14, align 4
   %cor_phaseClass0_V_12 = load i16* @cor_phaseClass0_V_12, align 8
@@ -108,26 +247,424 @@ codeRepl:
   store i16 %cor_phaseClass0_V_1_s, i16* @cor_phaseClass0_V_2, align 4
   %cor_phaseClass0_V_0_s = load i16* @cor_phaseClass0_V_0, align 16
   store i16 %cor_phaseClass0_V_0_s, i16* @cor_phaseClass0_V_1, align 2
-  store i16 %tmp_1, i16* @cor_phaseClass0_V_0, align 16
-  %tmp1 = add i16 %cor_phaseClass0_V_9_s, %cor_phaseClass0_V_10
-  %tmp2 = add i16 %cor_phaseClass0_V_8_s, %cor_phaseClass0_V_7_s
-  %tmp = add i16 %tmp2, %tmp1
-  %tmp4 = add i16 %cor_phaseClass0_V_5_s, %cor_phaseClass0_V_3_s
-  %tmp5 = add i16 %cor_phaseClass0_V_2_s, %cor_phaseClass0_V_0_s
-  %tmp3 = add i16 %tmp5, %tmp4
-  %p_Val2_5_2_i = add i16 %tmp3, %tmp
-  %tmp7 = add i16 %cor_phaseClass0_V_13, %cor_phaseClass0_V_14
-  %tmp8 = add i16 %cor_phaseClass0_V_12, %cor_phaseClass0_V_11
-  %tmp6 = add i16 %tmp8, %tmp7
-  %tmp10 = add i16 %cor_phaseClass0_V_6_s, %cor_phaseClass0_V_4_s
-  %tmp11 = add i16 %cor_phaseClass0_V_1_s, %tmp_1
-  %tmp9 = add i16 %tmp11, %tmp10
-  %p_Val2_2_5_i = add i16 %tmp9, %tmp6
-  br label %correlator.exit
+  store i16 %newValue_V_read, i16* @cor_phaseClass0_V_0, align 16
+  br label %._crit_edge
 
-correlator.exit:                                  ; preds = %.preheader.0.i, %2
-  %p_Val2_1 = phi i16 [ %p_Val2_2_5_i, %.preheader.0.i ], [ 0, %2 ]
-  %p_Val2_2 = phi i16 [ %p_Val2_5_2_i, %.preheader.0.i ], [ 0, %2 ]
+.preheader62.0:                                   ; preds = %0
+  %cor_phaseClass1_V_8_s = load i16* @cor_phaseClass1_V_8, align 16
+  store i16 %cor_phaseClass1_V_8_s, i16* @cor_phaseClass1_V_9, align 2
+  %cor_phaseClass1_V_7_s = load i16* @cor_phaseClass1_V_7, align 2
+  store i16 %cor_phaseClass1_V_7_s, i16* @cor_phaseClass1_V_8, align 16
+  %cor_phaseClass1_V_6_s = load i16* @cor_phaseClass1_V_6, align 4
+  store i16 %cor_phaseClass1_V_6_s, i16* @cor_phaseClass1_V_7, align 2
+  %cor_phaseClass1_V_5_s = load i16* @cor_phaseClass1_V_5, align 2
+  store i16 %cor_phaseClass1_V_5_s, i16* @cor_phaseClass1_V_6, align 4
+  %cor_phaseClass1_V_4_s = load i16* @cor_phaseClass1_V_4, align 8
+  store i16 %cor_phaseClass1_V_4_s, i16* @cor_phaseClass1_V_5, align 2
+  %cor_phaseClass1_V_3_s = load i16* @cor_phaseClass1_V_3, align 2
+  store i16 %cor_phaseClass1_V_3_s, i16* @cor_phaseClass1_V_4, align 8
+  %cor_phaseClass1_V_2_s = load i16* @cor_phaseClass1_V_2, align 4
+  store i16 %cor_phaseClass1_V_2_s, i16* @cor_phaseClass1_V_3, align 2
+  %cor_phaseClass1_V_1_s = load i16* @cor_phaseClass1_V_1, align 2
+  store i16 %cor_phaseClass1_V_1_s, i16* @cor_phaseClass1_V_2, align 4
+  %cor_phaseClass1_V_0_s = load i16* @cor_phaseClass1_V_0, align 16
+  store i16 %cor_phaseClass1_V_0_s, i16* @cor_phaseClass1_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass1_V_0, align 16
+  br label %._crit_edge
+
+.preheader61.0:                                   ; preds = %0
+  %cor_phaseClass2_V_8_s = load i16* @cor_phaseClass2_V_8, align 16
+  store i16 %cor_phaseClass2_V_8_s, i16* @cor_phaseClass2_V_9, align 2
+  %cor_phaseClass2_V_7_s = load i16* @cor_phaseClass2_V_7, align 2
+  store i16 %cor_phaseClass2_V_7_s, i16* @cor_phaseClass2_V_8, align 16
+  %cor_phaseClass2_V_6_s = load i16* @cor_phaseClass2_V_6, align 4
+  store i16 %cor_phaseClass2_V_6_s, i16* @cor_phaseClass2_V_7, align 2
+  %cor_phaseClass2_V_5_s = load i16* @cor_phaseClass2_V_5, align 2
+  store i16 %cor_phaseClass2_V_5_s, i16* @cor_phaseClass2_V_6, align 4
+  %cor_phaseClass2_V_4_s = load i16* @cor_phaseClass2_V_4, align 8
+  store i16 %cor_phaseClass2_V_4_s, i16* @cor_phaseClass2_V_5, align 2
+  %cor_phaseClass2_V_3_s = load i16* @cor_phaseClass2_V_3, align 2
+  store i16 %cor_phaseClass2_V_3_s, i16* @cor_phaseClass2_V_4, align 8
+  %cor_phaseClass2_V_2_s = load i16* @cor_phaseClass2_V_2, align 4
+  store i16 %cor_phaseClass2_V_2_s, i16* @cor_phaseClass2_V_3, align 2
+  %cor_phaseClass2_V_1_s = load i16* @cor_phaseClass2_V_1, align 2
+  store i16 %cor_phaseClass2_V_1_s, i16* @cor_phaseClass2_V_2, align 4
+  %cor_phaseClass2_V_0_s = load i16* @cor_phaseClass2_V_0, align 16
+  store i16 %cor_phaseClass2_V_0_s, i16* @cor_phaseClass2_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass2_V_0, align 16
+  br label %._crit_edge
+
+.preheader60.0:                                   ; preds = %0
+  %cor_phaseClass3_V_8_s = load i16* @cor_phaseClass3_V_8, align 16
+  store i16 %cor_phaseClass3_V_8_s, i16* @cor_phaseClass3_V_9, align 2
+  %cor_phaseClass3_V_7_s = load i16* @cor_phaseClass3_V_7, align 2
+  store i16 %cor_phaseClass3_V_7_s, i16* @cor_phaseClass3_V_8, align 16
+  %cor_phaseClass3_V_6_s = load i16* @cor_phaseClass3_V_6, align 4
+  store i16 %cor_phaseClass3_V_6_s, i16* @cor_phaseClass3_V_7, align 2
+  %cor_phaseClass3_V_5_s = load i16* @cor_phaseClass3_V_5, align 2
+  store i16 %cor_phaseClass3_V_5_s, i16* @cor_phaseClass3_V_6, align 4
+  %cor_phaseClass3_V_4_s = load i16* @cor_phaseClass3_V_4, align 8
+  store i16 %cor_phaseClass3_V_4_s, i16* @cor_phaseClass3_V_5, align 2
+  %cor_phaseClass3_V_3_s = load i16* @cor_phaseClass3_V_3, align 2
+  store i16 %cor_phaseClass3_V_3_s, i16* @cor_phaseClass3_V_4, align 8
+  %cor_phaseClass3_V_2_s = load i16* @cor_phaseClass3_V_2, align 4
+  store i16 %cor_phaseClass3_V_2_s, i16* @cor_phaseClass3_V_3, align 2
+  %cor_phaseClass3_V_1_s = load i16* @cor_phaseClass3_V_1, align 2
+  store i16 %cor_phaseClass3_V_1_s, i16* @cor_phaseClass3_V_2, align 4
+  %cor_phaseClass3_V_0_s = load i16* @cor_phaseClass3_V_0, align 16
+  store i16 %cor_phaseClass3_V_0_s, i16* @cor_phaseClass3_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass3_V_0, align 16
+  br label %._crit_edge
+
+.preheader59.0:                                   ; preds = %0
+  %cor_phaseClass4_V_8_s = load i16* @cor_phaseClass4_V_8, align 16
+  store i16 %cor_phaseClass4_V_8_s, i16* @cor_phaseClass4_V_9, align 2
+  %cor_phaseClass4_V_7_s = load i16* @cor_phaseClass4_V_7, align 2
+  store i16 %cor_phaseClass4_V_7_s, i16* @cor_phaseClass4_V_8, align 16
+  %cor_phaseClass4_V_6_s = load i16* @cor_phaseClass4_V_6, align 4
+  store i16 %cor_phaseClass4_V_6_s, i16* @cor_phaseClass4_V_7, align 2
+  %cor_phaseClass4_V_5_s = load i16* @cor_phaseClass4_V_5, align 2
+  store i16 %cor_phaseClass4_V_5_s, i16* @cor_phaseClass4_V_6, align 4
+  %cor_phaseClass4_V_4_s = load i16* @cor_phaseClass4_V_4, align 8
+  store i16 %cor_phaseClass4_V_4_s, i16* @cor_phaseClass4_V_5, align 2
+  %cor_phaseClass4_V_3_s = load i16* @cor_phaseClass4_V_3, align 2
+  store i16 %cor_phaseClass4_V_3_s, i16* @cor_phaseClass4_V_4, align 8
+  %cor_phaseClass4_V_2_s = load i16* @cor_phaseClass4_V_2, align 4
+  store i16 %cor_phaseClass4_V_2_s, i16* @cor_phaseClass4_V_3, align 2
+  %cor_phaseClass4_V_1_s = load i16* @cor_phaseClass4_V_1, align 2
+  store i16 %cor_phaseClass4_V_1_s, i16* @cor_phaseClass4_V_2, align 4
+  %cor_phaseClass4_V_0_s = load i16* @cor_phaseClass4_V_0, align 16
+  store i16 %cor_phaseClass4_V_0_s, i16* @cor_phaseClass4_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass4_V_0, align 16
+  br label %._crit_edge
+
+.preheader58.0:                                   ; preds = %0
+  %cor_phaseClass5_V_8_s = load i16* @cor_phaseClass5_V_8, align 16
+  store i16 %cor_phaseClass5_V_8_s, i16* @cor_phaseClass5_V_9, align 2
+  %cor_phaseClass5_V_7_s = load i16* @cor_phaseClass5_V_7, align 2
+  store i16 %cor_phaseClass5_V_7_s, i16* @cor_phaseClass5_V_8, align 16
+  %cor_phaseClass5_V_6_s = load i16* @cor_phaseClass5_V_6, align 4
+  store i16 %cor_phaseClass5_V_6_s, i16* @cor_phaseClass5_V_7, align 2
+  %cor_phaseClass5_V_5_s = load i16* @cor_phaseClass5_V_5, align 2
+  store i16 %cor_phaseClass5_V_5_s, i16* @cor_phaseClass5_V_6, align 4
+  %cor_phaseClass5_V_4_s = load i16* @cor_phaseClass5_V_4, align 8
+  store i16 %cor_phaseClass5_V_4_s, i16* @cor_phaseClass5_V_5, align 2
+  %cor_phaseClass5_V_3_s = load i16* @cor_phaseClass5_V_3, align 2
+  store i16 %cor_phaseClass5_V_3_s, i16* @cor_phaseClass5_V_4, align 8
+  %cor_phaseClass5_V_2_s = load i16* @cor_phaseClass5_V_2, align 4
+  store i16 %cor_phaseClass5_V_2_s, i16* @cor_phaseClass5_V_3, align 2
+  %cor_phaseClass5_V_1_s = load i16* @cor_phaseClass5_V_1, align 2
+  store i16 %cor_phaseClass5_V_1_s, i16* @cor_phaseClass5_V_2, align 4
+  %cor_phaseClass5_V_0_s = load i16* @cor_phaseClass5_V_0, align 16
+  store i16 %cor_phaseClass5_V_0_s, i16* @cor_phaseClass5_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass5_V_0, align 16
+  br label %._crit_edge
+
+.preheader57.0:                                   ; preds = %0
+  %cor_phaseClass6_V_8_s = load i16* @cor_phaseClass6_V_8, align 16
+  store i16 %cor_phaseClass6_V_8_s, i16* @cor_phaseClass6_V_9, align 2
+  %cor_phaseClass6_V_7_s = load i16* @cor_phaseClass6_V_7, align 2
+  store i16 %cor_phaseClass6_V_7_s, i16* @cor_phaseClass6_V_8, align 16
+  %cor_phaseClass6_V_6_s = load i16* @cor_phaseClass6_V_6, align 4
+  store i16 %cor_phaseClass6_V_6_s, i16* @cor_phaseClass6_V_7, align 2
+  %cor_phaseClass6_V_5_s = load i16* @cor_phaseClass6_V_5, align 2
+  store i16 %cor_phaseClass6_V_5_s, i16* @cor_phaseClass6_V_6, align 4
+  %cor_phaseClass6_V_4_s = load i16* @cor_phaseClass6_V_4, align 8
+  store i16 %cor_phaseClass6_V_4_s, i16* @cor_phaseClass6_V_5, align 2
+  %cor_phaseClass6_V_3_s = load i16* @cor_phaseClass6_V_3, align 2
+  store i16 %cor_phaseClass6_V_3_s, i16* @cor_phaseClass6_V_4, align 8
+  %cor_phaseClass6_V_2_s = load i16* @cor_phaseClass6_V_2, align 4
+  store i16 %cor_phaseClass6_V_2_s, i16* @cor_phaseClass6_V_3, align 2
+  %cor_phaseClass6_V_1_s = load i16* @cor_phaseClass6_V_1, align 2
+  store i16 %cor_phaseClass6_V_1_s, i16* @cor_phaseClass6_V_2, align 4
+  %cor_phaseClass6_V_0_s = load i16* @cor_phaseClass6_V_0, align 16
+  store i16 %cor_phaseClass6_V_0_s, i16* @cor_phaseClass6_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass6_V_0, align 16
+  br label %._crit_edge
+
+.preheader56.0:                                   ; preds = %0
+  %cor_phaseClass7_V_8_s = load i16* @cor_phaseClass7_V_8, align 16
+  store i16 %cor_phaseClass7_V_8_s, i16* @cor_phaseClass7_V_9, align 2
+  %cor_phaseClass7_V_7_s = load i16* @cor_phaseClass7_V_7, align 2
+  store i16 %cor_phaseClass7_V_7_s, i16* @cor_phaseClass7_V_8, align 16
+  %cor_phaseClass7_V_6_s = load i16* @cor_phaseClass7_V_6, align 4
+  store i16 %cor_phaseClass7_V_6_s, i16* @cor_phaseClass7_V_7, align 2
+  %cor_phaseClass7_V_5_s = load i16* @cor_phaseClass7_V_5, align 2
+  store i16 %cor_phaseClass7_V_5_s, i16* @cor_phaseClass7_V_6, align 4
+  %cor_phaseClass7_V_4_s = load i16* @cor_phaseClass7_V_4, align 8
+  store i16 %cor_phaseClass7_V_4_s, i16* @cor_phaseClass7_V_5, align 2
+  %cor_phaseClass7_V_3_s = load i16* @cor_phaseClass7_V_3, align 2
+  store i16 %cor_phaseClass7_V_3_s, i16* @cor_phaseClass7_V_4, align 8
+  %cor_phaseClass7_V_2_s = load i16* @cor_phaseClass7_V_2, align 4
+  store i16 %cor_phaseClass7_V_2_s, i16* @cor_phaseClass7_V_3, align 2
+  %cor_phaseClass7_V_1_s = load i16* @cor_phaseClass7_V_1, align 2
+  store i16 %cor_phaseClass7_V_1_s, i16* @cor_phaseClass7_V_2, align 4
+  %cor_phaseClass7_V_0_s = load i16* @cor_phaseClass7_V_0, align 16
+  store i16 %cor_phaseClass7_V_0_s, i16* @cor_phaseClass7_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass7_V_0, align 16
+  br label %._crit_edge
+
+.preheader55.0:                                   ; preds = %0
+  %cor_phaseClass8_V_8_s = load i16* @cor_phaseClass8_V_8, align 16
+  store i16 %cor_phaseClass8_V_8_s, i16* @cor_phaseClass8_V_9, align 2
+  %cor_phaseClass8_V_7_s = load i16* @cor_phaseClass8_V_7, align 2
+  store i16 %cor_phaseClass8_V_7_s, i16* @cor_phaseClass8_V_8, align 16
+  %cor_phaseClass8_V_6_s = load i16* @cor_phaseClass8_V_6, align 4
+  store i16 %cor_phaseClass8_V_6_s, i16* @cor_phaseClass8_V_7, align 2
+  %cor_phaseClass8_V_5_s = load i16* @cor_phaseClass8_V_5, align 2
+  store i16 %cor_phaseClass8_V_5_s, i16* @cor_phaseClass8_V_6, align 4
+  %cor_phaseClass8_V_4_s = load i16* @cor_phaseClass8_V_4, align 8
+  store i16 %cor_phaseClass8_V_4_s, i16* @cor_phaseClass8_V_5, align 2
+  %cor_phaseClass8_V_3_s = load i16* @cor_phaseClass8_V_3, align 2
+  store i16 %cor_phaseClass8_V_3_s, i16* @cor_phaseClass8_V_4, align 8
+  %cor_phaseClass8_V_2_s = load i16* @cor_phaseClass8_V_2, align 4
+  store i16 %cor_phaseClass8_V_2_s, i16* @cor_phaseClass8_V_3, align 2
+  %cor_phaseClass8_V_1_s = load i16* @cor_phaseClass8_V_1, align 2
+  store i16 %cor_phaseClass8_V_1_s, i16* @cor_phaseClass8_V_2, align 4
+  %cor_phaseClass8_V_0_s = load i16* @cor_phaseClass8_V_0, align 16
+  store i16 %cor_phaseClass8_V_0_s, i16* @cor_phaseClass8_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass8_V_0, align 16
+  br label %._crit_edge
+
+.preheader54.0:                                   ; preds = %0
+  %cor_phaseClass9_V_8_s = load i16* @cor_phaseClass9_V_8, align 16
+  store i16 %cor_phaseClass9_V_8_s, i16* @cor_phaseClass9_V_9, align 2
+  %cor_phaseClass9_V_7_s = load i16* @cor_phaseClass9_V_7, align 2
+  store i16 %cor_phaseClass9_V_7_s, i16* @cor_phaseClass9_V_8, align 16
+  %cor_phaseClass9_V_6_s = load i16* @cor_phaseClass9_V_6, align 4
+  store i16 %cor_phaseClass9_V_6_s, i16* @cor_phaseClass9_V_7, align 2
+  %cor_phaseClass9_V_5_s = load i16* @cor_phaseClass9_V_5, align 2
+  store i16 %cor_phaseClass9_V_5_s, i16* @cor_phaseClass9_V_6, align 4
+  %cor_phaseClass9_V_4_s = load i16* @cor_phaseClass9_V_4, align 8
+  store i16 %cor_phaseClass9_V_4_s, i16* @cor_phaseClass9_V_5, align 2
+  %cor_phaseClass9_V_3_s = load i16* @cor_phaseClass9_V_3, align 2
+  store i16 %cor_phaseClass9_V_3_s, i16* @cor_phaseClass9_V_4, align 8
+  %cor_phaseClass9_V_2_s = load i16* @cor_phaseClass9_V_2, align 4
+  store i16 %cor_phaseClass9_V_2_s, i16* @cor_phaseClass9_V_3, align 2
+  %cor_phaseClass9_V_1_s = load i16* @cor_phaseClass9_V_1, align 2
+  store i16 %cor_phaseClass9_V_1_s, i16* @cor_phaseClass9_V_2, align 4
+  %cor_phaseClass9_V_0_s = load i16* @cor_phaseClass9_V_0, align 16
+  store i16 %cor_phaseClass9_V_0_s, i16* @cor_phaseClass9_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass9_V_0, align 16
+  br label %._crit_edge
+
+.preheader53.0:                                   ; preds = %0
+  %cor_phaseClass10_V_8 = load i16* @cor_phaseClass10_V_8, align 16
+  store i16 %cor_phaseClass10_V_8, i16* @cor_phaseClass10_V_9, align 2
+  %cor_phaseClass10_V_7 = load i16* @cor_phaseClass10_V_7, align 2
+  store i16 %cor_phaseClass10_V_7, i16* @cor_phaseClass10_V_8, align 16
+  %cor_phaseClass10_V_6 = load i16* @cor_phaseClass10_V_6, align 4
+  store i16 %cor_phaseClass10_V_6, i16* @cor_phaseClass10_V_7, align 2
+  %cor_phaseClass10_V_5 = load i16* @cor_phaseClass10_V_5, align 2
+  store i16 %cor_phaseClass10_V_5, i16* @cor_phaseClass10_V_6, align 4
+  %cor_phaseClass10_V_4 = load i16* @cor_phaseClass10_V_4, align 8
+  store i16 %cor_phaseClass10_V_4, i16* @cor_phaseClass10_V_5, align 2
+  %cor_phaseClass10_V_3 = load i16* @cor_phaseClass10_V_3, align 2
+  store i16 %cor_phaseClass10_V_3, i16* @cor_phaseClass10_V_4, align 8
+  %cor_phaseClass10_V_2 = load i16* @cor_phaseClass10_V_2, align 4
+  store i16 %cor_phaseClass10_V_2, i16* @cor_phaseClass10_V_3, align 2
+  %cor_phaseClass10_V_1 = load i16* @cor_phaseClass10_V_1, align 2
+  store i16 %cor_phaseClass10_V_1, i16* @cor_phaseClass10_V_2, align 4
+  %cor_phaseClass10_V_0 = load i16* @cor_phaseClass10_V_0, align 16
+  store i16 %cor_phaseClass10_V_0, i16* @cor_phaseClass10_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass10_V_0, align 16
+  br label %._crit_edge
+
+.preheader52.0:                                   ; preds = %0
+  %cor_phaseClass11_V_8 = load i16* @cor_phaseClass11_V_8, align 16
+  store i16 %cor_phaseClass11_V_8, i16* @cor_phaseClass11_V_9, align 2
+  %cor_phaseClass11_V_7 = load i16* @cor_phaseClass11_V_7, align 2
+  store i16 %cor_phaseClass11_V_7, i16* @cor_phaseClass11_V_8, align 16
+  %cor_phaseClass11_V_6 = load i16* @cor_phaseClass11_V_6, align 4
+  store i16 %cor_phaseClass11_V_6, i16* @cor_phaseClass11_V_7, align 2
+  %cor_phaseClass11_V_5 = load i16* @cor_phaseClass11_V_5, align 2
+  store i16 %cor_phaseClass11_V_5, i16* @cor_phaseClass11_V_6, align 4
+  %cor_phaseClass11_V_4 = load i16* @cor_phaseClass11_V_4, align 8
+  store i16 %cor_phaseClass11_V_4, i16* @cor_phaseClass11_V_5, align 2
+  %cor_phaseClass11_V_3 = load i16* @cor_phaseClass11_V_3, align 2
+  store i16 %cor_phaseClass11_V_3, i16* @cor_phaseClass11_V_4, align 8
+  %cor_phaseClass11_V_2 = load i16* @cor_phaseClass11_V_2, align 4
+  store i16 %cor_phaseClass11_V_2, i16* @cor_phaseClass11_V_3, align 2
+  %cor_phaseClass11_V_1 = load i16* @cor_phaseClass11_V_1, align 2
+  store i16 %cor_phaseClass11_V_1, i16* @cor_phaseClass11_V_2, align 4
+  %cor_phaseClass11_V_0 = load i16* @cor_phaseClass11_V_0, align 16
+  store i16 %cor_phaseClass11_V_0, i16* @cor_phaseClass11_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass11_V_0, align 16
+  br label %._crit_edge
+
+.preheader51.0:                                   ; preds = %0
+  %cor_phaseClass12_V_8 = load i16* @cor_phaseClass12_V_8, align 16
+  store i16 %cor_phaseClass12_V_8, i16* @cor_phaseClass12_V_9, align 2
+  %cor_phaseClass12_V_7 = load i16* @cor_phaseClass12_V_7, align 2
+  store i16 %cor_phaseClass12_V_7, i16* @cor_phaseClass12_V_8, align 16
+  %cor_phaseClass12_V_6 = load i16* @cor_phaseClass12_V_6, align 4
+  store i16 %cor_phaseClass12_V_6, i16* @cor_phaseClass12_V_7, align 2
+  %cor_phaseClass12_V_5 = load i16* @cor_phaseClass12_V_5, align 2
+  store i16 %cor_phaseClass12_V_5, i16* @cor_phaseClass12_V_6, align 4
+  %cor_phaseClass12_V_4 = load i16* @cor_phaseClass12_V_4, align 8
+  store i16 %cor_phaseClass12_V_4, i16* @cor_phaseClass12_V_5, align 2
+  %cor_phaseClass12_V_3 = load i16* @cor_phaseClass12_V_3, align 2
+  store i16 %cor_phaseClass12_V_3, i16* @cor_phaseClass12_V_4, align 8
+  %cor_phaseClass12_V_2 = load i16* @cor_phaseClass12_V_2, align 4
+  store i16 %cor_phaseClass12_V_2, i16* @cor_phaseClass12_V_3, align 2
+  %cor_phaseClass12_V_1 = load i16* @cor_phaseClass12_V_1, align 2
+  store i16 %cor_phaseClass12_V_1, i16* @cor_phaseClass12_V_2, align 4
+  %cor_phaseClass12_V_0 = load i16* @cor_phaseClass12_V_0, align 16
+  store i16 %cor_phaseClass12_V_0, i16* @cor_phaseClass12_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass12_V_0, align 16
+  br label %._crit_edge
+
+.preheader50.0:                                   ; preds = %0
+  %cor_phaseClass13_V_8 = load i16* @cor_phaseClass13_V_8, align 16
+  store i16 %cor_phaseClass13_V_8, i16* @cor_phaseClass13_V_9, align 2
+  %cor_phaseClass13_V_7 = load i16* @cor_phaseClass13_V_7, align 2
+  store i16 %cor_phaseClass13_V_7, i16* @cor_phaseClass13_V_8, align 16
+  %cor_phaseClass13_V_6 = load i16* @cor_phaseClass13_V_6, align 4
+  store i16 %cor_phaseClass13_V_6, i16* @cor_phaseClass13_V_7, align 2
+  %cor_phaseClass13_V_5 = load i16* @cor_phaseClass13_V_5, align 2
+  store i16 %cor_phaseClass13_V_5, i16* @cor_phaseClass13_V_6, align 4
+  %cor_phaseClass13_V_4 = load i16* @cor_phaseClass13_V_4, align 8
+  store i16 %cor_phaseClass13_V_4, i16* @cor_phaseClass13_V_5, align 2
+  %cor_phaseClass13_V_3 = load i16* @cor_phaseClass13_V_3, align 2
+  store i16 %cor_phaseClass13_V_3, i16* @cor_phaseClass13_V_4, align 8
+  %cor_phaseClass13_V_2 = load i16* @cor_phaseClass13_V_2, align 4
+  store i16 %cor_phaseClass13_V_2, i16* @cor_phaseClass13_V_3, align 2
+  %cor_phaseClass13_V_1 = load i16* @cor_phaseClass13_V_1, align 2
+  store i16 %cor_phaseClass13_V_1, i16* @cor_phaseClass13_V_2, align 4
+  %cor_phaseClass13_V_0 = load i16* @cor_phaseClass13_V_0, align 16
+  store i16 %cor_phaseClass13_V_0, i16* @cor_phaseClass13_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass13_V_0, align 16
+  br label %._crit_edge
+
+.preheader49.0:                                   ; preds = %0
+  %cor_phaseClass14_V_8 = load i16* @cor_phaseClass14_V_8, align 16
+  store i16 %cor_phaseClass14_V_8, i16* @cor_phaseClass14_V_9, align 2
+  %cor_phaseClass14_V_7 = load i16* @cor_phaseClass14_V_7, align 2
+  store i16 %cor_phaseClass14_V_7, i16* @cor_phaseClass14_V_8, align 16
+  %cor_phaseClass14_V_6 = load i16* @cor_phaseClass14_V_6, align 4
+  store i16 %cor_phaseClass14_V_6, i16* @cor_phaseClass14_V_7, align 2
+  %cor_phaseClass14_V_5 = load i16* @cor_phaseClass14_V_5, align 2
+  store i16 %cor_phaseClass14_V_5, i16* @cor_phaseClass14_V_6, align 4
+  %cor_phaseClass14_V_4 = load i16* @cor_phaseClass14_V_4, align 8
+  store i16 %cor_phaseClass14_V_4, i16* @cor_phaseClass14_V_5, align 2
+  %cor_phaseClass14_V_3 = load i16* @cor_phaseClass14_V_3, align 2
+  store i16 %cor_phaseClass14_V_3, i16* @cor_phaseClass14_V_4, align 8
+  %cor_phaseClass14_V_2 = load i16* @cor_phaseClass14_V_2, align 4
+  store i16 %cor_phaseClass14_V_2, i16* @cor_phaseClass14_V_3, align 2
+  %cor_phaseClass14_V_1 = load i16* @cor_phaseClass14_V_1, align 2
+  store i16 %cor_phaseClass14_V_1, i16* @cor_phaseClass14_V_2, align 4
+  %cor_phaseClass14_V_0 = load i16* @cor_phaseClass14_V_0, align 16
+  store i16 %cor_phaseClass14_V_0, i16* @cor_phaseClass14_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass14_V_0, align 16
+  br label %._crit_edge
+
+.preheader.0:                                     ; preds = %0
+  %cor_phaseClass15_V_8 = load i16* @cor_phaseClass15_V_8, align 16
+  store i16 %cor_phaseClass15_V_8, i16* @cor_phaseClass15_V_9, align 2
+  %cor_phaseClass15_V_7 = load i16* @cor_phaseClass15_V_7, align 2
+  store i16 %cor_phaseClass15_V_7, i16* @cor_phaseClass15_V_8, align 16
+  %cor_phaseClass15_V_6 = load i16* @cor_phaseClass15_V_6, align 4
+  store i16 %cor_phaseClass15_V_6, i16* @cor_phaseClass15_V_7, align 2
+  %cor_phaseClass15_V_5 = load i16* @cor_phaseClass15_V_5, align 2
+  store i16 %cor_phaseClass15_V_5, i16* @cor_phaseClass15_V_6, align 4
+  %cor_phaseClass15_V_4 = load i16* @cor_phaseClass15_V_4, align 8
+  store i16 %cor_phaseClass15_V_4, i16* @cor_phaseClass15_V_5, align 2
+  %cor_phaseClass15_V_3 = load i16* @cor_phaseClass15_V_3, align 2
+  store i16 %cor_phaseClass15_V_3, i16* @cor_phaseClass15_V_4, align 8
+  %cor_phaseClass15_V_2 = load i16* @cor_phaseClass15_V_2, align 4
+  store i16 %cor_phaseClass15_V_2, i16* @cor_phaseClass15_V_3, align 2
+  %cor_phaseClass15_V_1 = load i16* @cor_phaseClass15_V_1, align 2
+  store i16 %cor_phaseClass15_V_1, i16* @cor_phaseClass15_V_2, align 4
+  %cor_phaseClass15_V_0 = load i16* @cor_phaseClass15_V_0, align 16
+  store i16 %cor_phaseClass15_V_0, i16* @cor_phaseClass15_V_1, align 2
+  store i16 %newValue_V_read, i16* @cor_phaseClass15_V_0, align 16
+  br label %._crit_edge
+
+._crit_edge:                                      ; preds = %.preheader.0, %.preheader49.0, %.preheader50.0, %.preheader51.0, %.preheader52.0, %.preheader53.0, %.preheader54.0, %.preheader55.0, %.preheader56.0, %.preheader57.0, %.preheader58.0, %.preheader59.0, %.preheader60.0, %.preheader61.0, %.preheader62.0, %.preheader63.0, %0
+  ret void
+}
+
+declare i21 @llvm.part.select.i21(i21, i32, i32) nounwind readnone
+
+declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
+
+define void @correlateTop(i32* %i_data_data_V, i1* %i_data_last_V, i32* %o_data_data_V, i1* %o_data_last_V, i1 %start_V, i4 %phaseClass_V) {
+codeRepl:
+  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
+  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !84
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !88
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !92
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !96
+  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100
+  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106
+  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
+  %currentState_load = load i1* @currentState, align 1
+  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
+  %loadCount_V_load = load i32* @loadCount_V, align 4
+  br i1 %currentState_load, label %_ifconv, label %0
+
+; <label>:0                                       ; preds = %codeRepl
+  br i1 %start_V_read, label %1, label %._crit_edge80
+
+; <label>:1                                       ; preds = %0
+  store i32 0, i32* @loadCount_V, align 4
+  store i1 true, i1* @currentState, align 1
+  br label %._crit_edge80
+
+._crit_edge80:                                    ; preds = %1, %0
+  br label %._crit_edge79
+
+_ifconv:                                          ; preds = %codeRepl
+  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
+  %p_Val2_s = extractvalue { i32, i1 } %empty, 0
+  %o_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1
+  %tmp_1 = trunc i32 %p_Val2_s to i16
+  store i16 %tmp_1, i16* @newVal_V, align 2
+  %tmp_2 = add i32 32, %loadCount_V_load
+  store i32 %tmp_2, i32* @loadCount_V, align 4
+  call fastcc void @shiftPhaseClass(i16 %tmp_1, i4 %phaseClass_V_read)
+  %cond_i = icmp eq i4 %phaseClass_V_read, 0
+  %cor_phaseClass0_V_15 = load i16* @cor_phaseClass0_V_15, align 2
+  %cor_phaseClass0_V_14 = load i16* @cor_phaseClass0_V_14, align 4
+  %cor_phaseClass0_V_13 = load i16* @cor_phaseClass0_V_13, align 2
+  %cor_phaseClass0_V_12 = load i16* @cor_phaseClass0_V_12, align 8
+  %cor_phaseClass0_V_11 = load i16* @cor_phaseClass0_V_11, align 2
+  %cor_phaseClass0_V_10 = load i16* @cor_phaseClass0_V_10, align 4
+  %cor_phaseClass0_V_9_s = load i16* @cor_phaseClass0_V_9, align 2
+  %cor_phaseClass0_V_8_s = load i16* @cor_phaseClass0_V_8, align 16
+  %cor_phaseClass0_V_7_s = load i16* @cor_phaseClass0_V_7, align 2
+  %cor_phaseClass0_V_6_s = load i16* @cor_phaseClass0_V_6, align 4
+  %cor_phaseClass0_V_5_s = load i16* @cor_phaseClass0_V_5, align 2
+  %cor_phaseClass0_V_4_s = load i16* @cor_phaseClass0_V_4, align 8
+  %cor_phaseClass0_V_3_s = load i16* @cor_phaseClass0_V_3, align 2
+  %cor_phaseClass0_V_2_s = load i16* @cor_phaseClass0_V_2, align 4
+  %cor_phaseClass0_V_1_s = load i16* @cor_phaseClass0_V_1, align 2
+  %tmp1 = add i16 %cor_phaseClass0_V_11, %cor_phaseClass0_V_10
+  %tmp2 = add i16 %cor_phaseClass0_V_8_s, %cor_phaseClass0_V_9_s
+  %tmp = add i16 %tmp1, %tmp2
+  %tmp4 = add i16 %cor_phaseClass0_V_4_s, %cor_phaseClass0_V_6_s
+  %tmp5 = add i16 %cor_phaseClass0_V_1_s, %cor_phaseClass0_V_3_s
+  %tmp3 = add i16 %tmp4, %tmp5
+  %p_Val2_5_2_i = add i16 %tmp, %tmp3
+  %cor_phaseClass0_V_0_s = load i16* @cor_phaseClass0_V_0, align 16
+  %tmp7 = add i16 %cor_phaseClass0_V_15, %cor_phaseClass0_V_14
+  %tmp8 = add i16 %cor_phaseClass0_V_12, %cor_phaseClass0_V_13
+  %tmp6 = add i16 %tmp7, %tmp8
+  %tmp10 = add i16 %cor_phaseClass0_V_5_s, %cor_phaseClass0_V_7_s
+  %tmp11 = add i16 %cor_phaseClass0_V_0_s, %cor_phaseClass0_V_2_s
+  %tmp9 = add i16 %tmp10, %tmp11
+  %p_Val2_2_5_i = add i16 %tmp6, %tmp9
+  %p_Val2_1 = select i1 %cond_i, i16 %p_Val2_2_5_i, i16 0
+  %p_Val2_2 = select i1 %cond_i, i16 %p_Val2_5_2_i, i16 0
   %tmp_i = icmp sgt i16 %p_Val2_2, %p_Val2_1
   %p_Val2_9_i = sub i16 %p_Val2_1, %p_Val2_2
   %p_Val2_8_i = sub i16 %p_Val2_2, %p_Val2_1
@@ -135,13 +672,13 @@ correlator.exit:                                  ; preds = %.preheader.0.i, %2
   %OP1_V_cast = sext i16 %tmp_1_i to i21
   %p_Val2_3 = mul i21 %OP1_V_cast, %OP1_V_cast
   %res_V = call i16 @_ssdm_op_PartSelect.i16.i21.i32.i32(i21 %p_Val2_3, i32 5, i32 20)
-  %tmp_3 = icmp sgt i16 %res_V, 3200
+  %tmp_3 = icmp sgt i16 %res_V, 6400
   %o_data_data_V_tmp = select i1 %tmp_3, i32 %tmp_2, i32 0
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %o_data_last_V_tmp)
   store i1 true, i1* @currentState, align 1
   br label %._crit_edge79
 
-._crit_edge79:                                    ; preds = %correlator.exit, %._crit_edge80
+._crit_edge79:                                    ; preds = %_ifconv, %._crit_edge80
   ret void
 }
 
@@ -189,6 +726,11 @@ entry:
 define weak i4 @_ssdm_op_Read.ap_auto.i4(i4) {
 entry:
   ret i4 %0
+}
+
+define weak i16 @_ssdm_op_Read.ap_auto.i16(i16) {
+entry:
+  ret i16 %0
 }
 
 define weak i1 @_ssdm_op_Read.ap_auto.i1(i1) {
