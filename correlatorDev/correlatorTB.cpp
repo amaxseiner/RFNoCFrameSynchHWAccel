@@ -28,10 +28,10 @@ int main(){
 		axi.data.range(15,0) = test.V;
 		correlateTop(&axi,&axiOut,0,phaseClass);
 		test2.V = axiOut.data.range(15,0);
-		if(test2 != 0){
+		if(test2 != 0 && phaseClass==0){
 			result << a;
 			result << ",";
-			result << setw(16) << phaseClass;
+			result << setw(2) << phaseClass;
 			result << ",";
 			result << setw(16) << test;
 			result << ",";

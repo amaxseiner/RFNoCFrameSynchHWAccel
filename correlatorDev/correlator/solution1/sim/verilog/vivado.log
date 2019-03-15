@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar 15 01:15:26 2019
+# Process ID: 12221
+# Current directory: /home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/sim/verilog
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/sim/verilog/vivado.log
+# Journal file: /home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/sim/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.2/data/ip'.
+# open_wave_database correlateTop.wdb
+open_wave_config /home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/sim/verilog/correlateTop.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 01:16:55 2019...

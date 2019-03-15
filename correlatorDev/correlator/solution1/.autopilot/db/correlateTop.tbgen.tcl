@@ -62,10 +62,10 @@ set NewPortList {[
  	{ "name": "phaseClass_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "phaseClass_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "correlateTop",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -82,76 +82,58 @@ set RtlHierarchyInfo {[
 			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "loadCountPhase0_V", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "cor_phaseArray_phase_8", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_9", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_10", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_11", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_12", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_1", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_2", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_3", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_4", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_5", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_6", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_7", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_13", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_phase_14", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "cor_phaseArray_loadC", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_8_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_9_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_10_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_11_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_12_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_1_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_2_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_3_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_4_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_5_U", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_6_U", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_7_U", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_13_U", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_phase_14_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cor_phaseArray_loadC_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.correlateTop_mul_rcU_U1", "Parent" : "0"}]}
+			{"Name" : "cor_phaseClass0_V_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_13", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.correlateTop_mul_bkb_U1", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	correlateTop {
-		i_data_data_V {Type I LastRead 1 FirstWrite -1}
-		i_data_last_V {Type I LastRead 1 FirstWrite -1}
-		o_data_data_V {Type O LastRead -1 FirstWrite 4}
-		o_data_last_V {Type O LastRead -1 FirstWrite 4}
-		start_V {Type I LastRead 1 FirstWrite -1}
-		phaseClass_V {Type I LastRead 1 FirstWrite -1}
+		i_data_data_V {Type I LastRead 0 FirstWrite -1}
+		i_data_last_V {Type I LastRead 0 FirstWrite -1}
+		o_data_data_V {Type O LastRead -1 FirstWrite 3}
+		o_data_last_V {Type O LastRead -1 FirstWrite 3}
+		start_V {Type I LastRead 0 FirstWrite -1}
+		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
-		loadCountPhase0_V {Type O LastRead -1 FirstWrite -1}
+		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_8 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_9 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_10 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_11 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_12 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_1 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_2 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_3 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_4 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_5 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_6 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_7 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_13 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_phase_14 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseArray_loadC {Type IO LastRead -1 FirstWrite -1}}}
+		cor_phaseClass0_V_14 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_13 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_12 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_11 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_10 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_9 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_7 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_3 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_2 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_1 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "5", "Max" : "5"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
+	{"Name" : "Latency", "Min" : "4", "Max" : "4"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[

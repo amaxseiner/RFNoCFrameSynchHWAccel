@@ -1,0 +1,7 @@
+sv xil_defaultlib "correlateTop.v"
+sv xil_defaultlib "correlateTop_mul_bkb.v"
+sv xil_defaultlib "AESL_axi_s_i_data.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "AESL_axi_s_o_data.v"
+sv xil_defaultlib "correlateTop.autotb.v"
+

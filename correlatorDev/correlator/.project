@@ -29,52 +29,52 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.src</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.tb</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/correlator.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator.cpp</location>
 		</link>
 		<link>
 			<name>source/forAl.csv</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/forAl.csv</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/forAl.csv</location>
 		</link>
 		<link>
-			<name>source/inputCorrr.dat</name>
+			<name>source/rfnoc.h</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/inputCorrr.dat</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/rfnoc.h</location>
 		</link>
 		<link>
 			<name>testbench/correlatorTB.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlatorTB.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/directives.tcl</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/script.tcl</location>
+			<location>/home/alex/Desktop/RFNoCFrameSynchHWAccel-dev/correlatorDev/correlator/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
