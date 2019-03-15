@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../matcherTB.cpp
+HLS_SOURCES = ../../../tb_main.cpp ../../../matchFilter.cpp
 
 TARGET := csim.exe
 
@@ -69,8 +69,14 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/matcherTB.o: ../../../matcherTB.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../matcherTB.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/tb_main.o: ../../../tb_main.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../tb_main.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/matcherTB.d
+-include $(ObjDir)/tb_main.d
+
+$(ObjDir)/matchFilter.o: ../../../matchFilter.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../matchFilter.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/matchFilter.d

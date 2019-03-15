@@ -1,0 +1,5 @@
+   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling apatb_matchFilter.cpp
+   Compiling matchFilter.cpp_pre.cpp.tb.cpp
+   Compiling tb_main.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

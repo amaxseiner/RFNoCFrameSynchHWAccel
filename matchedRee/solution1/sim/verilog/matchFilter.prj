@@ -1,0 +1,8 @@
+sv xil_defaultlib "AESL_axi_s_in_r.v"
+sv xil_defaultlib "AESL_axi_s_out_r.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "matchFilter.autotb.v"
+sv xil_defaultlib "matchFilter.v"
+sv xil_defaultlib "matchFilter_buffIbkb.v"
+sv xil_defaultlib "matchFilter_buffIcud.v"
+

@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar 14 17:02:11 2019
+# Process ID: 18280
+# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/vivado.log
+# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
+# open_wave_database matchFilter.wdb
+open_wave_config D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 14 17:03:29 2019...

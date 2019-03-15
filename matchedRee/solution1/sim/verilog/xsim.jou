@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar 14 15:37:36 2019
+# Process ID: 3956
+# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/matchFilter/xsim_script.tcl}
+# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.log
+# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matchFilter/xsim_script.tcl
+source matchFilter.tcl

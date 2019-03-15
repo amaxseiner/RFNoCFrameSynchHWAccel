@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar 14 15:37:58 2019
+# Process ID: 12724
+# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/webtalk.log
+# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace

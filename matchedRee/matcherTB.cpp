@@ -1,6 +1,6 @@
 #include <iostream>
 #include "ap_int.h"
-#include "matcherSim.h"
+#include "matchFilter.h"
 
 using namespace std;
 
