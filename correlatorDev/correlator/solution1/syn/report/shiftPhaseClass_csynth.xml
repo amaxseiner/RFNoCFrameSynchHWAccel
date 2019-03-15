@@ -11,11 +11,10 @@
 <TopModelName>shiftPhaseClass</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<TargetInitiationInterval>4</TargetInitiationInterval>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>function</PipelineType>
+<PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
 <EstimatedClockPeriod>1.15</EstimatedClockPeriod>
@@ -25,10 +24,8 @@
 <Best-caseLatency>0</Best-caseLatency>
 <Average-caseLatency>0</Average-caseLatency>
 <Worst-caseLatency>0</Worst-caseLatency>
-<PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>1</PipelineDepth>
-<Interval-min>1</Interval-min>
-<Interval-max>1</Interval-max>
+<Interval-min>0</Interval-min>
+<Interval-max>0</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 

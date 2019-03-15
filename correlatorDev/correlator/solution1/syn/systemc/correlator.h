@@ -16,7 +16,7 @@
 namespace ap_rtl {
 
 struct correlator : public sc_module {
-    // Port declarations 265
+    // Port declarations 264
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
@@ -281,7 +281,6 @@ struct correlator : public sc_module {
     sc_in< sc_lv<16> > cor_phaseClass0_V_1;
     sc_in< sc_lv<16> > cor_phaseClass0_V_0;
     sc_out< sc_lv<16> > ap_return;
-    sc_in< sc_logic > ap_ce;
 
 
     // Module declarations
@@ -531,6 +530,7 @@ struct correlator : public sc_module {
     sc_signal< sc_lv<16> > p_Val2_3_fu_3051_p0;
     sc_signal< sc_lv<21> > OP1_V_cast_fu_3038_p1;
     sc_signal< sc_lv<16> > p_Val2_3_fu_3051_p1;
+    sc_signal< sc_lv<16> > ap_return_preg;
     sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;

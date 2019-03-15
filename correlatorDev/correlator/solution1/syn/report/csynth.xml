@@ -11,32 +11,29 @@
 <TopModelName>correlateTop</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<TargetInitiationInterval>4</TargetInitiationInterval>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>function</PipelineType>
+<PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
 <EstimatedClockPeriod>8.21</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>6</Best-caseLatency>
-<Average-caseLatency>6</Average-caseLatency>
+<Best-caseLatency>1</Best-caseLatency>
+<Average-caseLatency>4</Average-caseLatency>
 <Worst-caseLatency>6</Worst-caseLatency>
-<PipelineInitiationInterval>4</PipelineInitiationInterval>
-<PipelineDepth>7</PipelineDepth>
-<Interval-min>4</Interval-min>
-<Interval-max>4</Interval-max>
+<Interval-min>2</Interval-min>
+<Interval-max>7</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP48E>1</DSP48E>
-<FF>4341</FF>
-<LUT>7070</LUT>
+<FF>4384</FF>
+<LUT>7042</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>

@@ -37201,8 +37201,8 @@
 				<item>790</item>
 				<item>792</item>
 			</basic_blocks>
-			<mII>1</mII>
-			<mDepth>1</mDepth>
+			<mII>-1</mII>
+			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
@@ -40960,47 +40960,14 @@
 		</item>
 	</bblk_ent_exit>
 	<regions class_id="32" tracking_level="0" version="0">
-		<count>1</count>
+		<count>0</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_1887">
-			<region_name>shiftPhaseClass</region_name>
-			<basic_blocks>
-				<count>18</count>
-				<item_version>0</item_version>
-				<item>262</item>
-				<item>295</item>
-				<item>328</item>
-				<item>361</item>
-				<item>394</item>
-				<item>427</item>
-				<item>460</item>
-				<item>493</item>
-				<item>526</item>
-				<item>559</item>
-				<item>592</item>
-				<item>625</item>
-				<item>658</item>
-				<item>691</item>
-				<item>724</item>
-				<item>757</item>
-				<item>790</item>
-				<item>792</item>
-			</basic_blocks>
-			<nodes>
-				<count>0</count>
-				<item_version>0</item_version>
-			</nodes>
-			<anchor_node>-1</anchor_node>
-			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>1</pipe_depth>
-		</item>
 	</regions>
-	<dp_fu_nodes class_id="34" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="33" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="35" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="34" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -41016,7 +40983,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="36" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="35" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -41036,11 +41003,11 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="37" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_port_io_nodes>
-	<port2core class_id="38" tracking_level="0" version="0">
+	<port2core class_id="37" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</port2core>

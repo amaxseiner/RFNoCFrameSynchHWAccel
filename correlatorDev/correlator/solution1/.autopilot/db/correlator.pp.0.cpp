@@ -29202,7 +29202,7 @@ void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_u
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 
-#pragma HLS PIPELINE II=4
+
 
 static correlate cor;
 

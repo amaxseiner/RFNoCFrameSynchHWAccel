@@ -2,7 +2,7 @@ set moduleName shiftPhaseClass
 set isCombinational 1
 set isDatapathOnly 0
 set isPipelined 0
-set pipeline_type function
+set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
@@ -2579,7 +2579,7 @@ set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
 	{"Name" : "Latency", "Min" : "0", "Max" : "0"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
+	, {"Name" : "Interval", "Min" : "0", "Max" : "0"}
 ]}
 
 set PipelineEnableSignalInfo {[

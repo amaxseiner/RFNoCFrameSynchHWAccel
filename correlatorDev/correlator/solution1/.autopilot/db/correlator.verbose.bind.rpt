@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlator'
 ================================================================
-* Date:           Fri Mar 15 15:34:57 2019
+* Date:           Fri Mar 15 15:42:38 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+----------+
-    |  Latency  |  Interval | Pipeline |
-    | min | max | min | max |   Type   |
-    +-----+-----+-----+-----+----------+
-    |    1|    1|    2|    2| function |
-    +-----+-----+-----+-----+----------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -52,25 +52,21 @@ ResetActiveHigh: 1
 IsCombinational: 0
 IsDatapathOnly: 0
 HasWiredReturn: 1
-HasMFsm: 2
-HasVarLatency: 0
-IsPipeline: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
 IsRtlPipelined: 0
 IsInstanceOverlapped: 0
 IsDontTouch: 0
 HasImplIP: 0
 IsGatedGlobalClock: 0
 
-+ Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 2, depth = 2
-
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
 * Number of FSM states : 2
-* Pipeline : 1
-  Pipeline-0 : II = 2, D = 2, States = { 1 2 }
+* Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -618,7 +614,7 @@ STG Binding:
 - Is combinational: 0
 - Is one-state seq: 0
 - Is datapath-only: 0
-- Is pipelined: 1
+- Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ phaseClass_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0

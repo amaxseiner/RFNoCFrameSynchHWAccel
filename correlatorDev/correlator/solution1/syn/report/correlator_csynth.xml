@@ -11,11 +11,10 @@
 <TopModelName>correlator</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<TargetInitiationInterval>4</TargetInitiationInterval>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>function</PipelineType>
+<PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
 <EstimatedClockPeriod>8.21</EstimatedClockPeriod>
@@ -25,18 +24,16 @@
 <Best-caseLatency>1</Best-caseLatency>
 <Average-caseLatency>1</Average-caseLatency>
 <Worst-caseLatency>1</Worst-caseLatency>
-<PipelineInitiationInterval>2</PipelineInitiationInterval>
-<PipelineDepth>2</PipelineDepth>
-<Interval-min>2</Interval-min>
-<Interval-max>2</Interval-max>
+<Interval-min>1</Interval-min>
+<Interval-max>1</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP48E>1</DSP48E>
-<FF>34</FF>
-<LUT>4516</LUT>
+<FF>50</FF>
+<LUT>4525</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
@@ -124,17 +121,6 @@
 <Dir>out</Dir>
 <Bits>16</Bits>
 <Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_ce</name>
-<Object>correlator</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>phaseClass_V</name>

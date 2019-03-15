@@ -29357,7 +29357,7 @@ _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0
 _ssdm_op_SpecInterface(o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
-_ssdm_op_SpecPipeline(4, 1, 1, 0, "");
+
 
 static correlate cor;
 

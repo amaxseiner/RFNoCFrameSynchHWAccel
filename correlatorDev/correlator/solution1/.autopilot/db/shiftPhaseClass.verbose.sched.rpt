@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shiftPhaseClass'
 ================================================================
-* Date:           Fri Mar 15 15:34:56 2019
+* Date:           Fri Mar 15 15:42:37 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+----------+
-    |  Latency  |  Interval | Pipeline |
-    | min | max | min | max |   Type   |
-    +-----+-----+-----+-----+----------+
-    |    0|    0|    1|    1| function |
-    +-----+-----+-----+-----+----------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -52,25 +52,21 @@ ResetActiveHigh: 1
 IsCombinational: 0
 IsDatapathOnly: 0
 HasWiredReturn: 1
-HasMFsm: 2
+HasMFsm: 0
 HasVarLatency: 0
-IsPipeline: 1
+IsPipeline: 0
 IsRtlPipelined: 0
 IsInstanceOverlapped: 0
 IsDontTouch: 0
 HasImplIP: 0
 IsGatedGlobalClock: 0
 
-+ Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 1, depth = 1
-
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
 * Number of FSM states : 1
-* Pipeline : 1
-  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 

@@ -19,11 +19,6 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="PIPELINE">
-<option name="II" value="4"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass0"/>
 <option name="complete" positionalBoolean="type" value=""/>

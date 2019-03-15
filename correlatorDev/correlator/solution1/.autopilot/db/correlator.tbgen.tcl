@@ -2,7 +2,7 @@ set moduleName correlator
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 0
-set pipeline_type function
+set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
@@ -528,7 +528,7 @@ set C_modelArgMapList {[
  	{ "Name" : "cor_phaseClass0_V_0", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 16} ]}
 # RTL Port declarations: 
-set portNum 265
+set portNum 264
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -794,7 +794,6 @@ set portList {
 	{ cor_phaseClass0_V_1 sc_in sc_lv 16 signal 255 } 
 	{ cor_phaseClass0_V_0 sc_in sc_lv 16 signal 256 } 
 	{ ap_return sc_out sc_lv 16 signal -1 } 
-	{ ap_ce sc_in sc_logic 1 ce -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -1060,8 +1059,7 @@ set NewPortList {[
  	{ "name": "cor_phaseClass0_V_2", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "cor_phaseClass0_V_2", "role": "default" }} , 
  	{ "name": "cor_phaseClass0_V_1", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "cor_phaseClass0_V_1", "role": "default" }} , 
  	{ "name": "cor_phaseClass0_V_0", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "cor_phaseClass0_V_0", "role": "default" }} , 
- 	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }} , 
- 	{ "name": "ap_ce", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "ce", "bundle":{"name": "ap_ce", "role": "default" }}  ]}
+ 	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -1070,8 +1068,8 @@ set RtlHierarchyInfo {[
 		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
-		"ClockEnable" : "1",
-		"VariableLatency" : "0",
+		"ClockEnable" : "0",
+		"VariableLatency" : "1",
 		"Port" : [
 			{"Name" : "phaseClass_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cor_phaseClass15_V_15", "Type" : "None", "Direction" : "I"},
@@ -1597,7 +1595,7 @@ set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
 	{"Name" : "Latency", "Min" : "1", "Max" : "1"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[

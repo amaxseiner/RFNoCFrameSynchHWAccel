@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shiftPhaseClass'
 ================================================================
-* Date:           Fri Mar 15 15:34:58 2019
+* Date:           Fri Mar 15 15:42:39 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+----------+
-    |  Latency  |  Interval | Pipeline |
-    | min | max | min | max |   Type   |
-    +-----+-----+-----+-----+----------+
-    |    0|    0|    1|    1| function |
-    +-----+-----+-----+-----+----------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 

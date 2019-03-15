@@ -28583,7 +28583,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>res.V</originalName>
-              <rtlName>ap_return</rtlName>
+              <rtlName>ap_return_preg</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -35261,8 +35261,8 @@
           <item>772</item>
           <item>783</item>
         </basic_blocks>
-        <mII>2</mII>
-        <mDepth>2</mDepth>
+        <mII>-1</mII>
+        <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
         <mMinLatency>1</mMinLatency>
@@ -37837,7 +37837,7 @@
           <inState>1</inState>
           <outState>2</outState>
           <condition class_id="31" tracking_level="0" version="0">
-            <id>88</id>
+            <id>35</id>
             <sop class_id="32" tracking_level="0" version="0">
               <count>1</count>
               <item_version>0</item_version>
@@ -43116,7 +43116,7 @@
         <item_version>0</item_version>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>3</count>
+        <count>4</count>
         <item_version>0</item_version>
         <item>
           <first>ap_NS_fsm</first>
@@ -43138,6 +43138,29 @@
             <item>
               <first>LUT</first>
               <second>15</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>ap_return</first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Size)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>16</second>
+            </item>
+            <item>
+              <first>(2Count)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>9</second>
             </item>
           </second>
         </item>
@@ -43189,7 +43212,7 @@
         </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>3</count>
+        <count>4</count>
         <item_version>0</item_version>
         <item>
           <first>ap_CS_fsm</first>
@@ -43207,6 +43230,25 @@
             <item>
               <first>FF</first>
               <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>ap_return_preg</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>16</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>16</second>
             </item>
           </second>
         </item>
@@ -48796,46 +48838,13 @@
       </item>
     </bblk_ent_exit>
     <regions class_id="47" tracking_level="0" version="0">
-      <count>1</count>
+      <count>0</count>
       <item_version>0</item_version>
-      <item class_id="48" tracking_level="1" version="0" object_id="_2189">
-        <region_name>correlator</region_name>
-        <basic_blocks>
-          <count>18</count>
-          <item_version>0</item_version>
-          <item>260</item>
-          <item>292</item>
-          <item>324</item>
-          <item>356</item>
-          <item>388</item>
-          <item>420</item>
-          <item>452</item>
-          <item>484</item>
-          <item>516</item>
-          <item>548</item>
-          <item>580</item>
-          <item>612</item>
-          <item>644</item>
-          <item>676</item>
-          <item>708</item>
-          <item>740</item>
-          <item>772</item>
-          <item>783</item>
-        </basic_blocks>
-        <nodes>
-          <count>0</count>
-          <item_version>0</item_version>
-        </nodes>
-        <anchor_node>-1</anchor_node>
-        <region_type>8</region_type>
-        <interval>2</interval>
-        <pipe_depth>2</pipe_depth>
-      </item>
     </regions>
-    <dp_fu_nodes class_id="49" tracking_level="0" version="0">
+    <dp_fu_nodes class_id="48" tracking_level="0" version="0">
       <count>490</count>
       <item_version>0</item_version>
-      <item class_id="50" tracking_level="0" version="0">
+      <item class_id="49" tracking_level="0" version="0">
         <first>556</first>
         <second>
           <count>1</count>
@@ -52756,10 +52765,10 @@
         </second>
       </item>
     </dp_fu_nodes>
-    <dp_fu_nodes_expression class_id="52" tracking_level="0" version="0">
+    <dp_fu_nodes_expression class_id="51" tracking_level="0" version="0">
       <count>233</count>
       <item_version>0</item_version>
-      <item class_id="53" tracking_level="0" version="0">
+      <item class_id="52" tracking_level="0" version="0">
         <first>OP1_V_cast_fu_3038</first>
         <second>
           <count>1</count>
@@ -56700,7 +56709,7 @@
         </second>
       </item>
     </return_ports>
-    <dp_mem_port_nodes class_id="54" tracking_level="0" version="0">
+    <dp_mem_port_nodes class_id="53" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </dp_mem_port_nodes>
@@ -57296,10 +57305,10 @@
         </second>
       </item>
     </dp_regname_phi>
-    <dp_port_io_nodes class_id="55" tracking_level="0" version="0">
+    <dp_port_io_nodes class_id="54" tracking_level="0" version="0">
       <count>257</count>
       <item_version>0</item_version>
-      <item class_id="56" tracking_level="0" version="0">
+      <item class_id="55" tracking_level="0" version="0">
         <first>cor_phaseClass0_V_0</first>
         <second>
           <count>0</count>
@@ -59107,7 +59116,7 @@
         </second>
       </item>
     </dp_port_io_nodes>
-    <port2core class_id="57" tracking_level="0" version="0">
+    <port2core class_id="56" tracking_level="0" version="0">
       <count>0</count>
       <item_version>0</item_version>
     </port2core>

@@ -274,8 +274,7 @@ port (
     cor_phaseClass0_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
     cor_phaseClass0_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
     cor_phaseClass0_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
-    ap_return : OUT STD_LOGIC_VECTOR (15 downto 0);
-    ap_ce : IN STD_LOGIC );
+    ap_return : OUT STD_LOGIC_VECTOR (15 downto 0) );
 end;
 
 
@@ -549,6 +548,7 @@ architecture behav of correlator is
     signal p_Val2_3_fu_3051_p0 : STD_LOGIC_VECTOR (15 downto 0);
     signal OP1_V_cast_fu_3038_p1 : STD_LOGIC_VECTOR (20 downto 0);
     signal p_Val2_3_fu_3051_p1 : STD_LOGIC_VECTOR (15 downto 0);
+    signal ap_return_preg : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
     component correlateTop_mul_bkb IS
@@ -595,40 +595,54 @@ begin
     end process;
 
 
+    ap_return_preg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_return_preg <= ap_const_lv16_0;
+            else
+                if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+                    ap_return_preg <= p_Val2_3_fu_3051_p2(20 downto 5);
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
     p_Val2_1_reg_603_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_0) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            if (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_5_2_fu_2960_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_1) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_7_2_fu_2812_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_2) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_2) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_11_2_fu_2664_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_3) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_3) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_14_2_fu_2516_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_4) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_4) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_17_2_fu_2368_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_5) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_5) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_20_2_fu_2220_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_6) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_6) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_23_2_fu_2072_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_7) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_7) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_26_2_fu_1924_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_8) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_8) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_29_2_fu_1776_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_9) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_9) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_32_2_fu_1628_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_A) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_A) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_35_2_fu_1480_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_B) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_B) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_38_2_fu_1332_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_C) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_C) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_41_2_fu_1184_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_D) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_D) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_44_2_fu_1036_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_E) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_E) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_47_2_fu_888_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_F) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_F) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_1_reg_603 <= p_Val2_50_2_fu_740_p2;
             elsif (not((ap_const_boolean_1 = ap_const_boolean_1))) then 
                 p_Val2_1_reg_603 <= ap_const_lv16_0;
@@ -639,37 +653,37 @@ begin
     p_Val2_s_reg_562_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_0) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            if (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_2_5_fu_3006_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_1) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_8_5_fu_2858_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_2) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_2) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_10_5_fu_2710_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_3) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_3) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_13_5_fu_2562_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_4) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_4) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_16_5_fu_2414_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_5) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_5) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_19_5_fu_2266_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_6) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_6) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_22_5_fu_2118_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_7) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_7) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_25_5_fu_1970_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_8) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_8) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_28_5_fu_1822_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_9) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_9) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_31_5_fu_1674_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_A) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_A) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_34_5_fu_1526_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_B) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_B) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_37_5_fu_1378_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_C) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_C) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_40_5_fu_1230_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_D) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_D) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_43_5_fu_1082_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_E) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_E) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_46_5_fu_934_p2;
-            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_F) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            elsif (((ap_start = ap_const_logic_1) and (phaseClass_V_read_read_fu_556_p2 = ap_const_lv4_F) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_562 <= p_Val2_49_5_fu_786_p2;
             elsif (not((ap_const_boolean_1 = ap_const_boolean_1))) then 
                 p_Val2_s_reg_562 <= ap_const_lv16_0;
@@ -677,21 +691,17 @@ begin
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_ce, ap_CS_fsm_state2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                    ap_NS_fsm <= ap_ST_fsm_state1;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state2;
-                end if;
+                ap_NS_fsm <= ap_ST_fsm_state1;
             when others =>  
                 ap_NS_fsm <= "XX";
         end case;
@@ -701,9 +711,9 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
 
-    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_ce, ap_CS_fsm_state2)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_CS_fsm_state2)
     begin
-        if ((((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)) or ((ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state2) or ((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -721,16 +731,25 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_ce, ap_CS_fsm_state2)
+    ap_ready_assign_proc : process(ap_CS_fsm_state2)
     begin
-        if (((ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    ap_return <= p_Val2_3_fu_3051_p2(20 downto 5);
+
+    ap_return_assign_proc : process(ap_CS_fsm_state2, p_Val2_3_fu_3051_p2, ap_return_preg)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            ap_return <= p_Val2_3_fu_3051_p2(20 downto 5);
+        else 
+            ap_return <= ap_return_preg;
+        end if; 
+    end process;
+
     p_Val2_10_5_fu_2710_p2 <= std_logic_vector(unsigned(tmp165_fu_2704_p2) + unsigned(tmp162_fu_2686_p2));
     p_Val2_11_2_fu_2664_p2 <= std_logic_vector(unsigned(tmp159_fu_2658_p2) + unsigned(tmp156_fu_2640_p2));
     p_Val2_13_5_fu_2562_p2 <= std_logic_vector(unsigned(tmp153_fu_2556_p2) + unsigned(tmp150_fu_2538_p2));
