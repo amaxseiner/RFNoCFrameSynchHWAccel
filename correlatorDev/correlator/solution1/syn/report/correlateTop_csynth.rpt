@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Fri Mar 15 02:05:32 2019
+* Date:           Fri Mar 15 15:35:01 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      7.58|        1.25|
+    |ap_clk  |  10.00|      8.21|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,17 +29,18 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |    6|    6|    2|    2| function |
+    |    6|    6|    4|    4| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------+-----------------+-----+-----+-----+-----+----------+
-        |                                    |                 |  Latency  |  Interval | Pipeline |
-        |              Instance              |      Module     | min | max | min | max |   Type   |
-        +------------------------------------+-----------------+-----+-----+-----+-----+----------+
-        |StgValue_21_shiftPhaseClass_fu_430  |shiftPhaseClass  |    0|    0|    1|    1| function |
-        +------------------------------------+-----------------+-----+-----+-----+-----+----------+
+        +-------------------------------------+-----------------+-----+-----+-----+-----+----------+
+        |                                     |                 |  Latency  |  Interval | Pipeline |
+        |               Instance              |      Module     | min | max | min | max |   Type   |
+        +-------------------------------------+-----------------+-----+-----+-----+-----+----------+
+        |grp_correlator_fu_604                |correlator       |    1|    1|    2|    2| function |
+        |StgValue_18_shiftPhaseClass_fu_1121  |shiftPhaseClass  |    0|    0|    1|    1| function |
+        +-------------------------------------+-----------------+-----+-----+-----+-----+----------+
 
         * Loop: 
         N/A
@@ -53,37 +54,34 @@
 +-----------------+---------+-------+--------+--------+
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
-|DSP              |        -|      1|       -|       -|
-|Expression       |        -|      -|     525|     467|
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     244|
 |FIFO             |        -|      -|       -|       -|
-|Instance         |        -|      -|       1|     135|
+|Instance         |        -|      1|      34|    6676|
 |Memory           |        -|      -|       -|       -|
-|Multiplexer      |        -|      -|       -|     147|
-|Register         |        -|      -|     629|      64|
+|Multiplexer      |        -|      -|       -|     150|
+|Register         |        -|      -|    4307|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      1|    1155|     813|
+|Total            |        0|      1|    4341|    7070|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
-|Utilization (%)  |        0|   ~0  |   ~0   |   ~0   |
+|Utilization (%)  |        0|   ~0  |       2|       6|
 +-----------------+---------+-------+--------+--------+
 
 + Detail: 
     * Instance: 
-    +------------------------------------+-----------------+---------+-------+---+-----+
-    |              Instance              |      Module     | BRAM_18K| DSP48E| FF| LUT |
-    +------------------------------------+-----------------+---------+-------+---+-----+
-    |StgValue_21_shiftPhaseClass_fu_430  |shiftPhaseClass  |        0|      0|  1|  135|
-    +------------------------------------+-----------------+---------+-------+---+-----+
-    |Total                               |                 |        0|      0|  1|  135|
-    +------------------------------------+-----------------+---------+-------+---+-----+
+    +-------------------------------------+-----------------+---------+-------+----+------+
+    |               Instance              |      Module     | BRAM_18K| DSP48E| FF |  LUT |
+    +-------------------------------------+-----------------+---------+-------+----+------+
+    |grp_correlator_fu_604                |correlator       |        0|      1|  34|  4516|
+    |StgValue_18_shiftPhaseClass_fu_1121  |shiftPhaseClass  |        0|      0|   0|  2160|
+    +-------------------------------------+-----------------+---------+-------+----+------+
+    |Total                                |                 |        0|      1|  34|  6676|
+    +-------------------------------------+-----------------+---------+-------+----+------+
 
     * DSP48: 
-    +--------------------------+----------------------+-----------+
-    |         Instance         |        Module        | Expression|
-    +--------------------------+----------------------+-----------+
-    |correlateTop_mul_bkb_U19  |correlateTop_mul_bkb  |  i0 * i0  |
-    +--------------------------+----------------------+-----------+
+    N/A
 
     * Memory: 
     N/A
@@ -92,63 +90,41 @@
     N/A
 
     * Expression: 
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |           Variable Name          | Operation| DSP48E|  FF | LUT| Bitwidth P0| Bitwidth P1|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |p_Val2_2_5_i_fu_944_p2            |     +    |      0|    0|  16|          16|          16|
-    |p_Val2_5_2_i_fu_898_p2            |     +    |      0|    0|  16|          16|          16|
-    |tmp10_fu_926_p2                   |     +    |      0|   53|  21|          16|          16|
-    |tmp11_fu_932_p2                   |     +    |      0|   53|  21|          16|          16|
-    |tmp1_fu_862_p2                    |     +    |      0|   53|  21|          16|          16|
-    |tmp2_fu_868_p2                    |     +    |      0|    0|  16|          16|          16|
-    |tmp3_fu_892_p2                    |     +    |      0|    0|  16|          16|          16|
-    |tmp4_fu_880_p2                    |     +    |      0|   53|  21|          16|          16|
-    |tmp5_fu_886_p2                    |     +    |      0|   53|  21|          16|          16|
-    |tmp6_fu_920_p2                    |     +    |      0|    0|  16|          16|          16|
-    |tmp7_fu_908_p2                    |     +    |      0|   53|  21|          16|          16|
-    |tmp8_fu_914_p2                    |     +    |      0|    0|  16|          16|          16|
-    |tmp9_fu_938_p2                    |     +    |      0|    0|  16|          16|          16|
-    |tmp_2_fu_1010_p2                  |     +    |      0|  101|  37|           6|          32|
-    |tmp_fu_874_p2                     |     +    |      0|    0|  16|          16|          16|
-    |p_Val2_8_i_fu_976_p2              |     -    |      0|   53|  21|          16|          16|
-    |p_Val2_9_i_fu_970_p2              |     -    |      0|   53|  21|          16|          16|
-    |ap_block_pp0_stage1_flag00011001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_state6_io                |    and   |      0|    0|   2|           1|           1|
-    |ap_condition_923                  |    and   |      0|    0|   2|           1|           1|
-    |i_data_data_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
-    |i_data_data_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
-    |i_data_last_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
-    |i_data_last_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
-    |o_data_data_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
-    |o_data_data_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
-    |o_data_last_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
-    |o_data_last_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
-    |cond_i_fu_797_p2                  |   icmp   |      0|    0|   2|           4|           1|
-    |i_data_data_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |i_data_last_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |o_data_data_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |o_data_last_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |tmp_3_fu_1022_p2                  |   icmp   |      0|    0|   8|          16|          13|
-    |tmp_i_fu_964_p2                   |   icmp   |      0|    0|   8|          16|          16|
-    |ap_block_pp0_stage0_flag00001001  |    or    |      0|    0|   2|           1|           1|
-    |ap_block_pp0_stage0_flag00011001  |    or    |      0|    0|   2|           1|           1|
-    |ap_block_state7_pp0_stage0_iter3  |    or    |      0|    0|   2|           1|           1|
-    |o_data_data_V_tmp_fu_1027_p3      |  select  |      0|    0|  32|           1|          32|
-    |p_Val2_1_fu_950_p3                |  select  |      0|    0|  16|           1|          16|
-    |p_Val2_2_fu_957_p3                |  select  |      0|    0|  16|           1|          16|
-    |tmp_1_i_fu_982_p3                 |  select  |      0|    0|  16|           1|          16|
-    |ap_enable_pp0                     |    xor   |      0|    0|   2|           1|           2|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |Total                             |          |      0|  525| 467|         326|         419|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |tmp_2_fu_1679_p2                  |     +    |      0|  0|  39|           6|          32|
+    |ap_block_pp0_stage1_11001         |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state3_pp0_stage2_iter0  |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state6_io                |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_2184                 |    and   |      0|  0|   8|           1|           1|
+    |i_data_data_V_0_load_A            |    and   |      0|  0|   8|           1|           1|
+    |i_data_data_V_0_load_B            |    and   |      0|  0|   8|           1|           1|
+    |i_data_last_V_0_load_A            |    and   |      0|  0|   8|           1|           1|
+    |i_data_last_V_0_load_B            |    and   |      0|  0|   8|           1|           1|
+    |o_data_data_V_1_load_A            |    and   |      0|  0|   8|           1|           1|
+    |o_data_data_V_1_load_B            |    and   |      0|  0|   8|           1|           1|
+    |o_data_last_V_1_load_A            |    and   |      0|  0|   8|           1|           1|
+    |o_data_last_V_1_load_B            |    and   |      0|  0|   8|           1|           1|
+    |i_data_data_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |i_data_last_V_0_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_data_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_last_V_1_state_cmp_full    |   icmp   |      0|  0|   8|           2|           1|
+    |tmp_3_fu_1691_p2                  |   icmp   |      0|  0|  13|          16|          13|
+    |ap_block_pp0_stage2_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage2_11001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state7_pp0_stage2_iter1  |    or    |      0|  0|   8|           1|           1|
+    |o_data_data_V_tmp_fu_1696_p3      |  select  |      0|  0|  32|           1|          32|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 244|          47|          98|
+    +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
     +--------------------------+----+-----------+-----+-----------+
     |           Name           | LUT| Input Size| Bits| Total Bits|
     +--------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                 |  15|          3|    1|          3|
-    |ap_enable_reg_pp0_iter3   |   9|          2|    1|          2|
+    |ap_NS_fsm                 |  27|          5|    1|          5|
     |i_data_TDATA_blk_n        |   9|          2|    1|          2|
     |i_data_data_V_0_data_out  |   9|          2|   32|         64|
     |i_data_data_V_0_state     |  15|          3|    2|          6|
@@ -161,71 +137,303 @@
     |o_data_last_V_1_data_out  |   9|          2|    1|          2|
     |o_data_last_V_1_state     |  15|          3|    2|          6|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     | 147|         31|  110|        229|
+    |Total                     | 150|         31|  109|        229|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +----------------------------------------------------+----+----+-----+-----------+
-    |                        Name                        | FF | LUT| Bits| Const Bits|
-    +----------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                           |   2|   0|    2|          0|
-    |ap_enable_reg_pp0_iter1                             |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                             |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3                             |   1|   0|    1|          0|
-    |ap_reg_StgValue_21_shiftPhaseClass_fu_430_ap_start  |   1|   0|    1|          0|
-    |ap_reg_pp0_iter2_o_data_last_V_tmp_reg_1057         |   1|   0|    1|          0|
-    |cond_i_reg_1062                                     |   1|   0|    1|          0|
-    |cor_phaseClass0_V_0                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_1                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_10                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_11                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_12                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_13                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_14                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_15                                |  16|   0|   16|          0|
-    |cor_phaseClass0_V_2                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_3                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_4                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_5                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_6                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_7                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_8                                 |  16|   0|   16|          0|
-    |cor_phaseClass0_V_9                                 |  16|   0|   16|          0|
-    |currentState                                        |   1|   0|    1|          0|
-    |currentState_load_reg_1043                          |   1|   0|    1|          0|
-    |i_data_data_V_0_payload_A                           |  32|   0|   32|          0|
-    |i_data_data_V_0_payload_B                           |  32|   0|   32|          0|
-    |i_data_data_V_0_sel_rd                              |   1|   0|    1|          0|
-    |i_data_data_V_0_sel_wr                              |   1|   0|    1|          0|
-    |i_data_data_V_0_state                               |   2|   0|    2|          0|
-    |i_data_last_V_0_payload_A                           |   1|   0|    1|          0|
-    |i_data_last_V_0_payload_B                           |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_rd                              |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_wr                              |   1|   0|    1|          0|
-    |i_data_last_V_0_state                               |   2|   0|    2|          0|
-    |loadCount_V                                         |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_A                           |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_B                           |  32|   0|   32|          0|
-    |o_data_data_V_1_sel_rd                              |   1|   0|    1|          0|
-    |o_data_data_V_1_sel_wr                              |   1|   0|    1|          0|
-    |o_data_data_V_1_state                               |   2|   0|    2|          0|
-    |o_data_last_V_1_payload_A                           |   1|   0|    1|          0|
-    |o_data_last_V_1_payload_B                           |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_rd                              |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_wr                              |   1|   0|    1|          0|
-    |o_data_last_V_1_state                               |   2|   0|    2|          0|
-    |o_data_last_V_tmp_reg_1057                          |   1|   0|    1|          0|
-    |p_Val2_8_i_reg_1078                                 |  16|   0|   16|          0|
-    |p_Val2_9_i_reg_1073                                 |  16|   0|   16|          0|
-    |phaseClass_V_read_reg_1047                          |   4|   0|    4|          0|
-    |res_V_reg_1083                                      |  16|   0|   16|          0|
-    |start_V_read_reg_1053                               |   1|   0|    1|          0|
-    |tmp_i_reg_1068                                      |   1|   0|    1|          0|
-    |currentState_load_reg_1043                          |  64|  32|    1|          0|
-    |start_V_read_reg_1053                               |  64|  32|    1|          0|
-    +----------------------------------------------------+----+----+-----+-----------+
-    |Total                                               | 629|  64|  503|          0|
-    +----------------------------------------------------+----+----+-----+-----------+
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter1                      |   1|   0|    1|          0|
+    |ap_reg_grp_correlator_fu_604_ap_start        |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_currentState_load_reg_1705  |   1|   0|    1|          0|
+    |cor_phaseClass0_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass0_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass0_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass10_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass10_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass10_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass11_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass11_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass12_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass12_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass13_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass13_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass14_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass14_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_0                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_1                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_10                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_11                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_12                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_13                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_14                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_15                        |  16|   0|   16|          0|
+    |cor_phaseClass15_V_2                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_3                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_4                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_5                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_6                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_7                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_8                         |  16|   0|   16|          0|
+    |cor_phaseClass15_V_9                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass1_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass1_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass2_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass2_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass3_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass3_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass4_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass4_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass5_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass5_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass6_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass6_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass7_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass7_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass8_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass8_V_9                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_0                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_1                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_10                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_11                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_12                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_13                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_14                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_15                         |  16|   0|   16|          0|
+    |cor_phaseClass9_V_2                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_3                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_4                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_5                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_6                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_7                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_8                          |  16|   0|   16|          0|
+    |cor_phaseClass9_V_9                          |  16|   0|   16|          0|
+    |currentState                                 |   1|   0|    1|          0|
+    |currentState_load_reg_1705                   |   1|   0|    1|          0|
+    |i_data_data_V_0_payload_A                    |  32|   0|   32|          0|
+    |i_data_data_V_0_payload_B                    |  32|   0|   32|          0|
+    |i_data_data_V_0_sel_rd                       |   1|   0|    1|          0|
+    |i_data_data_V_0_sel_wr                       |   1|   0|    1|          0|
+    |i_data_data_V_0_state                        |   2|   0|    2|          0|
+    |i_data_last_V_0_payload_A                    |   1|   0|    1|          0|
+    |i_data_last_V_0_payload_B                    |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_rd                       |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_wr                       |   1|   0|    1|          0|
+    |i_data_last_V_0_state                        |   2|   0|    2|          0|
+    |i_data_last_V_tmp_reg_1714                   |   1|   0|    1|          0|
+    |loadCount_V                                  |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_A                    |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_B                    |  32|   0|   32|          0|
+    |o_data_data_V_1_sel_rd                       |   1|   0|    1|          0|
+    |o_data_data_V_1_sel_wr                       |   1|   0|    1|          0|
+    |o_data_data_V_1_state                        |   2|   0|    2|          0|
+    |o_data_last_V_1_payload_A                    |   1|   0|    1|          0|
+    |o_data_last_V_1_payload_B                    |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_rd                       |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_wr                       |   1|   0|    1|          0|
+    |o_data_last_V_1_state                        |   2|   0|    2|          0|
+    |op_V_assign_reg_1723                         |  16|   0|   16|          0|
+    |phaseClass_V_read_reg_1709                   |   4|   0|    4|          0|
+    |start_V_read_reg_1719                        |   1|   0|    1|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        |4307|   0| 4307|          0|
+    +---------------------------------------------+----+----+-----+-----------+
 
 
 

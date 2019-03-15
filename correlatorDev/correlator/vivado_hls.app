@@ -7,6 +7,7 @@
     <files xmlns="">
         <file name="../../correlatorTB.cpp" sc="0" tb="1" cflags=" "/>
         <file name="rfnoc.h" sc="0" tb="false" cflags=""/>
+        <file name="lancep2.csv" sc="0" tb="false" cflags=""/>
         <file name="forAl.csv" sc="0" tb="false" cflags=""/>
         <file name="correlator.cpp" sc="0" tb="false" cflags=""/>
     </files>

@@ -29,10 +29,13 @@ end;
 architecture behav of correlateTop is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=7.637000,HLS_SYN_LAT=3,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=621,HLS_SYN_LUT=782}";
+    "correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=8.209375,HLS_SYN_LAT=6,HLS_SYN_TPT=4,HLS_SYN_MEM=0,HLS_SYN_DSP=1,HLS_SYN_FF=4341,HLS_SYN_LUT=7070}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_pp0_stage0 : STD_LOGIC_VECTOR (0 downto 0) := "1";
+    constant ap_ST_fsm_pp0_stage0 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    constant ap_ST_fsm_pp0_stage1 : STD_LOGIC_VECTOR (3 downto 0) := "0010";
+    constant ap_ST_fsm_pp0_stage2 : STD_LOGIC_VECTOR (3 downto 0) := "0100";
+    constant ap_ST_fsm_pp0_stage3 : STD_LOGIC_VECTOR (3 downto 0) := "1000";
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -42,9 +45,12 @@ architecture behav of correlateTop is
     constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_boolean_0 : BOOLEAN := false;
-    constant ap_const_lv4_8 : STD_LOGIC_VECTOR (3 downto 0) := "1000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
+    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
+    constant ap_const_lv32_20 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100000";
+    constant ap_const_lv16_1900 : STD_LOGIC_VECTOR (15 downto 0) := "0001100100000000";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal i_data_data_V_0_data_out : STD_LOGIC_VECTOR (31 downto 0);
@@ -106,6 +112,7 @@ architecture behav of correlateTop is
     signal currentState : STD_LOGIC_VECTOR (0 downto 0) := "0";
     signal loadCount_V : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal cor_phaseClass0_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass0_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal cor_phaseClass0_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal cor_phaseClass0_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal cor_phaseClass0_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
@@ -120,73 +127,2879 @@ architecture behav of correlateTop is
     signal cor_phaseClass0_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal cor_phaseClass0_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal cor_phaseClass0_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass1_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass2_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass3_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass4_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass5_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass6_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass7_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass8_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass9_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass10_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass11_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass12_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass13_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass14_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_14 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_15 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_13 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_12 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_11 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_10 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_9 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_8 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_7 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_6 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_5 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_3 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal cor_phaseClass15_V_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal i_data_TDATA_blk_n : STD_LOGIC;
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
+    signal ap_CS_fsm_pp0_stage2 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_pp0_stage2 : signal is "none";
+    signal ap_block_pp0_stage2 : BOOLEAN;
+    signal currentState_load_reg_1705 : STD_LOGIC_VECTOR (0 downto 0);
+    signal o_data_TDATA_blk_n : STD_LOGIC;
+    signal ap_CS_fsm_pp0_stage1 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_pp0_stage1 : signal is "none";
+    signal ap_enable_reg_pp0_iter1 : STD_LOGIC := '0';
+    signal ap_block_pp0_stage1 : BOOLEAN;
+    signal ap_reg_pp0_iter1_currentState_load_reg_1705 : STD_LOGIC_VECTOR (0 downto 0);
+    signal currentState_load_load_fu_1646_p1 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_pp0_stage0 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_pp0_stage0 : signal is "none";
-    signal ap_enable_reg_pp0_iter1 : STD_LOGIC := '0';
-    signal ap_block_pp0_stage0 : BOOLEAN;
-    signal currentState_load_reg_463 : STD_LOGIC_VECTOR (0 downto 0);
-    signal o_data_TDATA_blk_n : STD_LOGIC;
-    signal ap_enable_reg_pp0_iter2 : STD_LOGIC := '0';
-    signal ap_reg_pp0_iter1_currentState_load_reg_463 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_enable_reg_pp0_iter3 : STD_LOGIC := '0';
-    signal ap_reg_pp0_iter2_currentState_load_reg_463 : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_V_read_read_fu_92_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_V_read_reg_459 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_block_state1_pp0_stage0_iter0 : BOOLEAN;
-    signal ap_block_state2_pp0_stage0_iter1 : BOOLEAN;
-    signal ap_block_state3_pp0_stage0_iter2 : BOOLEAN;
-    signal ap_block_state3_io : BOOLEAN;
-    signal ap_block_state4_pp0_stage0_iter3 : BOOLEAN;
-    signal ap_block_state4_io : BOOLEAN;
+    signal ap_block_state5_pp0_stage0_iter1 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal ap_reg_pp0_iter1_start_V_read_reg_459 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter2_start_V_read_reg_459 : STD_LOGIC_VECTOR (0 downto 0);
-    signal currentState_load_load_fu_144_p1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal cond_i_fu_148_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal cond_i_reg_467 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_data_last_V_tmp_reg_471 : STD_LOGIC_VECTOR (0 downto 0);
-    signal p_Val2_5_1_i_fu_358_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal p_Val2_2_4_i_fu_400_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal o_data_data_V_tmp_fu_432_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal phaseClass_V_read_reg_1709 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_block_state3_pp0_stage2_iter0 : BOOLEAN;
+    signal ap_block_state7_pp0_stage2_iter1 : BOOLEAN;
+    signal ap_block_state7_io : BOOLEAN;
+    signal ap_block_pp0_stage2_11001 : BOOLEAN;
+    signal i_data_last_V_tmp_reg_1714 : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_V_read_read_fu_588_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_V_read_reg_1719 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_CS_fsm_pp0_stage3 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_pp0_stage3 : signal is "none";
+    signal ap_block_state4_pp0_stage3_iter0 : BOOLEAN;
+    signal ap_block_pp0_stage3_11001 : BOOLEAN;
+    signal grp_correlator_fu_604_ap_return : STD_LOGIC_VECTOR (15 downto 0);
+    signal op_V_assign_reg_1723 : STD_LOGIC_VECTOR (15 downto 0);
+    signal o_data_data_V_tmp_fu_1696_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_block_state2_pp0_stage1_iter0 : BOOLEAN;
+    signal ap_block_state6_pp0_stage1_iter1 : BOOLEAN;
+    signal ap_block_state6_io : BOOLEAN;
+    signal ap_block_pp0_stage1_11001 : BOOLEAN;
+    signal ap_block_pp0_stage2_subdone : BOOLEAN;
+    signal ap_block_pp0_stage3_subdone : BOOLEAN;
+    signal grp_correlator_fu_604_ap_start : STD_LOGIC;
+    signal grp_correlator_fu_604_ap_done : STD_LOGIC;
+    signal grp_correlator_fu_604_ap_idle : STD_LOGIC;
+    signal grp_correlator_fu_604_ap_ready : STD_LOGIC;
+    signal grp_correlator_fu_604_ap_ce : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_ap_ready : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_newValue_V : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o_ap_vld : STD_LOGIC;
+    signal ap_reg_grp_correlator_fu_604_ap_start : STD_LOGIC := '0';
+    signal ap_block_pp0_stage3 : BOOLEAN;
+    signal ap_block_pp0_stage0 : BOOLEAN;
+    signal tmp_2_fu_1679_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_block_pp0_stage1_01001 : BOOLEAN;
+    signal ap_block_pp0_stage2_01001 : BOOLEAN;
+    signal tmp_3_fu_1691_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
-    signal ap_phi_reg_pp0_iter0_p_Val2_1_reg_116 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_reg_pp0_iter1_p_Val2_1_reg_116 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_reg_pp0_iter2_p_Val2_1_reg_116 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_reg_pp0_iter0_p_Val2_2_reg_127 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_reg_pp0_iter1_p_Val2_2_reg_127 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_reg_pp0_iter2_p_Val2_2_reg_127 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp_2_fu_447_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_1_fu_162_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_block_pp0_stage0_01001 : BOOLEAN;
-    signal tmp2_fu_328_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp1_fu_322_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp5_fu_346_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp4_fu_340_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp3_fu_352_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp_fu_334_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp8_fu_370_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp7_fu_364_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp11_fu_388_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp10_fu_382_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp9_fu_394_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp6_fu_376_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal tmp_i_fu_406_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal p_Val2_8_i_fu_418_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal p_Val2_9_i_fu_412_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal res_V_fu_424_p3 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_block_pp0_stage1_subdone : BOOLEAN;
     signal ap_reset_idle_pp0 : STD_LOGIC;
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
-    signal ap_condition_365 : BOOLEAN;
-    signal ap_condition_367 : BOOLEAN;
+    signal ap_condition_2184 : BOOLEAN;
+
+    component correlator IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        phaseClass_V : IN STD_LOGIC_VECTOR (3 downto 0);
+        cor_phaseClass15_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_15 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_14 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_13 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_12 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_11 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_1 : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_0 : IN STD_LOGIC_VECTOR (15 downto 0);
+        ap_return : OUT STD_LOGIC_VECTOR (15 downto 0);
+        ap_ce : IN STD_LOGIC );
+    end component;
+
+
+    component shiftPhaseClass IS
+    port (
+        ap_ready : OUT STD_LOGIC;
+        newValue_V : IN STD_LOGIC_VECTOR (15 downto 0);
+        phaseClass_V : IN STD_LOGIC_VECTOR (3 downto 0);
+        cor_phaseClass0_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass0_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass0_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass1_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass1_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass2_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass2_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass3_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass3_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass4_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass4_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass5_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass5_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass6_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass6_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass7_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass7_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass8_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass8_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass9_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass9_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass10_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass10_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass11_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass11_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass12_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass12_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass13_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass13_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass14_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass14_V_0_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_14_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_14_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_14_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_15 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_15_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_13_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_13_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_13_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_12_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_12_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_12_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_11_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_11_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_11_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_10_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_10_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_10_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_9_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_9_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_9_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_8_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_8_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_8_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_7_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_7_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_7_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_6_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_6_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_6_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_5_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_5_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_5_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_4_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_4_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_4_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_3_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_3_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_3_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_2_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_2_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_2_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_1_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_1_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_1_o_ap_vld : OUT STD_LOGIC;
+        cor_phaseClass15_V_0_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_0_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        cor_phaseClass15_V_0_o_ap_vld : OUT STD_LOGIC );
+    end component;
+
 
 
 begin
+    grp_correlator_fu_604 : component correlator
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => grp_correlator_fu_604_ap_start,
+        ap_done => grp_correlator_fu_604_ap_done,
+        ap_idle => grp_correlator_fu_604_ap_idle,
+        ap_ready => grp_correlator_fu_604_ap_ready,
+        phaseClass_V => phaseClass_V_read_reg_1709,
+        cor_phaseClass15_V_15 => cor_phaseClass15_V_15,
+        cor_phaseClass15_V_14 => cor_phaseClass15_V_14,
+        cor_phaseClass15_V_13 => cor_phaseClass15_V_13,
+        cor_phaseClass15_V_12 => cor_phaseClass15_V_12,
+        cor_phaseClass15_V_11 => cor_phaseClass15_V_11,
+        cor_phaseClass15_V_10 => cor_phaseClass15_V_10,
+        cor_phaseClass15_V_9 => cor_phaseClass15_V_9,
+        cor_phaseClass15_V_8 => cor_phaseClass15_V_8,
+        cor_phaseClass15_V_7 => cor_phaseClass15_V_7,
+        cor_phaseClass15_V_6 => cor_phaseClass15_V_6,
+        cor_phaseClass15_V_5 => cor_phaseClass15_V_5,
+        cor_phaseClass15_V_4 => cor_phaseClass15_V_4,
+        cor_phaseClass15_V_3 => cor_phaseClass15_V_3,
+        cor_phaseClass15_V_2 => cor_phaseClass15_V_2,
+        cor_phaseClass15_V_1 => cor_phaseClass15_V_1,
+        cor_phaseClass15_V_0 => cor_phaseClass15_V_0,
+        cor_phaseClass14_V_15 => cor_phaseClass14_V_15,
+        cor_phaseClass14_V_14 => cor_phaseClass14_V_14,
+        cor_phaseClass14_V_13 => cor_phaseClass14_V_13,
+        cor_phaseClass14_V_12 => cor_phaseClass14_V_12,
+        cor_phaseClass14_V_11 => cor_phaseClass14_V_11,
+        cor_phaseClass14_V_10 => cor_phaseClass14_V_10,
+        cor_phaseClass14_V_9 => cor_phaseClass14_V_9,
+        cor_phaseClass14_V_8 => cor_phaseClass14_V_8,
+        cor_phaseClass14_V_7 => cor_phaseClass14_V_7,
+        cor_phaseClass14_V_6 => cor_phaseClass14_V_6,
+        cor_phaseClass14_V_5 => cor_phaseClass14_V_5,
+        cor_phaseClass14_V_4 => cor_phaseClass14_V_4,
+        cor_phaseClass14_V_3 => cor_phaseClass14_V_3,
+        cor_phaseClass14_V_2 => cor_phaseClass14_V_2,
+        cor_phaseClass14_V_1 => cor_phaseClass14_V_1,
+        cor_phaseClass14_V_0 => cor_phaseClass14_V_0,
+        cor_phaseClass13_V_15 => cor_phaseClass13_V_15,
+        cor_phaseClass13_V_14 => cor_phaseClass13_V_14,
+        cor_phaseClass13_V_13 => cor_phaseClass13_V_13,
+        cor_phaseClass13_V_12 => cor_phaseClass13_V_12,
+        cor_phaseClass13_V_11 => cor_phaseClass13_V_11,
+        cor_phaseClass13_V_10 => cor_phaseClass13_V_10,
+        cor_phaseClass13_V_9 => cor_phaseClass13_V_9,
+        cor_phaseClass13_V_8 => cor_phaseClass13_V_8,
+        cor_phaseClass13_V_7 => cor_phaseClass13_V_7,
+        cor_phaseClass13_V_6 => cor_phaseClass13_V_6,
+        cor_phaseClass13_V_5 => cor_phaseClass13_V_5,
+        cor_phaseClass13_V_4 => cor_phaseClass13_V_4,
+        cor_phaseClass13_V_3 => cor_phaseClass13_V_3,
+        cor_phaseClass13_V_2 => cor_phaseClass13_V_2,
+        cor_phaseClass13_V_1 => cor_phaseClass13_V_1,
+        cor_phaseClass13_V_0 => cor_phaseClass13_V_0,
+        cor_phaseClass12_V_15 => cor_phaseClass12_V_15,
+        cor_phaseClass12_V_14 => cor_phaseClass12_V_14,
+        cor_phaseClass12_V_13 => cor_phaseClass12_V_13,
+        cor_phaseClass12_V_12 => cor_phaseClass12_V_12,
+        cor_phaseClass12_V_11 => cor_phaseClass12_V_11,
+        cor_phaseClass12_V_10 => cor_phaseClass12_V_10,
+        cor_phaseClass12_V_9 => cor_phaseClass12_V_9,
+        cor_phaseClass12_V_8 => cor_phaseClass12_V_8,
+        cor_phaseClass12_V_7 => cor_phaseClass12_V_7,
+        cor_phaseClass12_V_6 => cor_phaseClass12_V_6,
+        cor_phaseClass12_V_5 => cor_phaseClass12_V_5,
+        cor_phaseClass12_V_4 => cor_phaseClass12_V_4,
+        cor_phaseClass12_V_3 => cor_phaseClass12_V_3,
+        cor_phaseClass12_V_2 => cor_phaseClass12_V_2,
+        cor_phaseClass12_V_1 => cor_phaseClass12_V_1,
+        cor_phaseClass12_V_0 => cor_phaseClass12_V_0,
+        cor_phaseClass11_V_15 => cor_phaseClass11_V_15,
+        cor_phaseClass11_V_14 => cor_phaseClass11_V_14,
+        cor_phaseClass11_V_13 => cor_phaseClass11_V_13,
+        cor_phaseClass11_V_12 => cor_phaseClass11_V_12,
+        cor_phaseClass11_V_11 => cor_phaseClass11_V_11,
+        cor_phaseClass11_V_10 => cor_phaseClass11_V_10,
+        cor_phaseClass11_V_9 => cor_phaseClass11_V_9,
+        cor_phaseClass11_V_8 => cor_phaseClass11_V_8,
+        cor_phaseClass11_V_7 => cor_phaseClass11_V_7,
+        cor_phaseClass11_V_6 => cor_phaseClass11_V_6,
+        cor_phaseClass11_V_5 => cor_phaseClass11_V_5,
+        cor_phaseClass11_V_4 => cor_phaseClass11_V_4,
+        cor_phaseClass11_V_3 => cor_phaseClass11_V_3,
+        cor_phaseClass11_V_2 => cor_phaseClass11_V_2,
+        cor_phaseClass11_V_1 => cor_phaseClass11_V_1,
+        cor_phaseClass11_V_0 => cor_phaseClass11_V_0,
+        cor_phaseClass10_V_15 => cor_phaseClass10_V_15,
+        cor_phaseClass10_V_14 => cor_phaseClass10_V_14,
+        cor_phaseClass10_V_13 => cor_phaseClass10_V_13,
+        cor_phaseClass10_V_12 => cor_phaseClass10_V_12,
+        cor_phaseClass10_V_11 => cor_phaseClass10_V_11,
+        cor_phaseClass10_V_10 => cor_phaseClass10_V_10,
+        cor_phaseClass10_V_9 => cor_phaseClass10_V_9,
+        cor_phaseClass10_V_8 => cor_phaseClass10_V_8,
+        cor_phaseClass10_V_7 => cor_phaseClass10_V_7,
+        cor_phaseClass10_V_6 => cor_phaseClass10_V_6,
+        cor_phaseClass10_V_5 => cor_phaseClass10_V_5,
+        cor_phaseClass10_V_4 => cor_phaseClass10_V_4,
+        cor_phaseClass10_V_3 => cor_phaseClass10_V_3,
+        cor_phaseClass10_V_2 => cor_phaseClass10_V_2,
+        cor_phaseClass10_V_1 => cor_phaseClass10_V_1,
+        cor_phaseClass10_V_0 => cor_phaseClass10_V_0,
+        cor_phaseClass9_V_15 => cor_phaseClass9_V_15,
+        cor_phaseClass9_V_14 => cor_phaseClass9_V_14,
+        cor_phaseClass9_V_13 => cor_phaseClass9_V_13,
+        cor_phaseClass9_V_12 => cor_phaseClass9_V_12,
+        cor_phaseClass9_V_11 => cor_phaseClass9_V_11,
+        cor_phaseClass9_V_10 => cor_phaseClass9_V_10,
+        cor_phaseClass9_V_9 => cor_phaseClass9_V_9,
+        cor_phaseClass9_V_8 => cor_phaseClass9_V_8,
+        cor_phaseClass9_V_7 => cor_phaseClass9_V_7,
+        cor_phaseClass9_V_6 => cor_phaseClass9_V_6,
+        cor_phaseClass9_V_5 => cor_phaseClass9_V_5,
+        cor_phaseClass9_V_4 => cor_phaseClass9_V_4,
+        cor_phaseClass9_V_3 => cor_phaseClass9_V_3,
+        cor_phaseClass9_V_2 => cor_phaseClass9_V_2,
+        cor_phaseClass9_V_1 => cor_phaseClass9_V_1,
+        cor_phaseClass9_V_0 => cor_phaseClass9_V_0,
+        cor_phaseClass8_V_15 => cor_phaseClass8_V_15,
+        cor_phaseClass8_V_14 => cor_phaseClass8_V_14,
+        cor_phaseClass8_V_13 => cor_phaseClass8_V_13,
+        cor_phaseClass8_V_12 => cor_phaseClass8_V_12,
+        cor_phaseClass8_V_11 => cor_phaseClass8_V_11,
+        cor_phaseClass8_V_10 => cor_phaseClass8_V_10,
+        cor_phaseClass8_V_9 => cor_phaseClass8_V_9,
+        cor_phaseClass8_V_8 => cor_phaseClass8_V_8,
+        cor_phaseClass8_V_7 => cor_phaseClass8_V_7,
+        cor_phaseClass8_V_6 => cor_phaseClass8_V_6,
+        cor_phaseClass8_V_5 => cor_phaseClass8_V_5,
+        cor_phaseClass8_V_4 => cor_phaseClass8_V_4,
+        cor_phaseClass8_V_3 => cor_phaseClass8_V_3,
+        cor_phaseClass8_V_2 => cor_phaseClass8_V_2,
+        cor_phaseClass8_V_1 => cor_phaseClass8_V_1,
+        cor_phaseClass8_V_0 => cor_phaseClass8_V_0,
+        cor_phaseClass7_V_15 => cor_phaseClass7_V_15,
+        cor_phaseClass7_V_14 => cor_phaseClass7_V_14,
+        cor_phaseClass7_V_13 => cor_phaseClass7_V_13,
+        cor_phaseClass7_V_12 => cor_phaseClass7_V_12,
+        cor_phaseClass7_V_11 => cor_phaseClass7_V_11,
+        cor_phaseClass7_V_10 => cor_phaseClass7_V_10,
+        cor_phaseClass7_V_9 => cor_phaseClass7_V_9,
+        cor_phaseClass7_V_8 => cor_phaseClass7_V_8,
+        cor_phaseClass7_V_7 => cor_phaseClass7_V_7,
+        cor_phaseClass7_V_6 => cor_phaseClass7_V_6,
+        cor_phaseClass7_V_5 => cor_phaseClass7_V_5,
+        cor_phaseClass7_V_4 => cor_phaseClass7_V_4,
+        cor_phaseClass7_V_3 => cor_phaseClass7_V_3,
+        cor_phaseClass7_V_2 => cor_phaseClass7_V_2,
+        cor_phaseClass7_V_1 => cor_phaseClass7_V_1,
+        cor_phaseClass7_V_0 => cor_phaseClass7_V_0,
+        cor_phaseClass6_V_15 => cor_phaseClass6_V_15,
+        cor_phaseClass6_V_14 => cor_phaseClass6_V_14,
+        cor_phaseClass6_V_13 => cor_phaseClass6_V_13,
+        cor_phaseClass6_V_12 => cor_phaseClass6_V_12,
+        cor_phaseClass6_V_11 => cor_phaseClass6_V_11,
+        cor_phaseClass6_V_10 => cor_phaseClass6_V_10,
+        cor_phaseClass6_V_9 => cor_phaseClass6_V_9,
+        cor_phaseClass6_V_8 => cor_phaseClass6_V_8,
+        cor_phaseClass6_V_7 => cor_phaseClass6_V_7,
+        cor_phaseClass6_V_6 => cor_phaseClass6_V_6,
+        cor_phaseClass6_V_5 => cor_phaseClass6_V_5,
+        cor_phaseClass6_V_4 => cor_phaseClass6_V_4,
+        cor_phaseClass6_V_3 => cor_phaseClass6_V_3,
+        cor_phaseClass6_V_2 => cor_phaseClass6_V_2,
+        cor_phaseClass6_V_1 => cor_phaseClass6_V_1,
+        cor_phaseClass6_V_0 => cor_phaseClass6_V_0,
+        cor_phaseClass5_V_15 => cor_phaseClass5_V_15,
+        cor_phaseClass5_V_14 => cor_phaseClass5_V_14,
+        cor_phaseClass5_V_13 => cor_phaseClass5_V_13,
+        cor_phaseClass5_V_12 => cor_phaseClass5_V_12,
+        cor_phaseClass5_V_11 => cor_phaseClass5_V_11,
+        cor_phaseClass5_V_10 => cor_phaseClass5_V_10,
+        cor_phaseClass5_V_9 => cor_phaseClass5_V_9,
+        cor_phaseClass5_V_8 => cor_phaseClass5_V_8,
+        cor_phaseClass5_V_7 => cor_phaseClass5_V_7,
+        cor_phaseClass5_V_6 => cor_phaseClass5_V_6,
+        cor_phaseClass5_V_5 => cor_phaseClass5_V_5,
+        cor_phaseClass5_V_4 => cor_phaseClass5_V_4,
+        cor_phaseClass5_V_3 => cor_phaseClass5_V_3,
+        cor_phaseClass5_V_2 => cor_phaseClass5_V_2,
+        cor_phaseClass5_V_1 => cor_phaseClass5_V_1,
+        cor_phaseClass5_V_0 => cor_phaseClass5_V_0,
+        cor_phaseClass4_V_15 => cor_phaseClass4_V_15,
+        cor_phaseClass4_V_14 => cor_phaseClass4_V_14,
+        cor_phaseClass4_V_13 => cor_phaseClass4_V_13,
+        cor_phaseClass4_V_12 => cor_phaseClass4_V_12,
+        cor_phaseClass4_V_11 => cor_phaseClass4_V_11,
+        cor_phaseClass4_V_10 => cor_phaseClass4_V_10,
+        cor_phaseClass4_V_9 => cor_phaseClass4_V_9,
+        cor_phaseClass4_V_8 => cor_phaseClass4_V_8,
+        cor_phaseClass4_V_7 => cor_phaseClass4_V_7,
+        cor_phaseClass4_V_6 => cor_phaseClass4_V_6,
+        cor_phaseClass4_V_5 => cor_phaseClass4_V_5,
+        cor_phaseClass4_V_4 => cor_phaseClass4_V_4,
+        cor_phaseClass4_V_3 => cor_phaseClass4_V_3,
+        cor_phaseClass4_V_2 => cor_phaseClass4_V_2,
+        cor_phaseClass4_V_1 => cor_phaseClass4_V_1,
+        cor_phaseClass4_V_0 => cor_phaseClass4_V_0,
+        cor_phaseClass3_V_15 => cor_phaseClass3_V_15,
+        cor_phaseClass3_V_14 => cor_phaseClass3_V_14,
+        cor_phaseClass3_V_13 => cor_phaseClass3_V_13,
+        cor_phaseClass3_V_12 => cor_phaseClass3_V_12,
+        cor_phaseClass3_V_11 => cor_phaseClass3_V_11,
+        cor_phaseClass3_V_10 => cor_phaseClass3_V_10,
+        cor_phaseClass3_V_9 => cor_phaseClass3_V_9,
+        cor_phaseClass3_V_8 => cor_phaseClass3_V_8,
+        cor_phaseClass3_V_7 => cor_phaseClass3_V_7,
+        cor_phaseClass3_V_6 => cor_phaseClass3_V_6,
+        cor_phaseClass3_V_5 => cor_phaseClass3_V_5,
+        cor_phaseClass3_V_4 => cor_phaseClass3_V_4,
+        cor_phaseClass3_V_3 => cor_phaseClass3_V_3,
+        cor_phaseClass3_V_2 => cor_phaseClass3_V_2,
+        cor_phaseClass3_V_1 => cor_phaseClass3_V_1,
+        cor_phaseClass3_V_0 => cor_phaseClass3_V_0,
+        cor_phaseClass2_V_15 => cor_phaseClass2_V_15,
+        cor_phaseClass2_V_14 => cor_phaseClass2_V_14,
+        cor_phaseClass2_V_13 => cor_phaseClass2_V_13,
+        cor_phaseClass2_V_12 => cor_phaseClass2_V_12,
+        cor_phaseClass2_V_11 => cor_phaseClass2_V_11,
+        cor_phaseClass2_V_10 => cor_phaseClass2_V_10,
+        cor_phaseClass2_V_9 => cor_phaseClass2_V_9,
+        cor_phaseClass2_V_8 => cor_phaseClass2_V_8,
+        cor_phaseClass2_V_7 => cor_phaseClass2_V_7,
+        cor_phaseClass2_V_6 => cor_phaseClass2_V_6,
+        cor_phaseClass2_V_5 => cor_phaseClass2_V_5,
+        cor_phaseClass2_V_4 => cor_phaseClass2_V_4,
+        cor_phaseClass2_V_3 => cor_phaseClass2_V_3,
+        cor_phaseClass2_V_2 => cor_phaseClass2_V_2,
+        cor_phaseClass2_V_1 => cor_phaseClass2_V_1,
+        cor_phaseClass2_V_0 => cor_phaseClass2_V_0,
+        cor_phaseClass1_V_15 => cor_phaseClass1_V_15,
+        cor_phaseClass1_V_14 => cor_phaseClass1_V_14,
+        cor_phaseClass1_V_13 => cor_phaseClass1_V_13,
+        cor_phaseClass1_V_12 => cor_phaseClass1_V_12,
+        cor_phaseClass1_V_11 => cor_phaseClass1_V_11,
+        cor_phaseClass1_V_10 => cor_phaseClass1_V_10,
+        cor_phaseClass1_V_9 => cor_phaseClass1_V_9,
+        cor_phaseClass1_V_8 => cor_phaseClass1_V_8,
+        cor_phaseClass1_V_7 => cor_phaseClass1_V_7,
+        cor_phaseClass1_V_6 => cor_phaseClass1_V_6,
+        cor_phaseClass1_V_5 => cor_phaseClass1_V_5,
+        cor_phaseClass1_V_4 => cor_phaseClass1_V_4,
+        cor_phaseClass1_V_3 => cor_phaseClass1_V_3,
+        cor_phaseClass1_V_2 => cor_phaseClass1_V_2,
+        cor_phaseClass1_V_1 => cor_phaseClass1_V_1,
+        cor_phaseClass1_V_0 => cor_phaseClass1_V_0,
+        cor_phaseClass0_V_15 => cor_phaseClass0_V_15,
+        cor_phaseClass0_V_14 => cor_phaseClass0_V_14,
+        cor_phaseClass0_V_13 => cor_phaseClass0_V_13,
+        cor_phaseClass0_V_12 => cor_phaseClass0_V_12,
+        cor_phaseClass0_V_11 => cor_phaseClass0_V_11,
+        cor_phaseClass0_V_10 => cor_phaseClass0_V_10,
+        cor_phaseClass0_V_9 => cor_phaseClass0_V_9,
+        cor_phaseClass0_V_8 => cor_phaseClass0_V_8,
+        cor_phaseClass0_V_7 => cor_phaseClass0_V_7,
+        cor_phaseClass0_V_6 => cor_phaseClass0_V_6,
+        cor_phaseClass0_V_5 => cor_phaseClass0_V_5,
+        cor_phaseClass0_V_4 => cor_phaseClass0_V_4,
+        cor_phaseClass0_V_3 => cor_phaseClass0_V_3,
+        cor_phaseClass0_V_2 => cor_phaseClass0_V_2,
+        cor_phaseClass0_V_1 => cor_phaseClass0_V_1,
+        cor_phaseClass0_V_0 => cor_phaseClass0_V_0,
+        ap_return => grp_correlator_fu_604_ap_return,
+        ap_ce => grp_correlator_fu_604_ap_ce);
+
+    StgValue_18_shiftPhaseClass_fu_1121 : component shiftPhaseClass
+    port map (
+        ap_ready => StgValue_18_shiftPhaseClass_fu_1121_ap_ready,
+        newValue_V => StgValue_18_shiftPhaseClass_fu_1121_newValue_V,
+        phaseClass_V => phaseClass_V,
+        cor_phaseClass0_V_14_i => cor_phaseClass0_V_14,
+        cor_phaseClass0_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o,
+        cor_phaseClass0_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o_ap_vld,
+        cor_phaseClass0_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15,
+        cor_phaseClass0_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15_ap_vld,
+        cor_phaseClass0_V_13_i => cor_phaseClass0_V_13,
+        cor_phaseClass0_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o,
+        cor_phaseClass0_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o_ap_vld,
+        cor_phaseClass0_V_12_i => cor_phaseClass0_V_12,
+        cor_phaseClass0_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o,
+        cor_phaseClass0_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o_ap_vld,
+        cor_phaseClass0_V_11_i => cor_phaseClass0_V_11,
+        cor_phaseClass0_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o,
+        cor_phaseClass0_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o_ap_vld,
+        cor_phaseClass0_V_10_i => cor_phaseClass0_V_10,
+        cor_phaseClass0_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o,
+        cor_phaseClass0_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o_ap_vld,
+        cor_phaseClass0_V_9_i => cor_phaseClass0_V_9,
+        cor_phaseClass0_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o,
+        cor_phaseClass0_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o_ap_vld,
+        cor_phaseClass0_V_8_i => cor_phaseClass0_V_8,
+        cor_phaseClass0_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o,
+        cor_phaseClass0_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o_ap_vld,
+        cor_phaseClass0_V_7_i => cor_phaseClass0_V_7,
+        cor_phaseClass0_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o,
+        cor_phaseClass0_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o_ap_vld,
+        cor_phaseClass0_V_6_i => cor_phaseClass0_V_6,
+        cor_phaseClass0_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o,
+        cor_phaseClass0_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o_ap_vld,
+        cor_phaseClass0_V_5_i => cor_phaseClass0_V_5,
+        cor_phaseClass0_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o,
+        cor_phaseClass0_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o_ap_vld,
+        cor_phaseClass0_V_4_i => cor_phaseClass0_V_4,
+        cor_phaseClass0_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o,
+        cor_phaseClass0_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o_ap_vld,
+        cor_phaseClass0_V_3_i => cor_phaseClass0_V_3,
+        cor_phaseClass0_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o,
+        cor_phaseClass0_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o_ap_vld,
+        cor_phaseClass0_V_2_i => cor_phaseClass0_V_2,
+        cor_phaseClass0_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o,
+        cor_phaseClass0_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o_ap_vld,
+        cor_phaseClass0_V_1_i => cor_phaseClass0_V_1,
+        cor_phaseClass0_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o,
+        cor_phaseClass0_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o_ap_vld,
+        cor_phaseClass0_V_0_i => cor_phaseClass0_V_0,
+        cor_phaseClass0_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o,
+        cor_phaseClass0_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o_ap_vld,
+        cor_phaseClass1_V_14_i => cor_phaseClass1_V_14,
+        cor_phaseClass1_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o,
+        cor_phaseClass1_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o_ap_vld,
+        cor_phaseClass1_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15,
+        cor_phaseClass1_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15_ap_vld,
+        cor_phaseClass1_V_13_i => cor_phaseClass1_V_13,
+        cor_phaseClass1_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o,
+        cor_phaseClass1_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o_ap_vld,
+        cor_phaseClass1_V_12_i => cor_phaseClass1_V_12,
+        cor_phaseClass1_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o,
+        cor_phaseClass1_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o_ap_vld,
+        cor_phaseClass1_V_11_i => cor_phaseClass1_V_11,
+        cor_phaseClass1_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o,
+        cor_phaseClass1_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o_ap_vld,
+        cor_phaseClass1_V_10_i => cor_phaseClass1_V_10,
+        cor_phaseClass1_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o,
+        cor_phaseClass1_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o_ap_vld,
+        cor_phaseClass1_V_9_i => cor_phaseClass1_V_9,
+        cor_phaseClass1_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o,
+        cor_phaseClass1_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o_ap_vld,
+        cor_phaseClass1_V_8_i => cor_phaseClass1_V_8,
+        cor_phaseClass1_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o,
+        cor_phaseClass1_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o_ap_vld,
+        cor_phaseClass1_V_7_i => cor_phaseClass1_V_7,
+        cor_phaseClass1_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o,
+        cor_phaseClass1_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o_ap_vld,
+        cor_phaseClass1_V_6_i => cor_phaseClass1_V_6,
+        cor_phaseClass1_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o,
+        cor_phaseClass1_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o_ap_vld,
+        cor_phaseClass1_V_5_i => cor_phaseClass1_V_5,
+        cor_phaseClass1_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o,
+        cor_phaseClass1_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o_ap_vld,
+        cor_phaseClass1_V_4_i => cor_phaseClass1_V_4,
+        cor_phaseClass1_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o,
+        cor_phaseClass1_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o_ap_vld,
+        cor_phaseClass1_V_3_i => cor_phaseClass1_V_3,
+        cor_phaseClass1_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o,
+        cor_phaseClass1_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o_ap_vld,
+        cor_phaseClass1_V_2_i => cor_phaseClass1_V_2,
+        cor_phaseClass1_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o,
+        cor_phaseClass1_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o_ap_vld,
+        cor_phaseClass1_V_1_i => cor_phaseClass1_V_1,
+        cor_phaseClass1_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o,
+        cor_phaseClass1_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o_ap_vld,
+        cor_phaseClass1_V_0_i => cor_phaseClass1_V_0,
+        cor_phaseClass1_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o,
+        cor_phaseClass1_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o_ap_vld,
+        cor_phaseClass2_V_14_i => cor_phaseClass2_V_14,
+        cor_phaseClass2_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o,
+        cor_phaseClass2_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o_ap_vld,
+        cor_phaseClass2_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15,
+        cor_phaseClass2_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15_ap_vld,
+        cor_phaseClass2_V_13_i => cor_phaseClass2_V_13,
+        cor_phaseClass2_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o,
+        cor_phaseClass2_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o_ap_vld,
+        cor_phaseClass2_V_12_i => cor_phaseClass2_V_12,
+        cor_phaseClass2_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o,
+        cor_phaseClass2_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o_ap_vld,
+        cor_phaseClass2_V_11_i => cor_phaseClass2_V_11,
+        cor_phaseClass2_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o,
+        cor_phaseClass2_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o_ap_vld,
+        cor_phaseClass2_V_10_i => cor_phaseClass2_V_10,
+        cor_phaseClass2_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o,
+        cor_phaseClass2_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o_ap_vld,
+        cor_phaseClass2_V_9_i => cor_phaseClass2_V_9,
+        cor_phaseClass2_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o,
+        cor_phaseClass2_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o_ap_vld,
+        cor_phaseClass2_V_8_i => cor_phaseClass2_V_8,
+        cor_phaseClass2_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o,
+        cor_phaseClass2_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o_ap_vld,
+        cor_phaseClass2_V_7_i => cor_phaseClass2_V_7,
+        cor_phaseClass2_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o,
+        cor_phaseClass2_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o_ap_vld,
+        cor_phaseClass2_V_6_i => cor_phaseClass2_V_6,
+        cor_phaseClass2_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o,
+        cor_phaseClass2_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o_ap_vld,
+        cor_phaseClass2_V_5_i => cor_phaseClass2_V_5,
+        cor_phaseClass2_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o,
+        cor_phaseClass2_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o_ap_vld,
+        cor_phaseClass2_V_4_i => cor_phaseClass2_V_4,
+        cor_phaseClass2_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o,
+        cor_phaseClass2_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o_ap_vld,
+        cor_phaseClass2_V_3_i => cor_phaseClass2_V_3,
+        cor_phaseClass2_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o,
+        cor_phaseClass2_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o_ap_vld,
+        cor_phaseClass2_V_2_i => cor_phaseClass2_V_2,
+        cor_phaseClass2_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o,
+        cor_phaseClass2_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o_ap_vld,
+        cor_phaseClass2_V_1_i => cor_phaseClass2_V_1,
+        cor_phaseClass2_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o,
+        cor_phaseClass2_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o_ap_vld,
+        cor_phaseClass2_V_0_i => cor_phaseClass2_V_0,
+        cor_phaseClass2_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o,
+        cor_phaseClass2_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o_ap_vld,
+        cor_phaseClass3_V_14_i => cor_phaseClass3_V_14,
+        cor_phaseClass3_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o,
+        cor_phaseClass3_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o_ap_vld,
+        cor_phaseClass3_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15,
+        cor_phaseClass3_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15_ap_vld,
+        cor_phaseClass3_V_13_i => cor_phaseClass3_V_13,
+        cor_phaseClass3_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o,
+        cor_phaseClass3_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o_ap_vld,
+        cor_phaseClass3_V_12_i => cor_phaseClass3_V_12,
+        cor_phaseClass3_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o,
+        cor_phaseClass3_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o_ap_vld,
+        cor_phaseClass3_V_11_i => cor_phaseClass3_V_11,
+        cor_phaseClass3_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o,
+        cor_phaseClass3_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o_ap_vld,
+        cor_phaseClass3_V_10_i => cor_phaseClass3_V_10,
+        cor_phaseClass3_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o,
+        cor_phaseClass3_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o_ap_vld,
+        cor_phaseClass3_V_9_i => cor_phaseClass3_V_9,
+        cor_phaseClass3_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o,
+        cor_phaseClass3_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o_ap_vld,
+        cor_phaseClass3_V_8_i => cor_phaseClass3_V_8,
+        cor_phaseClass3_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o,
+        cor_phaseClass3_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o_ap_vld,
+        cor_phaseClass3_V_7_i => cor_phaseClass3_V_7,
+        cor_phaseClass3_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o,
+        cor_phaseClass3_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o_ap_vld,
+        cor_phaseClass3_V_6_i => cor_phaseClass3_V_6,
+        cor_phaseClass3_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o,
+        cor_phaseClass3_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o_ap_vld,
+        cor_phaseClass3_V_5_i => cor_phaseClass3_V_5,
+        cor_phaseClass3_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o,
+        cor_phaseClass3_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o_ap_vld,
+        cor_phaseClass3_V_4_i => cor_phaseClass3_V_4,
+        cor_phaseClass3_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o,
+        cor_phaseClass3_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o_ap_vld,
+        cor_phaseClass3_V_3_i => cor_phaseClass3_V_3,
+        cor_phaseClass3_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o,
+        cor_phaseClass3_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o_ap_vld,
+        cor_phaseClass3_V_2_i => cor_phaseClass3_V_2,
+        cor_phaseClass3_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o,
+        cor_phaseClass3_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o_ap_vld,
+        cor_phaseClass3_V_1_i => cor_phaseClass3_V_1,
+        cor_phaseClass3_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o,
+        cor_phaseClass3_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o_ap_vld,
+        cor_phaseClass3_V_0_i => cor_phaseClass3_V_0,
+        cor_phaseClass3_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o,
+        cor_phaseClass3_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o_ap_vld,
+        cor_phaseClass4_V_14_i => cor_phaseClass4_V_14,
+        cor_phaseClass4_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o,
+        cor_phaseClass4_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o_ap_vld,
+        cor_phaseClass4_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15,
+        cor_phaseClass4_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15_ap_vld,
+        cor_phaseClass4_V_13_i => cor_phaseClass4_V_13,
+        cor_phaseClass4_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o,
+        cor_phaseClass4_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o_ap_vld,
+        cor_phaseClass4_V_12_i => cor_phaseClass4_V_12,
+        cor_phaseClass4_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o,
+        cor_phaseClass4_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o_ap_vld,
+        cor_phaseClass4_V_11_i => cor_phaseClass4_V_11,
+        cor_phaseClass4_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o,
+        cor_phaseClass4_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o_ap_vld,
+        cor_phaseClass4_V_10_i => cor_phaseClass4_V_10,
+        cor_phaseClass4_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o,
+        cor_phaseClass4_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o_ap_vld,
+        cor_phaseClass4_V_9_i => cor_phaseClass4_V_9,
+        cor_phaseClass4_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o,
+        cor_phaseClass4_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o_ap_vld,
+        cor_phaseClass4_V_8_i => cor_phaseClass4_V_8,
+        cor_phaseClass4_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o,
+        cor_phaseClass4_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o_ap_vld,
+        cor_phaseClass4_V_7_i => cor_phaseClass4_V_7,
+        cor_phaseClass4_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o,
+        cor_phaseClass4_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o_ap_vld,
+        cor_phaseClass4_V_6_i => cor_phaseClass4_V_6,
+        cor_phaseClass4_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o,
+        cor_phaseClass4_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o_ap_vld,
+        cor_phaseClass4_V_5_i => cor_phaseClass4_V_5,
+        cor_phaseClass4_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o,
+        cor_phaseClass4_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o_ap_vld,
+        cor_phaseClass4_V_4_i => cor_phaseClass4_V_4,
+        cor_phaseClass4_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o,
+        cor_phaseClass4_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o_ap_vld,
+        cor_phaseClass4_V_3_i => cor_phaseClass4_V_3,
+        cor_phaseClass4_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o,
+        cor_phaseClass4_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o_ap_vld,
+        cor_phaseClass4_V_2_i => cor_phaseClass4_V_2,
+        cor_phaseClass4_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o,
+        cor_phaseClass4_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o_ap_vld,
+        cor_phaseClass4_V_1_i => cor_phaseClass4_V_1,
+        cor_phaseClass4_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o,
+        cor_phaseClass4_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o_ap_vld,
+        cor_phaseClass4_V_0_i => cor_phaseClass4_V_0,
+        cor_phaseClass4_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o,
+        cor_phaseClass4_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o_ap_vld,
+        cor_phaseClass5_V_14_i => cor_phaseClass5_V_14,
+        cor_phaseClass5_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o,
+        cor_phaseClass5_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o_ap_vld,
+        cor_phaseClass5_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15,
+        cor_phaseClass5_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15_ap_vld,
+        cor_phaseClass5_V_13_i => cor_phaseClass5_V_13,
+        cor_phaseClass5_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o,
+        cor_phaseClass5_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o_ap_vld,
+        cor_phaseClass5_V_12_i => cor_phaseClass5_V_12,
+        cor_phaseClass5_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o,
+        cor_phaseClass5_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o_ap_vld,
+        cor_phaseClass5_V_11_i => cor_phaseClass5_V_11,
+        cor_phaseClass5_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o,
+        cor_phaseClass5_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o_ap_vld,
+        cor_phaseClass5_V_10_i => cor_phaseClass5_V_10,
+        cor_phaseClass5_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o,
+        cor_phaseClass5_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o_ap_vld,
+        cor_phaseClass5_V_9_i => cor_phaseClass5_V_9,
+        cor_phaseClass5_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o,
+        cor_phaseClass5_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o_ap_vld,
+        cor_phaseClass5_V_8_i => cor_phaseClass5_V_8,
+        cor_phaseClass5_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o,
+        cor_phaseClass5_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o_ap_vld,
+        cor_phaseClass5_V_7_i => cor_phaseClass5_V_7,
+        cor_phaseClass5_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o,
+        cor_phaseClass5_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o_ap_vld,
+        cor_phaseClass5_V_6_i => cor_phaseClass5_V_6,
+        cor_phaseClass5_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o,
+        cor_phaseClass5_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o_ap_vld,
+        cor_phaseClass5_V_5_i => cor_phaseClass5_V_5,
+        cor_phaseClass5_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o,
+        cor_phaseClass5_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o_ap_vld,
+        cor_phaseClass5_V_4_i => cor_phaseClass5_V_4,
+        cor_phaseClass5_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o,
+        cor_phaseClass5_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o_ap_vld,
+        cor_phaseClass5_V_3_i => cor_phaseClass5_V_3,
+        cor_phaseClass5_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o,
+        cor_phaseClass5_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o_ap_vld,
+        cor_phaseClass5_V_2_i => cor_phaseClass5_V_2,
+        cor_phaseClass5_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o,
+        cor_phaseClass5_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o_ap_vld,
+        cor_phaseClass5_V_1_i => cor_phaseClass5_V_1,
+        cor_phaseClass5_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o,
+        cor_phaseClass5_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o_ap_vld,
+        cor_phaseClass5_V_0_i => cor_phaseClass5_V_0,
+        cor_phaseClass5_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o,
+        cor_phaseClass5_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o_ap_vld,
+        cor_phaseClass6_V_14_i => cor_phaseClass6_V_14,
+        cor_phaseClass6_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o,
+        cor_phaseClass6_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o_ap_vld,
+        cor_phaseClass6_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15,
+        cor_phaseClass6_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15_ap_vld,
+        cor_phaseClass6_V_13_i => cor_phaseClass6_V_13,
+        cor_phaseClass6_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o,
+        cor_phaseClass6_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o_ap_vld,
+        cor_phaseClass6_V_12_i => cor_phaseClass6_V_12,
+        cor_phaseClass6_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o,
+        cor_phaseClass6_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o_ap_vld,
+        cor_phaseClass6_V_11_i => cor_phaseClass6_V_11,
+        cor_phaseClass6_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o,
+        cor_phaseClass6_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o_ap_vld,
+        cor_phaseClass6_V_10_i => cor_phaseClass6_V_10,
+        cor_phaseClass6_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o,
+        cor_phaseClass6_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o_ap_vld,
+        cor_phaseClass6_V_9_i => cor_phaseClass6_V_9,
+        cor_phaseClass6_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o,
+        cor_phaseClass6_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o_ap_vld,
+        cor_phaseClass6_V_8_i => cor_phaseClass6_V_8,
+        cor_phaseClass6_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o,
+        cor_phaseClass6_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o_ap_vld,
+        cor_phaseClass6_V_7_i => cor_phaseClass6_V_7,
+        cor_phaseClass6_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o,
+        cor_phaseClass6_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o_ap_vld,
+        cor_phaseClass6_V_6_i => cor_phaseClass6_V_6,
+        cor_phaseClass6_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o,
+        cor_phaseClass6_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o_ap_vld,
+        cor_phaseClass6_V_5_i => cor_phaseClass6_V_5,
+        cor_phaseClass6_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o,
+        cor_phaseClass6_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o_ap_vld,
+        cor_phaseClass6_V_4_i => cor_phaseClass6_V_4,
+        cor_phaseClass6_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o,
+        cor_phaseClass6_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o_ap_vld,
+        cor_phaseClass6_V_3_i => cor_phaseClass6_V_3,
+        cor_phaseClass6_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o,
+        cor_phaseClass6_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o_ap_vld,
+        cor_phaseClass6_V_2_i => cor_phaseClass6_V_2,
+        cor_phaseClass6_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o,
+        cor_phaseClass6_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o_ap_vld,
+        cor_phaseClass6_V_1_i => cor_phaseClass6_V_1,
+        cor_phaseClass6_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o,
+        cor_phaseClass6_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o_ap_vld,
+        cor_phaseClass6_V_0_i => cor_phaseClass6_V_0,
+        cor_phaseClass6_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o,
+        cor_phaseClass6_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o_ap_vld,
+        cor_phaseClass7_V_14_i => cor_phaseClass7_V_14,
+        cor_phaseClass7_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o,
+        cor_phaseClass7_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o_ap_vld,
+        cor_phaseClass7_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15,
+        cor_phaseClass7_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15_ap_vld,
+        cor_phaseClass7_V_13_i => cor_phaseClass7_V_13,
+        cor_phaseClass7_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o,
+        cor_phaseClass7_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o_ap_vld,
+        cor_phaseClass7_V_12_i => cor_phaseClass7_V_12,
+        cor_phaseClass7_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o,
+        cor_phaseClass7_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o_ap_vld,
+        cor_phaseClass7_V_11_i => cor_phaseClass7_V_11,
+        cor_phaseClass7_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o,
+        cor_phaseClass7_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o_ap_vld,
+        cor_phaseClass7_V_10_i => cor_phaseClass7_V_10,
+        cor_phaseClass7_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o,
+        cor_phaseClass7_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o_ap_vld,
+        cor_phaseClass7_V_9_i => cor_phaseClass7_V_9,
+        cor_phaseClass7_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o,
+        cor_phaseClass7_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o_ap_vld,
+        cor_phaseClass7_V_8_i => cor_phaseClass7_V_8,
+        cor_phaseClass7_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o,
+        cor_phaseClass7_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o_ap_vld,
+        cor_phaseClass7_V_7_i => cor_phaseClass7_V_7,
+        cor_phaseClass7_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o,
+        cor_phaseClass7_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o_ap_vld,
+        cor_phaseClass7_V_6_i => cor_phaseClass7_V_6,
+        cor_phaseClass7_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o,
+        cor_phaseClass7_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o_ap_vld,
+        cor_phaseClass7_V_5_i => cor_phaseClass7_V_5,
+        cor_phaseClass7_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o,
+        cor_phaseClass7_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o_ap_vld,
+        cor_phaseClass7_V_4_i => cor_phaseClass7_V_4,
+        cor_phaseClass7_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o,
+        cor_phaseClass7_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o_ap_vld,
+        cor_phaseClass7_V_3_i => cor_phaseClass7_V_3,
+        cor_phaseClass7_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o,
+        cor_phaseClass7_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o_ap_vld,
+        cor_phaseClass7_V_2_i => cor_phaseClass7_V_2,
+        cor_phaseClass7_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o,
+        cor_phaseClass7_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o_ap_vld,
+        cor_phaseClass7_V_1_i => cor_phaseClass7_V_1,
+        cor_phaseClass7_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o,
+        cor_phaseClass7_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o_ap_vld,
+        cor_phaseClass7_V_0_i => cor_phaseClass7_V_0,
+        cor_phaseClass7_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o,
+        cor_phaseClass7_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o_ap_vld,
+        cor_phaseClass8_V_14_i => cor_phaseClass8_V_14,
+        cor_phaseClass8_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o,
+        cor_phaseClass8_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o_ap_vld,
+        cor_phaseClass8_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15,
+        cor_phaseClass8_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15_ap_vld,
+        cor_phaseClass8_V_13_i => cor_phaseClass8_V_13,
+        cor_phaseClass8_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o,
+        cor_phaseClass8_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o_ap_vld,
+        cor_phaseClass8_V_12_i => cor_phaseClass8_V_12,
+        cor_phaseClass8_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o,
+        cor_phaseClass8_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o_ap_vld,
+        cor_phaseClass8_V_11_i => cor_phaseClass8_V_11,
+        cor_phaseClass8_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o,
+        cor_phaseClass8_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o_ap_vld,
+        cor_phaseClass8_V_10_i => cor_phaseClass8_V_10,
+        cor_phaseClass8_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o,
+        cor_phaseClass8_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o_ap_vld,
+        cor_phaseClass8_V_9_i => cor_phaseClass8_V_9,
+        cor_phaseClass8_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o,
+        cor_phaseClass8_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o_ap_vld,
+        cor_phaseClass8_V_8_i => cor_phaseClass8_V_8,
+        cor_phaseClass8_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o,
+        cor_phaseClass8_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o_ap_vld,
+        cor_phaseClass8_V_7_i => cor_phaseClass8_V_7,
+        cor_phaseClass8_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o,
+        cor_phaseClass8_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o_ap_vld,
+        cor_phaseClass8_V_6_i => cor_phaseClass8_V_6,
+        cor_phaseClass8_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o,
+        cor_phaseClass8_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o_ap_vld,
+        cor_phaseClass8_V_5_i => cor_phaseClass8_V_5,
+        cor_phaseClass8_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o,
+        cor_phaseClass8_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o_ap_vld,
+        cor_phaseClass8_V_4_i => cor_phaseClass8_V_4,
+        cor_phaseClass8_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o,
+        cor_phaseClass8_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o_ap_vld,
+        cor_phaseClass8_V_3_i => cor_phaseClass8_V_3,
+        cor_phaseClass8_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o,
+        cor_phaseClass8_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o_ap_vld,
+        cor_phaseClass8_V_2_i => cor_phaseClass8_V_2,
+        cor_phaseClass8_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o,
+        cor_phaseClass8_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o_ap_vld,
+        cor_phaseClass8_V_1_i => cor_phaseClass8_V_1,
+        cor_phaseClass8_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o,
+        cor_phaseClass8_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o_ap_vld,
+        cor_phaseClass8_V_0_i => cor_phaseClass8_V_0,
+        cor_phaseClass8_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o,
+        cor_phaseClass8_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o_ap_vld,
+        cor_phaseClass9_V_14_i => cor_phaseClass9_V_14,
+        cor_phaseClass9_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o,
+        cor_phaseClass9_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o_ap_vld,
+        cor_phaseClass9_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15,
+        cor_phaseClass9_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15_ap_vld,
+        cor_phaseClass9_V_13_i => cor_phaseClass9_V_13,
+        cor_phaseClass9_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o,
+        cor_phaseClass9_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o_ap_vld,
+        cor_phaseClass9_V_12_i => cor_phaseClass9_V_12,
+        cor_phaseClass9_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o,
+        cor_phaseClass9_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o_ap_vld,
+        cor_phaseClass9_V_11_i => cor_phaseClass9_V_11,
+        cor_phaseClass9_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o,
+        cor_phaseClass9_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o_ap_vld,
+        cor_phaseClass9_V_10_i => cor_phaseClass9_V_10,
+        cor_phaseClass9_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o,
+        cor_phaseClass9_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o_ap_vld,
+        cor_phaseClass9_V_9_i => cor_phaseClass9_V_9,
+        cor_phaseClass9_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o,
+        cor_phaseClass9_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o_ap_vld,
+        cor_phaseClass9_V_8_i => cor_phaseClass9_V_8,
+        cor_phaseClass9_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o,
+        cor_phaseClass9_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o_ap_vld,
+        cor_phaseClass9_V_7_i => cor_phaseClass9_V_7,
+        cor_phaseClass9_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o,
+        cor_phaseClass9_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o_ap_vld,
+        cor_phaseClass9_V_6_i => cor_phaseClass9_V_6,
+        cor_phaseClass9_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o,
+        cor_phaseClass9_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o_ap_vld,
+        cor_phaseClass9_V_5_i => cor_phaseClass9_V_5,
+        cor_phaseClass9_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o,
+        cor_phaseClass9_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o_ap_vld,
+        cor_phaseClass9_V_4_i => cor_phaseClass9_V_4,
+        cor_phaseClass9_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o,
+        cor_phaseClass9_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o_ap_vld,
+        cor_phaseClass9_V_3_i => cor_phaseClass9_V_3,
+        cor_phaseClass9_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o,
+        cor_phaseClass9_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o_ap_vld,
+        cor_phaseClass9_V_2_i => cor_phaseClass9_V_2,
+        cor_phaseClass9_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o,
+        cor_phaseClass9_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o_ap_vld,
+        cor_phaseClass9_V_1_i => cor_phaseClass9_V_1,
+        cor_phaseClass9_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o,
+        cor_phaseClass9_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o_ap_vld,
+        cor_phaseClass9_V_0_i => cor_phaseClass9_V_0,
+        cor_phaseClass9_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o,
+        cor_phaseClass9_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o_ap_vld,
+        cor_phaseClass10_V_14_i => cor_phaseClass10_V_14,
+        cor_phaseClass10_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o,
+        cor_phaseClass10_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o_ap_vld,
+        cor_phaseClass10_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15,
+        cor_phaseClass10_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15_ap_vld,
+        cor_phaseClass10_V_13_i => cor_phaseClass10_V_13,
+        cor_phaseClass10_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o,
+        cor_phaseClass10_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o_ap_vld,
+        cor_phaseClass10_V_12_i => cor_phaseClass10_V_12,
+        cor_phaseClass10_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o,
+        cor_phaseClass10_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o_ap_vld,
+        cor_phaseClass10_V_11_i => cor_phaseClass10_V_11,
+        cor_phaseClass10_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o,
+        cor_phaseClass10_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o_ap_vld,
+        cor_phaseClass10_V_10_i => cor_phaseClass10_V_10,
+        cor_phaseClass10_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o,
+        cor_phaseClass10_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o_ap_vld,
+        cor_phaseClass10_V_9_i => cor_phaseClass10_V_9,
+        cor_phaseClass10_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o,
+        cor_phaseClass10_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o_ap_vld,
+        cor_phaseClass10_V_8_i => cor_phaseClass10_V_8,
+        cor_phaseClass10_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o,
+        cor_phaseClass10_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o_ap_vld,
+        cor_phaseClass10_V_7_i => cor_phaseClass10_V_7,
+        cor_phaseClass10_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o,
+        cor_phaseClass10_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o_ap_vld,
+        cor_phaseClass10_V_6_i => cor_phaseClass10_V_6,
+        cor_phaseClass10_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o,
+        cor_phaseClass10_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o_ap_vld,
+        cor_phaseClass10_V_5_i => cor_phaseClass10_V_5,
+        cor_phaseClass10_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o,
+        cor_phaseClass10_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o_ap_vld,
+        cor_phaseClass10_V_4_i => cor_phaseClass10_V_4,
+        cor_phaseClass10_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o,
+        cor_phaseClass10_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o_ap_vld,
+        cor_phaseClass10_V_3_i => cor_phaseClass10_V_3,
+        cor_phaseClass10_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o,
+        cor_phaseClass10_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o_ap_vld,
+        cor_phaseClass10_V_2_i => cor_phaseClass10_V_2,
+        cor_phaseClass10_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o,
+        cor_phaseClass10_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o_ap_vld,
+        cor_phaseClass10_V_1_i => cor_phaseClass10_V_1,
+        cor_phaseClass10_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o,
+        cor_phaseClass10_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o_ap_vld,
+        cor_phaseClass10_V_0_i => cor_phaseClass10_V_0,
+        cor_phaseClass10_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o,
+        cor_phaseClass10_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o_ap_vld,
+        cor_phaseClass11_V_14_i => cor_phaseClass11_V_14,
+        cor_phaseClass11_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o,
+        cor_phaseClass11_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o_ap_vld,
+        cor_phaseClass11_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15,
+        cor_phaseClass11_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15_ap_vld,
+        cor_phaseClass11_V_13_i => cor_phaseClass11_V_13,
+        cor_phaseClass11_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o,
+        cor_phaseClass11_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o_ap_vld,
+        cor_phaseClass11_V_12_i => cor_phaseClass11_V_12,
+        cor_phaseClass11_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o,
+        cor_phaseClass11_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o_ap_vld,
+        cor_phaseClass11_V_11_i => cor_phaseClass11_V_11,
+        cor_phaseClass11_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o,
+        cor_phaseClass11_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o_ap_vld,
+        cor_phaseClass11_V_10_i => cor_phaseClass11_V_10,
+        cor_phaseClass11_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o,
+        cor_phaseClass11_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o_ap_vld,
+        cor_phaseClass11_V_9_i => cor_phaseClass11_V_9,
+        cor_phaseClass11_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o,
+        cor_phaseClass11_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o_ap_vld,
+        cor_phaseClass11_V_8_i => cor_phaseClass11_V_8,
+        cor_phaseClass11_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o,
+        cor_phaseClass11_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o_ap_vld,
+        cor_phaseClass11_V_7_i => cor_phaseClass11_V_7,
+        cor_phaseClass11_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o,
+        cor_phaseClass11_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o_ap_vld,
+        cor_phaseClass11_V_6_i => cor_phaseClass11_V_6,
+        cor_phaseClass11_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o,
+        cor_phaseClass11_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o_ap_vld,
+        cor_phaseClass11_V_5_i => cor_phaseClass11_V_5,
+        cor_phaseClass11_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o,
+        cor_phaseClass11_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o_ap_vld,
+        cor_phaseClass11_V_4_i => cor_phaseClass11_V_4,
+        cor_phaseClass11_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o,
+        cor_phaseClass11_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o_ap_vld,
+        cor_phaseClass11_V_3_i => cor_phaseClass11_V_3,
+        cor_phaseClass11_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o,
+        cor_phaseClass11_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o_ap_vld,
+        cor_phaseClass11_V_2_i => cor_phaseClass11_V_2,
+        cor_phaseClass11_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o,
+        cor_phaseClass11_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o_ap_vld,
+        cor_phaseClass11_V_1_i => cor_phaseClass11_V_1,
+        cor_phaseClass11_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o,
+        cor_phaseClass11_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o_ap_vld,
+        cor_phaseClass11_V_0_i => cor_phaseClass11_V_0,
+        cor_phaseClass11_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o,
+        cor_phaseClass11_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o_ap_vld,
+        cor_phaseClass12_V_14_i => cor_phaseClass12_V_14,
+        cor_phaseClass12_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o,
+        cor_phaseClass12_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o_ap_vld,
+        cor_phaseClass12_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15,
+        cor_phaseClass12_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15_ap_vld,
+        cor_phaseClass12_V_13_i => cor_phaseClass12_V_13,
+        cor_phaseClass12_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o,
+        cor_phaseClass12_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o_ap_vld,
+        cor_phaseClass12_V_12_i => cor_phaseClass12_V_12,
+        cor_phaseClass12_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o,
+        cor_phaseClass12_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o_ap_vld,
+        cor_phaseClass12_V_11_i => cor_phaseClass12_V_11,
+        cor_phaseClass12_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o,
+        cor_phaseClass12_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o_ap_vld,
+        cor_phaseClass12_V_10_i => cor_phaseClass12_V_10,
+        cor_phaseClass12_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o,
+        cor_phaseClass12_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o_ap_vld,
+        cor_phaseClass12_V_9_i => cor_phaseClass12_V_9,
+        cor_phaseClass12_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o,
+        cor_phaseClass12_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o_ap_vld,
+        cor_phaseClass12_V_8_i => cor_phaseClass12_V_8,
+        cor_phaseClass12_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o,
+        cor_phaseClass12_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o_ap_vld,
+        cor_phaseClass12_V_7_i => cor_phaseClass12_V_7,
+        cor_phaseClass12_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o,
+        cor_phaseClass12_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o_ap_vld,
+        cor_phaseClass12_V_6_i => cor_phaseClass12_V_6,
+        cor_phaseClass12_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o,
+        cor_phaseClass12_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o_ap_vld,
+        cor_phaseClass12_V_5_i => cor_phaseClass12_V_5,
+        cor_phaseClass12_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o,
+        cor_phaseClass12_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o_ap_vld,
+        cor_phaseClass12_V_4_i => cor_phaseClass12_V_4,
+        cor_phaseClass12_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o,
+        cor_phaseClass12_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o_ap_vld,
+        cor_phaseClass12_V_3_i => cor_phaseClass12_V_3,
+        cor_phaseClass12_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o,
+        cor_phaseClass12_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o_ap_vld,
+        cor_phaseClass12_V_2_i => cor_phaseClass12_V_2,
+        cor_phaseClass12_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o,
+        cor_phaseClass12_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o_ap_vld,
+        cor_phaseClass12_V_1_i => cor_phaseClass12_V_1,
+        cor_phaseClass12_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o,
+        cor_phaseClass12_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o_ap_vld,
+        cor_phaseClass12_V_0_i => cor_phaseClass12_V_0,
+        cor_phaseClass12_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o,
+        cor_phaseClass12_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o_ap_vld,
+        cor_phaseClass13_V_14_i => cor_phaseClass13_V_14,
+        cor_phaseClass13_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o,
+        cor_phaseClass13_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o_ap_vld,
+        cor_phaseClass13_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15,
+        cor_phaseClass13_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15_ap_vld,
+        cor_phaseClass13_V_13_i => cor_phaseClass13_V_13,
+        cor_phaseClass13_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o,
+        cor_phaseClass13_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o_ap_vld,
+        cor_phaseClass13_V_12_i => cor_phaseClass13_V_12,
+        cor_phaseClass13_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o,
+        cor_phaseClass13_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o_ap_vld,
+        cor_phaseClass13_V_11_i => cor_phaseClass13_V_11,
+        cor_phaseClass13_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o,
+        cor_phaseClass13_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o_ap_vld,
+        cor_phaseClass13_V_10_i => cor_phaseClass13_V_10,
+        cor_phaseClass13_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o,
+        cor_phaseClass13_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o_ap_vld,
+        cor_phaseClass13_V_9_i => cor_phaseClass13_V_9,
+        cor_phaseClass13_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o,
+        cor_phaseClass13_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o_ap_vld,
+        cor_phaseClass13_V_8_i => cor_phaseClass13_V_8,
+        cor_phaseClass13_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o,
+        cor_phaseClass13_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o_ap_vld,
+        cor_phaseClass13_V_7_i => cor_phaseClass13_V_7,
+        cor_phaseClass13_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o,
+        cor_phaseClass13_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o_ap_vld,
+        cor_phaseClass13_V_6_i => cor_phaseClass13_V_6,
+        cor_phaseClass13_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o,
+        cor_phaseClass13_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o_ap_vld,
+        cor_phaseClass13_V_5_i => cor_phaseClass13_V_5,
+        cor_phaseClass13_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o,
+        cor_phaseClass13_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o_ap_vld,
+        cor_phaseClass13_V_4_i => cor_phaseClass13_V_4,
+        cor_phaseClass13_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o,
+        cor_phaseClass13_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o_ap_vld,
+        cor_phaseClass13_V_3_i => cor_phaseClass13_V_3,
+        cor_phaseClass13_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o,
+        cor_phaseClass13_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o_ap_vld,
+        cor_phaseClass13_V_2_i => cor_phaseClass13_V_2,
+        cor_phaseClass13_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o,
+        cor_phaseClass13_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o_ap_vld,
+        cor_phaseClass13_V_1_i => cor_phaseClass13_V_1,
+        cor_phaseClass13_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o,
+        cor_phaseClass13_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o_ap_vld,
+        cor_phaseClass13_V_0_i => cor_phaseClass13_V_0,
+        cor_phaseClass13_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o,
+        cor_phaseClass13_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o_ap_vld,
+        cor_phaseClass14_V_14_i => cor_phaseClass14_V_14,
+        cor_phaseClass14_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o,
+        cor_phaseClass14_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o_ap_vld,
+        cor_phaseClass14_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15,
+        cor_phaseClass14_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15_ap_vld,
+        cor_phaseClass14_V_13_i => cor_phaseClass14_V_13,
+        cor_phaseClass14_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o,
+        cor_phaseClass14_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o_ap_vld,
+        cor_phaseClass14_V_12_i => cor_phaseClass14_V_12,
+        cor_phaseClass14_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o,
+        cor_phaseClass14_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o_ap_vld,
+        cor_phaseClass14_V_11_i => cor_phaseClass14_V_11,
+        cor_phaseClass14_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o,
+        cor_phaseClass14_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o_ap_vld,
+        cor_phaseClass14_V_10_i => cor_phaseClass14_V_10,
+        cor_phaseClass14_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o,
+        cor_phaseClass14_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o_ap_vld,
+        cor_phaseClass14_V_9_i => cor_phaseClass14_V_9,
+        cor_phaseClass14_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o,
+        cor_phaseClass14_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o_ap_vld,
+        cor_phaseClass14_V_8_i => cor_phaseClass14_V_8,
+        cor_phaseClass14_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o,
+        cor_phaseClass14_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o_ap_vld,
+        cor_phaseClass14_V_7_i => cor_phaseClass14_V_7,
+        cor_phaseClass14_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o,
+        cor_phaseClass14_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o_ap_vld,
+        cor_phaseClass14_V_6_i => cor_phaseClass14_V_6,
+        cor_phaseClass14_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o,
+        cor_phaseClass14_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o_ap_vld,
+        cor_phaseClass14_V_5_i => cor_phaseClass14_V_5,
+        cor_phaseClass14_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o,
+        cor_phaseClass14_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o_ap_vld,
+        cor_phaseClass14_V_4_i => cor_phaseClass14_V_4,
+        cor_phaseClass14_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o,
+        cor_phaseClass14_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o_ap_vld,
+        cor_phaseClass14_V_3_i => cor_phaseClass14_V_3,
+        cor_phaseClass14_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o,
+        cor_phaseClass14_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o_ap_vld,
+        cor_phaseClass14_V_2_i => cor_phaseClass14_V_2,
+        cor_phaseClass14_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o,
+        cor_phaseClass14_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o_ap_vld,
+        cor_phaseClass14_V_1_i => cor_phaseClass14_V_1,
+        cor_phaseClass14_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o,
+        cor_phaseClass14_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o_ap_vld,
+        cor_phaseClass14_V_0_i => cor_phaseClass14_V_0,
+        cor_phaseClass14_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o,
+        cor_phaseClass14_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o_ap_vld,
+        cor_phaseClass15_V_14_i => cor_phaseClass15_V_14,
+        cor_phaseClass15_V_14_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o,
+        cor_phaseClass15_V_14_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o_ap_vld,
+        cor_phaseClass15_V_15 => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15,
+        cor_phaseClass15_V_15_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15_ap_vld,
+        cor_phaseClass15_V_13_i => cor_phaseClass15_V_13,
+        cor_phaseClass15_V_13_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o,
+        cor_phaseClass15_V_13_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o_ap_vld,
+        cor_phaseClass15_V_12_i => cor_phaseClass15_V_12,
+        cor_phaseClass15_V_12_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o,
+        cor_phaseClass15_V_12_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o_ap_vld,
+        cor_phaseClass15_V_11_i => cor_phaseClass15_V_11,
+        cor_phaseClass15_V_11_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o,
+        cor_phaseClass15_V_11_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o_ap_vld,
+        cor_phaseClass15_V_10_i => cor_phaseClass15_V_10,
+        cor_phaseClass15_V_10_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o,
+        cor_phaseClass15_V_10_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o_ap_vld,
+        cor_phaseClass15_V_9_i => cor_phaseClass15_V_9,
+        cor_phaseClass15_V_9_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o,
+        cor_phaseClass15_V_9_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o_ap_vld,
+        cor_phaseClass15_V_8_i => cor_phaseClass15_V_8,
+        cor_phaseClass15_V_8_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o,
+        cor_phaseClass15_V_8_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o_ap_vld,
+        cor_phaseClass15_V_7_i => cor_phaseClass15_V_7,
+        cor_phaseClass15_V_7_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o,
+        cor_phaseClass15_V_7_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o_ap_vld,
+        cor_phaseClass15_V_6_i => cor_phaseClass15_V_6,
+        cor_phaseClass15_V_6_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o,
+        cor_phaseClass15_V_6_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o_ap_vld,
+        cor_phaseClass15_V_5_i => cor_phaseClass15_V_5,
+        cor_phaseClass15_V_5_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o,
+        cor_phaseClass15_V_5_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o_ap_vld,
+        cor_phaseClass15_V_4_i => cor_phaseClass15_V_4,
+        cor_phaseClass15_V_4_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o,
+        cor_phaseClass15_V_4_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o_ap_vld,
+        cor_phaseClass15_V_3_i => cor_phaseClass15_V_3,
+        cor_phaseClass15_V_3_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o,
+        cor_phaseClass15_V_3_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o_ap_vld,
+        cor_phaseClass15_V_2_i => cor_phaseClass15_V_2,
+        cor_phaseClass15_V_2_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o,
+        cor_phaseClass15_V_2_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o_ap_vld,
+        cor_phaseClass15_V_1_i => cor_phaseClass15_V_1,
+        cor_phaseClass15_V_1_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o,
+        cor_phaseClass15_V_1_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o_ap_vld,
+        cor_phaseClass15_V_0_i => cor_phaseClass15_V_0,
+        cor_phaseClass15_V_0_o => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o,
+        cor_phaseClass15_V_0_o_ap_vld => StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o_ap_vld);
+
 
 
 
@@ -209,36 +3022,26 @@ begin
             if (ap_rst_n_inv = '1') then
                 ap_enable_reg_pp0_iter1 <= ap_const_logic_0;
             else
-                if ((ap_const_boolean_0 = ap_block_pp0_stage0_subdone)) then 
+                if (((ap_const_boolean_0 = ap_block_pp0_stage3_subdone) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage3))) then 
                     ap_enable_reg_pp0_iter1 <= ap_const_logic_1;
+                elsif (((ap_const_boolean_0 = ap_block_pp0_stage2_subdone) and (ap_const_logic_1 = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    ap_enable_reg_pp0_iter1 <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_enable_reg_pp0_iter2_assign_proc : process(ap_clk)
+    ap_reg_grp_correlator_fu_604_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_enable_reg_pp0_iter2 <= ap_const_logic_0;
+                ap_reg_grp_correlator_fu_604_ap_start <= ap_const_logic_0;
             else
-                if ((ap_const_boolean_0 = ap_block_pp0_stage0_subdone)) then 
-                    ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
-    ap_enable_reg_pp0_iter3_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst_n_inv = '1') then
-                ap_enable_reg_pp0_iter3 <= ap_const_logic_0;
-            else
-                if ((ap_const_boolean_0 = ap_block_pp0_stage0_subdone)) then 
-                    ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    ap_reg_grp_correlator_fu_604_ap_start <= ap_const_logic_1;
+                elsif ((grp_correlator_fu_604_ap_ready = ap_const_logic_1)) then 
+                    ap_reg_grp_correlator_fu_604_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -251,8 +3054,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_0 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_0 <= tmp_1_fu_162_p1;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_0_o;
                 end if; 
             end if;
         end if;
@@ -265,8 +3068,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_1 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_1 <= cor_phaseClass0_V_0;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_1_o;
                 end if; 
             end if;
         end if;
@@ -279,8 +3082,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_10 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_10 <= cor_phaseClass0_V_9;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_10_o;
                 end if; 
             end if;
         end if;
@@ -293,8 +3096,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_11 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_11 <= cor_phaseClass0_V_10;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_11_o;
                 end if; 
             end if;
         end if;
@@ -307,8 +3110,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_12 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_12 <= cor_phaseClass0_V_11;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_12_o;
                 end if; 
             end if;
         end if;
@@ -321,8 +3124,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_13 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_13 <= cor_phaseClass0_V_12;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_13_o;
                 end if; 
             end if;
         end if;
@@ -335,8 +3138,22 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_14 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_14 <= cor_phaseClass0_V_13;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass0_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass0_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_15;
                 end if; 
             end if;
         end if;
@@ -349,8 +3166,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_2 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_2 <= cor_phaseClass0_V_1;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_2_o;
                 end if; 
             end if;
         end if;
@@ -363,8 +3180,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_3 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_3 <= cor_phaseClass0_V_2;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_3_o;
                 end if; 
             end if;
         end if;
@@ -377,8 +3194,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_4 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_4 <= cor_phaseClass0_V_3;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_4_o;
                 end if; 
             end if;
         end if;
@@ -391,8 +3208,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_5 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_5 <= cor_phaseClass0_V_4;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_5_o;
                 end if; 
             end if;
         end if;
@@ -405,8 +3222,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_6 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_6 <= cor_phaseClass0_V_5;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_6_o;
                 end if; 
             end if;
         end if;
@@ -419,8 +3236,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_7 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_7 <= cor_phaseClass0_V_6;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_7_o;
                 end if; 
             end if;
         end if;
@@ -433,8 +3250,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_8 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_8 <= cor_phaseClass0_V_7;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_8_o;
                 end if; 
             end if;
         end if;
@@ -447,8 +3264,3368 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0_V_9 <= ap_const_lv16_0;
             else
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    cor_phaseClass0_V_9 <= cor_phaseClass0_V_8;
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass0_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass0_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o_ap_vld))) then 
+                    cor_phaseClass10_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o_ap_vld))) then 
+                    cor_phaseClass10_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o_ap_vld))) then 
+                    cor_phaseClass10_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o_ap_vld))) then 
+                    cor_phaseClass10_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o_ap_vld))) then 
+                    cor_phaseClass10_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o_ap_vld))) then 
+                    cor_phaseClass10_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o_ap_vld))) then 
+                    cor_phaseClass10_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15_ap_vld))) then 
+                    cor_phaseClass10_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o_ap_vld))) then 
+                    cor_phaseClass10_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o_ap_vld))) then 
+                    cor_phaseClass10_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o_ap_vld))) then 
+                    cor_phaseClass10_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o_ap_vld))) then 
+                    cor_phaseClass10_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o_ap_vld))) then 
+                    cor_phaseClass10_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o_ap_vld))) then 
+                    cor_phaseClass10_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o_ap_vld))) then 
+                    cor_phaseClass10_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass10_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass10_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o_ap_vld))) then 
+                    cor_phaseClass10_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass10_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o_ap_vld))) then 
+                    cor_phaseClass11_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o_ap_vld))) then 
+                    cor_phaseClass11_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o_ap_vld))) then 
+                    cor_phaseClass11_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o_ap_vld))) then 
+                    cor_phaseClass11_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o_ap_vld))) then 
+                    cor_phaseClass11_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o_ap_vld))) then 
+                    cor_phaseClass11_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o_ap_vld))) then 
+                    cor_phaseClass11_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15_ap_vld))) then 
+                    cor_phaseClass11_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o_ap_vld))) then 
+                    cor_phaseClass11_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o_ap_vld))) then 
+                    cor_phaseClass11_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o_ap_vld))) then 
+                    cor_phaseClass11_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o_ap_vld))) then 
+                    cor_phaseClass11_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o_ap_vld))) then 
+                    cor_phaseClass11_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o_ap_vld))) then 
+                    cor_phaseClass11_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o_ap_vld))) then 
+                    cor_phaseClass11_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass11_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass11_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o_ap_vld))) then 
+                    cor_phaseClass11_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass11_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o_ap_vld))) then 
+                    cor_phaseClass12_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o_ap_vld))) then 
+                    cor_phaseClass12_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o_ap_vld))) then 
+                    cor_phaseClass12_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o_ap_vld))) then 
+                    cor_phaseClass12_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o_ap_vld))) then 
+                    cor_phaseClass12_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o_ap_vld))) then 
+                    cor_phaseClass12_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o_ap_vld))) then 
+                    cor_phaseClass12_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15_ap_vld))) then 
+                    cor_phaseClass12_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o_ap_vld))) then 
+                    cor_phaseClass12_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o_ap_vld))) then 
+                    cor_phaseClass12_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o_ap_vld))) then 
+                    cor_phaseClass12_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o_ap_vld))) then 
+                    cor_phaseClass12_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o_ap_vld))) then 
+                    cor_phaseClass12_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o_ap_vld))) then 
+                    cor_phaseClass12_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o_ap_vld))) then 
+                    cor_phaseClass12_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass12_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass12_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o_ap_vld))) then 
+                    cor_phaseClass12_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass12_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o_ap_vld))) then 
+                    cor_phaseClass13_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o_ap_vld))) then 
+                    cor_phaseClass13_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o_ap_vld))) then 
+                    cor_phaseClass13_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o_ap_vld))) then 
+                    cor_phaseClass13_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o_ap_vld))) then 
+                    cor_phaseClass13_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o_ap_vld))) then 
+                    cor_phaseClass13_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o_ap_vld))) then 
+                    cor_phaseClass13_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15_ap_vld))) then 
+                    cor_phaseClass13_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o_ap_vld))) then 
+                    cor_phaseClass13_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o_ap_vld))) then 
+                    cor_phaseClass13_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o_ap_vld))) then 
+                    cor_phaseClass13_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o_ap_vld))) then 
+                    cor_phaseClass13_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o_ap_vld))) then 
+                    cor_phaseClass13_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o_ap_vld))) then 
+                    cor_phaseClass13_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o_ap_vld))) then 
+                    cor_phaseClass13_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass13_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass13_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o_ap_vld))) then 
+                    cor_phaseClass13_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass13_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o_ap_vld))) then 
+                    cor_phaseClass14_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o_ap_vld))) then 
+                    cor_phaseClass14_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o_ap_vld))) then 
+                    cor_phaseClass14_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o_ap_vld))) then 
+                    cor_phaseClass14_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o_ap_vld))) then 
+                    cor_phaseClass14_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o_ap_vld))) then 
+                    cor_phaseClass14_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o_ap_vld))) then 
+                    cor_phaseClass14_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15_ap_vld))) then 
+                    cor_phaseClass14_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o_ap_vld))) then 
+                    cor_phaseClass14_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o_ap_vld))) then 
+                    cor_phaseClass14_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o_ap_vld))) then 
+                    cor_phaseClass14_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o_ap_vld))) then 
+                    cor_phaseClass14_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o_ap_vld))) then 
+                    cor_phaseClass14_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o_ap_vld))) then 
+                    cor_phaseClass14_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o_ap_vld))) then 
+                    cor_phaseClass14_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass14_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass14_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o_ap_vld))) then 
+                    cor_phaseClass14_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass14_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o_ap_vld))) then 
+                    cor_phaseClass15_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o_ap_vld))) then 
+                    cor_phaseClass15_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o_ap_vld))) then 
+                    cor_phaseClass15_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o_ap_vld))) then 
+                    cor_phaseClass15_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o_ap_vld))) then 
+                    cor_phaseClass15_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o_ap_vld))) then 
+                    cor_phaseClass15_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o_ap_vld))) then 
+                    cor_phaseClass15_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15_ap_vld))) then 
+                    cor_phaseClass15_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o_ap_vld))) then 
+                    cor_phaseClass15_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o_ap_vld))) then 
+                    cor_phaseClass15_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o_ap_vld))) then 
+                    cor_phaseClass15_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o_ap_vld))) then 
+                    cor_phaseClass15_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o_ap_vld))) then 
+                    cor_phaseClass15_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o_ap_vld))) then 
+                    cor_phaseClass15_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o_ap_vld))) then 
+                    cor_phaseClass15_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass15_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass15_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o_ap_vld))) then 
+                    cor_phaseClass15_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass15_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass1_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass1_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass1_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass1_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o_ap_vld))) then 
+                    cor_phaseClass2_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o_ap_vld))) then 
+                    cor_phaseClass2_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o_ap_vld))) then 
+                    cor_phaseClass2_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o_ap_vld))) then 
+                    cor_phaseClass2_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass2_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass2_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass2_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15_ap_vld) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
+                    cor_phaseClass2_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o_ap_vld))) then 
+                    cor_phaseClass2_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o_ap_vld))) then 
+                    cor_phaseClass2_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o_ap_vld))) then 
+                    cor_phaseClass2_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o_ap_vld))) then 
+                    cor_phaseClass2_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o_ap_vld))) then 
+                    cor_phaseClass2_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o_ap_vld))) then 
+                    cor_phaseClass2_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o_ap_vld))) then 
+                    cor_phaseClass2_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass2_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass2_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o_ap_vld))) then 
+                    cor_phaseClass2_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass2_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o_ap_vld))) then 
+                    cor_phaseClass3_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o_ap_vld))) then 
+                    cor_phaseClass3_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o_ap_vld))) then 
+                    cor_phaseClass3_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o_ap_vld))) then 
+                    cor_phaseClass3_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o_ap_vld))) then 
+                    cor_phaseClass3_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o_ap_vld))) then 
+                    cor_phaseClass3_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o_ap_vld))) then 
+                    cor_phaseClass3_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15_ap_vld))) then 
+                    cor_phaseClass3_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o_ap_vld))) then 
+                    cor_phaseClass3_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o_ap_vld))) then 
+                    cor_phaseClass3_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o_ap_vld))) then 
+                    cor_phaseClass3_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o_ap_vld))) then 
+                    cor_phaseClass3_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o_ap_vld))) then 
+                    cor_phaseClass3_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o_ap_vld))) then 
+                    cor_phaseClass3_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o_ap_vld))) then 
+                    cor_phaseClass3_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass3_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass3_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o_ap_vld))) then 
+                    cor_phaseClass3_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass3_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o_ap_vld))) then 
+                    cor_phaseClass4_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o_ap_vld))) then 
+                    cor_phaseClass4_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o_ap_vld))) then 
+                    cor_phaseClass4_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o_ap_vld))) then 
+                    cor_phaseClass4_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o_ap_vld))) then 
+                    cor_phaseClass4_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o_ap_vld))) then 
+                    cor_phaseClass4_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o_ap_vld))) then 
+                    cor_phaseClass4_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15_ap_vld))) then 
+                    cor_phaseClass4_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o_ap_vld))) then 
+                    cor_phaseClass4_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o_ap_vld))) then 
+                    cor_phaseClass4_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o_ap_vld))) then 
+                    cor_phaseClass4_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o_ap_vld))) then 
+                    cor_phaseClass4_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o_ap_vld))) then 
+                    cor_phaseClass4_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o_ap_vld))) then 
+                    cor_phaseClass4_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o_ap_vld))) then 
+                    cor_phaseClass4_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass4_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass4_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o_ap_vld))) then 
+                    cor_phaseClass4_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass4_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o_ap_vld))) then 
+                    cor_phaseClass5_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o_ap_vld))) then 
+                    cor_phaseClass5_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o_ap_vld))) then 
+                    cor_phaseClass5_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o_ap_vld))) then 
+                    cor_phaseClass5_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o_ap_vld))) then 
+                    cor_phaseClass5_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o_ap_vld))) then 
+                    cor_phaseClass5_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o_ap_vld))) then 
+                    cor_phaseClass5_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15_ap_vld))) then 
+                    cor_phaseClass5_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o_ap_vld))) then 
+                    cor_phaseClass5_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o_ap_vld))) then 
+                    cor_phaseClass5_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o_ap_vld))) then 
+                    cor_phaseClass5_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o_ap_vld))) then 
+                    cor_phaseClass5_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o_ap_vld))) then 
+                    cor_phaseClass5_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o_ap_vld))) then 
+                    cor_phaseClass5_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o_ap_vld))) then 
+                    cor_phaseClass5_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass5_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass5_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o_ap_vld))) then 
+                    cor_phaseClass5_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass5_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o_ap_vld))) then 
+                    cor_phaseClass6_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o_ap_vld))) then 
+                    cor_phaseClass6_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o_ap_vld))) then 
+                    cor_phaseClass6_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o_ap_vld))) then 
+                    cor_phaseClass6_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o_ap_vld))) then 
+                    cor_phaseClass6_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o_ap_vld))) then 
+                    cor_phaseClass6_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o_ap_vld))) then 
+                    cor_phaseClass6_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15_ap_vld))) then 
+                    cor_phaseClass6_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o_ap_vld))) then 
+                    cor_phaseClass6_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o_ap_vld))) then 
+                    cor_phaseClass6_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o_ap_vld))) then 
+                    cor_phaseClass6_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o_ap_vld))) then 
+                    cor_phaseClass6_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o_ap_vld))) then 
+                    cor_phaseClass6_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o_ap_vld))) then 
+                    cor_phaseClass6_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o_ap_vld))) then 
+                    cor_phaseClass6_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass6_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass6_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o_ap_vld))) then 
+                    cor_phaseClass6_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass6_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o_ap_vld))) then 
+                    cor_phaseClass7_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o_ap_vld))) then 
+                    cor_phaseClass7_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o_ap_vld))) then 
+                    cor_phaseClass7_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o_ap_vld))) then 
+                    cor_phaseClass7_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o_ap_vld))) then 
+                    cor_phaseClass7_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o_ap_vld))) then 
+                    cor_phaseClass7_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o_ap_vld))) then 
+                    cor_phaseClass7_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15_ap_vld))) then 
+                    cor_phaseClass7_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o_ap_vld))) then 
+                    cor_phaseClass7_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o_ap_vld))) then 
+                    cor_phaseClass7_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o_ap_vld))) then 
+                    cor_phaseClass7_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o_ap_vld))) then 
+                    cor_phaseClass7_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o_ap_vld))) then 
+                    cor_phaseClass7_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o_ap_vld))) then 
+                    cor_phaseClass7_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o_ap_vld))) then 
+                    cor_phaseClass7_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass7_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass7_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o_ap_vld))) then 
+                    cor_phaseClass7_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass7_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o_ap_vld))) then 
+                    cor_phaseClass8_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o_ap_vld))) then 
+                    cor_phaseClass8_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o_ap_vld))) then 
+                    cor_phaseClass8_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o_ap_vld))) then 
+                    cor_phaseClass8_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o_ap_vld))) then 
+                    cor_phaseClass8_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o_ap_vld))) then 
+                    cor_phaseClass8_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o_ap_vld))) then 
+                    cor_phaseClass8_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15_ap_vld))) then 
+                    cor_phaseClass8_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o_ap_vld))) then 
+                    cor_phaseClass8_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o_ap_vld))) then 
+                    cor_phaseClass8_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o_ap_vld))) then 
+                    cor_phaseClass8_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o_ap_vld))) then 
+                    cor_phaseClass8_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o_ap_vld))) then 
+                    cor_phaseClass8_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o_ap_vld))) then 
+                    cor_phaseClass8_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o_ap_vld))) then 
+                    cor_phaseClass8_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass8_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass8_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o_ap_vld))) then 
+                    cor_phaseClass8_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass8_V_9_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_0_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_0 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o_ap_vld))) then 
+                    cor_phaseClass9_V_0 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_0_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_1_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_1 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o_ap_vld))) then 
+                    cor_phaseClass9_V_1 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_1_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_10_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_10 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o_ap_vld))) then 
+                    cor_phaseClass9_V_10 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_10_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_11_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_11 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o_ap_vld))) then 
+                    cor_phaseClass9_V_11 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_11_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_12_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_12 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o_ap_vld))) then 
+                    cor_phaseClass9_V_12 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_12_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_13_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_13 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o_ap_vld))) then 
+                    cor_phaseClass9_V_13 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_13_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_14_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_14 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o_ap_vld))) then 
+                    cor_phaseClass9_V_14 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_14_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_15_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_15 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15_ap_vld))) then 
+                    cor_phaseClass9_V_15 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_15;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_2_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_2 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o_ap_vld))) then 
+                    cor_phaseClass9_V_2 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_2_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_3_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_3 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o_ap_vld))) then 
+                    cor_phaseClass9_V_3 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_3_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_4_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_4 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o_ap_vld))) then 
+                    cor_phaseClass9_V_4 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_4_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_5_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_5 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o_ap_vld))) then 
+                    cor_phaseClass9_V_5 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_5_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_6_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_6 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o_ap_vld))) then 
+                    cor_phaseClass9_V_6 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_6_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_7_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_7 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o_ap_vld))) then 
+                    cor_phaseClass9_V_7 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_7_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_8_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_8 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o_ap_vld))) then 
+                    cor_phaseClass9_V_8 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_8_o;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    cor_phaseClass9_V_9_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst_n_inv = '1') then
+                cor_phaseClass9_V_9 <= ap_const_lv16_0;
+            else
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2) and (ap_const_logic_1 = StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o_ap_vld))) then 
+                    cor_phaseClass9_V_9 <= StgValue_18_shiftPhaseClass_fu_1121_cor_phaseClass9_V_9_o;
                 end if; 
             end if;
         end if;
@@ -461,7 +6638,7 @@ begin
             if (ap_rst_n_inv = '1') then
                 currentState <= ap_const_lv1_0;
             else
-                if ((((start_V_read_read_fu_92_p2 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (currentState_load_load_fu_144_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)) or ((currentState_load_load_fu_144_p1 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
+                if ((((ap_const_boolean_0 = ap_block_pp0_stage3_11001) and (start_V_read_read_fu_588_p2 = ap_const_lv1_1) and (currentState_load_reg_1705 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage3) and (ap_const_logic_1 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (currentState_load_load_fu_1646_p1 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_logic_1 = ap_const_logic_1)))) then 
                     currentState <= ap_const_lv1_1;
                 end if; 
             end if;
@@ -551,11 +6728,11 @@ begin
             if (ap_rst_n_inv = '1') then
                 i_data_last_V_0_state <= ap_const_lv2_0;
             else
-                if ((((i_data_last_V_0_state = ap_const_lv2_3) and (i_data_last_V_0_vld_in = ap_const_logic_0) and (i_data_last_V_0_ack_out = ap_const_logic_1)) or ((i_data_last_V_0_state = ap_const_lv2_2) and (i_data_last_V_0_vld_in = ap_const_logic_0)))) then 
+                if ((((i_data_last_V_0_state = ap_const_lv2_2) and (i_data_last_V_0_vld_in = ap_const_logic_0)) or ((i_data_last_V_0_state = ap_const_lv2_3) and (i_data_last_V_0_vld_in = ap_const_logic_0) and (i_data_last_V_0_ack_out = ap_const_logic_1)))) then 
                     i_data_last_V_0_state <= ap_const_lv2_2;
-                elsif ((((i_data_last_V_0_state = ap_const_lv2_1) and (i_data_last_V_0_ack_out = ap_const_logic_0)) or ((i_data_last_V_0_state = ap_const_lv2_3) and (i_data_last_V_0_ack_out = ap_const_logic_0) and (i_data_last_V_0_vld_in = ap_const_logic_1)))) then 
+                elsif ((((i_data_last_V_0_state = ap_const_lv2_3) and (i_data_last_V_0_ack_out = ap_const_logic_0) and (i_data_last_V_0_vld_in = ap_const_logic_1)) or ((i_data_last_V_0_state = ap_const_lv2_1) and (i_data_last_V_0_ack_out = ap_const_logic_0)))) then 
                     i_data_last_V_0_state <= ap_const_lv2_1;
-                elsif ((((i_data_last_V_0_state = ap_const_lv2_1) and (i_data_last_V_0_ack_out = ap_const_logic_1)) or ((i_data_last_V_0_state = ap_const_lv2_2) and (i_data_last_V_0_vld_in = ap_const_logic_1)) or (not(((i_data_last_V_0_vld_in = ap_const_logic_0) and (i_data_last_V_0_ack_out = ap_const_logic_1))) and not(((i_data_last_V_0_ack_out = ap_const_logic_0) and (i_data_last_V_0_vld_in = ap_const_logic_1))) and (i_data_last_V_0_state = ap_const_lv2_3)))) then 
+                elsif ((((i_data_last_V_0_state = ap_const_lv2_2) and (i_data_last_V_0_vld_in = ap_const_logic_1)) or (not(((i_data_last_V_0_vld_in = ap_const_logic_0) and (i_data_last_V_0_ack_out = ap_const_logic_1))) and not(((i_data_last_V_0_ack_out = ap_const_logic_0) and (i_data_last_V_0_vld_in = ap_const_logic_1))) and (i_data_last_V_0_state = ap_const_lv2_3)) or ((i_data_last_V_0_state = ap_const_lv2_1) and (i_data_last_V_0_ack_out = ap_const_logic_1)))) then 
                     i_data_last_V_0_state <= ap_const_lv2_3;
                 else 
                     i_data_last_V_0_state <= ap_const_lv2_2;
@@ -571,10 +6748,10 @@ begin
             if (ap_rst_n_inv = '1') then
                 loadCount_V <= ap_const_lv32_0;
             else
-                if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1))) then
-                    if ((ap_reg_pp0_iter2_currentState_load_reg_463 = ap_const_lv1_1)) then 
-                        loadCount_V <= tmp_2_fu_447_p2;
-                    elsif (((ap_reg_pp0_iter2_start_V_read_reg_459 = ap_const_lv1_1) and (ap_reg_pp0_iter2_currentState_load_reg_463 = ap_const_lv1_0))) then 
+                if ((ap_const_boolean_1 = ap_condition_2184)) then
+                    if ((ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1)) then 
+                        loadCount_V <= tmp_2_fu_1679_p2;
+                    elsif (((start_V_read_reg_1719 = ap_const_lv1_1) and (ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_0))) then 
                         loadCount_V <= ap_const_lv32_0;
                     end if;
                 end if; 
@@ -678,83 +6855,12 @@ begin
         end if;
     end process;
 
-
-    ap_phi_reg_pp0_iter1_p_Val2_1_reg_116_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_1 = ap_condition_365)) then
-                if (((currentState_load_load_fu_144_p1 = ap_const_lv1_1) and (cond_i_fu_148_p2 = ap_const_lv1_0))) then 
-                    ap_phi_reg_pp0_iter1_p_Val2_1_reg_116 <= ap_const_lv16_0;
-                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter1_p_Val2_1_reg_116 <= ap_phi_reg_pp0_iter0_p_Val2_1_reg_116;
-                end if;
-            end if; 
-        end if;
-    end process;
-
-    ap_phi_reg_pp0_iter1_p_Val2_2_reg_127_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_1 = ap_condition_365)) then
-                if (((currentState_load_load_fu_144_p1 = ap_const_lv1_1) and (cond_i_fu_148_p2 = ap_const_lv1_0))) then 
-                    ap_phi_reg_pp0_iter1_p_Val2_2_reg_127 <= ap_const_lv16_0;
-                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter1_p_Val2_2_reg_127 <= ap_phi_reg_pp0_iter0_p_Val2_2_reg_127;
-                end if;
-            end if; 
-        end if;
-    end process;
-
-    ap_phi_reg_pp0_iter2_p_Val2_1_reg_116_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_1 = ap_condition_367)) then
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1))) then 
-                    ap_phi_reg_pp0_iter2_p_Val2_1_reg_116 <= p_Val2_2_4_i_fu_400_p2;
-                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter2_p_Val2_1_reg_116 <= ap_phi_reg_pp0_iter1_p_Val2_1_reg_116;
-                end if;
-            end if; 
-        end if;
-    end process;
-
-    ap_phi_reg_pp0_iter2_p_Val2_2_reg_127_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_1 = ap_condition_367)) then
-                if (((cond_i_reg_467 = ap_const_lv1_1) and (currentState_load_reg_463 = ap_const_lv1_1))) then 
-                    ap_phi_reg_pp0_iter2_p_Val2_2_reg_127 <= p_Val2_5_1_i_fu_358_p2;
-                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter2_p_Val2_2_reg_127 <= ap_phi_reg_pp0_iter1_p_Val2_2_reg_127;
-                end if;
-            end if; 
-        end if;
-    end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                ap_reg_pp0_iter1_currentState_load_reg_463 <= currentState_load_reg_463;
-                ap_reg_pp0_iter1_start_V_read_reg_459 <= start_V_read_reg_459;
-                currentState_load_reg_463 <= currentState;
-                start_V_read_reg_459 <= start_V;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_0 = ap_block_pp0_stage0_11001)) then
-                ap_reg_pp0_iter2_currentState_load_reg_463 <= ap_reg_pp0_iter1_currentState_load_reg_463;
-                ap_reg_pp0_iter2_start_V_read_reg_459 <= ap_reg_pp0_iter1_start_V_read_reg_459;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((currentState_load_load_fu_144_p1 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                cond_i_reg_467 <= cond_i_fu_148_p2;
+                ap_reg_pp0_iter1_currentState_load_reg_1705 <= currentState_load_reg_1705;
+                currentState_load_reg_1705 <= currentState;
             end if;
         end if;
     end process;
@@ -793,8 +6899,8 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                i_data_last_V_tmp_reg_471 <= i_data_last_V_0_data_out;
+            if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then
+                i_data_last_V_tmp_reg_1714 <= i_data_last_V_0_data_out;
             end if;
         end if;
     end process;
@@ -802,7 +6908,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_data_V_1_load_A = ap_const_logic_1)) then
-                o_data_data_V_1_payload_A <= o_data_data_V_tmp_fu_432_p1;
+                o_data_data_V_1_payload_A <= o_data_data_V_tmp_fu_1696_p3;
             end if;
         end if;
     end process;
@@ -810,7 +6916,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_data_V_1_load_B = ap_const_logic_1)) then
-                o_data_data_V_1_payload_B <= o_data_data_V_tmp_fu_432_p1;
+                o_data_data_V_1_payload_B <= o_data_data_V_tmp_fu_1696_p3;
             end if;
         end if;
     end process;
@@ -818,7 +6924,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_last_V_1_load_A = ap_const_logic_1)) then
-                o_data_last_V_1_payload_A <= i_data_last_V_tmp_reg_471;
+                o_data_last_V_1_payload_A <= i_data_last_V_tmp_reg_1714;
             end if;
         end if;
     end process;
@@ -826,91 +6932,158 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_last_V_1_load_B = ap_const_logic_1)) then
-                o_data_last_V_1_payload_B <= i_data_last_V_tmp_reg_471;
+                o_data_last_V_1_payload_B <= i_data_last_V_tmp_reg_1714;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
+                op_V_assign_reg_1723 <= grp_correlator_fu_604_ap_return;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then
+                phaseClass_V_read_reg_1709 <= phaseClass_V;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((ap_const_boolean_0 = ap_block_pp0_stage3_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage3))) then
+                start_V_read_reg_1719 <= start_V;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_block_pp0_stage0_subdone, ap_reset_idle_pp0)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_block_pp0_stage2_subdone, ap_block_pp0_stage3_subdone, ap_block_pp0_stage0_subdone, ap_block_pp0_stage1_subdone, ap_reset_idle_pp0)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_pp0_stage0 => 
-                ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
+                if ((ap_const_boolean_0 = ap_block_pp0_stage0_subdone)) then
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage1;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
+                end if;
+            when ap_ST_fsm_pp0_stage1 => 
+                if ((ap_const_boolean_0 = ap_block_pp0_stage1_subdone)) then
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage2;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage1;
+                end if;
+            when ap_ST_fsm_pp0_stage2 => 
+                if (((ap_const_boolean_0 = ap_block_pp0_stage2_subdone) and (ap_reset_idle_pp0 = ap_const_logic_0))) then
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage3;
+                elsif (((ap_const_boolean_0 = ap_block_pp0_stage2_subdone) and (ap_reset_idle_pp0 = ap_const_logic_1))) then
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage2;
+                end if;
+            when ap_ST_fsm_pp0_stage3 => 
+                if ((ap_const_boolean_0 = ap_block_pp0_stage3_subdone)) then
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_pp0_stage3;
+                end if;
             when others =>  
-                ap_NS_fsm <= "X";
+                ap_NS_fsm <= "XXXX";
         end case;
     end process;
+    StgValue_18_shiftPhaseClass_fu_1121_newValue_V <= i_data_data_V_0_data_out(16 - 1 downto 0);
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
+    ap_CS_fsm_pp0_stage1 <= ap_CS_fsm(1);
+    ap_CS_fsm_pp0_stage2 <= ap_CS_fsm(2);
+    ap_CS_fsm_pp0_stage3 <= ap_CS_fsm(3);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage0_11001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage0_subdone <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage1 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage1_01001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_01001_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, ap_enable_reg_pp0_iter1, currentState_load_reg_463, ap_enable_reg_pp0_iter3)
+    ap_block_pp0_stage1_11001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_block_state6_io)
     begin
-                ap_block_pp0_stage0_01001 <= (((ap_enable_reg_pp0_iter3 = ap_const_logic_1) and ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0))) or ((currentState_load_reg_463 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage1_11001 <= ((ap_const_boolean_1 = ap_block_state6_io) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
     end process;
 
 
-    ap_block_pp0_stage0_11001_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, ap_enable_reg_pp0_iter1, currentState_load_reg_463, ap_enable_reg_pp0_iter2, ap_enable_reg_pp0_iter3, ap_block_state3_io, ap_block_state4_io)
+    ap_block_pp0_stage1_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, ap_block_state6_io)
     begin
-                ap_block_pp0_stage0_11001 <= (((ap_enable_reg_pp0_iter3 = ap_const_logic_1) and ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state4_io))) or ((ap_const_boolean_1 = ap_block_state3_io) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1)) or ((currentState_load_reg_463 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage1_subdone <= ((ap_const_boolean_1 = ap_block_state6_io) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
+    end process;
+
+        ap_block_pp0_stage2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+
+    ap_block_pp0_stage2_01001_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, currentState_load_reg_1705, ap_enable_reg_pp0_iter1)
+    begin
+                ap_block_pp0_stage2_01001 <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0))) or ((currentState_load_reg_1705 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_const_logic_1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, ap_enable_reg_pp0_iter1, currentState_load_reg_463, ap_enable_reg_pp0_iter2, ap_enable_reg_pp0_iter3, ap_block_state3_io, ap_block_state4_io)
+    ap_block_pp0_stage2_11001_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, currentState_load_reg_1705, ap_enable_reg_pp0_iter1, ap_block_state7_io)
     begin
-                ap_block_pp0_stage0_subdone <= (((ap_enable_reg_pp0_iter3 = ap_const_logic_1) and ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state4_io))) or ((ap_const_boolean_1 = ap_block_state3_io) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1)) or ((currentState_load_reg_463 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage2_11001 <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and ((ap_const_boolean_1 = ap_block_state7_io) or (o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0))) or ((currentState_load_reg_1705 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_const_logic_1 = ap_const_logic_1)));
     end process;
 
+
+    ap_block_pp0_stage2_subdone_assign_proc : process(i_data_data_V_0_vld_out, o_data_data_V_1_ack_in, o_data_last_V_1_ack_in, currentState_load_reg_1705, ap_enable_reg_pp0_iter1, ap_block_state7_io)
+    begin
+                ap_block_pp0_stage2_subdone <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and ((ap_const_boolean_1 = ap_block_state7_io) or (o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0))) or ((currentState_load_reg_1705 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0) and (ap_const_logic_1 = ap_const_logic_1)));
+    end process;
+
+        ap_block_pp0_stage3 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage3_11001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_pp0_stage3_subdone <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state1_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_state2_pp0_stage1_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state2_pp0_stage0_iter1_assign_proc : process(i_data_data_V_0_vld_out, currentState_load_reg_463)
+    ap_block_state3_pp0_stage2_iter0_assign_proc : process(i_data_data_V_0_vld_out, currentState_load_reg_1705)
     begin
-                ap_block_state2_pp0_stage0_iter1 <= ((currentState_load_reg_463 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0));
+                ap_block_state3_pp0_stage2_iter0 <= ((currentState_load_reg_1705 = ap_const_lv1_1) and (i_data_data_V_0_vld_out = ap_const_logic_0));
+    end process;
+
+        ap_block_state4_pp0_stage3_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+        ap_block_state5_pp0_stage0_iter1 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+
+    ap_block_state6_io_assign_proc : process(o_data_data_V_1_ack_in, ap_reg_pp0_iter1_currentState_load_reg_1705)
+    begin
+                ap_block_state6_io <= ((ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (o_data_data_V_1_ack_in = ap_const_logic_0));
+    end process;
+
+        ap_block_state6_pp0_stage1_iter1 <= not((ap_const_boolean_1 = ap_const_boolean_1));
+
+    ap_block_state7_io_assign_proc : process(o_data_data_V_1_ack_in, ap_reg_pp0_iter1_currentState_load_reg_1705)
+    begin
+                ap_block_state7_io <= ((ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (o_data_data_V_1_ack_in = ap_const_logic_0));
     end process;
 
 
-    ap_block_state3_io_assign_proc : process(o_data_data_V_1_ack_in, ap_reg_pp0_iter1_currentState_load_reg_463)
+    ap_block_state7_pp0_stage2_iter1_assign_proc : process(o_data_data_V_1_ack_in, o_data_last_V_1_ack_in)
     begin
-                ap_block_state3_io <= ((ap_reg_pp0_iter1_currentState_load_reg_463 = ap_const_lv1_1) and (o_data_data_V_1_ack_in = ap_const_logic_0));
-    end process;
-
-        ap_block_state3_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
-
-    ap_block_state4_io_assign_proc : process(o_data_data_V_1_ack_in, ap_reg_pp0_iter2_currentState_load_reg_463)
-    begin
-                ap_block_state4_io <= ((ap_reg_pp0_iter2_currentState_load_reg_463 = ap_const_lv1_1) and (o_data_data_V_1_ack_in = ap_const_logic_0));
+                ap_block_state7_pp0_stage2_iter1 <= ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0));
     end process;
 
 
-    ap_block_state4_pp0_stage0_iter3_assign_proc : process(o_data_data_V_1_ack_in, o_data_last_V_1_ack_in)
+    ap_condition_2184_assign_proc : process(ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter1, ap_block_pp0_stage1_11001)
     begin
-                ap_block_state4_pp0_stage0_iter3 <= ((o_data_last_V_1_ack_in = ap_const_logic_0) or (o_data_data_V_1_ack_in = ap_const_logic_0));
-    end process;
-
-
-    ap_condition_365_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
-    begin
-                ap_condition_365 <= ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0));
-    end process;
-
-
-    ap_condition_367_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
-    begin
-                ap_condition_367 <= ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0));
+                ap_condition_2184 <= ((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1));
     end process;
 
     ap_enable_pp0 <= (ap_idle_pp0 xor ap_const_logic_1);
 
-    ap_idle_pp0_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter2, ap_enable_reg_pp0_iter3)
+    ap_idle_pp0_assign_proc : process(ap_enable_reg_pp0_iter1)
     begin
-        if (((ap_const_logic_1 = ap_const_logic_0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_0) and (ap_enable_reg_pp0_iter2 = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_0))) then 
+        if (((ap_enable_reg_pp0_iter1 = ap_const_logic_0) and (ap_const_logic_1 = ap_const_logic_0))) then 
             ap_idle_pp0 <= ap_const_logic_1;
         else 
             ap_idle_pp0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    ap_phi_reg_pp0_iter0_p_Val2_1_reg_116 <= "XXXXXXXXXXXXXXXX";
-    ap_phi_reg_pp0_iter0_p_Val2_2_reg_127 <= "XXXXXXXXXXXXXXXX";
     ap_reset_idle_pp0 <= ap_const_logic_0;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
@@ -918,12 +7091,22 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    cond_i_fu_148_p2 <= "1" when (phaseClass_V = ap_const_lv4_8) else "0";
-    currentState_load_load_fu_144_p1 <= currentState;
+    currentState_load_load_fu_1646_p1 <= currentState;
 
-    i_data_TDATA_blk_n_assign_proc : process(i_data_data_V_0_state, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, currentState_load_reg_463)
+    grp_correlator_fu_604_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001, ap_CS_fsm_pp0_stage3, ap_block_pp0_stage3_11001)
     begin
-        if (((currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if ((((ap_const_boolean_0 = ap_block_pp0_stage3_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage3)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
+            grp_correlator_fu_604_ap_ce <= ap_const_logic_1;
+        else 
+            grp_correlator_fu_604_ap_ce <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    grp_correlator_fu_604_ap_start <= ap_reg_grp_correlator_fu_604_ap_start;
+
+    i_data_TDATA_blk_n_assign_proc : process(i_data_data_V_0_state, ap_CS_fsm_pp0_stage2, ap_block_pp0_stage2, currentState_load_reg_1705)
+    begin
+        if (((ap_const_boolean_0 = ap_block_pp0_stage2) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
             i_data_TDATA_blk_n <= i_data_data_V_0_state(0);
         else 
             i_data_TDATA_blk_n <= ap_const_logic_1;
@@ -933,9 +7116,9 @@ begin
     i_data_TREADY <= i_data_last_V_0_state(1);
     i_data_data_V_0_ack_in <= i_data_data_V_0_state(1);
 
-    i_data_data_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, currentState_load_reg_463, ap_block_pp0_stage0_11001)
+    i_data_data_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage2, currentState_load_reg_1705, ap_block_pp0_stage2_11001)
     begin
-        if (((currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
             i_data_data_V_0_ack_out <= ap_const_logic_1;
         else 
             i_data_data_V_0_ack_out <= ap_const_logic_0;
@@ -960,9 +7143,9 @@ begin
     i_data_data_V_0_vld_out <= i_data_data_V_0_state(0);
     i_data_last_V_0_ack_in <= i_data_last_V_0_state(1);
 
-    i_data_last_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, currentState_load_reg_463, ap_block_pp0_stage0_11001)
+    i_data_last_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage2, currentState_load_reg_1705, ap_block_pp0_stage2_11001)
     begin
-        if (((currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if (((ap_const_boolean_0 = ap_block_pp0_stage2_11001) and (currentState_load_reg_1705 = ap_const_lv1_1) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2))) then 
             i_data_last_V_0_ack_out <= ap_const_logic_1;
         else 
             i_data_last_V_0_ack_out <= ap_const_logic_0;
@@ -987,9 +7170,9 @@ begin
     i_data_last_V_0_vld_out <= i_data_last_V_0_state(0);
     o_data_TDATA <= o_data_data_V_1_data_out;
 
-    o_data_TDATA_blk_n_assign_proc : process(o_data_data_V_1_state, ap_block_pp0_stage0, ap_enable_reg_pp0_iter2, ap_reg_pp0_iter1_currentState_load_reg_463, ap_enable_reg_pp0_iter3, ap_reg_pp0_iter2_currentState_load_reg_463)
+    o_data_TDATA_blk_n_assign_proc : process(o_data_data_V_1_state, ap_CS_fsm_pp0_stage2, ap_block_pp0_stage2, ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter1, ap_block_pp0_stage1, ap_reg_pp0_iter1_currentState_load_reg_1705)
     begin
-        if ((((ap_reg_pp0_iter2_currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1)) or ((ap_reg_pp0_iter1_currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1)))) then 
+        if ((((ap_const_boolean_0 = ap_block_pp0_stage1) and (ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1)) or ((ap_const_boolean_0 = ap_block_pp0_stage2) and (ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage2)))) then 
             o_data_TDATA_blk_n <= o_data_data_V_1_state(1);
         else 
             o_data_TDATA_blk_n <= ap_const_logic_1;
@@ -1015,9 +7198,9 @@ begin
     o_data_data_V_1_sel <= o_data_data_V_1_sel_rd;
     o_data_data_V_1_state_cmp_full <= '0' when (o_data_data_V_1_state = ap_const_lv2_1) else '1';
 
-    o_data_data_V_1_vld_in_assign_proc : process(ap_enable_reg_pp0_iter2, ap_reg_pp0_iter1_currentState_load_reg_463, ap_block_pp0_stage0_11001)
+    o_data_data_V_1_vld_in_assign_proc : process(ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter1, ap_reg_pp0_iter1_currentState_load_reg_1705, ap_block_pp0_stage1_11001)
     begin
-        if (((ap_reg_pp0_iter1_currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then 
+        if (((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then 
             o_data_data_V_1_vld_in <= ap_const_logic_1;
         else 
             o_data_data_V_1_vld_in <= ap_const_logic_0;
@@ -1025,8 +7208,9 @@ begin
     end process;
 
     o_data_data_V_1_vld_out <= o_data_data_V_1_state(0);
-        o_data_data_V_tmp_fu_432_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(res_V_fu_424_p3),32));
-
+    o_data_data_V_tmp_fu_1696_p3 <= 
+        tmp_2_fu_1679_p2 when (tmp_3_fu_1691_p2(0) = '1') else 
+        ap_const_lv32_0;
     o_data_last_V_1_ack_in <= o_data_last_V_1_state(1);
     o_data_last_V_1_ack_out <= o_data_TREADY;
 
@@ -1044,9 +7228,9 @@ begin
     o_data_last_V_1_sel <= o_data_last_V_1_sel_rd;
     o_data_last_V_1_state_cmp_full <= '0' when (o_data_last_V_1_state = ap_const_lv2_1) else '1';
 
-    o_data_last_V_1_vld_in_assign_proc : process(ap_enable_reg_pp0_iter2, ap_reg_pp0_iter1_currentState_load_reg_463, ap_block_pp0_stage0_11001)
+    o_data_last_V_1_vld_in_assign_proc : process(ap_CS_fsm_pp0_stage1, ap_enable_reg_pp0_iter1, ap_reg_pp0_iter1_currentState_load_reg_1705, ap_block_pp0_stage1_11001)
     begin
-        if (((ap_reg_pp0_iter1_currentState_load_reg_463 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then 
+        if (((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_reg_pp0_iter1_currentState_load_reg_1705 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then 
             o_data_last_V_1_vld_in <= ap_const_logic_1;
         else 
             o_data_last_V_1_vld_in <= ap_const_logic_0;
@@ -1054,27 +7238,7 @@ begin
     end process;
 
     o_data_last_V_1_vld_out <= o_data_last_V_1_state(0);
-    p_Val2_2_4_i_fu_400_p2 <= std_logic_vector(unsigned(tmp9_fu_394_p2) + unsigned(tmp6_fu_376_p2));
-    p_Val2_5_1_i_fu_358_p2 <= std_logic_vector(unsigned(tmp3_fu_352_p2) + unsigned(tmp_fu_334_p2));
-    p_Val2_8_i_fu_418_p2 <= std_logic_vector(unsigned(ap_phi_reg_pp0_iter2_p_Val2_2_reg_127) - unsigned(ap_phi_reg_pp0_iter2_p_Val2_1_reg_116));
-    p_Val2_9_i_fu_412_p2 <= std_logic_vector(unsigned(ap_phi_reg_pp0_iter2_p_Val2_1_reg_116) - unsigned(ap_phi_reg_pp0_iter2_p_Val2_2_reg_127));
-    res_V_fu_424_p3 <= 
-        p_Val2_8_i_fu_418_p2 when (tmp_i_fu_406_p2(0) = '1') else 
-        p_Val2_9_i_fu_412_p2;
-    start_V_read_read_fu_92_p2 <= start_V;
-    tmp10_fu_382_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_2) + unsigned(cor_phaseClass0_V_1));
-    tmp11_fu_388_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_0) + unsigned(tmp_1_fu_162_p1));
-    tmp1_fu_322_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_11) + unsigned(cor_phaseClass0_V_13));
-    tmp2_fu_328_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_10) + unsigned(cor_phaseClass0_V_8));
-    tmp3_fu_352_p2 <= std_logic_vector(unsigned(tmp5_fu_346_p2) + unsigned(tmp4_fu_340_p2));
-    tmp4_fu_340_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_6) + unsigned(cor_phaseClass0_V_5));
-    tmp5_fu_346_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_4) + unsigned(cor_phaseClass0_V_3));
-    tmp6_fu_376_p2 <= std_logic_vector(unsigned(tmp8_fu_370_p2) + unsigned(tmp7_fu_364_p2));
-    tmp7_fu_364_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_12) + unsigned(cor_phaseClass0_V_14));
-    tmp8_fu_370_p2 <= std_logic_vector(unsigned(cor_phaseClass0_V_9) + unsigned(cor_phaseClass0_V_7));
-    tmp9_fu_394_p2 <= std_logic_vector(unsigned(tmp11_fu_388_p2) + unsigned(tmp10_fu_382_p2));
-    tmp_1_fu_162_p1 <= i_data_data_V_0_data_out(16 - 1 downto 0);
-    tmp_2_fu_447_p2 <= std_logic_vector(unsigned(ap_const_lv32_1) + unsigned(loadCount_V));
-    tmp_fu_334_p2 <= std_logic_vector(unsigned(tmp2_fu_328_p2) + unsigned(tmp1_fu_322_p2));
-    tmp_i_fu_406_p2 <= "1" when (signed(ap_phi_reg_pp0_iter2_p_Val2_2_reg_127) > signed(ap_phi_reg_pp0_iter2_p_Val2_1_reg_116)) else "0";
+    start_V_read_read_fu_588_p2 <= start_V;
+    tmp_2_fu_1679_p2 <= std_logic_vector(unsigned(ap_const_lv32_20) + unsigned(loadCount_V));
+    tmp_3_fu_1691_p2 <= "1" when (signed(op_V_assign_reg_1723) > signed(ap_const_lv16_1900)) else "0";
 end behav;

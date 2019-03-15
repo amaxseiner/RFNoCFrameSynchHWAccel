@@ -12,13 +12,14 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:32.355-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'load' operation ('cor_phaseClass0_V_15', correlator.cpp:214->correlator.cpp:64) on static variable 'cor_phaseClass0_V_15' and 'call' operation (correlator.cpp:63) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:32.142-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' (correlator.cpp:84:3) into shiftPhaseClass." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:31.931-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'i_data.data.V' (correlator.cpp:8)." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:31.350-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'o_data.data.V' (correlator.cpp:8)." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:31.327-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Function 'correlator' does not exist in any synthesis source file." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:30.612-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'forAl.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-15T02:05:22.736-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:59.925-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' to 'correlator' (correlator.cpp:223:21)" projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:56.069-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' to 'shiftPhaseClass' (correlator.cpp:101:3)" projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:55.291-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'i_data.data.V' (correlator.cpp:8)." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:53.729-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'o_data.data.V' (correlator.cpp:8)." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:53.633-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Function 'correlator' does not exist in any synthesis source file." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:50.407-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'forAl.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:33.580-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'lancep2.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-15T15:34:33.577-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

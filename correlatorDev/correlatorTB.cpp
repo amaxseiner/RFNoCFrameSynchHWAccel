@@ -12,7 +12,7 @@ int main(){
 	ap_fixed<16,11> test2;
 
 	ifstream inFile;
-	inFile.open("forAl.csv");
+	inFile.open("lancep2.csv");
 	inFile >> fixed >> setbase(10) >> setprecision(16);
 	int count;
 	count = 0;

@@ -4,17 +4,17 @@
  struct rfnoc_axis{
      ap_int<32> data;
      ap_uint<1> last;
-   };
+};
 
  struct semiComplex{
  	 ap_fixed<16,11> i;
  	 ap_fixed<16,11> q;
- };
+};
 
  struct bigSemiComplex{
 	 ap_fixed<32,22> i;
 	 ap_fixed<32,22> q;
- };
+};
 
 #define windowSize 16
 
@@ -27,6 +27,7 @@ static ap_int<2> corrSeq[windowSize] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1}
  public:
 	 void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
 	 ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
+	 ap_fixed<16,11> phaseArray[16];
 	 ap_fixed<16,11> phaseClass0[windowSize];
 	 ap_fixed<16,11> phaseClass1[windowSize];
 	 ap_fixed<16,11> phaseClass2[windowSize];

@@ -57,6 +57,11 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/forAl.csv</location>
 		</link>
 		<link>
+			<name>source/lancep2.csv</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/lancep2.csv</location>
+		</link>
+		<link>
 			<name>source/rfnoc.h</name>
 			<type>1</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h</location>

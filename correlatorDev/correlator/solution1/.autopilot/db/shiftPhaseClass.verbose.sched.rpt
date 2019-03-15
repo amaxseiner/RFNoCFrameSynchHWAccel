@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'shiftPhaseClass'
 ================================================================
-* Date:           Fri Mar 15 02:05:31 2019
+* Date:           Fri Mar 15 15:34:56 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      2.51|        1.25|
+    |ap_clk  |  10.00|      1.15|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -68,24 +68,20 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 1
-* Pipeline: 1
-  Pipeline-0: II = 1, D = 1, States = { 1 }
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
+
 * FSM state operations: 
 
- <State 1>: 2.51ns
-ST_1: phaseClass_V_read (169)  [1/1] 0.00ns
-:0  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
-
-ST_1: newValue_V_read (170)  [1/1] 0.00ns
-:1  %newValue_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %newValue_V)
-
-ST_1: StgValue_4 (171)  [1/1] 2.51ns  loc: correlator.cpp:84
-:2  switch i4 %phaseClass_V_read, label %._crit_edge [
+ <State 1> : 1.15ns
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)"
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%newValue_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %newValue_V)"
+ST_1 : Operation 4 [1/1] (1.15ns)   --->   "switch i4 %phaseClass_V_read, label %._crit_edge [
     i4 0, label %.preheader63.0
     i4 1, label %.preheader62.0
     i4 2, label %.preheader61.0
@@ -102,1007 +98,520 @@ ST_1: StgValue_4 (171)  [1/1] 2.51ns  loc: correlator.cpp:84
     i4 -3, label %.preheader50.0
     i4 -2, label %.preheader49.0
     i4 -1, label %.preheader.0
-  ]
-
-ST_1: cor_phaseClass15_V_8 (173)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:0  %cor_phaseClass15_V_8 = load i16* @cor_phaseClass15_V_8, align 16
-
-ST_1: StgValue_6 (174)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:1  store i16 %cor_phaseClass15_V_8, i16* @cor_phaseClass15_V_9, align 2
-
-ST_1: cor_phaseClass15_V_7 (175)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:2  %cor_phaseClass15_V_7 = load i16* @cor_phaseClass15_V_7, align 2
-
-ST_1: StgValue_8 (176)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:3  store i16 %cor_phaseClass15_V_7, i16* @cor_phaseClass15_V_8, align 16
-
-ST_1: cor_phaseClass15_V_6 (177)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:4  %cor_phaseClass15_V_6 = load i16* @cor_phaseClass15_V_6, align 4
-
-ST_1: StgValue_10 (178)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:5  store i16 %cor_phaseClass15_V_6, i16* @cor_phaseClass15_V_7, align 2
-
-ST_1: cor_phaseClass15_V_5 (179)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:6  %cor_phaseClass15_V_5 = load i16* @cor_phaseClass15_V_5, align 2
-
-ST_1: StgValue_12 (180)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:7  store i16 %cor_phaseClass15_V_5, i16* @cor_phaseClass15_V_6, align 4
-
-ST_1: cor_phaseClass15_V_4 (181)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:8  %cor_phaseClass15_V_4 = load i16* @cor_phaseClass15_V_4, align 8
-
-ST_1: StgValue_14 (182)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:9  store i16 %cor_phaseClass15_V_4, i16* @cor_phaseClass15_V_5, align 2
-
-ST_1: cor_phaseClass15_V_3 (183)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:10  %cor_phaseClass15_V_3 = load i16* @cor_phaseClass15_V_3, align 2
-
-ST_1: StgValue_16 (184)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:11  store i16 %cor_phaseClass15_V_3, i16* @cor_phaseClass15_V_4, align 8
-
-ST_1: cor_phaseClass15_V_2 (185)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:12  %cor_phaseClass15_V_2 = load i16* @cor_phaseClass15_V_2, align 4
-
-ST_1: StgValue_18 (186)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:13  store i16 %cor_phaseClass15_V_2, i16* @cor_phaseClass15_V_3, align 2
-
-ST_1: cor_phaseClass15_V_1 (187)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:14  %cor_phaseClass15_V_1 = load i16* @cor_phaseClass15_V_1, align 2
-
-ST_1: StgValue_20 (188)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:15  store i16 %cor_phaseClass15_V_1, i16* @cor_phaseClass15_V_2, align 4
-
-ST_1: cor_phaseClass15_V_0 (189)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:16  %cor_phaseClass15_V_0 = load i16* @cor_phaseClass15_V_0, align 16
-
-ST_1: StgValue_22 (190)  [1/1] 0.00ns  loc: correlator.cpp:195
-.preheader.0:17  store i16 %cor_phaseClass15_V_0, i16* @cor_phaseClass15_V_1, align 2
-
-ST_1: StgValue_23 (191)  [1/1] 0.00ns  loc: correlator.cpp:197
-.preheader.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass15_V_0, align 16
-
-ST_1: StgValue_24 (192)  [1/1] 0.00ns  loc: correlator.cpp:198
-.preheader.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass14_V_8 (194)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:0  %cor_phaseClass14_V_8 = load i16* @cor_phaseClass14_V_8, align 16
-
-ST_1: StgValue_26 (195)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:1  store i16 %cor_phaseClass14_V_8, i16* @cor_phaseClass14_V_9, align 2
-
-ST_1: cor_phaseClass14_V_7 (196)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:2  %cor_phaseClass14_V_7 = load i16* @cor_phaseClass14_V_7, align 2
-
-ST_1: StgValue_28 (197)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:3  store i16 %cor_phaseClass14_V_7, i16* @cor_phaseClass14_V_8, align 16
-
-ST_1: cor_phaseClass14_V_6 (198)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:4  %cor_phaseClass14_V_6 = load i16* @cor_phaseClass14_V_6, align 4
-
-ST_1: StgValue_30 (199)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:5  store i16 %cor_phaseClass14_V_6, i16* @cor_phaseClass14_V_7, align 2
-
-ST_1: cor_phaseClass14_V_5 (200)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:6  %cor_phaseClass14_V_5 = load i16* @cor_phaseClass14_V_5, align 2
-
-ST_1: StgValue_32 (201)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:7  store i16 %cor_phaseClass14_V_5, i16* @cor_phaseClass14_V_6, align 4
-
-ST_1: cor_phaseClass14_V_4 (202)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:8  %cor_phaseClass14_V_4 = load i16* @cor_phaseClass14_V_4, align 8
-
-ST_1: StgValue_34 (203)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:9  store i16 %cor_phaseClass14_V_4, i16* @cor_phaseClass14_V_5, align 2
-
-ST_1: cor_phaseClass14_V_3 (204)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:10  %cor_phaseClass14_V_3 = load i16* @cor_phaseClass14_V_3, align 2
-
-ST_1: StgValue_36 (205)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:11  store i16 %cor_phaseClass14_V_3, i16* @cor_phaseClass14_V_4, align 8
-
-ST_1: cor_phaseClass14_V_2 (206)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:12  %cor_phaseClass14_V_2 = load i16* @cor_phaseClass14_V_2, align 4
-
-ST_1: StgValue_38 (207)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:13  store i16 %cor_phaseClass14_V_2, i16* @cor_phaseClass14_V_3, align 2
-
-ST_1: cor_phaseClass14_V_1 (208)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:14  %cor_phaseClass14_V_1 = load i16* @cor_phaseClass14_V_1, align 2
-
-ST_1: StgValue_40 (209)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:15  store i16 %cor_phaseClass14_V_1, i16* @cor_phaseClass14_V_2, align 4
-
-ST_1: cor_phaseClass14_V_0 (210)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:16  %cor_phaseClass14_V_0 = load i16* @cor_phaseClass14_V_0, align 16
-
-ST_1: StgValue_42 (211)  [1/1] 0.00ns  loc: correlator.cpp:188
-.preheader49.0:17  store i16 %cor_phaseClass14_V_0, i16* @cor_phaseClass14_V_1, align 2
-
-ST_1: StgValue_43 (212)  [1/1] 0.00ns  loc: correlator.cpp:190
-.preheader49.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass14_V_0, align 16
-
-ST_1: StgValue_44 (213)  [1/1] 0.00ns  loc: correlator.cpp:191
-.preheader49.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass13_V_8 (215)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:0  %cor_phaseClass13_V_8 = load i16* @cor_phaseClass13_V_8, align 16
-
-ST_1: StgValue_46 (216)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:1  store i16 %cor_phaseClass13_V_8, i16* @cor_phaseClass13_V_9, align 2
-
-ST_1: cor_phaseClass13_V_7 (217)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:2  %cor_phaseClass13_V_7 = load i16* @cor_phaseClass13_V_7, align 2
-
-ST_1: StgValue_48 (218)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:3  store i16 %cor_phaseClass13_V_7, i16* @cor_phaseClass13_V_8, align 16
-
-ST_1: cor_phaseClass13_V_6 (219)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:4  %cor_phaseClass13_V_6 = load i16* @cor_phaseClass13_V_6, align 4
-
-ST_1: StgValue_50 (220)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:5  store i16 %cor_phaseClass13_V_6, i16* @cor_phaseClass13_V_7, align 2
-
-ST_1: cor_phaseClass13_V_5 (221)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:6  %cor_phaseClass13_V_5 = load i16* @cor_phaseClass13_V_5, align 2
-
-ST_1: StgValue_52 (222)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:7  store i16 %cor_phaseClass13_V_5, i16* @cor_phaseClass13_V_6, align 4
-
-ST_1: cor_phaseClass13_V_4 (223)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:8  %cor_phaseClass13_V_4 = load i16* @cor_phaseClass13_V_4, align 8
-
-ST_1: StgValue_54 (224)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:9  store i16 %cor_phaseClass13_V_4, i16* @cor_phaseClass13_V_5, align 2
-
-ST_1: cor_phaseClass13_V_3 (225)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:10  %cor_phaseClass13_V_3 = load i16* @cor_phaseClass13_V_3, align 2
-
-ST_1: StgValue_56 (226)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:11  store i16 %cor_phaseClass13_V_3, i16* @cor_phaseClass13_V_4, align 8
-
-ST_1: cor_phaseClass13_V_2 (227)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:12  %cor_phaseClass13_V_2 = load i16* @cor_phaseClass13_V_2, align 4
-
-ST_1: StgValue_58 (228)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:13  store i16 %cor_phaseClass13_V_2, i16* @cor_phaseClass13_V_3, align 2
-
-ST_1: cor_phaseClass13_V_1 (229)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:14  %cor_phaseClass13_V_1 = load i16* @cor_phaseClass13_V_1, align 2
-
-ST_1: StgValue_60 (230)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:15  store i16 %cor_phaseClass13_V_1, i16* @cor_phaseClass13_V_2, align 4
-
-ST_1: cor_phaseClass13_V_0 (231)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:16  %cor_phaseClass13_V_0 = load i16* @cor_phaseClass13_V_0, align 16
-
-ST_1: StgValue_62 (232)  [1/1] 0.00ns  loc: correlator.cpp:181
-.preheader50.0:17  store i16 %cor_phaseClass13_V_0, i16* @cor_phaseClass13_V_1, align 2
-
-ST_1: StgValue_63 (233)  [1/1] 0.00ns  loc: correlator.cpp:183
-.preheader50.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass13_V_0, align 16
-
-ST_1: StgValue_64 (234)  [1/1] 0.00ns  loc: correlator.cpp:184
-.preheader50.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass12_V_8 (236)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:0  %cor_phaseClass12_V_8 = load i16* @cor_phaseClass12_V_8, align 16
-
-ST_1: StgValue_66 (237)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:1  store i16 %cor_phaseClass12_V_8, i16* @cor_phaseClass12_V_9, align 2
-
-ST_1: cor_phaseClass12_V_7 (238)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:2  %cor_phaseClass12_V_7 = load i16* @cor_phaseClass12_V_7, align 2
-
-ST_1: StgValue_68 (239)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:3  store i16 %cor_phaseClass12_V_7, i16* @cor_phaseClass12_V_8, align 16
-
-ST_1: cor_phaseClass12_V_6 (240)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:4  %cor_phaseClass12_V_6 = load i16* @cor_phaseClass12_V_6, align 4
-
-ST_1: StgValue_70 (241)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:5  store i16 %cor_phaseClass12_V_6, i16* @cor_phaseClass12_V_7, align 2
-
-ST_1: cor_phaseClass12_V_5 (242)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:6  %cor_phaseClass12_V_5 = load i16* @cor_phaseClass12_V_5, align 2
-
-ST_1: StgValue_72 (243)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:7  store i16 %cor_phaseClass12_V_5, i16* @cor_phaseClass12_V_6, align 4
-
-ST_1: cor_phaseClass12_V_4 (244)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:8  %cor_phaseClass12_V_4 = load i16* @cor_phaseClass12_V_4, align 8
-
-ST_1: StgValue_74 (245)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:9  store i16 %cor_phaseClass12_V_4, i16* @cor_phaseClass12_V_5, align 2
-
-ST_1: cor_phaseClass12_V_3 (246)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:10  %cor_phaseClass12_V_3 = load i16* @cor_phaseClass12_V_3, align 2
-
-ST_1: StgValue_76 (247)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:11  store i16 %cor_phaseClass12_V_3, i16* @cor_phaseClass12_V_4, align 8
-
-ST_1: cor_phaseClass12_V_2 (248)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:12  %cor_phaseClass12_V_2 = load i16* @cor_phaseClass12_V_2, align 4
-
-ST_1: StgValue_78 (249)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:13  store i16 %cor_phaseClass12_V_2, i16* @cor_phaseClass12_V_3, align 2
-
-ST_1: cor_phaseClass12_V_1 (250)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:14  %cor_phaseClass12_V_1 = load i16* @cor_phaseClass12_V_1, align 2
-
-ST_1: StgValue_80 (251)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:15  store i16 %cor_phaseClass12_V_1, i16* @cor_phaseClass12_V_2, align 4
-
-ST_1: cor_phaseClass12_V_0 (252)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:16  %cor_phaseClass12_V_0 = load i16* @cor_phaseClass12_V_0, align 16
-
-ST_1: StgValue_82 (253)  [1/1] 0.00ns  loc: correlator.cpp:174
-.preheader51.0:17  store i16 %cor_phaseClass12_V_0, i16* @cor_phaseClass12_V_1, align 2
-
-ST_1: StgValue_83 (254)  [1/1] 0.00ns  loc: correlator.cpp:176
-.preheader51.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass12_V_0, align 16
-
-ST_1: StgValue_84 (255)  [1/1] 0.00ns  loc: correlator.cpp:177
-.preheader51.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass11_V_8 (257)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:0  %cor_phaseClass11_V_8 = load i16* @cor_phaseClass11_V_8, align 16
-
-ST_1: StgValue_86 (258)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:1  store i16 %cor_phaseClass11_V_8, i16* @cor_phaseClass11_V_9, align 2
-
-ST_1: cor_phaseClass11_V_7 (259)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:2  %cor_phaseClass11_V_7 = load i16* @cor_phaseClass11_V_7, align 2
-
-ST_1: StgValue_88 (260)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:3  store i16 %cor_phaseClass11_V_7, i16* @cor_phaseClass11_V_8, align 16
-
-ST_1: cor_phaseClass11_V_6 (261)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:4  %cor_phaseClass11_V_6 = load i16* @cor_phaseClass11_V_6, align 4
-
-ST_1: StgValue_90 (262)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:5  store i16 %cor_phaseClass11_V_6, i16* @cor_phaseClass11_V_7, align 2
-
-ST_1: cor_phaseClass11_V_5 (263)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:6  %cor_phaseClass11_V_5 = load i16* @cor_phaseClass11_V_5, align 2
-
-ST_1: StgValue_92 (264)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:7  store i16 %cor_phaseClass11_V_5, i16* @cor_phaseClass11_V_6, align 4
-
-ST_1: cor_phaseClass11_V_4 (265)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:8  %cor_phaseClass11_V_4 = load i16* @cor_phaseClass11_V_4, align 8
-
-ST_1: StgValue_94 (266)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:9  store i16 %cor_phaseClass11_V_4, i16* @cor_phaseClass11_V_5, align 2
-
-ST_1: cor_phaseClass11_V_3 (267)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:10  %cor_phaseClass11_V_3 = load i16* @cor_phaseClass11_V_3, align 2
-
-ST_1: StgValue_96 (268)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:11  store i16 %cor_phaseClass11_V_3, i16* @cor_phaseClass11_V_4, align 8
-
-ST_1: cor_phaseClass11_V_2 (269)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:12  %cor_phaseClass11_V_2 = load i16* @cor_phaseClass11_V_2, align 4
-
-ST_1: StgValue_98 (270)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:13  store i16 %cor_phaseClass11_V_2, i16* @cor_phaseClass11_V_3, align 2
-
-ST_1: cor_phaseClass11_V_1 (271)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:14  %cor_phaseClass11_V_1 = load i16* @cor_phaseClass11_V_1, align 2
-
-ST_1: StgValue_100 (272)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:15  store i16 %cor_phaseClass11_V_1, i16* @cor_phaseClass11_V_2, align 4
-
-ST_1: cor_phaseClass11_V_0 (273)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:16  %cor_phaseClass11_V_0 = load i16* @cor_phaseClass11_V_0, align 16
-
-ST_1: StgValue_102 (274)  [1/1] 0.00ns  loc: correlator.cpp:167
-.preheader52.0:17  store i16 %cor_phaseClass11_V_0, i16* @cor_phaseClass11_V_1, align 2
-
-ST_1: StgValue_103 (275)  [1/1] 0.00ns  loc: correlator.cpp:169
-.preheader52.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass11_V_0, align 16
-
-ST_1: StgValue_104 (276)  [1/1] 0.00ns  loc: correlator.cpp:170
-.preheader52.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass10_V_8 (278)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:0  %cor_phaseClass10_V_8 = load i16* @cor_phaseClass10_V_8, align 16
-
-ST_1: StgValue_106 (279)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:1  store i16 %cor_phaseClass10_V_8, i16* @cor_phaseClass10_V_9, align 2
-
-ST_1: cor_phaseClass10_V_7 (280)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:2  %cor_phaseClass10_V_7 = load i16* @cor_phaseClass10_V_7, align 2
-
-ST_1: StgValue_108 (281)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:3  store i16 %cor_phaseClass10_V_7, i16* @cor_phaseClass10_V_8, align 16
-
-ST_1: cor_phaseClass10_V_6 (282)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:4  %cor_phaseClass10_V_6 = load i16* @cor_phaseClass10_V_6, align 4
-
-ST_1: StgValue_110 (283)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:5  store i16 %cor_phaseClass10_V_6, i16* @cor_phaseClass10_V_7, align 2
-
-ST_1: cor_phaseClass10_V_5 (284)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:6  %cor_phaseClass10_V_5 = load i16* @cor_phaseClass10_V_5, align 2
-
-ST_1: StgValue_112 (285)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:7  store i16 %cor_phaseClass10_V_5, i16* @cor_phaseClass10_V_6, align 4
-
-ST_1: cor_phaseClass10_V_4 (286)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:8  %cor_phaseClass10_V_4 = load i16* @cor_phaseClass10_V_4, align 8
-
-ST_1: StgValue_114 (287)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:9  store i16 %cor_phaseClass10_V_4, i16* @cor_phaseClass10_V_5, align 2
-
-ST_1: cor_phaseClass10_V_3 (288)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:10  %cor_phaseClass10_V_3 = load i16* @cor_phaseClass10_V_3, align 2
-
-ST_1: StgValue_116 (289)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:11  store i16 %cor_phaseClass10_V_3, i16* @cor_phaseClass10_V_4, align 8
-
-ST_1: cor_phaseClass10_V_2 (290)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:12  %cor_phaseClass10_V_2 = load i16* @cor_phaseClass10_V_2, align 4
-
-ST_1: StgValue_118 (291)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:13  store i16 %cor_phaseClass10_V_2, i16* @cor_phaseClass10_V_3, align 2
-
-ST_1: cor_phaseClass10_V_1 (292)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:14  %cor_phaseClass10_V_1 = load i16* @cor_phaseClass10_V_1, align 2
-
-ST_1: StgValue_120 (293)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:15  store i16 %cor_phaseClass10_V_1, i16* @cor_phaseClass10_V_2, align 4
-
-ST_1: cor_phaseClass10_V_0 (294)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:16  %cor_phaseClass10_V_0 = load i16* @cor_phaseClass10_V_0, align 16
-
-ST_1: StgValue_122 (295)  [1/1] 0.00ns  loc: correlator.cpp:160
-.preheader53.0:17  store i16 %cor_phaseClass10_V_0, i16* @cor_phaseClass10_V_1, align 2
-
-ST_1: StgValue_123 (296)  [1/1] 0.00ns  loc: correlator.cpp:162
-.preheader53.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass10_V_0, align 16
-
-ST_1: StgValue_124 (297)  [1/1] 0.00ns  loc: correlator.cpp:163
-.preheader53.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass9_V_8_s (299)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:0  %cor_phaseClass9_V_8_s = load i16* @cor_phaseClass9_V_8, align 16
-
-ST_1: StgValue_126 (300)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:1  store i16 %cor_phaseClass9_V_8_s, i16* @cor_phaseClass9_V_9, align 2
-
-ST_1: cor_phaseClass9_V_7_s (301)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:2  %cor_phaseClass9_V_7_s = load i16* @cor_phaseClass9_V_7, align 2
-
-ST_1: StgValue_128 (302)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:3  store i16 %cor_phaseClass9_V_7_s, i16* @cor_phaseClass9_V_8, align 16
-
-ST_1: cor_phaseClass9_V_6_s (303)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:4  %cor_phaseClass9_V_6_s = load i16* @cor_phaseClass9_V_6, align 4
-
-ST_1: StgValue_130 (304)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:5  store i16 %cor_phaseClass9_V_6_s, i16* @cor_phaseClass9_V_7, align 2
-
-ST_1: cor_phaseClass9_V_5_s (305)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:6  %cor_phaseClass9_V_5_s = load i16* @cor_phaseClass9_V_5, align 2
-
-ST_1: StgValue_132 (306)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:7  store i16 %cor_phaseClass9_V_5_s, i16* @cor_phaseClass9_V_6, align 4
-
-ST_1: cor_phaseClass9_V_4_s (307)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:8  %cor_phaseClass9_V_4_s = load i16* @cor_phaseClass9_V_4, align 8
-
-ST_1: StgValue_134 (308)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:9  store i16 %cor_phaseClass9_V_4_s, i16* @cor_phaseClass9_V_5, align 2
-
-ST_1: cor_phaseClass9_V_3_s (309)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:10  %cor_phaseClass9_V_3_s = load i16* @cor_phaseClass9_V_3, align 2
-
-ST_1: StgValue_136 (310)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:11  store i16 %cor_phaseClass9_V_3_s, i16* @cor_phaseClass9_V_4, align 8
-
-ST_1: cor_phaseClass9_V_2_s (311)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:12  %cor_phaseClass9_V_2_s = load i16* @cor_phaseClass9_V_2, align 4
-
-ST_1: StgValue_138 (312)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:13  store i16 %cor_phaseClass9_V_2_s, i16* @cor_phaseClass9_V_3, align 2
-
-ST_1: cor_phaseClass9_V_1_s (313)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:14  %cor_phaseClass9_V_1_s = load i16* @cor_phaseClass9_V_1, align 2
-
-ST_1: StgValue_140 (314)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:15  store i16 %cor_phaseClass9_V_1_s, i16* @cor_phaseClass9_V_2, align 4
-
-ST_1: cor_phaseClass9_V_0_s (315)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:16  %cor_phaseClass9_V_0_s = load i16* @cor_phaseClass9_V_0, align 16
-
-ST_1: StgValue_142 (316)  [1/1] 0.00ns  loc: correlator.cpp:153
-.preheader54.0:17  store i16 %cor_phaseClass9_V_0_s, i16* @cor_phaseClass9_V_1, align 2
-
-ST_1: StgValue_143 (317)  [1/1] 0.00ns  loc: correlator.cpp:155
-.preheader54.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass9_V_0, align 16
-
-ST_1: StgValue_144 (318)  [1/1] 0.00ns  loc: correlator.cpp:156
-.preheader54.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass8_V_8_s (320)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:0  %cor_phaseClass8_V_8_s = load i16* @cor_phaseClass8_V_8, align 16
-
-ST_1: StgValue_146 (321)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:1  store i16 %cor_phaseClass8_V_8_s, i16* @cor_phaseClass8_V_9, align 2
-
-ST_1: cor_phaseClass8_V_7_s (322)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:2  %cor_phaseClass8_V_7_s = load i16* @cor_phaseClass8_V_7, align 2
-
-ST_1: StgValue_148 (323)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:3  store i16 %cor_phaseClass8_V_7_s, i16* @cor_phaseClass8_V_8, align 16
-
-ST_1: cor_phaseClass8_V_6_s (324)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:4  %cor_phaseClass8_V_6_s = load i16* @cor_phaseClass8_V_6, align 4
-
-ST_1: StgValue_150 (325)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:5  store i16 %cor_phaseClass8_V_6_s, i16* @cor_phaseClass8_V_7, align 2
-
-ST_1: cor_phaseClass8_V_5_s (326)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:6  %cor_phaseClass8_V_5_s = load i16* @cor_phaseClass8_V_5, align 2
-
-ST_1: StgValue_152 (327)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:7  store i16 %cor_phaseClass8_V_5_s, i16* @cor_phaseClass8_V_6, align 4
-
-ST_1: cor_phaseClass8_V_4_s (328)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:8  %cor_phaseClass8_V_4_s = load i16* @cor_phaseClass8_V_4, align 8
-
-ST_1: StgValue_154 (329)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:9  store i16 %cor_phaseClass8_V_4_s, i16* @cor_phaseClass8_V_5, align 2
-
-ST_1: cor_phaseClass8_V_3_s (330)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:10  %cor_phaseClass8_V_3_s = load i16* @cor_phaseClass8_V_3, align 2
-
-ST_1: StgValue_156 (331)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:11  store i16 %cor_phaseClass8_V_3_s, i16* @cor_phaseClass8_V_4, align 8
-
-ST_1: cor_phaseClass8_V_2_s (332)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:12  %cor_phaseClass8_V_2_s = load i16* @cor_phaseClass8_V_2, align 4
-
-ST_1: StgValue_158 (333)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:13  store i16 %cor_phaseClass8_V_2_s, i16* @cor_phaseClass8_V_3, align 2
-
-ST_1: cor_phaseClass8_V_1_s (334)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:14  %cor_phaseClass8_V_1_s = load i16* @cor_phaseClass8_V_1, align 2
-
-ST_1: StgValue_160 (335)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:15  store i16 %cor_phaseClass8_V_1_s, i16* @cor_phaseClass8_V_2, align 4
-
-ST_1: cor_phaseClass8_V_0_s (336)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:16  %cor_phaseClass8_V_0_s = load i16* @cor_phaseClass8_V_0, align 16
-
-ST_1: StgValue_162 (337)  [1/1] 0.00ns  loc: correlator.cpp:146
-.preheader55.0:17  store i16 %cor_phaseClass8_V_0_s, i16* @cor_phaseClass8_V_1, align 2
-
-ST_1: StgValue_163 (338)  [1/1] 0.00ns  loc: correlator.cpp:148
-.preheader55.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass8_V_0, align 16
-
-ST_1: StgValue_164 (339)  [1/1] 0.00ns  loc: correlator.cpp:149
-.preheader55.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass7_V_8_s (341)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:0  %cor_phaseClass7_V_8_s = load i16* @cor_phaseClass7_V_8, align 16
-
-ST_1: StgValue_166 (342)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:1  store i16 %cor_phaseClass7_V_8_s, i16* @cor_phaseClass7_V_9, align 2
-
-ST_1: cor_phaseClass7_V_7_s (343)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:2  %cor_phaseClass7_V_7_s = load i16* @cor_phaseClass7_V_7, align 2
-
-ST_1: StgValue_168 (344)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:3  store i16 %cor_phaseClass7_V_7_s, i16* @cor_phaseClass7_V_8, align 16
-
-ST_1: cor_phaseClass7_V_6_s (345)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:4  %cor_phaseClass7_V_6_s = load i16* @cor_phaseClass7_V_6, align 4
-
-ST_1: StgValue_170 (346)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:5  store i16 %cor_phaseClass7_V_6_s, i16* @cor_phaseClass7_V_7, align 2
-
-ST_1: cor_phaseClass7_V_5_s (347)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:6  %cor_phaseClass7_V_5_s = load i16* @cor_phaseClass7_V_5, align 2
-
-ST_1: StgValue_172 (348)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:7  store i16 %cor_phaseClass7_V_5_s, i16* @cor_phaseClass7_V_6, align 4
-
-ST_1: cor_phaseClass7_V_4_s (349)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:8  %cor_phaseClass7_V_4_s = load i16* @cor_phaseClass7_V_4, align 8
-
-ST_1: StgValue_174 (350)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:9  store i16 %cor_phaseClass7_V_4_s, i16* @cor_phaseClass7_V_5, align 2
-
-ST_1: cor_phaseClass7_V_3_s (351)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:10  %cor_phaseClass7_V_3_s = load i16* @cor_phaseClass7_V_3, align 2
-
-ST_1: StgValue_176 (352)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:11  store i16 %cor_phaseClass7_V_3_s, i16* @cor_phaseClass7_V_4, align 8
-
-ST_1: cor_phaseClass7_V_2_s (353)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:12  %cor_phaseClass7_V_2_s = load i16* @cor_phaseClass7_V_2, align 4
-
-ST_1: StgValue_178 (354)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:13  store i16 %cor_phaseClass7_V_2_s, i16* @cor_phaseClass7_V_3, align 2
-
-ST_1: cor_phaseClass7_V_1_s (355)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:14  %cor_phaseClass7_V_1_s = load i16* @cor_phaseClass7_V_1, align 2
-
-ST_1: StgValue_180 (356)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:15  store i16 %cor_phaseClass7_V_1_s, i16* @cor_phaseClass7_V_2, align 4
-
-ST_1: cor_phaseClass7_V_0_s (357)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:16  %cor_phaseClass7_V_0_s = load i16* @cor_phaseClass7_V_0, align 16
-
-ST_1: StgValue_182 (358)  [1/1] 0.00ns  loc: correlator.cpp:139
-.preheader56.0:17  store i16 %cor_phaseClass7_V_0_s, i16* @cor_phaseClass7_V_1, align 2
-
-ST_1: StgValue_183 (359)  [1/1] 0.00ns  loc: correlator.cpp:141
-.preheader56.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass7_V_0, align 16
-
-ST_1: StgValue_184 (360)  [1/1] 0.00ns  loc: correlator.cpp:142
-.preheader56.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass6_V_8_s (362)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:0  %cor_phaseClass6_V_8_s = load i16* @cor_phaseClass6_V_8, align 16
-
-ST_1: StgValue_186 (363)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:1  store i16 %cor_phaseClass6_V_8_s, i16* @cor_phaseClass6_V_9, align 2
-
-ST_1: cor_phaseClass6_V_7_s (364)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:2  %cor_phaseClass6_V_7_s = load i16* @cor_phaseClass6_V_7, align 2
-
-ST_1: StgValue_188 (365)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:3  store i16 %cor_phaseClass6_V_7_s, i16* @cor_phaseClass6_V_8, align 16
-
-ST_1: cor_phaseClass6_V_6_s (366)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:4  %cor_phaseClass6_V_6_s = load i16* @cor_phaseClass6_V_6, align 4
-
-ST_1: StgValue_190 (367)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:5  store i16 %cor_phaseClass6_V_6_s, i16* @cor_phaseClass6_V_7, align 2
-
-ST_1: cor_phaseClass6_V_5_s (368)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:6  %cor_phaseClass6_V_5_s = load i16* @cor_phaseClass6_V_5, align 2
-
-ST_1: StgValue_192 (369)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:7  store i16 %cor_phaseClass6_V_5_s, i16* @cor_phaseClass6_V_6, align 4
-
-ST_1: cor_phaseClass6_V_4_s (370)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:8  %cor_phaseClass6_V_4_s = load i16* @cor_phaseClass6_V_4, align 8
-
-ST_1: StgValue_194 (371)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:9  store i16 %cor_phaseClass6_V_4_s, i16* @cor_phaseClass6_V_5, align 2
-
-ST_1: cor_phaseClass6_V_3_s (372)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:10  %cor_phaseClass6_V_3_s = load i16* @cor_phaseClass6_V_3, align 2
-
-ST_1: StgValue_196 (373)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:11  store i16 %cor_phaseClass6_V_3_s, i16* @cor_phaseClass6_V_4, align 8
-
-ST_1: cor_phaseClass6_V_2_s (374)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:12  %cor_phaseClass6_V_2_s = load i16* @cor_phaseClass6_V_2, align 4
-
-ST_1: StgValue_198 (375)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:13  store i16 %cor_phaseClass6_V_2_s, i16* @cor_phaseClass6_V_3, align 2
-
-ST_1: cor_phaseClass6_V_1_s (376)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:14  %cor_phaseClass6_V_1_s = load i16* @cor_phaseClass6_V_1, align 2
-
-ST_1: StgValue_200 (377)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:15  store i16 %cor_phaseClass6_V_1_s, i16* @cor_phaseClass6_V_2, align 4
-
-ST_1: cor_phaseClass6_V_0_s (378)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:16  %cor_phaseClass6_V_0_s = load i16* @cor_phaseClass6_V_0, align 16
-
-ST_1: StgValue_202 (379)  [1/1] 0.00ns  loc: correlator.cpp:132
-.preheader57.0:17  store i16 %cor_phaseClass6_V_0_s, i16* @cor_phaseClass6_V_1, align 2
-
-ST_1: StgValue_203 (380)  [1/1] 0.00ns  loc: correlator.cpp:134
-.preheader57.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass6_V_0, align 16
-
-ST_1: StgValue_204 (381)  [1/1] 0.00ns  loc: correlator.cpp:135
-.preheader57.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass5_V_8_s (383)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:0  %cor_phaseClass5_V_8_s = load i16* @cor_phaseClass5_V_8, align 16
-
-ST_1: StgValue_206 (384)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:1  store i16 %cor_phaseClass5_V_8_s, i16* @cor_phaseClass5_V_9, align 2
-
-ST_1: cor_phaseClass5_V_7_s (385)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:2  %cor_phaseClass5_V_7_s = load i16* @cor_phaseClass5_V_7, align 2
-
-ST_1: StgValue_208 (386)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:3  store i16 %cor_phaseClass5_V_7_s, i16* @cor_phaseClass5_V_8, align 16
-
-ST_1: cor_phaseClass5_V_6_s (387)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:4  %cor_phaseClass5_V_6_s = load i16* @cor_phaseClass5_V_6, align 4
-
-ST_1: StgValue_210 (388)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:5  store i16 %cor_phaseClass5_V_6_s, i16* @cor_phaseClass5_V_7, align 2
-
-ST_1: cor_phaseClass5_V_5_s (389)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:6  %cor_phaseClass5_V_5_s = load i16* @cor_phaseClass5_V_5, align 2
-
-ST_1: StgValue_212 (390)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:7  store i16 %cor_phaseClass5_V_5_s, i16* @cor_phaseClass5_V_6, align 4
-
-ST_1: cor_phaseClass5_V_4_s (391)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:8  %cor_phaseClass5_V_4_s = load i16* @cor_phaseClass5_V_4, align 8
-
-ST_1: StgValue_214 (392)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:9  store i16 %cor_phaseClass5_V_4_s, i16* @cor_phaseClass5_V_5, align 2
-
-ST_1: cor_phaseClass5_V_3_s (393)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:10  %cor_phaseClass5_V_3_s = load i16* @cor_phaseClass5_V_3, align 2
-
-ST_1: StgValue_216 (394)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:11  store i16 %cor_phaseClass5_V_3_s, i16* @cor_phaseClass5_V_4, align 8
-
-ST_1: cor_phaseClass5_V_2_s (395)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:12  %cor_phaseClass5_V_2_s = load i16* @cor_phaseClass5_V_2, align 4
-
-ST_1: StgValue_218 (396)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:13  store i16 %cor_phaseClass5_V_2_s, i16* @cor_phaseClass5_V_3, align 2
-
-ST_1: cor_phaseClass5_V_1_s (397)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:14  %cor_phaseClass5_V_1_s = load i16* @cor_phaseClass5_V_1, align 2
-
-ST_1: StgValue_220 (398)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:15  store i16 %cor_phaseClass5_V_1_s, i16* @cor_phaseClass5_V_2, align 4
-
-ST_1: cor_phaseClass5_V_0_s (399)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:16  %cor_phaseClass5_V_0_s = load i16* @cor_phaseClass5_V_0, align 16
-
-ST_1: StgValue_222 (400)  [1/1] 0.00ns  loc: correlator.cpp:125
-.preheader58.0:17  store i16 %cor_phaseClass5_V_0_s, i16* @cor_phaseClass5_V_1, align 2
-
-ST_1: StgValue_223 (401)  [1/1] 0.00ns  loc: correlator.cpp:127
-.preheader58.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass5_V_0, align 16
-
-ST_1: StgValue_224 (402)  [1/1] 0.00ns  loc: correlator.cpp:128
-.preheader58.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass4_V_8_s (404)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:0  %cor_phaseClass4_V_8_s = load i16* @cor_phaseClass4_V_8, align 16
-
-ST_1: StgValue_226 (405)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:1  store i16 %cor_phaseClass4_V_8_s, i16* @cor_phaseClass4_V_9, align 2
-
-ST_1: cor_phaseClass4_V_7_s (406)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:2  %cor_phaseClass4_V_7_s = load i16* @cor_phaseClass4_V_7, align 2
-
-ST_1: StgValue_228 (407)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:3  store i16 %cor_phaseClass4_V_7_s, i16* @cor_phaseClass4_V_8, align 16
-
-ST_1: cor_phaseClass4_V_6_s (408)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:4  %cor_phaseClass4_V_6_s = load i16* @cor_phaseClass4_V_6, align 4
-
-ST_1: StgValue_230 (409)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:5  store i16 %cor_phaseClass4_V_6_s, i16* @cor_phaseClass4_V_7, align 2
-
-ST_1: cor_phaseClass4_V_5_s (410)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:6  %cor_phaseClass4_V_5_s = load i16* @cor_phaseClass4_V_5, align 2
-
-ST_1: StgValue_232 (411)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:7  store i16 %cor_phaseClass4_V_5_s, i16* @cor_phaseClass4_V_6, align 4
-
-ST_1: cor_phaseClass4_V_4_s (412)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:8  %cor_phaseClass4_V_4_s = load i16* @cor_phaseClass4_V_4, align 8
-
-ST_1: StgValue_234 (413)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:9  store i16 %cor_phaseClass4_V_4_s, i16* @cor_phaseClass4_V_5, align 2
-
-ST_1: cor_phaseClass4_V_3_s (414)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:10  %cor_phaseClass4_V_3_s = load i16* @cor_phaseClass4_V_3, align 2
-
-ST_1: StgValue_236 (415)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:11  store i16 %cor_phaseClass4_V_3_s, i16* @cor_phaseClass4_V_4, align 8
-
-ST_1: cor_phaseClass4_V_2_s (416)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:12  %cor_phaseClass4_V_2_s = load i16* @cor_phaseClass4_V_2, align 4
-
-ST_1: StgValue_238 (417)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:13  store i16 %cor_phaseClass4_V_2_s, i16* @cor_phaseClass4_V_3, align 2
-
-ST_1: cor_phaseClass4_V_1_s (418)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:14  %cor_phaseClass4_V_1_s = load i16* @cor_phaseClass4_V_1, align 2
-
-ST_1: StgValue_240 (419)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:15  store i16 %cor_phaseClass4_V_1_s, i16* @cor_phaseClass4_V_2, align 4
-
-ST_1: cor_phaseClass4_V_0_s (420)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:16  %cor_phaseClass4_V_0_s = load i16* @cor_phaseClass4_V_0, align 16
-
-ST_1: StgValue_242 (421)  [1/1] 0.00ns  loc: correlator.cpp:118
-.preheader59.0:17  store i16 %cor_phaseClass4_V_0_s, i16* @cor_phaseClass4_V_1, align 2
-
-ST_1: StgValue_243 (422)  [1/1] 0.00ns  loc: correlator.cpp:120
-.preheader59.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass4_V_0, align 16
-
-ST_1: StgValue_244 (423)  [1/1] 0.00ns  loc: correlator.cpp:121
-.preheader59.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass3_V_8_s (425)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:0  %cor_phaseClass3_V_8_s = load i16* @cor_phaseClass3_V_8, align 16
-
-ST_1: StgValue_246 (426)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:1  store i16 %cor_phaseClass3_V_8_s, i16* @cor_phaseClass3_V_9, align 2
-
-ST_1: cor_phaseClass3_V_7_s (427)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:2  %cor_phaseClass3_V_7_s = load i16* @cor_phaseClass3_V_7, align 2
-
-ST_1: StgValue_248 (428)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:3  store i16 %cor_phaseClass3_V_7_s, i16* @cor_phaseClass3_V_8, align 16
-
-ST_1: cor_phaseClass3_V_6_s (429)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:4  %cor_phaseClass3_V_6_s = load i16* @cor_phaseClass3_V_6, align 4
-
-ST_1: StgValue_250 (430)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:5  store i16 %cor_phaseClass3_V_6_s, i16* @cor_phaseClass3_V_7, align 2
-
-ST_1: cor_phaseClass3_V_5_s (431)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:6  %cor_phaseClass3_V_5_s = load i16* @cor_phaseClass3_V_5, align 2
-
-ST_1: StgValue_252 (432)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:7  store i16 %cor_phaseClass3_V_5_s, i16* @cor_phaseClass3_V_6, align 4
-
-ST_1: cor_phaseClass3_V_4_s (433)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:8  %cor_phaseClass3_V_4_s = load i16* @cor_phaseClass3_V_4, align 8
-
-ST_1: StgValue_254 (434)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:9  store i16 %cor_phaseClass3_V_4_s, i16* @cor_phaseClass3_V_5, align 2
-
-ST_1: cor_phaseClass3_V_3_s (435)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:10  %cor_phaseClass3_V_3_s = load i16* @cor_phaseClass3_V_3, align 2
-
-ST_1: StgValue_256 (436)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:11  store i16 %cor_phaseClass3_V_3_s, i16* @cor_phaseClass3_V_4, align 8
-
-ST_1: cor_phaseClass3_V_2_s (437)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:12  %cor_phaseClass3_V_2_s = load i16* @cor_phaseClass3_V_2, align 4
-
-ST_1: StgValue_258 (438)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:13  store i16 %cor_phaseClass3_V_2_s, i16* @cor_phaseClass3_V_3, align 2
-
-ST_1: cor_phaseClass3_V_1_s (439)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:14  %cor_phaseClass3_V_1_s = load i16* @cor_phaseClass3_V_1, align 2
-
-ST_1: StgValue_260 (440)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:15  store i16 %cor_phaseClass3_V_1_s, i16* @cor_phaseClass3_V_2, align 4
-
-ST_1: cor_phaseClass3_V_0_s (441)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:16  %cor_phaseClass3_V_0_s = load i16* @cor_phaseClass3_V_0, align 16
-
-ST_1: StgValue_262 (442)  [1/1] 0.00ns  loc: correlator.cpp:111
-.preheader60.0:17  store i16 %cor_phaseClass3_V_0_s, i16* @cor_phaseClass3_V_1, align 2
-
-ST_1: StgValue_263 (443)  [1/1] 0.00ns  loc: correlator.cpp:113
-.preheader60.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass3_V_0, align 16
-
-ST_1: StgValue_264 (444)  [1/1] 0.00ns  loc: correlator.cpp:114
-.preheader60.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass2_V_8_s (446)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:0  %cor_phaseClass2_V_8_s = load i16* @cor_phaseClass2_V_8, align 16
-
-ST_1: StgValue_266 (447)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:1  store i16 %cor_phaseClass2_V_8_s, i16* @cor_phaseClass2_V_9, align 2
-
-ST_1: cor_phaseClass2_V_7_s (448)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:2  %cor_phaseClass2_V_7_s = load i16* @cor_phaseClass2_V_7, align 2
-
-ST_1: StgValue_268 (449)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:3  store i16 %cor_phaseClass2_V_7_s, i16* @cor_phaseClass2_V_8, align 16
-
-ST_1: cor_phaseClass2_V_6_s (450)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:4  %cor_phaseClass2_V_6_s = load i16* @cor_phaseClass2_V_6, align 4
-
-ST_1: StgValue_270 (451)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:5  store i16 %cor_phaseClass2_V_6_s, i16* @cor_phaseClass2_V_7, align 2
-
-ST_1: cor_phaseClass2_V_5_s (452)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:6  %cor_phaseClass2_V_5_s = load i16* @cor_phaseClass2_V_5, align 2
-
-ST_1: StgValue_272 (453)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:7  store i16 %cor_phaseClass2_V_5_s, i16* @cor_phaseClass2_V_6, align 4
-
-ST_1: cor_phaseClass2_V_4_s (454)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:8  %cor_phaseClass2_V_4_s = load i16* @cor_phaseClass2_V_4, align 8
-
-ST_1: StgValue_274 (455)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:9  store i16 %cor_phaseClass2_V_4_s, i16* @cor_phaseClass2_V_5, align 2
-
-ST_1: cor_phaseClass2_V_3_s (456)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:10  %cor_phaseClass2_V_3_s = load i16* @cor_phaseClass2_V_3, align 2
-
-ST_1: StgValue_276 (457)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:11  store i16 %cor_phaseClass2_V_3_s, i16* @cor_phaseClass2_V_4, align 8
-
-ST_1: cor_phaseClass2_V_2_s (458)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:12  %cor_phaseClass2_V_2_s = load i16* @cor_phaseClass2_V_2, align 4
-
-ST_1: StgValue_278 (459)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:13  store i16 %cor_phaseClass2_V_2_s, i16* @cor_phaseClass2_V_3, align 2
-
-ST_1: cor_phaseClass2_V_1_s (460)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:14  %cor_phaseClass2_V_1_s = load i16* @cor_phaseClass2_V_1, align 2
-
-ST_1: StgValue_280 (461)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:15  store i16 %cor_phaseClass2_V_1_s, i16* @cor_phaseClass2_V_2, align 4
-
-ST_1: cor_phaseClass2_V_0_s (462)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:16  %cor_phaseClass2_V_0_s = load i16* @cor_phaseClass2_V_0, align 16
-
-ST_1: StgValue_282 (463)  [1/1] 0.00ns  loc: correlator.cpp:104
-.preheader61.0:17  store i16 %cor_phaseClass2_V_0_s, i16* @cor_phaseClass2_V_1, align 2
-
-ST_1: StgValue_283 (464)  [1/1] 0.00ns  loc: correlator.cpp:106
-.preheader61.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass2_V_0, align 16
-
-ST_1: StgValue_284 (465)  [1/1] 0.00ns  loc: correlator.cpp:107
-.preheader61.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass1_V_8_s (467)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:0  %cor_phaseClass1_V_8_s = load i16* @cor_phaseClass1_V_8, align 16
-
-ST_1: StgValue_286 (468)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:1  store i16 %cor_phaseClass1_V_8_s, i16* @cor_phaseClass1_V_9, align 2
-
-ST_1: cor_phaseClass1_V_7_s (469)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:2  %cor_phaseClass1_V_7_s = load i16* @cor_phaseClass1_V_7, align 2
-
-ST_1: StgValue_288 (470)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:3  store i16 %cor_phaseClass1_V_7_s, i16* @cor_phaseClass1_V_8, align 16
-
-ST_1: cor_phaseClass1_V_6_s (471)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:4  %cor_phaseClass1_V_6_s = load i16* @cor_phaseClass1_V_6, align 4
-
-ST_1: StgValue_290 (472)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:5  store i16 %cor_phaseClass1_V_6_s, i16* @cor_phaseClass1_V_7, align 2
-
-ST_1: cor_phaseClass1_V_5_s (473)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:6  %cor_phaseClass1_V_5_s = load i16* @cor_phaseClass1_V_5, align 2
-
-ST_1: StgValue_292 (474)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:7  store i16 %cor_phaseClass1_V_5_s, i16* @cor_phaseClass1_V_6, align 4
-
-ST_1: cor_phaseClass1_V_4_s (475)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:8  %cor_phaseClass1_V_4_s = load i16* @cor_phaseClass1_V_4, align 8
-
-ST_1: StgValue_294 (476)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:9  store i16 %cor_phaseClass1_V_4_s, i16* @cor_phaseClass1_V_5, align 2
-
-ST_1: cor_phaseClass1_V_3_s (477)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:10  %cor_phaseClass1_V_3_s = load i16* @cor_phaseClass1_V_3, align 2
-
-ST_1: StgValue_296 (478)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:11  store i16 %cor_phaseClass1_V_3_s, i16* @cor_phaseClass1_V_4, align 8
-
-ST_1: cor_phaseClass1_V_2_s (479)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:12  %cor_phaseClass1_V_2_s = load i16* @cor_phaseClass1_V_2, align 4
-
-ST_1: StgValue_298 (480)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:13  store i16 %cor_phaseClass1_V_2_s, i16* @cor_phaseClass1_V_3, align 2
-
-ST_1: cor_phaseClass1_V_1_s (481)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:14  %cor_phaseClass1_V_1_s = load i16* @cor_phaseClass1_V_1, align 2
-
-ST_1: StgValue_300 (482)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:15  store i16 %cor_phaseClass1_V_1_s, i16* @cor_phaseClass1_V_2, align 4
-
-ST_1: cor_phaseClass1_V_0_s (483)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:16  %cor_phaseClass1_V_0_s = load i16* @cor_phaseClass1_V_0, align 16
-
-ST_1: StgValue_302 (484)  [1/1] 0.00ns  loc: correlator.cpp:97
-.preheader62.0:17  store i16 %cor_phaseClass1_V_0_s, i16* @cor_phaseClass1_V_1, align 2
-
-ST_1: StgValue_303 (485)  [1/1] 0.00ns  loc: correlator.cpp:99
-.preheader62.0:18  store i16 %newValue_V_read, i16* @cor_phaseClass1_V_0, align 16
-
-ST_1: StgValue_304 (486)  [1/1] 0.00ns  loc: correlator.cpp:100
-.preheader62.0:19  br label %._crit_edge
-
-ST_1: cor_phaseClass0_V_14 (488)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:0  %cor_phaseClass0_V_14 = load i16* @cor_phaseClass0_V_14, align 4
-
-ST_1: StgValue_306 (489)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:1  store i16 %cor_phaseClass0_V_14, i16* @cor_phaseClass0_V_15, align 2
-
-ST_1: cor_phaseClass0_V_13 (490)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:2  %cor_phaseClass0_V_13 = load i16* @cor_phaseClass0_V_13, align 2
-
-ST_1: StgValue_308 (491)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:3  store i16 %cor_phaseClass0_V_13, i16* @cor_phaseClass0_V_14, align 4
-
-ST_1: cor_phaseClass0_V_12 (492)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:4  %cor_phaseClass0_V_12 = load i16* @cor_phaseClass0_V_12, align 8
-
-ST_1: StgValue_310 (493)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:5  store i16 %cor_phaseClass0_V_12, i16* @cor_phaseClass0_V_13, align 2
-
-ST_1: cor_phaseClass0_V_11 (494)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:6  %cor_phaseClass0_V_11 = load i16* @cor_phaseClass0_V_11, align 2
-
-ST_1: StgValue_312 (495)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:7  store i16 %cor_phaseClass0_V_11, i16* @cor_phaseClass0_V_12, align 8
-
-ST_1: cor_phaseClass0_V_10 (496)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:8  %cor_phaseClass0_V_10 = load i16* @cor_phaseClass0_V_10, align 4
-
-ST_1: StgValue_314 (497)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:9  store i16 %cor_phaseClass0_V_10, i16* @cor_phaseClass0_V_11, align 2
-
-ST_1: cor_phaseClass0_V_9_s (498)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:10  %cor_phaseClass0_V_9_s = load i16* @cor_phaseClass0_V_9, align 2
-
-ST_1: StgValue_316 (499)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:11  store i16 %cor_phaseClass0_V_9_s, i16* @cor_phaseClass0_V_10, align 4
-
-ST_1: cor_phaseClass0_V_8_s (500)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:12  %cor_phaseClass0_V_8_s = load i16* @cor_phaseClass0_V_8, align 16
-
-ST_1: StgValue_318 (501)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:13  store i16 %cor_phaseClass0_V_8_s, i16* @cor_phaseClass0_V_9, align 2
-
-ST_1: cor_phaseClass0_V_7_s (502)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:14  %cor_phaseClass0_V_7_s = load i16* @cor_phaseClass0_V_7, align 2
-
-ST_1: StgValue_320 (503)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:15  store i16 %cor_phaseClass0_V_7_s, i16* @cor_phaseClass0_V_8, align 16
-
-ST_1: cor_phaseClass0_V_6_s (504)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:16  %cor_phaseClass0_V_6_s = load i16* @cor_phaseClass0_V_6, align 4
-
-ST_1: StgValue_322 (505)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:17  store i16 %cor_phaseClass0_V_6_s, i16* @cor_phaseClass0_V_7, align 2
-
-ST_1: cor_phaseClass0_V_5_s (506)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:18  %cor_phaseClass0_V_5_s = load i16* @cor_phaseClass0_V_5, align 2
-
-ST_1: StgValue_324 (507)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:19  store i16 %cor_phaseClass0_V_5_s, i16* @cor_phaseClass0_V_6, align 4
-
-ST_1: cor_phaseClass0_V_4_s (508)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:20  %cor_phaseClass0_V_4_s = load i16* @cor_phaseClass0_V_4, align 8
-
-ST_1: StgValue_326 (509)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:21  store i16 %cor_phaseClass0_V_4_s, i16* @cor_phaseClass0_V_5, align 2
-
-ST_1: cor_phaseClass0_V_3_s (510)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:22  %cor_phaseClass0_V_3_s = load i16* @cor_phaseClass0_V_3, align 2
-
-ST_1: StgValue_328 (511)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:23  store i16 %cor_phaseClass0_V_3_s, i16* @cor_phaseClass0_V_4, align 8
-
-ST_1: cor_phaseClass0_V_2_s (512)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:24  %cor_phaseClass0_V_2_s = load i16* @cor_phaseClass0_V_2, align 4
-
-ST_1: StgValue_330 (513)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:25  store i16 %cor_phaseClass0_V_2_s, i16* @cor_phaseClass0_V_3, align 2
-
-ST_1: cor_phaseClass0_V_1_s (514)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:26  %cor_phaseClass0_V_1_s = load i16* @cor_phaseClass0_V_1, align 2
-
-ST_1: StgValue_332 (515)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:27  store i16 %cor_phaseClass0_V_1_s, i16* @cor_phaseClass0_V_2, align 4
-
-ST_1: cor_phaseClass0_V_0_s (516)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:28  %cor_phaseClass0_V_0_s = load i16* @cor_phaseClass0_V_0, align 16
-
-ST_1: StgValue_334 (517)  [1/1] 0.00ns  loc: correlator.cpp:88
-.preheader63.0:29  store i16 %cor_phaseClass0_V_0_s, i16* @cor_phaseClass0_V_1, align 2
-
-ST_1: StgValue_335 (518)  [1/1] 0.00ns  loc: correlator.cpp:90
-.preheader63.0:30  store i16 %newValue_V_read, i16* @cor_phaseClass0_V_0, align 16
-
-ST_1: StgValue_336 (519)  [1/1] 0.00ns  loc: correlator.cpp:91
-.preheader63.0:31  br label %._crit_edge
-
-ST_1: StgValue_337 (521)  [1/1] 0.00ns  loc: correlator.cpp:201
-._crit_edge:0  ret void
-
+  ]" [correlator.cpp:101]
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1 = load i16* @cor_phaseClass15_V_14, align 4" [correlator.cpp:211]
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1, i16* @cor_phaseClass15_V_15, align 2" [correlator.cpp:211]
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1_1 = load i16* @cor_phaseClass15_V_13, align 2" [correlator.cpp:211]
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1_1, i16* @cor_phaseClass15_V_14, align 4" [correlator.cpp:211]
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1_2 = load i16* @cor_phaseClass15_V_12, align 8" [correlator.cpp:211]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1_2, i16* @cor_phaseClass15_V_13, align 2" [correlator.cpp:211]
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1_3 = load i16* @cor_phaseClass15_V_11, align 2" [correlator.cpp:211]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1_3, i16* @cor_phaseClass15_V_12, align 8" [correlator.cpp:211]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1_4 = load i16* @cor_phaseClass15_V_10, align 4" [correlator.cpp:211]
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1_4, i16* @cor_phaseClass15_V_11, align 2" [correlator.cpp:211]
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_9 = load i16* @cor_phaseClass15_V_9, align 2" [correlator.cpp:211]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_9, i16* @cor_phaseClass15_V_10, align 4" [correlator.cpp:211]
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_8 = load i16* @cor_phaseClass15_V_8, align 16" [correlator.cpp:211]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_8, i16* @cor_phaseClass15_V_9, align 2" [correlator.cpp:211]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_7 = load i16* @cor_phaseClass15_V_7, align 2" [correlator.cpp:211]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_7, i16* @cor_phaseClass15_V_8, align 16" [correlator.cpp:211]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_6 = load i16* @cor_phaseClass15_V_6, align 4" [correlator.cpp:211]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_6, i16* @cor_phaseClass15_V_7, align 2" [correlator.cpp:211]
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_5 = load i16* @cor_phaseClass15_V_5, align 2" [correlator.cpp:211]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_5, i16* @cor_phaseClass15_V_6, align 4" [correlator.cpp:211]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_4 = load i16* @cor_phaseClass15_V_4, align 8" [correlator.cpp:211]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_4, i16* @cor_phaseClass15_V_5, align 2" [correlator.cpp:211]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_3 = load i16* @cor_phaseClass15_V_3, align 2" [correlator.cpp:211]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_3, i16* @cor_phaseClass15_V_4, align 8" [correlator.cpp:211]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_2 = load i16* @cor_phaseClass15_V_2, align 4" [correlator.cpp:211]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_2, i16* @cor_phaseClass15_V_3, align 2" [correlator.cpp:211]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_1_5 = load i16* @cor_phaseClass15_V_1, align 2" [correlator.cpp:211]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_1_5, i16* @cor_phaseClass15_V_2, align 4" [correlator.cpp:211]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%cor_phaseClass15_V_0 = load i16* @cor_phaseClass15_V_0, align 16" [correlator.cpp:211]
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass15_V_0, i16* @cor_phaseClass15_V_1, align 2" [correlator.cpp:211]
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass15_V_0, align 16" [correlator.cpp:213]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:214]
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1 = load i16* @cor_phaseClass14_V_14, align 4" [correlator.cpp:204]
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1, i16* @cor_phaseClass14_V_15, align 2" [correlator.cpp:204]
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1_1 = load i16* @cor_phaseClass14_V_13, align 2" [correlator.cpp:204]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1_1, i16* @cor_phaseClass14_V_14, align 4" [correlator.cpp:204]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1_2 = load i16* @cor_phaseClass14_V_12, align 8" [correlator.cpp:204]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1_2, i16* @cor_phaseClass14_V_13, align 2" [correlator.cpp:204]
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1_3 = load i16* @cor_phaseClass14_V_11, align 2" [correlator.cpp:204]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1_3, i16* @cor_phaseClass14_V_12, align 8" [correlator.cpp:204]
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1_4 = load i16* @cor_phaseClass14_V_10, align 4" [correlator.cpp:204]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1_4, i16* @cor_phaseClass14_V_11, align 2" [correlator.cpp:204]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_9 = load i16* @cor_phaseClass14_V_9, align 2" [correlator.cpp:204]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_9, i16* @cor_phaseClass14_V_10, align 4" [correlator.cpp:204]
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_8 = load i16* @cor_phaseClass14_V_8, align 16" [correlator.cpp:204]
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_8, i16* @cor_phaseClass14_V_9, align 2" [correlator.cpp:204]
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_7 = load i16* @cor_phaseClass14_V_7, align 2" [correlator.cpp:204]
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_7, i16* @cor_phaseClass14_V_8, align 16" [correlator.cpp:204]
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_6 = load i16* @cor_phaseClass14_V_6, align 4" [correlator.cpp:204]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_6, i16* @cor_phaseClass14_V_7, align 2" [correlator.cpp:204]
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_5 = load i16* @cor_phaseClass14_V_5, align 2" [correlator.cpp:204]
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_5, i16* @cor_phaseClass14_V_6, align 4" [correlator.cpp:204]
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_4 = load i16* @cor_phaseClass14_V_4, align 8" [correlator.cpp:204]
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_4, i16* @cor_phaseClass14_V_5, align 2" [correlator.cpp:204]
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_3 = load i16* @cor_phaseClass14_V_3, align 2" [correlator.cpp:204]
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_3, i16* @cor_phaseClass14_V_4, align 8" [correlator.cpp:204]
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_2 = load i16* @cor_phaseClass14_V_2, align 4" [correlator.cpp:204]
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_2, i16* @cor_phaseClass14_V_3, align 2" [correlator.cpp:204]
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_1_5 = load i16* @cor_phaseClass14_V_1, align 2" [correlator.cpp:204]
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_1_5, i16* @cor_phaseClass14_V_2, align 4" [correlator.cpp:204]
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%cor_phaseClass14_V_0 = load i16* @cor_phaseClass14_V_0, align 16" [correlator.cpp:204]
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass14_V_0, i16* @cor_phaseClass14_V_1, align 2" [correlator.cpp:204]
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass14_V_0, align 16" [correlator.cpp:206]
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:207]
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1 = load i16* @cor_phaseClass13_V_14, align 4" [correlator.cpp:197]
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1, i16* @cor_phaseClass13_V_15, align 2" [correlator.cpp:197]
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1_1 = load i16* @cor_phaseClass13_V_13, align 2" [correlator.cpp:197]
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1_1, i16* @cor_phaseClass13_V_14, align 4" [correlator.cpp:197]
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1_2 = load i16* @cor_phaseClass13_V_12, align 8" [correlator.cpp:197]
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1_2, i16* @cor_phaseClass13_V_13, align 2" [correlator.cpp:197]
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1_3 = load i16* @cor_phaseClass13_V_11, align 2" [correlator.cpp:197]
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1_3, i16* @cor_phaseClass13_V_12, align 8" [correlator.cpp:197]
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1_4 = load i16* @cor_phaseClass13_V_10, align 4" [correlator.cpp:197]
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1_4, i16* @cor_phaseClass13_V_11, align 2" [correlator.cpp:197]
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_9 = load i16* @cor_phaseClass13_V_9, align 2" [correlator.cpp:197]
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_9, i16* @cor_phaseClass13_V_10, align 4" [correlator.cpp:197]
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_8 = load i16* @cor_phaseClass13_V_8, align 16" [correlator.cpp:197]
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_8, i16* @cor_phaseClass13_V_9, align 2" [correlator.cpp:197]
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_7 = load i16* @cor_phaseClass13_V_7, align 2" [correlator.cpp:197]
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_7, i16* @cor_phaseClass13_V_8, align 16" [correlator.cpp:197]
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_6 = load i16* @cor_phaseClass13_V_6, align 4" [correlator.cpp:197]
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_6, i16* @cor_phaseClass13_V_7, align 2" [correlator.cpp:197]
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_5 = load i16* @cor_phaseClass13_V_5, align 2" [correlator.cpp:197]
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_5, i16* @cor_phaseClass13_V_6, align 4" [correlator.cpp:197]
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_4 = load i16* @cor_phaseClass13_V_4, align 8" [correlator.cpp:197]
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_4, i16* @cor_phaseClass13_V_5, align 2" [correlator.cpp:197]
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_3 = load i16* @cor_phaseClass13_V_3, align 2" [correlator.cpp:197]
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_3, i16* @cor_phaseClass13_V_4, align 8" [correlator.cpp:197]
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_2 = load i16* @cor_phaseClass13_V_2, align 4" [correlator.cpp:197]
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_2, i16* @cor_phaseClass13_V_3, align 2" [correlator.cpp:197]
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_1_5 = load i16* @cor_phaseClass13_V_1, align 2" [correlator.cpp:197]
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_1_5, i16* @cor_phaseClass13_V_2, align 4" [correlator.cpp:197]
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%cor_phaseClass13_V_0 = load i16* @cor_phaseClass13_V_0, align 16" [correlator.cpp:197]
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass13_V_0, i16* @cor_phaseClass13_V_1, align 2" [correlator.cpp:197]
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass13_V_0, align 16" [correlator.cpp:199]
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:200]
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1 = load i16* @cor_phaseClass12_V_14, align 4" [correlator.cpp:190]
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1, i16* @cor_phaseClass12_V_15, align 2" [correlator.cpp:190]
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1_1 = load i16* @cor_phaseClass12_V_13, align 2" [correlator.cpp:190]
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1_1, i16* @cor_phaseClass12_V_14, align 4" [correlator.cpp:190]
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1_2 = load i16* @cor_phaseClass12_V_12, align 8" [correlator.cpp:190]
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1_2, i16* @cor_phaseClass12_V_13, align 2" [correlator.cpp:190]
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1_3 = load i16* @cor_phaseClass12_V_11, align 2" [correlator.cpp:190]
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1_3, i16* @cor_phaseClass12_V_12, align 8" [correlator.cpp:190]
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1_4 = load i16* @cor_phaseClass12_V_10, align 4" [correlator.cpp:190]
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1_4, i16* @cor_phaseClass12_V_11, align 2" [correlator.cpp:190]
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_9 = load i16* @cor_phaseClass12_V_9, align 2" [correlator.cpp:190]
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_9, i16* @cor_phaseClass12_V_10, align 4" [correlator.cpp:190]
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_8 = load i16* @cor_phaseClass12_V_8, align 16" [correlator.cpp:190]
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_8, i16* @cor_phaseClass12_V_9, align 2" [correlator.cpp:190]
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_7 = load i16* @cor_phaseClass12_V_7, align 2" [correlator.cpp:190]
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_7, i16* @cor_phaseClass12_V_8, align 16" [correlator.cpp:190]
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_6 = load i16* @cor_phaseClass12_V_6, align 4" [correlator.cpp:190]
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_6, i16* @cor_phaseClass12_V_7, align 2" [correlator.cpp:190]
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_5 = load i16* @cor_phaseClass12_V_5, align 2" [correlator.cpp:190]
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_5, i16* @cor_phaseClass12_V_6, align 4" [correlator.cpp:190]
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_4 = load i16* @cor_phaseClass12_V_4, align 8" [correlator.cpp:190]
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_4, i16* @cor_phaseClass12_V_5, align 2" [correlator.cpp:190]
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_3 = load i16* @cor_phaseClass12_V_3, align 2" [correlator.cpp:190]
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_3, i16* @cor_phaseClass12_V_4, align 8" [correlator.cpp:190]
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_2 = load i16* @cor_phaseClass12_V_2, align 4" [correlator.cpp:190]
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_2, i16* @cor_phaseClass12_V_3, align 2" [correlator.cpp:190]
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_1_5 = load i16* @cor_phaseClass12_V_1, align 2" [correlator.cpp:190]
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_1_5, i16* @cor_phaseClass12_V_2, align 4" [correlator.cpp:190]
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%cor_phaseClass12_V_0 = load i16* @cor_phaseClass12_V_0, align 16" [correlator.cpp:190]
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass12_V_0, i16* @cor_phaseClass12_V_1, align 2" [correlator.cpp:190]
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass12_V_0, align 16" [correlator.cpp:192]
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:193]
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1 = load i16* @cor_phaseClass11_V_14, align 4" [correlator.cpp:183]
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1, i16* @cor_phaseClass11_V_15, align 2" [correlator.cpp:183]
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1_1 = load i16* @cor_phaseClass11_V_13, align 2" [correlator.cpp:183]
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1_1, i16* @cor_phaseClass11_V_14, align 4" [correlator.cpp:183]
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1_2 = load i16* @cor_phaseClass11_V_12, align 8" [correlator.cpp:183]
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1_2, i16* @cor_phaseClass11_V_13, align 2" [correlator.cpp:183]
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1_3 = load i16* @cor_phaseClass11_V_11, align 2" [correlator.cpp:183]
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1_3, i16* @cor_phaseClass11_V_12, align 8" [correlator.cpp:183]
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1_4 = load i16* @cor_phaseClass11_V_10, align 4" [correlator.cpp:183]
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1_4, i16* @cor_phaseClass11_V_11, align 2" [correlator.cpp:183]
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_9 = load i16* @cor_phaseClass11_V_9, align 2" [correlator.cpp:183]
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_9, i16* @cor_phaseClass11_V_10, align 4" [correlator.cpp:183]
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_8 = load i16* @cor_phaseClass11_V_8, align 16" [correlator.cpp:183]
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_8, i16* @cor_phaseClass11_V_9, align 2" [correlator.cpp:183]
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_7 = load i16* @cor_phaseClass11_V_7, align 2" [correlator.cpp:183]
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_7, i16* @cor_phaseClass11_V_8, align 16" [correlator.cpp:183]
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_6 = load i16* @cor_phaseClass11_V_6, align 4" [correlator.cpp:183]
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_6, i16* @cor_phaseClass11_V_7, align 2" [correlator.cpp:183]
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_5 = load i16* @cor_phaseClass11_V_5, align 2" [correlator.cpp:183]
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_5, i16* @cor_phaseClass11_V_6, align 4" [correlator.cpp:183]
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_4 = load i16* @cor_phaseClass11_V_4, align 8" [correlator.cpp:183]
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_4, i16* @cor_phaseClass11_V_5, align 2" [correlator.cpp:183]
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_3 = load i16* @cor_phaseClass11_V_3, align 2" [correlator.cpp:183]
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_3, i16* @cor_phaseClass11_V_4, align 8" [correlator.cpp:183]
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_2 = load i16* @cor_phaseClass11_V_2, align 4" [correlator.cpp:183]
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_2, i16* @cor_phaseClass11_V_3, align 2" [correlator.cpp:183]
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_1_5 = load i16* @cor_phaseClass11_V_1, align 2" [correlator.cpp:183]
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_1_5, i16* @cor_phaseClass11_V_2, align 4" [correlator.cpp:183]
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%cor_phaseClass11_V_0 = load i16* @cor_phaseClass11_V_0, align 16" [correlator.cpp:183]
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass11_V_0, i16* @cor_phaseClass11_V_1, align 2" [correlator.cpp:183]
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass11_V_0, align 16" [correlator.cpp:185]
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:186]
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1 = load i16* @cor_phaseClass10_V_14, align 4" [correlator.cpp:176]
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1, i16* @cor_phaseClass10_V_15, align 2" [correlator.cpp:176]
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1_1 = load i16* @cor_phaseClass10_V_13, align 2" [correlator.cpp:176]
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1_1, i16* @cor_phaseClass10_V_14, align 4" [correlator.cpp:176]
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1_2 = load i16* @cor_phaseClass10_V_12, align 8" [correlator.cpp:176]
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1_2, i16* @cor_phaseClass10_V_13, align 2" [correlator.cpp:176]
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1_3 = load i16* @cor_phaseClass10_V_11, align 2" [correlator.cpp:176]
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1_3, i16* @cor_phaseClass10_V_12, align 8" [correlator.cpp:176]
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1_4 = load i16* @cor_phaseClass10_V_10, align 4" [correlator.cpp:176]
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1_4, i16* @cor_phaseClass10_V_11, align 2" [correlator.cpp:176]
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_9 = load i16* @cor_phaseClass10_V_9, align 2" [correlator.cpp:176]
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_9, i16* @cor_phaseClass10_V_10, align 4" [correlator.cpp:176]
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_8 = load i16* @cor_phaseClass10_V_8, align 16" [correlator.cpp:176]
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_8, i16* @cor_phaseClass10_V_9, align 2" [correlator.cpp:176]
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_7 = load i16* @cor_phaseClass10_V_7, align 2" [correlator.cpp:176]
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_7, i16* @cor_phaseClass10_V_8, align 16" [correlator.cpp:176]
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_6 = load i16* @cor_phaseClass10_V_6, align 4" [correlator.cpp:176]
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_6, i16* @cor_phaseClass10_V_7, align 2" [correlator.cpp:176]
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_5 = load i16* @cor_phaseClass10_V_5, align 2" [correlator.cpp:176]
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_5, i16* @cor_phaseClass10_V_6, align 4" [correlator.cpp:176]
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_4 = load i16* @cor_phaseClass10_V_4, align 8" [correlator.cpp:176]
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_4, i16* @cor_phaseClass10_V_5, align 2" [correlator.cpp:176]
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_3 = load i16* @cor_phaseClass10_V_3, align 2" [correlator.cpp:176]
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_3, i16* @cor_phaseClass10_V_4, align 8" [correlator.cpp:176]
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_2 = load i16* @cor_phaseClass10_V_2, align 4" [correlator.cpp:176]
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_2, i16* @cor_phaseClass10_V_3, align 2" [correlator.cpp:176]
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_1_5 = load i16* @cor_phaseClass10_V_1, align 2" [correlator.cpp:176]
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_1_5, i16* @cor_phaseClass10_V_2, align 4" [correlator.cpp:176]
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%cor_phaseClass10_V_0 = load i16* @cor_phaseClass10_V_0, align 16" [correlator.cpp:176]
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass10_V_0, i16* @cor_phaseClass10_V_1, align 2" [correlator.cpp:176]
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass10_V_0, align 16" [correlator.cpp:178]
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:179]
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_14 = load i16* @cor_phaseClass9_V_14, align 4" [correlator.cpp:169]
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_14, i16* @cor_phaseClass9_V_15, align 2" [correlator.cpp:169]
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_13 = load i16* @cor_phaseClass9_V_13, align 2" [correlator.cpp:169]
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_13, i16* @cor_phaseClass9_V_14, align 4" [correlator.cpp:169]
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_12 = load i16* @cor_phaseClass9_V_12, align 8" [correlator.cpp:169]
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_12, i16* @cor_phaseClass9_V_13, align 2" [correlator.cpp:169]
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_11 = load i16* @cor_phaseClass9_V_11, align 2" [correlator.cpp:169]
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_11, i16* @cor_phaseClass9_V_12, align 8" [correlator.cpp:169]
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_10 = load i16* @cor_phaseClass9_V_10, align 4" [correlator.cpp:169]
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_10, i16* @cor_phaseClass9_V_11, align 2" [correlator.cpp:169]
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_9_s = load i16* @cor_phaseClass9_V_9, align 2" [correlator.cpp:169]
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_9_s, i16* @cor_phaseClass9_V_10, align 4" [correlator.cpp:169]
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_8_s = load i16* @cor_phaseClass9_V_8, align 16" [correlator.cpp:169]
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_8_s, i16* @cor_phaseClass9_V_9, align 2" [correlator.cpp:169]
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_7_s = load i16* @cor_phaseClass9_V_7, align 2" [correlator.cpp:169]
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_7_s, i16* @cor_phaseClass9_V_8, align 16" [correlator.cpp:169]
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_6_s = load i16* @cor_phaseClass9_V_6, align 4" [correlator.cpp:169]
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_6_s, i16* @cor_phaseClass9_V_7, align 2" [correlator.cpp:169]
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_5_s = load i16* @cor_phaseClass9_V_5, align 2" [correlator.cpp:169]
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_5_s, i16* @cor_phaseClass9_V_6, align 4" [correlator.cpp:169]
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_4_s = load i16* @cor_phaseClass9_V_4, align 8" [correlator.cpp:169]
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_4_s, i16* @cor_phaseClass9_V_5, align 2" [correlator.cpp:169]
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_3_s = load i16* @cor_phaseClass9_V_3, align 2" [correlator.cpp:169]
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_3_s, i16* @cor_phaseClass9_V_4, align 8" [correlator.cpp:169]
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_2_s = load i16* @cor_phaseClass9_V_2, align 4" [correlator.cpp:169]
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_2_s, i16* @cor_phaseClass9_V_3, align 2" [correlator.cpp:169]
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_1_s = load i16* @cor_phaseClass9_V_1, align 2" [correlator.cpp:169]
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_1_s, i16* @cor_phaseClass9_V_2, align 4" [correlator.cpp:169]
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%cor_phaseClass9_V_0_s = load i16* @cor_phaseClass9_V_0, align 16" [correlator.cpp:169]
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass9_V_0_s, i16* @cor_phaseClass9_V_1, align 2" [correlator.cpp:169]
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass9_V_0, align 16" [correlator.cpp:171]
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:172]
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_14 = load i16* @cor_phaseClass8_V_14, align 4" [correlator.cpp:162]
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_14, i16* @cor_phaseClass8_V_15, align 2" [correlator.cpp:162]
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_13 = load i16* @cor_phaseClass8_V_13, align 2" [correlator.cpp:162]
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_13, i16* @cor_phaseClass8_V_14, align 4" [correlator.cpp:162]
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_12 = load i16* @cor_phaseClass8_V_12, align 8" [correlator.cpp:162]
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_12, i16* @cor_phaseClass8_V_13, align 2" [correlator.cpp:162]
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_11 = load i16* @cor_phaseClass8_V_11, align 2" [correlator.cpp:162]
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_11, i16* @cor_phaseClass8_V_12, align 8" [correlator.cpp:162]
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_10 = load i16* @cor_phaseClass8_V_10, align 4" [correlator.cpp:162]
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_10, i16* @cor_phaseClass8_V_11, align 2" [correlator.cpp:162]
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_9_s = load i16* @cor_phaseClass8_V_9, align 2" [correlator.cpp:162]
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_9_s, i16* @cor_phaseClass8_V_10, align 4" [correlator.cpp:162]
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_8_s = load i16* @cor_phaseClass8_V_8, align 16" [correlator.cpp:162]
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_8_s, i16* @cor_phaseClass8_V_9, align 2" [correlator.cpp:162]
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_7_s = load i16* @cor_phaseClass8_V_7, align 2" [correlator.cpp:162]
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_7_s, i16* @cor_phaseClass8_V_8, align 16" [correlator.cpp:162]
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_6_s = load i16* @cor_phaseClass8_V_6, align 4" [correlator.cpp:162]
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_6_s, i16* @cor_phaseClass8_V_7, align 2" [correlator.cpp:162]
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_5_s = load i16* @cor_phaseClass8_V_5, align 2" [correlator.cpp:162]
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_5_s, i16* @cor_phaseClass8_V_6, align 4" [correlator.cpp:162]
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_4_s = load i16* @cor_phaseClass8_V_4, align 8" [correlator.cpp:162]
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_4_s, i16* @cor_phaseClass8_V_5, align 2" [correlator.cpp:162]
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_3_s = load i16* @cor_phaseClass8_V_3, align 2" [correlator.cpp:162]
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_3_s, i16* @cor_phaseClass8_V_4, align 8" [correlator.cpp:162]
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_2_s = load i16* @cor_phaseClass8_V_2, align 4" [correlator.cpp:162]
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_2_s, i16* @cor_phaseClass8_V_3, align 2" [correlator.cpp:162]
+ST_1 : Operation 255 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_1_s = load i16* @cor_phaseClass8_V_1, align 2" [correlator.cpp:162]
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_1_s, i16* @cor_phaseClass8_V_2, align 4" [correlator.cpp:162]
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%cor_phaseClass8_V_0_s = load i16* @cor_phaseClass8_V_0, align 16" [correlator.cpp:162]
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass8_V_0_s, i16* @cor_phaseClass8_V_1, align 2" [correlator.cpp:162]
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass8_V_0, align 16" [correlator.cpp:164]
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:165]
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_14 = load i16* @cor_phaseClass7_V_14, align 4" [correlator.cpp:155]
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_14, i16* @cor_phaseClass7_V_15, align 2" [correlator.cpp:155]
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_13 = load i16* @cor_phaseClass7_V_13, align 2" [correlator.cpp:155]
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_13, i16* @cor_phaseClass7_V_14, align 4" [correlator.cpp:155]
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_12 = load i16* @cor_phaseClass7_V_12, align 8" [correlator.cpp:155]
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_12, i16* @cor_phaseClass7_V_13, align 2" [correlator.cpp:155]
+ST_1 : Operation 267 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_11 = load i16* @cor_phaseClass7_V_11, align 2" [correlator.cpp:155]
+ST_1 : Operation 268 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_11, i16* @cor_phaseClass7_V_12, align 8" [correlator.cpp:155]
+ST_1 : Operation 269 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_10 = load i16* @cor_phaseClass7_V_10, align 4" [correlator.cpp:155]
+ST_1 : Operation 270 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_10, i16* @cor_phaseClass7_V_11, align 2" [correlator.cpp:155]
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_9_s = load i16* @cor_phaseClass7_V_9, align 2" [correlator.cpp:155]
+ST_1 : Operation 272 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_9_s, i16* @cor_phaseClass7_V_10, align 4" [correlator.cpp:155]
+ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_8_s = load i16* @cor_phaseClass7_V_8, align 16" [correlator.cpp:155]
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_8_s, i16* @cor_phaseClass7_V_9, align 2" [correlator.cpp:155]
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_7_s = load i16* @cor_phaseClass7_V_7, align 2" [correlator.cpp:155]
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_7_s, i16* @cor_phaseClass7_V_8, align 16" [correlator.cpp:155]
+ST_1 : Operation 277 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_6_s = load i16* @cor_phaseClass7_V_6, align 4" [correlator.cpp:155]
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_6_s, i16* @cor_phaseClass7_V_7, align 2" [correlator.cpp:155]
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_5_s = load i16* @cor_phaseClass7_V_5, align 2" [correlator.cpp:155]
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_5_s, i16* @cor_phaseClass7_V_6, align 4" [correlator.cpp:155]
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_4_s = load i16* @cor_phaseClass7_V_4, align 8" [correlator.cpp:155]
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_4_s, i16* @cor_phaseClass7_V_5, align 2" [correlator.cpp:155]
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_3_s = load i16* @cor_phaseClass7_V_3, align 2" [correlator.cpp:155]
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_3_s, i16* @cor_phaseClass7_V_4, align 8" [correlator.cpp:155]
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_2_s = load i16* @cor_phaseClass7_V_2, align 4" [correlator.cpp:155]
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_2_s, i16* @cor_phaseClass7_V_3, align 2" [correlator.cpp:155]
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_1_s = load i16* @cor_phaseClass7_V_1, align 2" [correlator.cpp:155]
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_1_s, i16* @cor_phaseClass7_V_2, align 4" [correlator.cpp:155]
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%cor_phaseClass7_V_0_s = load i16* @cor_phaseClass7_V_0, align 16" [correlator.cpp:155]
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass7_V_0_s, i16* @cor_phaseClass7_V_1, align 2" [correlator.cpp:155]
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass7_V_0, align 16" [correlator.cpp:157]
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:158]
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_14 = load i16* @cor_phaseClass6_V_14, align 4" [correlator.cpp:148]
+ST_1 : Operation 294 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_14, i16* @cor_phaseClass6_V_15, align 2" [correlator.cpp:148]
+ST_1 : Operation 295 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_13 = load i16* @cor_phaseClass6_V_13, align 2" [correlator.cpp:148]
+ST_1 : Operation 296 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_13, i16* @cor_phaseClass6_V_14, align 4" [correlator.cpp:148]
+ST_1 : Operation 297 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_12 = load i16* @cor_phaseClass6_V_12, align 8" [correlator.cpp:148]
+ST_1 : Operation 298 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_12, i16* @cor_phaseClass6_V_13, align 2" [correlator.cpp:148]
+ST_1 : Operation 299 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_11 = load i16* @cor_phaseClass6_V_11, align 2" [correlator.cpp:148]
+ST_1 : Operation 300 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_11, i16* @cor_phaseClass6_V_12, align 8" [correlator.cpp:148]
+ST_1 : Operation 301 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_10 = load i16* @cor_phaseClass6_V_10, align 4" [correlator.cpp:148]
+ST_1 : Operation 302 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_10, i16* @cor_phaseClass6_V_11, align 2" [correlator.cpp:148]
+ST_1 : Operation 303 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_9_s = load i16* @cor_phaseClass6_V_9, align 2" [correlator.cpp:148]
+ST_1 : Operation 304 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_9_s, i16* @cor_phaseClass6_V_10, align 4" [correlator.cpp:148]
+ST_1 : Operation 305 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_8_s = load i16* @cor_phaseClass6_V_8, align 16" [correlator.cpp:148]
+ST_1 : Operation 306 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_8_s, i16* @cor_phaseClass6_V_9, align 2" [correlator.cpp:148]
+ST_1 : Operation 307 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_7_s = load i16* @cor_phaseClass6_V_7, align 2" [correlator.cpp:148]
+ST_1 : Operation 308 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_7_s, i16* @cor_phaseClass6_V_8, align 16" [correlator.cpp:148]
+ST_1 : Operation 309 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_6_s = load i16* @cor_phaseClass6_V_6, align 4" [correlator.cpp:148]
+ST_1 : Operation 310 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_6_s, i16* @cor_phaseClass6_V_7, align 2" [correlator.cpp:148]
+ST_1 : Operation 311 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_5_s = load i16* @cor_phaseClass6_V_5, align 2" [correlator.cpp:148]
+ST_1 : Operation 312 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_5_s, i16* @cor_phaseClass6_V_6, align 4" [correlator.cpp:148]
+ST_1 : Operation 313 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_4_s = load i16* @cor_phaseClass6_V_4, align 8" [correlator.cpp:148]
+ST_1 : Operation 314 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_4_s, i16* @cor_phaseClass6_V_5, align 2" [correlator.cpp:148]
+ST_1 : Operation 315 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_3_s = load i16* @cor_phaseClass6_V_3, align 2" [correlator.cpp:148]
+ST_1 : Operation 316 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_3_s, i16* @cor_phaseClass6_V_4, align 8" [correlator.cpp:148]
+ST_1 : Operation 317 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_2_s = load i16* @cor_phaseClass6_V_2, align 4" [correlator.cpp:148]
+ST_1 : Operation 318 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_2_s, i16* @cor_phaseClass6_V_3, align 2" [correlator.cpp:148]
+ST_1 : Operation 319 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_1_s = load i16* @cor_phaseClass6_V_1, align 2" [correlator.cpp:148]
+ST_1 : Operation 320 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_1_s, i16* @cor_phaseClass6_V_2, align 4" [correlator.cpp:148]
+ST_1 : Operation 321 [1/1] (0.00ns)   --->   "%cor_phaseClass6_V_0_s = load i16* @cor_phaseClass6_V_0, align 16" [correlator.cpp:148]
+ST_1 : Operation 322 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass6_V_0_s, i16* @cor_phaseClass6_V_1, align 2" [correlator.cpp:148]
+ST_1 : Operation 323 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass6_V_0, align 16" [correlator.cpp:150]
+ST_1 : Operation 324 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:151]
+ST_1 : Operation 325 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_14 = load i16* @cor_phaseClass5_V_14, align 4" [correlator.cpp:141]
+ST_1 : Operation 326 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_14, i16* @cor_phaseClass5_V_15, align 2" [correlator.cpp:141]
+ST_1 : Operation 327 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_13 = load i16* @cor_phaseClass5_V_13, align 2" [correlator.cpp:141]
+ST_1 : Operation 328 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_13, i16* @cor_phaseClass5_V_14, align 4" [correlator.cpp:141]
+ST_1 : Operation 329 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_12 = load i16* @cor_phaseClass5_V_12, align 8" [correlator.cpp:141]
+ST_1 : Operation 330 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_12, i16* @cor_phaseClass5_V_13, align 2" [correlator.cpp:141]
+ST_1 : Operation 331 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_11 = load i16* @cor_phaseClass5_V_11, align 2" [correlator.cpp:141]
+ST_1 : Operation 332 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_11, i16* @cor_phaseClass5_V_12, align 8" [correlator.cpp:141]
+ST_1 : Operation 333 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_10 = load i16* @cor_phaseClass5_V_10, align 4" [correlator.cpp:141]
+ST_1 : Operation 334 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_10, i16* @cor_phaseClass5_V_11, align 2" [correlator.cpp:141]
+ST_1 : Operation 335 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_9_s = load i16* @cor_phaseClass5_V_9, align 2" [correlator.cpp:141]
+ST_1 : Operation 336 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_9_s, i16* @cor_phaseClass5_V_10, align 4" [correlator.cpp:141]
+ST_1 : Operation 337 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_8_s = load i16* @cor_phaseClass5_V_8, align 16" [correlator.cpp:141]
+ST_1 : Operation 338 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_8_s, i16* @cor_phaseClass5_V_9, align 2" [correlator.cpp:141]
+ST_1 : Operation 339 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_7_s = load i16* @cor_phaseClass5_V_7, align 2" [correlator.cpp:141]
+ST_1 : Operation 340 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_7_s, i16* @cor_phaseClass5_V_8, align 16" [correlator.cpp:141]
+ST_1 : Operation 341 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_6_s = load i16* @cor_phaseClass5_V_6, align 4" [correlator.cpp:141]
+ST_1 : Operation 342 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_6_s, i16* @cor_phaseClass5_V_7, align 2" [correlator.cpp:141]
+ST_1 : Operation 343 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_5_s = load i16* @cor_phaseClass5_V_5, align 2" [correlator.cpp:141]
+ST_1 : Operation 344 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_5_s, i16* @cor_phaseClass5_V_6, align 4" [correlator.cpp:141]
+ST_1 : Operation 345 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_4_s = load i16* @cor_phaseClass5_V_4, align 8" [correlator.cpp:141]
+ST_1 : Operation 346 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_4_s, i16* @cor_phaseClass5_V_5, align 2" [correlator.cpp:141]
+ST_1 : Operation 347 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_3_s = load i16* @cor_phaseClass5_V_3, align 2" [correlator.cpp:141]
+ST_1 : Operation 348 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_3_s, i16* @cor_phaseClass5_V_4, align 8" [correlator.cpp:141]
+ST_1 : Operation 349 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_2_s = load i16* @cor_phaseClass5_V_2, align 4" [correlator.cpp:141]
+ST_1 : Operation 350 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_2_s, i16* @cor_phaseClass5_V_3, align 2" [correlator.cpp:141]
+ST_1 : Operation 351 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_1_s = load i16* @cor_phaseClass5_V_1, align 2" [correlator.cpp:141]
+ST_1 : Operation 352 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_1_s, i16* @cor_phaseClass5_V_2, align 4" [correlator.cpp:141]
+ST_1 : Operation 353 [1/1] (0.00ns)   --->   "%cor_phaseClass5_V_0_s = load i16* @cor_phaseClass5_V_0, align 16" [correlator.cpp:141]
+ST_1 : Operation 354 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass5_V_0_s, i16* @cor_phaseClass5_V_1, align 2" [correlator.cpp:141]
+ST_1 : Operation 355 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass5_V_0, align 16" [correlator.cpp:143]
+ST_1 : Operation 356 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:144]
+ST_1 : Operation 357 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_14 = load i16* @cor_phaseClass4_V_14, align 4" [correlator.cpp:134]
+ST_1 : Operation 358 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_14, i16* @cor_phaseClass4_V_15, align 2" [correlator.cpp:134]
+ST_1 : Operation 359 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_13 = load i16* @cor_phaseClass4_V_13, align 2" [correlator.cpp:134]
+ST_1 : Operation 360 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_13, i16* @cor_phaseClass4_V_14, align 4" [correlator.cpp:134]
+ST_1 : Operation 361 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_12 = load i16* @cor_phaseClass4_V_12, align 8" [correlator.cpp:134]
+ST_1 : Operation 362 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_12, i16* @cor_phaseClass4_V_13, align 2" [correlator.cpp:134]
+ST_1 : Operation 363 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_11 = load i16* @cor_phaseClass4_V_11, align 2" [correlator.cpp:134]
+ST_1 : Operation 364 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_11, i16* @cor_phaseClass4_V_12, align 8" [correlator.cpp:134]
+ST_1 : Operation 365 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_10 = load i16* @cor_phaseClass4_V_10, align 4" [correlator.cpp:134]
+ST_1 : Operation 366 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_10, i16* @cor_phaseClass4_V_11, align 2" [correlator.cpp:134]
+ST_1 : Operation 367 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_9_s = load i16* @cor_phaseClass4_V_9, align 2" [correlator.cpp:134]
+ST_1 : Operation 368 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_9_s, i16* @cor_phaseClass4_V_10, align 4" [correlator.cpp:134]
+ST_1 : Operation 369 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_8_s = load i16* @cor_phaseClass4_V_8, align 16" [correlator.cpp:134]
+ST_1 : Operation 370 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_8_s, i16* @cor_phaseClass4_V_9, align 2" [correlator.cpp:134]
+ST_1 : Operation 371 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_7_s = load i16* @cor_phaseClass4_V_7, align 2" [correlator.cpp:134]
+ST_1 : Operation 372 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_7_s, i16* @cor_phaseClass4_V_8, align 16" [correlator.cpp:134]
+ST_1 : Operation 373 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_6_s = load i16* @cor_phaseClass4_V_6, align 4" [correlator.cpp:134]
+ST_1 : Operation 374 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_6_s, i16* @cor_phaseClass4_V_7, align 2" [correlator.cpp:134]
+ST_1 : Operation 375 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_5_s = load i16* @cor_phaseClass4_V_5, align 2" [correlator.cpp:134]
+ST_1 : Operation 376 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_5_s, i16* @cor_phaseClass4_V_6, align 4" [correlator.cpp:134]
+ST_1 : Operation 377 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_4_s = load i16* @cor_phaseClass4_V_4, align 8" [correlator.cpp:134]
+ST_1 : Operation 378 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_4_s, i16* @cor_phaseClass4_V_5, align 2" [correlator.cpp:134]
+ST_1 : Operation 379 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_3_s = load i16* @cor_phaseClass4_V_3, align 2" [correlator.cpp:134]
+ST_1 : Operation 380 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_3_s, i16* @cor_phaseClass4_V_4, align 8" [correlator.cpp:134]
+ST_1 : Operation 381 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_2_s = load i16* @cor_phaseClass4_V_2, align 4" [correlator.cpp:134]
+ST_1 : Operation 382 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_2_s, i16* @cor_phaseClass4_V_3, align 2" [correlator.cpp:134]
+ST_1 : Operation 383 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_1_s = load i16* @cor_phaseClass4_V_1, align 2" [correlator.cpp:134]
+ST_1 : Operation 384 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_1_s, i16* @cor_phaseClass4_V_2, align 4" [correlator.cpp:134]
+ST_1 : Operation 385 [1/1] (0.00ns)   --->   "%cor_phaseClass4_V_0_s = load i16* @cor_phaseClass4_V_0, align 16" [correlator.cpp:134]
+ST_1 : Operation 386 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass4_V_0_s, i16* @cor_phaseClass4_V_1, align 2" [correlator.cpp:134]
+ST_1 : Operation 387 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass4_V_0, align 16" [correlator.cpp:136]
+ST_1 : Operation 388 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:137]
+ST_1 : Operation 389 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_14 = load i16* @cor_phaseClass3_V_14, align 4" [correlator.cpp:127]
+ST_1 : Operation 390 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_14, i16* @cor_phaseClass3_V_15, align 2" [correlator.cpp:127]
+ST_1 : Operation 391 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_13 = load i16* @cor_phaseClass3_V_13, align 2" [correlator.cpp:127]
+ST_1 : Operation 392 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_13, i16* @cor_phaseClass3_V_14, align 4" [correlator.cpp:127]
+ST_1 : Operation 393 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_12 = load i16* @cor_phaseClass3_V_12, align 8" [correlator.cpp:127]
+ST_1 : Operation 394 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_12, i16* @cor_phaseClass3_V_13, align 2" [correlator.cpp:127]
+ST_1 : Operation 395 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_11 = load i16* @cor_phaseClass3_V_11, align 2" [correlator.cpp:127]
+ST_1 : Operation 396 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_11, i16* @cor_phaseClass3_V_12, align 8" [correlator.cpp:127]
+ST_1 : Operation 397 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_10 = load i16* @cor_phaseClass3_V_10, align 4" [correlator.cpp:127]
+ST_1 : Operation 398 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_10, i16* @cor_phaseClass3_V_11, align 2" [correlator.cpp:127]
+ST_1 : Operation 399 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_9_s = load i16* @cor_phaseClass3_V_9, align 2" [correlator.cpp:127]
+ST_1 : Operation 400 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_9_s, i16* @cor_phaseClass3_V_10, align 4" [correlator.cpp:127]
+ST_1 : Operation 401 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_8_s = load i16* @cor_phaseClass3_V_8, align 16" [correlator.cpp:127]
+ST_1 : Operation 402 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_8_s, i16* @cor_phaseClass3_V_9, align 2" [correlator.cpp:127]
+ST_1 : Operation 403 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_7_s = load i16* @cor_phaseClass3_V_7, align 2" [correlator.cpp:127]
+ST_1 : Operation 404 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_7_s, i16* @cor_phaseClass3_V_8, align 16" [correlator.cpp:127]
+ST_1 : Operation 405 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_6_s = load i16* @cor_phaseClass3_V_6, align 4" [correlator.cpp:127]
+ST_1 : Operation 406 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_6_s, i16* @cor_phaseClass3_V_7, align 2" [correlator.cpp:127]
+ST_1 : Operation 407 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_5_s = load i16* @cor_phaseClass3_V_5, align 2" [correlator.cpp:127]
+ST_1 : Operation 408 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_5_s, i16* @cor_phaseClass3_V_6, align 4" [correlator.cpp:127]
+ST_1 : Operation 409 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_4_s = load i16* @cor_phaseClass3_V_4, align 8" [correlator.cpp:127]
+ST_1 : Operation 410 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_4_s, i16* @cor_phaseClass3_V_5, align 2" [correlator.cpp:127]
+ST_1 : Operation 411 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_3_s = load i16* @cor_phaseClass3_V_3, align 2" [correlator.cpp:127]
+ST_1 : Operation 412 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_3_s, i16* @cor_phaseClass3_V_4, align 8" [correlator.cpp:127]
+ST_1 : Operation 413 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_2_s = load i16* @cor_phaseClass3_V_2, align 4" [correlator.cpp:127]
+ST_1 : Operation 414 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_2_s, i16* @cor_phaseClass3_V_3, align 2" [correlator.cpp:127]
+ST_1 : Operation 415 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_1_s = load i16* @cor_phaseClass3_V_1, align 2" [correlator.cpp:127]
+ST_1 : Operation 416 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_1_s, i16* @cor_phaseClass3_V_2, align 4" [correlator.cpp:127]
+ST_1 : Operation 417 [1/1] (0.00ns)   --->   "%cor_phaseClass3_V_0_s = load i16* @cor_phaseClass3_V_0, align 16" [correlator.cpp:127]
+ST_1 : Operation 418 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass3_V_0_s, i16* @cor_phaseClass3_V_1, align 2" [correlator.cpp:127]
+ST_1 : Operation 419 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass3_V_0, align 16" [correlator.cpp:129]
+ST_1 : Operation 420 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:130]
+ST_1 : Operation 421 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_14 = load i16* @cor_phaseClass2_V_14, align 4" [correlator.cpp:120]
+ST_1 : Operation 422 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_14, i16* @cor_phaseClass2_V_15, align 2" [correlator.cpp:120]
+ST_1 : Operation 423 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_13 = load i16* @cor_phaseClass2_V_13, align 2" [correlator.cpp:120]
+ST_1 : Operation 424 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_13, i16* @cor_phaseClass2_V_14, align 4" [correlator.cpp:120]
+ST_1 : Operation 425 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_12 = load i16* @cor_phaseClass2_V_12, align 8" [correlator.cpp:120]
+ST_1 : Operation 426 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_12, i16* @cor_phaseClass2_V_13, align 2" [correlator.cpp:120]
+ST_1 : Operation 427 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_11 = load i16* @cor_phaseClass2_V_11, align 2" [correlator.cpp:120]
+ST_1 : Operation 428 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_11, i16* @cor_phaseClass2_V_12, align 8" [correlator.cpp:120]
+ST_1 : Operation 429 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_10 = load i16* @cor_phaseClass2_V_10, align 4" [correlator.cpp:120]
+ST_1 : Operation 430 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_10, i16* @cor_phaseClass2_V_11, align 2" [correlator.cpp:120]
+ST_1 : Operation 431 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_9_s = load i16* @cor_phaseClass2_V_9, align 2" [correlator.cpp:120]
+ST_1 : Operation 432 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_9_s, i16* @cor_phaseClass2_V_10, align 4" [correlator.cpp:120]
+ST_1 : Operation 433 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_8_s = load i16* @cor_phaseClass2_V_8, align 16" [correlator.cpp:120]
+ST_1 : Operation 434 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_8_s, i16* @cor_phaseClass2_V_9, align 2" [correlator.cpp:120]
+ST_1 : Operation 435 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_7_s = load i16* @cor_phaseClass2_V_7, align 2" [correlator.cpp:120]
+ST_1 : Operation 436 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_7_s, i16* @cor_phaseClass2_V_8, align 16" [correlator.cpp:120]
+ST_1 : Operation 437 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_6_s = load i16* @cor_phaseClass2_V_6, align 4" [correlator.cpp:120]
+ST_1 : Operation 438 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_6_s, i16* @cor_phaseClass2_V_7, align 2" [correlator.cpp:120]
+ST_1 : Operation 439 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_5_s = load i16* @cor_phaseClass2_V_5, align 2" [correlator.cpp:120]
+ST_1 : Operation 440 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_5_s, i16* @cor_phaseClass2_V_6, align 4" [correlator.cpp:120]
+ST_1 : Operation 441 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_4_s = load i16* @cor_phaseClass2_V_4, align 8" [correlator.cpp:120]
+ST_1 : Operation 442 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_4_s, i16* @cor_phaseClass2_V_5, align 2" [correlator.cpp:120]
+ST_1 : Operation 443 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_3_s = load i16* @cor_phaseClass2_V_3, align 2" [correlator.cpp:120]
+ST_1 : Operation 444 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_3_s, i16* @cor_phaseClass2_V_4, align 8" [correlator.cpp:120]
+ST_1 : Operation 445 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_2_s = load i16* @cor_phaseClass2_V_2, align 4" [correlator.cpp:120]
+ST_1 : Operation 446 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_2_s, i16* @cor_phaseClass2_V_3, align 2" [correlator.cpp:120]
+ST_1 : Operation 447 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_1_s = load i16* @cor_phaseClass2_V_1, align 2" [correlator.cpp:120]
+ST_1 : Operation 448 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_1_s, i16* @cor_phaseClass2_V_2, align 4" [correlator.cpp:120]
+ST_1 : Operation 449 [1/1] (0.00ns)   --->   "%cor_phaseClass2_V_0_s = load i16* @cor_phaseClass2_V_0, align 16" [correlator.cpp:120]
+ST_1 : Operation 450 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass2_V_0_s, i16* @cor_phaseClass2_V_1, align 2" [correlator.cpp:120]
+ST_1 : Operation 451 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass2_V_0, align 16" [correlator.cpp:122]
+ST_1 : Operation 452 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:123]
+ST_1 : Operation 453 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_14 = load i16* @cor_phaseClass1_V_14, align 4" [correlator.cpp:113]
+ST_1 : Operation 454 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_14, i16* @cor_phaseClass1_V_15, align 2" [correlator.cpp:113]
+ST_1 : Operation 455 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_13 = load i16* @cor_phaseClass1_V_13, align 2" [correlator.cpp:113]
+ST_1 : Operation 456 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_13, i16* @cor_phaseClass1_V_14, align 4" [correlator.cpp:113]
+ST_1 : Operation 457 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_12 = load i16* @cor_phaseClass1_V_12, align 8" [correlator.cpp:113]
+ST_1 : Operation 458 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_12, i16* @cor_phaseClass1_V_13, align 2" [correlator.cpp:113]
+ST_1 : Operation 459 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_11 = load i16* @cor_phaseClass1_V_11, align 2" [correlator.cpp:113]
+ST_1 : Operation 460 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_11, i16* @cor_phaseClass1_V_12, align 8" [correlator.cpp:113]
+ST_1 : Operation 461 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_10 = load i16* @cor_phaseClass1_V_10, align 4" [correlator.cpp:113]
+ST_1 : Operation 462 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_10, i16* @cor_phaseClass1_V_11, align 2" [correlator.cpp:113]
+ST_1 : Operation 463 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_9_s = load i16* @cor_phaseClass1_V_9, align 2" [correlator.cpp:113]
+ST_1 : Operation 464 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_9_s, i16* @cor_phaseClass1_V_10, align 4" [correlator.cpp:113]
+ST_1 : Operation 465 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_8_s = load i16* @cor_phaseClass1_V_8, align 16" [correlator.cpp:113]
+ST_1 : Operation 466 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_8_s, i16* @cor_phaseClass1_V_9, align 2" [correlator.cpp:113]
+ST_1 : Operation 467 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_7_s = load i16* @cor_phaseClass1_V_7, align 2" [correlator.cpp:113]
+ST_1 : Operation 468 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_7_s, i16* @cor_phaseClass1_V_8, align 16" [correlator.cpp:113]
+ST_1 : Operation 469 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_6_s = load i16* @cor_phaseClass1_V_6, align 4" [correlator.cpp:113]
+ST_1 : Operation 470 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_6_s, i16* @cor_phaseClass1_V_7, align 2" [correlator.cpp:113]
+ST_1 : Operation 471 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_5_s = load i16* @cor_phaseClass1_V_5, align 2" [correlator.cpp:113]
+ST_1 : Operation 472 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_5_s, i16* @cor_phaseClass1_V_6, align 4" [correlator.cpp:113]
+ST_1 : Operation 473 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_4_s = load i16* @cor_phaseClass1_V_4, align 8" [correlator.cpp:113]
+ST_1 : Operation 474 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_4_s, i16* @cor_phaseClass1_V_5, align 2" [correlator.cpp:113]
+ST_1 : Operation 475 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_3_s = load i16* @cor_phaseClass1_V_3, align 2" [correlator.cpp:113]
+ST_1 : Operation 476 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_3_s, i16* @cor_phaseClass1_V_4, align 8" [correlator.cpp:113]
+ST_1 : Operation 477 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_2_s = load i16* @cor_phaseClass1_V_2, align 4" [correlator.cpp:113]
+ST_1 : Operation 478 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_2_s, i16* @cor_phaseClass1_V_3, align 2" [correlator.cpp:113]
+ST_1 : Operation 479 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_1_s = load i16* @cor_phaseClass1_V_1, align 2" [correlator.cpp:113]
+ST_1 : Operation 480 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_1_s, i16* @cor_phaseClass1_V_2, align 4" [correlator.cpp:113]
+ST_1 : Operation 481 [1/1] (0.00ns)   --->   "%cor_phaseClass1_V_0_s = load i16* @cor_phaseClass1_V_0, align 16" [correlator.cpp:113]
+ST_1 : Operation 482 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass1_V_0_s, i16* @cor_phaseClass1_V_1, align 2" [correlator.cpp:113]
+ST_1 : Operation 483 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass1_V_0, align 16" [correlator.cpp:115]
+ST_1 : Operation 484 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:116]
+ST_1 : Operation 485 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_14 = load i16* @cor_phaseClass0_V_14, align 4" [correlator.cpp:105]
+ST_1 : Operation 486 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_14, i16* @cor_phaseClass0_V_15, align 2" [correlator.cpp:105]
+ST_1 : Operation 487 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_13 = load i16* @cor_phaseClass0_V_13, align 2" [correlator.cpp:105]
+ST_1 : Operation 488 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_13, i16* @cor_phaseClass0_V_14, align 4" [correlator.cpp:105]
+ST_1 : Operation 489 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_12 = load i16* @cor_phaseClass0_V_12, align 8" [correlator.cpp:105]
+ST_1 : Operation 490 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_12, i16* @cor_phaseClass0_V_13, align 2" [correlator.cpp:105]
+ST_1 : Operation 491 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_11 = load i16* @cor_phaseClass0_V_11, align 2" [correlator.cpp:105]
+ST_1 : Operation 492 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_11, i16* @cor_phaseClass0_V_12, align 8" [correlator.cpp:105]
+ST_1 : Operation 493 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_10 = load i16* @cor_phaseClass0_V_10, align 4" [correlator.cpp:105]
+ST_1 : Operation 494 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_10, i16* @cor_phaseClass0_V_11, align 2" [correlator.cpp:105]
+ST_1 : Operation 495 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_9_s = load i16* @cor_phaseClass0_V_9, align 2" [correlator.cpp:105]
+ST_1 : Operation 496 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_9_s, i16* @cor_phaseClass0_V_10, align 4" [correlator.cpp:105]
+ST_1 : Operation 497 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_8_s = load i16* @cor_phaseClass0_V_8, align 16" [correlator.cpp:105]
+ST_1 : Operation 498 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_8_s, i16* @cor_phaseClass0_V_9, align 2" [correlator.cpp:105]
+ST_1 : Operation 499 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_7_s = load i16* @cor_phaseClass0_V_7, align 2" [correlator.cpp:105]
+ST_1 : Operation 500 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_7_s, i16* @cor_phaseClass0_V_8, align 16" [correlator.cpp:105]
+ST_1 : Operation 501 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_6_s = load i16* @cor_phaseClass0_V_6, align 4" [correlator.cpp:105]
+ST_1 : Operation 502 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_6_s, i16* @cor_phaseClass0_V_7, align 2" [correlator.cpp:105]
+ST_1 : Operation 503 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_5_s = load i16* @cor_phaseClass0_V_5, align 2" [correlator.cpp:105]
+ST_1 : Operation 504 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_5_s, i16* @cor_phaseClass0_V_6, align 4" [correlator.cpp:105]
+ST_1 : Operation 505 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_4_s = load i16* @cor_phaseClass0_V_4, align 8" [correlator.cpp:105]
+ST_1 : Operation 506 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_4_s, i16* @cor_phaseClass0_V_5, align 2" [correlator.cpp:105]
+ST_1 : Operation 507 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_3_s = load i16* @cor_phaseClass0_V_3, align 2" [correlator.cpp:105]
+ST_1 : Operation 508 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_3_s, i16* @cor_phaseClass0_V_4, align 8" [correlator.cpp:105]
+ST_1 : Operation 509 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_2_s = load i16* @cor_phaseClass0_V_2, align 4" [correlator.cpp:105]
+ST_1 : Operation 510 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_2_s, i16* @cor_phaseClass0_V_3, align 2" [correlator.cpp:105]
+ST_1 : Operation 511 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_1_s = load i16* @cor_phaseClass0_V_1, align 2" [correlator.cpp:105]
+ST_1 : Operation 512 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_1_s, i16* @cor_phaseClass0_V_2, align 4" [correlator.cpp:105]
+ST_1 : Operation 513 [1/1] (0.00ns)   --->   "%cor_phaseClass0_V_0_s = load i16* @cor_phaseClass0_V_0, align 16" [correlator.cpp:105]
+ST_1 : Operation 514 [1/1] (0.00ns)   --->   "store i16 %cor_phaseClass0_V_0_s, i16* @cor_phaseClass0_V_1, align 2" [correlator.cpp:105]
+ST_1 : Operation 515 [1/1] (0.00ns)   --->   "store i16 %newValue_V_read, i16* @cor_phaseClass0_V_0, align 16" [correlator.cpp:107]
+ST_1 : Operation 516 [1/1] (0.00ns)   --->   "br label %._crit_edge" [correlator.cpp:108]
+ST_1 : Operation 517 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:217]
 
 
 ============================================================
@@ -1110,9 +619,9 @@ ST_1: StgValue_337 (521)  [1/1] 0.00ns  loc: correlator.cpp:201
 ============================================================
 Target clock period: 10ns, clock uncertainty: 1.25ns.
 
- <State 1>: 2.51ns
+ <State 1>: 1.15ns
 The critical path consists of the following:
-	wire read on port 'phaseClass_V' [169]  (0 ns)
+	wire read on port 'phaseClass_V' [259]  (0 ns)
 
 
 ============================================================

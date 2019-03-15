@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Fri Mar 15 02:05:32 2019
+* Date:           Fri Mar 15 15:34:57 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      7.58|        1.25|
+    |ap_clk  |  10.00|      8.21|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |    6|    6|    2|    2| function |
+    |    6|    6|    4|    4| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -62,15 +62,15 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 2, depth = 7
+  * Pipeline-0: initiation interval (II) = 4, depth = 7
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 7
-* Pipeline: 1
-  Pipeline-0: II = 2, D = 7, States = { 1 2 3 4 5 6 7 }
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 7, States = { 1 2 3 4 5 6 7 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -87,267 +87,66 @@ IsGatedGlobalClock: 0
 6 --> 
 	7  / true
 7 --> 
+
 * FSM state operations: 
 
- <State 1>: 0.00ns
-ST_1: currentState_load (193)  [1/1] 0.00ns  loc: correlator.cpp:45
-codeRepl:17  %currentState_load = load i1* @currentState, align 1
-
-ST_1: StgValue_9 (196)  [1/1] 0.00ns  loc: correlator.cpp:51
-codeRepl:20  br i1 %currentState_load, label %_ifconv, label %0
-
-
- <State 2>: 0.00ns
-ST_2: phaseClass_V_read (176)  [1/1] 0.00ns
-codeRepl:0  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
-
-ST_2: start_V_read (177)  [1/1] 0.00ns
-codeRepl:1  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
-
-ST_2: StgValue_12 (198)  [1/1] 0.00ns  loc: correlator.cpp:53
-:0  br i1 %start_V_read, label %1, label %._crit_edge80
-
-ST_2: StgValue_13 (201)  [1/1] 0.00ns  loc: correlator.cpp:55
-:1  store i1 true, i1* @currentState, align 1
-
-ST_2: empty (206)  [2/2] 0.00ns
-_ifconv:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
-
-ST_2: StgValue_15 (257)  [1/1] 0.00ns  loc: correlator.cpp:76
-_ifconv:51  store i1 true, i1* @currentState, align 1
-
-
- <State 3>: 2.51ns
-ST_3: empty (206)  [1/2] 0.00ns
-_ifconv:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
-
-ST_3: p_Val2_s (207)  [1/1] 0.00ns
-_ifconv:1  %p_Val2_s = extractvalue { i32, i1 } %empty, 0
-
-ST_3: o_data_last_V_tmp (208)  [1/1] 0.00ns
-_ifconv:2  %o_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1
-
-ST_3: tmp_1 (209)  [1/1] 0.00ns  loc: correlator.cpp:61
-_ifconv:3  %tmp_1 = trunc i32 %p_Val2_s to i16
-
-ST_3: StgValue_20 (210)  [1/1] 0.00ns  loc: correlator.cpp:61
-_ifconv:4  store i16 %tmp_1, i16* @newVal_V, align 2
-
-ST_3: StgValue_21 (213)  [1/1] 2.51ns  loc: correlator.cpp:63
-_ifconv:7  call fastcc void @shiftPhaseClass(i16 %tmp_1, i4 %phaseClass_V_read)
-
-ST_3: cond_i (214)  [1/1] 1.97ns  loc: correlator.cpp:207->correlator.cpp:64
-_ifconv:8  %cond_i = icmp eq i4 %phaseClass_V_read, 0
-
-
- <State 4>: 7.58ns
-ST_4: cor_phaseClass0_V_15 (215)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:9  %cor_phaseClass0_V_15 = load i16* @cor_phaseClass0_V_15, align 2
-
-ST_4: cor_phaseClass0_V_14 (216)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:10  %cor_phaseClass0_V_14 = load i16* @cor_phaseClass0_V_14, align 4
-
-ST_4: cor_phaseClass0_V_13 (217)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:11  %cor_phaseClass0_V_13 = load i16* @cor_phaseClass0_V_13, align 2
-
-ST_4: cor_phaseClass0_V_12 (218)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:12  %cor_phaseClass0_V_12 = load i16* @cor_phaseClass0_V_12, align 8
-
-ST_4: cor_phaseClass0_V_11 (219)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:13  %cor_phaseClass0_V_11 = load i16* @cor_phaseClass0_V_11, align 2
-
-ST_4: cor_phaseClass0_V_10 (220)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:14  %cor_phaseClass0_V_10 = load i16* @cor_phaseClass0_V_10, align 4
-
-ST_4: cor_phaseClass0_V_9_s (221)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:15  %cor_phaseClass0_V_9_s = load i16* @cor_phaseClass0_V_9, align 2
-
-ST_4: cor_phaseClass0_V_8_s (222)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:16  %cor_phaseClass0_V_8_s = load i16* @cor_phaseClass0_V_8, align 16
-
-ST_4: cor_phaseClass0_V_7_s (223)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:17  %cor_phaseClass0_V_7_s = load i16* @cor_phaseClass0_V_7, align 2
-
-ST_4: cor_phaseClass0_V_6_s (224)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:18  %cor_phaseClass0_V_6_s = load i16* @cor_phaseClass0_V_6, align 4
-
-ST_4: cor_phaseClass0_V_5_s (225)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:19  %cor_phaseClass0_V_5_s = load i16* @cor_phaseClass0_V_5, align 2
-
-ST_4: cor_phaseClass0_V_4_s (226)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:20  %cor_phaseClass0_V_4_s = load i16* @cor_phaseClass0_V_4, align 8
-
-ST_4: cor_phaseClass0_V_3_s (227)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:21  %cor_phaseClass0_V_3_s = load i16* @cor_phaseClass0_V_3, align 2
-
-ST_4: cor_phaseClass0_V_2_s (228)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:22  %cor_phaseClass0_V_2_s = load i16* @cor_phaseClass0_V_2, align 4
-
-ST_4: cor_phaseClass0_V_1_s (229)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:23  %cor_phaseClass0_V_1_s = load i16* @cor_phaseClass0_V_1, align 2
-
-ST_4: tmp1 (230)  [1/1] 1.68ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:24  %tmp1 = add i16 %cor_phaseClass0_V_11, %cor_phaseClass0_V_10
-
-ST_4: tmp2 (231)  [1/1] 1.27ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:25  %tmp2 = add i16 %cor_phaseClass0_V_8_s, %cor_phaseClass0_V_9_s
-
-ST_4: tmp (232)  [1/1] 1.27ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:26  %tmp = add i16 %tmp1, %tmp2
-
-ST_4: tmp4 (233)  [1/1] 1.68ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:27  %tmp4 = add i16 %cor_phaseClass0_V_4_s, %cor_phaseClass0_V_6_s
-
-ST_4: tmp5 (234)  [1/1] 1.68ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:28  %tmp5 = add i16 %cor_phaseClass0_V_1_s, %cor_phaseClass0_V_3_s
-
-ST_4: tmp3 (235)  [1/1] 1.27ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:29  %tmp3 = add i16 %tmp4, %tmp5
-
-ST_4: p_Val2_5_2_i (236)  [1/1] 1.27ns  loc: correlator.cpp:212->correlator.cpp:64
-_ifconv:30  %p_Val2_5_2_i = add i16 %tmp, %tmp3
-
-ST_4: cor_phaseClass0_V_0_s (237)  [1/1] 0.00ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:31  %cor_phaseClass0_V_0_s = load i16* @cor_phaseClass0_V_0, align 16
-
-ST_4: tmp7 (238)  [1/1] 1.68ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:32  %tmp7 = add i16 %cor_phaseClass0_V_15, %cor_phaseClass0_V_14
-
-ST_4: tmp8 (239)  [1/1] 1.27ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:33  %tmp8 = add i16 %cor_phaseClass0_V_12, %cor_phaseClass0_V_13
-
-ST_4: tmp6 (240)  [1/1] 1.27ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:34  %tmp6 = add i16 %tmp7, %tmp8
-
-ST_4: tmp10 (241)  [1/1] 1.68ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:35  %tmp10 = add i16 %cor_phaseClass0_V_5_s, %cor_phaseClass0_V_7_s
-
-ST_4: tmp11 (242)  [1/1] 1.68ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:36  %tmp11 = add i16 %cor_phaseClass0_V_0_s, %cor_phaseClass0_V_2_s
-
-ST_4: tmp9 (243)  [1/1] 1.27ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:37  %tmp9 = add i16 %tmp10, %tmp11
-
-ST_4: p_Val2_2_5_i (244)  [1/1] 1.27ns  loc: correlator.cpp:214->correlator.cpp:64
-_ifconv:38  %p_Val2_2_5_i = add i16 %tmp6, %tmp9
-
-ST_4: p_Val2_1 (245)  [1/1] 1.40ns  loc: correlator.cpp:219->correlator.cpp:64
-_ifconv:39  %p_Val2_1 = select i1 %cond_i, i16 %p_Val2_2_5_i, i16 0
-
-ST_4: p_Val2_2 (246)  [1/1] 1.40ns  loc: correlator.cpp:219->correlator.cpp:64
-_ifconv:40  %p_Val2_2 = select i1 %cond_i, i16 %p_Val2_5_2_i, i16 0
-
-ST_4: tmp_i (247)  [1/1] 1.96ns  loc: correlator.cpp:218->correlator.cpp:64
-_ifconv:41  %tmp_i = icmp sgt i16 %p_Val2_2, %p_Val2_1
-
-ST_4: p_Val2_9_i (248)  [1/1] 1.68ns  loc: correlator.cpp:221->correlator.cpp:64
-_ifconv:42  %p_Val2_9_i = sub i16 %p_Val2_1, %p_Val2_2
-
-ST_4: p_Val2_8_i (249)  [1/1] 1.68ns  loc: correlator.cpp:219->correlator.cpp:64
-_ifconv:43  %p_Val2_8_i = sub i16 %p_Val2_2, %p_Val2_1
-
-
- <State 5>: 7.19ns
-ST_5: tmp_1_i (250)  [1/1] 1.40ns  loc: correlator.cpp:218->correlator.cpp:64
-_ifconv:44  %tmp_1_i = select i1 %tmp_i, i16 %p_Val2_8_i, i16 %p_Val2_9_i
-
-ST_5: OP1_V_cast (251)  [1/1] 0.00ns  loc: correlator.cpp:223->correlator.cpp:64
-_ifconv:45  %OP1_V_cast = sext i16 %tmp_1_i to i21
-
-ST_5: p_Val2_3 (252)  [1/1] 5.79ns  loc: correlator.cpp:223->correlator.cpp:64
-_ifconv:46  %p_Val2_3 = mul i21 %OP1_V_cast, %OP1_V_cast
-
-ST_5: res_V (253)  [1/1] 0.00ns  loc: correlator.cpp:223->correlator.cpp:64
-_ifconv:47  %res_V = call i16 @_ssdm_op_PartSelect.i16.i21.i32.i32(i21 %p_Val2_3, i32 5, i32 20)
-
-
- <State 6>: 3.36ns
-ST_6: loadCount_V_load (195)  [1/1] 0.00ns  loc: correlator.cpp:62
-codeRepl:19  %loadCount_V_load = load i32* @loadCount_V, align 4
-
-ST_6: StgValue_63 (200)  [1/1] 1.03ns  loc: correlator.cpp:54
-:0  store i32 0, i32* @loadCount_V, align 4
-
-ST_6: tmp_2 (211)  [1/1] 1.73ns  loc: correlator.cpp:62
-_ifconv:5  %tmp_2 = add i32 32, %loadCount_V_load
-
-ST_6: StgValue_65 (212)  [1/1] 1.03ns  loc: correlator.cpp:62
-_ifconv:6  store i32 %tmp_2, i32* @loadCount_V, align 4
-
-ST_6: tmp_3 (254)  [1/1] 1.96ns  loc: correlator.cpp:67
-_ifconv:48  %tmp_3 = icmp sgt i16 %res_V, 6400
-
-ST_6: o_data_data_V_tmp (255)  [1/1] 1.40ns  loc: correlator.cpp:67
-_ifconv:49  %o_data_data_V_tmp = select i1 %tmp_3, i32 %tmp_2, i32 0
-
-ST_6: StgValue_68 (256)  [2/2] 0.00ns  loc: correlator.cpp:67
-_ifconv:50  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %o_data_last_V_tmp)
-
-
- <State 7>: 0.00ns
-ST_7: StgValue_69 (178)  [1/1] 0.00ns
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !84
-
-ST_7: StgValue_70 (179)  [1/1] 0.00ns
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !88
-
-ST_7: StgValue_71 (180)  [1/1] 0.00ns
-codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !92
-
-ST_7: StgValue_72 (181)  [1/1] 0.00ns
-codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !96
-
-ST_7: StgValue_73 (182)  [1/1] 0.00ns
-codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100
-
-ST_7: StgValue_74 (183)  [1/1] 0.00ns
-codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106
-
-ST_7: StgValue_75 (184)  [1/1] 0.00ns
-codeRepl:8  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
-
-ST_7: StgValue_76 (185)  [1/1] 0.00ns  loc: correlator.cpp:12
-codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_77 (186)  [1/1] 0.00ns  loc: correlator.cpp:13
-codeRepl:10  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_78 (187)  [1/1] 0.00ns  loc: correlator.cpp:14
-codeRepl:11  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_79 (188)  [1/1] 0.00ns  loc: correlator.cpp:16
-codeRepl:12  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_80 (189)  [1/1] 0.00ns  loc: correlator.cpp:25
-codeRepl:13  call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_81 (190)  [1/1] 0.00ns  loc: correlator.cpp:32
-codeRepl:14  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_82 (191)  [1/1] 0.00ns  loc: correlator.cpp:37
-codeRepl:15  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_83 (192)  [1/1] 0.00ns  loc: correlator.cpp:40
-codeRepl:16  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_84 (194)  [1/1] 0.00ns  loc: correlator.cpp:45
-codeRepl:18  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
-
-ST_7: StgValue_85 (202)  [1/1] 0.00ns  loc: correlator.cpp:56
-:2  br label %._crit_edge80
-
-ST_7: StgValue_86 (204)  [1/1] 0.00ns  loc: correlator.cpp:57
-._crit_edge80:0  br label %._crit_edge79
-
-ST_7: StgValue_87 (256)  [1/2] 0.00ns  loc: correlator.cpp:67
-_ifconv:50  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %o_data_last_V_tmp)
-
-ST_7: StgValue_88 (258)  [1/1] 0.00ns  loc: correlator.cpp:78
-_ifconv:52  br label %._crit_edge79
-
-ST_7: StgValue_89 (260)  [1/1] 0.00ns  loc: correlator.cpp:81
-._crit_edge79:0  ret void
-
+ <State 1> : 0.00ns
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1" [correlator.cpp:61]
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %2, label %0" [correlator.cpp:67]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:92]
+
+ <State 2> : 0.00ns
+ST_2 : Operation 11 [2/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 3> : 1.15ns
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)"
+ST_3 : Operation 13 [1/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%p_Val2_s = extractvalue { i32, i1 } %empty, 0"
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%i_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1"
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %p_Val2_s to i16" [correlator.cpp:77]
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "store i16 %tmp, i16* @newVal_V, align 2" [correlator.cpp:77]
+ST_3 : Operation 18 [1/1] (1.15ns)   --->   "call fastcc void @shiftPhaseClass(i16 %tmp, i4 %phaseClass_V_read)" [correlator.cpp:79]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 4> : 1.63ns
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)"
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %start_V_read, label %1, label %._crit_edge80" [correlator.cpp:69]
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:71]
+ST_4 : Operation 22 [2/2] (1.63ns)   --->   "%op_V_assign = call fastcc i16 @correlator(i4 %phaseClass_V_read)" [correlator.cpp:80]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 5> : 8.13ns
+ST_5 : Operation 23 [1/2] (8.12ns)   --->   "%op_V_assign = call fastcc i16 @correlator(i4 %phaseClass_V_read)" [correlator.cpp:80]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 6> : 2.85ns
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%loadCount_V_load = load i32* @loadCount_V, align 4" [correlator.cpp:78]
+ST_6 : Operation 25 [1/1] (1.06ns)   --->   "store i32 0, i32* @loadCount_V, align 4" [correlator.cpp:70]
+ST_6 : Operation 26 [1/1] (1.78ns)   --->   "%tmp_2 = add i32 32, %loadCount_V_load" [correlator.cpp:78]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 27 [1/1] (1.06ns)   --->   "store i32 %tmp_2, i32* @loadCount_V, align 4" [correlator.cpp:78]
+ST_6 : Operation 28 [1/1] (1.49ns)   --->   "%tmp_3 = icmp sgt i16 %op_V_assign, 6400" [correlator.cpp:83]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 29 [1/1] (0.84ns)   --->   "%o_data_data_V_tmp = select i1 %tmp_3, i32 %tmp_2, i32 0" [correlator.cpp:83]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 30 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)" [correlator.cpp:83]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 7> : 0.00ns
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !84"
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !88"
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !92"
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !96"
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !100"
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !106"
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind"
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:12]
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:13]
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:14]
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 4, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [correlator.cpp:16]
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:41]
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:48]
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:53]
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:56]
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:61]
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "br label %._crit_edge80" [correlator.cpp:72]
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "br label %._crit_edge79" [correlator.cpp:73]
+ST_7 : Operation 49 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)" [correlator.cpp:83]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "br label %._crit_edge79" [correlator.cpp:94]
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:97]
 
 
 ============================================================
@@ -361,29 +160,24 @@ The critical path consists of the following:
  <State 2>: 0ns
 The critical path consists of the following:
 
- <State 3>: 2.51ns
+ <State 3>: 1.15ns
 The critical path consists of the following:
-	axis read on port 'i_data_data_V' [206]  (0 ns)
-	'call' operation (correlator.cpp:63) to 'shiftPhaseClass' [213]  (2.51 ns)
+	wire read on port 'phaseClass_V' [266]  (0 ns)
+	'call' operation (correlator.cpp:79) to 'shiftPhaseClass' [303]  (1.15 ns)
 
- <State 4>: 7.58ns
+ <State 4>: 1.63ns
 The critical path consists of the following:
-	'load' operation ('cor_phaseClass0_V_15', correlator.cpp:214->correlator.cpp:64) on static variable 'cor_phaseClass0_V_15' [215]  (0 ns)
-	'add' operation ('tmp7', correlator.cpp:214->correlator.cpp:64) [238]  (1.68 ns)
-	'add' operation ('tmp6', correlator.cpp:214->correlator.cpp:64) [240]  (1.27 ns)
-	'add' operation ('p_Val2_2_5_i', correlator.cpp:214->correlator.cpp:64) [244]  (1.27 ns)
-	'select' operation ('__Val2__', correlator.cpp:219->correlator.cpp:64) [245]  (1.4 ns)
-	'icmp' operation ('tmp_i', correlator.cpp:218->correlator.cpp:64) [247]  (1.96 ns)
+	'call' operation ('op_V_assign', correlator.cpp:80) to 'correlator' [304]  (1.63 ns)
 
- <State 5>: 7.19ns
+ <State 5>: 8.13ns
 The critical path consists of the following:
-	'select' operation ('tmp_1_i', correlator.cpp:218->correlator.cpp:64) [250]  (1.4 ns)
-	'mul' operation ('__Val2__', correlator.cpp:223->correlator.cpp:64) [252]  (5.79 ns)
+	'call' operation ('op_V_assign', correlator.cpp:80) to 'correlator' [304]  (8.13 ns)
 
- <State 6>: 3.36ns
+ <State 6>: 2.85ns
 The critical path consists of the following:
-	'icmp' operation ('tmp_3', correlator.cpp:67) [254]  (1.96 ns)
-	'select' operation ('o_data_data_V_tmp', correlator.cpp:67) [255]  (1.4 ns)
+	'load' operation ('loadCount_V_load', correlator.cpp:78) on static variable 'loadCount_V' [285]  (0 ns)
+	'add' operation ('tmp_2', correlator.cpp:78) [301]  (1.78 ns)
+	'store' operation (correlator.cpp:78) of variable 'tmp_2', correlator.cpp:78 on static variable 'loadCount_V' [302]  (1.06 ns)
 
  <State 7>: 0ns
 The critical path consists of the following:

@@ -23,8 +23,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
-    "II": "1",
-    "Latency": "3",
+    "II": "4",
+    "Latency": "6",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -39,8 +39,18 @@
   },
   "Files": {
     "CSource": ["..\/..\/correlator.cpp"],
-    "Vhdl": ["impl\/vhdl\/correlateTop.vhd"],
-    "Verilog": ["impl\/verilog\/correlateTop.v"],
+    "Vhdl": [
+      "impl\/vhdl\/correlateTop_mul_bkb.vhd",
+      "impl\/vhdl\/correlator.vhd",
+      "impl\/vhdl\/shiftPhaseClass.vhd",
+      "impl\/vhdl\/correlateTop.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/correlateTop_mul_bkb.v",
+      "impl\/verilog\/correlator.v",
+      "impl\/verilog\/shiftPhaseClass.v",
+      "impl\/verilog\/correlateTop.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -188,12 +198,12 @@
     "o_data_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
+      "firstOutLatency": "5"
     },
     "o_data_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "2"
+      "firstOutLatency": "5"
     },
     "start_V": {
       "interfaceRef": "start_V",
@@ -209,32 +219,88 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "correlateTop"},
-    "Metrics": {"correlateTop": {
+    "Hierarchy": {
+      "ModuleName": "correlateTop",
+      "Instances": [
+        {
+          "ModuleName": "correlator",
+          "InstanceName": "grp_correlator_fu_604"
+        },
+        {
+          "ModuleName": "shiftPhaseClass",
+          "InstanceName": "StgValue_18_shiftPhaseClass_fu_1121"
+        }
+      ]
+    },
+    "Metrics": {
+      "shiftPhaseClass": {
         "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "3",
-          "LatencyWorst": "3",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
           "PipelineII": "1",
-          "PipelineDepth": "4",
+          "PipelineDepth": "1",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.64"
+          "Estimate": "1.15"
         },
         "Area": {
+          "LUT": "2160",
           "BRAM_18K": "0",
-          "FF": "621",
-          "LUT": "782",
-          "DSP48E": "0"
+          "DSP48E": "0",
+          "FF": "0"
         }
-      }}
+      },
+      "correlator": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "2",
+          "PipelineDepth": "2",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.21"
+        },
+        "Area": {
+          "DSP48E": "1",
+          "FF": "34",
+          "LUT": "4516",
+          "BRAM_18K": "0"
+        }
+      },
+      "correlateTop": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "4",
+          "PipelineDepth": "7",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.21"
+        },
+        "Area": {
+          "DSP48E": "1",
+          "FF": "4341",
+          "LUT": "7070",
+          "BRAM_18K": "0"
+        }
+      }
+    }
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-12 15:26:02 EDT",
+    "Time": "2019-03-15 15:35:02 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
