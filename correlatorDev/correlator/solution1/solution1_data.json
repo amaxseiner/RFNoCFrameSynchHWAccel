@@ -23,8 +23,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
-    "II": "x",
-    "Latency": "1",
+    "II": "3",
+    "Latency": "6",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -198,12 +198,12 @@
     "o_data_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "4"
+      "firstOutLatency": "5"
     },
     "o_data_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "4"
+      "firstOutLatency": "5"
     },
     "start_V": {
       "interfaceRef": "start_V",
@@ -224,11 +224,11 @@
       "Instances": [
         {
           "ModuleName": "correlator",
-          "InstanceName": "grp_correlator_fu_600"
+          "InstanceName": "grp_correlator_fu_602"
         },
         {
           "ModuleName": "shiftPhaseClass",
-          "InstanceName": "StgValue_39_shiftPhaseClass_fu_1117"
+          "InstanceName": "StgValue_21_shiftPhaseClass_fu_1119"
         }
       ]
     },
@@ -238,9 +238,9 @@
           "LatencyBest": "0",
           "LatencyAvg": "0",
           "LatencyWorst": "0",
-          "PipelineII": "0",
-          "PipelineDepth": "",
-          "PipelineType": "none"
+          "PipelineII": "1",
+          "PipelineDepth": "1",
+          "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
@@ -260,8 +260,8 @@
           "LatencyAvg": "1",
           "LatencyWorst": "1",
           "PipelineII": "1",
-          "PipelineDepth": "",
-          "PipelineType": "none"
+          "PipelineDepth": "2",
+          "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
@@ -270,21 +270,19 @@
         },
         "Area": {
           "DSP48E": "1",
-          "FF": "50",
-          "LUT": "4525",
+          "FF": "32",
+          "LUT": "4509",
           "BRAM_18K": "0"
         }
       },
       "correlateTop": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "4",
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
           "LatencyWorst": "6",
-          "PipelineIIMin": "2",
-          "PipelineIIMax": "7",
-          "PipelineII": "2 ~ 7",
-          "PipelineDepth": "",
-          "PipelineType": "none"
+          "PipelineII": "3",
+          "PipelineDepth": "7",
+          "PipelineType": "function"
         },
         "Timing": {
           "Target": "10.00",
@@ -293,8 +291,8 @@
         },
         "Area": {
           "DSP48E": "1",
-          "FF": "4384",
-          "LUT": "7042",
+          "FF": "4338",
+          "LUT": "7074",
           "BRAM_18K": "0"
         }
       }
@@ -302,7 +300,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-15 15:42:43 EDT",
+    "Time": "2019-03-16 13:33:40 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

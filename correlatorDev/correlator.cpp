@@ -1,11 +1,15 @@
+#include <iostream>
+#include <fstream>
 #include "hls_stream.h"
 #include "correlator.h"
+
+using namespace std;
 
 #define maxSize 256
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass,ofstream *result){
 
 //#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
@@ -13,7 +17,7 @@ void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_u
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 
-//#pragma HLS PIPELINE II=1
+#pragma HLS PIPELINE II=1
 
 static correlate cor;
 
@@ -24,7 +28,6 @@ static correlate cor;
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass4 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass5 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass6 complete dim=1
-
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass7 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass8 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass9 complete dim=1
@@ -37,8 +40,11 @@ static correlate cor;
 
 #pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
-static ap_fixed<16,11> newVal;
+static cor_t newVal;
 #pragma HLS RESET variable=newVal
+
+static corTransmit_t unScalled;
+#pragma HLS RESET variable=unScalled
 
   rfnoc_axis classType;
 
@@ -49,10 +55,10 @@ static ap_fixed<16,11> newVal;
 
   rfnoc_axis tmp_data;
 
-  static ap_fixed<16,11> corHelperI;
+  static cor_t corHelperI;
 #pragma HLS RESET variable=corHelperI
 
-  static ap_fixed<32,22> corHelperQ;
+  static cor_t corHelperQ;
 #pragma HLS RESET variable=corHelperQ
 
 // may add load state later, not neccessary right now
@@ -60,7 +66,7 @@ static ap_fixed<16,11> newVal;
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 
-static ap_fixed<16,11> out;
+static cor_t out;
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
 
@@ -74,17 +80,23 @@ switch(currentState) {
 	case ST_LOAD: // whenever there is valid input data, shift it in
 		//i_data.read(tmp_data);
 		o_data->last = i_data->last;
-		newVal.V = i_data->data.range(15,0); // RE
+		unScalled.V = i_data->data.range(31,0); // RE
+		newVal = unScalled;
+		/*if(phaseClass == 0){
+			*result << newVal;
+			*result << ",";
+			*result << endl;
+		}*/
 		loadCount = loadCount + 32;
 		cor.shiftPhaseClass(newVal,phaseClass);
 		out = cor.correlator(phaseClass);
 		//corHelperI = 0;
-		//o_data->data = out.V;
-		if(out > 200){
+		o_data->data = out.V;
+		/*if(out > 200){
 			o_data->data = loadCount;
 		} else {
 			o_data->data = 0;
-		}
+		}*/
 
 		//out_sample.data.range(3,0) = phaseClass;
 		//out_sample.last = 0;
@@ -96,8 +108,7 @@ switch(currentState) {
 
 }
 
-void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass){
-
+void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
 	switch(phaseClass){
 	case 0:
 		SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
@@ -106,7 +117,6 @@ void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass)
 		}
 		phaseClass0[0] = newValue;
 		break;
-
 	case 1:
 		SHIFT_DATA1: for(int a = windowSize-1;a>0;a--){
 			#pragma HLS UNROLL
@@ -216,8 +226,8 @@ void correlate::shiftPhaseClass(ap_fixed<16,11> newValue, ap_uint<4> phaseClass)
 
 }
 
-ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){
-	ap_fixed<16,11> corHelperINeg,corHelperIPos,res;
+cor_t correlate::correlator(ap_uint<4> phaseClass){
+	cor_t corHelperINeg,corHelperIPos,res;
 	corHelperINeg = 0;
 	corHelperIPos = 0;
 	switch(phaseClass){
@@ -361,7 +371,6 @@ ap_fixed<16,11> correlate::correlator(ap_uint<4> phaseClass){
 			}
 		}
 	break;
-
 	case 14:
 		correlateData14: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL

@@ -2,9 +2,9 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="rfnoc.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h"/>
-    <originFiles name="forAl.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/forAl.csv"/>
     <originFiles name="correlator.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"/>
-    <originFiles name="lancep2.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/lancep2.csv"/>
+    <originFiles name="joeIsAnIdiot.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/joeIsAnIdiot.csv"/>
+    <originFiles name="alexisdumb.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/alexisdumb.csv"/>
   </source>
   <testbench>
     <originFiles name="correlatorTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"/>

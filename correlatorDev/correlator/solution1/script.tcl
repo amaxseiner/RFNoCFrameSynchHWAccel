@@ -5,9 +5,9 @@
 ############################################################
 open_project correlator
 set_top correlateTop
+add_files alexisdumb.csv
 add_files correlator.cpp
-add_files forAl.csv
-add_files lancep2.csv
+add_files joeIsAnIdiot.csv
 add_files rfnoc.h
 add_files -tb correlatorTB.cpp
 open_solution "solution1"

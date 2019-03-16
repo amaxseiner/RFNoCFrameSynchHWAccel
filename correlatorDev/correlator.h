@@ -1,5 +1,6 @@
 #include "ap_int.h"
 #include "ap_fixed.h"
+using namespace std;
 
  struct rfnoc_axis{
      ap_int<32> data;
@@ -18,31 +19,34 @@
 
 #define windowSize 16
 
-static ap_int<2> corrSeq[windowSize] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+static ap_int<2> corrSeq[windowSize] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
+		//{-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
 
+typedef ap_fixed<32,22> cor_t;
+typedef ap_fixed<16,11> corTransmit_t;
 
- void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass);
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass,ofstream *result);
 
  class correlate{
  public:
-	 void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
-	 ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
-	 ap_fixed<16,11> phaseArray[16];
-	 ap_fixed<16,11> phaseClass0[windowSize];
-	 ap_fixed<16,11> phaseClass1[windowSize];
-	 ap_fixed<16,11> phaseClass2[windowSize];
-	 ap_fixed<16,11> phaseClass3[windowSize];
-	 ap_fixed<16,11> phaseClass4[windowSize];
-	 ap_fixed<16,11> phaseClass5[windowSize];
-	 ap_fixed<16,11> phaseClass6[windowSize];
-	 ap_fixed<16,11> phaseClass7[windowSize];
-	 ap_fixed<16,11> phaseClass8[windowSize];
-	 ap_fixed<16,11> phaseClass9[windowSize];
-	 ap_fixed<16,11> phaseClass10[windowSize];
-	 ap_fixed<16,11> phaseClass11[windowSize];
-	 ap_fixed<16,11> phaseClass12[windowSize];
-	 ap_fixed<16,11> phaseClass13[windowSize];
-	 ap_fixed<16,11> phaseClass14[windowSize];
-	 ap_fixed<16,11> phaseClass15[windowSize];
+	 void shiftPhaseClass(cor_t newVal, ap_uint<4> phaseClass);
+	 cor_t correlator(ap_uint<4> phaseClass);
+	 cor_t phaseArray[16];
+	 cor_t phaseClass0[windowSize];
+	 cor_t phaseClass1[windowSize];
+	 cor_t phaseClass2[windowSize];
+	 cor_t phaseClass3[windowSize];
+	 cor_t phaseClass4[windowSize];
+	 cor_t phaseClass5[windowSize];
+	 cor_t phaseClass6[windowSize];
+	 cor_t phaseClass7[windowSize];
+	 cor_t phaseClass8[windowSize];
+	 cor_t phaseClass9[windowSize];
+	 cor_t phaseClass10[windowSize];
+	 cor_t phaseClass11[windowSize];
+	 cor_t phaseClass12[windowSize];
+	 cor_t phaseClass13[windowSize];
+	 cor_t phaseClass14[windowSize];
+	 cor_t phaseClass15[windowSize];
 
  };
