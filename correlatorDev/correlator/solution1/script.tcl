@@ -5,10 +5,10 @@
 ############################################################
 open_project correlator
 set_top correlateTop
-add_files alexisdumb.csv
-add_files correlator.cpp
-add_files joeIsAnIdiot.csv
 add_files rfnoc.h
+add_files joeIsAnIdiot.csv
+add_files correlator.cpp
+add_files alexisdumb.csv
 add_files -tb correlatorTB.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1}
@@ -18,5 +18,5 @@ config_interface -m_axi_offset off -register_io off
 source "./correlator/solution1/directives.tcl"
 csim_design -clean -compiler gcc -setup
 csynth_design
-cosim_design -compiler gcc -trace_level all -tool xsim
+cosim_design -trace_level all -tool xsim
 export_design -rtl verilog -format ip_catalog

@@ -9,7 +9,7 @@ using namespace std;
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass,ofstream *result){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass/*,ofstream *result*/){
 
 //#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
@@ -17,7 +17,7 @@ void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_u
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
 
-#pragma HLS PIPELINE II=1
+#pragma HLS PIPELINE II=2
 
 static correlate cor;
 
@@ -91,12 +91,12 @@ switch(currentState) {
 		cor.shiftPhaseClass(newVal,phaseClass);
 		out = cor.correlator(phaseClass);
 		//corHelperI = 0;
-		o_data->data = out.V;
-		/*if(out > 200){
+		//o_data->data = out.V;
+		if(out > 200){
 			o_data->data = loadCount;
 		} else {
 			o_data->data = 0;
-		}*/
+		}
 
 		//out_sample.data.range(3,0) = phaseClass;
 		//out_sample.last = 0;
@@ -109,7 +109,7 @@ switch(currentState) {
 }
 
 void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
-	switch(phaseClass){
+	/*switch(phaseClass){
 	case 0:
 		SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
 			#pragma HLS UNROLL
@@ -222,6 +222,10 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
 		}
 		phaseClass15[0] = newValue;
 		break;
+	}*/
+	SHIFT_DATA: for(int a = windowSize-1;a>0;a--){
+		//#pragma HLS UNROLL
+		phaseArray[phaseClass].phaseWindow[a] = phaseArray[phaseClass].phaseWindow[a-1];
 	}
 
 }
@@ -230,7 +234,15 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
 	cor_t corHelperINeg,corHelperIPos,res;
 	corHelperINeg = 0;
 	corHelperIPos = 0;
-	switch(phaseClass){
+	correlateData0: for(int a =windowSize-1;a>=0;a--){
+			#pragma HLS UNROLL
+			if(corrSeq[a] == 1){
+				corHelperIPos = corHelperIPos + (phaseArray[phaseClass].phaseWindow[a]);
+			} else {
+				corHelperINeg = corHelperINeg + (phaseArray[phaseClass].phaseWindow[a]);
+			}
+		}
+	/*switch(phaseClass){
 	case 0:
 		correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
@@ -391,7 +403,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
 			}
 		}
 	break;
-	}
+	}*/
 
 	if(corHelperIPos > corHelperINeg){
 		res = corHelperIPos - corHelperINeg;

@@ -1,0 +1,1 @@
+lappend pragmaStatus0 {pragma "UNROLL" source "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp" location "correlator/SHIFT_DATA0" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'UNROLL' cannot be applied: Function 'correlator' does not exist in any synthesis source file."}

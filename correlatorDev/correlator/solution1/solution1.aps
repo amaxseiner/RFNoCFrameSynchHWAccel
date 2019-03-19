@@ -1,7 +1,4 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
-    <checksum>
-        <value string="false"/>
-    </checksum>
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
@@ -11,7 +8,7 @@
         <config_interface clock_enable="0" expose_global="0" m_axi_addr64="0" m_axi_offset="off" register_io="off" trim_dangling_port="0"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/kintex7/kintex7</Platform>
             <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
             <customLibs/>
@@ -49,8 +46,8 @@
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
-    <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="true" compileChoice="gcc" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim">
+    <Simulation argv="">
+        <SimFlow askAgain="true" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="xsim" ldflags="" mflags="" compiledLibrary="">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -70,7 +67,7 @@
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="10"/>
+        <clock default="false" name="default" period="10"/>
     </clockList>
 </solution>
 

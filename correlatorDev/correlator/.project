@@ -37,6 +37,16 @@
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/correlator.h</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h</location>
+		</link>
+		<link>
+			<name>.reference/correlator.pragma.1.cpp</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.1.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
