@@ -19,7 +19,7 @@ set ResetLevelFlag 0
 set ResetStyle "state"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
-set ResetVariableFlag 1
+set ResetVariableFlag 0
 set fsmEncStyle "onehot"
 set maxFanout "0"
 set RtlPrefix ""
@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../../ItoZero.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/solution1.directive}
+set DirectiveFile {/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/solution1/solution1.directive}
 set TBFiles {verilog ../../ItoZeroTB.cpp bc ../../ItoZeroTB.cpp vhdl ../../ItoZeroTB.cpp sc ../../ItoZeroTB.cpp cas ../../ItoZeroTB.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

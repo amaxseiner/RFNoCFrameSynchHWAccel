@@ -1,0 +1,4 @@
+<annotationInfo>
+<item  id="20" filename="ItoZero.cpp" linenumber="52" name="tmp" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="tmp_fu_69_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero"></item>
+<item  id="21" filename="ItoZero.cpp" linenumber="52" name="p_Result_s" contextFuncName="ItoZero" moduleName="ItoZero" rtlName="p_Result_s_fu_73_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero"></item>
+</annotationInfo>

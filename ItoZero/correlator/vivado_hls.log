@@ -1,5 +1,13 @@
-INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'lance' on host 'lancecomp' (Windows NT_amd64 version 6.2) on Sat Mar 09 18:46:54 -0500 2019
-INFO: [HLS 200-10] In directory 'D:/SeniorProject/RFNoCFrameSynchHWAccel/ItoZero/correlator'
-INFO: [HLS 200-10] Unencrypted File
-INFO: [HLS 200-10] Unencrypted File
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Thu Mar 21 16:23:45 EDT 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator'
+INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
+INFO: [Common 17-206] Exiting vivado_hls at Thu Mar 21 16:41:04 2019...

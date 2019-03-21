@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="vivado_hls.log" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\ItoZero\correlator\vivado_hls.log"/>
-    <originFiles name="rfnoc.h" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\ItoZero\rfnoc.h"/>
-    <originFiles name="ItoZero.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\ItoZero\ItoZero.cpp"/>
+    <originFiles name="ItoZero.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZero.cpp"/>
+    <originFiles name="rfnoc.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/rfnoc.h"/>
+    <originFiles name="vivado_hls.log" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/correlator/vivado_hls.log"/>
   </source>
   <testbench>
-    <originFiles name="ItoZeroTB.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\ItoZero\ItoZeroTB.cpp"/>
+    <originFiles name="ItoZeroTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero/ItoZeroTB.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

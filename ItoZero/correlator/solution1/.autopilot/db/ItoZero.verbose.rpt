@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'ItoZero'
 ================================================================
-* Date:           Sat Mar  9 18:47:16 2019
+* Date:           Thu Mar 21 16:40:14 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |   5.00|      1.40|        0.63|
+    |ap_clk  |   5.00|      0.00|        0.62|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -49,14 +49,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       0|      34|
+|Expression       |        -|      -|       0|     128|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|     114|
-|Register         |        -|      -|     154|       -|
+|Register         |        -|      -|     151|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     154|     148|
+|Total            |        0|      0|     151|     242|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -80,27 +80,24 @@
     +----------------------------------+----------+-------+---+----+------------+------------+
     |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |ap_block_state2_io                |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state2_pp0_stage0_iter1  |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state3_io                |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_last_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_last_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |ap_block_pp0_stage0_flag00001001  |    or    |      0|  0|   2|           1|           1|
-    |ap_block_pp0_stage0_flag00011001  |    or    |      0|  0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|  0|   2|           1|           1|
-    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|  0|   8|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                             |          |      0|  0|  34|          23|          20|
+    |Total                             |          |      0|  0| 128|          20|          17|
     +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -122,38 +119,35 @@
     +----------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------------------+----+----+-----+-----------+
-    |                    Name                    | FF | LUT| Bits| Const Bits|
-    +--------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                   |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_currentState_load_reg_110  |   1|   0|    1|          0|
-    |currentState                                |   1|   0|    1|          0|
-    |currentState_load_reg_110                   |   1|   0|    1|          0|
-    |i_data_V_data_V_0_payload_A                 |  32|   0|   32|          0|
-    |i_data_V_data_V_0_payload_B                 |  32|   0|   32|          0|
-    |i_data_V_data_V_0_sel_rd                    |   1|   0|    1|          0|
-    |i_data_V_data_V_0_sel_wr                    |   1|   0|    1|          0|
-    |i_data_V_data_V_0_state                     |   2|   0|    2|          0|
-    |i_data_V_last_V_0_payload_A                 |   1|   0|    1|          0|
-    |i_data_V_last_V_0_payload_B                 |   1|   0|    1|          0|
-    |i_data_V_last_V_0_sel_rd                    |   1|   0|    1|          0|
-    |i_data_V_last_V_0_sel_wr                    |   1|   0|    1|          0|
-    |i_data_V_last_V_0_state                     |   2|   0|    2|          0|
-    |o_data_V_data_V_1_payload_A                 |  32|   0|   32|          0|
-    |o_data_V_data_V_1_payload_B                 |  32|   0|   32|          0|
-    |o_data_V_data_V_1_sel_rd                    |   1|   0|    1|          0|
-    |o_data_V_data_V_1_sel_wr                    |   1|   0|    1|          0|
-    |o_data_V_data_V_1_state                     |   2|   0|    2|          0|
-    |o_data_V_last_V_1_payload_A                 |   1|   0|    1|          0|
-    |o_data_V_last_V_1_payload_B                 |   1|   0|    1|          0|
-    |o_data_V_last_V_1_sel_rd                    |   1|   0|    1|          0|
-    |o_data_V_last_V_1_sel_wr                    |   1|   0|    1|          0|
-    |o_data_V_last_V_1_state                     |   2|   0|    2|          0|
-    +--------------------------------------------+----+----+-----+-----------+
-    |Total                                       | 154|   0|  154|          0|
-    +--------------------------------------------+----+----+-----+-----------+
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |i_data_V_data_V_0_payload_A  |  32|   0|   32|          0|
+    |i_data_V_data_V_0_payload_B  |  32|   0|   32|          0|
+    |i_data_V_data_V_0_sel_rd     |   1|   0|    1|          0|
+    |i_data_V_data_V_0_sel_wr     |   1|   0|    1|          0|
+    |i_data_V_data_V_0_state      |   2|   0|    2|          0|
+    |i_data_V_last_V_0_payload_A  |   1|   0|    1|          0|
+    |i_data_V_last_V_0_payload_B  |   1|   0|    1|          0|
+    |i_data_V_last_V_0_sel_rd     |   1|   0|    1|          0|
+    |i_data_V_last_V_0_sel_wr     |   1|   0|    1|          0|
+    |i_data_V_last_V_0_state      |   2|   0|    2|          0|
+    |o_data_V_data_V_1_payload_A  |  32|   0|   32|          0|
+    |o_data_V_data_V_1_payload_B  |  32|   0|   32|          0|
+    |o_data_V_data_V_1_sel_rd     |   1|   0|    1|          0|
+    |o_data_V_data_V_1_sel_wr     |   1|   0|    1|          0|
+    |o_data_V_data_V_1_state      |   2|   0|    2|          0|
+    |o_data_V_last_V_1_payload_A  |   1|   0|    1|          0|
+    |o_data_V_last_V_1_payload_B  |   1|   0|    1|          0|
+    |o_data_V_last_V_1_sel_rd     |   1|   0|    1|          0|
+    |o_data_V_last_V_1_sel_wr     |   1|   0|    1|          0|
+    |o_data_V_last_V_1_state      |   2|   0|    2|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 151|   0|  151|          0|
+    +-----------------------------+----+----+-----+-----------+
 
 
 
@@ -206,9 +200,9 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 3
-* Pipeline: 1
-  Pipeline-0: II = 1, D = 3, States = { 1 2 3 }
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -217,115 +211,34 @@ IsGatedGlobalClock: 0
 2 --> 
 	3  / true
 3 --> 
+
 * FSM state operations: 
 
- <State 1>: 1.40ns
-ST_1: start_V_read (13)  [1/1] 0.00ns
-.preheader96.preheader:6  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
+ <State 1> : 0.00ns
+ST_1 : Operation 4 [2/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [ItoZero.cpp:50]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
-ST_1: currentState_load (23)  [1/1] 0.00ns  loc: ItoZero.cpp:62
-.preheader96.preheader:16  %currentState_load = load i1* @currentState, align 1
+ <State 2> : 0.00ns
+ST_2 : Operation 5 [1/2] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)" [ItoZero.cpp:50]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0" [ItoZero.cpp:50]
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i1 } %empty, 1" [ItoZero.cpp:50]
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %tmp_data_V_1 to i16" [ItoZero.cpp:52]
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %tmp)" [ItoZero.cpp:52]
+ST_2 : Operation 10 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [ItoZero.cpp:56]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
-ST_1: StgValue_6 (26)  [1/1] 0.00ns  loc: ItoZero.cpp:69
-.preheader96.preheader:19  br i1 %currentState_load, label %2, label %0
-
-ST_1: StgValue_7 (28)  [1/1] 0.00ns  loc: ItoZero.cpp:71
-:0  br i1 %start_V_read, label %1, label %._crit_edge103
-
-ST_1: StgValue_8 (30)  [1/1] 0.00ns  loc: ItoZero.cpp:72
-:0  store i1 true, i1* @currentState, align 1
-
-ST_1: empty (35)  [2/2] 0.00ns  loc: ItoZero.cpp:77
-:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
-
-
- <State 2>: 0.00ns
-ST_2: empty (35)  [1/2] 0.00ns  loc: ItoZero.cpp:77
-:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
-
-ST_2: tmp_data_V_1 (36)  [1/1] 0.00ns  loc: ItoZero.cpp:77
-:1  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
-
-ST_2: tmp_last_V (37)  [1/1] 0.00ns  loc: ItoZero.cpp:77
-:2  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
-
-ST_2: tmp (38)  [1/1] 0.00ns  loc: ItoZero.cpp:79
-:3  %tmp = trunc i32 %tmp_data_V_1 to i16
-
-ST_2: p_Result_s (39)  [1/1] 0.00ns  loc: ItoZero.cpp:79
-:4  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %tmp)
-
-ST_2: StgValue_15 (40)  [2/2] 0.00ns  loc: ItoZero.cpp:83
-:5  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
-
-
- <State 3>: 0.00ns
-ST_3: StgValue_16 (7)  [1/1] 0.00ns
-.preheader96.preheader:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !66
-
-ST_3: StgValue_17 (8)  [1/1] 0.00ns
-.preheader96.preheader:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !70
-
-ST_3: StgValue_18 (9)  [1/1] 0.00ns
-.preheader96.preheader:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !74
-
-ST_3: StgValue_19 (10)  [1/1] 0.00ns
-.preheader96.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !78
-
-ST_3: StgValue_20 (11)  [1/1] 0.00ns
-.preheader96.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !82
-
-ST_3: StgValue_21 (12)  [1/1] 0.00ns
-.preheader96.preheader:5  call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @ItoZero_str) nounwind
-
-ST_3: StgValue_22 (14)  [1/1] 0.00ns  loc: ItoZero.cpp:35
-.preheader96.preheader:7  call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
-
-ST_3: StgValue_23 (15)  [1/1] 0.00ns  loc: ItoZero.cpp:37
-.preheader96.preheader:8  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_24 (16)  [1/1] 0.00ns  loc: ItoZero.cpp:38
-.preheader96.preheader:9  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_25 (17)  [1/1] 0.00ns  loc: ItoZero.cpp:39
-.preheader96.preheader:10  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_26 (18)  [1/1] 0.00ns  loc: ItoZero.cpp:40
-.preheader96.preheader:11  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_27 (19)  [1/1] 0.00ns  loc: ItoZero.cpp:42
-.preheader96.preheader:12  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)
-
-ST_3: StgValue_28 (20)  [1/1] 0.00ns  loc: ItoZero.cpp:45
-.preheader96.preheader:13  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str)
-
-ST_3: StgValue_29 (21)  [1/1] 0.00ns  loc: ItoZero.cpp:50
-.preheader96.preheader:14  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_30 (22)  [1/1] 0.00ns  loc: ItoZero.cpp:52
-.preheader96.preheader:15  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_31 (24)  [1/1] 0.00ns  loc: ItoZero.cpp:62
-.preheader96.preheader:17  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_32 (25)  [1/1] 0.00ns  loc: ItoZero.cpp:66
-.preheader96.preheader:18  call void (...)* @_ssdm_op_SpecReset(i32 0, i32 1, [1 x i8]* @p_str) nounwind
-
-ST_3: StgValue_33 (31)  [1/1] 0.00ns  loc: ItoZero.cpp:74
-:1  br label %._crit_edge103
-
-ST_3: StgValue_34 (33)  [1/1] 0.00ns  loc: ItoZero.cpp:75
-._crit_edge103:0  br label %._crit_edge102
-
-ST_3: StgValue_35 (40)  [1/2] 0.00ns  loc: ItoZero.cpp:83
-:5  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
-
-ST_3: StgValue_36 (41)  [1/1] 0.00ns  loc: ItoZero.cpp:84
-:6  br label %._crit_edge102
-
-ST_3: StgValue_37 (43)  [1/1] 0.00ns  loc: ItoZero.cpp:87
-._crit_edge102:0  ret void
-
+ <State 3> : 0.00ns
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !66"
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !70"
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !74"
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !78"
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !82"
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @ItoZero_str) nounwind"
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResource(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [ItoZero.cpp:34]
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:36]
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:37]
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:38]
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [ItoZero.cpp:39]
+ST_3 : Operation 22 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)" [ItoZero.cpp:56]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "ret void" [ItoZero.cpp:59]
 
 
 ============================================================
@@ -343,46 +256,31 @@ Port [ i_data_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; stat
 Port [ i_data_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ o_data_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ o_data_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ start_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ currentState]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ start_V]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-start_V_read      (read          ) [ 0111]
-currentState_load (load          ) [ 0111]
-StgValue_6        (br            ) [ 0000]
-StgValue_7        (br            ) [ 0000]
-StgValue_8        (store         ) [ 0000]
-empty             (read          ) [ 0000]
-tmp_data_V_1      (extractvalue  ) [ 0000]
-tmp_last_V        (extractvalue  ) [ 0101]
-tmp               (trunc         ) [ 0000]
-p_Result_s        (bitconcatenate) [ 0101]
-StgValue_16       (specbitsmap   ) [ 0000]
-StgValue_17       (specbitsmap   ) [ 0000]
-StgValue_18       (specbitsmap   ) [ 0000]
-StgValue_19       (specbitsmap   ) [ 0000]
-StgValue_20       (specbitsmap   ) [ 0000]
-StgValue_21       (spectopmodule ) [ 0000]
-StgValue_22       (specresource  ) [ 0000]
-StgValue_23       (specinterface ) [ 0000]
-StgValue_24       (specinterface ) [ 0000]
-StgValue_25       (specinterface ) [ 0000]
-StgValue_26       (specpipeline  ) [ 0000]
-StgValue_27       (specreset     ) [ 0000]
-StgValue_28       (specreset     ) [ 0000]
-StgValue_29       (specreset     ) [ 0000]
-StgValue_30       (specreset     ) [ 0000]
-StgValue_31       (specreset     ) [ 0000]
-StgValue_32       (specreset     ) [ 0000]
-StgValue_33       (br            ) [ 0000]
-StgValue_34       (br            ) [ 0000]
-StgValue_35       (write         ) [ 0000]
-StgValue_36       (br            ) [ 0000]
-StgValue_37       (ret           ) [ 0000]
+empty        (read          ) [ 0000]
+tmp_data_V_1 (extractvalue  ) [ 0000]
+tmp_last_V   (extractvalue  ) [ 0101]
+tmp          (trunc         ) [ 0000]
+p_Result_s   (bitconcatenate) [ 0101]
+StgValue_11  (specbitsmap   ) [ 0000]
+StgValue_12  (specbitsmap   ) [ 0000]
+StgValue_13  (specbitsmap   ) [ 0000]
+StgValue_14  (specbitsmap   ) [ 0000]
+StgValue_15  (specbitsmap   ) [ 0000]
+StgValue_16  (spectopmodule ) [ 0000]
+StgValue_17  (specresource  ) [ 0000]
+StgValue_18  (specinterface ) [ 0000]
+StgValue_19  (specinterface ) [ 0000]
+StgValue_20  (specinterface ) [ 0000]
+StgValue_21  (specpipeline  ) [ 0000]
+StgValue_22  (write         ) [ 0000]
+StgValue_23  (ret           ) [ 0000]
 </LifeTime>
 
 <model>
@@ -426,19 +324,19 @@ StgValue_37       (ret           ) [ 0000]
 
 <comp id="8" class="1000" name="start_V">
 <pin_list>
-<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name="start_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="10" class="1000" name="currentState">
+<comp id="10" class="1001" name="const_10">
 <pin_list>
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="currentState"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i32P.i1P"/></StgValue>
 </bind>
 </comp>
 
@@ -447,7 +345,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="13" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i32.i16.i16"/></StgValue>
 </bind>
 </comp>
 
@@ -465,34 +363,34 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="17" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i32P.i1P"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.axis.volatile.i32P.i1P"/></StgValue>
 </bind>
 </comp>
 
 <comp id="18" class="1001" name="const_18">
 <pin_list>
-<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i32.i16.i16"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
 </bind>
 </comp>
 
 <comp id="20" class="1001" name="const_20">
 <pin_list>
-<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
 </bind>
 </comp>
 
 <comp id="22" class="1001" name="const_22">
 <pin_list>
-<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.axis.volatile.i32P.i1P"/></StgValue>
+<StgValue><ssdm name="ItoZero_str"/></StgValue>
 </bind>
 </comp>
 
@@ -501,7 +399,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecResource"/></StgValue>
 </bind>
 </comp>
 
@@ -510,7 +408,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+<StgValue><ssdm name="p_str"/></StgValue>
 </bind>
 </comp>
 
@@ -519,7 +417,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ItoZero_str"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -528,7 +426,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecResource"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
 </bind>
 </comp>
 
@@ -537,7 +435,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -546,7 +444,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -555,7 +453,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+<StgValue><ssdm name="p_str2"/></StgValue>
 </bind>
 </comp>
 
@@ -564,7 +462,7 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -573,64 +471,16 @@ StgValue_37       (ret           ) [ 0000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1"/></StgValue>
-</bind>
-</comp>
-
-<comp id="42" class="1001" name="const_42">
-<pin_list>
-<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
-</bind>
-</comp>
-
-<comp id="44" class="1001" name="const_44">
-<pin_list>
-<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
-</bind>
-</comp>
-
-<comp id="46" class="1001" name="const_46">
-<pin_list>
-<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
 <StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
 </bind>
 </comp>
 
-<comp id="48" class="1001" name="const_48">
+<comp id="42" class="1004" name="grp_read_fu_42">
 <pin_list>
-<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="_ssdm_op_SpecReset"/></StgValue>
-</bind>
-</comp>
-
-<comp id="50" class="1004" name="start_V_read_read_fu_50">
-<pin_list>
-<pin id="51" dir="0" index="0" bw="1" slack="0"/>
-<pin id="52" dir="0" index="1" bw="1" slack="0"/>
-<pin id="53" dir="1" index="2" bw="1" slack="2"/>
-</pin_list>
-<bind>
-<opcode="read(1150) " fcode="read"/>
-<opset="start_V_read/1 "/>
-</bind>
-</comp>
-
-<comp id="56" class="1004" name="grp_read_fu_56">
-<pin_list>
-<pin id="57" dir="0" index="0" bw="33" slack="0"/>
-<pin id="58" dir="0" index="1" bw="32" slack="0"/>
-<pin id="59" dir="0" index="2" bw="1" slack="0"/>
-<pin id="60" dir="1" index="3" bw="33" slack="0"/>
+<pin id="43" dir="0" index="0" bw="33" slack="0"/>
+<pin id="44" dir="0" index="1" bw="32" slack="0"/>
+<pin id="45" dir="0" index="2" bw="1" slack="0"/>
+<pin id="46" dir="1" index="3" bw="33" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -638,48 +488,25 @@ StgValue_37       (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="64" class="1004" name="grp_write_fu_64">
+<comp id="50" class="1004" name="grp_write_fu_50">
 <pin_list>
-<pin id="65" dir="0" index="0" bw="0" slack="0"/>
-<pin id="66" dir="0" index="1" bw="32" slack="0"/>
-<pin id="67" dir="0" index="2" bw="1" slack="0"/>
-<pin id="68" dir="0" index="3" bw="32" slack="0"/>
-<pin id="69" dir="0" index="4" bw="1" slack="0"/>
-<pin id="70" dir="1" index="5" bw="0" slack="2147483647"/>
+<pin id="51" dir="0" index="0" bw="0" slack="0"/>
+<pin id="52" dir="0" index="1" bw="32" slack="0"/>
+<pin id="53" dir="0" index="2" bw="1" slack="0"/>
+<pin id="54" dir="0" index="3" bw="32" slack="0"/>
+<pin id="55" dir="0" index="4" bw="1" slack="0"/>
+<pin id="56" dir="1" index="5" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="StgValue_15/2 "/>
+<opset="StgValue_10/2 "/>
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="currentState_load_load_fu_74">
+<comp id="60" class="1004" name="tmp_data_V_1_fu_60">
 <pin_list>
-<pin id="75" dir="0" index="0" bw="1" slack="0"/>
-<pin id="76" dir="1" index="1" bw="1" slack="1"/>
-</pin_list>
-<bind>
-<opcode="load(27) " fcode="load"/>
-<opset="currentState_load/1 "/>
-</bind>
-</comp>
-
-<comp id="78" class="1004" name="StgValue_8_store_fu_78">
-<pin_list>
-<pin id="79" dir="0" index="0" bw="1" slack="0"/>
-<pin id="80" dir="0" index="1" bw="1" slack="0"/>
-<pin id="81" dir="1" index="2" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="store(28) " fcode="store"/>
-<opset="StgValue_8/1 "/>
-</bind>
-</comp>
-
-<comp id="84" class="1004" name="tmp_data_V_1_fu_84">
-<pin_list>
-<pin id="85" dir="0" index="0" bw="33" slack="0"/>
-<pin id="86" dir="1" index="1" bw="32" slack="0"/>
+<pin id="61" dir="0" index="0" bw="33" slack="0"/>
+<pin id="62" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="extractvalue(56) " fcode="extractvalue"/>
@@ -687,10 +514,10 @@ StgValue_37       (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="88" class="1004" name="tmp_last_V_fu_88">
+<comp id="64" class="1004" name="tmp_last_V_fu_64">
 <pin_list>
-<pin id="89" dir="0" index="0" bw="33" slack="0"/>
-<pin id="90" dir="1" index="1" bw="1" slack="0"/>
+<pin id="65" dir="0" index="0" bw="33" slack="0"/>
+<pin id="66" dir="1" index="1" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="extractvalue(56) " fcode="extractvalue"/>
@@ -698,10 +525,10 @@ StgValue_37       (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="93" class="1004" name="tmp_fu_93">
+<comp id="69" class="1004" name="tmp_fu_69">
 <pin_list>
-<pin id="94" dir="0" index="0" bw="32" slack="0"/>
-<pin id="95" dir="1" index="1" bw="16" slack="0"/>
+<pin id="70" dir="0" index="0" bw="32" slack="0"/>
+<pin id="71" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -709,12 +536,12 @@ StgValue_37       (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="97" class="1004" name="p_Result_s_fu_97">
+<comp id="73" class="1004" name="p_Result_s_fu_73">
 <pin_list>
-<pin id="98" dir="0" index="0" bw="32" slack="0"/>
-<pin id="99" dir="0" index="1" bw="1" slack="0"/>
-<pin id="100" dir="0" index="2" bw="16" slack="0"/>
-<pin id="101" dir="1" index="3" bw="32" slack="0"/>
+<pin id="74" dir="0" index="0" bw="32" slack="0"/>
+<pin id="75" dir="0" index="1" bw="1" slack="0"/>
+<pin id="76" dir="0" index="2" bw="16" slack="0"/>
+<pin id="77" dir="1" index="3" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -722,40 +549,20 @@ StgValue_37       (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="106" class="1005" name="start_V_read_reg_106">
+<comp id="82" class="1005" name="tmp_last_V_reg_82">
 <pin_list>
-<pin id="107" dir="0" index="0" bw="1" slack="2"/>
-<pin id="108" dir="1" index="1" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<opset="start_V_read "/>
-</bind>
-</comp>
-
-<comp id="110" class="1005" name="currentState_load_reg_110">
-<pin_list>
-<pin id="111" dir="0" index="0" bw="1" slack="1"/>
-<pin id="112" dir="1" index="1" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<opset="currentState_load "/>
-</bind>
-</comp>
-
-<comp id="114" class="1005" name="tmp_last_V_reg_114">
-<pin_list>
-<pin id="115" dir="0" index="0" bw="1" slack="1"/>
-<pin id="116" dir="1" index="1" bw="1" slack="1"/>
+<pin id="83" dir="0" index="0" bw="1" slack="1"/>
+<pin id="84" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opset="tmp_last_V "/>
 </bind>
 </comp>
 
-<comp id="119" class="1005" name="p_Result_s_reg_119">
+<comp id="87" class="1005" name="p_Result_s_reg_87">
 <pin_list>
-<pin id="120" dir="0" index="0" bw="32" slack="1"/>
-<pin id="121" dir="1" index="1" bw="32" slack="1"/>
+<pin id="88" dir="0" index="0" bw="32" slack="1"/>
+<pin id="89" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="p_Result_s "/>
@@ -765,55 +572,41 @@ StgValue_37       (ret           ) [ 0000]
 </comp_list>
 
 <net_list>
-<net id="54"><net_src comp="12" pin="0"/><net_sink comp="50" pin=0"/></net>
+<net id="47"><net_src comp="10" pin="0"/><net_sink comp="42" pin=0"/></net>
 
-<net id="55"><net_src comp="8" pin="0"/><net_sink comp="50" pin=1"/></net>
+<net id="48"><net_src comp="0" pin="0"/><net_sink comp="42" pin=1"/></net>
 
-<net id="61"><net_src comp="16" pin="0"/><net_sink comp="56" pin=0"/></net>
+<net id="49"><net_src comp="2" pin="0"/><net_sink comp="42" pin=2"/></net>
 
-<net id="62"><net_src comp="0" pin="0"/><net_sink comp="56" pin=1"/></net>
+<net id="57"><net_src comp="16" pin="0"/><net_sink comp="50" pin=0"/></net>
 
-<net id="63"><net_src comp="2" pin="0"/><net_sink comp="56" pin=2"/></net>
+<net id="58"><net_src comp="4" pin="0"/><net_sink comp="50" pin=1"/></net>
 
-<net id="71"><net_src comp="22" pin="0"/><net_sink comp="64" pin=0"/></net>
+<net id="59"><net_src comp="6" pin="0"/><net_sink comp="50" pin=2"/></net>
 
-<net id="72"><net_src comp="4" pin="0"/><net_sink comp="64" pin=1"/></net>
+<net id="63"><net_src comp="42" pin="3"/><net_sink comp="60" pin=0"/></net>
 
-<net id="73"><net_src comp="6" pin="0"/><net_sink comp="64" pin=2"/></net>
+<net id="67"><net_src comp="42" pin="3"/><net_sink comp="64" pin=0"/></net>
 
-<net id="77"><net_src comp="10" pin="0"/><net_sink comp="74" pin=0"/></net>
+<net id="68"><net_src comp="64" pin="1"/><net_sink comp="50" pin=4"/></net>
 
-<net id="82"><net_src comp="14" pin="0"/><net_sink comp="78" pin=0"/></net>
+<net id="72"><net_src comp="60" pin="1"/><net_sink comp="69" pin=0"/></net>
 
-<net id="83"><net_src comp="10" pin="0"/><net_sink comp="78" pin=1"/></net>
+<net id="78"><net_src comp="12" pin="0"/><net_sink comp="73" pin=0"/></net>
 
-<net id="87"><net_src comp="56" pin="3"/><net_sink comp="84" pin=0"/></net>
+<net id="79"><net_src comp="14" pin="0"/><net_sink comp="73" pin=1"/></net>
 
-<net id="91"><net_src comp="56" pin="3"/><net_sink comp="88" pin=0"/></net>
+<net id="80"><net_src comp="69" pin="1"/><net_sink comp="73" pin=2"/></net>
 
-<net id="92"><net_src comp="88" pin="1"/><net_sink comp="64" pin=4"/></net>
+<net id="81"><net_src comp="73" pin="3"/><net_sink comp="50" pin=3"/></net>
 
-<net id="96"><net_src comp="84" pin="1"/><net_sink comp="93" pin=0"/></net>
+<net id="85"><net_src comp="64" pin="1"/><net_sink comp="82" pin=0"/></net>
 
-<net id="102"><net_src comp="18" pin="0"/><net_sink comp="97" pin=0"/></net>
+<net id="86"><net_src comp="82" pin="1"/><net_sink comp="50" pin=4"/></net>
 
-<net id="103"><net_src comp="20" pin="0"/><net_sink comp="97" pin=1"/></net>
+<net id="90"><net_src comp="73" pin="3"/><net_sink comp="87" pin=0"/></net>
 
-<net id="104"><net_src comp="93" pin="1"/><net_sink comp="97" pin=2"/></net>
-
-<net id="105"><net_src comp="97" pin="3"/><net_sink comp="64" pin=3"/></net>
-
-<net id="109"><net_src comp="50" pin="2"/><net_sink comp="106" pin=0"/></net>
-
-<net id="113"><net_src comp="74" pin="1"/><net_sink comp="110" pin=0"/></net>
-
-<net id="117"><net_src comp="88" pin="1"/><net_sink comp="114" pin=0"/></net>
-
-<net id="118"><net_src comp="114" pin="1"/><net_sink comp="64" pin=4"/></net>
-
-<net id="122"><net_src comp="97" pin="3"/><net_sink comp="119" pin=0"/></net>
-
-<net id="123"><net_src comp="119" pin="1"/><net_sink comp="64" pin=3"/></net>
+<net id="91"><net_src comp="87" pin="1"/><net_sink comp="50" pin=3"/></net>
 
 </net_list>
 
@@ -824,19 +617,15 @@ StgValue_37       (ret           ) [ 0000]
   - Output states:
 	Port: o_data_V_data_V | {3 }
 	Port: o_data_V_last_V | {3 }
-	Port: currentState | {1 }
  - Input state : 
 	Port: ItoZero : i_data_V_data_V | {1 }
 	Port: ItoZero : i_data_V_last_V | {1 }
-	Port: ItoZero : start_V | {1 }
-	Port: ItoZero : currentState | {1 }
   - Chain level:
 	State 1
-		StgValue_6 : 1
 	State 2
 		tmp : 1
 		p_Result_s : 2
-		StgValue_15 : 3
+		StgValue_10 : 3
 	State 3
 
 
@@ -845,47 +634,44 @@ StgValue_37       (ret           ) [ 0000]
 ============================================================
 
 * Functional unit list:
-|----------|-------------------------|
-| Operation|     Functional Unit     |
-|----------|-------------------------|
-|   read   | start_V_read_read_fu_50 |
-|          |      grp_read_fu_56     |
-|----------|-------------------------|
-|   write  |     grp_write_fu_64     |
-|----------|-------------------------|
-|extractvalue|    tmp_data_V_1_fu_84   |
-|          |     tmp_last_V_fu_88    |
-|----------|-------------------------|
-|   trunc  |        tmp_fu_93        |
-|----------|-------------------------|
-|bitconcatenate|     p_Result_s_fu_97    |
-|----------|-------------------------|
-|   Total  |                         |
-|----------|-------------------------|
+|----------|--------------------|
+| Operation|   Functional Unit  |
+|----------|--------------------|
+|   read   |   grp_read_fu_42   |
+|----------|--------------------|
+|   write  |   grp_write_fu_50  |
+|----------|--------------------|
+|extractvalue| tmp_data_V_1_fu_60 |
+|          |  tmp_last_V_fu_64  |
+|----------|--------------------|
+|   trunc  |      tmp_fu_69     |
+|----------|--------------------|
+|bitconcatenate|  p_Result_s_fu_73  |
+|----------|--------------------|
+|   Total  |                    |
+|----------|--------------------|
 
 Memories:
 N/A
 
 * Register list:
-+-------------------------+--------+
-|                         |   FF   |
-+-------------------------+--------+
-|currentState_load_reg_110|    1   |
-|    p_Result_s_reg_119   |   32   |
-|   start_V_read_reg_106  |    1   |
-|    tmp_last_V_reg_114   |    1   |
-+-------------------------+--------+
-|          Total          |   35   |
-+-------------------------+--------+
++-----------------+--------+
+|                 |   FF   |
++-----------------+--------+
+|p_Result_s_reg_87|   32   |
+|tmp_last_V_reg_82|    1   |
++-----------------+--------+
+|      Total      |   33   |
++-----------------+--------+
 
 * Multiplexer (MUX) list: 
 |-----------------|------|------|------|--------||---------||---------|
 |       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |-----------------|------|------|------|--------||---------||---------|
-| grp_write_fu_64 |  p3  |   2  |  32  |   64   ||    9    |
-| grp_write_fu_64 |  p4  |   2  |   1  |    2   ||    9    |
+| grp_write_fu_50 |  p3  |   2  |  32  |   64   ||    9    |
+| grp_write_fu_50 |  p4  |   2  |   1  |    2   ||    9    |
 |-----------------|------|------|------|--------||---------||---------|
-|      Total      |      |      |      |   66   ||  2.058  ||    18   |
+|      Total      |      |      |      |   66   ||  2.122  ||    18   |
 |-----------------|------|------|------|--------||---------||---------|
 
 
@@ -897,7 +683,7 @@ N/A
 |  Function |    -   |    -   |    -   |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    2   |    -   |   18   |
-|  Register |    -   |   35   |    -   |
+|  Register |    -   |   33   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    2   |   35   |   18   |
+|   Total   |    2   |   33   |   18   |
 +-----------+--------+--------+--------+

@@ -1,9 +1,9 @@
 set C_TypeInfoList {{ 
 "ItoZero" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],"0"] }, {"o_data": [[],"0"] }, {"start": [[],"1"] }],[],""], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "0": [ "stream<rfnoc_axis>", {"hls_type": {"stream": [[[[],"2"]],"3"]}}], 
 "2": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "4"]},{ "last": [[], "1"]}],""]}], 
-"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
+"4": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
+"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "3": ["hls", ""]
 }}
 set moduleName ItoZero
@@ -22,7 +22,7 @@ set C_modelArgList {
 	{ i_data_V_last_V int 1 regular {axi_s 0 volatile  { i_data Last } }  }
 	{ o_data_V_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_V_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
-	{ start_V int 1 regular  }
+	{ start_V int 1 unused  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -62,7 +62,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "ItoZero",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -76,8 +76,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "o_data_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "o_data_V_last_V", "Type" : "Axis", "Direction" : "O"},
-			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"}]}]}
+			{"Name" : "start_V", "Type" : "None", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -86,8 +85,7 @@ set ArgLastReadFirstWriteLatency {
 		i_data_V_last_V {Type I LastRead 0 FirstWrite -1}
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
-		start_V {Type I LastRead 0 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}}}
+		start_V {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

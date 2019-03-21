@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'ItoZero'
 ================================================================
-* Date:           Sat Mar  9 18:47:16 2019
+* Date:           Thu Mar 21 16:40:14 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |   5.00|      1.40|        0.63|
+    |ap_clk  |   5.00|      0.00|        0.62|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -49,14 +49,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|       0|      34|
+|Expression       |        -|      -|       0|     128|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|     114|
-|Register         |        -|      -|     154|       -|
+|Register         |        -|      -|     151|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     154|     148|
+|Total            |        0|      0|     151|     242|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -80,27 +80,24 @@
     +----------------------------------+----------+-------+---+----+------------+------------+
     |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |ap_block_state2_io                |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state2_pp0_stage0_iter1  |    and   |      0|  0|   2|           1|           1|
-    |ap_block_state3_io                |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_last_V_1_load_A          |    and   |      0|  0|   2|           1|           1|
-    |o_data_V_last_V_1_load_B          |    and   |      0|  0|   2|           1|           1|
-    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
-    |ap_block_pp0_stage0_flag00001001  |    or    |      0|  0|   2|           1|           1|
-    |ap_block_pp0_stage0_flag00011001  |    or    |      0|  0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|  0|   2|           1|           1|
-    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|  0|   8|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                             |          |      0|  0|  34|          23|          20|
+    |Total                             |          |      0|  0| 128|          20|          17|
     +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -122,38 +119,35 @@
     +----------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------------------+----+----+-----+-----------+
-    |                    Name                    | FF | LUT| Bits| Const Bits|
-    +--------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                   |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_currentState_load_reg_110  |   1|   0|    1|          0|
-    |currentState                                |   1|   0|    1|          0|
-    |currentState_load_reg_110                   |   1|   0|    1|          0|
-    |i_data_V_data_V_0_payload_A                 |  32|   0|   32|          0|
-    |i_data_V_data_V_0_payload_B                 |  32|   0|   32|          0|
-    |i_data_V_data_V_0_sel_rd                    |   1|   0|    1|          0|
-    |i_data_V_data_V_0_sel_wr                    |   1|   0|    1|          0|
-    |i_data_V_data_V_0_state                     |   2|   0|    2|          0|
-    |i_data_V_last_V_0_payload_A                 |   1|   0|    1|          0|
-    |i_data_V_last_V_0_payload_B                 |   1|   0|    1|          0|
-    |i_data_V_last_V_0_sel_rd                    |   1|   0|    1|          0|
-    |i_data_V_last_V_0_sel_wr                    |   1|   0|    1|          0|
-    |i_data_V_last_V_0_state                     |   2|   0|    2|          0|
-    |o_data_V_data_V_1_payload_A                 |  32|   0|   32|          0|
-    |o_data_V_data_V_1_payload_B                 |  32|   0|   32|          0|
-    |o_data_V_data_V_1_sel_rd                    |   1|   0|    1|          0|
-    |o_data_V_data_V_1_sel_wr                    |   1|   0|    1|          0|
-    |o_data_V_data_V_1_state                     |   2|   0|    2|          0|
-    |o_data_V_last_V_1_payload_A                 |   1|   0|    1|          0|
-    |o_data_V_last_V_1_payload_B                 |   1|   0|    1|          0|
-    |o_data_V_last_V_1_sel_rd                    |   1|   0|    1|          0|
-    |o_data_V_last_V_1_sel_wr                    |   1|   0|    1|          0|
-    |o_data_V_last_V_1_state                     |   2|   0|    2|          0|
-    +--------------------------------------------+----+----+-----+-----------+
-    |Total                                       | 154|   0|  154|          0|
-    +--------------------------------------------+----+----+-----+-----------+
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |i_data_V_data_V_0_payload_A  |  32|   0|   32|          0|
+    |i_data_V_data_V_0_payload_B  |  32|   0|   32|          0|
+    |i_data_V_data_V_0_sel_rd     |   1|   0|    1|          0|
+    |i_data_V_data_V_0_sel_wr     |   1|   0|    1|          0|
+    |i_data_V_data_V_0_state      |   2|   0|    2|          0|
+    |i_data_V_last_V_0_payload_A  |   1|   0|    1|          0|
+    |i_data_V_last_V_0_payload_B  |   1|   0|    1|          0|
+    |i_data_V_last_V_0_sel_rd     |   1|   0|    1|          0|
+    |i_data_V_last_V_0_sel_wr     |   1|   0|    1|          0|
+    |i_data_V_last_V_0_state      |   2|   0|    2|          0|
+    |o_data_V_data_V_1_payload_A  |  32|   0|   32|          0|
+    |o_data_V_data_V_1_payload_B  |  32|   0|   32|          0|
+    |o_data_V_data_V_1_sel_rd     |   1|   0|    1|          0|
+    |o_data_V_data_V_1_sel_wr     |   1|   0|    1|          0|
+    |o_data_V_data_V_1_state      |   2|   0|    2|          0|
+    |o_data_V_last_V_1_payload_A  |   1|   0|    1|          0|
+    |o_data_V_last_V_1_payload_B  |   1|   0|    1|          0|
+    |o_data_V_last_V_1_sel_rd     |   1|   0|    1|          0|
+    |o_data_V_last_V_1_sel_wr     |   1|   0|    1|          0|
+    |o_data_V_last_V_1_state      |   2|   0|    2|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 151|   0|  151|          0|
+    +-----------------------------+----+----+-----+-----------+
 
 
 

@@ -12,8 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-09T18:47:16.121-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-09T18:47:13.476-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'ItoZero/start_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-03-21T16:40:13.980-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-21T16:40:13.963-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'vivado_hls.log'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-21T16:39:57.679-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
