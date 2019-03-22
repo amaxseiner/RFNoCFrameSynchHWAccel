@@ -12,12 +12,12 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (matchedRee/matchFilter.cpp:4)." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:11.037-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (matchedRee/matchFilter.cpp:4)." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:11.024-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:10.417-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:03.395-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:03.394-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T15:59:03.390-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (matchedRee/matchFilter.cpp:4)." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:55.701-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (matchedRee/matchFilter.cpp:4)." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:55.688-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:55.078-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:48.391-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:48.387-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-22T16:42:48.382-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
