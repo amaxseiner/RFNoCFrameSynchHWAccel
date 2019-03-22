@@ -11,7 +11,7 @@
 <TopModelName>correlateTop</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<TargetInitiationInterval>2</TargetInitiationInterval>
+<TargetInitiationInterval>1</TargetInitiationInterval>
 </UserAssignments>
 
 <PerformanceEstimates>
@@ -25,19 +25,19 @@
 <Best-caseLatency>5</Best-caseLatency>
 <Average-caseLatency>5</Average-caseLatency>
 <Worst-caseLatency>5</Worst-caseLatency>
-<PipelineInitiationInterval>2</PipelineInitiationInterval>
+<PipelineInitiationInterval>1</PipelineInitiationInterval>
 <PipelineDepth>6</PipelineDepth>
-<Interval-min>2</Interval-min>
-<Interval-max>2</Interval-max>
+<Interval-min>1</Interval-min>
+<Interval-max>1</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
 <DSP48E>4</DSP48E>
-<FF>1950</FF>
-<LUT>1429</LUT>
+<FF>1744</FF>
+<LUT>1019</LUT>
+<BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
 <BRAM_18K>650</BRAM_18K>
@@ -175,18 +175,6 @@
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>phaseClass_V</name>
-<Object>phaseClass_V</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>4</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

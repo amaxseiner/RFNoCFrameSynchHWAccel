@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Mon Mar 18 23:56:32 2019
+* Date:           Fri Mar 22 19:52:16 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        correlator
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |    5|    5|    2|    2| function |
+    |    5|    5|    1|    1| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -49,14 +49,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      4|     707|     694|
+|Expression       |        -|      4|     869|     761|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
-|Memory           |        0|      -|     872|     364|
-|Multiplexer      |        -|      -|       -|     339|
-|Register         |        -|      -|     371|      32|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     162|
+|Register         |        -|      -|     875|      96|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      4|    1950|    1429|
+|Total            |        0|      4|    1744|    1019|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -71,26 +71,7 @@
     N/A
 
     * Memory: 
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |           Memory          |        Module        | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |cor_phaseArray_phase_8_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_9_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_10_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_11_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_12_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_U     |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_1_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_2_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_3_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_4_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_5_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_6_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_7_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_13_U  |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |Total                      |                      |        0| 872| 364|   224|  324|    14|         5184|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    N/A
 
     * FIFO: 
     N/A
@@ -99,133 +80,137 @@
     +----------------------------------+----------+-------+-----+----+------------+------------+
     |           Variable Name          | Operation| DSP48E|  FF | LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+-----+----+------------+------------+
-    |p_Val2_2_fu_485_p2                |     *    |      4|    0|  48|          32|          32|
-    |p_Val2_3_2_i_fu_424_p2            |     +    |      0|    0|  32|          32|          32|
-    |p_Val2_6_i_fu_388_p2              |     +    |      0|    0|  32|          32|          32|
-    |tmp1_fu_376_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp2_fu_382_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp3_fu_394_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp4_fu_400_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp5_fu_406_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp6_fu_412_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp7_fu_418_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp8_fu_364_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp9_fu_358_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp_4_fu_511_p2                   |     +    |      0|  101|  37|           6|          32|
-    |tmp_fu_370_p2                     |     +    |      0|  101|  37|          32|          32|
-    |p_Val2_9_i_fu_470_p2              |     -    |      0|  101|  37|          32|          32|
-    |p_Val2_i_fu_466_p2                |     -    |      0|  101|  37|          32|          32|
-    |ap_block_pp0_stage0_flag00001001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_pp0_stage1_flag00001001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_pp0_stage1_flag00011001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|    0|   2|           1|           1|
+    |p_Val2_4_fu_505_p2                |     *    |      4|    0|  48|          32|          32|
+    |p_Val2_3_7_i_fu_458_p2            |     +    |      0|    0|  32|          32|          32|
+    |p_Val2_6_i_fu_402_p2              |     +    |      0|    0|  32|          32|          32|
+    |tmp10_fu_442_p2                   |     +    |      0|   74|  28|          23|          23|
+    |tmp11_fu_432_p2                   |     +    |      0|   71|  27|          22|          22|
+    |tmp1_fu_372_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp2_fu_396_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp3_fu_384_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp4_fu_390_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp5_fu_420_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp6_fu_408_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp7_fu_414_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp8_fu_452_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp9_fu_426_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp_4_fu_531_p2                   |     +    |      0|  101|  37|          32|           1|
+    |tmp_6_fu_464_p2                   |     +    |      0|   17|   9|           4|           1|
+    |tmp_fu_378_p2                     |     +    |      0|    0|  32|          32|          32|
+    |p_Val2_9_i_fu_488_p2              |     -    |      0|  101|  37|          32|          32|
+    |p_Val2_i_fu_482_p2                |     -    |      0|  101|  37|          32|          32|
+    |ap_block_state2_pp0_stage0_iter1  |    and   |      0|    0|   2|           1|           1|
     |ap_block_state5_io                |    and   |      0|    0|   2|           1|           1|
     |ap_block_state6_io                |    and   |      0|    0|   2|           1|           1|
-    |ap_condition_526                  |    and   |      0|    0|   2|           1|           1|
+    |ap_condition_378                  |    and   |      0|    0|   2|           1|           1|
+    |i_data_data_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
+    |i_data_data_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
     |i_data_last_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
     |i_data_last_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
     |o_data_data_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
     |o_data_data_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
     |o_data_last_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
     |o_data_last_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
+    |cond_i_fu_200_p2                  |   icmp   |      0|    0|   2|           4|           1|
+    |i_data_data_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |i_data_last_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |o_data_data_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |o_data_last_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |tmp_5_fu_523_p2                   |   icmp   |      0|    0|  16|          32|          18|
-    |tmp_5_i_fu_462_p2                 |   icmp   |      0|    0|  16|          32|          32|
+    |tmp_7_fu_543_p2                   |   icmp   |      0|    0|  16|          32|          25|
+    |tmp_i_fu_476_p2                   |   icmp   |      0|    0|  16|          32|          32|
+    |ap_block_pp0_stage0_flag00001001  |    or    |      0|    0|   2|           1|           1|
     |ap_block_pp0_stage0_flag00011001  |    or    |      0|    0|   2|           1|           1|
-    |ap_block_state6_pp0_stage1_iter2  |    or    |      0|    0|   2|           1|           1|
-    |o_data_data_V_tmp_fu_528_p3       |  select  |      0|    0|  32|           1|          32|
-    |tmp_i_4_fu_474_p3                 |  select  |      0|    0|  32|           1|          32|
+    |ap_block_state6_pp0_stage0_iter5  |    or    |      0|    0|   2|           1|           1|
+    |o_data_data_V_tmp_fu_548_p3       |  select  |      0|    0|  32|           1|          32|
+    |tmp_1_i_fu_494_p3                 |  select  |      0|    0|  32|           1|          32|
     |ap_enable_pp0                     |    xor   |      0|    0|   2|           1|           2|
     +----------------------------------+----------+-------+-----+----+------------+------------+
-    |Total                             |          |      4|  707| 694|         574|         646|
+    |Total                             |          |      4|  869| 761|         655|         670|
     +----------------------------------+----------+-------+-----+----+------------+------------+
 
     * Multiplexer: 
-    +----------------------------------+----+-----------+-----+-----------+
-    |               Name               | LUT| Input Size| Bits| Total Bits|
-    +----------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                         |  15|          3|    1|          3|
-    |cor_phaseArray_phase_10_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_11_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_12_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_13_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_1_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_2_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_3_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_4_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_5_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_6_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_7_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_8_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_9_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_address0     |  15|          3|    4|         12|
-    |i_data_TDATA_blk_n                |   9|          2|    1|          2|
-    |i_data_data_V_0_state             |  15|          3|    2|          6|
-    |i_data_last_V_0_data_out          |   9|          2|    1|          2|
-    |i_data_last_V_0_state             |  15|          3|    2|          6|
-    |loadCount_V                       |   9|          2|   32|         64|
-    |o_data_TDATA_blk_n                |   9|          2|    1|          2|
-    |o_data_data_V_1_data_out          |   9|          2|   32|         64|
-    |o_data_data_V_1_state             |  15|          3|    2|          6|
-    |o_data_last_V_1_data_out          |   9|          2|    1|          2|
-    |o_data_last_V_1_state             |  15|          3|    2|          6|
-    +----------------------------------+----+-----------+-----+-----------+
-    |Total                             | 339|         69|  133|        331|
-    +----------------------------------+----+-----------+-----+-----------+
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_2_reg_122  |  15|          3|   32|         96|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_3_reg_133  |  15|          3|   32|         96|
+    |i_data_TDATA_blk_n                               |   9|          2|    1|          2|
+    |i_data_data_V_0_data_out                         |   9|          2|   32|         64|
+    |i_data_data_V_0_state                            |  15|          3|    2|          6|
+    |i_data_last_V_0_data_out                         |   9|          2|    1|          2|
+    |i_data_last_V_0_state                            |  15|          3|    2|          6|
+    |loadCount_V                                      |   9|          2|   32|         64|
+    |o_data_TDATA_blk_n                               |   9|          2|    1|          2|
+    |o_data_data_V_1_data_out                         |   9|          2|   32|         64|
+    |o_data_data_V_1_state                            |  15|          3|    2|          6|
+    |o_data_last_V_1_data_out                         |   9|          2|    1|          2|
+    |o_data_last_V_1_state                            |  15|          3|    2|          6|
+    |phaseClass_V                                     |   9|          2|    4|          8|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            | 162|         34|  176|        424|
+    +-------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------------------------+----+----+-----+-----------+
-    |                  Name                 | FF | LUT| Bits| Const Bits|
-    +---------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                              |   2|   0|    2|          0|
-    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_start_V_read_reg_611  |   1|   0|    1|          0|
-    |cor_phaseArray_phase_10_reg_566        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_12_reg_571        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_14_reg_576        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_16_reg_581        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_18_reg_586        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_20_reg_591        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_22_reg_596        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_24_reg_601        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_26_reg_606        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_2_reg_546         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_4_reg_551         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_6_reg_556         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_8_reg_561         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_reg_541           |   4|   0|    4|          0|
-    |currentState                           |   1|   0|    1|          0|
-    |currentState_load_reg_537              |   1|   0|    1|          0|
-    |i_data_data_V_0_state                  |   2|   0|    2|          0|
-    |i_data_last_V_0_payload_A              |   1|   0|    1|          0|
-    |i_data_last_V_0_payload_B              |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_rd                 |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_wr                 |   1|   0|    1|          0|
-    |i_data_last_V_0_state                  |   2|   0|    2|          0|
-    |loadCount_V                            |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_A              |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_B              |  32|   0|   32|          0|
-    |o_data_data_V_1_sel_rd                 |   1|   0|    1|          0|
-    |o_data_data_V_1_sel_wr                 |   1|   0|    1|          0|
-    |o_data_data_V_1_state                  |   2|   0|    2|          0|
-    |o_data_last_V_1_payload_A              |   1|   0|    1|          0|
-    |o_data_last_V_1_payload_B              |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_rd                 |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_wr                 |   1|   0|    1|          0|
-    |o_data_last_V_1_state                  |   2|   0|    2|          0|
-    |o_data_last_V_tmp_reg_629              |   1|   0|    1|          0|
-    |p_Val2_3_2_i_reg_622                   |  32|   0|   32|          0|
-    |p_Val2_6_i_reg_615                     |  32|   0|   32|          0|
-    |res_V_reg_639                          |  32|   0|   32|          0|
-    |start_V_read_reg_611                   |   1|   0|    1|          0|
-    |tmp_i_4_reg_634                        |  32|   0|   32|          0|
-    |currentState_load_reg_537              |  64|  32|    1|          0|
-    +---------------------------------------+----+----+-----+-----------+
-    |Total                                  | 371|  32|  308|          0|
-    +---------------------------------------+----+----+-----+-----------+
+    +-------------------------------------------------+----+----+-----+-----------+
+    |                       Name                      | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                          |   1|   0|    1|          0|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_2_reg_122  |  32|   0|   32|          0|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_3_reg_133  |  32|   0|   32|          0|
+    |cor_phaseClass0_V_0                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_1                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_10                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_11                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_12                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_13                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_14                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_2                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_3                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_4                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_5                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_6                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_7                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_8                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_9                              |  27|   0|   32|          5|
+    |currentState                                     |   1|   0|    1|          0|
+    |currentState_load_reg_561                        |   1|   0|    1|          0|
+    |i_data_data_V_0_payload_A                        |  32|   0|   32|          0|
+    |i_data_data_V_0_payload_B                        |  32|   0|   32|          0|
+    |i_data_data_V_0_sel_rd                           |   1|   0|    1|          0|
+    |i_data_data_V_0_sel_wr                           |   1|   0|    1|          0|
+    |i_data_data_V_0_state                            |   2|   0|    2|          0|
+    |i_data_last_V_0_payload_A                        |   1|   0|    1|          0|
+    |i_data_last_V_0_payload_B                        |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_rd                           |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_wr                           |   1|   0|    1|          0|
+    |i_data_last_V_0_state                            |   2|   0|    2|          0|
+    |i_data_last_V_tmp_reg_565                        |   1|   0|    1|          0|
+    |loadCount_V                                      |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_A                        |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_B                        |  32|   0|   32|          0|
+    |o_data_data_V_1_sel_rd                           |   1|   0|    1|          0|
+    |o_data_data_V_1_sel_wr                           |   1|   0|    1|          0|
+    |o_data_data_V_1_state                            |   2|   0|    2|          0|
+    |o_data_last_V_1_payload_A                        |   1|   0|    1|          0|
+    |o_data_last_V_1_payload_B                        |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_rd                           |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_wr                           |   1|   0|    1|          0|
+    |o_data_last_V_1_state                            |   2|   0|    2|          0|
+    |phaseClass_V                                     |   4|   0|    4|          0|
+    |res_V_reg_588                                    |  32|   0|   32|          0|
+    |start_V_read_reg_557                             |   1|   0|    1|          0|
+    |tmp_1_i_reg_583                                  |  32|   0|   32|          0|
+    |currentState_load_reg_561                        |  64|  32|    1|          0|
+    |i_data_last_V_tmp_reg_565                        |  64|  32|    1|          0|
+    |start_V_read_reg_557                             |  64|  32|    1|          0|
+    +-------------------------------------------------+----+----+-----+-----------+
+    |Total                                            | 875|  96|  761|         75|
+    +-------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -247,6 +232,5 @@
 |o_data_TREADY  |  in |    1|     axis     | o_data_last_V |    pointer   |
 |o_data_TLAST   | out |    1|     axis     | o_data_last_V |    pointer   |
 |start_V        |  in |    1|    ap_none   |    start_V    |    scalar    |
-|phaseClass_V   |  in |    4|    ap_none   |  phaseClass_V |    scalar    |
 +---------------+-----+-----+--------------+---------------+--------------+
 

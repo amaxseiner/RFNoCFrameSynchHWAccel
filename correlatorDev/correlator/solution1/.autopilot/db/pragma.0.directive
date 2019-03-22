@@ -20,7 +20,7 @@
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="PIPELINE">
-<option name="II" value="2"/>
+<option name="II" value="1"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
@@ -169,8 +169,16 @@
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="phaseClass"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTop" label="">
+<pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="currentState"/>
 </pragma>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
 </directive>
 <directive functionLabel="" functionName="correlate::correlator" label="">
 <pragma name="UNROLL"/>

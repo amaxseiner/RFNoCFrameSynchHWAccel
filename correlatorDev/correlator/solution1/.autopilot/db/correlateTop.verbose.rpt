@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Mon Mar 18 23:56:32 2019
+* Date:           Fri Mar 22 19:52:16 2019
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        correlator
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |    5|    5|    2|    2| function |
+    |    5|    5|    1|    1| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -49,14 +49,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      4|     707|     694|
+|Expression       |        -|      4|     869|     761|
 |FIFO             |        -|      -|       -|       -|
 |Instance         |        -|      -|       -|       -|
-|Memory           |        0|      -|     872|     364|
-|Multiplexer      |        -|      -|       -|     339|
-|Register         |        -|      -|     371|      32|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     162|
+|Register         |        -|      -|     875|      96|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      4|    1950|    1429|
+|Total            |        0|      4|    1744|    1019|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -71,26 +71,7 @@
     N/A
 
     * Memory: 
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |           Memory          |        Module        | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |cor_phaseArray_phase_8_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_9_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_10_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_11_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_12_U  |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_U     |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_1_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_2_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_3_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_4_U   |correlateTop_cor_bkb  |        0|  80|  28|    16|   32|     1|          512|
-    |cor_phaseArray_phase_5_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_6_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_7_U   |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    |cor_phaseArray_phase_13_U  |correlateTop_cor_lbW  |        0|  18|  21|    16|    1|     1|           16|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |Total                      |                      |        0| 872| 364|   224|  324|    14|         5184|
-    +---------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    N/A
 
     * FIFO: 
     N/A
@@ -99,133 +80,137 @@
     +----------------------------------+----------+-------+-----+----+------------+------------+
     |           Variable Name          | Operation| DSP48E|  FF | LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+-----+----+------------+------------+
-    |p_Val2_2_fu_485_p2                |     *    |      4|    0|  48|          32|          32|
-    |p_Val2_3_2_i_fu_424_p2            |     +    |      0|    0|  32|          32|          32|
-    |p_Val2_6_i_fu_388_p2              |     +    |      0|    0|  32|          32|          32|
-    |tmp1_fu_376_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp2_fu_382_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp3_fu_394_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp4_fu_400_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp5_fu_406_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp6_fu_412_p2                    |     +    |      0|  101|  37|          32|          32|
-    |tmp7_fu_418_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp8_fu_364_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp9_fu_358_p2                    |     +    |      0|    0|  32|          32|          32|
-    |tmp_4_fu_511_p2                   |     +    |      0|  101|  37|           6|          32|
-    |tmp_fu_370_p2                     |     +    |      0|  101|  37|          32|          32|
-    |p_Val2_9_i_fu_470_p2              |     -    |      0|  101|  37|          32|          32|
-    |p_Val2_i_fu_466_p2                |     -    |      0|  101|  37|          32|          32|
-    |ap_block_pp0_stage0_flag00001001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_pp0_stage1_flag00001001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_pp0_stage1_flag00011001  |    and   |      0|    0|   2|           1|           1|
-    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|    0|   2|           1|           1|
+    |p_Val2_4_fu_505_p2                |     *    |      4|    0|  48|          32|          32|
+    |p_Val2_3_7_i_fu_458_p2            |     +    |      0|    0|  32|          32|          32|
+    |p_Val2_6_i_fu_402_p2              |     +    |      0|    0|  32|          32|          32|
+    |tmp10_fu_442_p2                   |     +    |      0|   74|  28|          23|          23|
+    |tmp11_fu_432_p2                   |     +    |      0|   71|  27|          22|          22|
+    |tmp1_fu_372_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp2_fu_396_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp3_fu_384_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp4_fu_390_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp5_fu_420_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp6_fu_408_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp7_fu_414_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp8_fu_452_p2                    |     +    |      0|    0|  32|          32|          32|
+    |tmp9_fu_426_p2                    |     +    |      0|  101|  37|          32|          32|
+    |tmp_4_fu_531_p2                   |     +    |      0|  101|  37|          32|           1|
+    |tmp_6_fu_464_p2                   |     +    |      0|   17|   9|           4|           1|
+    |tmp_fu_378_p2                     |     +    |      0|    0|  32|          32|          32|
+    |p_Val2_9_i_fu_488_p2              |     -    |      0|  101|  37|          32|          32|
+    |p_Val2_i_fu_482_p2                |     -    |      0|  101|  37|          32|          32|
+    |ap_block_state2_pp0_stage0_iter1  |    and   |      0|    0|   2|           1|           1|
     |ap_block_state5_io                |    and   |      0|    0|   2|           1|           1|
     |ap_block_state6_io                |    and   |      0|    0|   2|           1|           1|
-    |ap_condition_526                  |    and   |      0|    0|   2|           1|           1|
+    |ap_condition_378                  |    and   |      0|    0|   2|           1|           1|
+    |i_data_data_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
+    |i_data_data_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
     |i_data_last_V_0_load_A            |    and   |      0|    0|   2|           1|           1|
     |i_data_last_V_0_load_B            |    and   |      0|    0|   2|           1|           1|
     |o_data_data_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
     |o_data_data_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
     |o_data_last_V_1_load_A            |    and   |      0|    0|   2|           1|           1|
     |o_data_last_V_1_load_B            |    and   |      0|    0|   2|           1|           1|
+    |cond_i_fu_200_p2                  |   icmp   |      0|    0|   2|           4|           1|
+    |i_data_data_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |i_data_last_V_0_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |o_data_data_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
     |o_data_last_V_1_state_cmp_full    |   icmp   |      0|    0|   1|           2|           1|
-    |tmp_5_fu_523_p2                   |   icmp   |      0|    0|  16|          32|          18|
-    |tmp_5_i_fu_462_p2                 |   icmp   |      0|    0|  16|          32|          32|
+    |tmp_7_fu_543_p2                   |   icmp   |      0|    0|  16|          32|          25|
+    |tmp_i_fu_476_p2                   |   icmp   |      0|    0|  16|          32|          32|
+    |ap_block_pp0_stage0_flag00001001  |    or    |      0|    0|   2|           1|           1|
     |ap_block_pp0_stage0_flag00011001  |    or    |      0|    0|   2|           1|           1|
-    |ap_block_state6_pp0_stage1_iter2  |    or    |      0|    0|   2|           1|           1|
-    |o_data_data_V_tmp_fu_528_p3       |  select  |      0|    0|  32|           1|          32|
-    |tmp_i_4_fu_474_p3                 |  select  |      0|    0|  32|           1|          32|
+    |ap_block_state6_pp0_stage0_iter5  |    or    |      0|    0|   2|           1|           1|
+    |o_data_data_V_tmp_fu_548_p3       |  select  |      0|    0|  32|           1|          32|
+    |tmp_1_i_fu_494_p3                 |  select  |      0|    0|  32|           1|          32|
     |ap_enable_pp0                     |    xor   |      0|    0|   2|           1|           2|
     +----------------------------------+----------+-------+-----+----+------------+------------+
-    |Total                             |          |      4|  707| 694|         574|         646|
+    |Total                             |          |      4|  869| 761|         655|         670|
     +----------------------------------+----------+-------+-----+----+------------+------------+
 
     * Multiplexer: 
-    +----------------------------------+----+-----------+-----+-----------+
-    |               Name               | LUT| Input Size| Bits| Total Bits|
-    +----------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                         |  15|          3|    1|          3|
-    |cor_phaseArray_phase_10_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_11_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_12_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_13_address0  |  15|          3|    4|         12|
-    |cor_phaseArray_phase_1_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_2_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_3_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_4_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_5_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_6_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_7_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_8_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_9_address0   |  15|          3|    4|         12|
-    |cor_phaseArray_phase_address0     |  15|          3|    4|         12|
-    |i_data_TDATA_blk_n                |   9|          2|    1|          2|
-    |i_data_data_V_0_state             |  15|          3|    2|          6|
-    |i_data_last_V_0_data_out          |   9|          2|    1|          2|
-    |i_data_last_V_0_state             |  15|          3|    2|          6|
-    |loadCount_V                       |   9|          2|   32|         64|
-    |o_data_TDATA_blk_n                |   9|          2|    1|          2|
-    |o_data_data_V_1_data_out          |   9|          2|   32|         64|
-    |o_data_data_V_1_state             |  15|          3|    2|          6|
-    |o_data_last_V_1_data_out          |   9|          2|    1|          2|
-    |o_data_last_V_1_state             |  15|          3|    2|          6|
-    +----------------------------------+----+-----------+-----+-----------+
-    |Total                             | 339|         69|  133|        331|
-    +----------------------------------+----+-----------+-----+-----------+
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_2_reg_122  |  15|          3|   32|         96|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_3_reg_133  |  15|          3|   32|         96|
+    |i_data_TDATA_blk_n                               |   9|          2|    1|          2|
+    |i_data_data_V_0_data_out                         |   9|          2|   32|         64|
+    |i_data_data_V_0_state                            |  15|          3|    2|          6|
+    |i_data_last_V_0_data_out                         |   9|          2|    1|          2|
+    |i_data_last_V_0_state                            |  15|          3|    2|          6|
+    |loadCount_V                                      |   9|          2|   32|         64|
+    |o_data_TDATA_blk_n                               |   9|          2|    1|          2|
+    |o_data_data_V_1_data_out                         |   9|          2|   32|         64|
+    |o_data_data_V_1_state                            |  15|          3|    2|          6|
+    |o_data_last_V_1_data_out                         |   9|          2|    1|          2|
+    |o_data_last_V_1_state                            |  15|          3|    2|          6|
+    |phaseClass_V                                     |   9|          2|    4|          8|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            | 162|         34|  176|        424|
+    +-------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------------------------+----+----+-----+-----------+
-    |                  Name                 | FF | LUT| Bits| Const Bits|
-    +---------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                              |   2|   0|    2|          0|
-    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_start_V_read_reg_611  |   1|   0|    1|          0|
-    |cor_phaseArray_phase_10_reg_566        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_12_reg_571        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_14_reg_576        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_16_reg_581        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_18_reg_586        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_20_reg_591        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_22_reg_596        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_24_reg_601        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_26_reg_606        |   4|   0|    4|          0|
-    |cor_phaseArray_phase_2_reg_546         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_4_reg_551         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_6_reg_556         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_8_reg_561         |   4|   0|    4|          0|
-    |cor_phaseArray_phase_reg_541           |   4|   0|    4|          0|
-    |currentState                           |   1|   0|    1|          0|
-    |currentState_load_reg_537              |   1|   0|    1|          0|
-    |i_data_data_V_0_state                  |   2|   0|    2|          0|
-    |i_data_last_V_0_payload_A              |   1|   0|    1|          0|
-    |i_data_last_V_0_payload_B              |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_rd                 |   1|   0|    1|          0|
-    |i_data_last_V_0_sel_wr                 |   1|   0|    1|          0|
-    |i_data_last_V_0_state                  |   2|   0|    2|          0|
-    |loadCount_V                            |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_A              |  32|   0|   32|          0|
-    |o_data_data_V_1_payload_B              |  32|   0|   32|          0|
-    |o_data_data_V_1_sel_rd                 |   1|   0|    1|          0|
-    |o_data_data_V_1_sel_wr                 |   1|   0|    1|          0|
-    |o_data_data_V_1_state                  |   2|   0|    2|          0|
-    |o_data_last_V_1_payload_A              |   1|   0|    1|          0|
-    |o_data_last_V_1_payload_B              |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_rd                 |   1|   0|    1|          0|
-    |o_data_last_V_1_sel_wr                 |   1|   0|    1|          0|
-    |o_data_last_V_1_state                  |   2|   0|    2|          0|
-    |o_data_last_V_tmp_reg_629              |   1|   0|    1|          0|
-    |p_Val2_3_2_i_reg_622                   |  32|   0|   32|          0|
-    |p_Val2_6_i_reg_615                     |  32|   0|   32|          0|
-    |res_V_reg_639                          |  32|   0|   32|          0|
-    |start_V_read_reg_611                   |   1|   0|    1|          0|
-    |tmp_i_4_reg_634                        |  32|   0|   32|          0|
-    |currentState_load_reg_537              |  64|  32|    1|          0|
-    +---------------------------------------+----+----+-----+-----------+
-    |Total                                  | 371|  32|  308|          0|
-    +---------------------------------------+----+----+-----+-----------+
+    +-------------------------------------------------+----+----+-----+-----------+
+    |                       Name                      | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                          |   1|   0|    1|          0|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_2_reg_122  |  32|   0|   32|          0|
+    |ap_phi_precharge_reg_pp0_iter2_p_Val2_3_reg_133  |  32|   0|   32|          0|
+    |cor_phaseClass0_V_0                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_1                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_10                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_11                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_12                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_13                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_14                             |  27|   0|   32|          5|
+    |cor_phaseClass0_V_2                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_3                              |  16|   0|   21|          5|
+    |cor_phaseClass0_V_4                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_5                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_6                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_7                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_8                              |  27|   0|   32|          5|
+    |cor_phaseClass0_V_9                              |  27|   0|   32|          5|
+    |currentState                                     |   1|   0|    1|          0|
+    |currentState_load_reg_561                        |   1|   0|    1|          0|
+    |i_data_data_V_0_payload_A                        |  32|   0|   32|          0|
+    |i_data_data_V_0_payload_B                        |  32|   0|   32|          0|
+    |i_data_data_V_0_sel_rd                           |   1|   0|    1|          0|
+    |i_data_data_V_0_sel_wr                           |   1|   0|    1|          0|
+    |i_data_data_V_0_state                            |   2|   0|    2|          0|
+    |i_data_last_V_0_payload_A                        |   1|   0|    1|          0|
+    |i_data_last_V_0_payload_B                        |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_rd                           |   1|   0|    1|          0|
+    |i_data_last_V_0_sel_wr                           |   1|   0|    1|          0|
+    |i_data_last_V_0_state                            |   2|   0|    2|          0|
+    |i_data_last_V_tmp_reg_565                        |   1|   0|    1|          0|
+    |loadCount_V                                      |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_A                        |  32|   0|   32|          0|
+    |o_data_data_V_1_payload_B                        |  32|   0|   32|          0|
+    |o_data_data_V_1_sel_rd                           |   1|   0|    1|          0|
+    |o_data_data_V_1_sel_wr                           |   1|   0|    1|          0|
+    |o_data_data_V_1_state                            |   2|   0|    2|          0|
+    |o_data_last_V_1_payload_A                        |   1|   0|    1|          0|
+    |o_data_last_V_1_payload_B                        |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_rd                           |   1|   0|    1|          0|
+    |o_data_last_V_1_sel_wr                           |   1|   0|    1|          0|
+    |o_data_last_V_1_state                            |   2|   0|    2|          0|
+    |phaseClass_V                                     |   4|   0|    4|          0|
+    |res_V_reg_588                                    |  32|   0|   32|          0|
+    |start_V_read_reg_557                             |   1|   0|    1|          0|
+    |tmp_1_i_reg_583                                  |  32|   0|   32|          0|
+    |currentState_load_reg_561                        |  64|  32|    1|          0|
+    |i_data_last_V_tmp_reg_565                        |  64|  32|    1|          0|
+    |start_V_read_reg_557                             |  64|  32|    1|          0|
+    +-------------------------------------------------+----+----+-----+-----------+
+    |Total                                            | 875|  96|  761|         75|
+    +-------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -247,7 +232,6 @@
 |o_data_TREADY  |  in |    1|     axis     | o_data_last_V |    pointer   |
 |o_data_TLAST   | out |    1|     axis     | o_data_last_V |    pointer   |
 |start_V        |  in |    1|    ap_none   |    start_V    |    scalar    |
-|phaseClass_V   |  in |    4|    ap_none   |  phaseClass_V |    scalar    |
 +---------------+-----+-----+--------------+---------------+--------------+
 
 ============================================================
@@ -273,7 +257,7 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 2, depth = 6
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
 
 
 ============================================================
@@ -281,7 +265,7 @@ IsGatedGlobalClock: 0
 ============================================================
 * Number of FSM states: 6
 * Pipeline: 1
-  Pipeline-0: II = 2, D = 6, States = { 1 2 3 4 5 6 }
+  Pipeline-0: II = 1, D = 6, States = { 1 2 3 4 5 6 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -298,388 +282,346 @@ IsGatedGlobalClock: 0
 6 --> 
 * FSM state operations: 
 
- <State 1>: 1.43ns
-ST_1: phaseClass_V_read (25)  [1/1] 0.00ns
-codeRepl:0  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
+ <State 1>: 1.40ns
+ST_1: start_V_read (26)  [1/1] 0.00ns
+codeRepl:0  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
 
-ST_1: currentState_load (43)  [1/1] 0.00ns  loc: correlator.cpp:67
-codeRepl:18  %currentState_load = load i1* @currentState, align 1
+ST_1: currentState_load (43)  [1/1] 0.00ns  loc: correlator.cpp:71
+codeRepl:17  %currentState_load = load i1* @currentState, align 1
 
-ST_1: StgValue_9 (46)  [1/1] 0.00ns  loc: correlator.cpp:73
-codeRepl:21  br i1 %currentState_load, label %2, label %0
+ST_1: StgValue_9 (46)  [1/1] 0.00ns  loc: correlator.cpp:77
+codeRepl:20  br i1 %currentState_load, label %._crit_edge146, label %0
 
-ST_1: tmp_i (65)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:9  %tmp_i = zext i4 %phaseClass_V_read to i64
+ST_1: StgValue_10 (48)  [1/1] 0.00ns  loc: correlator.cpp:79
+:0  br i1 %start_V_read, label %"operator=.exit.0", label %.loopexit
 
-ST_1: cor_phaseArray_phase (66)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:10  %cor_phaseArray_phase = getelementptr [16 x i32]* @cor_phaseArray_phase_8, i64 0, i64 %tmp_i
+ST_1: StgValue_11 (52)  [1/1] 0.00ns  loc: correlator.cpp:82
+operator=.exit.0:2  store i1 true, i1* @currentState, align 1
 
-ST_1: cor_phaseArray_phase_1 (67)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:11  %cor_phaseArray_phase_1 = load i32* %cor_phaseArray_phase, align 8
+ST_1: empty (57)  [2/2] 0.00ns
+._crit_edge146:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
 
-ST_1: cor_phaseArray_phase_2 (68)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:12  %cor_phaseArray_phase_2 = getelementptr [16 x i32]* @cor_phaseArray_phase_9, i64 0, i64 %tmp_i
+ST_1: StgValue_13 (137)  [1/1] 0.00ns  loc: correlator.cpp:117
+correlator.exit:17  store i1 true, i1* @currentState, align 1
 
-ST_1: cor_phaseArray_phase_3 (69)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:13  %cor_phaseArray_phase_3 = load i32* %cor_phaseArray_phase_2, align 4
 
-ST_1: cor_phaseArray_phase_4 (71)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:15  %cor_phaseArray_phase_4 = getelementptr [16 x i32]* @cor_phaseArray_phase_10, i64 0, i64 %tmp_i
+ <State 2>: 7.18ns
+ST_2: phaseClass_V_load (45)  [1/1] 0.00ns  loc: correlator.cpp:99
+codeRepl:19  %phaseClass_V_load = load i4* @phaseClass_V, align 1
 
-ST_1: cor_phaseArray_phase_5 (72)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:16  %cor_phaseArray_phase_5 = load i32* %cor_phaseArray_phase_4, align 16
+ST_2: StgValue_15 (51)  [1/1] 1.03ns  loc: correlator.cpp:81
+operator=.exit.0:1  store i4 0, i4* @phaseClass_V, align 1
 
-ST_1: cor_phaseArray_phase_6 (74)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:18  %cor_phaseArray_phase_6 = getelementptr [16 x i32]* @cor_phaseArray_phase_11, i64 0, i64 %tmp_i
+ST_2: empty (57)  [1/2] 0.00ns
+._crit_edge146:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
 
-ST_1: cor_phaseArray_phase_7 (75)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:19  %cor_phaseArray_phase_7 = load i32* %cor_phaseArray_phase_6, align 4
+ST_2: p_Val2_s (58)  [1/1] 0.00ns
+._crit_edge146:1  %p_Val2_s = extractvalue { i32, i1 } %empty, 0
 
-ST_1: cor_phaseArray_phase_8 (77)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:21  %cor_phaseArray_phase_8 = getelementptr [16 x i32]* @cor_phaseArray_phase_12, i64 0, i64 %tmp_i
+ST_2: i_data_last_V_tmp (59)  [1/1] 0.00ns
+._crit_edge146:2  %i_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1
 
-ST_1: cor_phaseArray_phase_9 (78)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:22  %cor_phaseArray_phase_9 = load i32* %cor_phaseArray_phase_8, align 8
+ST_2: p_Val2_1 (60)  [1/1] 0.00ns  loc: correlator.cpp:92
+._crit_edge146:3  %p_Val2_1 = trunc i32 %p_Val2_s to i16
 
-ST_1: cor_phaseArray_phase_10 (80)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:24  %cor_phaseArray_phase_10 = getelementptr [16 x i32]* @cor_phaseArray_phase, i64 0, i64 %tmp_i
+ST_2: StgValue_20 (61)  [1/1] 0.00ns  loc: correlator.cpp:92
+._crit_edge146:4  store i16 %p_Val2_1, i16* @unScalled_V, align 2
 
-ST_1: cor_phaseArray_phase_11 (81)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:25  %cor_phaseArray_phase_11 = load i32* %cor_phaseArray_phase_10, align 4
+ST_2: op_V_read_assign (62)  [1/1] 0.00ns  loc: correlator.cpp:93
+._crit_edge146:5  %op_V_read_assign = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %p_Val2_1, i5 0)
 
-ST_1: cor_phaseArray_phase_12 (83)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:27  %cor_phaseArray_phase_12 = getelementptr [16 x i32]* @cor_phaseArray_phase_1, i64 0, i64 %tmp_i
+ST_2: op_V_read_assign_cas (63)  [1/1] 0.00ns  loc: correlator.cpp:93
+._crit_edge146:6  %op_V_read_assign_cas = sext i21 %op_V_read_assign to i22
 
-ST_1: cor_phaseArray_phase_13 (84)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:28  %cor_phaseArray_phase_13 = load i32* %cor_phaseArray_phase_12, align 16
+ST_2: StgValue_23 (64)  [1/1] 0.00ns  loc: correlator.cpp:93
+._crit_edge146:7  store i21 %op_V_read_assign, i21* @newVal_V, align 4
 
-ST_1: cor_phaseArray_phase_14 (86)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:30  %cor_phaseArray_phase_14 = getelementptr [16 x i32]* @cor_phaseArray_phase_2, i64 0, i64 %tmp_i
+ST_2: cond_i (65)  [1/1] 1.97ns  loc: correlator.cpp:125->correlator.cpp:99
+._crit_edge146:8  %cond_i = icmp eq i4 %phaseClass_V_load, 0
 
-ST_1: cor_phaseArray_phase_15 (87)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:31  %cor_phaseArray_phase_15 = load i32* %cor_phaseArray_phase_14, align 4
+ST_2: StgValue_25 (66)  [1/1] 1.03ns  loc: correlator.cpp:125->correlator.cpp:99
+._crit_edge146:9  br i1 %cond_i, label %.preheader.0.i, label %correlator.exit
 
-ST_1: cor_phaseArray_phase_16 (89)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:33  %cor_phaseArray_phase_16 = getelementptr [16 x i32]* @cor_phaseArray_phase_3, i64 0, i64 %tmp_i
+ST_2: cor_phaseClass0_V_14 (68)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:0  %cor_phaseClass0_V_14 = load i32* @cor_phaseClass0_V_14, align 8
 
-ST_1: cor_phaseArray_phase_17 (90)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:34  %cor_phaseArray_phase_17 = load i32* %cor_phaseArray_phase_16, align 8
+ST_2: cor_phaseClass0_V_13 (69)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:1  %cor_phaseClass0_V_13 = load i32* @cor_phaseClass0_V_13, align 4
 
-ST_1: cor_phaseArray_phase_18 (92)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:36  %cor_phaseArray_phase_18 = getelementptr [16 x i32]* @cor_phaseArray_phase_4, i64 0, i64 %tmp_i
+ST_2: StgValue_28 (70)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:2  store i32 %cor_phaseClass0_V_13, i32* @cor_phaseClass0_V_14, align 8
 
-ST_1: cor_phaseArray_phase_19 (93)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:37  %cor_phaseArray_phase_19 = load i32* %cor_phaseArray_phase_18, align 4
+ST_2: cor_phaseClass0_V_12 (71)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:3  %cor_phaseClass0_V_12 = load i32* @cor_phaseClass0_V_12, align 16
 
-ST_1: cor_phaseArray_phase_20 (95)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:39  %cor_phaseArray_phase_20 = getelementptr [16 x i1]* @cor_phaseArray_phase_5, i64 0, i64 %tmp_i
+ST_2: StgValue_30 (72)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:4  store i32 %cor_phaseClass0_V_12, i32* @cor_phaseClass0_V_13, align 4
 
-ST_1: cor_phaseArray_phase_21 (96)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:40  %cor_phaseArray_phase_21 = load i1* %cor_phaseArray_phase_20, align 1
+ST_2: cor_phaseClass0_V_11 (73)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:5  %cor_phaseClass0_V_11 = load i32* @cor_phaseClass0_V_11, align 4
 
-ST_1: cor_phaseArray_phase_22 (99)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:43  %cor_phaseArray_phase_22 = getelementptr [16 x i1]* @cor_phaseArray_phase_6, i64 0, i64 %tmp_i
+ST_2: StgValue_32 (74)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:6  store i32 %cor_phaseClass0_V_11, i32* @cor_phaseClass0_V_12, align 16
 
-ST_1: cor_phaseArray_phase_23 (100)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:44  %cor_phaseArray_phase_23 = load i1* %cor_phaseArray_phase_22, align 1
+ST_2: cor_phaseClass0_V_10 (75)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:7  %cor_phaseClass0_V_10 = load i32* @cor_phaseClass0_V_10, align 8
 
-ST_1: cor_phaseArray_phase_24 (103)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:47  %cor_phaseArray_phase_24 = getelementptr [16 x i1]* @cor_phaseArray_phase_7, i64 0, i64 %tmp_i
+ST_2: StgValue_34 (76)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:8  store i32 %cor_phaseClass0_V_10, i32* @cor_phaseClass0_V_11, align 4
 
-ST_1: cor_phaseArray_phase_25 (104)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:48  %cor_phaseArray_phase_25 = load i1* %cor_phaseArray_phase_24, align 1
+ST_2: cor_phaseClass0_V_9_s (77)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:9  %cor_phaseClass0_V_9_s = load i32* @cor_phaseClass0_V_9, align 4
 
-ST_1: cor_phaseArray_phase_26 (107)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:51  %cor_phaseArray_phase_26 = getelementptr [16 x i1]* @cor_phaseArray_phase_13, i64 0, i64 %tmp_i
+ST_2: StgValue_36 (78)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:10  store i32 %cor_phaseClass0_V_9_s, i32* @cor_phaseClass0_V_10, align 8
 
-ST_1: cor_phaseArray_phase_27 (108)  [2/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:52  %cor_phaseArray_phase_27 = load i1* %cor_phaseArray_phase_26, align 1
+ST_2: cor_phaseClass0_V_8_s (79)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:11  %cor_phaseClass0_V_8_s = load i32* @cor_phaseClass0_V_8, align 16
 
-ST_1: StgValue_39 (134)  [1/1] 0.00ns  loc: correlator.cpp:104
-:78  store i1 true, i1* @currentState, align 1
+ST_2: StgValue_38 (80)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:12  store i32 %cor_phaseClass0_V_8_s, i32* @cor_phaseClass0_V_9, align 4
 
+ST_2: cor_phaseClass0_V_7_s (81)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:13  %cor_phaseClass0_V_7_s = load i32* @cor_phaseClass0_V_7, align 4
 
- <State 2>: 5.93ns
-ST_2: start_V_read (26)  [1/1] 0.00ns
-codeRepl:1  %start_V_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %start_V)
+ST_2: StgValue_40 (82)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:14  store i32 %cor_phaseClass0_V_7_s, i32* @cor_phaseClass0_V_8, align 16
 
-ST_2: StgValue_41 (48)  [1/1] 0.00ns  loc: correlator.cpp:75
-:0  br i1 %start_V_read, label %1, label %._crit_edge86
+ST_2: cor_phaseClass0_V_6_s (83)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:15  %cor_phaseClass0_V_6_s = load i32* @cor_phaseClass0_V_6, align 8
 
-ST_2: StgValue_42 (51)  [1/1] 0.00ns  loc: correlator.cpp:77
-:1  store i1 true, i1* @currentState, align 1
+ST_2: StgValue_42 (84)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:16  store i32 %cor_phaseClass0_V_6_s, i32* @cor_phaseClass0_V_7, align 4
 
-ST_2: empty (56)  [2/2] 0.00ns
-:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
+ST_2: cor_phaseClass0_V_5_s (85)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:17  %cor_phaseClass0_V_5_s = load i32* @cor_phaseClass0_V_5, align 4
 
-ST_2: cor_phaseArray_phase_1 (67)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:11  %cor_phaseArray_phase_1 = load i32* %cor_phaseArray_phase, align 8
+ST_2: StgValue_44 (86)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:18  store i32 %cor_phaseClass0_V_5_s, i32* @cor_phaseClass0_V_6, align 8
 
-ST_2: cor_phaseArray_phase_3 (69)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:13  %cor_phaseArray_phase_3 = load i32* %cor_phaseArray_phase_2, align 4
+ST_2: cor_phaseClass0_V_4_s (87)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:19  %cor_phaseClass0_V_4_s = load i32* @cor_phaseClass0_V_4, align 16
 
-ST_2: StgValue_46 (70)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:14  store i32 %cor_phaseArray_phase_3, i32* %cor_phaseArray_phase, align 8
+ST_2: StgValue_46 (88)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:20  store i32 %cor_phaseClass0_V_4_s, i32* @cor_phaseClass0_V_5, align 4
 
-ST_2: cor_phaseArray_phase_5 (72)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:16  %cor_phaseArray_phase_5 = load i32* %cor_phaseArray_phase_4, align 16
+ST_2: cor_phaseClass0_V_3_s (89)  [1/1] 0.00ns
+.preheader.0.i:21  %cor_phaseClass0_V_3_s = load i21* @cor_phaseClass0_V_3, align 4
 
-ST_2: StgValue_48 (73)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:17  store i32 %cor_phaseArray_phase_5, i32* %cor_phaseArray_phase_2, align 4
+ST_2: extLd4 (90)  [1/1] 0.00ns
+.preheader.0.i:22  %extLd4 = sext i21 %cor_phaseClass0_V_3_s to i32
 
-ST_2: cor_phaseArray_phase_7 (75)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:19  %cor_phaseArray_phase_7 = load i32* %cor_phaseArray_phase_6, align 4
+ST_2: StgValue_49 (91)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:23  store i32 %extLd4, i32* @cor_phaseClass0_V_4, align 16
 
-ST_2: StgValue_50 (76)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:20  store i32 %cor_phaseArray_phase_7, i32* %cor_phaseArray_phase_4, align 16
+ST_2: cor_phaseClass0_V_2_s (92)  [1/1] 0.00ns
+.preheader.0.i:24  %cor_phaseClass0_V_2_s = load i21* @cor_phaseClass0_V_2, align 4
 
-ST_2: cor_phaseArray_phase_9 (78)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:22  %cor_phaseArray_phase_9 = load i32* %cor_phaseArray_phase_8, align 8
+ST_2: extLd2 (93)  [1/1] 0.00ns
+.preheader.0.i:25  %extLd2 = sext i21 %cor_phaseClass0_V_2_s to i32
 
-ST_2: StgValue_52 (79)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:23  store i32 %cor_phaseArray_phase_9, i32* %cor_phaseArray_phase_6, align 4
+ST_2: StgValue_52 (94)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:26  store i21 %cor_phaseClass0_V_2_s, i21* @cor_phaseClass0_V_3, align 4
 
-ST_2: cor_phaseArray_phase_11 (81)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:25  %cor_phaseArray_phase_11 = load i32* %cor_phaseArray_phase_10, align 4
+ST_2: cor_phaseClass0_V_1_s (95)  [1/1] 0.00ns
+.preheader.0.i:27  %cor_phaseClass0_V_1_s = load i21* @cor_phaseClass0_V_1, align 4
 
-ST_2: StgValue_54 (82)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:26  store i32 %cor_phaseArray_phase_11, i32* %cor_phaseArray_phase_8, align 8
+ST_2: cor_phaseClass0_V_1_1 (96)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:28  %cor_phaseClass0_V_1_1 = sext i21 %cor_phaseClass0_V_1_s to i23
 
-ST_2: cor_phaseArray_phase_13 (84)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:28  %cor_phaseArray_phase_13 = load i32* %cor_phaseArray_phase_12, align 16
+ST_2: StgValue_55 (97)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:29  store i21 %cor_phaseClass0_V_1_s, i21* @cor_phaseClass0_V_2, align 4
 
-ST_2: StgValue_56 (85)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:29  store i32 %cor_phaseArray_phase_13, i32* %cor_phaseArray_phase_10, align 4
+ST_2: cor_phaseClass0_V_0_s (98)  [1/1] 0.00ns
+.preheader.0.i:30  %cor_phaseClass0_V_0_s = load i21* @cor_phaseClass0_V_0, align 4
 
-ST_2: cor_phaseArray_phase_15 (87)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:31  %cor_phaseArray_phase_15 = load i32* %cor_phaseArray_phase_14, align 4
+ST_2: cor_phaseClass0_V_0_1 (99)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:31  %cor_phaseClass0_V_0_1 = sext i21 %cor_phaseClass0_V_0_s to i22
 
-ST_2: StgValue_58 (88)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:32  store i32 %cor_phaseArray_phase_15, i32* %cor_phaseArray_phase_12, align 16
+ST_2: StgValue_58 (100)  [1/1] 0.00ns  loc: correlator.cpp:129->correlator.cpp:99
+.preheader.0.i:32  store i21 %cor_phaseClass0_V_0_s, i21* @cor_phaseClass0_V_1, align 4
 
-ST_2: cor_phaseArray_phase_17 (90)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:34  %cor_phaseArray_phase_17 = load i32* %cor_phaseArray_phase_16, align 8
+ST_2: StgValue_59 (101)  [1/1] 0.00ns  loc: correlator.cpp:131->correlator.cpp:99
+.preheader.0.i:33  store i21 %op_V_read_assign, i21* @cor_phaseClass0_V_0, align 4
 
-ST_2: StgValue_60 (91)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:35  store i32 %cor_phaseArray_phase_17, i32* %cor_phaseArray_phase_14, align 4
+ST_2: tmp1 (102)  [1/1] 1.39ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:34  %tmp1 = add i32 %cor_phaseClass0_V_8_s, %cor_phaseClass0_V_13
 
-ST_2: cor_phaseArray_phase_19 (93)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:37  %cor_phaseArray_phase_19 = load i32* %cor_phaseArray_phase_18, align 4
+ST_2: tmp (103)  [1/1] 1.39ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:35  %tmp = add i32 %cor_phaseClass0_V_12, %tmp1
 
-ST_2: StgValue_62 (94)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:38  store i32 %cor_phaseArray_phase_19, i32* %cor_phaseArray_phase_16, align 8
+ST_2: tmp3 (104)  [1/1] 1.73ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:36  %tmp3 = add i32 %cor_phaseClass0_V_6_s, %cor_phaseClass0_V_7_s
 
-ST_2: cor_phaseArray_phase_21 (96)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:40  %cor_phaseArray_phase_21 = load i1* %cor_phaseArray_phase_20, align 1
+ST_2: tmp4 (105)  [1/1] 1.73ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:37  %tmp4 = add i32 %extLd2, %cor_phaseClass0_V_5_s
 
-ST_2: extLd6 (97)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:41  %extLd6 = zext i1 %cor_phaseArray_phase_21 to i32
+ST_2: tmp2 (106)  [1/1] 1.39ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:38  %tmp2 = add i32 %tmp3, %tmp4
 
-ST_2: StgValue_65 (98)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:42  store i32 %extLd6, i32* %cor_phaseArray_phase_18, align 4
+ST_2: p_Val2_6_i (107)  [1/1] 1.39ns  loc: correlator.cpp:264->correlator.cpp:100
+.preheader.0.i:39  %p_Val2_6_i = add i32 %tmp, %tmp2
 
-ST_2: cor_phaseArray_phase_23 (100)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:44  %cor_phaseArray_phase_23 = load i1* %cor_phaseArray_phase_22, align 1
+ST_2: tmp6 (108)  [1/1] 1.73ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:40  %tmp6 = add i32 %cor_phaseClass0_V_14, %cor_phaseClass0_V_11
 
-ST_2: extLd3 (101)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:45  %extLd3 = zext i1 %cor_phaseArray_phase_23 to i32
+ST_2: tmp7 (109)  [1/1] 1.39ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:41  %tmp7 = add i32 %cor_phaseClass0_V_9_s, %cor_phaseClass0_V_10
 
-ST_2: StgValue_68 (102)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:46  store i1 %cor_phaseArray_phase_23, i1* %cor_phaseArray_phase_20, align 1
+ST_2: tmp5 (110)  [1/1] 1.39ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:42  %tmp5 = add i32 %tmp6, %tmp7
 
-ST_2: cor_phaseArray_phase_25 (104)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:48  %cor_phaseArray_phase_25 = load i1* %cor_phaseArray_phase_24, align 1
+ST_2: tmp9 (111)  [1/1] 1.73ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:43  %tmp9 = add i32 %extLd4, %cor_phaseClass0_V_4_s
 
-ST_2: extLd1 (105)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:49  %extLd1 = zext i1 %cor_phaseArray_phase_25 to i32
+ST_2: tmp11 (112)  [1/1] 1.69ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:44  %tmp11 = add i22 %op_V_read_assign_cas, %cor_phaseClass0_V_0_1
 
-ST_2: StgValue_71 (106)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:50  store i1 %cor_phaseArray_phase_25, i1* %cor_phaseArray_phase_22, align 1
+ST_2: tmp11_cast_cast (113)  [1/1] 0.00ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:45  %tmp11_cast_cast = sext i22 %tmp11 to i23
 
-ST_2: cor_phaseArray_phase_27 (108)  [1/2] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:52  %cor_phaseArray_phase_27 = load i1* %cor_phaseArray_phase_26, align 1
+ST_2: tmp10 (114)  [1/1] 1.69ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:46  %tmp10 = add i23 %cor_phaseClass0_V_1_1, %tmp11_cast_cast
 
-ST_2: extLd (109)  [1/1] 0.00ns  loc: correlator.cpp:228->correlator.cpp:91
-:53  %extLd = zext i1 %cor_phaseArray_phase_27 to i32
+ST_2: tmp10_cast (115)  [1/1] 0.00ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:47  %tmp10_cast = sext i23 %tmp10 to i32
 
-ST_2: StgValue_74 (110)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:54  store i1 %cor_phaseArray_phase_27, i1* %cor_phaseArray_phase_24, align 1
+ST_2: tmp8 (116)  [1/1] 1.39ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:48  %tmp8 = add i32 %tmp9, %tmp10_cast
 
-ST_2: StgValue_75 (111)  [1/1] 1.43ns  loc: correlator.cpp:228->correlator.cpp:91
-:55  store i1 false, i1* %cor_phaseArray_phase_26, align 1
+ST_2: p_Val2_3_7_i (117)  [1/1] 1.39ns  loc: correlator.cpp:266->correlator.cpp:100
+.preheader.0.i:49  %p_Val2_3_7_i = add i32 %tmp5, %tmp8
 
-ST_2: tmp9 (112)  [1/1] 1.39ns  loc: correlator.cpp:240->correlator.cpp:92
-:56  %tmp9 = add i32 %cor_phaseArray_phase_15, %cor_phaseArray_phase_19
+ST_2: StgValue_76 (118)  [1/1] 1.03ns
+.preheader.0.i:50  br label %correlator.exit
 
-ST_2: tmp8 (113)  [1/1] 1.39ns  loc: correlator.cpp:240->correlator.cpp:92
-:57  %tmp8 = add i32 %cor_phaseArray_phase_17, %tmp9
+ST_2: tmp_6 (132)  [1/1] 1.65ns  loc: correlator.cpp:107
+correlator.exit:12  %tmp_6 = add i4 %phaseClass_V_load, 1
 
-ST_2: tmp (114)  [1/1] 1.73ns  loc: correlator.cpp:240->correlator.cpp:92
-:58  %tmp = add i32 %cor_phaseArray_phase_13, %cor_phaseArray_phase_5
-
-ST_2: tmp1 (115)  [1/1] 1.73ns  loc: correlator.cpp:240->correlator.cpp:92
-:59  %tmp1 = add i32 %extLd1, %cor_phaseArray_phase_3
-
-ST_2: tmp2 (116)  [1/1] 1.39ns  loc: correlator.cpp:240->correlator.cpp:92
-:60  %tmp2 = add i32 %tmp, %tmp1
-
-ST_2: p_Val2_6_i (117)  [1/1] 1.39ns  loc: correlator.cpp:240->correlator.cpp:92
-:61  %p_Val2_6_i = add i32 %tmp8, %tmp2
-
-ST_2: tmp3 (118)  [1/1] 1.39ns  loc: correlator.cpp:242->correlator.cpp:92
-:62  %tmp3 = add i32 %cor_phaseArray_phase_11, %extLd3
-
-ST_2: tmp4 (119)  [1/1] 1.39ns  loc: correlator.cpp:242->correlator.cpp:92
-:63  %tmp4 = add i32 %extLd6, %tmp3
-
-ST_2: tmp5 (120)  [1/1] 1.73ns  loc: correlator.cpp:242->correlator.cpp:92
-:64  %tmp5 = add i32 %cor_phaseArray_phase_9, %cor_phaseArray_phase_7
-
-ST_2: tmp6 (121)  [1/1] 1.73ns  loc: correlator.cpp:242->correlator.cpp:92
-:65  %tmp6 = add i32 %extLd, %cor_phaseArray_phase_1
-
-ST_2: tmp7 (122)  [1/1] 1.39ns  loc: correlator.cpp:242->correlator.cpp:92
-:66  %tmp7 = add i32 %tmp5, %tmp6
-
-ST_2: p_Val2_3_2_i (123)  [1/1] 1.39ns  loc: correlator.cpp:242->correlator.cpp:92
-:67  %p_Val2_3_2_i = add i32 %tmp4, %tmp7
+ST_2: StgValue_78 (133)  [1/1] 1.03ns  loc: correlator.cpp:105
+correlator.exit:13  store i4 %tmp_6, i4* @phaseClass_V, align 1
 
 
  <State 3>: 3.47ns
-ST_3: empty (56)  [1/2] 0.00ns
-:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_data_V, i1* %i_data_last_V)
+ST_3: p_Val2_2 (120)  [1/1] 0.00ns  loc: correlator.cpp:266->correlator.cpp:100
+correlator.exit:0  %p_Val2_2 = phi i32 [ %p_Val2_3_7_i, %.preheader.0.i ], [ 0, %._crit_edge146 ]
 
-ST_3: p_Val2_s (57)  [1/1] 0.00ns
-:1  %p_Val2_s = extractvalue { i32, i1 } %empty, 0
+ST_3: p_Val2_3 (121)  [1/1] 0.00ns  loc: correlator.cpp:264->correlator.cpp:100
+correlator.exit:1  %p_Val2_3 = phi i32 [ %p_Val2_6_i, %.preheader.0.i ], [ 0, %._crit_edge146 ]
 
-ST_3: o_data_last_V_tmp (58)  [1/1] 0.00ns
-:2  %o_data_last_V_tmp = extractvalue { i32, i1 } %empty, 1
+ST_3: tmp_i (122)  [1/1] 2.08ns  loc: correlator.cpp:422->correlator.cpp:100
+correlator.exit:2  %tmp_i = icmp sgt i32 %p_Val2_3, %p_Val2_2
 
-ST_3: p_Val2_1 (59)  [1/1] 0.00ns  loc: correlator.cpp:83
-:3  %p_Val2_1 = trunc i32 %p_Val2_s to i16
+ST_3: p_Val2_i (123)  [1/1] 1.73ns  loc: correlator.cpp:425->correlator.cpp:100
+correlator.exit:3  %p_Val2_i = sub i32 %p_Val2_2, %p_Val2_3
 
-ST_3: StgValue_92 (60)  [1/1] 0.00ns  loc: correlator.cpp:83
-:4  store i16 %p_Val2_1, i16* @unScalled_V, align 2
+ST_3: p_Val2_9_i (124)  [1/1] 1.73ns  loc: correlator.cpp:423->correlator.cpp:100
+correlator.exit:4  %p_Val2_9_i = sub i32 %p_Val2_3, %p_Val2_2
 
-ST_3: p_0 (61)  [1/1] 0.00ns  loc: correlator.cpp:84
-:5  %p_0 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %p_Val2_1, i5 0)
-
-ST_3: StgValue_94 (62)  [1/1] 0.00ns  loc: correlator.cpp:84
-:6  store i21 %p_0, i21* @newVal_V, align 4
-
-ST_3: tmp_5_i (124)  [1/1] 2.08ns  loc: correlator.cpp:408->correlator.cpp:92
-:68  %tmp_5_i = icmp sgt i32 %p_Val2_6_i, %p_Val2_3_2_i
-
-ST_3: p_Val2_i (125)  [1/1] 1.73ns  loc: correlator.cpp:411->correlator.cpp:92
-:69  %p_Val2_i = sub i32 %p_Val2_3_2_i, %p_Val2_6_i
-
-ST_3: p_Val2_9_i (126)  [1/1] 1.73ns  loc: correlator.cpp:409->correlator.cpp:92
-:70  %p_Val2_9_i = sub i32 %p_Val2_6_i, %p_Val2_3_2_i
-
-ST_3: tmp_i_4 (127)  [1/1] 1.40ns  loc: correlator.cpp:408->correlator.cpp:92
-:71  %tmp_i_4 = select i1 %tmp_5_i, i32 %p_Val2_9_i, i32 %p_Val2_i
+ST_3: tmp_1_i (125)  [1/1] 1.40ns  loc: correlator.cpp:422->correlator.cpp:100
+correlator.exit:5  %tmp_1_i = select i1 %tmp_i, i32 %p_Val2_9_i, i32 %p_Val2_i
 
 
  <State 4>: 7.87ns
-ST_4: OP1_V_cast (128)  [1/1] 0.00ns  loc: correlator.cpp:413->correlator.cpp:92
-:72  %OP1_V_cast = sext i32 %tmp_i_4 to i42
+ST_4: OP1_V_cast (126)  [1/1] 0.00ns  loc: correlator.cpp:427->correlator.cpp:100
+correlator.exit:6  %OP1_V_cast = sext i32 %tmp_1_i to i42
 
-ST_4: p_Val2_2 (129)  [1/1] 7.87ns  loc: correlator.cpp:413->correlator.cpp:92
-:73  %p_Val2_2 = mul i42 %OP1_V_cast, %OP1_V_cast
+ST_4: p_Val2_4 (127)  [1/1] 7.87ns  loc: correlator.cpp:427->correlator.cpp:100
+correlator.exit:7  %p_Val2_4 = mul i42 %OP1_V_cast, %OP1_V_cast
 
-ST_4: res_V (130)  [1/1] 0.00ns  loc: correlator.cpp:413->correlator.cpp:92
-:74  %res_V = call i32 @_ssdm_op_PartSelect.i32.i42.i32.i32(i42 %p_Val2_2, i32 10, i32 41)
+ST_4: res_V (128)  [1/1] 0.00ns  loc: correlator.cpp:427->correlator.cpp:100
+correlator.exit:8  %res_V = call i32 @_ssdm_op_PartSelect.i32.i42.i32.i32(i42 %p_Val2_4, i32 10, i32 41)
 
 
  <State 5>: 3.47ns
-ST_5: loadCount_V_load (45)  [1/1] 0.00ns  loc: correlator.cpp:90
-codeRepl:20  %loadCount_V_load = load i32* @loadCount_V, align 4
+ST_5: StgValue_88 (50)  [1/1] 1.03ns  loc: correlator.cpp:80
+operator=.exit.0:0  store i32 0, i32* @loadCount_V, align 4
 
-ST_5: StgValue_103 (50)  [1/1] 1.03ns  loc: correlator.cpp:76
-:0  store i32 0, i32* @loadCount_V, align 4
+ST_5: loadCount_V_load (129)  [1/1] 0.00ns  loc: correlator.cpp:103
+correlator.exit:9  %loadCount_V_load = load i32* @loadCount_V, align 4
 
-ST_5: tmp_4 (63)  [1/1] 1.73ns  loc: correlator.cpp:90
-:7  %tmp_4 = add i32 32, %loadCount_V_load
+ST_5: tmp_4 (130)  [1/1] 1.73ns  loc: correlator.cpp:103
+correlator.exit:10  %tmp_4 = add i32 %loadCount_V_load, 1
 
-ST_5: StgValue_105 (64)  [1/1] 1.03ns  loc: correlator.cpp:90
-:8  store i32 %tmp_4, i32* @loadCount_V, align 4
+ST_5: StgValue_91 (131)  [1/1] 1.03ns  loc: correlator.cpp:103
+correlator.exit:11  store i32 %tmp_4, i32* @loadCount_V, align 4
 
-ST_5: tmp_5 (131)  [1/1] 2.08ns  loc: correlator.cpp:95
-:75  %tmp_5 = icmp sgt i32 %res_V, 204800
+ST_5: tmp_7 (134)  [1/1] 2.08ns  loc: correlator.cpp:110
+correlator.exit:14  %tmp_7 = icmp sgt i32 %res_V, 29696000
 
-ST_5: o_data_data_V_tmp (132)  [1/1] 1.40ns  loc: correlator.cpp:95
-:76  %o_data_data_V_tmp = select i1 %tmp_5, i32 %tmp_4, i32 0
+ST_5: o_data_data_V_tmp (135)  [1/1] 1.40ns  loc: correlator.cpp:110
+correlator.exit:15  %o_data_data_V_tmp = select i1 %tmp_7, i32 %tmp_4, i32 0
 
-ST_5: StgValue_108 (133)  [2/2] 0.00ns  loc: correlator.cpp:95
-:77  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %o_data_last_V_tmp)
+ST_5: StgValue_94 (136)  [2/2] 0.00ns  loc: correlator.cpp:110
+correlator.exit:16  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)
 
 
  <State 6>: 0.00ns
-ST_6: StgValue_109 (27)  [1/1] 0.00ns
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !88
+ST_6: StgValue_95 (27)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_data_V), !map !98
 
-ST_6: StgValue_110 (28)  [1/1] 0.00ns
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !92
+ST_6: StgValue_96 (28)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_last_V), !map !102
 
-ST_6: StgValue_111 (29)  [1/1] 0.00ns
-codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !96
+ST_6: StgValue_97 (29)  [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_data_V), !map !106
 
-ST_6: StgValue_112 (30)  [1/1] 0.00ns
-codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !100
+ST_6: StgValue_98 (30)  [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_last_V), !map !110
 
-ST_6: StgValue_113 (31)  [1/1] 0.00ns
-codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !104
+ST_6: StgValue_99 (31)  [1/1] 0.00ns
+codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i1 %start_V), !map !114
 
-ST_6: StgValue_114 (32)  [1/1] 0.00ns
-codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(i4 %phaseClass_V), !map !110
+ST_6: StgValue_100 (32)  [1/1] 0.00ns
+codeRepl:6  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
 
-ST_6: StgValue_115 (33)  [1/1] 0.00ns
-codeRepl:8  call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
+ST_6: StgValue_101 (33)  [1/1] 0.00ns  loc: correlator.cpp:16
+codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_116 (34)  [1/1] 0.00ns  loc: correlator.cpp:16
-codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_102 (34)  [1/1] 0.00ns  loc: correlator.cpp:17
+codeRepl:8  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_117 (35)  [1/1] 0.00ns  loc: correlator.cpp:17
-codeRepl:10  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_data_V, i1* %o_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_103 (35)  [1/1] 0.00ns  loc: correlator.cpp:18
+codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_118 (36)  [1/1] 0.00ns  loc: correlator.cpp:18
-codeRepl:11  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_data_V, i1* %i_data_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_104 (36)  [1/1] 0.00ns  loc: correlator.cpp:20
+codeRepl:10  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_119 (37)  [1/1] 0.00ns  loc: correlator.cpp:20
-codeRepl:12  call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_105 (37)  [1/1] 0.00ns  loc: correlator.cpp:44
+codeRepl:11  call void (...)* @_ssdm_op_SpecReset(i21* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_120 (38)  [1/1] 0.00ns  loc: correlator.cpp:44
-codeRepl:13  call void (...)* @_ssdm_op_SpecReset(i21* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_106 (38)  [1/1] 0.00ns  loc: correlator.cpp:47
+codeRepl:12  call void (...)* @_ssdm_op_SpecReset(i16* @unScalled_V, i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_121 (39)  [1/1] 0.00ns  loc: correlator.cpp:47
-codeRepl:14  call void (...)* @_ssdm_op_SpecReset(i16* @unScalled_V, i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_107 (39)  [1/1] 0.00ns  loc: correlator.cpp:54
+codeRepl:13  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_122 (40)  [1/1] 0.00ns  loc: correlator.cpp:54
-codeRepl:15  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_108 (40)  [1/1] 0.00ns  loc: correlator.cpp:59
+codeRepl:14  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_123 (41)  [1/1] 0.00ns  loc: correlator.cpp:59
-codeRepl:16  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_109 (41)  [1/1] 0.00ns  loc: correlator.cpp:62
+codeRepl:15  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_124 (42)  [1/1] 0.00ns  loc: correlator.cpp:62
-codeRepl:17  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_110 (42)  [1/1] 0.00ns  loc: correlator.cpp:65
+codeRepl:16  call void (...)* @_ssdm_op_SpecReset(i4* @phaseClass_V, i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_125 (44)  [1/1] 0.00ns  loc: correlator.cpp:67
-codeRepl:19  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
+ST_6: StgValue_111 (44)  [1/1] 0.00ns  loc: correlator.cpp:71
+codeRepl:18  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
 
-ST_6: StgValue_126 (52)  [1/1] 0.00ns  loc: correlator.cpp:78
-:2  br label %._crit_edge86
+ST_6: StgValue_112 (53)  [1/1] 0.00ns
+operator=.exit.0:3  br label %.loopexit
 
-ST_6: StgValue_127 (54)  [1/1] 0.00ns  loc: correlator.cpp:79
-._crit_edge86:0  br label %._crit_edge85
+ST_6: StgValue_113 (55)  [1/1] 0.00ns  loc: correlator.cpp:88
+.loopexit:0  br label %._crit_edge145
 
-ST_6: StgValue_128 (133)  [1/2] 0.00ns  loc: correlator.cpp:95
-:77  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %o_data_last_V_tmp)
+ST_6: StgValue_114 (136)  [1/2] 0.00ns  loc: correlator.cpp:110
+correlator.exit:16  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)
 
-ST_6: StgValue_129 (135)  [1/1] 0.00ns  loc: correlator.cpp:106
-:79  br label %._crit_edge85
+ST_6: StgValue_115 (138)  [1/1] 0.00ns  loc: correlator.cpp:119
+correlator.exit:18  br label %._crit_edge145
 
-ST_6: StgValue_130 (137)  [1/1] 0.00ns  loc: correlator.cpp:109
-._crit_edge85:0  ret void
+ST_6: StgValue_116 (140)  [1/1] 0.00ns  loc: correlator.cpp:122
+._crit_edge145:0  ret void
 
 
 
@@ -699,139 +641,140 @@ Port [ i_data_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static
 Port [ o_data_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ o_data_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ start_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ phaseClass_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ currentState]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ phaseClass_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ loadCount_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 Port [ unScalled_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_vld:ce=0
 Port [ newVal_V]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_vld:ce=0
-Port [ cor_phaseArray_phase_8]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_9]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_10]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_11]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_12]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_2]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_3]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_4]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_5]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_6]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_7]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ cor_phaseArray_phase_13]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ cor_phaseClass0_V_14]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_13]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_12]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_11]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_10]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_9]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_8]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_7]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_6]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_5]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_4]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_3]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_2]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_1]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cor_phaseClass0_V_0]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-phaseClass_V_read       (read          ) [ 0000000]
-currentState_load       (load          ) [ 0111111]
-StgValue_9              (br            ) [ 0000000]
-tmp_i                   (zext          ) [ 0000000]
-cor_phaseArray_phase    (getelementptr ) [ 0010000]
-cor_phaseArray_phase_2  (getelementptr ) [ 0010000]
-cor_phaseArray_phase_4  (getelementptr ) [ 0010000]
-cor_phaseArray_phase_6  (getelementptr ) [ 0010000]
-cor_phaseArray_phase_8  (getelementptr ) [ 0010000]
-cor_phaseArray_phase_10 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_12 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_14 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_16 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_18 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_20 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_22 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_24 (getelementptr ) [ 0010000]
-cor_phaseArray_phase_26 (getelementptr ) [ 0010000]
-StgValue_39             (store         ) [ 0000000]
-start_V_read            (read          ) [ 0111111]
-StgValue_41             (br            ) [ 0000000]
-StgValue_42             (store         ) [ 0000000]
-cor_phaseArray_phase_1  (load          ) [ 0000000]
-cor_phaseArray_phase_3  (load          ) [ 0000000]
-StgValue_46             (store         ) [ 0000000]
-cor_phaseArray_phase_5  (load          ) [ 0000000]
-StgValue_48             (store         ) [ 0000000]
-cor_phaseArray_phase_7  (load          ) [ 0000000]
-StgValue_50             (store         ) [ 0000000]
-cor_phaseArray_phase_9  (load          ) [ 0000000]
-StgValue_52             (store         ) [ 0000000]
-cor_phaseArray_phase_11 (load          ) [ 0000000]
-StgValue_54             (store         ) [ 0000000]
-cor_phaseArray_phase_13 (load          ) [ 0000000]
-StgValue_56             (store         ) [ 0000000]
-cor_phaseArray_phase_15 (load          ) [ 0000000]
-StgValue_58             (store         ) [ 0000000]
-cor_phaseArray_phase_17 (load          ) [ 0000000]
-StgValue_60             (store         ) [ 0000000]
-cor_phaseArray_phase_19 (load          ) [ 0000000]
-StgValue_62             (store         ) [ 0000000]
-cor_phaseArray_phase_21 (load          ) [ 0000000]
-extLd6                  (zext          ) [ 0000000]
-StgValue_65             (store         ) [ 0000000]
-cor_phaseArray_phase_23 (load          ) [ 0000000]
-extLd3                  (zext          ) [ 0000000]
-StgValue_68             (store         ) [ 0000000]
-cor_phaseArray_phase_25 (load          ) [ 0000000]
-extLd1                  (zext          ) [ 0000000]
-StgValue_71             (store         ) [ 0000000]
-cor_phaseArray_phase_27 (load          ) [ 0000000]
-extLd                   (zext          ) [ 0000000]
-StgValue_74             (store         ) [ 0000000]
-StgValue_75             (store         ) [ 0000000]
-tmp9                    (add           ) [ 0000000]
-tmp8                    (add           ) [ 0000000]
-tmp                     (add           ) [ 0000000]
-tmp1                    (add           ) [ 0000000]
-tmp2                    (add           ) [ 0000000]
-p_Val2_6_i              (add           ) [ 0101000]
-tmp3                    (add           ) [ 0000000]
-tmp4                    (add           ) [ 0000000]
-tmp5                    (add           ) [ 0000000]
-tmp6                    (add           ) [ 0000000]
-tmp7                    (add           ) [ 0000000]
-p_Val2_3_2_i            (add           ) [ 0101000]
-empty                   (read          ) [ 0000000]
-p_Val2_s                (extractvalue  ) [ 0000000]
-o_data_last_V_tmp       (extractvalue  ) [ 0110111]
-p_Val2_1                (trunc         ) [ 0000000]
-StgValue_92             (store         ) [ 0000000]
-p_0                     (bitconcatenate) [ 0000000]
-StgValue_94             (store         ) [ 0000000]
-tmp_5_i                 (icmp          ) [ 0000000]
-p_Val2_i                (sub           ) [ 0000000]
-p_Val2_9_i              (sub           ) [ 0000000]
-tmp_i_4                 (select        ) [ 0010100]
-OP1_V_cast              (sext          ) [ 0000000]
-p_Val2_2                (mul           ) [ 0000000]
-res_V                   (partselect    ) [ 0100010]
-loadCount_V_load        (load          ) [ 0000000]
-StgValue_103            (store         ) [ 0000000]
-tmp_4                   (add           ) [ 0000000]
-StgValue_105            (store         ) [ 0000000]
-tmp_5                   (icmp          ) [ 0000000]
-o_data_data_V_tmp       (select        ) [ 0010001]
-StgValue_109            (specbitsmap   ) [ 0000000]
-StgValue_110            (specbitsmap   ) [ 0000000]
-StgValue_111            (specbitsmap   ) [ 0000000]
-StgValue_112            (specbitsmap   ) [ 0000000]
-StgValue_113            (specbitsmap   ) [ 0000000]
-StgValue_114            (specbitsmap   ) [ 0000000]
-StgValue_115            (spectopmodule ) [ 0000000]
-StgValue_116            (specinterface ) [ 0000000]
-StgValue_117            (specinterface ) [ 0000000]
-StgValue_118            (specinterface ) [ 0000000]
-StgValue_119            (specpipeline  ) [ 0000000]
-StgValue_120            (specreset     ) [ 0000000]
-StgValue_121            (specreset     ) [ 0000000]
-StgValue_122            (specreset     ) [ 0000000]
-StgValue_123            (specreset     ) [ 0000000]
-StgValue_124            (specreset     ) [ 0000000]
-StgValue_125            (specreset     ) [ 0000000]
-StgValue_126            (br            ) [ 0000000]
-StgValue_127            (br            ) [ 0000000]
-StgValue_128            (write         ) [ 0000000]
-StgValue_129            (br            ) [ 0000000]
-StgValue_130            (ret           ) [ 0000000]
+start_V_read          (read          ) [ 0111111]
+currentState_load     (load          ) [ 0111111]
+StgValue_9            (br            ) [ 0000000]
+StgValue_10           (br            ) [ 0000000]
+StgValue_11           (store         ) [ 0000000]
+StgValue_13           (store         ) [ 0000000]
+phaseClass_V_load     (load          ) [ 0000000]
+StgValue_15           (store         ) [ 0000000]
+empty                 (read          ) [ 0000000]
+p_Val2_s              (extractvalue  ) [ 0000000]
+i_data_last_V_tmp     (extractvalue  ) [ 0101111]
+p_Val2_1              (trunc         ) [ 0000000]
+StgValue_20           (store         ) [ 0000000]
+op_V_read_assign      (bitconcatenate) [ 0000000]
+op_V_read_assign_cas  (sext          ) [ 0000000]
+StgValue_23           (store         ) [ 0000000]
+cond_i                (icmp          ) [ 0110000]
+StgValue_25           (br            ) [ 0111000]
+cor_phaseClass0_V_14  (load          ) [ 0000000]
+cor_phaseClass0_V_13  (load          ) [ 0000000]
+StgValue_28           (store         ) [ 0000000]
+cor_phaseClass0_V_12  (load          ) [ 0000000]
+StgValue_30           (store         ) [ 0000000]
+cor_phaseClass0_V_11  (load          ) [ 0000000]
+StgValue_32           (store         ) [ 0000000]
+cor_phaseClass0_V_10  (load          ) [ 0000000]
+StgValue_34           (store         ) [ 0000000]
+cor_phaseClass0_V_9_s (load          ) [ 0000000]
+StgValue_36           (store         ) [ 0000000]
+cor_phaseClass0_V_8_s (load          ) [ 0000000]
+StgValue_38           (store         ) [ 0000000]
+cor_phaseClass0_V_7_s (load          ) [ 0000000]
+StgValue_40           (store         ) [ 0000000]
+cor_phaseClass0_V_6_s (load          ) [ 0000000]
+StgValue_42           (store         ) [ 0000000]
+cor_phaseClass0_V_5_s (load          ) [ 0000000]
+StgValue_44           (store         ) [ 0000000]
+cor_phaseClass0_V_4_s (load          ) [ 0000000]
+StgValue_46           (store         ) [ 0000000]
+cor_phaseClass0_V_3_s (load          ) [ 0000000]
+extLd4                (sext          ) [ 0000000]
+StgValue_49           (store         ) [ 0000000]
+cor_phaseClass0_V_2_s (load          ) [ 0000000]
+extLd2                (sext          ) [ 0000000]
+StgValue_52           (store         ) [ 0000000]
+cor_phaseClass0_V_1_s (load          ) [ 0000000]
+cor_phaseClass0_V_1_1 (sext          ) [ 0000000]
+StgValue_55           (store         ) [ 0000000]
+cor_phaseClass0_V_0_s (load          ) [ 0000000]
+cor_phaseClass0_V_0_1 (sext          ) [ 0000000]
+StgValue_58           (store         ) [ 0000000]
+StgValue_59           (store         ) [ 0000000]
+tmp1                  (add           ) [ 0000000]
+tmp                   (add           ) [ 0000000]
+tmp3                  (add           ) [ 0000000]
+tmp4                  (add           ) [ 0000000]
+tmp2                  (add           ) [ 0000000]
+p_Val2_6_i            (add           ) [ 0111000]
+tmp6                  (add           ) [ 0000000]
+tmp7                  (add           ) [ 0000000]
+tmp5                  (add           ) [ 0000000]
+tmp9                  (add           ) [ 0000000]
+tmp11                 (add           ) [ 0000000]
+tmp11_cast_cast       (sext          ) [ 0000000]
+tmp10                 (add           ) [ 0000000]
+tmp10_cast            (sext          ) [ 0000000]
+tmp8                  (add           ) [ 0000000]
+p_Val2_3_7_i          (add           ) [ 0111000]
+StgValue_76           (br            ) [ 0111000]
+tmp_6                 (add           ) [ 0000000]
+StgValue_78           (store         ) [ 0000000]
+p_Val2_2              (phi           ) [ 0101000]
+p_Val2_3              (phi           ) [ 0101000]
+tmp_i                 (icmp          ) [ 0000000]
+p_Val2_i              (sub           ) [ 0000000]
+p_Val2_9_i            (sub           ) [ 0000000]
+tmp_1_i               (select        ) [ 0100100]
+OP1_V_cast            (sext          ) [ 0000000]
+p_Val2_4              (mul           ) [ 0000000]
+res_V                 (partselect    ) [ 0100010]
+StgValue_88           (store         ) [ 0000000]
+loadCount_V_load      (load          ) [ 0000000]
+tmp_4                 (add           ) [ 0000000]
+StgValue_91           (store         ) [ 0000000]
+tmp_7                 (icmp          ) [ 0000000]
+o_data_data_V_tmp     (select        ) [ 0100001]
+StgValue_95           (specbitsmap   ) [ 0000000]
+StgValue_96           (specbitsmap   ) [ 0000000]
+StgValue_97           (specbitsmap   ) [ 0000000]
+StgValue_98           (specbitsmap   ) [ 0000000]
+StgValue_99           (specbitsmap   ) [ 0000000]
+StgValue_100          (spectopmodule ) [ 0000000]
+StgValue_101          (specinterface ) [ 0000000]
+StgValue_102          (specinterface ) [ 0000000]
+StgValue_103          (specinterface ) [ 0000000]
+StgValue_104          (specpipeline  ) [ 0000000]
+StgValue_105          (specreset     ) [ 0000000]
+StgValue_106          (specreset     ) [ 0000000]
+StgValue_107          (specreset     ) [ 0000000]
+StgValue_108          (specreset     ) [ 0000000]
+StgValue_109          (specreset     ) [ 0000000]
+StgValue_110          (specreset     ) [ 0000000]
+StgValue_111          (specreset     ) [ 0000000]
+StgValue_112          (br            ) [ 0000000]
+StgValue_113          (br            ) [ 0000000]
+StgValue_114          (write         ) [ 0000000]
+StgValue_115          (br            ) [ 0000000]
+StgValue_116          (ret           ) [ 0000000]
 </LifeTime>
 
 <model>
@@ -882,21 +825,21 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="10" class="1000" name="phaseClass_V">
+<comp id="10" class="1000" name="currentState">
 <pin_list>
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="phaseClass_V"/></StgValue>
+<StgValue><ssdm name="currentState"/></StgValue>
 </bind>
 </comp>
 
-<comp id="12" class="1000" name="currentState">
+<comp id="12" class="1000" name="phaseClass_V">
 <pin_list>
 <pin id="13" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="currentState"/></StgValue>
+<StgValue><ssdm name="phaseClass_V"/></StgValue>
 </bind>
 </comp>
 
@@ -927,152 +870,138 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="20" class="1000" name="cor_phaseArray_phase_8">
+<comp id="20" class="1000" name="cor_phaseClass0_V_14">
 <pin_list>
 <pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_8"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_14"/></StgValue>
 </bind>
 </comp>
 
-<comp id="22" class="1000" name="cor_phaseArray_phase_9">
+<comp id="22" class="1000" name="cor_phaseClass0_V_13">
 <pin_list>
 <pin id="23" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_9"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_13"/></StgValue>
 </bind>
 </comp>
 
-<comp id="24" class="1000" name="cor_phaseArray_phase_10">
+<comp id="24" class="1000" name="cor_phaseClass0_V_12">
 <pin_list>
 <pin id="25" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_10"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_12"/></StgValue>
 </bind>
 </comp>
 
-<comp id="26" class="1000" name="cor_phaseArray_phase_11">
+<comp id="26" class="1000" name="cor_phaseClass0_V_11">
 <pin_list>
 <pin id="27" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_11"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_11"/></StgValue>
 </bind>
 </comp>
 
-<comp id="28" class="1000" name="cor_phaseArray_phase_12">
+<comp id="28" class="1000" name="cor_phaseClass0_V_10">
 <pin_list>
 <pin id="29" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_12"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_10"/></StgValue>
 </bind>
 </comp>
 
-<comp id="30" class="1000" name="cor_phaseArray_phase">
+<comp id="30" class="1000" name="cor_phaseClass0_V_9">
 <pin_list>
 <pin id="31" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_9"/></StgValue>
 </bind>
 </comp>
 
-<comp id="32" class="1000" name="cor_phaseArray_phase_1">
+<comp id="32" class="1000" name="cor_phaseClass0_V_8">
 <pin_list>
 <pin id="33" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_1"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_8"/></StgValue>
 </bind>
 </comp>
 
-<comp id="34" class="1000" name="cor_phaseArray_phase_2">
+<comp id="34" class="1000" name="cor_phaseClass0_V_7">
 <pin_list>
 <pin id="35" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_2"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_7"/></StgValue>
 </bind>
 </comp>
 
-<comp id="36" class="1000" name="cor_phaseArray_phase_3">
+<comp id="36" class="1000" name="cor_phaseClass0_V_6">
 <pin_list>
 <pin id="37" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_3"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_6"/></StgValue>
 </bind>
 </comp>
 
-<comp id="38" class="1000" name="cor_phaseArray_phase_4">
+<comp id="38" class="1000" name="cor_phaseClass0_V_5">
 <pin_list>
 <pin id="39" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_4"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_5"/></StgValue>
 </bind>
 </comp>
 
-<comp id="40" class="1000" name="cor_phaseArray_phase_5">
+<comp id="40" class="1000" name="cor_phaseClass0_V_4">
 <pin_list>
 <pin id="41" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_5"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_4"/></StgValue>
 </bind>
 </comp>
 
-<comp id="42" class="1000" name="cor_phaseArray_phase_6">
+<comp id="42" class="1000" name="cor_phaseClass0_V_3">
 <pin_list>
 <pin id="43" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_6"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_3"/></StgValue>
 </bind>
 </comp>
 
-<comp id="44" class="1000" name="cor_phaseArray_phase_7">
+<comp id="44" class="1000" name="cor_phaseClass0_V_2">
 <pin_list>
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_7"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_2"/></StgValue>
 </bind>
 </comp>
 
-<comp id="46" class="1000" name="cor_phaseArray_phase_13">
+<comp id="46" class="1000" name="cor_phaseClass0_V_1">
 <pin_list>
 <pin id="47" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cor_phaseArray_phase_13"/><MemPortTyVec>2 3 </MemPortTyVec>
-</StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_1"/></StgValue>
 </bind>
 </comp>
 
-<comp id="48" class="1001" name="const_48">
+<comp id="48" class="1000" name="cor_phaseClass0_V_0">
 <pin_list>
 <pin id="49" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i4"/></StgValue>
+<StgValue><ssdm name="cor_phaseClass0_V_0"/></StgValue>
 </bind>
 </comp>
 
@@ -1081,7 +1010,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="51" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
 </bind>
 </comp>
 
@@ -1099,7 +1028,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i1"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i32P.i1P"/></StgValue>
 </bind>
 </comp>
 
@@ -1108,7 +1037,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="57" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.axis.volatile.i32P.i1P"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -1117,7 +1046,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="59" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i21.i16.i5"/></StgValue>
 </bind>
 </comp>
 
@@ -1126,7 +1055,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="61" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i21.i16.i5"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -1144,7 +1073,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="65" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_PartSelect.i32.i42.i32.i32"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -1153,7 +1082,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="67" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i32.i42.i32.i32"/></StgValue>
 </bind>
 </comp>
 
@@ -1270,7 +1199,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_str4"/></StgValue>
 </bind>
 </comp>
 
@@ -1279,7 +1208,7 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
 </bind>
 </comp>
 
@@ -1288,446 +1217,114 @@ StgValue_130            (ret           ) [ 0000000]
 <pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
-</bind>
-</comp>
-
-<comp id="98" class="1001" name="const_98">
-<pin_list>
-<pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="100" class="1001" name="const_100">
-<pin_list>
-<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
 <StgValue><ssdm name="_ssdm_op_SpecReset"/></StgValue>
 </bind>
 </comp>
 
-<comp id="102" class="1004" name="phaseClass_V_read_read_fu_102">
+<comp id="98" class="1004" name="start_V_read_read_fu_98">
 <pin_list>
-<pin id="103" dir="0" index="0" bw="4" slack="0"/>
-<pin id="104" dir="0" index="1" bw="4" slack="0"/>
-<pin id="105" dir="1" index="2" bw="4" slack="0"/>
+<pin id="99" dir="0" index="0" bw="1" slack="0"/>
+<pin id="100" dir="0" index="1" bw="1" slack="0"/>
+<pin id="101" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="phaseClass_V_read/1 "/>
+<opset="start_V_read/1 "/>
 </bind>
 </comp>
 
-<comp id="108" class="1004" name="start_V_read_read_fu_108">
+<comp id="104" class="1004" name="grp_read_fu_104">
 <pin_list>
-<pin id="109" dir="0" index="0" bw="1" slack="0"/>
-<pin id="110" dir="0" index="1" bw="1" slack="0"/>
-<pin id="111" dir="1" index="2" bw="1" slack="3"/>
+<pin id="105" dir="0" index="0" bw="33" slack="0"/>
+<pin id="106" dir="0" index="1" bw="32" slack="0"/>
+<pin id="107" dir="0" index="2" bw="1" slack="0"/>
+<pin id="108" dir="1" index="3" bw="33" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="start_V_read/2 "/>
+<opset="empty/1 "/>
 </bind>
 </comp>
 
-<comp id="114" class="1004" name="grp_read_fu_114">
+<comp id="112" class="1004" name="grp_write_fu_112">
 <pin_list>
-<pin id="115" dir="0" index="0" bw="33" slack="0"/>
-<pin id="116" dir="0" index="1" bw="32" slack="0"/>
-<pin id="117" dir="0" index="2" bw="1" slack="0"/>
-<pin id="118" dir="1" index="3" bw="33" slack="0"/>
-</pin_list>
-<bind>
-<opcode="read(1150) " fcode="read"/>
-<opset="empty/2 "/>
-</bind>
-</comp>
-
-<comp id="122" class="1004" name="grp_write_fu_122">
-<pin_list>
-<pin id="123" dir="0" index="0" bw="0" slack="0"/>
-<pin id="124" dir="0" index="1" bw="32" slack="0"/>
-<pin id="125" dir="0" index="2" bw="1" slack="0"/>
-<pin id="126" dir="0" index="3" bw="32" slack="0"/>
-<pin id="127" dir="0" index="4" bw="1" slack="2"/>
-<pin id="128" dir="1" index="5" bw="0" slack="2147483647"/>
+<pin id="113" dir="0" index="0" bw="0" slack="0"/>
+<pin id="114" dir="0" index="1" bw="32" slack="0"/>
+<pin id="115" dir="0" index="2" bw="1" slack="0"/>
+<pin id="116" dir="0" index="3" bw="32" slack="0"/>
+<pin id="117" dir="0" index="4" bw="1" slack="3"/>
+<pin id="118" dir="1" index="5" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="StgValue_108/5 "/>
+<opset="StgValue_94/5 "/>
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="cor_phaseArray_phase_gep_fu_132">
+<comp id="122" class="1005" name="p_Val2_2_reg_122">
 <pin_list>
-<pin id="133" dir="0" index="0" bw="32" slack="0"/>
-<pin id="134" dir="0" index="1" bw="1" slack="0"/>
-<pin id="135" dir="0" index="2" bw="4" slack="0"/>
-<pin id="136" dir="1" index="3" bw="4" slack="0"/>
+<pin id="123" dir="0" index="0" bw="32" slack="1"/>
+<pin id="124" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase/1 "/>
+<opset="p_Val2_2 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="139" class="1004" name="grp_access_fu_139">
+<comp id="126" class="1004" name="p_Val2_2_phi_fu_126">
 <pin_list>
-<pin id="140" dir="0" index="0" bw="4" slack="0"/>
-<pin id="141" dir="0" index="1" bw="32" slack="0"/>
-<pin id="142" dir="1" index="2" bw="32" slack="0"/>
+<pin id="127" dir="0" index="0" bw="32" slack="1"/>
+<pin id="128" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="129" dir="0" index="2" bw="1" slack="1"/>
+<pin id="130" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="131" dir="1" index="4" bw="32" slack="0"/>
 </pin_list>
 <bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_1/1 StgValue_46/2 "/>
+<opcode="phi(47) " fcode="phi"/>
+<opset="p_Val2_2/3 "/>
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="cor_phaseArray_phase_2_gep_fu_144">
+<comp id="133" class="1005" name="p_Val2_3_reg_133">
 <pin_list>
-<pin id="145" dir="0" index="0" bw="32" slack="0"/>
+<pin id="134" dir="0" index="0" bw="32" slack="1"/>
+<pin id="135" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_Val2_3 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="137" class="1004" name="p_Val2_3_phi_fu_137">
+<pin_list>
+<pin id="138" dir="0" index="0" bw="32" slack="1"/>
+<pin id="139" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="140" dir="0" index="2" bw="1" slack="1"/>
+<pin id="141" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="142" dir="1" index="4" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="p_Val2_3/3 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1004" name="grp_store_fu_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="1" slack="0"/>
 <pin id="146" dir="0" index="1" bw="1" slack="0"/>
-<pin id="147" dir="0" index="2" bw="4" slack="0"/>
-<pin id="148" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_2/1 "/>
-</bind>
-</comp>
-
-<comp id="151" class="1004" name="grp_access_fu_151">
-<pin_list>
-<pin id="152" dir="0" index="0" bw="4" slack="0"/>
-<pin id="153" dir="0" index="1" bw="32" slack="0"/>
-<pin id="154" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_3/1 StgValue_48/2 "/>
-</bind>
-</comp>
-
-<comp id="156" class="1004" name="cor_phaseArray_phase_4_gep_fu_156">
-<pin_list>
-<pin id="157" dir="0" index="0" bw="32" slack="0"/>
-<pin id="158" dir="0" index="1" bw="1" slack="0"/>
-<pin id="159" dir="0" index="2" bw="4" slack="0"/>
-<pin id="160" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_4/1 "/>
-</bind>
-</comp>
-
-<comp id="163" class="1004" name="grp_access_fu_163">
-<pin_list>
-<pin id="164" dir="0" index="0" bw="4" slack="0"/>
-<pin id="165" dir="0" index="1" bw="32" slack="0"/>
-<pin id="166" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_5/1 StgValue_50/2 "/>
-</bind>
-</comp>
-
-<comp id="168" class="1004" name="cor_phaseArray_phase_6_gep_fu_168">
-<pin_list>
-<pin id="169" dir="0" index="0" bw="32" slack="0"/>
-<pin id="170" dir="0" index="1" bw="1" slack="0"/>
-<pin id="171" dir="0" index="2" bw="4" slack="0"/>
-<pin id="172" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_6/1 "/>
-</bind>
-</comp>
-
-<comp id="175" class="1004" name="grp_access_fu_175">
-<pin_list>
-<pin id="176" dir="0" index="0" bw="4" slack="0"/>
-<pin id="177" dir="0" index="1" bw="32" slack="0"/>
-<pin id="178" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_7/1 StgValue_52/2 "/>
-</bind>
-</comp>
-
-<comp id="180" class="1004" name="cor_phaseArray_phase_8_gep_fu_180">
-<pin_list>
-<pin id="181" dir="0" index="0" bw="32" slack="0"/>
-<pin id="182" dir="0" index="1" bw="1" slack="0"/>
-<pin id="183" dir="0" index="2" bw="4" slack="0"/>
-<pin id="184" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_8/1 "/>
-</bind>
-</comp>
-
-<comp id="187" class="1004" name="grp_access_fu_187">
-<pin_list>
-<pin id="188" dir="0" index="0" bw="4" slack="0"/>
-<pin id="189" dir="0" index="1" bw="32" slack="0"/>
-<pin id="190" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_9/1 StgValue_54/2 "/>
-</bind>
-</comp>
-
-<comp id="192" class="1004" name="cor_phaseArray_phase_10_gep_fu_192">
-<pin_list>
-<pin id="193" dir="0" index="0" bw="32" slack="0"/>
-<pin id="194" dir="0" index="1" bw="1" slack="0"/>
-<pin id="195" dir="0" index="2" bw="4" slack="0"/>
-<pin id="196" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_10/1 "/>
-</bind>
-</comp>
-
-<comp id="199" class="1004" name="grp_access_fu_199">
-<pin_list>
-<pin id="200" dir="0" index="0" bw="4" slack="0"/>
-<pin id="201" dir="0" index="1" bw="32" slack="0"/>
-<pin id="202" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_11/1 StgValue_56/2 "/>
-</bind>
-</comp>
-
-<comp id="204" class="1004" name="cor_phaseArray_phase_12_gep_fu_204">
-<pin_list>
-<pin id="205" dir="0" index="0" bw="32" slack="0"/>
-<pin id="206" dir="0" index="1" bw="1" slack="0"/>
-<pin id="207" dir="0" index="2" bw="4" slack="0"/>
-<pin id="208" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_12/1 "/>
-</bind>
-</comp>
-
-<comp id="211" class="1004" name="grp_access_fu_211">
-<pin_list>
-<pin id="212" dir="0" index="0" bw="4" slack="0"/>
-<pin id="213" dir="0" index="1" bw="32" slack="0"/>
-<pin id="214" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_13/1 StgValue_58/2 "/>
-</bind>
-</comp>
-
-<comp id="216" class="1004" name="cor_phaseArray_phase_14_gep_fu_216">
-<pin_list>
-<pin id="217" dir="0" index="0" bw="32" slack="0"/>
-<pin id="218" dir="0" index="1" bw="1" slack="0"/>
-<pin id="219" dir="0" index="2" bw="4" slack="0"/>
-<pin id="220" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_14/1 "/>
-</bind>
-</comp>
-
-<comp id="223" class="1004" name="grp_access_fu_223">
-<pin_list>
-<pin id="224" dir="0" index="0" bw="4" slack="0"/>
-<pin id="225" dir="0" index="1" bw="32" slack="0"/>
-<pin id="226" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_15/1 StgValue_60/2 "/>
-</bind>
-</comp>
-
-<comp id="228" class="1004" name="cor_phaseArray_phase_16_gep_fu_228">
-<pin_list>
-<pin id="229" dir="0" index="0" bw="32" slack="0"/>
-<pin id="230" dir="0" index="1" bw="1" slack="0"/>
-<pin id="231" dir="0" index="2" bw="4" slack="0"/>
-<pin id="232" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_16/1 "/>
-</bind>
-</comp>
-
-<comp id="235" class="1004" name="grp_access_fu_235">
-<pin_list>
-<pin id="236" dir="0" index="0" bw="4" slack="0"/>
-<pin id="237" dir="0" index="1" bw="32" slack="0"/>
-<pin id="238" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_17/1 StgValue_62/2 "/>
-</bind>
-</comp>
-
-<comp id="240" class="1004" name="cor_phaseArray_phase_18_gep_fu_240">
-<pin_list>
-<pin id="241" dir="0" index="0" bw="32" slack="0"/>
-<pin id="242" dir="0" index="1" bw="1" slack="0"/>
-<pin id="243" dir="0" index="2" bw="4" slack="0"/>
-<pin id="244" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_18/1 "/>
-</bind>
-</comp>
-
-<comp id="247" class="1004" name="grp_access_fu_247">
-<pin_list>
-<pin id="248" dir="0" index="0" bw="4" slack="0"/>
-<pin id="249" dir="0" index="1" bw="32" slack="0"/>
-<pin id="250" dir="1" index="2" bw="32" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_19/1 StgValue_65/2 "/>
-</bind>
-</comp>
-
-<comp id="252" class="1004" name="cor_phaseArray_phase_20_gep_fu_252">
-<pin_list>
-<pin id="253" dir="0" index="0" bw="1" slack="0"/>
-<pin id="254" dir="0" index="1" bw="1" slack="0"/>
-<pin id="255" dir="0" index="2" bw="4" slack="0"/>
-<pin id="256" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_20/1 "/>
-</bind>
-</comp>
-
-<comp id="259" class="1004" name="grp_access_fu_259">
-<pin_list>
-<pin id="260" dir="0" index="0" bw="4" slack="0"/>
-<pin id="261" dir="0" index="1" bw="1" slack="0"/>
-<pin id="262" dir="1" index="2" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_21/1 StgValue_68/2 "/>
-</bind>
-</comp>
-
-<comp id="264" class="1004" name="cor_phaseArray_phase_22_gep_fu_264">
-<pin_list>
-<pin id="265" dir="0" index="0" bw="1" slack="0"/>
-<pin id="266" dir="0" index="1" bw="1" slack="0"/>
-<pin id="267" dir="0" index="2" bw="4" slack="0"/>
-<pin id="268" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_22/1 "/>
-</bind>
-</comp>
-
-<comp id="271" class="1004" name="grp_access_fu_271">
-<pin_list>
-<pin id="272" dir="0" index="0" bw="4" slack="0"/>
-<pin id="273" dir="0" index="1" bw="1" slack="0"/>
-<pin id="274" dir="1" index="2" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_23/1 StgValue_71/2 "/>
-</bind>
-</comp>
-
-<comp id="276" class="1004" name="cor_phaseArray_phase_24_gep_fu_276">
-<pin_list>
-<pin id="277" dir="0" index="0" bw="1" slack="0"/>
-<pin id="278" dir="0" index="1" bw="1" slack="0"/>
-<pin id="279" dir="0" index="2" bw="4" slack="0"/>
-<pin id="280" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_24/1 "/>
-</bind>
-</comp>
-
-<comp id="283" class="1004" name="grp_access_fu_283">
-<pin_list>
-<pin id="284" dir="0" index="0" bw="4" slack="0"/>
-<pin id="285" dir="0" index="1" bw="1" slack="0"/>
-<pin id="286" dir="1" index="2" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_25/1 StgValue_74/2 "/>
-</bind>
-</comp>
-
-<comp id="288" class="1004" name="cor_phaseArray_phase_26_gep_fu_288">
-<pin_list>
-<pin id="289" dir="0" index="0" bw="1" slack="0"/>
-<pin id="290" dir="0" index="1" bw="1" slack="0"/>
-<pin id="291" dir="0" index="2" bw="4" slack="0"/>
-<pin id="292" dir="1" index="3" bw="4" slack="0"/>
-</pin_list>
-<bind>
-<opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="cor_phaseArray_phase_26/1 "/>
-</bind>
-</comp>
-
-<comp id="295" class="1004" name="grp_access_fu_295">
-<pin_list>
-<pin id="296" dir="0" index="0" bw="4" slack="0"/>
-<pin id="297" dir="0" index="1" bw="1" slack="0"/>
-<pin id="298" dir="1" index="2" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<opcode="load(27) store(28) " fcode="store"/>
-<opset="cor_phaseArray_phase_27/1 StgValue_75/2 "/>
-</bind>
-</comp>
-
-<comp id="313" class="1004" name="grp_store_fu_313">
-<pin_list>
-<pin id="314" dir="0" index="0" bw="1" slack="0"/>
-<pin id="315" dir="0" index="1" bw="1" slack="0"/>
-<pin id="316" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="147" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_39/1 StgValue_42/2 "/>
+<opset="StgValue_11/1 StgValue_13/1 "/>
 </bind>
 </comp>
 
-<comp id="319" class="1004" name="currentState_load_load_fu_319">
+<comp id="150" class="1004" name="currentState_load_load_fu_150">
 <pin_list>
-<pin id="320" dir="0" index="0" bw="1" slack="0"/>
-<pin id="321" dir="1" index="1" bw="1" slack="1"/>
+<pin id="151" dir="0" index="0" bw="1" slack="0"/>
+<pin id="152" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -1735,102 +1332,516 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="323" class="1004" name="tmp_i_fu_323">
+<comp id="154" class="1004" name="phaseClass_V_load_load_fu_154">
 <pin_list>
-<pin id="324" dir="0" index="0" bw="4" slack="0"/>
-<pin id="325" dir="1" index="1" bw="64" slack="0"/>
+<pin id="155" dir="0" index="0" bw="4" slack="0"/>
+<pin id="156" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="tmp_i/1 "/>
+<opcode="load(27) " fcode="load"/>
+<opset="phaseClass_V_load/2 "/>
 </bind>
 </comp>
 
-<comp id="341" class="1004" name="extLd6_fu_341">
+<comp id="158" class="1004" name="StgValue_15_store_fu_158">
 <pin_list>
-<pin id="342" dir="0" index="0" bw="1" slack="0"/>
-<pin id="343" dir="1" index="1" bw="32" slack="0"/>
+<pin id="159" dir="0" index="0" bw="1" slack="0"/>
+<pin id="160" dir="0" index="1" bw="4" slack="0"/>
+<pin id="161" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="extLd6/2 "/>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_15/2 "/>
 </bind>
 </comp>
 
-<comp id="346" class="1004" name="extLd3_fu_346">
+<comp id="164" class="1004" name="p_Val2_s_fu_164">
 <pin_list>
-<pin id="347" dir="0" index="0" bw="1" slack="0"/>
-<pin id="348" dir="1" index="1" bw="32" slack="0"/>
+<pin id="165" dir="0" index="0" bw="33" slack="0"/>
+<pin id="166" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="extLd3/2 "/>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="p_Val2_s/2 "/>
 </bind>
 </comp>
 
-<comp id="350" class="1004" name="extLd1_fu_350">
+<comp id="168" class="1004" name="i_data_last_V_tmp_fu_168">
 <pin_list>
-<pin id="351" dir="0" index="0" bw="1" slack="0"/>
-<pin id="352" dir="1" index="1" bw="32" slack="0"/>
+<pin id="169" dir="0" index="0" bw="33" slack="0"/>
+<pin id="170" dir="1" index="1" bw="1" slack="3"/>
 </pin_list>
 <bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="extLd1/2 "/>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="i_data_last_V_tmp/2 "/>
 </bind>
 </comp>
 
-<comp id="354" class="1004" name="extLd_fu_354">
+<comp id="172" class="1004" name="p_Val2_1_fu_172">
 <pin_list>
-<pin id="355" dir="0" index="0" bw="1" slack="0"/>
-<pin id="356" dir="1" index="1" bw="32" slack="0"/>
+<pin id="173" dir="0" index="0" bw="32" slack="0"/>
+<pin id="174" dir="1" index="1" bw="16" slack="0"/>
 </pin_list>
 <bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="extLd/2 "/>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="p_Val2_1/2 "/>
 </bind>
 </comp>
 
-<comp id="358" class="1004" name="tmp9_fu_358">
+<comp id="176" class="1004" name="StgValue_20_store_fu_176">
 <pin_list>
-<pin id="359" dir="0" index="0" bw="32" slack="0"/>
-<pin id="360" dir="0" index="1" bw="32" slack="0"/>
-<pin id="361" dir="1" index="2" bw="32" slack="0"/>
+<pin id="177" dir="0" index="0" bw="16" slack="0"/>
+<pin id="178" dir="0" index="1" bw="16" slack="0"/>
+<pin id="179" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp9/2 "/>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_20/2 "/>
 </bind>
 </comp>
 
-<comp id="364" class="1004" name="tmp8_fu_364">
+<comp id="182" class="1004" name="op_V_read_assign_fu_182">
 <pin_list>
-<pin id="365" dir="0" index="0" bw="32" slack="0"/>
-<pin id="366" dir="0" index="1" bw="32" slack="0"/>
-<pin id="367" dir="1" index="2" bw="32" slack="0"/>
+<pin id="183" dir="0" index="0" bw="21" slack="0"/>
+<pin id="184" dir="0" index="1" bw="16" slack="0"/>
+<pin id="185" dir="0" index="2" bw="1" slack="0"/>
+<pin id="186" dir="1" index="3" bw="21" slack="0"/>
 </pin_list>
 <bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp8/2 "/>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="op_V_read_assign/2 "/>
 </bind>
 </comp>
 
-<comp id="370" class="1004" name="tmp_fu_370">
+<comp id="190" class="1004" name="op_V_read_assign_cas_fu_190">
 <pin_list>
-<pin id="371" dir="0" index="0" bw="32" slack="0"/>
-<pin id="372" dir="0" index="1" bw="32" slack="0"/>
-<pin id="373" dir="1" index="2" bw="32" slack="0"/>
+<pin id="191" dir="0" index="0" bw="21" slack="0"/>
+<pin id="192" dir="1" index="1" bw="22" slack="0"/>
 </pin_list>
 <bind>
-<opcode="add(8) " fcode="add"/>
-<opset="tmp/2 "/>
+<opcode="sext(35) " fcode="sext"/>
+<opset="op_V_read_assign_cas/2 "/>
 </bind>
 </comp>
 
-<comp id="376" class="1004" name="tmp1_fu_376">
+<comp id="194" class="1004" name="StgValue_23_store_fu_194">
 <pin_list>
-<pin id="377" dir="0" index="0" bw="1" slack="0"/>
-<pin id="378" dir="0" index="1" bw="32" slack="0"/>
-<pin id="379" dir="1" index="2" bw="32" slack="0"/>
+<pin id="195" dir="0" index="0" bw="21" slack="0"/>
+<pin id="196" dir="0" index="1" bw="21" slack="0"/>
+<pin id="197" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_23/2 "/>
+</bind>
+</comp>
+
+<comp id="200" class="1004" name="cond_i_fu_200">
+<pin_list>
+<pin id="201" dir="0" index="0" bw="4" slack="0"/>
+<pin id="202" dir="0" index="1" bw="4" slack="0"/>
+<pin id="203" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="cond_i/2 "/>
+</bind>
+</comp>
+
+<comp id="206" class="1004" name="cor_phaseClass0_V_14_load_fu_206">
+<pin_list>
+<pin id="207" dir="0" index="0" bw="32" slack="0"/>
+<pin id="208" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_14/2 "/>
+</bind>
+</comp>
+
+<comp id="210" class="1004" name="cor_phaseClass0_V_13_load_fu_210">
+<pin_list>
+<pin id="211" dir="0" index="0" bw="32" slack="0"/>
+<pin id="212" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_13/2 "/>
+</bind>
+</comp>
+
+<comp id="214" class="1004" name="StgValue_28_store_fu_214">
+<pin_list>
+<pin id="215" dir="0" index="0" bw="32" slack="0"/>
+<pin id="216" dir="0" index="1" bw="32" slack="0"/>
+<pin id="217" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_28/2 "/>
+</bind>
+</comp>
+
+<comp id="220" class="1004" name="cor_phaseClass0_V_12_load_fu_220">
+<pin_list>
+<pin id="221" dir="0" index="0" bw="32" slack="0"/>
+<pin id="222" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_12/2 "/>
+</bind>
+</comp>
+
+<comp id="224" class="1004" name="StgValue_30_store_fu_224">
+<pin_list>
+<pin id="225" dir="0" index="0" bw="32" slack="0"/>
+<pin id="226" dir="0" index="1" bw="32" slack="0"/>
+<pin id="227" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_30/2 "/>
+</bind>
+</comp>
+
+<comp id="230" class="1004" name="cor_phaseClass0_V_11_load_fu_230">
+<pin_list>
+<pin id="231" dir="0" index="0" bw="32" slack="0"/>
+<pin id="232" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_11/2 "/>
+</bind>
+</comp>
+
+<comp id="234" class="1004" name="StgValue_32_store_fu_234">
+<pin_list>
+<pin id="235" dir="0" index="0" bw="32" slack="0"/>
+<pin id="236" dir="0" index="1" bw="32" slack="0"/>
+<pin id="237" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_32/2 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1004" name="cor_phaseClass0_V_10_load_fu_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="32" slack="0"/>
+<pin id="242" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_10/2 "/>
+</bind>
+</comp>
+
+<comp id="244" class="1004" name="StgValue_34_store_fu_244">
+<pin_list>
+<pin id="245" dir="0" index="0" bw="32" slack="0"/>
+<pin id="246" dir="0" index="1" bw="32" slack="0"/>
+<pin id="247" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_34/2 "/>
+</bind>
+</comp>
+
+<comp id="250" class="1004" name="cor_phaseClass0_V_9_s_load_fu_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="32" slack="0"/>
+<pin id="252" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_9_s/2 "/>
+</bind>
+</comp>
+
+<comp id="254" class="1004" name="StgValue_36_store_fu_254">
+<pin_list>
+<pin id="255" dir="0" index="0" bw="32" slack="0"/>
+<pin id="256" dir="0" index="1" bw="32" slack="0"/>
+<pin id="257" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_36/2 "/>
+</bind>
+</comp>
+
+<comp id="260" class="1004" name="cor_phaseClass0_V_8_s_load_fu_260">
+<pin_list>
+<pin id="261" dir="0" index="0" bw="32" slack="0"/>
+<pin id="262" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_8_s/2 "/>
+</bind>
+</comp>
+
+<comp id="264" class="1004" name="StgValue_38_store_fu_264">
+<pin_list>
+<pin id="265" dir="0" index="0" bw="32" slack="0"/>
+<pin id="266" dir="0" index="1" bw="32" slack="0"/>
+<pin id="267" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_38/2 "/>
+</bind>
+</comp>
+
+<comp id="270" class="1004" name="cor_phaseClass0_V_7_s_load_fu_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="32" slack="0"/>
+<pin id="272" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_7_s/2 "/>
+</bind>
+</comp>
+
+<comp id="274" class="1004" name="StgValue_40_store_fu_274">
+<pin_list>
+<pin id="275" dir="0" index="0" bw="32" slack="0"/>
+<pin id="276" dir="0" index="1" bw="32" slack="0"/>
+<pin id="277" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_40/2 "/>
+</bind>
+</comp>
+
+<comp id="280" class="1004" name="cor_phaseClass0_V_6_s_load_fu_280">
+<pin_list>
+<pin id="281" dir="0" index="0" bw="32" slack="0"/>
+<pin id="282" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_6_s/2 "/>
+</bind>
+</comp>
+
+<comp id="284" class="1004" name="StgValue_42_store_fu_284">
+<pin_list>
+<pin id="285" dir="0" index="0" bw="32" slack="0"/>
+<pin id="286" dir="0" index="1" bw="32" slack="0"/>
+<pin id="287" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_42/2 "/>
+</bind>
+</comp>
+
+<comp id="290" class="1004" name="cor_phaseClass0_V_5_s_load_fu_290">
+<pin_list>
+<pin id="291" dir="0" index="0" bw="32" slack="0"/>
+<pin id="292" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_5_s/2 "/>
+</bind>
+</comp>
+
+<comp id="294" class="1004" name="StgValue_44_store_fu_294">
+<pin_list>
+<pin id="295" dir="0" index="0" bw="32" slack="0"/>
+<pin id="296" dir="0" index="1" bw="32" slack="0"/>
+<pin id="297" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_44/2 "/>
+</bind>
+</comp>
+
+<comp id="300" class="1004" name="cor_phaseClass0_V_4_s_load_fu_300">
+<pin_list>
+<pin id="301" dir="0" index="0" bw="32" slack="0"/>
+<pin id="302" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_4_s/2 "/>
+</bind>
+</comp>
+
+<comp id="304" class="1004" name="StgValue_46_store_fu_304">
+<pin_list>
+<pin id="305" dir="0" index="0" bw="32" slack="0"/>
+<pin id="306" dir="0" index="1" bw="32" slack="0"/>
+<pin id="307" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_46/2 "/>
+</bind>
+</comp>
+
+<comp id="310" class="1004" name="cor_phaseClass0_V_3_s_load_fu_310">
+<pin_list>
+<pin id="311" dir="0" index="0" bw="21" slack="0"/>
+<pin id="312" dir="1" index="1" bw="21" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_3_s/2 "/>
+</bind>
+</comp>
+
+<comp id="314" class="1004" name="extLd4_fu_314">
+<pin_list>
+<pin id="315" dir="0" index="0" bw="21" slack="0"/>
+<pin id="316" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="extLd4/2 "/>
+</bind>
+</comp>
+
+<comp id="318" class="1004" name="StgValue_49_store_fu_318">
+<pin_list>
+<pin id="319" dir="0" index="0" bw="21" slack="0"/>
+<pin id="320" dir="0" index="1" bw="32" slack="0"/>
+<pin id="321" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_49/2 "/>
+</bind>
+</comp>
+
+<comp id="324" class="1004" name="cor_phaseClass0_V_2_s_load_fu_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="21" slack="0"/>
+<pin id="326" dir="1" index="1" bw="21" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_2_s/2 "/>
+</bind>
+</comp>
+
+<comp id="328" class="1004" name="extLd2_fu_328">
+<pin_list>
+<pin id="329" dir="0" index="0" bw="21" slack="0"/>
+<pin id="330" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="extLd2/2 "/>
+</bind>
+</comp>
+
+<comp id="332" class="1004" name="StgValue_52_store_fu_332">
+<pin_list>
+<pin id="333" dir="0" index="0" bw="21" slack="0"/>
+<pin id="334" dir="0" index="1" bw="21" slack="0"/>
+<pin id="335" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_52/2 "/>
+</bind>
+</comp>
+
+<comp id="338" class="1004" name="cor_phaseClass0_V_1_s_load_fu_338">
+<pin_list>
+<pin id="339" dir="0" index="0" bw="21" slack="0"/>
+<pin id="340" dir="1" index="1" bw="21" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_1_s/2 "/>
+</bind>
+</comp>
+
+<comp id="342" class="1004" name="cor_phaseClass0_V_1_1_fu_342">
+<pin_list>
+<pin id="343" dir="0" index="0" bw="21" slack="0"/>
+<pin id="344" dir="1" index="1" bw="23" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="cor_phaseClass0_V_1_1/2 "/>
+</bind>
+</comp>
+
+<comp id="346" class="1004" name="StgValue_55_store_fu_346">
+<pin_list>
+<pin id="347" dir="0" index="0" bw="21" slack="0"/>
+<pin id="348" dir="0" index="1" bw="21" slack="0"/>
+<pin id="349" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_55/2 "/>
+</bind>
+</comp>
+
+<comp id="352" class="1004" name="cor_phaseClass0_V_0_s_load_fu_352">
+<pin_list>
+<pin id="353" dir="0" index="0" bw="21" slack="0"/>
+<pin id="354" dir="1" index="1" bw="21" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cor_phaseClass0_V_0_s/2 "/>
+</bind>
+</comp>
+
+<comp id="356" class="1004" name="cor_phaseClass0_V_0_1_fu_356">
+<pin_list>
+<pin id="357" dir="0" index="0" bw="21" slack="0"/>
+<pin id="358" dir="1" index="1" bw="22" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="cor_phaseClass0_V_0_1/2 "/>
+</bind>
+</comp>
+
+<comp id="360" class="1004" name="StgValue_58_store_fu_360">
+<pin_list>
+<pin id="361" dir="0" index="0" bw="21" slack="0"/>
+<pin id="362" dir="0" index="1" bw="21" slack="0"/>
+<pin id="363" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_58/2 "/>
+</bind>
+</comp>
+
+<comp id="366" class="1004" name="StgValue_59_store_fu_366">
+<pin_list>
+<pin id="367" dir="0" index="0" bw="21" slack="0"/>
+<pin id="368" dir="0" index="1" bw="21" slack="0"/>
+<pin id="369" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_59/2 "/>
+</bind>
+</comp>
+
+<comp id="372" class="1004" name="tmp1_fu_372">
+<pin_list>
+<pin id="373" dir="0" index="0" bw="32" slack="0"/>
+<pin id="374" dir="0" index="1" bw="32" slack="0"/>
+<pin id="375" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1838,35 +1849,23 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="382" class="1004" name="tmp2_fu_382">
+<comp id="378" class="1004" name="tmp_fu_378">
 <pin_list>
-<pin id="383" dir="0" index="0" bw="32" slack="0"/>
-<pin id="384" dir="0" index="1" bw="32" slack="0"/>
-<pin id="385" dir="1" index="2" bw="32" slack="0"/>
+<pin id="379" dir="0" index="0" bw="32" slack="0"/>
+<pin id="380" dir="0" index="1" bw="32" slack="0"/>
+<pin id="381" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp2/2 "/>
+<opset="tmp/2 "/>
 </bind>
 </comp>
 
-<comp id="388" class="1004" name="p_Val2_6_i_fu_388">
+<comp id="384" class="1004" name="tmp3_fu_384">
 <pin_list>
-<pin id="389" dir="0" index="0" bw="32" slack="0"/>
-<pin id="390" dir="0" index="1" bw="32" slack="0"/>
-<pin id="391" dir="1" index="2" bw="32" slack="1"/>
-</pin_list>
-<bind>
-<opcode="add(8) " fcode="add"/>
-<opset="p_Val2_6_i/2 "/>
-</bind>
-</comp>
-
-<comp id="394" class="1004" name="tmp3_fu_394">
-<pin_list>
-<pin id="395" dir="0" index="0" bw="32" slack="0"/>
-<pin id="396" dir="0" index="1" bw="1" slack="0"/>
-<pin id="397" dir="1" index="2" bw="32" slack="0"/>
+<pin id="385" dir="0" index="0" bw="32" slack="0"/>
+<pin id="386" dir="0" index="1" bw="32" slack="0"/>
+<pin id="387" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1874,11 +1873,11 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="400" class="1004" name="tmp4_fu_400">
+<comp id="390" class="1004" name="tmp4_fu_390">
 <pin_list>
-<pin id="401" dir="0" index="0" bw="1" slack="0"/>
-<pin id="402" dir="0" index="1" bw="32" slack="0"/>
-<pin id="403" dir="1" index="2" bw="32" slack="0"/>
+<pin id="391" dir="0" index="0" bw="21" slack="0"/>
+<pin id="392" dir="0" index="1" bw="32" slack="0"/>
+<pin id="393" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1886,23 +1885,35 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="406" class="1004" name="tmp5_fu_406">
+<comp id="396" class="1004" name="tmp2_fu_396">
 <pin_list>
-<pin id="407" dir="0" index="0" bw="32" slack="0"/>
-<pin id="408" dir="0" index="1" bw="32" slack="0"/>
-<pin id="409" dir="1" index="2" bw="32" slack="0"/>
+<pin id="397" dir="0" index="0" bw="32" slack="0"/>
+<pin id="398" dir="0" index="1" bw="32" slack="0"/>
+<pin id="399" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp5/2 "/>
+<opset="tmp2/2 "/>
 </bind>
 </comp>
 
-<comp id="412" class="1004" name="tmp6_fu_412">
+<comp id="402" class="1004" name="p_Val2_6_i_fu_402">
 <pin_list>
-<pin id="413" dir="0" index="0" bw="1" slack="0"/>
-<pin id="414" dir="0" index="1" bw="32" slack="0"/>
-<pin id="415" dir="1" index="2" bw="32" slack="0"/>
+<pin id="403" dir="0" index="0" bw="32" slack="0"/>
+<pin id="404" dir="0" index="1" bw="32" slack="0"/>
+<pin id="405" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="p_Val2_6_i/2 "/>
+</bind>
+</comp>
+
+<comp id="408" class="1004" name="tmp6_fu_408">
+<pin_list>
+<pin id="409" dir="0" index="0" bw="32" slack="0"/>
+<pin id="410" dir="0" index="1" bw="32" slack="0"/>
+<pin id="411" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1910,11 +1921,11 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="418" class="1004" name="tmp7_fu_418">
+<comp id="414" class="1004" name="tmp7_fu_414">
 <pin_list>
-<pin id="419" dir="0" index="0" bw="32" slack="0"/>
-<pin id="420" dir="0" index="1" bw="32" slack="0"/>
-<pin id="421" dir="1" index="2" bw="32" slack="0"/>
+<pin id="415" dir="0" index="0" bw="32" slack="0"/>
+<pin id="416" dir="0" index="1" bw="32" slack="0"/>
+<pin id="417" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1922,105 +1933,141 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="424" class="1004" name="p_Val2_3_2_i_fu_424">
+<comp id="420" class="1004" name="tmp5_fu_420">
 <pin_list>
-<pin id="425" dir="0" index="0" bw="32" slack="0"/>
-<pin id="426" dir="0" index="1" bw="32" slack="0"/>
-<pin id="427" dir="1" index="2" bw="32" slack="1"/>
+<pin id="421" dir="0" index="0" bw="32" slack="0"/>
+<pin id="422" dir="0" index="1" bw="32" slack="0"/>
+<pin id="423" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="p_Val2_3_2_i/2 "/>
+<opset="tmp5/2 "/>
 </bind>
 </comp>
 
-<comp id="430" class="1004" name="p_Val2_s_fu_430">
+<comp id="426" class="1004" name="tmp9_fu_426">
 <pin_list>
-<pin id="431" dir="0" index="0" bw="33" slack="0"/>
-<pin id="432" dir="1" index="1" bw="32" slack="0"/>
+<pin id="427" dir="0" index="0" bw="21" slack="0"/>
+<pin id="428" dir="0" index="1" bw="32" slack="0"/>
+<pin id="429" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
-<opcode="extractvalue(56) " fcode="extractvalue"/>
-<opset="p_Val2_s/3 "/>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp9/2 "/>
 </bind>
 </comp>
 
-<comp id="434" class="1004" name="o_data_last_V_tmp_fu_434">
+<comp id="432" class="1004" name="tmp11_fu_432">
 <pin_list>
-<pin id="435" dir="0" index="0" bw="33" slack="0"/>
-<pin id="436" dir="1" index="1" bw="1" slack="2"/>
+<pin id="433" dir="0" index="0" bw="21" slack="0"/>
+<pin id="434" dir="0" index="1" bw="21" slack="0"/>
+<pin id="435" dir="1" index="2" bw="22" slack="0"/>
 </pin_list>
 <bind>
-<opcode="extractvalue(56) " fcode="extractvalue"/>
-<opset="o_data_last_V_tmp/3 "/>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp11/2 "/>
 </bind>
 </comp>
 
-<comp id="438" class="1004" name="p_Val2_1_fu_438">
+<comp id="438" class="1004" name="tmp11_cast_cast_fu_438">
 <pin_list>
-<pin id="439" dir="0" index="0" bw="32" slack="0"/>
-<pin id="440" dir="1" index="1" bw="16" slack="0"/>
+<pin id="439" dir="0" index="0" bw="22" slack="0"/>
+<pin id="440" dir="1" index="1" bw="23" slack="0"/>
 </pin_list>
 <bind>
-<opcode="trunc(33) " fcode="trunc"/>
-<opset="p_Val2_1/3 "/>
+<opcode="sext(35) " fcode="sext"/>
+<opset="tmp11_cast_cast/2 "/>
 </bind>
 </comp>
 
-<comp id="442" class="1004" name="StgValue_92_store_fu_442">
+<comp id="442" class="1004" name="tmp10_fu_442">
 <pin_list>
-<pin id="443" dir="0" index="0" bw="16" slack="0"/>
-<pin id="444" dir="0" index="1" bw="16" slack="0"/>
-<pin id="445" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="443" dir="0" index="0" bw="21" slack="0"/>
+<pin id="444" dir="0" index="1" bw="22" slack="0"/>
+<pin id="445" dir="1" index="2" bw="23" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp10/2 "/>
+</bind>
+</comp>
+
+<comp id="448" class="1004" name="tmp10_cast_fu_448">
+<pin_list>
+<pin id="449" dir="0" index="0" bw="23" slack="0"/>
+<pin id="450" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="tmp10_cast/2 "/>
+</bind>
+</comp>
+
+<comp id="452" class="1004" name="tmp8_fu_452">
+<pin_list>
+<pin id="453" dir="0" index="0" bw="32" slack="0"/>
+<pin id="454" dir="0" index="1" bw="23" slack="0"/>
+<pin id="455" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp8/2 "/>
+</bind>
+</comp>
+
+<comp id="458" class="1004" name="p_Val2_3_7_i_fu_458">
+<pin_list>
+<pin id="459" dir="0" index="0" bw="32" slack="0"/>
+<pin id="460" dir="0" index="1" bw="32" slack="0"/>
+<pin id="461" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="p_Val2_3_7_i/2 "/>
+</bind>
+</comp>
+
+<comp id="464" class="1004" name="tmp_6_fu_464">
+<pin_list>
+<pin id="465" dir="0" index="0" bw="4" slack="0"/>
+<pin id="466" dir="0" index="1" bw="1" slack="0"/>
+<pin id="467" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp_6/2 "/>
+</bind>
+</comp>
+
+<comp id="470" class="1004" name="StgValue_78_store_fu_470">
+<pin_list>
+<pin id="471" dir="0" index="0" bw="4" slack="0"/>
+<pin id="472" dir="0" index="1" bw="4" slack="0"/>
+<pin id="473" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_92/3 "/>
+<opset="StgValue_78/2 "/>
 </bind>
 </comp>
 
-<comp id="448" class="1004" name="p_0_fu_448">
+<comp id="476" class="1004" name="tmp_i_fu_476">
 <pin_list>
-<pin id="449" dir="0" index="0" bw="21" slack="0"/>
-<pin id="450" dir="0" index="1" bw="16" slack="0"/>
-<pin id="451" dir="0" index="2" bw="1" slack="0"/>
-<pin id="452" dir="1" index="3" bw="21" slack="0"/>
-</pin_list>
-<bind>
-<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_0/3 "/>
-</bind>
-</comp>
-
-<comp id="456" class="1004" name="StgValue_94_store_fu_456">
-<pin_list>
-<pin id="457" dir="0" index="0" bw="21" slack="0"/>
-<pin id="458" dir="0" index="1" bw="21" slack="0"/>
-<pin id="459" dir="1" index="2" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="store(28) " fcode="store"/>
-<opset="StgValue_94/3 "/>
-</bind>
-</comp>
-
-<comp id="462" class="1004" name="tmp_5_i_fu_462">
-<pin_list>
-<pin id="463" dir="0" index="0" bw="32" slack="1"/>
-<pin id="464" dir="0" index="1" bw="32" slack="1"/>
-<pin id="465" dir="1" index="2" bw="1" slack="0"/>
+<pin id="477" dir="0" index="0" bw="32" slack="0"/>
+<pin id="478" dir="0" index="1" bw="32" slack="0"/>
+<pin id="479" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="tmp_5_i/3 "/>
+<opset="tmp_i/3 "/>
 </bind>
 </comp>
 
-<comp id="466" class="1004" name="p_Val2_i_fu_466">
+<comp id="482" class="1004" name="p_Val2_i_fu_482">
 <pin_list>
-<pin id="467" dir="0" index="0" bw="32" slack="1"/>
-<pin id="468" dir="0" index="1" bw="32" slack="1"/>
-<pin id="469" dir="1" index="2" bw="32" slack="0"/>
+<pin id="483" dir="0" index="0" bw="32" slack="0"/>
+<pin id="484" dir="0" index="1" bw="32" slack="0"/>
+<pin id="485" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
@@ -2028,11 +2075,11 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="470" class="1004" name="p_Val2_9_i_fu_470">
+<comp id="488" class="1004" name="p_Val2_9_i_fu_488">
 <pin_list>
-<pin id="471" dir="0" index="0" bw="32" slack="1"/>
-<pin id="472" dir="0" index="1" bw="32" slack="1"/>
-<pin id="473" dir="1" index="2" bw="32" slack="0"/>
+<pin id="489" dir="0" index="0" bw="32" slack="0"/>
+<pin id="490" dir="0" index="1" bw="32" slack="0"/>
+<pin id="491" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
@@ -2040,23 +2087,23 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="474" class="1004" name="tmp_i_4_fu_474">
+<comp id="494" class="1004" name="tmp_1_i_fu_494">
 <pin_list>
-<pin id="475" dir="0" index="0" bw="1" slack="0"/>
-<pin id="476" dir="0" index="1" bw="32" slack="0"/>
-<pin id="477" dir="0" index="2" bw="32" slack="0"/>
-<pin id="478" dir="1" index="3" bw="32" slack="1"/>
+<pin id="495" dir="0" index="0" bw="1" slack="0"/>
+<pin id="496" dir="0" index="1" bw="32" slack="0"/>
+<pin id="497" dir="0" index="2" bw="32" slack="0"/>
+<pin id="498" dir="1" index="3" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_i_4/3 "/>
+<opset="tmp_1_i/3 "/>
 </bind>
 </comp>
 
-<comp id="482" class="1004" name="OP1_V_cast_fu_482">
+<comp id="502" class="1004" name="OP1_V_cast_fu_502">
 <pin_list>
-<pin id="483" dir="0" index="0" bw="32" slack="1"/>
-<pin id="484" dir="1" index="1" bw="42" slack="0"/>
+<pin id="503" dir="0" index="0" bw="32" slack="1"/>
+<pin id="504" dir="1" index="1" bw="42" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
@@ -2064,25 +2111,25 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="485" class="1004" name="p_Val2_2_fu_485">
+<comp id="505" class="1004" name="p_Val2_4_fu_505">
 <pin_list>
-<pin id="486" dir="0" index="0" bw="32" slack="0"/>
-<pin id="487" dir="0" index="1" bw="32" slack="0"/>
-<pin id="488" dir="1" index="2" bw="42" slack="0"/>
+<pin id="506" dir="0" index="0" bw="32" slack="0"/>
+<pin id="507" dir="0" index="1" bw="32" slack="0"/>
+<pin id="508" dir="1" index="2" bw="42" slack="0"/>
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="p_Val2_2/4 "/>
+<opset="p_Val2_4/4 "/>
 </bind>
 </comp>
 
-<comp id="491" class="1004" name="res_V_fu_491">
+<comp id="511" class="1004" name="res_V_fu_511">
 <pin_list>
-<pin id="492" dir="0" index="0" bw="32" slack="0"/>
-<pin id="493" dir="0" index="1" bw="42" slack="0"/>
-<pin id="494" dir="0" index="2" bw="5" slack="0"/>
-<pin id="495" dir="0" index="3" bw="7" slack="0"/>
-<pin id="496" dir="1" index="4" bw="32" slack="1"/>
+<pin id="512" dir="0" index="0" bw="32" slack="0"/>
+<pin id="513" dir="0" index="1" bw="42" slack="0"/>
+<pin id="514" dir="0" index="2" bw="5" slack="0"/>
+<pin id="515" dir="0" index="3" bw="7" slack="0"/>
+<pin id="516" dir="1" index="4" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
@@ -2090,10 +2137,22 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="501" class="1004" name="loadCount_V_load_load_fu_501">
+<comp id="521" class="1004" name="StgValue_88_store_fu_521">
 <pin_list>
-<pin id="502" dir="0" index="0" bw="32" slack="0"/>
-<pin id="503" dir="1" index="1" bw="32" slack="0"/>
+<pin id="522" dir="0" index="0" bw="1" slack="0"/>
+<pin id="523" dir="0" index="1" bw="32" slack="0"/>
+<pin id="524" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_88/5 "/>
+</bind>
+</comp>
+
+<comp id="527" class="1004" name="loadCount_V_load_load_fu_527">
+<pin_list>
+<pin id="528" dir="0" index="0" bw="32" slack="0"/>
+<pin id="529" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -2101,23 +2160,11 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="505" class="1004" name="StgValue_103_store_fu_505">
+<comp id="531" class="1004" name="tmp_4_fu_531">
 <pin_list>
-<pin id="506" dir="0" index="0" bw="1" slack="0"/>
-<pin id="507" dir="0" index="1" bw="32" slack="0"/>
-<pin id="508" dir="1" index="2" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="store(28) " fcode="store"/>
-<opset="StgValue_103/5 "/>
-</bind>
-</comp>
-
-<comp id="511" class="1004" name="tmp_4_fu_511">
-<pin_list>
-<pin id="512" dir="0" index="0" bw="7" slack="0"/>
-<pin id="513" dir="0" index="1" bw="32" slack="0"/>
-<pin id="514" dir="1" index="2" bw="32" slack="0"/>
+<pin id="532" dir="0" index="0" bw="32" slack="0"/>
+<pin id="533" dir="0" index="1" bw="1" slack="0"/>
+<pin id="534" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -2125,36 +2172,36 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="517" class="1004" name="StgValue_105_store_fu_517">
+<comp id="537" class="1004" name="StgValue_91_store_fu_537">
 <pin_list>
-<pin id="518" dir="0" index="0" bw="32" slack="0"/>
-<pin id="519" dir="0" index="1" bw="32" slack="0"/>
-<pin id="520" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="538" dir="0" index="0" bw="32" slack="0"/>
+<pin id="539" dir="0" index="1" bw="32" slack="0"/>
+<pin id="540" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="StgValue_105/5 "/>
+<opset="StgValue_91/5 "/>
 </bind>
 </comp>
 
-<comp id="523" class="1004" name="tmp_5_fu_523">
+<comp id="543" class="1004" name="tmp_7_fu_543">
 <pin_list>
-<pin id="524" dir="0" index="0" bw="32" slack="1"/>
-<pin id="525" dir="0" index="1" bw="32" slack="0"/>
-<pin id="526" dir="1" index="2" bw="1" slack="0"/>
+<pin id="544" dir="0" index="0" bw="32" slack="1"/>
+<pin id="545" dir="0" index="1" bw="32" slack="0"/>
+<pin id="546" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="tmp_5/5 "/>
+<opset="tmp_7/5 "/>
 </bind>
 </comp>
 
-<comp id="528" class="1004" name="o_data_data_V_tmp_fu_528">
+<comp id="548" class="1004" name="o_data_data_V_tmp_fu_548">
 <pin_list>
-<pin id="529" dir="0" index="0" bw="1" slack="0"/>
-<pin id="530" dir="0" index="1" bw="32" slack="0"/>
-<pin id="531" dir="0" index="2" bw="32" slack="0"/>
-<pin id="532" dir="1" index="3" bw="32" slack="0"/>
+<pin id="549" dir="0" index="0" bw="1" slack="0"/>
+<pin id="550" dir="0" index="1" bw="32" slack="0"/>
+<pin id="551" dir="0" index="2" bw="32" slack="0"/>
+<pin id="552" dir="1" index="3" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -2162,220 +2209,80 @@ StgValue_130            (ret           ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="537" class="1005" name="currentState_load_reg_537">
+<comp id="557" class="1005" name="start_V_read_reg_557">
 <pin_list>
-<pin id="538" dir="0" index="0" bw="1" slack="1"/>
-<pin id="539" dir="1" index="1" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<opset="currentState_load "/>
-</bind>
-</comp>
-
-<comp id="541" class="1005" name="cor_phaseArray_phase_reg_541">
-<pin_list>
-<pin id="542" dir="0" index="0" bw="4" slack="1"/>
-<pin id="543" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase "/>
-</bind>
-</comp>
-
-<comp id="546" class="1005" name="cor_phaseArray_phase_2_reg_546">
-<pin_list>
-<pin id="547" dir="0" index="0" bw="4" slack="1"/>
-<pin id="548" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_2 "/>
-</bind>
-</comp>
-
-<comp id="551" class="1005" name="cor_phaseArray_phase_4_reg_551">
-<pin_list>
-<pin id="552" dir="0" index="0" bw="4" slack="1"/>
-<pin id="553" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_4 "/>
-</bind>
-</comp>
-
-<comp id="556" class="1005" name="cor_phaseArray_phase_6_reg_556">
-<pin_list>
-<pin id="557" dir="0" index="0" bw="4" slack="1"/>
-<pin id="558" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_6 "/>
-</bind>
-</comp>
-
-<comp id="561" class="1005" name="cor_phaseArray_phase_8_reg_561">
-<pin_list>
-<pin id="562" dir="0" index="0" bw="4" slack="1"/>
-<pin id="563" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_8 "/>
-</bind>
-</comp>
-
-<comp id="566" class="1005" name="cor_phaseArray_phase_10_reg_566">
-<pin_list>
-<pin id="567" dir="0" index="0" bw="4" slack="1"/>
-<pin id="568" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_10 "/>
-</bind>
-</comp>
-
-<comp id="571" class="1005" name="cor_phaseArray_phase_12_reg_571">
-<pin_list>
-<pin id="572" dir="0" index="0" bw="4" slack="1"/>
-<pin id="573" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_12 "/>
-</bind>
-</comp>
-
-<comp id="576" class="1005" name="cor_phaseArray_phase_14_reg_576">
-<pin_list>
-<pin id="577" dir="0" index="0" bw="4" slack="1"/>
-<pin id="578" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_14 "/>
-</bind>
-</comp>
-
-<comp id="581" class="1005" name="cor_phaseArray_phase_16_reg_581">
-<pin_list>
-<pin id="582" dir="0" index="0" bw="4" slack="1"/>
-<pin id="583" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_16 "/>
-</bind>
-</comp>
-
-<comp id="586" class="1005" name="cor_phaseArray_phase_18_reg_586">
-<pin_list>
-<pin id="587" dir="0" index="0" bw="4" slack="1"/>
-<pin id="588" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_18 "/>
-</bind>
-</comp>
-
-<comp id="591" class="1005" name="cor_phaseArray_phase_20_reg_591">
-<pin_list>
-<pin id="592" dir="0" index="0" bw="4" slack="1"/>
-<pin id="593" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_20 "/>
-</bind>
-</comp>
-
-<comp id="596" class="1005" name="cor_phaseArray_phase_22_reg_596">
-<pin_list>
-<pin id="597" dir="0" index="0" bw="4" slack="1"/>
-<pin id="598" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_22 "/>
-</bind>
-</comp>
-
-<comp id="601" class="1005" name="cor_phaseArray_phase_24_reg_601">
-<pin_list>
-<pin id="602" dir="0" index="0" bw="4" slack="1"/>
-<pin id="603" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_24 "/>
-</bind>
-</comp>
-
-<comp id="606" class="1005" name="cor_phaseArray_phase_26_reg_606">
-<pin_list>
-<pin id="607" dir="0" index="0" bw="4" slack="1"/>
-<pin id="608" dir="1" index="1" bw="4" slack="1"/>
-</pin_list>
-<bind>
-<opset="cor_phaseArray_phase_26 "/>
-</bind>
-</comp>
-
-<comp id="611" class="1005" name="start_V_read_reg_611">
-<pin_list>
-<pin id="612" dir="0" index="0" bw="1" slack="3"/>
-<pin id="613" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="558" dir="0" index="0" bw="1" slack="1"/>
+<pin id="559" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="start_V_read "/>
 </bind>
 </comp>
 
-<comp id="615" class="1005" name="p_Val2_6_i_reg_615">
+<comp id="561" class="1005" name="currentState_load_reg_561">
 <pin_list>
-<pin id="616" dir="0" index="0" bw="32" slack="1"/>
-<pin id="617" dir="1" index="1" bw="32" slack="1"/>
+<pin id="562" dir="0" index="0" bw="1" slack="1"/>
+<pin id="563" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="currentState_load "/>
+</bind>
+</comp>
+
+<comp id="565" class="1005" name="i_data_last_V_tmp_reg_565">
+<pin_list>
+<pin id="566" dir="0" index="0" bw="1" slack="3"/>
+<pin id="567" dir="1" index="1" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opset="i_data_last_V_tmp "/>
+</bind>
+</comp>
+
+<comp id="573" class="1005" name="p_Val2_6_i_reg_573">
+<pin_list>
+<pin id="574" dir="0" index="0" bw="32" slack="1"/>
+<pin id="575" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="p_Val2_6_i "/>
 </bind>
 </comp>
 
-<comp id="622" class="1005" name="p_Val2_3_2_i_reg_622">
+<comp id="578" class="1005" name="p_Val2_3_7_i_reg_578">
 <pin_list>
-<pin id="623" dir="0" index="0" bw="32" slack="1"/>
-<pin id="624" dir="1" index="1" bw="32" slack="1"/>
+<pin id="579" dir="0" index="0" bw="32" slack="1"/>
+<pin id="580" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Val2_3_2_i "/>
+<opset="p_Val2_3_7_i "/>
 </bind>
 </comp>
 
-<comp id="629" class="1005" name="o_data_last_V_tmp_reg_629">
+<comp id="583" class="1005" name="tmp_1_i_reg_583">
 <pin_list>
-<pin id="630" dir="0" index="0" bw="1" slack="2"/>
-<pin id="631" dir="1" index="1" bw="1" slack="2"/>
+<pin id="584" dir="0" index="0" bw="32" slack="1"/>
+<pin id="585" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="o_data_last_V_tmp "/>
+<opset="tmp_1_i "/>
 </bind>
 </comp>
 
-<comp id="634" class="1005" name="tmp_i_4_reg_634">
+<comp id="588" class="1005" name="res_V_reg_588">
 <pin_list>
-<pin id="635" dir="0" index="0" bw="32" slack="1"/>
-<pin id="636" dir="1" index="1" bw="32" slack="1"/>
-</pin_list>
-<bind>
-<opset="tmp_i_4 "/>
-</bind>
-</comp>
-
-<comp id="639" class="1005" name="res_V_reg_639">
-<pin_list>
-<pin id="640" dir="0" index="0" bw="32" slack="1"/>
-<pin id="641" dir="1" index="1" bw="32" slack="1"/>
+<pin id="589" dir="0" index="0" bw="32" slack="1"/>
+<pin id="590" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="res_V "/>
 </bind>
 </comp>
 
-<comp id="644" class="1005" name="o_data_data_V_tmp_reg_644">
+<comp id="593" class="1005" name="o_data_data_V_tmp_reg_593">
 <pin_list>
-<pin id="645" dir="0" index="0" bw="32" slack="1"/>
-<pin id="646" dir="1" index="1" bw="32" slack="1"/>
+<pin id="594" dir="0" index="0" bw="32" slack="1"/>
+<pin id="595" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="o_data_data_V_tmp "/>
@@ -2385,383 +2292,315 @@ StgValue_130            (ret           ) [ 0000000]
 </comp_list>
 
 <net_list>
-<net id="106"><net_src comp="48" pin="0"/><net_sink comp="102" pin=0"/></net>
+<net id="102"><net_src comp="50" pin="0"/><net_sink comp="98" pin=0"/></net>
 
-<net id="107"><net_src comp="10" pin="0"/><net_sink comp="102" pin=1"/></net>
+<net id="103"><net_src comp="8" pin="0"/><net_sink comp="98" pin=1"/></net>
 
-<net id="112"><net_src comp="54" pin="0"/><net_sink comp="108" pin=0"/></net>
+<net id="109"><net_src comp="54" pin="0"/><net_sink comp="104" pin=0"/></net>
 
-<net id="113"><net_src comp="8" pin="0"/><net_sink comp="108" pin=1"/></net>
+<net id="110"><net_src comp="0" pin="0"/><net_sink comp="104" pin=1"/></net>
 
-<net id="119"><net_src comp="56" pin="0"/><net_sink comp="114" pin=0"/></net>
+<net id="111"><net_src comp="2" pin="0"/><net_sink comp="104" pin=2"/></net>
 
-<net id="120"><net_src comp="0" pin="0"/><net_sink comp="114" pin=1"/></net>
+<net id="119"><net_src comp="76" pin="0"/><net_sink comp="112" pin=0"/></net>
 
-<net id="121"><net_src comp="2" pin="0"/><net_sink comp="114" pin=2"/></net>
+<net id="120"><net_src comp="4" pin="0"/><net_sink comp="112" pin=1"/></net>
 
-<net id="129"><net_src comp="76" pin="0"/><net_sink comp="122" pin=0"/></net>
+<net id="121"><net_src comp="6" pin="0"/><net_sink comp="112" pin=2"/></net>
 
-<net id="130"><net_src comp="4" pin="0"/><net_sink comp="122" pin=1"/></net>
+<net id="125"><net_src comp="64" pin="0"/><net_sink comp="122" pin=0"/></net>
 
-<net id="131"><net_src comp="6" pin="0"/><net_sink comp="122" pin=2"/></net>
+<net id="132"><net_src comp="122" pin="1"/><net_sink comp="126" pin=2"/></net>
 
-<net id="137"><net_src comp="20" pin="0"/><net_sink comp="132" pin=0"/></net>
+<net id="136"><net_src comp="64" pin="0"/><net_sink comp="133" pin=0"/></net>
 
-<net id="138"><net_src comp="50" pin="0"/><net_sink comp="132" pin=1"/></net>
+<net id="143"><net_src comp="133" pin="1"/><net_sink comp="137" pin=2"/></net>
 
-<net id="143"><net_src comp="132" pin="3"/><net_sink comp="139" pin=0"/></net>
+<net id="148"><net_src comp="52" pin="0"/><net_sink comp="144" pin=0"/></net>
 
-<net id="149"><net_src comp="22" pin="0"/><net_sink comp="144" pin=0"/></net>
+<net id="149"><net_src comp="10" pin="0"/><net_sink comp="144" pin=1"/></net>
 
-<net id="150"><net_src comp="50" pin="0"/><net_sink comp="144" pin=1"/></net>
+<net id="153"><net_src comp="10" pin="0"/><net_sink comp="150" pin=0"/></net>
 
-<net id="155"><net_src comp="144" pin="3"/><net_sink comp="151" pin=0"/></net>
+<net id="157"><net_src comp="12" pin="0"/><net_sink comp="154" pin=0"/></net>
 
-<net id="161"><net_src comp="24" pin="0"/><net_sink comp="156" pin=0"/></net>
+<net id="162"><net_src comp="56" pin="0"/><net_sink comp="158" pin=0"/></net>
 
-<net id="162"><net_src comp="50" pin="0"/><net_sink comp="156" pin=1"/></net>
+<net id="163"><net_src comp="12" pin="0"/><net_sink comp="158" pin=1"/></net>
 
-<net id="167"><net_src comp="156" pin="3"/><net_sink comp="163" pin=0"/></net>
+<net id="167"><net_src comp="104" pin="3"/><net_sink comp="164" pin=0"/></net>
 
-<net id="173"><net_src comp="26" pin="0"/><net_sink comp="168" pin=0"/></net>
+<net id="171"><net_src comp="104" pin="3"/><net_sink comp="168" pin=0"/></net>
 
-<net id="174"><net_src comp="50" pin="0"/><net_sink comp="168" pin=1"/></net>
+<net id="175"><net_src comp="164" pin="1"/><net_sink comp="172" pin=0"/></net>
 
-<net id="179"><net_src comp="168" pin="3"/><net_sink comp="175" pin=0"/></net>
+<net id="180"><net_src comp="172" pin="1"/><net_sink comp="176" pin=0"/></net>
 
-<net id="185"><net_src comp="28" pin="0"/><net_sink comp="180" pin=0"/></net>
+<net id="181"><net_src comp="16" pin="0"/><net_sink comp="176" pin=1"/></net>
 
-<net id="186"><net_src comp="50" pin="0"/><net_sink comp="180" pin=1"/></net>
+<net id="187"><net_src comp="58" pin="0"/><net_sink comp="182" pin=0"/></net>
 
-<net id="191"><net_src comp="180" pin="3"/><net_sink comp="187" pin=0"/></net>
+<net id="188"><net_src comp="172" pin="1"/><net_sink comp="182" pin=1"/></net>
 
-<net id="197"><net_src comp="30" pin="0"/><net_sink comp="192" pin=0"/></net>
+<net id="189"><net_src comp="60" pin="0"/><net_sink comp="182" pin=2"/></net>
 
-<net id="198"><net_src comp="50" pin="0"/><net_sink comp="192" pin=1"/></net>
+<net id="193"><net_src comp="182" pin="3"/><net_sink comp="190" pin=0"/></net>
 
-<net id="203"><net_src comp="192" pin="3"/><net_sink comp="199" pin=0"/></net>
+<net id="198"><net_src comp="182" pin="3"/><net_sink comp="194" pin=0"/></net>
 
-<net id="209"><net_src comp="32" pin="0"/><net_sink comp="204" pin=0"/></net>
+<net id="199"><net_src comp="18" pin="0"/><net_sink comp="194" pin=1"/></net>
 
-<net id="210"><net_src comp="50" pin="0"/><net_sink comp="204" pin=1"/></net>
+<net id="204"><net_src comp="154" pin="1"/><net_sink comp="200" pin=0"/></net>
 
-<net id="215"><net_src comp="204" pin="3"/><net_sink comp="211" pin=0"/></net>
+<net id="205"><net_src comp="56" pin="0"/><net_sink comp="200" pin=1"/></net>
 
-<net id="221"><net_src comp="34" pin="0"/><net_sink comp="216" pin=0"/></net>
+<net id="209"><net_src comp="20" pin="0"/><net_sink comp="206" pin=0"/></net>
 
-<net id="222"><net_src comp="50" pin="0"/><net_sink comp="216" pin=1"/></net>
+<net id="213"><net_src comp="22" pin="0"/><net_sink comp="210" pin=0"/></net>
 
-<net id="227"><net_src comp="216" pin="3"/><net_sink comp="223" pin=0"/></net>
+<net id="218"><net_src comp="210" pin="1"/><net_sink comp="214" pin=0"/></net>
 
-<net id="233"><net_src comp="36" pin="0"/><net_sink comp="228" pin=0"/></net>
+<net id="219"><net_src comp="20" pin="0"/><net_sink comp="214" pin=1"/></net>
 
-<net id="234"><net_src comp="50" pin="0"/><net_sink comp="228" pin=1"/></net>
+<net id="223"><net_src comp="24" pin="0"/><net_sink comp="220" pin=0"/></net>
 
-<net id="239"><net_src comp="228" pin="3"/><net_sink comp="235" pin=0"/></net>
+<net id="228"><net_src comp="220" pin="1"/><net_sink comp="224" pin=0"/></net>
 
-<net id="245"><net_src comp="38" pin="0"/><net_sink comp="240" pin=0"/></net>
+<net id="229"><net_src comp="22" pin="0"/><net_sink comp="224" pin=1"/></net>
 
-<net id="246"><net_src comp="50" pin="0"/><net_sink comp="240" pin=1"/></net>
+<net id="233"><net_src comp="26" pin="0"/><net_sink comp="230" pin=0"/></net>
 
-<net id="251"><net_src comp="240" pin="3"/><net_sink comp="247" pin=0"/></net>
+<net id="238"><net_src comp="230" pin="1"/><net_sink comp="234" pin=0"/></net>
 
-<net id="257"><net_src comp="40" pin="0"/><net_sink comp="252" pin=0"/></net>
+<net id="239"><net_src comp="24" pin="0"/><net_sink comp="234" pin=1"/></net>
 
-<net id="258"><net_src comp="50" pin="0"/><net_sink comp="252" pin=1"/></net>
+<net id="243"><net_src comp="28" pin="0"/><net_sink comp="240" pin=0"/></net>
 
-<net id="263"><net_src comp="252" pin="3"/><net_sink comp="259" pin=0"/></net>
+<net id="248"><net_src comp="240" pin="1"/><net_sink comp="244" pin=0"/></net>
 
-<net id="269"><net_src comp="42" pin="0"/><net_sink comp="264" pin=0"/></net>
+<net id="249"><net_src comp="26" pin="0"/><net_sink comp="244" pin=1"/></net>
 
-<net id="270"><net_src comp="50" pin="0"/><net_sink comp="264" pin=1"/></net>
+<net id="253"><net_src comp="30" pin="0"/><net_sink comp="250" pin=0"/></net>
 
-<net id="275"><net_src comp="264" pin="3"/><net_sink comp="271" pin=0"/></net>
+<net id="258"><net_src comp="250" pin="1"/><net_sink comp="254" pin=0"/></net>
 
-<net id="281"><net_src comp="44" pin="0"/><net_sink comp="276" pin=0"/></net>
+<net id="259"><net_src comp="28" pin="0"/><net_sink comp="254" pin=1"/></net>
 
-<net id="282"><net_src comp="50" pin="0"/><net_sink comp="276" pin=1"/></net>
+<net id="263"><net_src comp="32" pin="0"/><net_sink comp="260" pin=0"/></net>
 
-<net id="287"><net_src comp="276" pin="3"/><net_sink comp="283" pin=0"/></net>
+<net id="268"><net_src comp="260" pin="1"/><net_sink comp="264" pin=0"/></net>
 
-<net id="293"><net_src comp="46" pin="0"/><net_sink comp="288" pin=0"/></net>
+<net id="269"><net_src comp="30" pin="0"/><net_sink comp="264" pin=1"/></net>
 
-<net id="294"><net_src comp="50" pin="0"/><net_sink comp="288" pin=1"/></net>
+<net id="273"><net_src comp="34" pin="0"/><net_sink comp="270" pin=0"/></net>
 
-<net id="299"><net_src comp="288" pin="3"/><net_sink comp="295" pin=0"/></net>
+<net id="278"><net_src comp="270" pin="1"/><net_sink comp="274" pin=0"/></net>
 
-<net id="300"><net_src comp="151" pin="2"/><net_sink comp="139" pin=1"/></net>
+<net id="279"><net_src comp="32" pin="0"/><net_sink comp="274" pin=1"/></net>
 
-<net id="301"><net_src comp="163" pin="2"/><net_sink comp="151" pin=1"/></net>
+<net id="283"><net_src comp="36" pin="0"/><net_sink comp="280" pin=0"/></net>
 
-<net id="302"><net_src comp="175" pin="2"/><net_sink comp="163" pin=1"/></net>
+<net id="288"><net_src comp="280" pin="1"/><net_sink comp="284" pin=0"/></net>
 
-<net id="303"><net_src comp="187" pin="2"/><net_sink comp="175" pin=1"/></net>
+<net id="289"><net_src comp="34" pin="0"/><net_sink comp="284" pin=1"/></net>
 
-<net id="304"><net_src comp="199" pin="2"/><net_sink comp="187" pin=1"/></net>
+<net id="293"><net_src comp="38" pin="0"/><net_sink comp="290" pin=0"/></net>
 
-<net id="305"><net_src comp="211" pin="2"/><net_sink comp="199" pin=1"/></net>
+<net id="298"><net_src comp="290" pin="1"/><net_sink comp="294" pin=0"/></net>
 
-<net id="306"><net_src comp="223" pin="2"/><net_sink comp="211" pin=1"/></net>
+<net id="299"><net_src comp="36" pin="0"/><net_sink comp="294" pin=1"/></net>
 
-<net id="307"><net_src comp="235" pin="2"/><net_sink comp="223" pin=1"/></net>
+<net id="303"><net_src comp="40" pin="0"/><net_sink comp="300" pin=0"/></net>
 
-<net id="308"><net_src comp="247" pin="2"/><net_sink comp="235" pin=1"/></net>
+<net id="308"><net_src comp="300" pin="1"/><net_sink comp="304" pin=0"/></net>
 
-<net id="309"><net_src comp="271" pin="2"/><net_sink comp="259" pin=1"/></net>
+<net id="309"><net_src comp="38" pin="0"/><net_sink comp="304" pin=1"/></net>
 
-<net id="310"><net_src comp="283" pin="2"/><net_sink comp="271" pin=1"/></net>
+<net id="313"><net_src comp="42" pin="0"/><net_sink comp="310" pin=0"/></net>
 
-<net id="311"><net_src comp="295" pin="2"/><net_sink comp="283" pin=1"/></net>
+<net id="317"><net_src comp="310" pin="1"/><net_sink comp="314" pin=0"/></net>
 
-<net id="312"><net_src comp="58" pin="0"/><net_sink comp="295" pin=1"/></net>
+<net id="322"><net_src comp="314" pin="1"/><net_sink comp="318" pin=0"/></net>
 
-<net id="317"><net_src comp="52" pin="0"/><net_sink comp="313" pin=0"/></net>
+<net id="323"><net_src comp="40" pin="0"/><net_sink comp="318" pin=1"/></net>
 
-<net id="318"><net_src comp="12" pin="0"/><net_sink comp="313" pin=1"/></net>
+<net id="327"><net_src comp="44" pin="0"/><net_sink comp="324" pin=0"/></net>
 
-<net id="322"><net_src comp="12" pin="0"/><net_sink comp="319" pin=0"/></net>
+<net id="331"><net_src comp="324" pin="1"/><net_sink comp="328" pin=0"/></net>
 
-<net id="326"><net_src comp="102" pin="2"/><net_sink comp="323" pin=0"/></net>
+<net id="336"><net_src comp="324" pin="1"/><net_sink comp="332" pin=0"/></net>
 
-<net id="327"><net_src comp="323" pin="1"/><net_sink comp="132" pin=2"/></net>
+<net id="337"><net_src comp="42" pin="0"/><net_sink comp="332" pin=1"/></net>
 
-<net id="328"><net_src comp="323" pin="1"/><net_sink comp="144" pin=2"/></net>
+<net id="341"><net_src comp="46" pin="0"/><net_sink comp="338" pin=0"/></net>
 
-<net id="329"><net_src comp="323" pin="1"/><net_sink comp="156" pin=2"/></net>
+<net id="345"><net_src comp="338" pin="1"/><net_sink comp="342" pin=0"/></net>
 
-<net id="330"><net_src comp="323" pin="1"/><net_sink comp="168" pin=2"/></net>
+<net id="350"><net_src comp="338" pin="1"/><net_sink comp="346" pin=0"/></net>
 
-<net id="331"><net_src comp="323" pin="1"/><net_sink comp="180" pin=2"/></net>
+<net id="351"><net_src comp="44" pin="0"/><net_sink comp="346" pin=1"/></net>
 
-<net id="332"><net_src comp="323" pin="1"/><net_sink comp="192" pin=2"/></net>
+<net id="355"><net_src comp="48" pin="0"/><net_sink comp="352" pin=0"/></net>
 
-<net id="333"><net_src comp="323" pin="1"/><net_sink comp="204" pin=2"/></net>
+<net id="359"><net_src comp="352" pin="1"/><net_sink comp="356" pin=0"/></net>
 
-<net id="334"><net_src comp="323" pin="1"/><net_sink comp="216" pin=2"/></net>
+<net id="364"><net_src comp="352" pin="1"/><net_sink comp="360" pin=0"/></net>
 
-<net id="335"><net_src comp="323" pin="1"/><net_sink comp="228" pin=2"/></net>
+<net id="365"><net_src comp="46" pin="0"/><net_sink comp="360" pin=1"/></net>
 
-<net id="336"><net_src comp="323" pin="1"/><net_sink comp="240" pin=2"/></net>
+<net id="370"><net_src comp="182" pin="3"/><net_sink comp="366" pin=0"/></net>
 
-<net id="337"><net_src comp="323" pin="1"/><net_sink comp="252" pin=2"/></net>
+<net id="371"><net_src comp="48" pin="0"/><net_sink comp="366" pin=1"/></net>
 
-<net id="338"><net_src comp="323" pin="1"/><net_sink comp="264" pin=2"/></net>
+<net id="376"><net_src comp="260" pin="1"/><net_sink comp="372" pin=0"/></net>
 
-<net id="339"><net_src comp="323" pin="1"/><net_sink comp="276" pin=2"/></net>
+<net id="377"><net_src comp="210" pin="1"/><net_sink comp="372" pin=1"/></net>
 
-<net id="340"><net_src comp="323" pin="1"/><net_sink comp="288" pin=2"/></net>
+<net id="382"><net_src comp="220" pin="1"/><net_sink comp="378" pin=0"/></net>
 
-<net id="344"><net_src comp="259" pin="2"/><net_sink comp="341" pin=0"/></net>
+<net id="383"><net_src comp="372" pin="2"/><net_sink comp="378" pin=1"/></net>
 
-<net id="345"><net_src comp="341" pin="1"/><net_sink comp="247" pin=1"/></net>
+<net id="388"><net_src comp="280" pin="1"/><net_sink comp="384" pin=0"/></net>
 
-<net id="349"><net_src comp="271" pin="2"/><net_sink comp="346" pin=0"/></net>
+<net id="389"><net_src comp="270" pin="1"/><net_sink comp="384" pin=1"/></net>
 
-<net id="353"><net_src comp="283" pin="2"/><net_sink comp="350" pin=0"/></net>
+<net id="394"><net_src comp="328" pin="1"/><net_sink comp="390" pin=0"/></net>
 
-<net id="357"><net_src comp="295" pin="2"/><net_sink comp="354" pin=0"/></net>
+<net id="395"><net_src comp="290" pin="1"/><net_sink comp="390" pin=1"/></net>
 
-<net id="362"><net_src comp="223" pin="2"/><net_sink comp="358" pin=0"/></net>
+<net id="400"><net_src comp="384" pin="2"/><net_sink comp="396" pin=0"/></net>
 
-<net id="363"><net_src comp="247" pin="2"/><net_sink comp="358" pin=1"/></net>
+<net id="401"><net_src comp="390" pin="2"/><net_sink comp="396" pin=1"/></net>
 
-<net id="368"><net_src comp="235" pin="2"/><net_sink comp="364" pin=0"/></net>
+<net id="406"><net_src comp="378" pin="2"/><net_sink comp="402" pin=0"/></net>
 
-<net id="369"><net_src comp="358" pin="2"/><net_sink comp="364" pin=1"/></net>
+<net id="407"><net_src comp="396" pin="2"/><net_sink comp="402" pin=1"/></net>
 
-<net id="374"><net_src comp="211" pin="2"/><net_sink comp="370" pin=0"/></net>
+<net id="412"><net_src comp="206" pin="1"/><net_sink comp="408" pin=0"/></net>
 
-<net id="375"><net_src comp="163" pin="2"/><net_sink comp="370" pin=1"/></net>
+<net id="413"><net_src comp="230" pin="1"/><net_sink comp="408" pin=1"/></net>
 
-<net id="380"><net_src comp="350" pin="1"/><net_sink comp="376" pin=0"/></net>
+<net id="418"><net_src comp="250" pin="1"/><net_sink comp="414" pin=0"/></net>
 
-<net id="381"><net_src comp="151" pin="2"/><net_sink comp="376" pin=1"/></net>
+<net id="419"><net_src comp="240" pin="1"/><net_sink comp="414" pin=1"/></net>
 
-<net id="386"><net_src comp="370" pin="2"/><net_sink comp="382" pin=0"/></net>
+<net id="424"><net_src comp="408" pin="2"/><net_sink comp="420" pin=0"/></net>
 
-<net id="387"><net_src comp="376" pin="2"/><net_sink comp="382" pin=1"/></net>
+<net id="425"><net_src comp="414" pin="2"/><net_sink comp="420" pin=1"/></net>
 
-<net id="392"><net_src comp="364" pin="2"/><net_sink comp="388" pin=0"/></net>
+<net id="430"><net_src comp="314" pin="1"/><net_sink comp="426" pin=0"/></net>
 
-<net id="393"><net_src comp="382" pin="2"/><net_sink comp="388" pin=1"/></net>
+<net id="431"><net_src comp="300" pin="1"/><net_sink comp="426" pin=1"/></net>
 
-<net id="398"><net_src comp="199" pin="2"/><net_sink comp="394" pin=0"/></net>
+<net id="436"><net_src comp="190" pin="1"/><net_sink comp="432" pin=0"/></net>
 
-<net id="399"><net_src comp="346" pin="1"/><net_sink comp="394" pin=1"/></net>
+<net id="437"><net_src comp="356" pin="1"/><net_sink comp="432" pin=1"/></net>
 
-<net id="404"><net_src comp="341" pin="1"/><net_sink comp="400" pin=0"/></net>
+<net id="441"><net_src comp="432" pin="2"/><net_sink comp="438" pin=0"/></net>
 
-<net id="405"><net_src comp="394" pin="2"/><net_sink comp="400" pin=1"/></net>
+<net id="446"><net_src comp="342" pin="1"/><net_sink comp="442" pin=0"/></net>
 
-<net id="410"><net_src comp="187" pin="2"/><net_sink comp="406" pin=0"/></net>
+<net id="447"><net_src comp="438" pin="1"/><net_sink comp="442" pin=1"/></net>
 
-<net id="411"><net_src comp="175" pin="2"/><net_sink comp="406" pin=1"/></net>
+<net id="451"><net_src comp="442" pin="2"/><net_sink comp="448" pin=0"/></net>
 
-<net id="416"><net_src comp="354" pin="1"/><net_sink comp="412" pin=0"/></net>
+<net id="456"><net_src comp="426" pin="2"/><net_sink comp="452" pin=0"/></net>
 
-<net id="417"><net_src comp="139" pin="2"/><net_sink comp="412" pin=1"/></net>
+<net id="457"><net_src comp="448" pin="1"/><net_sink comp="452" pin=1"/></net>
 
-<net id="422"><net_src comp="406" pin="2"/><net_sink comp="418" pin=0"/></net>
+<net id="462"><net_src comp="420" pin="2"/><net_sink comp="458" pin=0"/></net>
 
-<net id="423"><net_src comp="412" pin="2"/><net_sink comp="418" pin=1"/></net>
+<net id="463"><net_src comp="452" pin="2"/><net_sink comp="458" pin=1"/></net>
 
-<net id="428"><net_src comp="400" pin="2"/><net_sink comp="424" pin=0"/></net>
+<net id="468"><net_src comp="154" pin="1"/><net_sink comp="464" pin=0"/></net>
 
-<net id="429"><net_src comp="418" pin="2"/><net_sink comp="424" pin=1"/></net>
+<net id="469"><net_src comp="62" pin="0"/><net_sink comp="464" pin=1"/></net>
 
-<net id="433"><net_src comp="114" pin="3"/><net_sink comp="430" pin=0"/></net>
+<net id="474"><net_src comp="464" pin="2"/><net_sink comp="470" pin=0"/></net>
 
-<net id="437"><net_src comp="114" pin="3"/><net_sink comp="434" pin=0"/></net>
+<net id="475"><net_src comp="12" pin="0"/><net_sink comp="470" pin=1"/></net>
 
-<net id="441"><net_src comp="430" pin="1"/><net_sink comp="438" pin=0"/></net>
+<net id="480"><net_src comp="137" pin="4"/><net_sink comp="476" pin=0"/></net>
 
-<net id="446"><net_src comp="438" pin="1"/><net_sink comp="442" pin=0"/></net>
+<net id="481"><net_src comp="126" pin="4"/><net_sink comp="476" pin=1"/></net>
 
-<net id="447"><net_src comp="16" pin="0"/><net_sink comp="442" pin=1"/></net>
+<net id="486"><net_src comp="126" pin="4"/><net_sink comp="482" pin=0"/></net>
 
-<net id="453"><net_src comp="60" pin="0"/><net_sink comp="448" pin=0"/></net>
+<net id="487"><net_src comp="137" pin="4"/><net_sink comp="482" pin=1"/></net>
 
-<net id="454"><net_src comp="438" pin="1"/><net_sink comp="448" pin=1"/></net>
+<net id="492"><net_src comp="137" pin="4"/><net_sink comp="488" pin=0"/></net>
 
-<net id="455"><net_src comp="62" pin="0"/><net_sink comp="448" pin=2"/></net>
+<net id="493"><net_src comp="126" pin="4"/><net_sink comp="488" pin=1"/></net>
 
-<net id="460"><net_src comp="448" pin="3"/><net_sink comp="456" pin=0"/></net>
+<net id="499"><net_src comp="476" pin="2"/><net_sink comp="494" pin=0"/></net>
 
-<net id="461"><net_src comp="18" pin="0"/><net_sink comp="456" pin=1"/></net>
+<net id="500"><net_src comp="488" pin="2"/><net_sink comp="494" pin=1"/></net>
 
-<net id="479"><net_src comp="462" pin="2"/><net_sink comp="474" pin=0"/></net>
+<net id="501"><net_src comp="482" pin="2"/><net_sink comp="494" pin=2"/></net>
 
-<net id="480"><net_src comp="470" pin="2"/><net_sink comp="474" pin=1"/></net>
+<net id="509"><net_src comp="502" pin="1"/><net_sink comp="505" pin=0"/></net>
 
-<net id="481"><net_src comp="466" pin="2"/><net_sink comp="474" pin=2"/></net>
+<net id="510"><net_src comp="502" pin="1"/><net_sink comp="505" pin=1"/></net>
 
-<net id="489"><net_src comp="482" pin="1"/><net_sink comp="485" pin=0"/></net>
+<net id="517"><net_src comp="66" pin="0"/><net_sink comp="511" pin=0"/></net>
 
-<net id="490"><net_src comp="482" pin="1"/><net_sink comp="485" pin=1"/></net>
+<net id="518"><net_src comp="505" pin="2"/><net_sink comp="511" pin=1"/></net>
 
-<net id="497"><net_src comp="64" pin="0"/><net_sink comp="491" pin=0"/></net>
+<net id="519"><net_src comp="68" pin="0"/><net_sink comp="511" pin=2"/></net>
 
-<net id="498"><net_src comp="485" pin="2"/><net_sink comp="491" pin=1"/></net>
+<net id="520"><net_src comp="70" pin="0"/><net_sink comp="511" pin=3"/></net>
 
-<net id="499"><net_src comp="66" pin="0"/><net_sink comp="491" pin=2"/></net>
+<net id="525"><net_src comp="64" pin="0"/><net_sink comp="521" pin=0"/></net>
 
-<net id="500"><net_src comp="68" pin="0"/><net_sink comp="491" pin=3"/></net>
+<net id="526"><net_src comp="14" pin="0"/><net_sink comp="521" pin=1"/></net>
 
-<net id="504"><net_src comp="14" pin="0"/><net_sink comp="501" pin=0"/></net>
+<net id="530"><net_src comp="14" pin="0"/><net_sink comp="527" pin=0"/></net>
 
-<net id="509"><net_src comp="70" pin="0"/><net_sink comp="505" pin=0"/></net>
+<net id="535"><net_src comp="527" pin="1"/><net_sink comp="531" pin=0"/></net>
 
-<net id="510"><net_src comp="14" pin="0"/><net_sink comp="505" pin=1"/></net>
+<net id="536"><net_src comp="72" pin="0"/><net_sink comp="531" pin=1"/></net>
 
-<net id="515"><net_src comp="72" pin="0"/><net_sink comp="511" pin=0"/></net>
+<net id="541"><net_src comp="531" pin="2"/><net_sink comp="537" pin=0"/></net>
 
-<net id="516"><net_src comp="501" pin="1"/><net_sink comp="511" pin=1"/></net>
+<net id="542"><net_src comp="14" pin="0"/><net_sink comp="537" pin=1"/></net>
 
-<net id="521"><net_src comp="511" pin="2"/><net_sink comp="517" pin=0"/></net>
+<net id="547"><net_src comp="74" pin="0"/><net_sink comp="543" pin=1"/></net>
 
-<net id="522"><net_src comp="14" pin="0"/><net_sink comp="517" pin=1"/></net>
+<net id="553"><net_src comp="543" pin="2"/><net_sink comp="548" pin=0"/></net>
 
-<net id="527"><net_src comp="74" pin="0"/><net_sink comp="523" pin=1"/></net>
+<net id="554"><net_src comp="531" pin="2"/><net_sink comp="548" pin=1"/></net>
 
-<net id="533"><net_src comp="523" pin="2"/><net_sink comp="528" pin=0"/></net>
+<net id="555"><net_src comp="64" pin="0"/><net_sink comp="548" pin=2"/></net>
 
-<net id="534"><net_src comp="511" pin="2"/><net_sink comp="528" pin=1"/></net>
+<net id="556"><net_src comp="548" pin="3"/><net_sink comp="112" pin=3"/></net>
 
-<net id="535"><net_src comp="70" pin="0"/><net_sink comp="528" pin=2"/></net>
+<net id="560"><net_src comp="98" pin="2"/><net_sink comp="557" pin=0"/></net>
 
-<net id="536"><net_src comp="528" pin="3"/><net_sink comp="122" pin=3"/></net>
+<net id="564"><net_src comp="150" pin="1"/><net_sink comp="561" pin=0"/></net>
 
-<net id="540"><net_src comp="319" pin="1"/><net_sink comp="537" pin=0"/></net>
+<net id="568"><net_src comp="168" pin="1"/><net_sink comp="565" pin=0"/></net>
 
-<net id="544"><net_src comp="132" pin="3"/><net_sink comp="541" pin=0"/></net>
+<net id="569"><net_src comp="565" pin="1"/><net_sink comp="112" pin=4"/></net>
 
-<net id="545"><net_src comp="541" pin="1"/><net_sink comp="139" pin=0"/></net>
+<net id="576"><net_src comp="402" pin="2"/><net_sink comp="573" pin=0"/></net>
 
-<net id="549"><net_src comp="144" pin="3"/><net_sink comp="546" pin=0"/></net>
+<net id="577"><net_src comp="573" pin="1"/><net_sink comp="137" pin=0"/></net>
 
-<net id="550"><net_src comp="546" pin="1"/><net_sink comp="151" pin=0"/></net>
+<net id="581"><net_src comp="458" pin="2"/><net_sink comp="578" pin=0"/></net>
 
-<net id="554"><net_src comp="156" pin="3"/><net_sink comp="551" pin=0"/></net>
+<net id="582"><net_src comp="578" pin="1"/><net_sink comp="126" pin=0"/></net>
 
-<net id="555"><net_src comp="551" pin="1"/><net_sink comp="163" pin=0"/></net>
+<net id="586"><net_src comp="494" pin="3"/><net_sink comp="583" pin=0"/></net>
 
-<net id="559"><net_src comp="168" pin="3"/><net_sink comp="556" pin=0"/></net>
+<net id="587"><net_src comp="583" pin="1"/><net_sink comp="502" pin=0"/></net>
 
-<net id="560"><net_src comp="556" pin="1"/><net_sink comp="175" pin=0"/></net>
+<net id="591"><net_src comp="511" pin="4"/><net_sink comp="588" pin=0"/></net>
 
-<net id="564"><net_src comp="180" pin="3"/><net_sink comp="561" pin=0"/></net>
+<net id="592"><net_src comp="588" pin="1"/><net_sink comp="543" pin=0"/></net>
 
-<net id="565"><net_src comp="561" pin="1"/><net_sink comp="187" pin=0"/></net>
+<net id="596"><net_src comp="548" pin="3"/><net_sink comp="593" pin=0"/></net>
 
-<net id="569"><net_src comp="192" pin="3"/><net_sink comp="566" pin=0"/></net>
-
-<net id="570"><net_src comp="566" pin="1"/><net_sink comp="199" pin=0"/></net>
-
-<net id="574"><net_src comp="204" pin="3"/><net_sink comp="571" pin=0"/></net>
-
-<net id="575"><net_src comp="571" pin="1"/><net_sink comp="211" pin=0"/></net>
-
-<net id="579"><net_src comp="216" pin="3"/><net_sink comp="576" pin=0"/></net>
-
-<net id="580"><net_src comp="576" pin="1"/><net_sink comp="223" pin=0"/></net>
-
-<net id="584"><net_src comp="228" pin="3"/><net_sink comp="581" pin=0"/></net>
-
-<net id="585"><net_src comp="581" pin="1"/><net_sink comp="235" pin=0"/></net>
-
-<net id="589"><net_src comp="240" pin="3"/><net_sink comp="586" pin=0"/></net>
-
-<net id="590"><net_src comp="586" pin="1"/><net_sink comp="247" pin=0"/></net>
-
-<net id="594"><net_src comp="252" pin="3"/><net_sink comp="591" pin=0"/></net>
-
-<net id="595"><net_src comp="591" pin="1"/><net_sink comp="259" pin=0"/></net>
-
-<net id="599"><net_src comp="264" pin="3"/><net_sink comp="596" pin=0"/></net>
-
-<net id="600"><net_src comp="596" pin="1"/><net_sink comp="271" pin=0"/></net>
-
-<net id="604"><net_src comp="276" pin="3"/><net_sink comp="601" pin=0"/></net>
-
-<net id="605"><net_src comp="601" pin="1"/><net_sink comp="283" pin=0"/></net>
-
-<net id="609"><net_src comp="288" pin="3"/><net_sink comp="606" pin=0"/></net>
-
-<net id="610"><net_src comp="606" pin="1"/><net_sink comp="295" pin=0"/></net>
-
-<net id="614"><net_src comp="108" pin="2"/><net_sink comp="611" pin=0"/></net>
-
-<net id="618"><net_src comp="388" pin="2"/><net_sink comp="615" pin=0"/></net>
-
-<net id="619"><net_src comp="615" pin="1"/><net_sink comp="462" pin=0"/></net>
-
-<net id="620"><net_src comp="615" pin="1"/><net_sink comp="466" pin=1"/></net>
-
-<net id="621"><net_src comp="615" pin="1"/><net_sink comp="470" pin=0"/></net>
-
-<net id="625"><net_src comp="424" pin="2"/><net_sink comp="622" pin=0"/></net>
-
-<net id="626"><net_src comp="622" pin="1"/><net_sink comp="462" pin=1"/></net>
-
-<net id="627"><net_src comp="622" pin="1"/><net_sink comp="466" pin=0"/></net>
-
-<net id="628"><net_src comp="622" pin="1"/><net_sink comp="470" pin=1"/></net>
-
-<net id="632"><net_src comp="434" pin="1"/><net_sink comp="629" pin=0"/></net>
-
-<net id="633"><net_src comp="629" pin="1"/><net_sink comp="122" pin=4"/></net>
-
-<net id="637"><net_src comp="474" pin="3"/><net_sink comp="634" pin=0"/></net>
-
-<net id="638"><net_src comp="634" pin="1"/><net_sink comp="482" pin=0"/></net>
-
-<net id="642"><net_src comp="491" pin="4"/><net_sink comp="639" pin=0"/></net>
-
-<net id="643"><net_src comp="639" pin="1"/><net_sink comp="523" pin=0"/></net>
-
-<net id="647"><net_src comp="528" pin="3"/><net_sink comp="644" pin=0"/></net>
-
-<net id="648"><net_src comp="644" pin="1"/><net_sink comp="122" pin=3"/></net>
+<net id="597"><net_src comp="593" pin="1"/><net_sink comp="112" pin=3"/></net>
 
 </net_list>
 
@@ -2772,120 +2611,109 @@ StgValue_130            (ret           ) [ 0000000]
   - Output states:
 	Port: o_data_data_V | {6 }
 	Port: o_data_last_V | {6 }
-	Port: currentState | {1 2 }
+	Port: currentState | {1 }
+	Port: phaseClass_V | {2 }
 	Port: loadCount_V | {5 }
-	Port: unScalled_V | {3 }
-	Port: newVal_V | {3 }
-	Port: cor_phaseArray_phase_8 | {2 }
-	Port: cor_phaseArray_phase_9 | {2 }
-	Port: cor_phaseArray_phase_10 | {2 }
-	Port: cor_phaseArray_phase_11 | {2 }
-	Port: cor_phaseArray_phase_12 | {2 }
-	Port: cor_phaseArray_phase | {2 }
-	Port: cor_phaseArray_phase_1 | {2 }
-	Port: cor_phaseArray_phase_2 | {2 }
-	Port: cor_phaseArray_phase_3 | {2 }
-	Port: cor_phaseArray_phase_4 | {2 }
-	Port: cor_phaseArray_phase_5 | {2 }
-	Port: cor_phaseArray_phase_6 | {2 }
-	Port: cor_phaseArray_phase_7 | {2 }
-	Port: cor_phaseArray_phase_13 | {2 }
+	Port: unScalled_V | {2 }
+	Port: newVal_V | {2 }
+	Port: cor_phaseClass0_V_14 | {2 }
+	Port: cor_phaseClass0_V_13 | {2 }
+	Port: cor_phaseClass0_V_12 | {2 }
+	Port: cor_phaseClass0_V_11 | {2 }
+	Port: cor_phaseClass0_V_10 | {2 }
+	Port: cor_phaseClass0_V_9 | {2 }
+	Port: cor_phaseClass0_V_8 | {2 }
+	Port: cor_phaseClass0_V_7 | {2 }
+	Port: cor_phaseClass0_V_6 | {2 }
+	Port: cor_phaseClass0_V_5 | {2 }
+	Port: cor_phaseClass0_V_4 | {2 }
+	Port: cor_phaseClass0_V_3 | {2 }
+	Port: cor_phaseClass0_V_2 | {2 }
+	Port: cor_phaseClass0_V_1 | {2 }
+	Port: cor_phaseClass0_V_0 | {2 }
  - Input state : 
-	Port: correlateTop : i_data_data_V | {2 }
-	Port: correlateTop : i_data_last_V | {2 }
-	Port: correlateTop : start_V | {2 }
-	Port: correlateTop : phaseClass_V | {1 }
+	Port: correlateTop : i_data_data_V | {1 }
+	Port: correlateTop : i_data_last_V | {1 }
+	Port: correlateTop : start_V | {1 }
 	Port: correlateTop : currentState | {1 }
+	Port: correlateTop : phaseClass_V | {2 }
 	Port: correlateTop : loadCount_V | {5 }
-	Port: correlateTop : cor_phaseArray_phase_8 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_9 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_10 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_11 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_12 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_1 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_2 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_3 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_4 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_5 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_6 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_7 | {1 2 }
-	Port: correlateTop : cor_phaseArray_phase_13 | {1 2 }
+	Port: correlateTop : cor_phaseClass0_V_14 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_13 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_12 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_11 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_10 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_9 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_8 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_7 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_6 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_5 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_4 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_3 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_2 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_1 | {2 }
+	Port: correlateTop : cor_phaseClass0_V_0 | {2 }
   - Chain level:
 	State 1
 		StgValue_9 : 1
-		cor_phaseArray_phase : 1
-		cor_phaseArray_phase_1 : 2
-		cor_phaseArray_phase_2 : 1
-		cor_phaseArray_phase_3 : 2
-		cor_phaseArray_phase_4 : 1
-		cor_phaseArray_phase_5 : 2
-		cor_phaseArray_phase_6 : 1
-		cor_phaseArray_phase_7 : 2
-		cor_phaseArray_phase_8 : 1
-		cor_phaseArray_phase_9 : 2
-		cor_phaseArray_phase_10 : 1
-		cor_phaseArray_phase_11 : 2
-		cor_phaseArray_phase_12 : 1
-		cor_phaseArray_phase_13 : 2
-		cor_phaseArray_phase_14 : 1
-		cor_phaseArray_phase_15 : 2
-		cor_phaseArray_phase_16 : 1
-		cor_phaseArray_phase_17 : 2
-		cor_phaseArray_phase_18 : 1
-		cor_phaseArray_phase_19 : 2
-		cor_phaseArray_phase_20 : 1
-		cor_phaseArray_phase_21 : 2
-		cor_phaseArray_phase_22 : 1
-		cor_phaseArray_phase_23 : 2
-		cor_phaseArray_phase_24 : 1
-		cor_phaseArray_phase_25 : 2
-		cor_phaseArray_phase_26 : 1
-		cor_phaseArray_phase_27 : 2
 	State 2
+		p_Val2_1 : 1
+		StgValue_20 : 2
+		op_V_read_assign : 2
+		op_V_read_assign_cas : 3
+		StgValue_23 : 3
+		cond_i : 1
+		StgValue_25 : 2
+		StgValue_28 : 1
+		StgValue_30 : 1
+		StgValue_32 : 1
+		StgValue_34 : 1
+		StgValue_36 : 1
+		StgValue_38 : 1
+		StgValue_40 : 1
+		StgValue_42 : 1
+		StgValue_44 : 1
 		StgValue_46 : 1
-		StgValue_48 : 1
-		StgValue_50 : 1
+		extLd4 : 1
+		StgValue_49 : 2
+		extLd2 : 1
 		StgValue_52 : 1
-		StgValue_54 : 1
-		StgValue_56 : 1
+		cor_phaseClass0_V_1_1 : 1
+		StgValue_55 : 1
+		cor_phaseClass0_V_0_1 : 1
 		StgValue_58 : 1
-		StgValue_60 : 1
-		StgValue_62 : 1
-		extLd6 : 1
-		StgValue_65 : 2
-		extLd3 : 1
-		StgValue_68 : 1
-		extLd1 : 1
-		StgValue_71 : 1
-		extLd : 1
-		StgValue_74 : 1
-		tmp9 : 1
-		tmp8 : 2
-		tmp : 1
-		tmp1 : 2
+		StgValue_59 : 3
+		tmp1 : 1
+		tmp : 2
+		tmp3 : 1
+		tmp4 : 2
 		tmp2 : 3
 		p_Val2_6_i : 4
-		tmp3 : 2
-		tmp4 : 3
-		tmp5 : 1
-		tmp6 : 2
-		tmp7 : 3
-		p_Val2_3_2_i : 4
+		tmp6 : 1
+		tmp7 : 1
+		tmp5 : 2
+		tmp9 : 2
+		tmp11 : 4
+		tmp11_cast_cast : 5
+		tmp10 : 6
+		tmp10_cast : 7
+		tmp8 : 8
+		p_Val2_3_7_i : 9
+		tmp_6 : 1
+		StgValue_78 : 2
 	State 3
-		p_Val2_1 : 1
-		StgValue_92 : 2
-		p_0 : 2
-		StgValue_94 : 3
-		tmp_i_4 : 1
+		tmp_i : 1
+		p_Val2_i : 1
+		p_Val2_9_i : 1
+		tmp_1_i : 2
 	State 4
-		p_Val2_2 : 1
+		p_Val2_4 : 1
 		res_V : 2
 	State 5
 		tmp_4 : 1
-		StgValue_105 : 2
+		StgValue_91 : 2
 		o_data_data_V_tmp : 2
-		StgValue_108 : 3
+		StgValue_94 : 3
 	State 6
 
 
@@ -2894,145 +2722,104 @@ StgValue_130            (ret           ) [ 0000000]
 ============================================================
 
 * Functional unit list:
-|----------|-------------------------------|---------|---------|---------|
-| Operation|        Functional Unit        |  DSP48E |    FF   |   LUT   |
-|----------|-------------------------------|---------|---------|---------|
-|          |          tmp9_fu_358          |    0    |    0    |    32   |
-|          |          tmp8_fu_364          |    0    |    0    |    32   |
-|          |           tmp_fu_370          |    0    |   101   |    37   |
-|          |          tmp1_fu_376          |    0    |   101   |    37   |
-|          |          tmp2_fu_382          |    0    |    0    |    32   |
-|          |       p_Val2_6_i_fu_388       |    0    |    0    |    32   |
-|    add   |          tmp3_fu_394          |    0    |    0    |    32   |
-|          |          tmp4_fu_400          |    0    |    0    |    32   |
-|          |          tmp5_fu_406          |    0    |   101   |    37   |
-|          |          tmp6_fu_412          |    0    |   101   |    37   |
-|          |          tmp7_fu_418          |    0    |    0    |    32   |
-|          |      p_Val2_3_2_i_fu_424      |    0    |    0    |    32   |
-|          |          tmp_4_fu_511         |    0    |   101   |    37   |
-|----------|-------------------------------|---------|---------|---------|
-|    sub   |        p_Val2_i_fu_466        |    0    |   101   |    37   |
-|          |       p_Val2_9_i_fu_470       |    0    |   101   |    37   |
-|----------|-------------------------------|---------|---------|---------|
-|  select  |         tmp_i_4_fu_474        |    0    |    0    |    32   |
-|          |    o_data_data_V_tmp_fu_528   |    0    |    0    |    32   |
-|----------|-------------------------------|---------|---------|---------|
-|    mul   |        p_Val2_2_fu_485        |    4    |    0    |    48   |
-|----------|-------------------------------|---------|---------|---------|
-|   icmp   |         tmp_5_i_fu_462        |    0    |    0    |    16   |
-|          |          tmp_5_fu_523         |    0    |    0    |    16   |
-|----------|-------------------------------|---------|---------|---------|
-|          | phaseClass_V_read_read_fu_102 |    0    |    0    |    0    |
-|   read   |    start_V_read_read_fu_108   |    0    |    0    |    0    |
-|          |        grp_read_fu_114        |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|   write  |        grp_write_fu_122       |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|          |          tmp_i_fu_323         |    0    |    0    |    0    |
-|          |         extLd6_fu_341         |    0    |    0    |    0    |
-|   zext   |         extLd3_fu_346         |    0    |    0    |    0    |
-|          |         extLd1_fu_350         |    0    |    0    |    0    |
-|          |          extLd_fu_354         |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|extractvalue|        p_Val2_s_fu_430        |    0    |    0    |    0    |
-|          |    o_data_last_V_tmp_fu_434   |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|   trunc  |        p_Val2_1_fu_438        |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|bitconcatenate|           p_0_fu_448          |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|   sext   |       OP1_V_cast_fu_482       |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|partselect|          res_V_fu_491         |    0    |    0    |    0    |
-|----------|-------------------------------|---------|---------|---------|
-|   Total  |                               |    4    |   707   |   659   |
-|----------|-------------------------------|---------|---------|---------|
+|----------|------------------------------|---------|---------|---------|
+| Operation|        Functional Unit       |  DSP48E |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|---------|
+|          |          tmp1_fu_372         |    0    |    0    |    32   |
+|          |          tmp_fu_378          |    0    |    0    |    32   |
+|          |          tmp3_fu_384         |    0    |   101   |    37   |
+|          |          tmp4_fu_390         |    0    |   101   |    37   |
+|          |          tmp2_fu_396         |    0    |    0    |    32   |
+|          |       p_Val2_6_i_fu_402      |    0    |    0    |    32   |
+|          |          tmp6_fu_408         |    0    |   101   |    37   |
+|    add   |          tmp7_fu_414         |    0    |    0    |    32   |
+|          |          tmp5_fu_420         |    0    |    0    |    32   |
+|          |          tmp9_fu_426         |    0    |   101   |    37   |
+|          |         tmp11_fu_432         |    0    |    68   |    26   |
+|          |         tmp10_fu_442         |    0    |    71   |    27   |
+|          |          tmp8_fu_452         |    0    |    0    |    32   |
+|          |      p_Val2_3_7_i_fu_458     |    0    |    0    |    32   |
+|          |         tmp_6_fu_464         |    0    |    17   |    9    |
+|          |         tmp_4_fu_531         |    0    |   101   |    37   |
+|----------|------------------------------|---------|---------|---------|
+|    sub   |        p_Val2_i_fu_482       |    0    |   101   |    37   |
+|          |       p_Val2_9_i_fu_488      |    0    |   101   |    37   |
+|----------|------------------------------|---------|---------|---------|
+|  select  |        tmp_1_i_fu_494        |    0    |    0    |    32   |
+|          |   o_data_data_V_tmp_fu_548   |    0    |    0    |    32   |
+|----------|------------------------------|---------|---------|---------|
+|    mul   |        p_Val2_4_fu_505       |    4    |    0    |    48   |
+|----------|------------------------------|---------|---------|---------|
+|          |         cond_i_fu_200        |    0    |    0    |    2    |
+|   icmp   |         tmp_i_fu_476         |    0    |    0    |    16   |
+|          |         tmp_7_fu_543         |    0    |    0    |    16   |
+|----------|------------------------------|---------|---------|---------|
+|   read   |    start_V_read_read_fu_98   |    0    |    0    |    0    |
+|          |        grp_read_fu_104       |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|   write  |       grp_write_fu_112       |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|extractvalue|        p_Val2_s_fu_164       |    0    |    0    |    0    |
+|          |   i_data_last_V_tmp_fu_168   |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|   trunc  |        p_Val2_1_fu_172       |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|bitconcatenate|    op_V_read_assign_fu_182   |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|          |  op_V_read_assign_cas_fu_190 |    0    |    0    |    0    |
+|          |         extLd4_fu_314        |    0    |    0    |    0    |
+|          |         extLd2_fu_328        |    0    |    0    |    0    |
+|   sext   | cor_phaseClass0_V_1_1_fu_342 |    0    |    0    |    0    |
+|          | cor_phaseClass0_V_0_1_fu_356 |    0    |    0    |    0    |
+|          |    tmp11_cast_cast_fu_438    |    0    |    0    |    0    |
+|          |       tmp10_cast_fu_448      |    0    |    0    |    0    |
+|          |       OP1_V_cast_fu_502      |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|partselect|         res_V_fu_511         |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|
+|   Total  |                              |    4    |   863   |   723   |
+|----------|------------------------------|---------|---------|---------|
 
 Memories:
-+-----------------------+--------+--------+--------+
-|                       |  BRAM  |   FF   |   LUT  |
-+-----------------------+--------+--------+--------+
-|  cor_phaseArray_phase |    0   |   80   |   28   |
-| cor_phaseArray_phase_1|    0   |   80   |   28   |
-|cor_phaseArray_phase_10|    0   |   80   |   28   |
-|cor_phaseArray_phase_11|    0   |   80   |   28   |
-|cor_phaseArray_phase_12|    0   |   80   |   28   |
-|cor_phaseArray_phase_13|    0   |   18   |   21   |
-| cor_phaseArray_phase_2|    0   |   80   |   28   |
-| cor_phaseArray_phase_3|    0   |   80   |   28   |
-| cor_phaseArray_phase_4|    0   |   80   |   28   |
-| cor_phaseArray_phase_5|    0   |   18   |   21   |
-| cor_phaseArray_phase_6|    0   |   18   |   21   |
-| cor_phaseArray_phase_7|    0   |   18   |   21   |
-| cor_phaseArray_phase_8|    0   |   80   |   28   |
-| cor_phaseArray_phase_9|    0   |   80   |   28   |
-+-----------------------+--------+--------+--------+
-|         Total         |    0   |   872  |   364  |
-+-----------------------+--------+--------+--------+
+N/A
 
 * Register list:
-+-------------------------------+--------+
-|                               |   FF   |
-+-------------------------------+--------+
-|cor_phaseArray_phase_10_reg_566|    4   |
-|cor_phaseArray_phase_12_reg_571|    4   |
-|cor_phaseArray_phase_14_reg_576|    4   |
-|cor_phaseArray_phase_16_reg_581|    4   |
-|cor_phaseArray_phase_18_reg_586|    4   |
-|cor_phaseArray_phase_20_reg_591|    4   |
-|cor_phaseArray_phase_22_reg_596|    4   |
-|cor_phaseArray_phase_24_reg_601|    4   |
-|cor_phaseArray_phase_26_reg_606|    4   |
-| cor_phaseArray_phase_2_reg_546|    4   |
-| cor_phaseArray_phase_4_reg_551|    4   |
-| cor_phaseArray_phase_6_reg_556|    4   |
-| cor_phaseArray_phase_8_reg_561|    4   |
-|  cor_phaseArray_phase_reg_541 |    4   |
-|   currentState_load_reg_537   |    1   |
-|   o_data_data_V_tmp_reg_644   |   32   |
-|   o_data_last_V_tmp_reg_629   |    1   |
-|      p_Val2_3_2_i_reg_622     |   32   |
-|       p_Val2_6_i_reg_615      |   32   |
-|         res_V_reg_639         |   32   |
-|      start_V_read_reg_611     |    1   |
-|        tmp_i_4_reg_634        |   32   |
-+-------------------------------+--------+
-|             Total             |   219  |
-+-------------------------------+--------+
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+|currentState_load_reg_561|    1   |
+|i_data_last_V_tmp_reg_565|    1   |
+|o_data_data_V_tmp_reg_593|   32   |
+|     p_Val2_2_reg_122    |   32   |
+|   p_Val2_3_7_i_reg_578  |   32   |
+|     p_Val2_3_reg_133    |   32   |
+|    p_Val2_6_i_reg_573   |   32   |
+|      res_V_reg_588      |   32   |
+|   start_V_read_reg_557  |    1   |
+|     tmp_1_i_reg_583     |   32   |
++-------------------------+--------+
+|          Total          |   227  |
++-------------------------+--------+
 
 * Multiplexer (MUX) list: 
-|-------------------|------|------|------|--------||---------||---------|
-|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
-|-------------------|------|------|------|--------||---------||---------|
-|  grp_write_fu_122 |  p3  |   2  |  32  |   64   ||    9    |
-| grp_access_fu_139 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_151 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_163 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_175 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_187 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_199 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_211 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_223 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_235 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_247 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_259 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_271 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_283 |  p0  |   2  |   4  |    8   ||    9    |
-| grp_access_fu_295 |  p0  |   2  |   4  |    8   ||    9    |
-|-------------------|------|------|------|--------||---------||---------|
-|       Total       |      |      |      |   176  ||  15.435 ||   135   |
-|-------------------|------|------|------|--------||---------||---------|
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_write_fu_112 |  p3  |   2  |  32  |   64   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   64   ||  1.029  ||    9    |
+|------------------|------|------|------|--------||---------||---------|
 
 
 
 * Summary:
-+-----------+--------+--------+--------+--------+--------+
-|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
-+-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |    4   |    -   |   707  |   659  |
-|   Memory  |    0   |    -   |    -   |   872  |   364  |
-|Multiplexer|    -   |    -   |   15   |    -   |   135  |
-|  Register |    -   |    -   |    -   |   219  |    -   |
-+-----------+--------+--------+--------+--------+--------+
-|   Total   |    0   |    4   |   15   |  1798  |  1158  |
-+-----------+--------+--------+--------+--------+--------+
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    4   |    -   |   863  |   723  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    1   |    -   |    9   |
+|  Register |    -   |    -   |   227  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    4   |    1   |  1090  |   732  |
++-----------+--------+--------+--------+--------+

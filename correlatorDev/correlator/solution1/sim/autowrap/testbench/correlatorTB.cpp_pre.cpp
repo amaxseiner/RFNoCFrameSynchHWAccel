@@ -2,13 +2,13 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
        
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
-# 153 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
+# 153 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
 namespace std
 {
   typedef long unsigned int size_t;
@@ -18,49 +18,49 @@ namespace std
 
 
 }
-# 393 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 1 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
-# 339 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+# 393 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 1 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
+# 339 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
 # 410 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
 # 411 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
-# 340 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
-# 362 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+# 340 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+# 362 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4
 # 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
 # 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
-# 363 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 2 3
-# 394 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
+# 363 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 2 3
+# 394 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3
-# 397 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3
+# 397 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
        
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
 
 
 
@@ -92,25 +92,25 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<> struct char_traits<wchar_t>;
 
   typedef basic_string<wchar_t> wstring;
-# 85 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
+# 85 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 3
 
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 1 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 1 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
        
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
 
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4
-# 46 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4
+# 46 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 # 1 "/usr/include/stdio.h" 1 3 4
 # 44 "/usr/include/stdio.h" 3 4
 struct _IO_FILE;
@@ -125,13 +125,13 @@ typedef struct _IO_FILE FILE;
 
 # 64 "/usr/include/stdio.h" 3 4
 typedef struct _IO_FILE __FILE;
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+# 47 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 50 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+# 50 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
 
 
 
@@ -139,16 +139,16 @@ typedef __builtin_va_list __gnuc_va_list;
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-# 212 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 212 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef long unsigned int size_t;
-# 353 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+# 353 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 58 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+# 58 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
 
 # 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
-# 85 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+# 85 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 typedef struct
 {
   int __count;
@@ -158,14 +158,14 @@ typedef struct
     char __wchb[4];
   } __value;
 } __mbstate_t;
-# 102 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 102 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 
 
 typedef __mbstate_t mbstate_t;
 
 
 
-# 127 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 127 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern "C" {
 
 
@@ -232,7 +232,7 @@ typedef struct __locale_struct
 
 
 typedef __locale_t locale_t;
-# 176 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+# 176 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
 
 extern int wcscasecmp_l (__const wchar_t *__s1, __const wchar_t *__s2,
     __locale_t __loc) throw ();
@@ -386,7 +386,7 @@ extern size_t __mbrlen (__const char *__restrict __s, size_t __n,
 extern size_t mbrlen (__const char *__restrict __s, size_t __n,
         mbstate_t *__restrict __ps) throw ();
 
-# 357 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 357 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 
 
 
@@ -486,7 +486,7 @@ __extension__
 extern unsigned long long int wcstouq (__const wchar_t *__restrict __nptr,
            wchar_t **__restrict __endptr,
            int __base) throw ();
-# 476 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 476 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern long int wcstol_l (__const wchar_t *__restrict __nptr,
      wchar_t **__restrict __endptr, int __base,
      __locale_t __loc) throw ();
@@ -531,14 +531,14 @@ extern float __wcstof_internal (__const wchar_t *__restrict __nptr,
 extern long double __wcstold_internal (__const wchar_t *__restrict __nptr,
            wchar_t **__restrict __endptr,
            int __group) throw ();
-# 602 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 602 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern wchar_t *wcpcpy (wchar_t *__dest, __const wchar_t *__src) throw ();
 
 
 
 extern wchar_t *wcpncpy (wchar_t *__dest, __const wchar_t *__src, size_t __n)
      throw ();
-# 616 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 616 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) throw ();
 
 
@@ -690,7 +690,7 @@ extern int fputws (__const wchar_t *__restrict __ws,
 
 extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
 
-# 777 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 777 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern wint_t getwc_unlocked (__FILE *__stream);
 extern wint_t getwchar_unlocked (void);
 
@@ -709,10 +709,10 @@ extern wint_t fgetwc_unlocked (__FILE *__stream);
 
 
 extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
-# 803 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 803 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
 extern wint_t putwchar_unlocked (wchar_t __wc);
-# 813 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 813 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
      __FILE *__restrict __stream);
 
@@ -745,15 +745,15 @@ extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
      __const wchar_t *__restrict __format,
      __const struct tm *__restrict __tp,
      __locale_t __loc) throw ();
-# 867 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+# 867 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
 }
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 2 3
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 47 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 2 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
 namespace std
 {
   using ::mbstate_t;
 }
-# 137 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 137 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -868,7 +868,7 @@ namespace __gnu_cxx
 
 
   using ::wcstold;
-# 259 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 259 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
   using ::wcstoll;
   using ::wcstoull;
 
@@ -880,16 +880,16 @@ namespace std
   using ::__gnu_cxx::wcstoll;
   using ::__gnu_cxx::wcstoull;
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 2 3
-# 70 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 2 3
+# 70 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 90 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 90 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
   typedef long streamoff;
-# 100 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 100 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
   typedef ptrdiff_t streamsize;
-# 113 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 113 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
   template<typename _StateT>
     class fpos
     {
@@ -904,7 +904,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       fpos()
       : _M_off(0), _M_state() { }
-# 135 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 135 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
       fpos(streamoff __off)
       : _M_off(__off), _M_state() { }
 
@@ -1003,15 +1003,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
   typedef fpos<mbstate_t> streampos;
 
   typedef fpos<mbstate_t> wstreampos;
-# 241 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
+# 241 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h" 3
 
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 76 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
+# 76 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
   class ios_base;
 
   template<typename _CharT, typename _Traits = char_traits<_CharT> >
@@ -1147,11 +1147,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 1 3
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 1 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
        
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
 
 #pragma GCC visibility push(default)
 
@@ -1161,7 +1161,7 @@ extern "C++" {
 
 namespace std
 {
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
   class exception
   {
   public:
@@ -1207,7 +1207,7 @@ namespace std
 
 
   void unexpected() __attribute__ ((__noreturn__));
-# 118 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 118 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
   bool uncaught_exception() throw() __attribute__ ((__pure__));
 
 
@@ -1216,7 +1216,7 @@ namespace std
 namespace __gnu_cxx
 {
 
-# 143 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
+# 143 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/exception" 3
   void __verbose_terminate_handler();
 
 
@@ -1225,18 +1225,18 @@ namespace __gnu_cxx
 }
 
 #pragma GCC visibility pop
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 1 3
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/exception_defines.h" 1 3
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 1 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/exception_defines.h" 1 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/functexcept.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -1301,12 +1301,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 62 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 62 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
        
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-# 69 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 69 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
@@ -1419,7 +1419,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       enum { __value = 1 };
       typedef __true_type __type;
     };
-# 199 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 199 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
   template<>
     struct __is_integer<short>
     {
@@ -1630,14 +1630,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       enum { __value = 0 };
       typedef __false_type __type;
     };
-# 422 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 422 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
 
 }
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
 
 
 
@@ -1817,11 +1817,11 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 1 3
-# 32 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 1 3
+# 32 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
        
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
 
 
 
@@ -1829,7 +1829,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
-# 54 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 54 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
   template<typename _Value>
     struct __numeric_traits_integer
     {
@@ -1854,7 +1854,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
   template<typename _Value>
     const int __numeric_traits_integer<_Value>::__digits;
-# 99 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
+# 99 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
   template<typename _Value>
     struct __numeric_traits_floating
     {
@@ -1888,16 +1888,16 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 65 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 1 3
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 3
+# 65 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 1 3
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 3
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 2 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/concept_check.h" 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -1914,11 +1914,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 109 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
+# 109 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 120 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
+# 120 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/move.h" 3
   template<typename _Tp>
     inline void
     swap(_Tp& __a, _Tp& __b)
@@ -1943,7 +1943,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 2 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 2 3
 
 
 
@@ -1952,7 +1952,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 86 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+# 86 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
   template<class _T1, class _T2>
     struct pair
     {
@@ -1977,7 +1977,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       template<class _U1, class _U2>
  pair(const pair<_U1, _U2>& __p)
  : first(__p.first), second(__p.second) { }
-# 196 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+# 196 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
     };
 
 
@@ -2016,7 +2016,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline bool
     operator>=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
     { return !(__x < __y); }
-# 270 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
+# 270 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_pair.h" 3
   template<class _T1, class _T2>
     inline pair<_T1, _T2>
     make_pair(_T1 __x, _T2 __y)
@@ -2025,11 +2025,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 66 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 1 3
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 66 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 1 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
        
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
 
 
 
@@ -2040,7 +2040,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 90 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 90 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
   struct input_iterator_tag { };
 
 
@@ -2056,7 +2056,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct random_access_iterator_tag : public bidirectional_iterator_tag { };
-# 117 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 117 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
   template<typename _Category, typename _Tp, typename _Distance = ptrdiff_t,
            typename _Pointer = _Tp*, typename _Reference = _Tp&>
     struct iterator
@@ -2072,7 +2072,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       typedef _Reference reference;
     };
-# 163 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
+# 163 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_types.h" 3
   template<typename _Iterator>
     struct iterator_traits
     {
@@ -2137,11 +2137,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 67 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 1 3
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 67 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 1 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
        
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
 
 
 
@@ -2176,7 +2176,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       return __last - __first;
     }
-# 111 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 111 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
   template<typename _InputIterator>
     inline typename iterator_traits<_InputIterator>::difference_type
     distance(_InputIterator __first, _InputIterator __last)
@@ -2222,7 +2222,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       __i += __n;
     }
-# 169 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 169 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
   template<typename _InputIterator, typename _Distance>
     inline void
     advance(_InputIterator& __i, _Distance __n)
@@ -2231,16 +2231,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typename iterator_traits<_InputIterator>::difference_type __d = __n;
       std::__advance(__i, __d, std::__iterator_category(__i));
     }
-# 200 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
+# 200 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator_base_funcs.h" 3
 
 }
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 1 3
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 1 3
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 96 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 96 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Iterator>
     class reverse_iterator
     : public iterator<typename iterator_traits<_Iterator>::iterator_category,
@@ -2417,7 +2417,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator[](difference_type __n) const
       { return *(*this + __n); }
     };
-# 283 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 283 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Iterator>
     inline bool
     operator==(const reverse_iterator<_Iterator>& __x,
@@ -2517,7 +2517,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        const reverse_iterator<_IteratorR>& __y)
 
     { return __y.base() - __x.base(); }
-# 395 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 395 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container>
     class back_insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -2532,14 +2532,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       explicit
       back_insert_iterator(_Container& __x) : container(&__x) { }
-# 422 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 422 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       back_insert_iterator&
       operator=(typename _Container::const_reference __value)
       {
  container->push_back(__value);
  return *this;
       }
-# 445 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 445 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       back_insert_iterator&
       operator*()
       { return *this; }
@@ -2554,12 +2554,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator++(int)
       { return *this; }
     };
-# 471 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 471 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container>
     inline back_insert_iterator<_Container>
     back_inserter(_Container& __x)
     { return back_insert_iterator<_Container>(__x); }
-# 486 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 486 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container>
     class front_insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -2573,14 +2573,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       explicit front_insert_iterator(_Container& __x) : container(&__x) { }
-# 512 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 512 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       front_insert_iterator&
       operator=(typename _Container::const_reference __value)
       {
  container->push_front(__value);
  return *this;
       }
-# 535 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 535 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       front_insert_iterator&
       operator*()
       { return *this; }
@@ -2595,12 +2595,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator++(int)
       { return *this; }
     };
-# 561 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 561 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container>
     inline front_insert_iterator<_Container>
     front_inserter(_Container& __x)
     { return front_insert_iterator<_Container>(__x); }
-# 580 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 580 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container>
     class insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -2619,7 +2619,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       insert_iterator(_Container& __x, typename _Container::iterator __i)
       : container(&__x), iter(__i) {}
-# 623 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 623 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       insert_iterator&
       operator=(typename _Container::const_reference __value)
       {
@@ -2627,7 +2627,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  ++iter;
  return *this;
       }
-# 649 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 649 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
       insert_iterator&
       operator*()
       { return *this; }
@@ -2642,7 +2642,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator++(int)
       { return *this; }
     };
-# 675 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 675 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _Container, typename _Iterator>
     inline insert_iterator<_Container>
     inserter(_Container& __x, _Iterator __i)
@@ -2659,7 +2659,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
-# 699 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 699 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   using std::iterator_traits;
   using std::iterator;
   template<typename _Iterator, typename _Container>
@@ -2748,7 +2748,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       base() const
       { return _M_current; }
     };
-# 797 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
+# 797 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR, typename _Container>
     inline bool
     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
@@ -2854,10 +2854,10 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 69 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 69 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/debug/debug.h" 1 3
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/debug/debug.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/debug/debug.h" 1 3
+# 47 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/debug/debug.h" 3
 namespace std
 {
   namespace __debug { }
@@ -2870,7 +2870,7 @@ namespace __gnu_debug
 {
   using namespace std::__debug;
 }
-# 71 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
+# 71 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -2905,7 +2905,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
           swap(*__a, *__b);
         }
     };
-# 116 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 116 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     inline void
     iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
@@ -2934,7 +2934,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  && __are_same<_ValueType2&, _ReferenceType2>::__value>::
  iter_swap(__a, __b);
     }
-# 157 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 157 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     _ForwardIterator2
     swap_ranges(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
@@ -2951,7 +2951,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  std::iter_swap(__first1, __first2);
       return __first2;
     }
-# 185 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 185 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _Tp>
     inline const _Tp&
     min(const _Tp& __a, const _Tp& __b)
@@ -2963,7 +2963,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return __b;
       return __a;
     }
-# 208 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 208 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _Tp>
     inline const _Tp&
     max(const _Tp& __a, const _Tp& __b)
@@ -2975,7 +2975,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return __b;
       return __a;
     }
-# 231 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 231 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _Tp, typename _Compare>
     inline const _Tp&
     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
@@ -2985,7 +2985,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return __b;
       return __a;
     }
-# 252 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 252 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _Tp, typename _Compare>
     inline const _Tp&
     max(const _Tp& __a, const _Tp& __b, _Compare __comp)
@@ -3037,7 +3037,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 319 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 319 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<>
     struct __copy_move<false, false, random_access_iterator_tag>
     {
@@ -3055,7 +3055,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 357 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 357 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<bool _IsMove>
     struct __copy_move<_IsMove, true, random_access_iterator_tag>
     {
@@ -3123,7 +3123,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
           std::__niter_base(__last),
           std::__niter_base(__result)));
     }
-# 442 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 442 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _II, typename _OI>
     inline _OI
     copy(_II __first, _II __last, _OI __result)
@@ -3138,7 +3138,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        (std::__miter_base(__first), std::__miter_base(__last),
         __result));
     }
-# 494 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 494 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<bool, bool, typename>
     struct __copy_move_backward
     {
@@ -3151,7 +3151,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 522 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 522 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<>
     struct __copy_move_backward<false, false, random_access_iterator_tag>
     {
@@ -3165,7 +3165,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     };
-# 552 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 552 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<bool _IsMove>
     struct __copy_move_backward<_IsMove, true, random_access_iterator_tag>
     {
@@ -3206,7 +3206,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     (std::__niter_base(__first), std::__niter_base(__last),
      std::__niter_base(__result)));
     }
-# 611 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 611 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _BI1, typename _BI2>
     inline _BI2
     copy_backward(_BI1 __first, _BI1 __last, _BI2 __result)
@@ -3223,7 +3223,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        (std::__miter_base(__first), std::__miter_base(__last),
         __result));
     }
-# 669 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 669 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
     inline typename
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
@@ -3255,7 +3255,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __builtin_memset(__first, static_cast<unsigned char>(__tmp),
          __last - __first);
     }
-# 713 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 713 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
     inline void
     fill(_ForwardIterator __first, _ForwardIterator __last, const _Tp& __value)
@@ -3300,7 +3300,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__fill_a(__first, __first + __n, __c);
       return __first + __n;
     }
-# 773 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 773 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _OI, typename _Size, typename _Tp>
     inline _OI
     fill_n(_OI __first, _Size __n, const _Tp& __value)
@@ -3450,7 +3450,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__lexicographical_compare<__simple>::__lc(__first1, __last1,
            __first2, __last2);
     }
-# 934 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 934 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
     _ForwardIterator
     lower_bound(_ForwardIterator __first, _ForwardIterator __last,
@@ -3512,7 +3512,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-# 1008 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1008 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
     inline bool
     equal(_II1 __first1, _II1 __last1, _II2 __first2)
@@ -3529,7 +3529,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
          std::__niter_base(__last1),
          std::__niter_base(__first2));
     }
-# 1040 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1040 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
     inline bool
     equal(_IIter1 __first1, _IIter1 __last1,
@@ -3545,7 +3545,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return false;
       return true;
     }
-# 1071 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1071 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
     inline bool
     lexicographical_compare(_II1 __first1, _II1 __last1,
@@ -3566,7 +3566,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__niter_base(__first2),
       std::__niter_base(__last2));
     }
-# 1105 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1105 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2, typename _Compare>
     bool
     lexicographical_compare(_II1 __first1, _II1 __last1,
@@ -3593,7 +3593,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first1 == __last1 && __first2 != __last2;
     }
-# 1145 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1145 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
     pair<_InputIterator1, _InputIterator2>
     mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
@@ -3614,7 +3614,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         }
       return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
     }
-# 1182 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
+# 1182 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
     pair<_InputIterator1, _InputIterator2>
@@ -3636,18 +3636,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar" 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 2 3
 
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
-# 59 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 59 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
   template<typename _CharT>
     struct _Char_types
     {
@@ -3656,7 +3656,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       typedef std::streamoff off_type;
       typedef std::mbstate_t state_type;
     };
-# 84 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 84 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
   template<typename _CharT>
     struct char_traits
     {
@@ -3787,7 +3787,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 228 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
+# 228 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/char_traits.h" 3
   template<class _CharT>
     struct char_traits : public __gnu_cxx::char_traits<_CharT>
     { };
@@ -3934,27 +3934,27 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 1 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 1 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
        
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
 
 
 # 1 "/usr/include/locale.h" 1 3 4
 # 28 "/usr/include/locale.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 29 "/usr/include/locale.h" 2 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/locale.h" 1 3 4
 # 30 "/usr/include/locale.h" 2 3 4
@@ -4058,15 +4058,15 @@ extern __locale_t uselocale (__locale_t __dataset) throw ();
 
 
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 2 3
-# 53 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 2 3
+# 53 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/clocale" 3
 namespace std
 {
   using ::lconv;
   using ::setlocale;
   using ::localeconv;
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 2 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 2 3
 
 
 
@@ -4101,7 +4101,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   {
 
     __c_locale __old = __gnu_cxx::__uselocale(__cloc);
-# 89 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
+# 89 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++locale.h" 3
     __builtin_va_list __args;
     __builtin_va_start(__args, __fmt);
 
@@ -4127,12 +4127,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
 
 
 # 1 "/usr/include/ctype.h" 1 3 4
@@ -4383,8 +4383,8 @@ extern int __toupper_l (int __c, __locale_t __l) throw ();
 extern int toupper_l (int __c, __locale_t __l) throw ();
 # 347 "/usr/include/ctype.h" 3 4
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 2 3
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 2 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
 namespace std
 {
   using ::isalnum;
@@ -4401,12 +4401,12 @@ namespace std
   using ::tolower;
   using ::toupper;
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 57 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
+# 57 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/localefwd.h" 3
   class locale;
 
   template<typename _Facet>
@@ -4541,25 +4541,25 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 1 3
-# 30 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 1 3
+# 30 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
 #pragma GCC visibility push(default)
-# 170 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+# 170 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
 # 1 "/usr/include/pthread.h" 1 3 4
 # 23 "/usr/include/pthread.h" 3 4
 # 1 "/usr/include/sched.h" 1 3 4
 # 28 "/usr/include/sched.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 29 "/usr/include/sched.h" 2 3 4
 
 
@@ -4700,7 +4700,7 @@ extern "C" {
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 38 "/usr/include/time.h" 2 3 4
 
 
@@ -5938,7 +5938,7 @@ extern int pthread_atfork (void (*__prepare) (void),
       void (*__child) (void)) throw ();
 # 1159 "/usr/include/pthread.h" 3 4
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
 extern "C" {
@@ -5960,7 +5960,7 @@ typedef __ssize_t ssize_t;
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 230 "/usr/include/unistd.h" 2 3 4
 
 
@@ -7310,7 +7310,7 @@ extern void swab (const void *__restrict __from, void *__restrict __to,
     ssize_t __n) throw () __attribute__ ((__nonnull__ (1, 2)));
 # 1154 "/usr/include/unistd.h" 3 4
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 2 3
 
 typedef pthread_t __gthread_t;
 typedef pthread_key_t __gthread_key_t;
@@ -7319,7 +7319,7 @@ typedef pthread_mutex_t __gthread_mutex_t;
 typedef pthread_mutex_t __gthread_recursive_mutex_t;
 typedef pthread_cond_t __gthread_cond_t;
 typedef struct timespec __gthread_time_t;
-# 118 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+# 118 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
 static __typeof(pthread_once) __gthrw_pthread_once __attribute__ ((__weakref__("pthread_once")));
 static __typeof(pthread_getspecific) __gthrw_pthread_getspecific __attribute__ ((__weakref__("pthread_getspecific")));
 static __typeof(pthread_setspecific) __gthrw_pthread_setspecific __attribute__ ((__weakref__("pthread_setspecific")));
@@ -7357,7 +7357,7 @@ static __typeof(pthread_key_delete) __gthrw_pthread_key_delete __attribute__ ((_
 static __typeof(pthread_mutexattr_init) __gthrw_pthread_mutexattr_init __attribute__ ((__weakref__("pthread_mutexattr_init")));
 static __typeof(pthread_mutexattr_settype) __gthrw_pthread_mutexattr_settype __attribute__ ((__weakref__("pthread_mutexattr_settype")));
 static __typeof(pthread_mutexattr_destroy) __gthrw_pthread_mutexattr_destroy __attribute__ ((__weakref__("pthread_mutexattr_destroy")));
-# 239 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+# 239 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
 static inline int
 __gthread_active_p (void)
 {
@@ -7371,7 +7371,7 @@ __gthread_active_p (void)
  __gthrw_pthread_cancel;
   return __gthread_active_ptr != 0;
 }
-# 657 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+# 657 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
 static inline int
 __gthread_create (__gthread_t *__threadid, void *(*__func) (void*),
     void *__args)
@@ -7491,7 +7491,7 @@ __gthread_mutex_unlock (__gthread_mutex_t *__mutex)
   else
     return 0;
 }
-# 800 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
+# 800 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr-default.h" 3
 static inline int
 __gthread_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
 {
@@ -7566,7 +7566,7 @@ __gthread_cond_destroy (__gthread_cond_t* __cond)
 {
   return __gthrw_pthread_cond_destroy (__cond);
 }
-# 171 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 2 3
+# 171 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/gthr.h" 2 3
 
 
 
@@ -7575,11 +7575,11 @@ __gthread_cond_destroy (__gthread_cond_t* __cond)
 
 
 #pragma GCC visibility pop
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/atomic_word.h" 1 3
-# 32 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/atomic_word.h" 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/atomic_word.h" 1 3
+# 32 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/atomic_word.h" 3
 typedef int _Atomic_word;
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 2 3
 
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
@@ -7597,7 +7597,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
   static inline void
   __atomic_add(volatile _Atomic_word* __mem, int __val)
   { __sync_fetch_and_add(__mem, __val); }
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/atomicity.h" 3
   static inline _Atomic_word
   __exchange_and_add_single(_Atomic_word* __mem, int __val)
   {
@@ -7640,32 +7640,32 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 3
 
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 1 3
-# 48 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 1 3
+# 48 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
 
 
 
@@ -7707,7 +7707,7 @@ namespace std
 
   new_handler set_new_handler(new_handler) throw();
 }
-# 93 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
+# 93 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/new" 3
 void* operator new(std::size_t) throw (std::bad_alloc);
 void* operator new[](std::size_t) throw (std::bad_alloc);
 void operator delete(void*) throw();
@@ -7728,7 +7728,7 @@ inline void operator delete[](void*, void*) throw() { }
 }
 
 #pragma GCC visibility pop
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 2 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 2 3
 
 
 
@@ -7738,7 +7738,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
   using std::size_t;
   using std::ptrdiff_t;
-# 53 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
+# 53 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
   template<typename _Tp>
     class new_allocator
     {
@@ -7795,7 +7795,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
       void
       construct(pointer __p, const _Tp& __val)
       { ::new((void *)__p) _Tp(__val); }
-# 117 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
+# 117 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/new_allocator.h" 3
       void
       destroy(pointer __p) { __p->~_Tp(); }
     };
@@ -7812,8 +7812,8 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 2 3
-# 49 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 2 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++allocator.h" 2 3
+# 49 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 2 3
 
 
 
@@ -7822,7 +7822,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 65 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
+# 65 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
   template<typename _Tp>
     class allocator;
 
@@ -7841,7 +7841,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         struct rebind
         { typedef allocator<_Tp1> other; };
     };
-# 91 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
+# 91 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
   template<typename _Tp>
     class allocator: public __gnu_cxx::new_allocator<_Tp>
     {
@@ -7934,22 +7934,22 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _S_do_it(const _Alloc& __one, const _Alloc& __two)
       { return __one != __two; }
     };
-# 236 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
+# 236 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/allocator.h" 3
 
 }
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 3
        
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cxxabi_forced.h" 3
 
 #pragma GCC visibility push(default)
 
@@ -7974,7 +7974,7 @@ namespace __cxxabiv1
 
 
 #pragma GCC visibility pop
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 2 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream_insert.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -8066,16 +8066,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 47 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 1 3
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 1 3
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 101 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 101 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Arg, typename _Result>
     struct unary_function
     {
@@ -8101,7 +8101,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       typedef _Result result_type;
     };
-# 140 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 140 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Tp>
     struct plus : public binary_function<_Tp, _Tp, _Tp>
     {
@@ -8154,7 +8154,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator()(const _Tp& __x) const
       { return -__x; }
     };
-# 204 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 204 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Tp>
     struct equal_to : public binary_function<_Tp, _Tp, bool>
     {
@@ -8207,7 +8207,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator()(const _Tp& __x, const _Tp& __y) const
       { return __x <= __y; }
     };
-# 268 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 268 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Tp>
     struct logical_and : public binary_function<_Tp, _Tp, bool>
     {
@@ -8260,7 +8260,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator()(const _Tp& __x, const _Tp& __y) const
       { return __x ^ __y; }
     };
-# 351 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 351 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Predicate>
     class unary_negate
     : public unary_function<typename _Predicate::argument_type, bool>
@@ -8307,7 +8307,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline binary_negate<_Predicate>
     not2(const _Predicate& __pred)
     { return binary_negate<_Predicate>(__pred); }
-# 422 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 422 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Arg, typename _Result>
     class pointer_to_unary_function : public unary_function<_Arg, _Result>
     {
@@ -8382,7 +8382,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const typename _Pair::first_type&
       operator()(const _Pair& __x) const
       { return __x.first; }
-# 508 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 508 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
     };
 
   template<typename _Pair>
@@ -8397,7 +8397,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       operator()(const _Pair& __x) const
       { return __x.second; }
     };
-# 541 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
+# 541 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 3
   template<typename _Ret, typename _Tp>
     class mem_fun_t : public unary_function<_Tp*, _Ret>
     {
@@ -8588,12 +8588,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 }
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 1 3
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 1 3
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 99 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 3
+# 99 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward/binders.h" 3
   template<typename _Operation>
     class binder1st
     : public unary_function<typename _Operation::second_argument_type,
@@ -8666,32 +8666,32 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 732 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 2 3
-# 51 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 732 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_function.h" 2 3
+# 51 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 3
-# 54 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/range_access.h" 3
+# 54 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 3
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 2 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/initializer_list" 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 106 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 106 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     class basic_string
     {
@@ -8715,7 +8715,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef std::reverse_iterator<iterator> reverse_iterator;
 
     private:
-# 143 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 143 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       struct _Rep_base
       {
  size_type _M_length;
@@ -8727,7 +8727,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       {
 
  typedef typename _Alloc::template rebind<char>::other _Raw_bytes_alloc;
-# 168 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 168 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
  static const size_type _S_max_size;
  static const _CharT _S_terminal;
 
@@ -9028,7 +9028,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       basic_string(const basic_string& __str, size_type __pos,
      size_type __n, const _Alloc& __a);
-# 478 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 478 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string(const _CharT* __s, size_type __n,
      const _Alloc& __a = _Alloc());
 
@@ -9044,7 +9044,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc());
-# 526 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 526 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       template<class _InputIterator>
         basic_string(_InputIterator __beg, _InputIterator __end,
        const _Alloc& __a = _Alloc());
@@ -9070,14 +9070,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       basic_string&
       operator=(const _CharT* __s)
       { return this->assign(__s); }
-# 559 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 559 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       operator=(_CharT __c)
       {
  this->assign(1, __c);
  return *this;
       }
-# 599 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 599 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       iterator
       begin()
       {
@@ -9147,7 +9147,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const_reverse_iterator
       rend() const
       { return const_reverse_iterator(this->begin()); }
-# 705 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 705 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
     public:
 
 
@@ -9166,18 +9166,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
       size_type
       max_size() const
       { return _Rep::_S_max_size; }
-# 734 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 734 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       void
       resize(size_type __n, _CharT __c);
-# 747 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 747 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       void
       resize(size_type __n)
       { this->resize(__n, _CharT()); }
-# 767 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 767 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       capacity() const
       { return _M_rep()->_M_capacity; }
-# 788 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 788 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       void
       reserve(size_type __res_arg = 0);
 
@@ -9195,14 +9195,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       empty() const
       { return this->size() == 0; }
-# 817 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 817 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       const_reference
       operator[] (size_type __pos) const
       {
  ;
  return _M_data()[__pos];
       }
-# 834 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 834 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       reference
       operator[](size_type __pos)
       {
@@ -9213,7 +9213,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_leak();
  return _M_data()[__pos];
       }
-# 855 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 855 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       const_reference
       at(size_type __n) const
       {
@@ -9221,7 +9221,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __throw_out_of_range(("basic_string::at"));
  return _M_data()[__n];
       }
-# 908 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 908 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       reference
       at(size_type __n)
       {
@@ -9261,10 +9261,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->push_back(__c);
  return *this;
       }
-# 964 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 964 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       append(const basic_string& __str);
-# 979 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 979 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       append(const basic_string& __str, size_type __pos, size_type __n);
 
@@ -9288,10 +9288,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
  ;
  return this->append(__s, traits_type::length(__s));
       }
-# 1011 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1011 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       append(size_type __n, _CharT __c);
-# 1033 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1033 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       template<class _InputIterator>
         basic_string&
         append(_InputIterator __first, _InputIterator __last)
@@ -9318,67 +9318,67 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       basic_string&
       assign(const basic_string& __str);
-# 1089 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1089 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       assign(const basic_string& __str, size_type __pos, size_type __n)
       { return this->assign(__str._M_data()
        + __str._M_check(__pos, "basic_string::assign"),
        __str._M_limit(__pos, __n)); }
-# 1105 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1105 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       assign(const _CharT* __s, size_type __n);
-# 1117 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1117 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       assign(const _CharT* __s)
       {
  ;
  return this->assign(__s, traits_type::length(__s));
       }
-# 1133 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1133 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       assign(size_type __n, _CharT __c)
       { return _M_replace_aux(size_type(0), this->size(), __n, __c); }
-# 1145 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1145 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       template<class _InputIterator>
         basic_string&
         assign(_InputIterator __first, _InputIterator __last)
         { return this->replace(_M_ibegin(), _M_iend(), __first, __last); }
-# 1173 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1173 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       void
       insert(iterator __p, size_type __n, _CharT __c)
       { this->replace(__p, __p, __n, __c); }
-# 1188 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1188 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       template<class _InputIterator>
         void
         insert(iterator __p, _InputIterator __beg, _InputIterator __end)
         { this->replace(__p, __p, __beg, __end); }
-# 1219 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1219 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       insert(size_type __pos1, const basic_string& __str)
       { return this->insert(__pos1, __str, size_type(0), __str.size()); }
-# 1241 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1241 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       insert(size_type __pos1, const basic_string& __str,
       size_type __pos2, size_type __n)
       { return this->insert(__pos1, __str._M_data()
        + __str._M_check(__pos2, "basic_string::insert"),
        __str._M_limit(__pos2, __n)); }
-# 1264 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1264 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       insert(size_type __pos, const _CharT* __s, size_type __n);
-# 1282 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1282 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       insert(size_type __pos, const _CharT* __s)
       {
  ;
  return this->insert(__pos, __s, traits_type::length(__s));
       }
-# 1305 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1305 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       insert(size_type __pos, size_type __n, _CharT __c)
       { return _M_replace_aux(_M_check(__pos, "basic_string::insert"),
          size_type(0), __n, __c); }
-# 1322 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1322 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       iterator
       insert(iterator __p, _CharT __c)
       {
@@ -9388,7 +9388,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_rep()->_M_set_leaked();
  return iterator(_M_data() + __pos);
       }
-# 1346 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1346 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       erase(size_type __pos = 0, size_type __n = npos)
       {
@@ -9396,7 +9396,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _M_limit(__pos, __n), size_type(0));
  return *this;
       }
-# 1362 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1362 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       iterator
       erase(iterator __position)
       {
@@ -9407,41 +9407,41 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_rep()->_M_set_leaked();
  return iterator(_M_data() + __pos);
       }
-# 1382 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1382 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       iterator
       erase(iterator __first, iterator __last);
-# 1401 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1401 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(size_type __pos, size_type __n, const basic_string& __str)
       { return this->replace(__pos, __n, __str._M_data(), __str.size()); }
-# 1423 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1423 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(size_type __pos1, size_type __n1, const basic_string& __str,
        size_type __pos2, size_type __n2)
       { return this->replace(__pos1, __n1, __str._M_data()
         + __str._M_check(__pos2, "basic_string::replace"),
         __str._M_limit(__pos2, __n2)); }
-# 1447 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1447 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(size_type __pos, size_type __n1, const _CharT* __s,
        size_type __n2);
-# 1466 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1466 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(size_type __pos, size_type __n1, const _CharT* __s)
       {
  ;
  return this->replace(__pos, __n1, __s, traits_type::length(__s));
       }
-# 1489 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1489 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(size_type __pos, size_type __n1, size_type __n2, _CharT __c)
       { return _M_replace_aux(_M_check(__pos, "basic_string::replace"),
          _M_limit(__pos, __n1), __n2, __c); }
-# 1507 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1507 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(iterator __i1, iterator __i2, const basic_string& __str)
       { return this->replace(__i1, __i2, __str._M_data(), __str.size()); }
-# 1525 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1525 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(iterator __i1, iterator __i2, const _CharT* __s, size_type __n)
       {
@@ -9449,14 +9449,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
                           ;
  return this->replace(__i1 - _M_ibegin(), __i2 - __i1, __s, __n);
       }
-# 1546 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1546 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(iterator __i1, iterator __i2, const _CharT* __s)
       {
  ;
  return this->replace(__i1, __i2, __s, traits_type::length(__s));
       }
-# 1567 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1567 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string&
       replace(iterator __i1, iterator __i2, size_type __n, _CharT __c)
       {
@@ -9464,7 +9464,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
                           ;
  return _M_replace_aux(__i1 - _M_ibegin(), __i2 - __i1, __n, __c);
       }
-# 1589 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1589 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       template<class _InputIterator>
         basic_string&
         replace(iterator __i1, iterator __i2,
@@ -9520,7 +9520,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return this->replace(__i1 - _M_ibegin(), __i2 - __i1,
         __k1.base(), __k2 - __k1);
       }
-# 1664 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1664 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
     private:
       template<class _Integer>
  basic_string&
@@ -9590,13 +9590,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _S_construct(size_type __req, _CharT __c, const _Alloc& __a);
 
     public:
-# 1745 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1745 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       copy(_CharT* __s, size_type __n, size_type __pos = 0) const;
-# 1755 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1755 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       void
       swap(basic_string& __s);
-# 1765 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1765 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       const _CharT*
       c_str() const
       { return _M_data(); }
@@ -9617,118 +9617,118 @@ namespace std __attribute__ ((__visibility__ ("default")))
       allocator_type
       get_allocator() const
       { return _M_dataplus; }
-# 1797 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1797 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find(const _CharT* __s, size_type __pos, size_type __n) const;
-# 1810 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1810 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find(const basic_string& __str, size_type __pos = 0) const
       { return this->find(__str.data(), __pos, __str.size()); }
-# 1824 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1824 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find(const _CharT* __s, size_type __pos = 0) const
       {
  ;
  return this->find(__s, __pos, traits_type::length(__s));
       }
-# 1841 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1841 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find(_CharT __c, size_type __pos = 0) const;
-# 1854 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1854 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       rfind(const basic_string& __str, size_type __pos = npos) const
       { return this->rfind(__str.data(), __pos, __str.size()); }
-# 1869 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1869 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       rfind(const _CharT* __s, size_type __pos, size_type __n) const;
-# 1882 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1882 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       rfind(const _CharT* __s, size_type __pos = npos) const
       {
  ;
  return this->rfind(__s, __pos, traits_type::length(__s));
       }
-# 1899 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1899 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       rfind(_CharT __c, size_type __pos = npos) const;
-# 1912 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1912 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_of(const basic_string& __str, size_type __pos = 0) const
       { return this->find_first_of(__str.data(), __pos, __str.size()); }
-# 1927 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1927 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_of(const _CharT* __s, size_type __pos, size_type __n) const;
-# 1940 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1940 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_of(const _CharT* __s, size_type __pos = 0) const
       {
  ;
  return this->find_first_of(__s, __pos, traits_type::length(__s));
       }
-# 1959 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1959 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_of(_CharT __c, size_type __pos = 0) const
       { return this->find(__c, __pos); }
-# 1973 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1973 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_of(const basic_string& __str, size_type __pos = npos) const
       { return this->find_last_of(__str.data(), __pos, __str.size()); }
-# 1988 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 1988 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_of(const _CharT* __s, size_type __pos, size_type __n) const;
-# 2001 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2001 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_of(const _CharT* __s, size_type __pos = npos) const
       {
  ;
  return this->find_last_of(__s, __pos, traits_type::length(__s));
       }
-# 2020 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2020 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_of(_CharT __c, size_type __pos = npos) const
       { return this->rfind(__c, __pos); }
-# 2034 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2034 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_not_of(const basic_string& __str, size_type __pos = 0) const
       { return this->find_first_not_of(__str.data(), __pos, __str.size()); }
-# 2049 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2049 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_not_of(const _CharT* __s, size_type __pos,
    size_type __n) const;
-# 2063 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2063 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_not_of(const _CharT* __s, size_type __pos = 0) const
       {
  ;
  return this->find_first_not_of(__s, __pos, traits_type::length(__s));
       }
-# 2080 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2080 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_first_not_of(_CharT __c, size_type __pos = 0) const;
-# 2093 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2093 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_not_of(const basic_string& __str, size_type __pos = npos) const
       { return this->find_last_not_of(__str.data(), __pos, __str.size()); }
-# 2109 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2109 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_not_of(const _CharT* __s, size_type __pos,
          size_type __n) const;
-# 2122 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2122 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_not_of(const _CharT* __s, size_type __pos = npos) const
       {
  ;
  return this->find_last_not_of(__s, __pos, traits_type::length(__s));
       }
-# 2139 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2139 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       size_type
       find_last_not_of(_CharT __c, size_type __pos = npos) const;
-# 2154 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2154 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       basic_string
       substr(size_type __pos = 0, size_type __n = npos) const
       { return basic_string(*this,
        _M_check(__pos, "basic_string::substr"), __n); }
-# 2172 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2172 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(const basic_string& __str) const
       {
@@ -9741,25 +9741,25 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __r = _S_compare(__size, __osize);
  return __r;
       }
-# 2202 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2202 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(size_type __pos, size_type __n, const basic_string& __str) const;
-# 2226 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2226 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(size_type __pos1, size_type __n1, const basic_string& __str,
        size_type __pos2, size_type __n2) const;
-# 2244 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2244 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(const _CharT* __s) const;
-# 2267 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2267 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(size_type __pos, size_type __n1, const _CharT* __s) const;
-# 2292 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2292 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
       int
       compare(size_type __pos, size_type __n1, const _CharT* __s,
        size_type __n2) const;
   };
-# 2304 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2304 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     basic_string<_CharT, _Traits, _Alloc>
     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9823,7 +9823,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __str.append(__size_type(1), __rhs);
       return __str;
     }
-# 2425 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2425 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9862,7 +9862,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         const _CharT* __rhs)
     { return __lhs.compare(__rhs) == 0; }
-# 2471 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2471 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9892,7 +9892,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         const _CharT* __rhs)
     { return !(__lhs == __rhs); }
-# 2508 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2508 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9922,7 +9922,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator<(const _CharT* __lhs,
        const basic_string<_CharT, _Traits, _Alloc>& __rhs)
     { return __rhs.compare(__lhs) > 0; }
-# 2545 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2545 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9952,7 +9952,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator>(const _CharT* __lhs,
        const basic_string<_CharT, _Traits, _Alloc>& __rhs)
     { return __rhs.compare(__lhs) < 0; }
-# 2582 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2582 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -9982,7 +9982,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator<=(const _CharT* __lhs,
         const basic_string<_CharT, _Traits, _Alloc>& __rhs)
     { return __rhs.compare(__lhs) >= 0; }
-# 2619 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2619 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline bool
     operator>=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
@@ -10012,13 +10012,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
     operator>=(const _CharT* __lhs,
       const basic_string<_CharT, _Traits, _Alloc>& __rhs)
     { return __rhs.compare(__lhs) <= 0; }
-# 2656 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2656 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline void
     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
   basic_string<_CharT, _Traits, _Alloc>& __rhs)
     { __lhs.swap(__rhs); }
-# 2673 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2673 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     basic_istream<_CharT, _Traits>&
     operator>>(basic_istream<_CharT, _Traits>& __is,
@@ -10027,7 +10027,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<>
     basic_istream<char>&
     operator>>(basic_istream<char>& __is, basic_string<char>& __str);
-# 2691 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2691 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline basic_ostream<_CharT, _Traits>&
     operator<<(basic_ostream<_CharT, _Traits>& __os,
@@ -10037,12 +10037,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       return __ostream_insert(__os, __str.data(), __str.size());
     }
-# 2714 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2714 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     basic_istream<_CharT, _Traits>&
     getline(basic_istream<_CharT, _Traits>& __is,
      basic_string<_CharT, _Traits, _Alloc>& __str, _CharT __delim);
-# 2732 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
+# 2732 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     inline basic_istream<_CharT, _Traits>&
     getline(basic_istream<_CharT, _Traits>& __is,
@@ -10063,11 +10063,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 55 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 1 3
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 55 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 1 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
        
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
 
 
 
@@ -10258,7 +10258,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     basic_string(_InputIterator __beg, _InputIterator __end, const _Alloc& __a)
     : _M_dataplus(_S_construct(__beg, __end, __a), __a)
     { }
-# 242 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 242 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     basic_string<_CharT, _Traits, _Alloc>&
     basic_string<_CharT, _Traits, _Alloc>::
@@ -10572,7 +10572,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       if (__capacity > _S_max_size)
  __throw_length_error(("basic_string::_S_create"));
-# 579 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
+# 579 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_string.tcc" 3
       const size_type __pagesize = 4096;
       const size_type __malloc_header_size = 4 * sizeof(void*);
 
@@ -11161,14 +11161,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 56 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
+# 56 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/string" 2 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   class locale
   {
   public:
@@ -11194,7 +11194,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     template<typename _Cache>
       friend struct __use_cache;
-# 100 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 100 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     static const category none = 0;
     static const category ctype = 1L << 0;
     static const category numeric = 1L << 1;
@@ -11204,27 +11204,27 @@ namespace std __attribute__ ((__visibility__ ("default")))
     static const category messages = 1L << 5;
     static const category all = (ctype | numeric | collate |
         time | monetary | messages);
-# 119 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 119 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     locale() throw();
-# 128 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 128 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     locale(const locale& __other) throw();
-# 138 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 138 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     explicit
     locale(const char* __s);
-# 153 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 153 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     locale(const locale& __base, const char* __s, category __cat);
-# 166 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 166 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     locale(const locale& __base, const locale& __add, category __cat);
-# 178 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 178 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     template<typename _Facet>
       locale(const locale& __other, _Facet* __f);
 
 
     ~locale() throw();
-# 192 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 192 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     const locale&
     operator=(const locale& __other) throw();
-# 207 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 207 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     template<typename _Facet>
       locale
       combine(const locale& __other) const;
@@ -11236,7 +11236,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     string
     name() const;
-# 226 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 226 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     bool
     operator==(const locale& __other) const throw();
 
@@ -11249,12 +11249,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
     bool
     operator!=(const locale& __other) const throw()
     { return !(this->operator==(__other)); }
-# 254 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 254 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     template<typename _Char, typename _Traits, typename _Alloc>
       bool
       operator()(const basic_string<_Char, _Traits, _Alloc>& __s1,
    const basic_string<_Char, _Traits, _Alloc>& __s2) const;
-# 270 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 270 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     static locale
     global(const locale&);
 
@@ -11279,7 +11279,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     static const char* const* const _S_categories;
-# 305 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 305 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     enum { _S_categories_size = 6 + 6 };
 
 
@@ -11301,7 +11301,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     void
     _M_coalesce(const locale& __base, const locale& __add, category __cat);
   };
-# 339 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 339 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   class locale::facet
   {
   private:
@@ -11324,7 +11324,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _S_initialize_once();
 
   protected:
-# 370 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 370 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
     explicit
     facet(size_t __refs = 0) throw() : _M_refcount(__refs ? 1 : 0)
     { }
@@ -11379,7 +11379,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     facet&
     operator=(const facet&);
   };
-# 437 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 437 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   class locale::id
   {
   private:
@@ -11513,15 +11513,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
     void
     _M_install_cache(const facet*, size_t);
   };
-# 583 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 583 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   template<typename _Facet>
     bool
     has_facet(const locale& __loc) throw();
-# 600 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 600 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   template<typename _Facet>
     const _Facet&
     use_facet(const locale& __loc);
-# 617 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 617 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
   template<typename _CharT>
     class collate : public locale::facet
     {
@@ -11541,26 +11541,26 @@ namespace std __attribute__ ((__visibility__ ("default")))
     public:
 
       static locale::id id;
-# 644 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 644 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       explicit
       collate(size_t __refs = 0)
       : facet(__refs), _M_c_locale_collate(_S_get_c_locale())
       { }
-# 658 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 658 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       explicit
       collate(__c_locale __cloc, size_t __refs = 0)
       : facet(__refs), _M_c_locale_collate(_S_clone_c_locale(__cloc))
       { }
-# 675 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 675 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       int
       compare(const _CharT* __lo1, const _CharT* __hi1,
        const _CharT* __lo2, const _CharT* __hi2) const
       { return this->do_compare(__lo1, __hi1, __lo2, __hi2); }
-# 694 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 694 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       string_type
       transform(const _CharT* __lo, const _CharT* __hi) const
       { return this->do_transform(__lo, __hi); }
-# 708 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 708 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       long
       hash(const _CharT* __lo, const _CharT* __hi) const
       { return this->do_hash(__lo, __hi); }
@@ -11577,14 +11577,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       virtual
       ~collate()
       { _S_destroy_c_locale(_M_c_locale_collate); }
-# 737 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 737 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       virtual int
       do_compare(const _CharT* __lo1, const _CharT* __hi1,
    const _CharT* __lo2, const _CharT* __hi2) const;
-# 753 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 753 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       virtual string_type
       do_transform(const _CharT* __lo, const _CharT* __hi) const;
-# 766 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
+# 766 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 3
       virtual long
       do_hash(const _CharT* __lo, const _CharT* __hi) const;
     };
@@ -11642,10 +11642,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 3
        
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -11880,8 +11880,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 824 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
+# 824 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_classes.h" 2 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -12028,7 +12028,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _S_end = 2,
       _S_ios_seekdir_end = 1L << 16
     };
-# 201 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 201 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
   class ios_base
   {
   public:
@@ -12058,7 +12058,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     private:
       string _M_msg;
     };
-# 257 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 257 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     typedef _Ios_Fmtflags fmtflags;
 
 
@@ -12121,7 +12121,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     static const fmtflags floatfield = _S_floatfield;
-# 332 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 332 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     typedef _Ios_Iostate iostate;
 
 
@@ -12138,7 +12138,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     static const iostate goodbit = _S_goodbit;
-# 363 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 363 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     typedef _Ios_Openmode openmode;
 
 
@@ -12160,7 +12160,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     static const openmode trunc = _S_trunc;
-# 395 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 395 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     typedef _Ios_Seekdir seekdir;
 
 
@@ -12179,16 +12179,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     typedef std::streampos streampos;
     typedef std::streamoff streamoff;
-# 421 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 421 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     enum event
     {
       erase_event,
       imbue_event,
       copyfmt_event
     };
-# 438 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 438 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     typedef void (*event_callback) (event, ios_base&, int);
-# 450 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 450 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     void
     register_callback(event_callback __fn, int __index);
 
@@ -12294,7 +12294,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     fmtflags
     flags() const
     { return _M_flags; }
-# 563 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 563 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     fmtflags
     flags(fmtflags __fmtfl)
     {
@@ -12302,7 +12302,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _M_flags = __fmtfl;
       return __old;
     }
-# 579 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 579 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     fmtflags
     setf(fmtflags __fmtfl)
     {
@@ -12310,7 +12310,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _M_flags |= __fmtfl;
       return __old;
     }
-# 596 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 596 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     fmtflags
     setf(fmtflags __fmtfl, fmtflags __mask)
     {
@@ -12329,7 +12329,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     void
     unsetf(fmtflags __mask)
     { _M_flags &= ~__mask; }
-# 622 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 622 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     streamsize
     precision() const
     { return _M_precision; }
@@ -12369,24 +12369,24 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _M_width = __wide;
       return __old;
     }
-# 673 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 673 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     static bool
     sync_with_stdio(bool __sync = true);
-# 685 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 685 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     locale
     imbue(const locale& __loc) throw();
-# 696 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 696 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     locale
     getloc() const
     { return _M_ios_locale; }
-# 707 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 707 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     const locale&
     _M_getloc() const
     { return _M_ios_locale; }
-# 726 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 726 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     static int
     xalloc() throw();
-# 742 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 742 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     long&
     iword(int __ix)
     {
@@ -12394,7 +12394,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    ? _M_word[__ix] : _M_grow_words(__ix, true);
       return __word._M_iword;
     }
-# 763 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 763 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     void*&
     pword(int __ix)
     {
@@ -12402,7 +12402,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    ? _M_word[__ix] : _M_grow_words(__ix, false);
       return __word._M_pword;
     }
-# 780 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
+# 780 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ios_base.h" 3
     virtual ~ios_base();
 
   protected:
@@ -12599,12 +12599,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
        
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
-# 46 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 46 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -12613,7 +12613,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     streamsize
     __copy_streambufs_eof(basic_streambuf<_CharT, _Traits>*,
      basic_streambuf<_CharT, _Traits>*, bool&);
-# 116 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 116 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
   template<typename _CharT, typename _Traits>
     class basic_streambuf
     {
@@ -12672,7 +12672,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   basic_string<_CharT2, _Traits2, _Alloc>&, _CharT2);
 
     protected:
-# 182 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 182 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       char_type* _M_in_beg;
       char_type* _M_in_cur;
       char_type* _M_in_end;
@@ -12688,7 +12688,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       virtual
       ~basic_streambuf()
       { }
-# 206 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 206 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       locale
       pubimbue(const locale &__loc)
       {
@@ -12697,11 +12697,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_buf_locale = __loc;
  return __tmp;
       }
-# 223 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 223 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       locale
       getloc() const
       { return _M_buf_locale; }
-# 236 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 236 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       __streambuf_type*
       pubsetbuf(char_type* __s, streamsize __n)
       { return this->setbuf(__s, __n); }
@@ -12718,14 +12718,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       int
       pubsync() { return this->sync(); }
-# 263 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 263 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       streamsize
       in_avail()
       {
  const streamsize __ret = this->egptr() - this->gptr();
  return __ret ? __ret : this->showmanyc();
       }
-# 277 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 277 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       snextc()
       {
@@ -12735,7 +12735,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = this->sgetc();
  return __ret;
       }
-# 295 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 295 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       sbumpc()
       {
@@ -12749,7 +12749,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = this->uflow();
  return __ret;
       }
-# 317 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 317 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       sgetc()
       {
@@ -12760,11 +12760,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = this->underflow();
  return __ret;
       }
-# 336 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 336 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       streamsize
       sgetn(char_type* __s, streamsize __n)
       { return this->xsgetn(__s, __n); }
-# 351 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 351 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       sputbackc(char_type __c)
       {
@@ -12780,7 +12780,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
  return __ret;
       }
-# 376 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 376 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       sungetc()
       {
@@ -12794,7 +12794,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = this->pbackfail();
  return __ret;
       }
-# 403 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 403 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       int_type
       sputc(char_type __c)
       {
@@ -12809,19 +12809,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = this->overflow(traits_type::to_int_type(__c));
  return __ret;
       }
-# 429 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 429 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       streamsize
       sputn(const char_type* __s, streamsize __n)
       { return this->xsputn(__s, __n); }
 
     protected:
-# 443 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 443 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       basic_streambuf()
       : _M_in_beg(0), _M_in_cur(0), _M_in_end(0),
       _M_out_beg(0), _M_out_cur(0), _M_out_end(0),
       _M_buf_locale(locale())
       { }
-# 461 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 461 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       char_type*
       eback() const { return _M_in_beg; }
 
@@ -12830,10 +12830,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       char_type*
       egptr() const { return _M_in_end; }
-# 477 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 477 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       void
       gbump(int __n) { _M_in_cur += __n; }
-# 488 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 488 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       void
       setg(char_type* __gbeg, char_type* __gnext, char_type* __gend)
       {
@@ -12841,7 +12841,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_in_cur = __gnext;
  _M_in_end = __gend;
       }
-# 508 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 508 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       char_type*
       pbase() const { return _M_out_beg; }
 
@@ -12850,48 +12850,48 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       char_type*
       epptr() const { return _M_out_end; }
-# 524 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 524 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       void
       pbump(int __n) { _M_out_cur += __n; }
-# 534 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 534 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       void
       setp(char_type* __pbeg, char_type* __pend)
       {
  _M_out_beg = _M_out_cur = __pbeg;
  _M_out_end = __pend;
       }
-# 555 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 555 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual void
       imbue(const locale&)
       { }
-# 570 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 570 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual basic_streambuf<char_type,_Traits>*
       setbuf(char_type*, streamsize)
       { return this; }
-# 581 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 581 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual pos_type
       seekoff(off_type, ios_base::seekdir,
        ios_base::openmode = ios_base::in | ios_base::out)
       { return pos_type(off_type(-1)); }
-# 593 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 593 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual pos_type
       seekpos(pos_type,
        ios_base::openmode = ios_base::in | ios_base::out)
       { return pos_type(off_type(-1)); }
-# 606 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 606 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual int
       sync() { return 0; }
-# 628 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 628 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual streamsize
       showmanyc() { return 0; }
-# 644 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 644 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual streamsize
       xsgetn(char_type* __s, streamsize __n);
-# 666 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 666 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual int_type
       underflow()
       { return traits_type::eof(); }
-# 679 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 679 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual int_type
       uflow()
       {
@@ -12905,14 +12905,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
  return __ret;
       }
-# 703 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 703 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual int_type
       pbackfail(int_type = traits_type::eof())
       { return traits_type::eof(); }
-# 721 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 721 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual streamsize
       xsputn(const char_type* __s, streamsize __n);
-# 747 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 747 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       virtual int_type
       overflow(int_type = traits_type::eof())
       { return traits_type::eof(); }
@@ -12920,7 +12920,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     public:
-# 762 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
+# 762 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 3
       void
       stossc()
       {
@@ -12967,10 +12967,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -13107,24 +13107,24 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 809 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 2 3
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 1 3
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 809 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/streambuf" 2 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 1 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
        
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
 
 
 
@@ -13132,10 +13132,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-# 150 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 150 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
 typedef long int ptrdiff_t;
-# 50 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
+# 50 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
 
 
 # 1 "/usr/include/wctype.h" 1 3 4
@@ -13372,8 +13372,8 @@ extern wint_t towctrans_l (wint_t __wc, wctrans_t __desc,
 
 
 }
-# 53 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
-# 82 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
+# 53 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 2 3
+# 82 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwctype" 3
 namespace std
 {
   using ::wctrans_t;
@@ -13401,14 +13401,14 @@ namespace std
   using ::wctrans;
   using ::wctype;
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_base.h" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_base.h" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cctype" 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_base.h" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_base.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -13437,17 +13437,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
 
 
 
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 1 3
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 1 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
        
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
 
 
 
@@ -13455,7 +13455,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 51 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
+# 51 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/streambuf_iterator.h" 3
   template<typename _CharT, typename _Traits>
     class istreambuf_iterator
     : public iterator<input_iterator_tag, _CharT, typename _Traits::off_type,
@@ -13806,12 +13806,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 51 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 51 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 66 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 66 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _Tp>
     void
     __convert_to_v(const char*, _Tp&, ios_base::iostate&,
@@ -13876,7 +13876,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  *__s = __ws[__j];
       return __s;
     }
-# 144 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 144 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _CharT>
     class __ctype_abstract_base : public locale::facet, public ctype_base
     {
@@ -13884,51 +13884,51 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       typedef _CharT char_type;
-# 162 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 162 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       bool
       is(mask __m, char_type __c) const
       { return this->do_is(__m, __c); }
-# 179 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 179 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       is(const char_type *__lo, const char_type *__hi, mask *__vec) const
       { return this->do_is(__lo, __hi, __vec); }
-# 195 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 195 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       scan_is(mask __m, const char_type* __lo, const char_type* __hi) const
       { return this->do_scan_is(__m, __lo, __hi); }
-# 211 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 211 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       scan_not(mask __m, const char_type* __lo, const char_type* __hi) const
       { return this->do_scan_not(__m, __lo, __hi); }
-# 225 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 225 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       toupper(char_type __c) const
       { return this->do_toupper(__c); }
-# 240 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 240 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       toupper(char_type *__lo, const char_type* __hi) const
       { return this->do_toupper(__lo, __hi); }
-# 254 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 254 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       tolower(char_type __c) const
       { return this->do_tolower(__c); }
-# 269 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 269 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       tolower(char_type* __lo, const char_type* __hi) const
       { return this->do_tolower(__lo, __hi); }
-# 286 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 286 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       widen(char __c) const
       { return this->do_widen(__c); }
-# 305 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 305 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char*
       widen(const char* __lo, const char* __hi, char_type* __to) const
       { return this->do_widen(__lo, __hi, __to); }
-# 324 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 324 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char
       narrow(char_type __c, char __dfault) const
       { return this->do_narrow(__c, __dfault); }
-# 346 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 346 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       narrow(const char_type* __lo, const char_type* __hi,
        char __dfault, char *__to) const
@@ -13940,49 +13940,49 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~__ctype_abstract_base() { }
-# 371 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 371 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual bool
       do_is(mask __m, char_type __c) const = 0;
-# 390 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 390 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_is(const char_type* __lo, const char_type* __hi,
      mask* __vec) const = 0;
-# 409 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 409 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_scan_is(mask __m, const char_type* __lo,
    const char_type* __hi) const = 0;
-# 428 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 428 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_scan_not(mask __m, const char_type* __lo,
     const char_type* __hi) const = 0;
-# 446 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 446 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_toupper(char_type) const = 0;
-# 463 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 463 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_toupper(char_type* __lo, const char_type* __hi) const = 0;
-# 479 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 479 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_tolower(char_type) const = 0;
-# 496 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 496 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_tolower(char_type* __lo, const char_type* __hi) const = 0;
-# 515 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 515 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_widen(char) const = 0;
-# 536 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 536 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char*
       do_widen(const char* __lo, const char* __hi,
         char_type* __dest) const = 0;
-# 558 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 558 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char
       do_narrow(char_type, char __dfault) const = 0;
-# 582 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 582 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_narrow(const char_type* __lo, const char_type* __hi,
   char __dfault, char* __dest) const = 0;
     };
-# 605 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 605 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _CharT>
     class ctype : public __ctype_abstract_base<_CharT>
     {
@@ -14042,7 +14042,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _CharT>
     locale::id ctype<_CharT>::id;
-# 674 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 674 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<>
     class ctype<char> : public locale::facet, public ctype_base
     {
@@ -14069,42 +14069,42 @@ namespace std __attribute__ ((__visibility__ ("default")))
       static locale::id id;
 
       static const size_t table_size = 1 + static_cast<unsigned char>(-1);
-# 711 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 711 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       ctype(const mask* __table = 0, bool __del = false, size_t __refs = 0);
-# 724 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 724 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       ctype(__c_locale __cloc, const mask* __table = 0, bool __del = false,
      size_t __refs = 0);
-# 737 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 737 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       inline bool
       is(mask __m, char __c) const;
-# 752 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 752 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       inline const char*
       is(const char* __lo, const char* __hi, mask* __vec) const;
-# 766 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 766 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       inline const char*
       scan_is(mask __m, const char* __lo, const char* __hi) const;
-# 780 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 780 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       inline const char*
       scan_not(mask __m, const char* __lo, const char* __hi) const;
-# 795 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 795 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       toupper(char_type __c) const
       { return this->do_toupper(__c); }
-# 812 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 812 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       toupper(char_type *__lo, const char_type* __hi) const
       { return this->do_toupper(__lo, __hi); }
-# 828 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 828 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       tolower(char_type __c) const
       { return this->do_tolower(__c); }
-# 845 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 845 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       tolower(char_type* __lo, const char_type* __hi) const
       { return this->do_tolower(__lo, __hi); }
-# 865 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 865 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       widen(char __c) const
       {
@@ -14113,7 +14113,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->_M_widen_init();
  return this->do_widen(__c);
       }
-# 892 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 892 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char*
       widen(const char* __lo, const char* __hi, char_type* __to) const
       {
@@ -14126,7 +14126,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    _M_widen_init();
  return this->do_widen(__lo, __hi, __to);
       }
-# 923 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 923 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char
       narrow(char_type __c, char __dfault) const
       {
@@ -14137,7 +14137,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    _M_narrow[static_cast<unsigned char>(__c)] = __t;
  return __t;
       }
-# 956 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 956 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       const char_type*
       narrow(const char_type* __lo, const char_type* __hi,
       char __dfault, char *__to) const
@@ -14173,34 +14173,34 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~ctype();
-# 1005 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1005 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_toupper(char_type) const;
-# 1022 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1022 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_toupper(char_type* __lo, const char_type* __hi) const;
-# 1038 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1038 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_tolower(char_type) const;
-# 1055 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1055 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_tolower(char_type* __lo, const char_type* __hi) const;
-# 1075 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1075 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_widen(char __c) const
       { return __c; }
-# 1098 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1098 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char*
       do_widen(const char* __lo, const char* __hi, char_type* __dest) const
       {
  __builtin_memcpy(__dest, __lo, __hi - __lo);
  return __hi;
       }
-# 1124 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1124 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char
       do_narrow(char_type __c, char) const
       { return __c; }
-# 1150 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1150 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_narrow(const char_type* __lo, const char_type* __hi,
   char, char* __dest) const
@@ -14213,7 +14213,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       void _M_narrow_init() const;
       void _M_widen_init() const;
     };
-# 1175 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1175 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<>
     class ctype<wchar_t> : public __ctype_abstract_base<wchar_t>
     {
@@ -14239,10 +14239,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       static locale::id id;
-# 1208 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1208 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       ctype(size_t __refs = 0);
-# 1219 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1219 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       ctype(__c_locale __cloc, size_t __refs = 0);
 
@@ -14253,41 +14253,41 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~ctype();
-# 1243 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1243 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual bool
       do_is(mask __m, char_type __c) const;
-# 1262 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1262 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_is(const char_type* __lo, const char_type* __hi, mask* __vec) const;
-# 1280 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1280 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_scan_is(mask __m, const char_type* __lo, const char_type* __hi) const;
-# 1298 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1298 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_scan_not(mask __m, const char_type* __lo,
     const char_type* __hi) const;
-# 1315 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1315 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_toupper(char_type) const;
-# 1332 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1332 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_toupper(char_type* __lo, const char_type* __hi) const;
-# 1348 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1348 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_tolower(char_type) const;
-# 1365 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1365 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_tolower(char_type* __lo, const char_type* __hi) const;
-# 1385 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1385 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_widen(char) const;
-# 1407 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1407 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char*
       do_widen(const char* __lo, const char* __hi, char_type* __dest) const;
-# 1430 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1430 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char
       do_narrow(char_type, char __dfault) const;
-# 1456 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1456 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual const char_type*
       do_narrow(const char_type* __lo, const char_type* __hi,
   char __dfault, char* __dest) const;
@@ -14344,8 +14344,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 }
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_inline.h" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_inline.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_inline.h" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/ctype_inline.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -14386,7 +14386,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 1513 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 1513 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -14500,7 +14500,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    delete [] _M_falsename;
  }
     }
-# 1641 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1641 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _CharT>
     class numpunct : public locale::facet
     {
@@ -14529,33 +14529,33 @@ namespace std __attribute__ ((__visibility__ ("default")))
       numpunct(size_t __refs = 0)
       : facet(__refs), _M_data(0)
       { _M_initialize_numpunct(); }
-# 1679 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1679 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       numpunct(__cache_type* __cache, size_t __refs = 0)
       : facet(__refs), _M_data(__cache)
       { _M_initialize_numpunct(); }
-# 1693 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1693 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       numpunct(__c_locale __cloc, size_t __refs = 0)
       : facet(__refs), _M_data(0)
       { _M_initialize_numpunct(__cloc); }
-# 1707 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1707 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       decimal_point() const
       { return this->do_decimal_point(); }
-# 1720 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1720 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       char_type
       thousands_sep() const
       { return this->do_thousands_sep(); }
-# 1751 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1751 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       string
       grouping() const
       { return this->do_grouping(); }
-# 1764 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1764 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       string_type
       truename() const
       { return this->do_truename(); }
-# 1777 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1777 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       string_type
       falsename() const
       { return this->do_falsename(); }
@@ -14564,23 +14564,23 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~numpunct();
-# 1794 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1794 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_decimal_point() const
       { return _M_data->_M_decimal_point; }
-# 1806 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1806 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual char_type
       do_thousands_sep() const
       { return _M_data->_M_thousands_sep; }
-# 1819 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1819 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual string
       do_grouping() const
       { return _M_data->_M_grouping; }
-# 1832 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1832 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual string_type
       do_truename() const
       { return _M_data->_M_truename; }
-# 1845 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1845 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual string_type
       do_falsename() const
       { return _M_data->_M_falsename; }
@@ -14637,7 +14637,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
 
-# 1915 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1915 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _CharT, typename _InIter>
     class num_get : public locale::facet
     {
@@ -14651,15 +14651,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       static locale::id id;
-# 1936 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1936 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       num_get(size_t __refs = 0) : facet(__refs) { }
-# 1962 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1962 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, bool& __v) const
       { return this->do_get(__in, __end, __io, __err, __v); }
-# 1998 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 1998 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, long& __v) const
@@ -14690,7 +14690,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, unsigned long long& __v) const
       { return this->do_get(__in, __end, __io, __err, __v); }
-# 2057 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2057 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, float& __v) const
@@ -14705,7 +14705,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, long double& __v) const
       { return this->do_get(__in, __end, __io, __err, __v); }
-# 2099 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2099 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       get(iter_type __in, iter_type __end, ios_base& __io,
    ios_base::iostate& __err, void*& __v) const
@@ -14761,7 +14761,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
    return __ret;
  }
-# 2170 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2170 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual iter_type
       do_get(iter_type, iter_type, ios_base&, ios_base::iostate&, bool&) const;
 
@@ -14819,12 +14819,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       virtual iter_type
       do_get(iter_type, iter_type, ios_base&, ios_base::iostate& __err,
       void*&) const;
-# 2235 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2235 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
     };
 
   template<typename _CharT, typename _InIter>
     locale::id num_get<_CharT, _InIter>::id;
-# 2253 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2253 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
   template<typename _CharT, typename _OutIter>
     class num_put : public locale::facet
     {
@@ -14838,14 +14838,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       static locale::id id;
-# 2274 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2274 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       explicit
       num_put(size_t __refs = 0) : facet(__refs) { }
-# 2292 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2292 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       put(iter_type __s, ios_base& __f, char_type __fill, bool __v) const
       { return this->do_put(__s, __f, __fill, __v); }
-# 2334 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2334 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       put(iter_type __s, ios_base& __f, char_type __fill, long __v) const
       { return this->do_put(__s, __f, __fill, __v); }
@@ -14864,7 +14864,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       put(iter_type __s, ios_base& __f, char_type __fill,
    unsigned long long __v) const
       { return this->do_put(__s, __f, __fill, __v); }
-# 2397 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2397 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       put(iter_type __s, ios_base& __f, char_type __fill, double __v) const
       { return this->do_put(__s, __f, __fill, __v); }
@@ -14873,7 +14873,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       put(iter_type __s, ios_base& __f, char_type __fill,
    long double __v) const
       { return this->do_put(__s, __f, __fill, __v); }
-# 2422 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2422 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       iter_type
       put(iter_type __s, ios_base& __f, char_type __fill,
    const void* __v) const
@@ -14907,7 +14907,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~num_put() { };
-# 2470 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
+# 2470 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 3
       virtual iter_type
       do_put(iter_type, ios_base&, char_type __fill, bool __v) const;
 
@@ -15046,10 +15046,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 1 3
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 1 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
        
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -15143,7 +15143,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    throw;
  }
     }
-# 138 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 138 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
   __attribute__ ((__pure__)) bool
   __verify_grouping(const char* __grouping, size_t __grouping_size,
       const string& __grouping_tmp) throw ();
@@ -15720,7 +15720,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __err |= ios_base::eofbit;
       return __beg;
     }
-# 732 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 732 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
   template<typename _CharT, typename _InIter>
     _InIter
     num_get<_CharT, _InIter>::
@@ -15946,7 +15946,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       __len = __newlen;
     }
-# 968 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 968 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
   template<typename _CharT, typename _OutIter>
     template<typename _ValueT>
       _OutIter
@@ -15987,7 +15987,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      __len = std::__convert_from_v(_S_get_c_locale(), __cs, __cs_size,
        __fbuf, __prec, __v);
    }
-# 1029 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1029 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
  const ctype<_CharT>& __ctype = use_facet<ctype<_CharT> >(__loc);
 
  _CharT* __ws = static_cast<_CharT*>(__builtin_alloca(sizeof(_CharT)
@@ -16104,7 +16104,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     num_put<_CharT, _OutIter>::
     do_put(iter_type __s, ios_base& __io, char_type __fill, double __v) const
     { return _M_insert_float(__s, __io, __fill, char(), __v); }
-# 1154 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1154 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
   template<typename _CharT, typename _OutIter>
     _OutIter
     num_put<_CharT, _OutIter>::
@@ -16134,7 +16134,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
 
-# 1191 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
+# 1191 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.tcc" 3
   template<typename _CharT, typename _Traits>
     void
     __pad<_CharT, _Traits>::_S_pad(ios_base& __io, _CharT __fill,
@@ -16305,8 +16305,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 2609 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
+# 2609 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/locale_facets.h" 2 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -16321,7 +16321,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __throw_bad_cast();
       return *__f;
     }
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
   template<typename _CharT, typename _Traits>
     class basic_ios : public ios_base
     {
@@ -16378,11 +16378,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       operator!() const
       { return this->fail(); }
-# 128 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 128 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       iostate
       rdstate() const
       { return _M_streambuf_state; }
-# 139 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 139 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       void
       clear(iostate __state = goodbit);
 
@@ -16428,7 +16428,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       eof() const
       { return (this->rdstate() & eofbit) != 0; }
-# 192 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 192 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       bool
       fail() const
       { return (this->rdstate() & (badbit | failbit)) != 0; }
@@ -16442,11 +16442,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       bad() const
       { return (this->rdstate() & badbit) != 0; }
-# 213 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 213 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       iostate
       exceptions() const
       { return _M_exception; }
-# 248 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 248 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       void
       exceptions(iostate __except)
       {
@@ -16474,11 +16474,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~basic_ios() { }
-# 286 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 286 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       basic_ostream<_CharT, _Traits>*
       tie() const
       { return _M_tie; }
-# 298 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 298 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       basic_ostream<_CharT, _Traits>*
       tie(basic_ostream<_CharT, _Traits>* __tiestr)
       {
@@ -16496,10 +16496,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       basic_streambuf<_CharT, _Traits>*
       rdbuf() const
       { return _M_streambuf; }
-# 338 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 338 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       basic_streambuf<_CharT, _Traits>*
       rdbuf(basic_streambuf<_CharT, _Traits>* __sb);
-# 352 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 352 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       basic_ios&
       copyfmt(const basic_ios& __rhs);
 
@@ -16519,7 +16519,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
  return _M_fill;
       }
-# 381 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 381 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       char_type
       fill(char_type __ch)
       {
@@ -16527,14 +16527,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_fill = __ch;
  return __old;
       }
-# 401 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 401 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       locale
       imbue(const locale& __loc);
-# 421 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 421 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       char
       narrow(char_type __c, char __dfault) const
       { return __check_facet(_M_ctype).narrow(__c, __dfault); }
-# 440 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
+# 440 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 3
       char_type
       widen(char __c) const
       { return __check_facet(_M_ctype).widen(__c); }
@@ -16568,10 +16568,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 1 3
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 1 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
        
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -16671,7 +16671,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       _M_cache_locale(_M_ios_locale);
-# 147 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
+# 147 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.tcc" 3
       _M_fill = _CharT();
       _M_fill_init = false;
 
@@ -16713,15 +16713,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 474 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
-# 46 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
+# 474 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
+# 46 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 56 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 56 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
   template<typename _CharT, typename _Traits>
     class basic_ostream : virtual public basic_ios<_CharT, _Traits>
     {
@@ -16740,7 +16740,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef num_put<_CharT, ostreambuf_iterator<_CharT, _Traits> >
              __num_put_type;
       typedef ctype<_CharT> __ctype_type;
-# 83 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 83 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       explicit
       basic_ostream(__streambuf_type* __sb)
       { this->init(__sb); }
@@ -16756,7 +16756,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       class sentry;
       friend class sentry;
-# 109 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 109 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       operator<<(__ostream_type& (*__pf)(__ostream_type&))
       {
@@ -16785,7 +16785,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __pf(*this);
  return *this;
       }
-# 166 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 166 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       operator<<(long __n)
       { return _M_insert(__n); }
@@ -16849,10 +16849,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __ostream_type&
       operator<<(const void* __p)
       { return _M_insert(__p); }
-# 251 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 251 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       operator<<(__streambuf_type* __sb);
-# 284 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 284 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       put(char_type __c);
 
@@ -16864,19 +16864,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
  if (__put != __n)
    this->setstate(ios_base::badbit);
       }
-# 312 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 312 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       write(const char_type* __s, streamsize __n);
-# 325 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 325 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       flush();
-# 336 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 336 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       pos_type
       tellp();
-# 347 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 347 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       __ostream_type&
       seekp(pos_type);
-# 359 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 359 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
        __ostream_type&
       seekp(off_type, ios_base::seekdir);
 
@@ -16888,7 +16888,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         __ostream_type&
         _M_insert(_ValueT __v);
     };
-# 378 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 378 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
   template <typename _CharT, typename _Traits>
     class basic_ostream<_CharT, _Traits>::sentry
     {
@@ -16897,10 +16897,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       basic_ostream<_CharT, _Traits>& _M_os;
 
     public:
-# 397 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 397 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       explicit
       sentry(basic_ostream<_CharT, _Traits>& __os);
-# 407 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 407 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       ~sentry()
       {
 
@@ -16911,11 +16911,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
        _M_os.setstate(ios_base::badbit);
    }
       }
-# 428 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 428 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
       operator bool() const
       { return _M_ok; }
     };
-# 449 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 449 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
   template<typename _CharT, typename _Traits>
     inline basic_ostream<_CharT, _Traits>&
     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
@@ -16942,7 +16942,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_ostream<char, _Traits>&
     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
     { return (__out << static_cast<char>(__c)); }
-# 491 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 491 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
   template<typename _CharT, typename _Traits>
     inline basic_ostream<_CharT, _Traits>&
     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
@@ -16982,7 +16982,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_ostream<char, _Traits> &
     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
     { return (__out << reinterpret_cast<const char*>(__s)); }
-# 541 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 541 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
   template<typename _CharT, typename _Traits>
     inline basic_ostream<_CharT, _Traits>&
     endl(basic_ostream<_CharT, _Traits>& __os)
@@ -17008,14 +17008,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_ostream<_CharT, _Traits>&
     flush(basic_ostream<_CharT, _Traits>& __os)
     { return __os.flush(); }
-# 585 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 585 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/ostream.tcc" 3
 
 
 
@@ -17384,12 +17384,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 589 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 589 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
 
 
 
@@ -17397,7 +17397,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 56 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 56 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     class basic_istream : virtual public basic_ios<_CharT, _Traits>
     {
@@ -17426,7 +17426,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       streamsize _M_gcount;
 
     public:
-# 92 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 92 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       explicit
       basic_istream(__streambuf_type* __sb)
       : _M_gcount(streamsize(0))
@@ -17444,7 +17444,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       class sentry;
       friend class sentry;
-# 121 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 121 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       operator>>(__istream_type& (*__pf)(__istream_type&))
       { return __pf(*this); }
@@ -17462,7 +17462,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __pf(*this);
  return *this;
       }
-# 168 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 168 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       operator>>(bool& __n)
       { return _M_extract(__n); }
@@ -17514,41 +17514,41 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __istream_type&
       operator>>(void*& __p)
       { return _M_extract(__p); }
-# 240 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 240 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       operator>>(__streambuf_type* __sb);
-# 250 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 250 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       streamsize
       gcount() const
       { return _M_gcount; }
-# 282 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 282 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       int_type
       get();
-# 296 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 296 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       get(char_type& __c);
-# 323 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 323 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       get(char_type* __s, streamsize __n, char_type __delim);
-# 334 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 334 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       get(char_type* __s, streamsize __n)
       { return this->get(__s, __n, this->widen('\n')); }
-# 357 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 357 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       get(__streambuf_type& __sb, char_type __delim);
-# 367 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 367 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       get(__streambuf_type& __sb)
       { return this->get(__sb, this->widen('\n')); }
-# 396 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 396 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       getline(char_type* __s, streamsize __n, char_type __delim);
-# 407 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 407 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       getline(char_type* __s, streamsize __n)
       { return this->getline(__s, __n, this->widen('\n')); }
-# 431 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 431 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       ignore();
 
@@ -17557,31 +17557,31 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       __istream_type&
       ignore(streamsize __n, int_type __delim);
-# 448 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 448 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       int_type
       peek();
-# 466 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 466 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       read(char_type* __s, streamsize __n);
-# 485 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 485 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       streamsize
       readsome(char_type* __s, streamsize __n);
-# 502 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 502 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       putback(char_type __c);
-# 518 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 518 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       unget();
-# 536 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 536 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       int
       sync();
-# 551 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 551 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       pos_type
       tellg();
-# 566 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 566 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       seekg(pos_type);
-# 582 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 582 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       __istream_type&
       seekg(off_type, ios_base::seekdir);
 
@@ -17627,7 +17627,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     basic_istream<wchar_t>&
     basic_istream<wchar_t>::
     ignore(streamsize __n, int_type __delim);
-# 637 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 637 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     class basic_istream<_CharT, _Traits>::sentry
     {
@@ -17641,14 +17641,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef basic_istream<_CharT, _Traits> __istream_type;
       typedef typename __istream_type::__ctype_type __ctype_type;
       typedef typename _Traits::int_type __int_type;
-# 673 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 673 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       explicit
       sentry(basic_istream<_CharT, _Traits>& __is, bool __noskipws = false);
-# 686 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 686 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
       operator bool() const
       { return _M_ok; }
     };
-# 703 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 703 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     basic_istream<_CharT, _Traits>&
     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c);
@@ -17662,7 +17662,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_istream<char, _Traits>&
     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
     { return (__in >> reinterpret_cast<char&>(__c)); }
-# 745 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 745 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     basic_istream<_CharT, _Traits>&
     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT* __s);
@@ -17681,7 +17681,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     inline basic_istream<char, _Traits>&
     operator>>(basic_istream<char, _Traits>& __in, signed char* __s)
     { return (__in >> reinterpret_cast<char*>(__s)); }
-# 773 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 773 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     class basic_iostream
     : public basic_istream<_CharT, _Traits>,
@@ -17721,18 +17721,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
       basic_iostream()
       : __istream_type(), __ostream_type() { }
     };
-# 834 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 834 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
   template<typename _CharT, typename _Traits>
     basic_istream<_CharT, _Traits>&
     ws(basic_istream<_CharT, _Traits>& __is);
-# 856 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+# 856 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
 
 
 
@@ -18200,7 +18200,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
               const int_type __eof = traits_type::eof();
               __streambuf_type* __sb = this->rdbuf();
               int_type __c = __sb->sgetc();
-# 515 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
+# 515 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/istream.tcc" 3
        bool __large_ignore = false;
        while (true)
   {
@@ -18779,13 +18779,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 860 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+# 860 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
   extern istream cin;
   extern ostream cout;
   extern ostream cerr;
@@ -18805,17 +18805,17 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
        
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -18833,7 +18833,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       noconv
     };
   };
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
   template<typename _InternT, typename _ExternT, typename _StateT>
     class __codecvt_abstract_base
     : public locale::facet, public codecvt_base
@@ -18844,7 +18844,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef _InternT intern_type;
       typedef _ExternT extern_type;
       typedef _StateT state_type;
-# 116 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 116 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
       result
       out(state_type& __state, const intern_type* __from,
    const intern_type* __from_end, const intern_type*& __from_next,
@@ -18854,12 +18854,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return this->do_out(__state, __from, __from_end, __from_next,
        __to, __to_end, __to_next);
       }
-# 155 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 155 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
       result
       unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
        extern_type*& __to_next) const
       { return this->do_unshift(__state, __to,__to_end,__to_next); }
-# 196 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 196 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
       result
       in(state_type& __state, const extern_type* __from,
   const extern_type* __from_end, const extern_type*& __from_next,
@@ -18893,7 +18893,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual
       ~__codecvt_abstract_base() { }
-# 237 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 237 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
       virtual result
       do_out(state_type& __state, const intern_type* __from,
       const intern_type* __from_end, const intern_type*& __from_next,
@@ -18923,7 +18923,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       virtual int
       do_max_length() const throw() = 0;
     };
-# 276 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+# 276 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
    template<typename _InternT, typename _ExternT, typename _StateT>
     class codecvt
     : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
@@ -19153,11 +19153,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 
 
 # 1 "/usr/include/stdio.h" 1 3 4
@@ -19166,14 +19166,14 @@ extern "C" {
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 34 "/usr/include/stdio.h" 2 3 4
 # 74 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/libio.h" 1 3 4
 # 31 "/usr/include/libio.h" 3 4
 # 1 "/usr/include/_G_config.h" 1 3 4
 # 15 "/usr/include/_G_config.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 16 "/usr/include/_G_config.h" 2 3 4
 
 
@@ -19192,7 +19192,7 @@ typedef struct
 } _G_fpos64_t;
 # 32 "/usr/include/libio.h" 2 3 4
 # 49 "/usr/include/libio.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
 # 50 "/usr/include/libio.h" 2 3 4
 # 144 "/usr/include/libio.h" 3 4
 struct _IO_jump_t; struct _IO_FILE;
@@ -19941,8 +19941,8 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 942 "/usr/include/stdio.h" 3 4
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
-# 92 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
+# 92 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 namespace std
 {
   using ::FILE;
@@ -19990,10 +19990,10 @@ namespace std
   using ::vprintf;
   using ::vsprintf;
 }
-# 148 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 148 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
 namespace __gnu_cxx
 {
-# 166 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 166 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
   using ::snprintf;
   using ::vfscanf;
   using ::vscanf;
@@ -20010,20 +20010,20 @@ namespace std
   using ::__gnu_cxx::vsnprintf;
   using ::__gnu_cxx::vsscanf;
 }
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
-# 36 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
+# 36 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -20037,7 +20037,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -20106,7 +20106,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
 
 
 
@@ -20114,7 +20114,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
   template<typename _CharT, typename _Traits>
     class basic_filebuf : public basic_streambuf<_CharT, _Traits>
     {
@@ -20169,7 +20169,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       bool _M_buf_allocated;
-# 130 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 130 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       bool _M_reading;
       bool _M_writing;
 
@@ -20266,10 +20266,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       is_open() const throw()
       { return _M_file.is_open(); }
-# 266 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 266 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       __filebuf_type*
       open(const char* __s, ios_base::openmode __mode);
-# 293 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 293 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       __filebuf_type*
       close();
 
@@ -20294,7 +20294,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual int_type
       pbackfail(int_type __c = _Traits::eof());
-# 325 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 325 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       virtual int_type
       overflow(int_type __c = _Traits::eof());
 
@@ -20302,7 +20302,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       bool
       _M_convert_to_external(char_type*, streamsize);
-# 345 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 345 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       virtual __streambuf_type*
       setbuf(char_type* __s, streamsize __n);
 
@@ -20336,7 +20336,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       bool
       _M_terminate_output();
-# 391 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 391 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       _M_set_buffer(streamsize __off)
       {
@@ -20354,7 +20354,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    this->setp(0, 0);
       }
     };
-# 419 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 419 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
   template<typename _CharT, typename _Traits>
     class basic_ifstream : public basic_istream<_CharT, _Traits>
     {
@@ -20374,10 +20374,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __filebuf_type _M_filebuf;
 
     public:
-# 446 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 446 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       basic_ifstream() : __istream_type(), _M_filebuf()
       { this->init(&_M_filebuf); }
-# 459 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 459 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       explicit
       basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
       : __istream_type(), _M_filebuf()
@@ -20385,10 +20385,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->init(&_M_filebuf);
  this->open(__s, __mode);
       }
-# 491 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 491 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       ~basic_ifstream()
       { }
-# 501 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 501 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       __filebuf_type*
       rdbuf() const
       { return const_cast<__filebuf_type*>(&_M_filebuf); }
@@ -20406,7 +20406,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       is_open() const
       { return _M_filebuf.is_open(); }
-# 530 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 530 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       open(const char* __s, ios_base::openmode __mode = ios_base::in)
       {
@@ -20417,7 +20417,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
    this->clear();
       }
-# 568 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 568 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       close()
       {
@@ -20425,7 +20425,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    this->setstate(ios_base::failbit);
       }
     };
-# 587 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 587 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
   template<typename _CharT, typename _Traits>
     class basic_ofstream : public basic_ostream<_CharT,_Traits>
     {
@@ -20445,10 +20445,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __filebuf_type _M_filebuf;
 
     public:
-# 614 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 614 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       basic_ofstream(): __ostream_type(), _M_filebuf()
       { this->init(&_M_filebuf); }
-# 628 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 628 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       explicit
       basic_ofstream(const char* __s,
        ios_base::openmode __mode = ios_base::out|ios_base::trunc)
@@ -20457,10 +20457,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->init(&_M_filebuf);
  this->open(__s, __mode);
       }
-# 662 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 662 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       ~basic_ofstream()
       { }
-# 672 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 672 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       __filebuf_type*
       rdbuf() const
       { return const_cast<__filebuf_type*>(&_M_filebuf); }
@@ -20478,7 +20478,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       is_open() const
       { return _M_filebuf.is_open(); }
-# 701 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 701 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       open(const char* __s,
     ios_base::openmode __mode = ios_base::out | ios_base::trunc)
@@ -20490,7 +20490,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
    this->clear();
       }
-# 741 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 741 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       close()
       {
@@ -20498,7 +20498,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    this->setstate(ios_base::failbit);
       }
     };
-# 760 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 760 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
   template<typename _CharT, typename _Traits>
     class basic_fstream : public basic_iostream<_CharT, _Traits>
     {
@@ -20519,11 +20519,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __filebuf_type _M_filebuf;
 
     public:
-# 788 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 788 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       basic_fstream()
       : __iostream_type(), _M_filebuf()
       { this->init(&_M_filebuf); }
-# 800 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 800 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       explicit
       basic_fstream(const char* __s,
       ios_base::openmode __mode = ios_base::in | ios_base::out)
@@ -20532,10 +20532,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
  this->init(&_M_filebuf);
  this->open(__s, __mode);
       }
-# 831 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 831 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       ~basic_fstream()
       { }
-# 841 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 841 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       __filebuf_type*
       rdbuf() const
       { return const_cast<__filebuf_type*>(&_M_filebuf); }
@@ -20553,7 +20553,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       bool
       is_open() const
       { return _M_filebuf.is_open(); }
-# 870 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 870 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       open(const char* __s,
     ios_base::openmode __mode = ios_base::in | ios_base::out)
@@ -20565,7 +20565,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
    this->clear();
       }
-# 910 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+# 910 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
       void
       close()
       {
@@ -20577,10 +20577,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
 
 
 
@@ -21235,7 +21235,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      _M_buf_size = 1;
    else if (__s && __n > 0)
      {
-# 702 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+# 702 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
        _M_buf = __s;
        _M_buf_size = __n;
      }
@@ -21517,18 +21517,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 922 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 922 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
 # 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
 
 # 1 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 1
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
-# 74 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 1
-# 32 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h" 1
+# 74 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 1
+# 32 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 
 
 
@@ -22629,8 +22629,8 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 534 "/usr/include/math.h" 3 4
 }
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
-# 77 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 47 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+# 77 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -23017,11 +23017,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 481 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 481 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 731 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 731 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
         int>::__type
@@ -23135,7 +23135,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 33 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
 using std::fpclassify;
 using std::isfinite;
 
@@ -23160,8 +23160,8 @@ using std::isunordered;
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 1
-# 59 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h" 1
+# 59 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h"
 # 1 "/usr/include/assert.h" 1 3 4
 # 66 "/usr/include/assert.h" 3 4
 extern "C" {
@@ -23184,11 +23184,11 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 60 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
-# 172 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 1
-# 114 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 1 3 4
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h" 2
+# 172 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h" 1
+# 114 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 1 3 4
 
 
 # 1 "/usr/include/stdint.h" 1 3 4
@@ -23250,8 +23250,8 @@ typedef unsigned long int uintptr_t;
 # 134 "/usr/include/stdint.h" 3 4
 typedef long int intmax_t;
 typedef unsigned long int uintmax_t;
-# 4 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 2 3 4
-# 115 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 2
+# 4 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 2 3 4
+# 115 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h" 2
 typedef int8_t xint8;
 typedef int16_t xint16;
 typedef int32_t xint32;
@@ -23262,63 +23262,37 @@ typedef uint32_t xuint32;
 typedef uint64_t xuint64;
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdbool.h" 1 3 4
-# 126 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 2
-# 143 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h"
-# 1 "/usr/include/x86_64-linux-gnu/gmp.h" 1
-# 35 "/usr/include/x86_64-linux-gnu/gmp.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdbool.h" 1 3 4
+# 126 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h" 2
+# 143 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h" 1
+# 27 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 36 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 58 "/usr/include/x86_64-linux-gnu/gmp.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
-# 59 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/syslimits.h" 1 3 4
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 28 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h" 2
+# 53 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 3
+       
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 3
 
 
-
-
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
-# 169 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 3 4
-# 1 "/usr/include/limits.h" 1 3 4
-# 143 "/usr/include/limits.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4
-# 160 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4
-# 38 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4
-# 1 "/usr/include/linux/limits.h" 1 3 4
-# 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4
-# 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
-# 144 "/usr/include/limits.h" 2 3 4
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 1 3 4
-# 148 "/usr/include/limits.h" 2 3 4
-
-
-
-# 1 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 1 3 4
-# 33 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4
-# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
-# 34 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
-# 152 "/usr/include/limits.h" 2 3 4
-# 170 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 2 3 4
-# 8 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/syslimits.h" 2 3 4
-# 35 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 2 3 4
-# 60 "/usr/include/x86_64-linux-gnu/gmp.h" 2
-# 144 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstddef" 2 3
+# 54 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h" 2
+# 201 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
 typedef unsigned long int mp_limb_t;
 typedef long int mp_limb_signed_t;
 
 
+
+
+
+
 typedef unsigned long int mp_bitcnt_t;
+
 
 
 
@@ -23335,13 +23309,10 @@ typedef struct
 
 
 
-
-typedef __mpz_struct MP_INT;
 typedef __mpz_struct mpz_t[1];
 
 typedef mp_limb_t * mp_ptr;
 typedef const mp_limb_t * mp_srcptr;
-
 
 
 
@@ -23358,7 +23329,6 @@ typedef struct
   __mpz_struct _mp_den;
 } __mpq_struct;
 
-typedef __mpq_struct MP_RAT;
 typedef __mpq_struct mpq_t[1];
 
 typedef struct
@@ -23373,7 +23343,6 @@ typedef struct
   mp_exp_t _mp_exp;
   mp_limb_t *_mp_d;
 } __mpf_struct;
-
 
 typedef __mpf_struct mpf_t[1];
 
@@ -23403,20 +23372,20 @@ typedef const __mpf_struct *mpf_srcptr;
 typedef __mpf_struct *mpf_ptr;
 typedef const __mpq_struct *mpq_srcptr;
 typedef __mpq_struct *mpq_ptr;
-# 472 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 532 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
 extern "C" {
 using std::FILE;
 
 
 
- void __gmp_set_memory_functions (void *(*) (size_t),
-          void *(*) (void *, size_t, size_t),
-          void (*) (void *, size_t)) throw ();
+ void __gmp_set_memory_functions (void *(*) (size_t), void *(*) (void *, size_t, size_t), void (*) (void *, size_t))
+
+                                      throw ();
 
 
- void __gmp_get_memory_functions (void *(**) (size_t),
-          void *(**) (void *, size_t, size_t),
-          void (**) (void *, size_t)) throw ();
+ void __gmp_get_memory_functions (void *(**) (size_t), void *(**) (void *, size_t, size_t), void (**) (void *, size_t))
+
+                                                                   throw ();
 
 
  extern const int __gmp_bits_per_limb;
@@ -23428,17 +23397,18 @@ using std::FILE;
  extern const char * const __gmp_version;
 
 
+ extern const char * const __mpir_version;
 
 
 
-
- void __gmp_randinit (gmp_randstate_t, gmp_randalg_t, ...);
 
 
  void __gmp_randinit_default (gmp_randstate_t);
 
 
- void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t);
+ void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t)
+
+                          ;
 
 
  int __gmp_randinit_lc_2exp_size (gmp_randstate_t, mp_bitcnt_t);
@@ -23473,7 +23443,7 @@ using std::FILE;
 
 
  int __gmp_fprintf (FILE *, const char *, ...);
-# 554 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 615 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
  int __gmp_printf (const char *, ...);
 
 
@@ -23481,7 +23451,7 @@ using std::FILE;
 
 
  int __gmp_sprintf (char *, const char *, ...);
-# 592 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 653 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
  int __gmp_fscanf (FILE *, const char *, ...);
 
 
@@ -23490,8 +23460,9 @@ using std::FILE;
 
 
  int __gmp_sscanf (const char *, const char *, ...);
-# 621 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 684 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
  void *__gmpz_realloc (mpz_ptr, mp_size_t);
+
 
 
 
@@ -23499,7 +23470,9 @@ using std::FILE;
 
 
 
+
  void __gmpz_add (mpz_ptr, mpz_srcptr, mpz_srcptr);
+
 
 
  void __gmpz_add_ui (mpz_ptr, mpz_srcptr, unsigned long int);
@@ -23526,7 +23499,7 @@ using std::FILE;
  void __gmpz_cdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
 
 
- void __gmpz_cdiv_q_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
+ void __gmpz_cdiv_q_2exp (mpz_ptr, mpz_srcptr, unsigned long);
 
 
  unsigned long int __gmpz_cdiv_q_ui (mpz_ptr, mpz_srcptr, unsigned long int);
@@ -23617,15 +23590,6 @@ using std::FILE;
 
 
  void __gmpz_fac_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_2fac_ui (mpz_ptr, unsigned long int);
-
-
- void __gmpz_mfac_uiui (mpz_ptr, unsigned long int, unsigned long int);
-
-
- void __gmpz_primorial_ui (mpz_ptr, unsigned long int);
 
 
  void __gmpz_fdiv_q (mpz_ptr, mpz_srcptr, mpz_srcptr);
@@ -23801,16 +23765,20 @@ using std::FILE;
 
 
 
+
  void __gmpz_mul (mpz_ptr, mpz_srcptr, mpz_srcptr);
 
 
  void __gmpz_mul_2exp (mpz_ptr, mpz_srcptr, mp_bitcnt_t);
 
 
+
  void __gmpz_mul_si (mpz_ptr, mpz_srcptr, long int);
 
 
+
  void __gmpz_mul_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
 
 
 
@@ -23819,6 +23787,9 @@ using std::FILE;
 
 
  void __gmpz_nextprime (mpz_ptr, mpz_srcptr);
+
+
+ void __gmpz_next_likely_prime (mpz_ptr, mpz_srcptr,gmp_randstate_t);
 
 
 
@@ -23850,31 +23821,31 @@ using std::FILE;
  void __gmpz_powm (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
 
 
- void __gmpz_powm_sec (mpz_ptr, mpz_srcptr, mpz_srcptr, mpz_srcptr);
-
-
  void __gmpz_powm_ui (mpz_ptr, mpz_srcptr, unsigned long int, mpz_srcptr);
 
 
  int __gmpz_probab_prime_p (mpz_srcptr, int) __attribute__ ((__pure__));
 
 
- void __gmpz_random (mpz_ptr, mp_size_t);
+ int __gmpz_probable_prime_p (mpz_srcptr,gmp_randstate_t, int,unsigned long);
 
 
- void __gmpz_random2 (mpz_ptr, mp_size_t);
+ int __gmpz_likely_prime_p (mpz_srcptr,gmp_randstate_t, unsigned long);
 
 
  void __gmpz_realloc2 (mpz_ptr, mp_bitcnt_t);
 
 
- mp_bitcnt_t __gmpz_remove (mpz_ptr, mpz_srcptr, mpz_srcptr);
+ unsigned long int __gmpz_remove (mpz_ptr, mpz_srcptr, mpz_srcptr);
 
 
  int __gmpz_root (mpz_ptr, mpz_srcptr, unsigned long int);
 
 
- void __gmpz_rootrem (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
+ void __gmpz_nthroot (mpz_ptr, mpz_srcptr, unsigned long int);
+
+
+ void __gmpz_rootrem (mpz_ptr,mpz_ptr, mpz_srcptr, unsigned long int);
 
 
  void __gmpz_rrandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
@@ -23884,6 +23855,7 @@ using std::FILE;
 
 
  mp_bitcnt_t __gmpz_scan1 (mpz_srcptr, mp_bitcnt_t) throw () __attribute__ ((__pure__));
+
 
 
  void __gmpz_set (mpz_ptr, mpz_srcptr);
@@ -23900,10 +23872,12 @@ using std::FILE;
 
 
 
+
  void __gmpz_set_si (mpz_ptr, signed long int);
 
 
  int __gmpz_set_str (mpz_ptr, const char *, int);
+
 
 
  void __gmpz_set_ui (mpz_ptr, unsigned long int);
@@ -23926,10 +23900,13 @@ using std::FILE;
  void __gmpz_sqrtrem (mpz_ptr, mpz_ptr, mpz_srcptr);
 
 
+
  void __gmpz_sub (mpz_ptr, mpz_srcptr, mpz_srcptr);
 
 
+
  void __gmpz_sub_ui (mpz_ptr, mpz_srcptr, unsigned long int);
+
 
 
  void __gmpz_ui_sub (mpz_ptr, unsigned long int, mpz_srcptr);
@@ -23987,22 +23964,6 @@ using std::FILE;
  void __gmpz_xor (mpz_ptr, mpz_srcptr, mpz_srcptr);
 
 
- mp_srcptr __gmpz_limbs_read (mpz_srcptr);
-
-
- mp_ptr __gmpz_limbs_write (mpz_ptr, mp_size_t);
-
-
- mp_ptr __gmpz_limbs_modify (mpz_ptr, mp_size_t);
-
-
- void __gmpz_limbs_finish (mpz_ptr, mp_size_t);
-
-
- mpz_srcptr __gmpz_roinit_n (mpz_ptr, mp_srcptr, mp_size_t);
-
-
-
 
 
 
@@ -24030,9 +23991,6 @@ using std::FILE;
 
 
  int __gmpq_cmp_ui (mpq_srcptr, unsigned long int, unsigned long int) __attribute__ ((__pure__));
-
-
- int __gmpq_cmp_z (mpq_srcptr, mpz_srcptr) __attribute__ ((__pure__));
 
 
  void __gmpq_div (mpq_ptr, mpq_srcptr, mpq_srcptr);
@@ -24142,9 +24100,6 @@ using std::FILE;
  int __gmpf_cmp (mpf_srcptr, mpf_srcptr) throw () __attribute__ ((__pure__));
 
 
- int __gmpf_cmp_z (mpf_srcptr, mpz_srcptr) throw () __attribute__ ((__pure__));
-
-
  int __gmpf_cmp_d (mpf_srcptr, double) __attribute__ ((__pure__));
 
 
@@ -24166,7 +24121,7 @@ using std::FILE;
  void __gmpf_dump (mpf_srcptr);
 
 
- int __gmpf_eq (mpf_srcptr, mpf_srcptr, mp_bitcnt_t) __attribute__ ((__pure__));
+ int __gmpf_eq (mpf_srcptr, mpf_srcptr, unsigned long int) __attribute__ ((__pure__));
 
 
  int __gmpf_fits_sint_p (mpf_srcptr) throw () __attribute__ ((__pure__));
@@ -24266,6 +24221,9 @@ using std::FILE;
  void __gmpf_random2 (mpf_ptr, mp_size_t, mp_exp_t);
 
 
+ void __gmpf_rrandomb (mpf_ptr, gmp_randstate_t, mp_size_t, mp_exp_t);
+
+
  void __gmpf_reldiff (mpf_ptr, mpf_srcptr, mpf_srcptr);
 
 
@@ -24327,8 +24285,8 @@ using std::FILE;
 
 
  void __gmpf_urandomb (mpf_t, gmp_randstate_t, mp_bitcnt_t);
-# 1465 "/usr/include/x86_64-linux-gnu/gmp.h"
- mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+# 1516 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+ mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr,mp_size_t);
 
 
 
@@ -24343,17 +24301,21 @@ using std::FILE;
  mp_limb_t __gmpn_addmul_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
 
 
+ mp_limb_t __gmpn_bdivmod (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, unsigned long int);
+
+
+ mp_limb_t __gmpn_divrem (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr, mp_size_t);
+
+
+ int __gmpn_mulmod_2expp1 (mp_ptr, mp_srcptr, mp_srcptr,int,unsigned long, mp_ptr);
+
+
+ void __gmpn_mulmod_2expm1 (mp_ptr, mp_ptr, mp_ptr,unsigned long, mp_ptr);
+
+
 
  int __gmpn_cmp (mp_srcptr, mp_srcptr, mp_size_t) throw () __attribute__ ((__pure__));
 
-
-
-
- int __gmpn_zero_p (mp_srcptr, mp_size_t) throw () __attribute__ ((__pure__));
-
-
-
- void __gmpn_divexact_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
 
 
 
@@ -24365,28 +24327,106 @@ using std::FILE;
 
 
 
- mp_limb_t __gmpn_divrem (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr, mp_size_t);
-
-
  mp_limb_t __gmpn_divrem_1 (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_limb_t);
 
 
  mp_limb_t __gmpn_divrem_2 (mp_ptr, mp_size_t, mp_ptr, mp_size_t, mp_srcptr);
 
 
- mp_limb_t __gmpn_div_qr_1 (mp_ptr, mp_limb_t *, mp_srcptr, mp_size_t, mp_limb_t);
+ void __gmpn_invert (mp_ptr xp, mp_srcptr ap, mp_size_t n);
 
 
- mp_limb_t __gmpn_div_qr_2 (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_srcptr);
+ mp_limb_t __gmpn_sb_divappr_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dip)
+                                               ;
+
+
+ mp_limb_t __gmpn_dc_divappr_q_n (mp_ptr qp, mp_ptr np, mp_srcptr dp, mp_size_t n, mp_limb_t dip, mp_ptr tp)
+                                     ;
+
+
+ void __gmpn_dc_bdiv_q_n (mp_ptr qp, mp_ptr wp, mp_ptr np, mp_srcptr dp, mp_size_t n, mp_limb_t dinv, mp_ptr scratch)
+                                                 ;
+
+
+ mp_limb_t __gmpn_inv_divappr_q_n (mp_ptr qp, mp_ptr np, mp_srcptr dp, mp_size_t n, mp_srcptr dip)
+                                        ;
+
+
+ mp_limb_t __gmpn_dc_divappr_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t n, mp_limb_t dinv)
+                                 ;
+
+
+ mp_limb_t __gmpn_dc_div_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_inv_divappr_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t n, mp_srcptr dinv)
+                                 ;
+
+
+ mp_limb_t __gmpn_inv_div_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_srcptr dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_inv_div_qr (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_srcptr dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_inv_div_qr_n (mp_ptr qp, mp_ptr np, mp_srcptr dp, mp_size_t dn, mp_srcptr dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_dc_div_qr (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_dc_div_qr_n (mp_ptr qp, mp_ptr np, mp_srcptr dp, mp_size_t n, mp_limb_t dinv, mp_ptr tp)
+                                    ;
+
+
+ mp_limb_t __gmpn_sb_div_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ void __gmpn_sb_bdiv_q (mp_ptr qp, mp_ptr wp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ void __gmpn_dc_bdiv_q (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_dc_bdiv_qr (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_dc_bdiv_qr_n (mp_ptr qp, mp_ptr np, mp_srcptr dp, mp_size_t n, mp_limb_t dinv, mp_ptr tp)
+                                                               ;
+
+
+ mp_limb_t __gmpn_sb_div_qr (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ mp_limb_t __gmpn_sb_bdiv_qr (mp_ptr qp, mp_ptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn, mp_limb_t dinv)
+                                                     ;
+
+
+ void __gmpn_tdiv_q (mp_ptr qp, mp_srcptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn)
+                                                               ;
+
+
+ void __gmpn_divexact (mp_ptr qp, mp_srcptr np, mp_size_t nn, mp_srcptr dp, mp_size_t dn)
+                                                               ;
+
+
+ void __gmpn_redc_1 (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_limb_t);
 
 
  mp_size_t __gmpn_gcd (mp_ptr, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
 
 
  mp_limb_t __gmpn_gcd_1 (mp_srcptr, mp_size_t, mp_limb_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_gcdext_1 (mp_limb_signed_t *, mp_limb_signed_t *, mp_limb_t, mp_limb_t);
 
 
  mp_size_t __gmpn_gcdext (mp_ptr, mp_ptr, mp_size_t *, mp_ptr, mp_size_t, mp_ptr, mp_size_t);
@@ -24417,17 +24457,14 @@ using std::FILE;
 
 
 
- mp_limb_t __gmpn_neg (mp_ptr, mp_srcptr, mp_size_t);
+ mp_limb_t __gmpn_neg_n (mp_ptr, mp_srcptr, mp_size_t);
 
 
 
- void __gmpn_com (mp_ptr, mp_srcptr, mp_size_t);
+ void __gmpn_com_n (mp_ptr, mp_srcptr, mp_size_t);
 
 
  int __gmpn_perfect_square_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
-
-
- int __gmpn_perfect_power_p (mp_srcptr, mp_size_t) __attribute__ ((__pure__));
 
 
  mp_bitcnt_t __gmpn_popcount (mp_srcptr, mp_size_t) throw () __attribute__ ((__pure__));
@@ -24446,6 +24483,18 @@ using std::FILE;
  void __gmpn_random2 (mp_ptr, mp_size_t);
 
 
+ void __gmpn_urandomb (mp_ptr, gmp_randstate_t, unsigned long);
+
+
+ void __gmpn_urandomm (mp_ptr, gmp_randstate_t, mp_srcptr, mp_size_t);
+
+
+ void __gmpn_randomb (mp_ptr, gmp_randstate_t, mp_size_t);
+
+
+ void __gmpn_rrandom (mp_ptr, gmp_randstate_t, mp_size_t);
+
+
  mp_limb_t __gmpn_rshift (mp_ptr, mp_srcptr, mp_size_t, unsigned int);
 
 
@@ -24458,14 +24507,11 @@ using std::FILE;
  mp_size_t __gmpn_set_str (mp_ptr, const unsigned char *, size_t, int);
 
 
- size_t __gmpn_sizeinbase (mp_srcptr, mp_size_t, int);
-
-
  mp_size_t __gmpn_sqrtrem (mp_ptr, mp_ptr, mp_srcptr, mp_size_t);
 
 
 
- mp_limb_t __gmpn_sub (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
+ mp_limb_t __gmpn_sub (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr,mp_size_t);
 
 
 
@@ -24505,99 +24551,49 @@ using std::FILE;
  void __gmpn_copyd (mp_ptr, mp_srcptr, mp_size_t);
 
  void __gmpn_zero (mp_ptr, mp_size_t);
-
-
- mp_limb_t __gmpn_cnd_add_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
- mp_limb_t __gmpn_cnd_sub_n (mp_limb_t, mp_ptr, mp_srcptr, mp_srcptr, mp_size_t);
-
-
- mp_limb_t __gmpn_sec_add_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
-
- mp_size_t __gmpn_sec_add_1_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- mp_limb_t __gmpn_sec_sub_1 (mp_ptr, mp_srcptr, mp_size_t, mp_limb_t, mp_ptr);
-
- mp_size_t __gmpn_sec_sub_1_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_cnd_swap (mp_limb_t, volatile mp_limb_t *, volatile mp_limb_t *, mp_size_t);
-
-
- void __gmpn_sec_mul (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_mul_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_sqr (mp_ptr, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_sqr_itch (mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_powm (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_bitcnt_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_powm_itch (mp_size_t, mp_bitcnt_t, mp_size_t) __attribute__ ((__pure__));
-
-
- void __gmpn_sec_tabselect (volatile mp_limb_t *, volatile const mp_limb_t *, mp_size_t, mp_size_t, mp_size_t);
-
-
- mp_limb_t __gmpn_sec_div_qr (mp_ptr, mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_div_qr_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
- void __gmpn_sec_div_r (mp_ptr, mp_size_t, mp_srcptr, mp_size_t, mp_ptr);
-
- mp_size_t __gmpn_sec_div_r_itch (mp_size_t, mp_size_t) __attribute__ ((__pure__));
-
-
- int __gmpn_sec_invert (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_bitcnt_t, mp_ptr);
-
- mp_size_t __gmpn_sec_invert_itch (mp_size_t) __attribute__ ((__pure__));
-# 1711 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__)) void
+# 1799 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+extern __inline__ __attribute__((__gnu_inline__)) void
 __gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
 {
   if (__gmp_w != __gmp_u)
     __gmpz_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_size = ((__gmp_w->_mp_size) >= 0 ? (__gmp_w->_mp_size) : -(__gmp_w->_mp_size));
 }
-# 1735 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__))
+# 1823 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+extern __inline__ __attribute__((__gnu_inline__))
 
 int
 __gmpz_fits_uint_p (mpz_srcptr __gmp_z) throw ()
 {
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= (2147483647 * 2U + 1U)));;
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= (~ (unsigned) 0)));;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 int
 __gmpz_fits_ulong_p (mpz_srcptr __gmp_z) throw ()
 {
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= (9223372036854775807L * 2UL + 1UL)));;
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= (~ (unsigned long) 0)));;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 int
 __gmpz_fits_ushort_p (mpz_srcptr __gmp_z) throw ()
 {
-  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= (32767 * 2 + 1)));;
+  mp_size_t __gmp_n = __gmp_z->_mp_size; mp_ptr __gmp_p = __gmp_z->_mp_d; return (__gmp_n == 0 || (__gmp_n == 1 && __gmp_p[0] <= ((unsigned short) ~0)));;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 unsigned long
 __gmpz_get_ui (mpz_srcptr __gmp_z) throw ()
@@ -24611,14 +24607,14 @@ __gmpz_get_ui (mpz_srcptr __gmp_z) throw ()
 
 
 
-  return (__gmp_n != 0 ? __gmp_l : 0);
-# 1791 "/usr/include/x86_64-linux-gnu/gmp.h"
+  return (unsigned long)(__gmp_n != 0 ? __gmp_l : 0);
+# 1879 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_limb_t
 __gmpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) throw ()
@@ -24631,7 +24627,7 @@ __gmpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) throw ()
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__)) void
+extern __inline__ __attribute__((__gnu_inline__)) void
 __gmpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
 {
   if (__gmp_w != __gmp_u)
@@ -24642,7 +24638,7 @@ __gmpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 int
 __gmpz_perfect_square_p (mpz_srcptr __gmp_a)
@@ -24660,7 +24656,7 @@ __gmpz_perfect_square_p (mpz_srcptr __gmp_a)
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_bitcnt_t
 __gmpz_popcount (mpz_srcptr __gmp_u) throw ()
@@ -24669,7 +24665,7 @@ __gmpz_popcount (mpz_srcptr __gmp_u) throw ()
   mp_bitcnt_t __gmp_result;
 
   __gmp_usize = __gmp_u->_mp_size;
-  __gmp_result = (__gmp_usize < 0 ? (9223372036854775807L * 2UL + 1UL) : 0);
+  __gmp_result = (__gmp_usize < 0 ? (~ (unsigned long) 0) : 0);
   if (__builtin_expect ((__gmp_usize > 0) != 0, 1))
     __gmp_result = __gmpn_popcount (__gmp_u->_mp_d, __gmp_usize);
   return __gmp_result;
@@ -24678,7 +24674,7 @@ __gmpz_popcount (mpz_srcptr __gmp_u) throw ()
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 void
 __gmpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
@@ -24689,7 +24685,7 @@ __gmpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 size_t
 __gmpz_size (mpz_srcptr __gmp_z) throw ()
@@ -24702,7 +24698,7 @@ __gmpz_size (mpz_srcptr __gmp_z) throw ()
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__)) void
+extern __inline__ __attribute__((__gnu_inline__)) void
 __gmpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
 {
   if (__gmp_w != __gmp_u)
@@ -24712,41 +24708,41 @@ __gmpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__)) void
+extern __inline__ __attribute__((__gnu_inline__)) void
 __gmpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
 {
   if (__gmp_w != __gmp_u)
     __gmpq_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_num._mp_size = - __gmp_w->_mp_num._mp_size;
 }
-# 2133 "/usr/include/x86_64-linux-gnu/gmp.h"
-extern __inline__ __attribute__ ((__gnu_inline__))
+# 2220 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_limb_t
 __gmpn_add (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
 {
   mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
   return __gmp_c;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_limb_t
 __gmpn_add_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) throw ()
 {
   mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x + (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_r) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x + 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_r) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x + (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_r) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x + 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_r) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
   return __gmp_c;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 int
 __gmpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) throw ()
@@ -24759,80 +24755,43 @@ __gmpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) throw 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-int
-__gmpn_zero_p (mp_srcptr __gmp_p, mp_size_t __gmp_n) throw ()
-{
-
-    do {
-      if (__gmp_p[--__gmp_n] != 0)
- return 0;
-    } while (__gmp_n != 0);
-  return 1;
-}
-
-
-
-
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_limb_t
 __gmpn_sub (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
 {
   mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_sub_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x - 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)), __gmp_x == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_sub_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x - 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)), __gmp_x == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
   return __gmp_c;
 }
 
 
 
 
-extern __inline__ __attribute__ ((__gnu_inline__))
+extern __inline__ __attribute__((__gnu_inline__))
 
 mp_limb_t
 __gmpn_sub_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) throw ()
 {
   mp_limb_t __gmp_c;
-  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x - (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_x) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x - 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_x) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; ; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x, __gmp_r; __gmp_x = (__gmp_src)[0]; __gmp_r = __gmp_x - (__gmp_n); (__gmp_dst)[0] = __gmp_r; if (((__gmp_x) < ((__gmp_n)))) { (__gmp_c) = 1; for (__gmp_i = 1; __gmp_i < (__gmp_size);) { __gmp_x = (__gmp_src)[__gmp_i]; __gmp_r = __gmp_x - 1; (__gmp_dst)[__gmp_i] = __gmp_r; ++__gmp_i; if (!((__gmp_x) < (1))) { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; break; } } } else { if ((__gmp_src) != (__gmp_dst)) do { mp_size_t __gmp_j; for (__gmp_j = (1); __gmp_j < (__gmp_size); __gmp_j++) (__gmp_dst)[__gmp_j] = (__gmp_src)[__gmp_j]; } while (0); (__gmp_c) = 0; } } while (0);
   return __gmp_c;
 }
 
 
 
-
-extern __inline__ __attribute__ ((__gnu_inline__))
-
-mp_limb_t
-__gmpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
-{
-  while (*__gmp_up == 0)
-    {
-      *__gmp_rp = 0;
-      if (!--__gmp_n)
- return 0;
-      ++__gmp_up; ++__gmp_rp;
-    }
-
-  *__gmp_rp = (- *__gmp_up) & ((~ (static_cast<mp_limb_t> (0))) >> 0);
-
-  if (--__gmp_n)
-    __gmpn_com (++__gmp_rp, ++__gmp_up, __gmp_n);
-
-  return 1;
 }
-
-
-
-}
-# 2282 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 2328 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
  std::ostream& operator<< (std::ostream &, mpz_srcptr);
  std::ostream& operator<< (std::ostream &, mpq_srcptr);
  std::ostream& operator<< (std::ostream &, mpf_srcptr);
  std::istream& operator>> (std::istream &, mpz_ptr);
  std::istream& operator>> (std::istream &, mpq_ptr);
  std::istream& operator>> (std::istream &, mpf_ptr);
-# 2313 "/usr/include/x86_64-linux-gnu/gmp.h"
+# 2348 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
+typedef __mpz_struct MP_INT;
+typedef __mpq_struct MP_RAT;
+# 2358 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h"
 enum
 {
   GMP_ERROR_NONE = 0,
@@ -24841,20 +24800,20 @@ enum
   GMP_ERROR_SQRT_OF_NEGATIVE = 4,
   GMP_ERROR_INVALID_ARGUMENT = 8
 };
-# 144 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 2
+# 144 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h" 2
 
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h" 1
-# 73 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h" 1
+# 73 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef void mpfr_void;
 typedef int mpfr_int;
 typedef unsigned int mpfr_uint;
 typedef long mpfr_long;
 typedef unsigned long mpfr_ulong;
 typedef size_t mpfr_size_t;
-# 95 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 95 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef enum {
   MPFR_RNDN=0,
   MPFR_RNDZ,
@@ -24864,10 +24823,10 @@ typedef enum {
   MPFR_RNDF,
   MPFR_RNDNA=-1
 } mpfr_rnd_t;
-# 130 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 130 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef long mpfr_prec_t;
 typedef unsigned long mpfr_uprec_t;
-# 143 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 143 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef int mpfr_sign_t;
 
 
@@ -24884,21 +24843,21 @@ typedef struct {
   mpfr_exp_t _mpfr_exp;
   mp_limb_t *_mpfr_d;
 } __mpfr_struct;
-# 179 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 179 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef __mpfr_struct mpfr_t[1];
 typedef __mpfr_struct *mpfr_ptr;
-typedef __gmp_const __mpfr_struct *mpfr_srcptr;
-# 192 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+typedef const __mpfr_struct *mpfr_srcptr;
+# 192 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 typedef enum {
   MPFR_NAN_KIND = 0,
   MPFR_INF_KIND = 1, MPFR_ZERO_KIND = 2, MPFR_REGULAR_KIND = 3
 } mpfr_kind_t;
-# 241 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 241 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
 extern "C" {
 
 
- __gmp_const char * mpfr_get_version (void);
- __gmp_const char * mpfr_get_patches (void);
+ const char * mpfr_get_version (void);
+ const char * mpfr_get_patches (void);
  int mpfr_buildopt_tls_p (void);
  int mpfr_buildopt_decimal_p (void);
 
@@ -24913,7 +24872,7 @@ extern "C" {
 
  void mpfr_set_default_rounding_mode (mpfr_rnd_t);
  mpfr_rnd_t mpfr_get_default_rounding_mode (void);
- __gmp_const char *
+ const char *
    mpfr_print_rnd_mode (mpfr_rnd_t);
 
  void mpfr_clear_flags (void);
@@ -24993,9 +24952,9 @@ extern "C" {
  int
   mpfr_set_q (mpfr_ptr, mpq_srcptr, mpfr_rnd_t);
  int
-  mpfr_set_str (mpfr_ptr, __gmp_const char *, int, mpfr_rnd_t);
+  mpfr_set_str (mpfr_ptr, const char *, int, mpfr_rnd_t);
  int
-  mpfr_init_set_str (mpfr_ptr, __gmp_const char *, int, mpfr_rnd_t)
+  mpfr_init_set_str (mpfr_ptr, const char *, int, mpfr_rnd_t)
                                               ;
  int
   mpfr_set4 (mpfr_ptr, mpfr_srcptr, mpfr_rnd_t, int);
@@ -25009,7 +24968,7 @@ extern "C" {
   mpfr_setsign (mpfr_ptr, mpfr_srcptr, int, mpfr_rnd_t);
  int
   mpfr_copysign (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
-# 364 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 364 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
  int __gmpfr_set_sj (mpfr_t, intmax_t, mpfr_rnd_t);
  int
   __gmpfr_set_sj_2exp (mpfr_t, intmax_t, intmax_t, mpfr_rnd_t);
@@ -25060,17 +25019,17 @@ extern "C" {
  size_t __gmpfr_out_str (FILE*, int, size_t, mpfr_srcptr, mpfr_rnd_t)
                                                                            ;
 
- int __gmpfr_fprintf (FILE*, __gmp_const char*, ...)
+ int __gmpfr_fprintf (FILE*, const char*, ...)
                                                     ;
 
- int mpfr_printf (__gmp_const char*, ...);
- int mpfr_asprintf (char**, __gmp_const char*, ...)
+ int mpfr_printf (const char*, ...);
+ int mpfr_asprintf (char**, const char*, ...)
                                                      ;
- int mpfr_sprintf (char*, __gmp_const char*, ...)
+ int mpfr_sprintf (char*, const char*, ...)
                                                     ;
- int mpfr_snprintf (char*, size_t, __gmp_const char*, ...)
+ int mpfr_snprintf (char*, size_t, const char*, ...)
                                                                         ;
-# 444 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h"
+# 444 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h"
  int mpfr_pow (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
                                                                     ;
  int mpfr_pow_si (mpfr_ptr, mpfr_srcptr, long int, mpfr_rnd_t)
@@ -25333,7 +25292,7 @@ extern "C" {
                                                                     ;
  int mpfr_fms (mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t)
                                                                     ;
- int mpfr_sum (mpfr_ptr, mpfr_ptr *__gmp_const, unsigned long, mpfr_rnd_t)
+ int mpfr_sum (mpfr_ptr, mpfr_ptr *const, unsigned long, mpfr_rnd_t)
                                                                       ;
 
  void mpfr_free_cache (void);
@@ -25341,7 +25300,7 @@ extern "C" {
  int mpfr_subnormalize (mpfr_ptr, int, mpfr_rnd_t)
                                                                  ;
 
- int mpfr_strtofr (mpfr_ptr, __gmp_const char *, char **, int, mpfr_rnd_t)
+ int mpfr_strtofr (mpfr_ptr, const char *, char **, int, mpfr_rnd_t)
                                                                           ;
 
  size_t mpfr_custom_get_size (mpfr_prec_t);
@@ -25355,7 +25314,7 @@ extern "C" {
 
 
 }
-# 149 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h" 2
+# 149 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h" 2
 
 
 
@@ -25393,7 +25352,7 @@ typedef __xip_fpo_struct *xip_fpo_ptr;
 typedef const __xip_fpo_struct *xip_fpo_srcptr;
 typedef __xip_fpo_fix_struct *xip_fpo_fix_ptr;
 typedef const __xip_fpo_fix_struct *xip_fpo_fix_srcptr;
-# 197 "/opt/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h"
+# 197 "/opt/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h"
 typedef int xip_fpo_exc_t;
 
 
@@ -25565,13 +25524,13 @@ typedef struct xil_fpo_accum_state xil_fpo_accum_state;
 
 
 }
-# 173 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
+# 173 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h" 2
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/include/gmp.h" 1
-# 176 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/mpfr.h" 1
-# 177 "/opt/Xilinx/Vivado/2017.4/include/hls_fpo.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/gmp.h" 1
+# 176 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/mpfr.h" 1
+# 177 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h" 2
 
 
 
@@ -26052,36 +26011,36 @@ inline double xil_fpo_flttoflt_d_d(double a)
   xip_fpo_flttoflt_d_d(&res_d, a);
   return res_d;
 }
-# 58 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
-# 139 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 1 3
-# 59 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
+# 58 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
+# 139 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 1 3
+# 59 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
        
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
-# 70 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 1 3
-# 68 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
+# 70 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 1 3
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
   namespace rel_ops
   {
  
-# 86 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
+# 86 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
     template <class _Tp>
       inline bool
       operator!=(const _Tp& __x, const _Tp& __y)
       { return !(__x == __y); }
-# 99 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
+# 99 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
     template <class _Tp>
       inline bool
       operator>(const _Tp& __x, const _Tp& __y)
       { return __y < __x; }
-# 112 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
+# 112 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
     template <class _Tp>
       inline bool
       operator<=(const _Tp& __x, const _Tp& __y)
       { return !(__y < __x); }
-# 125 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
+# 125 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_relops.h" 3
     template <class _Tp>
       inline bool
       operator>=(const _Tp& __x, const _Tp& __y)
@@ -26091,26 +26050,26 @@ namespace std __attribute__ ((__visibility__ ("default")))
   }
 
 }
-# 71 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 2 3
-# 140 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
-# 220 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 1 3
-# 59 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
+# 71 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/utility" 2 3
+# 140 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
+# 220 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 1 3
+# 59 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
        
-# 60 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
+# 60 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 3
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 1 3
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 1 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-# 66 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 66 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
 # 1 "/usr/include/stdlib.h" 1 3 4
 # 32 "/usr/include/stdlib.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 33 "/usr/include/stdlib.h" 2 3 4
 
 extern "C" {
@@ -26379,7 +26338,7 @@ typedef __suseconds_t suseconds_t;
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 147 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
 
 
@@ -26693,7 +26652,7 @@ extern void cfree (void *__ptr) throw ();
 
 # 1 "/usr/include/alloca.h" 1 3 4
 # 24 "/usr/include/alloca.h" 3 4
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 25 "/usr/include/alloca.h" 2 3 4
 
 extern "C" {
@@ -27031,8 +26990,8 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 955 "/usr/include/stdlib.h" 2 3 4
 # 967 "/usr/include/stdlib.h" 3 4
 }
-# 67 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 2 3
-# 98 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 67 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 2 3
+# 98 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -27081,7 +27040,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 158 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 158 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
@@ -27107,7 +27066,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
   { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
 
   using ::lldiv;
-# 193 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 193 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
   using ::atoll;
   using ::strtoll;
   using ::strtoull;
@@ -27136,11 +27095,11 @@ namespace std
   using ::__gnu_cxx::strtoull;
   using ::__gnu_cxx::strtold;
 }
-# 62 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 1 3
-# 33 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 62 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 1 3
+# 33 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
        
-# 34 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
 
 
 
@@ -27150,7 +27109,7 @@ namespace std
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 201 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 201 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _FIter, typename _Tp>
     bool
     binary_search(_FIter, _FIter, const _Tp&);
@@ -27166,7 +27125,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _BIter1, typename _BIter2>
     _BIter2
     copy_backward(_BIter1, _BIter1, _BIter2);
-# 230 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 230 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _FIter, typename _Tp>
     pair<_FIter, _FIter>
     equal_range(_FIter, _FIter, const _Tp&);
@@ -27192,7 +27151,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _FIter1, typename _FIter2, typename _BinaryPredicate>
     _FIter1
     find_end(_FIter1, _FIter1, _FIter2, _FIter2, _BinaryPredicate);
-# 269 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 269 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _IIter1, typename _IIter2>
     bool
     includes(_IIter1, _IIter1, _IIter2, _IIter2);
@@ -27208,7 +27167,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _BIter, typename _Compare>
     void
     inplace_merge(_BIter, _BIter, _BIter, _Compare);
-# 332 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 332 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _FIter1, typename _FIter2>
     void
     iter_swap(_FIter1, _FIter2);
@@ -27247,7 +27206,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _Tp, typename _Compare>
     const _Tp&
     min(const _Tp&, const _Tp&, _Compare);
-# 417 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 417 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _BIter>
     bool
     next_permutation(_BIter, _BIter);
@@ -27255,7 +27214,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _BIter, typename _Compare>
     bool
     next_permutation(_BIter, _BIter, _Compare);
-# 434 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 434 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _IIter, typename _RAIter>
     _RAIter
     partial_sort_copy(_IIter, _IIter, _RAIter, _RAIter);
@@ -27263,7 +27222,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _IIter, typename _RAIter, typename _Compare>
     _RAIter
     partial_sort_copy(_IIter, _IIter, _RAIter, _RAIter, _Compare);
-# 455 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 455 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _RAIter>
     void
     pop_heap(_RAIter, _RAIter);
@@ -27333,7 +27292,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _FIter, typename _OIter>
     _OIter
     rotate_copy(_FIter, _FIter, _FIter, _OIter);
-# 538 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
+# 538 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/algorithmfwd.h" 3
   template<typename _RAIter>
     void
     sort_heap(_RAIter, _RAIter);
@@ -27605,9 +27564,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 63 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 1 3
-# 62 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 63 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 1 3
+# 62 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -27690,7 +27649,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       *(__first + __holeIndex) = (__value);
     }
-# 154 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 154 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator>
     inline void
     push_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -27728,7 +27687,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       *(__first + __holeIndex) = (__value);
     }
-# 203 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 203 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     push_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -27792,7 +27751,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _DistanceType(__last - __first),
     (__value));
     }
-# 276 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 276 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator>
     inline void
     pop_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -27855,7 +27814,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     _DistanceType(__last - __first),
     (__value), __comp);
     }
-# 350 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 350 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     pop_heap(_RandomAccessIterator __first,
@@ -27870,7 +27829,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       --__last;
       std::__pop_heap(__first, __last, __last, __comp);
     }
-# 373 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 373 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator>
     void
     make_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -27900,7 +27859,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __parent--;
  }
     }
-# 413 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 413 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     void
     make_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -27931,7 +27890,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __parent--;
  }
     }
-# 452 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 452 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator>
     void
     sort_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -27950,7 +27909,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    std::__pop_heap(__first, __last, __last);
  }
     }
-# 481 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 481 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     void
     sort_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -27968,18 +27927,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
    std::__pop_heap(__first, __last, __last, __comp);
  }
     }
-# 578 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
+# 578 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_heap.h" 3
 
 }
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 1 3
-# 61 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 1 3
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 1 3
+# 61 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 1 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 78 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 3
+# 78 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_construct.h" 3
   template<typename _T1, typename _T2>
     inline void
     _Construct(_T1* __p, const _T2& __value)
@@ -28060,12 +28019,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 62 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 2 3
+# 62 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 84 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
+# 84 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
   template<typename _Tp>
     pair<_Tp*, ptrdiff_t>
     get_temporary_buffer(ptrdiff_t __len)
@@ -28085,7 +28044,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return std::pair<_Tp*, ptrdiff_t>(static_cast<_Tp*>(0), 0);
     }
-# 111 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
+# 111 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
   template<typename _Tp>
     inline void
     return_temporary_buffer(_Tp* __p)
@@ -28194,7 +28153,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         static void
         __ucr(_ForwardIterator, _ForwardIterator, _Tp&) { }
     };
-# 230 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
+# 230 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_tempbuf.h" 3
   template<typename _ForwardIterator, typename _Tp>
     inline void
     __uninitialized_construct_buf(_ForwardIterator __first,
@@ -28236,8 +28195,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 65 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
-# 73 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 65 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 2 3
+# 73 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -28411,7 +28370,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __last;
  }
     }
-# 326 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 326 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Integer, typename _Tp>
     _ForwardIterator
     __search_n(_ForwardIterator __first, _ForwardIterator __last,
@@ -28488,7 +28447,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __tailSize -= __remainder;
  }
     }
-# 411 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 411 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Integer, typename _Tp,
            typename _BinaryPredicate>
     _ForwardIterator
@@ -28701,7 +28660,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __result;
  }
     }
-# 649 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 649 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     inline _ForwardIterator1
     find_end(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
@@ -28720,7 +28679,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         std::__iterator_category(__first1),
         std::__iterator_category(__first2));
     }
-# 695 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 695 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2,
     typename _BinaryPredicate>
     inline _ForwardIterator1
@@ -28742,7 +28701,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         std::__iterator_category(__first2),
         __comp);
     }
-# 874 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 874 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator, typename _Tp>
     _OutputIterator
     remove_copy(_InputIterator __first, _InputIterator __last,
@@ -28764,7 +28723,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return __result;
     }
-# 911 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 911 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator,
     typename _Predicate>
     _OutputIterator
@@ -28787,7 +28746,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return __result;
     }
-# 1086 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1086 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp>
     _ForwardIterator
     remove(_ForwardIterator __first, _ForwardIterator __last,
@@ -28813,7 +28772,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
           }
       return __result;
     }
-# 1129 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1129 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Predicate>
     _ForwardIterator
     remove_if(_ForwardIterator __first, _ForwardIterator __last,
@@ -28839,7 +28798,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
           }
       return __result;
     }
-# 1169 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1169 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator>
     _ForwardIterator
     unique(_ForwardIterator __first, _ForwardIterator __last)
@@ -28864,7 +28823,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *++__dest = (*__first);
       return ++__dest;
     }
-# 1209 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1209 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _BinaryPredicate>
     _ForwardIterator
     unique(_ForwardIterator __first, _ForwardIterator __last,
@@ -29080,7 +29039,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    --__last;
  }
     }
-# 1437 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1437 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator>
     inline void
     reverse(_BidirectionalIterator __first, _BidirectionalIterator __last)
@@ -29091,7 +29050,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       ;
       std::__reverse(__first, __last, std::__iterator_category(__first));
     }
-# 1464 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1464 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator, typename _OutputIterator>
     _OutputIterator
     reverse_copy(_BidirectionalIterator __first, _BidirectionalIterator __last,
@@ -29276,7 +29235,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
  }
     }
-# 1668 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1668 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator>
     inline void
     rotate(_ForwardIterator __first, _ForwardIterator __middle,
@@ -29292,7 +29251,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _IterType;
       std::__rotate(__first, __middle, __last, _IterType());
     }
-# 1702 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1702 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _OutputIterator>
     _OutputIterator
     rotate_copy(_ForwardIterator __first, _ForwardIterator __middle,
@@ -29433,7 +29392,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return __begin;
  }
     }
-# 1860 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1860 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Predicate>
     _ForwardIterator
     stable_partition(_ForwardIterator __first, _ForwardIterator __last,
@@ -29495,7 +29454,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  if (__comp(*__i, *__first))
    std::__pop_heap(__first, __middle, __i, __comp);
     }
-# 1942 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 1942 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _RandomAccessIterator>
     _RandomAccessIterator
     partial_sort_copy(_InputIterator __first, _InputIterator __last,
@@ -29541,7 +29500,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::sort_heap(__result_first, __result_real_last);
       return __result_real_last;
     }
-# 2008 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2008 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _RandomAccessIterator, typename _Compare>
     _RandomAccessIterator
     partial_sort_copy(_InputIterator __first, _InputIterator __last,
@@ -29905,7 +29864,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       std::__insertion_sort(__first, __last, __comp);
     }
-# 2392 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2392 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp, typename _Compare>
     _ForwardIterator
     lower_bound(_ForwardIterator __first, _ForwardIterator __last,
@@ -29941,7 +29900,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first;
     }
-# 2439 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2439 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp>
     _ForwardIterator
     upper_bound(_ForwardIterator __first, _ForwardIterator __last,
@@ -29975,7 +29934,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first;
     }
-# 2488 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2488 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp, typename _Compare>
     _ForwardIterator
     upper_bound(_ForwardIterator __first, _ForwardIterator __last,
@@ -30011,7 +29970,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first;
     }
-# 2541 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2541 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp>
     pair<_ForwardIterator, _ForwardIterator>
     equal_range(_ForwardIterator __first, _ForwardIterator __last,
@@ -30056,7 +30015,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return pair<_ForwardIterator, _ForwardIterator>(__first, __first);
     }
-# 2603 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2603 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp, typename _Compare>
     pair<_ForwardIterator, _ForwardIterator>
     equal_range(_ForwardIterator __first, _ForwardIterator __last,
@@ -30105,7 +30064,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return pair<_ForwardIterator, _ForwardIterator>(__first, __first);
     }
-# 2663 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2663 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp>
     bool
     binary_search(_ForwardIterator __first, _ForwardIterator __last,
@@ -30123,7 +30082,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       _ForwardIterator __i = std::lower_bound(__first, __last, __val);
       return __i != __last && !(__val < *__i);
     }
-# 2696 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 2696 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp, typename _Compare>
     bool
     binary_search(_ForwardIterator __first, _ForwardIterator __last,
@@ -30529,7 +30488,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__merge_without_buffer(__new_middle, __second_cut, __last,
       __len1 - __len11, __len2 - __len22, __comp);
     }
-# 3120 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3120 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator>
     void
     inplace_merge(_BidirectionalIterator __first,
@@ -30562,7 +30521,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  std::__merge_adaptive(__first, __middle, __last, __len1, __len2,
          __buf.begin(), _DistanceType(__buf.size()));
     }
-# 3175 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3175 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator, typename _Compare>
     void
     inplace_merge(_BidirectionalIterator __first,
@@ -30877,7 +30836,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __last - __middle,
       __comp);
     }
-# 3513 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3513 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
     bool
     includes(_InputIterator1 __first1, _InputIterator1 __last1,
@@ -30906,7 +30865,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       return __first2 == __last2;
     }
-# 3562 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3562 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _Compare>
     bool
@@ -30939,7 +30898,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       return __first2 == __last2;
     }
-# 3617 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3617 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator>
     bool
     next_permutation(_BidirectionalIterator __first,
@@ -30981,7 +30940,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
  }
     }
-# 3674 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3674 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator, typename _Compare>
     bool
     next_permutation(_BidirectionalIterator __first,
@@ -31024,7 +30983,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
  }
     }
-# 3730 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3730 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator>
     bool
     prev_permutation(_BidirectionalIterator __first,
@@ -31066,7 +31025,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
  }
     }
-# 3787 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3787 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _BidirectionalIterator, typename _Compare>
     bool
     prev_permutation(_BidirectionalIterator __first,
@@ -31109,7 +31068,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      }
  }
     }
-# 3847 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3847 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator, typename _Tp>
     _OutputIterator
     replace_copy(_InputIterator __first, _InputIterator __last,
@@ -31131,7 +31090,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *__result = *__first;
       return __result;
     }
-# 3884 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 3884 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator,
     typename _Predicate, typename _Tp>
     _OutputIterator
@@ -31154,11 +31113,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
    *__result = *__first;
       return __result;
     }
-# 4355 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4355 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
 
 
 
-# 4371 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4371 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _Function>
     _Function
     for_each(_InputIterator __first, _InputIterator __last, _Function __f)
@@ -31170,7 +31129,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __f(*__first);
       return (__f);
     }
-# 4392 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4392 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _Tp>
     inline _InputIterator
     find(_InputIterator __first, _InputIterator __last,
@@ -31184,7 +31143,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__find(__first, __last, __val,
            std::__iterator_category(__first));
     }
-# 4416 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4416 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _Predicate>
     inline _InputIterator
     find_if(_InputIterator __first, _InputIterator __last,
@@ -31198,7 +31157,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__find_if(__first, __last, __pred,
        std::__iterator_category(__first));
     }
-# 4445 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4445 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _ForwardIterator>
     _InputIterator
     find_first_of(_InputIterator __first1, _InputIterator __last1,
@@ -31219,7 +31178,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      return __first1;
       return __last1;
     }
-# 4484 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4484 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _ForwardIterator,
     typename _BinaryPredicate>
     _InputIterator
@@ -31242,7 +31201,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
      return __first1;
       return __last1;
     }
-# 4516 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4516 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator>
     _ForwardIterator
     adjacent_find(_ForwardIterator __first, _ForwardIterator __last)
@@ -31263,7 +31222,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __last;
     }
-# 4548 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4548 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _BinaryPredicate>
     _ForwardIterator
     adjacent_find(_ForwardIterator __first, _ForwardIterator __last,
@@ -31286,7 +31245,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __last;
     }
-# 4580 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4580 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _Tp>
     typename iterator_traits<_InputIterator>::difference_type
     count(_InputIterator __first, _InputIterator __last, const _Tp& __value)
@@ -31302,7 +31261,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    ++__n;
       return __n;
     }
-# 4605 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4605 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _Predicate>
     typename iterator_traits<_InputIterator>::difference_type
     count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
@@ -31318,7 +31277,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    ++__n;
       return __n;
     }
-# 4645 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4645 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     _ForwardIterator1
     search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
@@ -31368,7 +31327,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first1;
     }
-# 4716 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4716 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2,
     typename _BinaryPredicate>
     _ForwardIterator1
@@ -31427,7 +31386,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
       return __first1;
     }
-# 4790 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4790 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Integer, typename _Tp>
     _ForwardIterator
     search_n(_ForwardIterator __first, _ForwardIterator __last,
@@ -31446,7 +31405,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__search_n(__first, __last, __count, __val,
         std::__iterator_category(__first));
     }
-# 4826 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4826 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Integer, typename _Tp,
            typename _BinaryPredicate>
     _ForwardIterator
@@ -31471,7 +31430,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__search_n(__first, __last, __count, __val, __binary_pred,
         std::__iterator_category(__first));
     }
-# 4868 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4868 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator,
     typename _UnaryOperation>
     _OutputIterator
@@ -31489,7 +31448,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  *__result = __unary_op(*__first);
       return __result;
     }
-# 4904 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4904 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _BinaryOperation>
     _OutputIterator
@@ -31509,7 +31468,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  *__result = __binary_op(*__first1, *__first2);
       return __result;
     }
-# 4937 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4937 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Tp>
     void
     replace(_ForwardIterator __first, _ForwardIterator __last,
@@ -31528,7 +31487,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  if (*__first == __old_value)
    *__first = __new_value;
     }
-# 4969 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 4969 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Predicate, typename _Tp>
     void
     replace_if(_ForwardIterator __first, _ForwardIterator __last,
@@ -31547,7 +31506,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  if (__pred(*__first))
    *__first = __new_value;
     }
-# 5001 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5001 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Generator>
     void
     generate(_ForwardIterator __first, _ForwardIterator __last,
@@ -31562,7 +31521,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       for (; __first != __last; ++__first)
  *__first = __gen();
     }
-# 5032 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5032 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _OutputIterator, typename _Size, typename _Generator>
     _OutputIterator
     generate_n(_OutputIterator __first, _Size __n, _Generator __gen)
@@ -31577,7 +31536,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  *__first = __gen();
       return __first;
     }
-# 5069 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5069 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator>
     inline _OutputIterator
     unique_copy(_InputIterator __first, _InputIterator __last,
@@ -31597,7 +31556,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     std::__iterator_category(__first),
     std::__iterator_category(__result));
     }
-# 5108 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5108 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator, typename _OutputIterator,
     typename _BinaryPredicate>
     inline _OutputIterator
@@ -31617,7 +31576,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     std::__iterator_category(__first),
     std::__iterator_category(__result));
     }
-# 5140 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5140 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator>
     inline void
     random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -31631,7 +31590,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
    std::iter_swap(__i, __first + (std::rand() % ((__i - __first) + 1)));
     }
-# 5168 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5168 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator, typename _RandomNumberGenerator>
     void
     random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -31651,7 +31610,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
  std::iter_swap(__i, __first + __rand((__i - __first) + 1));
     }
-# 5204 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5204 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Predicate>
     inline _ForwardIterator
     partition(_ForwardIterator __first, _ForwardIterator __last,
@@ -31667,7 +31626,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__partition(__first, __last, __pred,
          std::__iterator_category(__first));
     }
-# 5238 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5238 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator>
     inline void
     partial_sort(_RandomAccessIterator __first,
@@ -31687,7 +31646,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__heap_select(__first, __middle, __last);
       std::sort_heap(__first, __middle);
     }
-# 5277 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5277 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     partial_sort(_RandomAccessIterator __first,
@@ -31709,7 +31668,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__heap_select(__first, __middle, __last, __comp);
       std::sort_heap(__first, __middle, __comp);
     }
-# 5315 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5315 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator>
     inline void
     nth_element(_RandomAccessIterator __first, _RandomAccessIterator __nth,
@@ -31731,7 +31690,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__introselect(__first, __nth, __last,
     std::__lg(__last - __first) * 2);
     }
-# 5354 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5354 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     nth_element(_RandomAccessIterator __first, _RandomAccessIterator __nth,
@@ -31754,7 +31713,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       std::__introselect(__first, __nth, __last,
     std::__lg(__last - __first) * 2, __comp);
     }
-# 5392 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5392 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator>
     inline void
     sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -31775,7 +31734,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    std::__final_insertion_sort(__first, __last);
  }
     }
-# 5428 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5428 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -31798,7 +31757,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    std::__final_insertion_sort(__first, __last, __comp);
  }
     }
-# 5469 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5469 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator>
     _OutputIterator
@@ -31839,7 +31798,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2, std::copy(__first1, __last1,
           __result));
     }
-# 5532 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5532 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _Compare>
     _OutputIterator
@@ -31881,7 +31840,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2, std::copy(__first1, __last1,
           __result));
     }
-# 5592 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5592 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator>
     inline void
     stable_sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
@@ -31905,7 +31864,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  std::__stable_sort_adaptive(__first, __last, __buf.begin(),
         _DistanceType(__buf.size()));
     }
-# 5634 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5634 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _RandomAccessIterator, typename _Compare>
     inline void
     stable_sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
@@ -31932,7 +31891,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  std::__stable_sort_adaptive(__first, __last, __buf.begin(),
         _DistanceType(__buf.size()), __comp);
     }
-# 5680 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5680 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator>
     _OutputIterator
@@ -31980,7 +31939,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2, std::copy(__first1, __last1,
           __result));
     }
-# 5747 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5747 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _Compare>
     _OutputIterator
@@ -32030,7 +31989,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2, std::copy(__first1, __last1,
           __result));
     }
-# 5814 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5814 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator>
     _OutputIterator
@@ -32067,7 +32026,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return __result;
     }
-# 5871 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5871 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _Compare>
     _OutputIterator
@@ -32106,7 +32065,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return __result;
     }
-# 5929 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5929 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator>
     _OutputIterator
@@ -32145,7 +32104,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return std::copy(__first1, __last1, __result);
     }
-# 5990 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 5990 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _Compare>
     _OutputIterator
@@ -32186,7 +32145,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    }
       return std::copy(__first1, __last1, __result);
     }
-# 6048 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6048 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator>
     _OutputIterator
@@ -32232,7 +32191,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2, std::copy(__first1,
           __last1, __result));
     }
-# 6114 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6114 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _OutputIterator, typename _Compare>
     _OutputIterator
@@ -32281,7 +32240,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::copy(__first2, __last2,
          std::copy(__first1, __last1, __result));
     }
-# 6171 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6171 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator>
     _ForwardIterator
     min_element(_ForwardIterator __first, _ForwardIterator __last)
@@ -32300,7 +32259,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __result = __first;
       return __result;
     }
-# 6199 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6199 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Compare>
     _ForwardIterator
     min_element(_ForwardIterator __first, _ForwardIterator __last,
@@ -32321,7 +32280,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __result = __first;
       return __result;
     }
-# 6227 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6227 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator>
     _ForwardIterator
     max_element(_ForwardIterator __first, _ForwardIterator __last)
@@ -32340,7 +32299,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __result = __first;
       return __result;
     }
-# 6255 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
+# 6255 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algo.h" 3
   template<typename _ForwardIterator, typename _Compare>
     _ForwardIterator
     max_element(_ForwardIterator __first, _ForwardIterator __last,
@@ -32363,14 +32322,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 2 3
-# 221 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/algorithm" 2 3
+# 221 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
-# 148 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 148 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -32404,7 +32363,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
     denorm_present = 1
   };
-# 192 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 192 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
   struct __numeric_limits_base
   {
 
@@ -32418,7 +32377,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     static const int digits10 = 0;
-# 213 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 213 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
     static const bool is_signed = false;
 
 
@@ -32497,7 +32456,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     static const float_round_style round_style =
           round_toward_zero;
   };
-# 303 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 303 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
   template<typename _Tp>
     struct numeric_limits : public __numeric_limits_base
     {
@@ -32509,7 +32468,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       static _Tp
       max() throw() { return static_cast<_Tp>(0); }
-# 324 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 324 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
       static _Tp
       epsilon() throw() { return static_cast<_Tp>(0); }
 
@@ -32537,7 +32496,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       static _Tp
       denorm_min() throw() { return static_cast<_Tp>(0); }
     };
-# 370 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 370 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
   template<>
     struct numeric_limits<bool>
     {
@@ -32877,7 +32836,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       static const float_round_style round_style
        = round_toward_zero;
     };
-# 852 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
+# 852 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 3
   template<>
     struct numeric_limits<short>
     {
@@ -33650,20 +33609,56 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 223 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 3
+# 223 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 3
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 2 3
-# 224 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
+# 34 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/syslimits.h" 1 3 4
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+
+
+
+
+
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
+# 169 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 3 4
+# 1 "/usr/include/limits.h" 1 3 4
+# 143 "/usr/include/limits.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4
+# 160 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4
+# 38 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4
+# 1 "/usr/include/linux/limits.h" 1 3 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4
+# 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
+# 144 "/usr/include/limits.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 1 3 4
+# 148 "/usr/include/limits.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 1 3 4
+# 33 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
+# 34 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
+# 152 "/usr/include/limits.h" 2 3 4
+# 170 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 2 3 4
+# 8 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/syslimits.h" 2 3 4
+# 35 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 2 3 4
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/climits" 2 3
+# 224 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
+
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
 
 
 # 1 "/usr/include/string.h" 1 3 4
@@ -33673,7 +33668,7 @@ extern "C" {
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
 # 33 "/usr/include/string.h" 2 3 4
 
 
@@ -34089,8 +34084,8 @@ extern "C++" const char *basename (const char *__filename)
      throw () __asm ("basename") __attribute__ ((__nonnull__ (1)));
 # 658 "/usr/include/string.h" 3 4
 }
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 2 3
-# 73 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 2 3
+# 73 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -34117,18 +34112,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::strpbrk;
   using ::strrchr;
   using ::strstr;
-# 122 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+# 122 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
 
 }
-# 226 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 2
-# 302 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 226 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 2
+# 302 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
  class half;
 
 
 
  namespace detail
  {
-# 321 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 321 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<bool,typename T,typename> struct conditional { typedef T type; };
   template<typename T,typename F> struct conditional<false,T,F> { typedef F type; };
 
@@ -34145,7 +34140,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<> struct is_float<float> : true_type {};
   template<> struct is_float<double> : true_type {};
   template<> struct is_float<long double> : true_type {};
-# 350 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 350 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   typedef unsigned short uint16;
 
 
@@ -34231,7 +34226,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename T,typename U> struct result : enable<expr,T,U> {};
   template<> struct result<half,half> { typedef half type; };
-# 444 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 444 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T> bool builtin_isinf(T arg)
   {
 
@@ -34272,7 +34267,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return arg < T() || (arg == T() && T(1)/arg < T());
 
   }
-# 494 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 494 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<std::float_round_style R> uint16 float2half_impl(float value, true_type)
   {
 
@@ -34747,7 +34742,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename,typename> struct binary_specialized;
   template<typename,typename,std::float_round_style> struct half_caster;
  }
-# 989 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 989 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
  class half
  {
   friend struct detail::functions;
@@ -34833,7 +34828,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
                     return *this;
                 }
-# 1097 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1097 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   half& operator++() { return *this += 1.0f; }
 
 
@@ -34976,34 +34971,34 @@ namespace std __attribute__ ((__visibility__ ("default")))
         xip_fpo_clears(xop, yop, (xip_fpo_ptr)0);
         return res;
     }
-# 1260 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1260 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
  namespace detail
  {
 
   struct functions
   {
-# 1273 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1273 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static half plus(T1 x, T2 y) { return binary_operator(xip_fpo_add, x, y); }
    static float plus(float x, half y) { return xil_fpo_add_flt(x,y); }
    static float plus(half x, float y) { return xil_fpo_add_flt(x,y); }
    static double plus(double x, half y) { return xil_fpo_add_d(x,y); }
    static double plus(half x, double y) { return xil_fpo_add_d(x,y); }
-# 1289 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1289 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static half minus(T1 x, T2 y) { return binary_operator(xip_fpo_sub, x, y); }
    static float minus(float x, half y) { return xil_fpo_sub_flt(x,y); }
    static float minus(half x, float y) { return xil_fpo_sub_flt(x,y); }
    static double minus(double x, half y) { return xil_fpo_sub_d(x,y); }
    static double minus(half x, double y) { return xil_fpo_sub_d(x,y); }
-# 1305 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1305 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static half multiplies(T1 x, T2 y) { return binary_operator(xip_fpo_mul, x, y); }
    static float multiplies(float x, half y) { return xil_fpo_mul_flt(x,y); }
    static float multiplies(half x, float y) { return xil_fpo_mul_flt(x,y); }
    static double multiplies(double x, half y) { return xil_fpo_mul_d(x,y); }
    static double multiplies(half x, double y) { return xil_fpo_mul_d(x,y); }
-# 1321 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1321 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static half divides(T1 x, T2 y) { return binary_operator(xip_fpo_div, x, y); }
    static float divides(float x, half y) { return xil_fpo_div_flt(x,y); }
@@ -35467,7 +35462,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
    static long lrint(half arg) { return detail::half2int<half::round_style,long>(arg.data_); }
-# 1801 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1801 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
    static half frexp(half arg, int *exp)
    {
     unsigned int m = arg.data_ & 0x7FFF;
@@ -35657,42 +35652,42 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
    static bool signbit(half arg) { return (arg.data_&0x8000) != 0; }
-# 1999 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 1999 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool isequal(T1 x, T2 y) { return binary_operator_compare(xip_fpo_equal, x, y); }
    static bool isequal(float x, half y) { return xil_fpo_equal_flt(x,y); }
    static bool isequal(half x, float y) { return xil_fpo_equal_flt(x,y); }
    static bool isequal(double x, half y) { return xil_fpo_equal_d(x,y); }
    static bool isequal(half x, double y) { return xil_fpo_equal_d(x,y); }
-# 2015 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2015 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool isnotequal(T1 x, T2 y) { return binary_operator_compare(xip_fpo_notequal, x, y); }
    static bool isnotequal(float x, half y) { return xil_fpo_notequal_flt(x,y); }
    static bool isnotequal(half x, float y) { return xil_fpo_notequal_flt(x,y); }
    static bool isnotequal(double x, half y) { return xil_fpo_notequal_d(x,y); }
    static bool isnotequal(half x, double y) { return xil_fpo_notequal_d(x,y); }
-# 2032 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2032 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool isgreater(T1 x, T2 y) { return binary_operator_compare(xip_fpo_greater, x, y); }
    static bool isgreater(float x, half y) { return xil_fpo_greater_flt(x,y); }
    static bool isgreater(half x, float y) { return xil_fpo_greater_flt(x,y); }
    static bool isgreater(double x, half y) { return xil_fpo_greater_d(x,y); }
    static bool isgreater(half x, double y) { return xil_fpo_greater_d(x,y); }
-# 2049 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2049 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool isgreaterequal(T1 x, T2 y) { return binary_operator_compare(xip_fpo_greaterequal, x, y); }
    static bool isgreaterequal(float x, half y) { return xil_fpo_greaterequal_flt(x,y); }
    static bool isgreaterequal(half x, float y) { return xil_fpo_greaterequal_flt(x,y); }
    static bool isgreaterequal(double x, half y) { return xil_fpo_greaterequal_d(x,y); }
    static bool isgreaterequal(half x, double y) { return xil_fpo_greaterequal_d(x,y); }
-# 2066 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2066 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool isless(T1 x, T2 y) { return binary_operator_compare(xip_fpo_less, x, y); }
    static bool isless(float x, half y) { return xil_fpo_less_flt(x,y); }
    static bool isless(half x, float y) { return xil_fpo_less_flt(x,y); }
    static bool isless(double x, half y) { return xil_fpo_less_d(x,y); }
    static bool isless(half x, double y) { return xil_fpo_less_d(x,y); }
-# 2083 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2083 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
             template<typename T1, typename T2>
    static bool islessequal(T1 x, T2 y) { return binary_operator_compare(xip_fpo_lessequal, x, y); }
    static bool islessequal(float x, half y) { return xil_fpo_lessequal_flt(x,y); }
@@ -35867,7 +35862,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    static half cast(half arg) { return arg; }
   };
   template<std::float_round_style R> struct half_caster<half,expr,R> : public half_caster<half,half,R> {};
-# 2269 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2269 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename enable<bool,T,U>::type operator==(T x, U y) { return functions::isequal(x, y); }
 
 
@@ -35904,13 +35899,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename T,typename U> typename enable<bool,T,U>::type operator>=(T x, U y) { return functions::isgreaterequal(x, y); }
-# 2317 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2317 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename enable<half,T,U>::type operator+(T x, U y) { return functions::plus(x, y); }
-# 2327 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2327 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename enable<half,T,U>::type operator-(T x, U y) { return functions::minus(x, y); }
-# 2337 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2337 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename enable<half,T,U>::type operator*(T x, U y) { return functions::multiplies(x, y); }
-# 2347 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2347 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename enable<half,T,U>::type operator/(T x, U y) { return functions::divides(x, y); }
 
 
@@ -35923,7 +35918,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename T> typename enable<T,T>::type operator-(T arg) { return unary_specialized<T>::negate(arg); }
-# 2368 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2368 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename charT,typename traits> typename enable<std::basic_ostream<charT,traits>&,T>::type
    operator<<(std::basic_ostream<charT,traits> &out, T arg) { return functions::write(out, arg); }
 
@@ -35933,7 +35928,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename charT,typename traits> std::basic_istream<charT,traits>&
    operator>>(std::basic_istream<charT,traits> &in, half &arg) { return functions::read(in, arg); }
-# 2386 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2386 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline half abs(half arg) { return unary_specialized<half>::fabs(arg); }
   inline expr abs(expr arg) { return unary_specialized<expr>::fabs(arg); }
 
@@ -36043,7 +36038,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   inline half nanh(const char *arg) { return functions::nanh(arg); }
-# 2504 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2504 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline expr exp(half arg) { return functions::exp(arg); }
   inline expr exp(expr arg) { return functions::exp(arg); }
 
@@ -36088,7 +36083,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline expr log2(half arg) { return functions::log2(arg); }
   inline expr log2(expr arg) { return functions::log2(arg); }
-# 2560 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2560 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline half sqrt(half arg) { return math_function_1arg(xip_fpo_sqrt, arg); }
 
   inline expr sqrt(expr arg) { return functions::sqrt(arg); }
@@ -36125,7 +36120,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
                 inline expr powr(expr base, expr exp) { return functions::powr(base, exp); }
                 inline expr pown(half base, int exp) { return functions::pown(base, exp); }
                 inline expr pown(expr base, int exp) { return functions::pown(base, exp); }
-# 2605 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2605 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline expr sin(half arg) { return functions::sin(arg); }
   inline expr sin(expr arg) { return functions::sin(arg); }
 
@@ -36173,7 +36168,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   inline expr atan2(half x, expr y) { return functions::atan2(x, y); }
   inline expr atan2(expr x, half y) { return functions::atan2(x, y); }
   inline expr atan2(expr x, expr y) { return functions::atan2(x, y); }
-# 2661 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2661 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline expr sinh(half arg) { return functions::sinh(arg); }
   inline expr sinh(expr arg) { return functions::sinh(arg); }
 
@@ -36211,7 +36206,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline expr atanh(half arg) { return functions::atanh(arg); }
   inline expr atanh(expr arg) { return functions::atanh(arg); }
-# 2707 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2707 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline expr erf(half arg) { return functions::erf(arg); }
   inline expr erf(expr arg) { return functions::erf(arg); }
 
@@ -36237,7 +36232,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline expr tgamma(half arg) { return functions::tgamma(arg); }
   inline expr tgamma(expr arg) { return functions::tgamma(arg); }
-# 2741 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2741 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline half ceil(half arg) { return functions::ceil(arg); }
   inline half ceil(expr arg) { return functions::ceil(arg); }
 
@@ -36289,7 +36284,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline long lrint(half arg) { return functions::lrint(arg); }
   inline long lrint(expr arg) { return functions::lrint(arg); }
-# 2817 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2817 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline half frexp(half arg, int *exp) { return functions::frexp(arg, exp); }
   inline half frexp(expr arg, int *exp) { return functions::frexp(arg, exp); }
 
@@ -36324,7 +36319,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline half scalbln(half arg, long exp) { return functions::scalbln(arg, exp); }
   inline half scalbln(expr arg, long exp) { return functions::scalbln(arg, exp); }
-# 2859 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2859 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline int ilogb(half arg) { return functions::ilogb(arg); }
   inline int ilogb(expr arg) { return functions::ilogb(arg); }
 
@@ -36362,7 +36357,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   inline half copysign(half x, expr y) { return functions::copysign(x, y); }
   inline half copysign(expr x, half y) { return functions::copysign(x, y); }
   inline half copysign(expr x, expr y) { return functions::copysign(x, y); }
-# 2910 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2910 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline int fpclassify(half arg) { return functions::fpclassify(arg); }
   inline int fpclassify(expr arg) { return functions::fpclassify(arg); }
 
@@ -36405,7 +36400,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   inline bool signbit(half arg) { return functions::signbit(arg); }
   inline bool signbit(expr arg) { return functions::signbit(arg); }
-# 2963 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 2963 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   inline bool isgreater(half x, half y) { return functions::isgreater(x, y); }
   inline bool isgreater(half x, expr y) { return functions::isgreater(x, y); }
   inline bool isgreater(expr x, half y) { return functions::isgreater(x, y); }
@@ -36465,9 +36460,9 @@ namespace std __attribute__ ((__visibility__ ("default")))
   inline bool isunordered(half x, expr y) { return functions::isunordered(x, y); }
   inline bool isunordered(expr x, half y) { return functions::isunordered(x, y); }
   inline bool isunordered(expr x, expr y) { return functions::isunordered(x, y); }
-# 3040 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 3040 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,typename U> typename half_caster<T,U>::type half_cast(U arg) { return half_caster<T,U>::cast(arg); }
-# 3057 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 3057 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   template<typename T,std::float_round_style R,typename U> typename half_caster<T,U,R>::type half_cast(U arg)
    { return half_caster<T,U,R>::cast(arg); }
 
@@ -36485,7 +36480,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  using detail::operator/;
  using detail::operator<<;
  using detail::operator>>;
-# 3135 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 3135 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
   using detail::fpclassify;
   using detail::isfinite;
   using detail::isinf;
@@ -36590,9 +36585,9 @@ namespace std
 
   static half denorm_min() throw() { return half(detail::binary, 0x0001); }
  };
-# 3258 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 3258 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
 }
-# 3274 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h"
+# 3274 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h"
 extern half half_nan(const char *tagp);
 
 
@@ -36633,7 +36628,6 @@ extern half half_log10(half x);
 extern half half_log2(half x);
 extern half half_logb(half x);
 extern half half_log1p(half x);
-extern int half_ilogb(half x);
 extern half half_exp(half x);
 extern half half_exp10(half x);
 extern half half_exp2(half x);
@@ -36664,16 +36658,16 @@ extern half half_fmod(half x, half y);
 extern half half_remainder(half x, half y);
 extern half half_remquo(half x, half y, int* quo);
 extern half half_divide(half x, half y);
-# 75 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h" 1
-# 97 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
-# 98 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 1
-# 82 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/hls_half.h" 1
-# 83 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
-# 107 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 75 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h" 1
+# 97 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/limits.h" 1 3 4
+# 98 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 1
+# 82 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/hls_half.h" 1
+# 83 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
+# 107 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
 namespace AESL_std {
     template <class DataType>
     DataType inline min(DataType a, DataType b) {
@@ -36690,33 +36684,33 @@ namespace AESL_std {
     }
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 1 3
-# 43 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 1 3
+# 43 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 3
        
-# 44 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 3
+# 44 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 3
 
 # 1 "/usr/include/assert.h" 1 3 4
-# 45 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 2 3
-# 124 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
+# 45 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cassert" 2 3
+# 124 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
 
 
 
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
-# 129 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstring" 3
+# 129 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
+# 41 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
        
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-# 130 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 42 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+# 130 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
        
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-# 48 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 48 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -36725,7 +36719,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct _Resetiosflags { ios_base::fmtflags _M_mask; };
-# 64 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 64 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   inline _Resetiosflags
   resetiosflags(ios_base::fmtflags __mask)
   { return { __mask }; }
@@ -36748,7 +36742,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct _Setiosflags { ios_base::fmtflags _M_mask; };
-# 94 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 94 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   inline _Setiosflags
   setiosflags(ios_base::fmtflags __mask)
   { return { __mask }; }
@@ -36771,7 +36765,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct _Setbase { int _M_base; };
-# 125 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 125 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   inline _Setbase
   setbase(int __base)
   { return { __base }; }
@@ -36801,7 +36795,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _CharT>
     struct _Setfill { _CharT _M_c; };
-# 162 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 162 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   template<typename _CharT>
     inline _Setfill<_CharT>
     setfill(_CharT __c)
@@ -36825,7 +36819,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct _Setprecision { int _M_n; };
-# 193 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 193 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   inline _Setprecision
   setprecision(int __n)
   { return { __n }; }
@@ -36848,7 +36842,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   struct _Setw { int _M_n; };
-# 223 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 223 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   inline _Setw
   setw(int __n)
   { return { __n }; }
@@ -36868,7 +36862,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __os.width(__f._M_n);
       return __os;
     }
-# 320 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 320 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
   extern template ostream& operator<<(ostream&, _Setfill<char>);
   extern template ostream& operator<<(ostream&, _Setiosflags);
   extern template ostream& operator<<(ostream&, _Resetiosflags);
@@ -36900,11 +36894,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 131 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 1 3
-# 37 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 131 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 1 3
+# 37 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
        
-# 38 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 38 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
 
 
 
@@ -36912,7 +36906,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
-# 59 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 59 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
     {
@@ -36939,18 +36933,18 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __string_type _M_string;
 
     public:
-# 93 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 93 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
       : __streambuf_type(), _M_mode(__mode), _M_string()
       { }
-# 106 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 106 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_stringbuf(const __string_type& __str,
         ios_base::openmode __mode = ios_base::in | ios_base::out)
       : __streambuf_type(), _M_mode(), _M_string(__str.data(), __str.size())
       { _M_stringbuf_init(__mode); }
-# 121 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 121 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       __string_type
       str() const
       {
@@ -36967,7 +36961,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __ret = _M_string;
  return __ret;
       }
-# 145 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 145 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       void
       str(const __string_type& __s)
       {
@@ -37008,7 +37002,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       virtual int_type
       overflow(int_type __c = traits_type::eof());
-# 197 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 197 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       virtual __streambuf_type*
       setbuf(char_type* __s, streamsize __n)
       {
@@ -37062,7 +37056,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       void
       _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
     };
-# 262 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 262 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
     class basic_istringstream : public basic_istream<_CharT, _Traits>
     {
@@ -37086,12 +37080,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __stringbuf_type _M_stringbuf;
 
     public:
-# 298 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 298 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_istringstream(ios_base::openmode __mode = ios_base::in)
       : __istream_type(), _M_stringbuf(__mode | ios_base::in)
       { this->init(&_M_stringbuf); }
-# 316 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 316 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_istringstream(const __string_type& __str,
      ios_base::openmode __mode = ios_base::in)
@@ -37106,7 +37100,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       ~basic_istringstream()
       { }
-# 338 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 338 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       __stringbuf_type*
       rdbuf() const
       { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
@@ -37129,7 +37123,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       str(const __string_type& __s)
       { _M_stringbuf.str(__s); }
     };
-# 372 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 372 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
   template <typename _CharT, typename _Traits, typename _Alloc>
     class basic_ostringstream : public basic_ostream<_CharT, _Traits>
     {
@@ -37153,12 +37147,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __stringbuf_type _M_stringbuf;
 
     public:
-# 408 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 408 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_ostringstream(ios_base::openmode __mode = ios_base::out)
       : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
       { this->init(&_M_stringbuf); }
-# 426 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 426 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_ostringstream(const __string_type& __str,
      ios_base::openmode __mode = ios_base::out)
@@ -37173,7 +37167,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       ~basic_ostringstream()
       { }
-# 448 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 448 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       __stringbuf_type*
       rdbuf() const
       { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
@@ -37196,7 +37190,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       str(const __string_type& __s)
       { _M_stringbuf.str(__s); }
     };
-# 482 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 482 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
   template <typename _CharT, typename _Traits, typename _Alloc>
     class basic_stringstream : public basic_iostream<_CharT, _Traits>
     {
@@ -37220,12 +37214,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __stringbuf_type _M_stringbuf;
 
     public:
-# 516 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 516 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
       : __iostream_type(), _M_stringbuf(__m)
       { this->init(&_M_stringbuf); }
-# 532 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 532 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       explicit
       basic_stringstream(const __string_type& __str,
     ios_base::openmode __m = ios_base::out | ios_base::in)
@@ -37240,7 +37234,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       ~basic_stringstream()
       { }
-# 554 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+# 554 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
       __stringbuf_type*
       rdbuf() const
       { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
@@ -37267,10 +37261,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 1 3
-# 39 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 1 3
+# 39 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
        
-# 40 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
+# 40 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -37334,7 +37328,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const char_type __conv = traits_type::to_char_type(__c);
       if (!__testput)
  {
-# 112 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
+# 112 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
    const __size_type __opt_len = std::max(__size_type(2 * __capacity),
        __size_type(512));
    const __size_type __len = std::min(__opt_len, __max_size);
@@ -37512,8 +37506,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 581 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
-# 132 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h" 2
+# 581 "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
+# 132 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h" 2
 
 template<int _AP_W, bool _AP_S, bool _AP_C = _AP_W <= 64> class ap_private;
 namespace ap_private_ops {
@@ -37552,7 +37546,7 @@ static inline unsigned CountLeadingZeros_32(uint32_t Value) {
     if (Value == 0) return 32;
 
     Count = __builtin_clz(Value);
-# 183 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 183 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     return Count;
 }
 
@@ -37568,7 +37562,7 @@ static inline unsigned CountLeadingZeros_64(uint64_t Value) {
     if (!Value) return 64;
 
     Count = __builtin_clzll(Value);
-# 227 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 227 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     return Count;
 }
 
@@ -37579,7 +37573,7 @@ static inline unsigned CountLeadingZeros_64(uint64_t Value) {
 static inline unsigned CountTrailingZeros_64(uint64_t Value) {
 
     return (Value != 0) ? __builtin_ctzll(Value) : 64;
-# 247 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 247 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
 }
 
 
@@ -37640,7 +37634,7 @@ static inline std::string oct2Bin(char oct) {
         }
     }
 
-    ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 307, __PRETTY_FUNCTION__));
+    ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 307, __PRETTY_FUNCTION__));
     return "";
 }
 
@@ -37707,7 +37701,7 @@ static inline std::string hex2Bin(char hex) {
             return "1111";
         }
     }
-    ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 374, __PRETTY_FUNCTION__));
+    ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 374, __PRETTY_FUNCTION__));
     return "";
 }
 
@@ -37717,7 +37711,7 @@ static inline uint32_t decode_digit(char cdigit, int radix) {
 
 
             if (!(((cdigit) >= '0' && (cdigit) <= '9') || ((cdigit) >= 'a' && (cdigit) <= 'f') || ((cdigit) >= 'A' && (cdigit) <= 'F')))
-                ((0 && "Invalid hex digit in string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid hex digit in string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 384, __PRETTY_FUNCTION__));
+                ((0 && "Invalid hex digit in string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid hex digit in string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 384, __PRETTY_FUNCTION__));
             if (((cdigit) >= '0' && (cdigit) <= '9'))
                 digit = cdigit - '0';
             else if (cdigit >= 'a')
@@ -37725,11 +37719,11 @@ static inline uint32_t decode_digit(char cdigit, int radix) {
             else if (cdigit >= 'A')
                 digit = cdigit - 'A' + 10;
             else
-                ((0 && "huh? we shouldn't get here") ? static_cast<void> (0) : __assert_fail ("0 && \"huh? we shouldn't get here\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 392, __PRETTY_FUNCTION__));
+                ((0 && "huh? we shouldn't get here") ? static_cast<void> (0) : __assert_fail ("0 && \"huh? we shouldn't get here\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 392, __PRETTY_FUNCTION__));
         } else if (((cdigit) >= '0' && (cdigit) <= '9')) {
             digit = cdigit - '0';
         } else {
-            ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 396, __PRETTY_FUNCTION__));
+            ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 396, __PRETTY_FUNCTION__));
         }
 
 
@@ -37820,7 +37814,7 @@ static inline std::string parseString(const std::string& input, int& radix) {
 
 
 
-        ((startPos <= expPos) ? static_cast<void> (0) : __assert_fail ("startPos <= expPos", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 487, __PRETTY_FUNCTION__));
+        ((startPos <= expPos) ? static_cast<void> (0) : __assert_fail ("startPos <= expPos", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 487, __PRETTY_FUNCTION__));
 
         for (size_t i=startPos; i<expPos; ++i) {
             if(radix == 16) {
@@ -37977,7 +37971,7 @@ static inline bool sub(uint64_t *dest, const uint64_t *x, const uint64_t *y,
     }
     return borrow;
 }
-# 653 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 653 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
 static inline uint64_t mul_1(uint64_t dest[], const uint64_t x[], uint32_t len, uint64_t y) {
 
     uint64_t ly = y & 0xffffffffULL, hy = (y) >> 32;
@@ -38016,9 +38010,9 @@ static inline uint64_t mul_1(uint64_t dest[], const uint64_t x[], uint32_t len, 
 
 static inline void mul(uint64_t dest[], const uint64_t x[], uint32_t xlen, const uint64_t y[],
                 uint32_t ylen, uint32_t destlen) {
-    ((xlen > 0) ? static_cast<void> (0) : __assert_fail ("xlen > 0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 691, __PRETTY_FUNCTION__));
-    ((ylen > 0) ? static_cast<void> (0) : __assert_fail ("ylen > 0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 692, __PRETTY_FUNCTION__));
-    ((destlen >= xlen + ylen) ? static_cast<void> (0) : __assert_fail ("destlen >= xlen + ylen", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 693, __PRETTY_FUNCTION__));
+    ((xlen > 0) ? static_cast<void> (0) : __assert_fail ("xlen > 0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 691, __PRETTY_FUNCTION__));
+    ((ylen > 0) ? static_cast<void> (0) : __assert_fail ("ylen > 0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 692, __PRETTY_FUNCTION__));
+    ((destlen >= xlen + ylen) ? static_cast<void> (0) : __assert_fail ("destlen >= xlen + ylen", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 693, __PRETTY_FUNCTION__));
     if(xlen < destlen)
         dest[xlen] = mul_1(dest, x, xlen, y[0]);
     for (uint32_t i = 1; i < ylen; ++i) {
@@ -38055,16 +38049,16 @@ static inline void mul(uint64_t dest[], const uint64_t x[], uint32_t xlen, const
 
 static inline void KnuthDiv(uint32_t *u, uint32_t *v, uint32_t *q, uint32_t* r,
                      uint32_t m, uint32_t n) {
-    ((u && "Must provide dividend") ? static_cast<void> (0) : __assert_fail ("u && \"Must provide dividend\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 730, __PRETTY_FUNCTION__));
-    ((v && "Must provide divisor") ? static_cast<void> (0) : __assert_fail ("v && \"Must provide divisor\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 731, __PRETTY_FUNCTION__));
-    ((q && "Must provide quotient") ? static_cast<void> (0) : __assert_fail ("q && \"Must provide quotient\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 732, __PRETTY_FUNCTION__));
-    ((u != v && u != q && v != q && "Must us different memory") ? static_cast<void> (0) : __assert_fail ("u != v && u != q && v != q && \"Must us different memory\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 733, __PRETTY_FUNCTION__));
-    ((n>1 && "n must be > 1") ? static_cast<void> (0) : __assert_fail ("n>1 && \"n must be > 1\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 734, __PRETTY_FUNCTION__));
+    ((u && "Must provide dividend") ? static_cast<void> (0) : __assert_fail ("u && \"Must provide dividend\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 730, __PRETTY_FUNCTION__));
+    ((v && "Must provide divisor") ? static_cast<void> (0) : __assert_fail ("v && \"Must provide divisor\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 731, __PRETTY_FUNCTION__));
+    ((q && "Must provide quotient") ? static_cast<void> (0) : __assert_fail ("q && \"Must provide quotient\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 732, __PRETTY_FUNCTION__));
+    ((u != v && u != q && v != q && "Must us different memory") ? static_cast<void> (0) : __assert_fail ("u != v && u != q && v != q && \"Must us different memory\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 733, __PRETTY_FUNCTION__));
+    ((n>1 && "n must be > 1") ? static_cast<void> (0) : __assert_fail ("n>1 && \"n must be > 1\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 734, __PRETTY_FUNCTION__));
 
 
 
     uint64_t b = uint64_t(1) << 32;
-# 754 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 754 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     uint32_t shift = CountLeadingZeros_32(v[n-1]);
     uint32_t v_carry = 0;
     uint32_t u_carry = 0;
@@ -38090,7 +38084,7 @@ static inline void KnuthDiv(uint32_t *u, uint32_t *v, uint32_t *q, uint32_t* r,
 
     int j = m;
     do {
-# 788 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 788 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         uint64_t dividend = ((uint64_t(u[j+n]) << 32) + u[j+n-1]);
 
         uint64_t qp = dividend / v[n-1];
@@ -38129,7 +38123,7 @@ static inline void KnuthDiv(uint32_t *u, uint32_t *v, uint32_t *q, uint32_t* r,
 
 
         }
-# 834 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 834 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         if (isNeg) {
             bool carry = true;
             for (uint32_t i = 0; i <= m+n; ++i) {
@@ -38166,7 +38160,7 @@ static inline void KnuthDiv(uint32_t *u, uint32_t *v, uint32_t *q, uint32_t* r,
 
 
     } while (--j >= 0);
-# 878 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 878 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     if (r) {
 
 
@@ -38194,7 +38188,7 @@ template<int _AP_W, bool _AP_S>
 void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
             const ap_private<_AP_W, _AP_S>& RHS, uint32_t rhsWords,
             ap_private<_AP_W, _AP_S> *Quotient, ap_private<_AP_W, _AP_S> *Remainder) {
-    ((lhsWords >= rhsWords && "Fractional result") ? static_cast<void> (0) : __assert_fail ("lhsWords >= rhsWords && \"Fractional result\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 905, __PRETTY_FUNCTION__));
+    ((lhsWords >= rhsWords && "Fractional result") ? static_cast<void> (0) : __assert_fail ("lhsWords >= rhsWords && \"Fractional result\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 905, __PRETTY_FUNCTION__));
     enum {APINT_BITS_PER_WORD=64};
 
 
@@ -38267,7 +38261,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
 
 
 
-    ((n != 0 && "Divide by zero?") ? static_cast<void> (0) : __assert_fail ("n != 0 && \"Divide by zero?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 978, __PRETTY_FUNCTION__));
+    ((n != 0 && "Divide by zero?") ? static_cast<void> (0) : __assert_fail ("n != 0 && \"Divide by zero?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 978, __PRETTY_FUNCTION__));
     if (n == 1) {
         uint32_t divisor = __V[0];
         uint32_t remainder = 0;
@@ -38311,7 +38305,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
                 uint64_t(__Q[0]) | ((uint64_t(__Q[1])) << (APINT_BITS_PER_WORD / 2));
             Quotient->set_VAL(tmp);
         } else {
-            ((!Quotient->isSingleWord() && "Quotient ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Quotient->isSingleWord() && \"Quotient ap_private not large enough\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1022, __PRETTY_FUNCTION__));
+            ((!Quotient->isSingleWord() && "Quotient ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Quotient->isSingleWord() && \"Quotient ap_private not large enough\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1022, __PRETTY_FUNCTION__));
             for (unsigned i = 0; i < lhsWords; ++i)
                 Quotient->set_pVal(i,
                     uint64_t(__Q[i*2]) | ((uint64_t(__Q[i*2+1])) << (APINT_BITS_PER_WORD / 2)));
@@ -38335,7 +38329,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
                 uint64_t(__R[0]) | ((uint64_t(__R[1])) << (APINT_BITS_PER_WORD / 2));
             Remainder->set_VAL(tmp);
         } else {
-            ((!Remainder->isSingleWord() && "Remainder ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Remainder->isSingleWord() && \"Remainder ap_private not large enough\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1046, __PRETTY_FUNCTION__));
+            ((!Remainder->isSingleWord() && "Remainder ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Remainder->isSingleWord() && \"Remainder ap_private not large enough\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1046, __PRETTY_FUNCTION__));
             for (unsigned i = 0; i < rhsWords; ++i)
                 Remainder->set_pVal(i,
                     uint64_t(__R[i*2]) | ((uint64_t(__R[i*2+1])) << (APINT_BITS_PER_WORD / 2)));
@@ -38357,7 +38351,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
             uint64_t RHS,
             ap_private<_AP_W, _AP_S> *Quotient, ap_private<_AP_W, _AP_S> *Remainder) {
     uint32_t rhsWords=1;
-    ((lhsWords >= rhsWords && "Fractional result") ? static_cast<void> (0) : __assert_fail ("lhsWords >= rhsWords && \"Fractional result\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1068, __PRETTY_FUNCTION__));
+    ((lhsWords >= rhsWords && "Fractional result") ? static_cast<void> (0) : __assert_fail ("lhsWords >= rhsWords && \"Fractional result\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1068, __PRETTY_FUNCTION__));
     enum {APINT_BITS_PER_WORD=64};
 
 
@@ -38427,7 +38421,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
 
 
 
-    ((n != 0 && "Divide by zero?") ? static_cast<void> (0) : __assert_fail ("n != 0 && \"Divide by zero?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1138, __PRETTY_FUNCTION__));
+    ((n != 0 && "Divide by zero?") ? static_cast<void> (0) : __assert_fail ("n != 0 && \"Divide by zero?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1138, __PRETTY_FUNCTION__));
     if (n == 1) {
         uint32_t divisor = __V[0];
         uint32_t remainder = 0;
@@ -38471,7 +38465,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
                 uint64_t(__Q[0]) | ((uint64_t(__Q[1])) << (APINT_BITS_PER_WORD / 2));
             Quotient->set_VAL(tmp);
         } else {
-            ((!Quotient->isSingleWord() && "Quotient ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Quotient->isSingleWord() && \"Quotient ap_private not large enough\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1182, __PRETTY_FUNCTION__));
+            ((!Quotient->isSingleWord() && "Quotient ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Quotient->isSingleWord() && \"Quotient ap_private not large enough\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1182, __PRETTY_FUNCTION__));
             for (unsigned i = 0; i < lhsWords; ++i)
                 Quotient->set_pVal(i,
                     uint64_t(__Q[i*2]) | ((uint64_t(__Q[i*2+1])) << (APINT_BITS_PER_WORD / 2)));
@@ -38495,7 +38489,7 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
                 uint64_t(__R[0]) | ((uint64_t(__R[1])) << (APINT_BITS_PER_WORD / 2));
             Remainder->set_VAL(tmp);
         } else {
-            ((!Remainder->isSingleWord() && "Remainder ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Remainder->isSingleWord() && \"Remainder ap_private not large enough\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1206, __PRETTY_FUNCTION__));
+            ((!Remainder->isSingleWord() && "Remainder ap_private not large enough") ? static_cast<void> (0) : __assert_fail ("!Remainder->isSingleWord() && \"Remainder ap_private not large enough\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1206, __PRETTY_FUNCTION__));
             for (unsigned i = 0; i < rhsWords; ++i)
                 Remainder->set_pVal(i,
                     uint64_t(__R[i*2]) | ((uint64_t(__R[i*2+1])) << (APINT_BITS_PER_WORD / 2)));
@@ -38567,7 +38561,7 @@ template<int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2> struct ap_con
         MAX_INT_BITS = (1<<23)-1
 
     };
-# 1317 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1317 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     typedef unsigned long long ap_ulong;
     typedef signed long long ap_slong;
 
@@ -38656,7 +38650,7 @@ public:
 
     enum { BitWidth=_AP_W, _AP_N = 1, };
     ValType VAL;
-# 1414 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1414 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     void check_canary() {}
     void set_canary() {}
 
@@ -38680,14 +38674,14 @@ public:
         return VAL;
     }
     inline const uint64_t* get_pVal() const{
-        ((0 && "invalid usage") ? static_cast<void> (0) : __assert_fail ("0 && \"invalid usage\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1437, __PRETTY_FUNCTION__));
+        ((0 && "invalid usage") ? static_cast<void> (0) : __assert_fail ("0 && \"invalid usage\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1437, __PRETTY_FUNCTION__));
         return 0;
     }
     inline ValType get_pVal(int i) const volatile {
         return VAL;
     }
     inline uint64_t* get_pVal() const volatile {
-        ((0 && "invalid usage") ? static_cast<void> (0) : __assert_fail ("0 && \"invalid usage\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1444, __PRETTY_FUNCTION__));
+        ((0 && "invalid usage") ? static_cast<void> (0) : __assert_fail ("0 && \"invalid usage\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1444, __PRETTY_FUNCTION__));
         return 0;
     }
     inline void set_pVal(int i, uint64_t value) {
@@ -38752,14 +38746,14 @@ private:
                            uint8_t radix) {
 
         (((radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!") ? static_cast<void> (0) : __assert_fail ("(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\"",
- "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-# 1508 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+# 1508 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         ,
  1509
-# 1508 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1508 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         , __PRETTY_FUNCTION__))
                                                    ;
-        ((strStart && "String is null?") ? static_cast<void> (0) : __assert_fail ("strStart && \"String is null?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1510, __PRETTY_FUNCTION__));
+        ((strStart && "String is null?") ? static_cast<void> (0) : __assert_fail ("strStart && \"String is null?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1510, __PRETTY_FUNCTION__));
         uint64_t tmpVAL = VAL;
         bool isNeg = false;
         if (*strStart == '-') {
@@ -38771,13 +38765,13 @@ private:
 
 
                 for (;*strStart; ++strStart) {
-                    (((*strStart=='0'|| *strStart=='1')&&("Wrong binary number")) ? static_cast<void> (0) : __assert_fail ("(*strStart=='0'|| *strStart=='1')&&(\"Wrong binary number\")", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1522, __PRETTY_FUNCTION__));
+                    (((*strStart=='0'|| *strStart=='1')&&("Wrong binary number")) ? static_cast<void> (0) : __assert_fail ("(*strStart=='0'|| *strStart=='1')&&(\"Wrong binary number\")", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1522, __PRETTY_FUNCTION__));
                     tmpVAL <<=1;
                     tmpVAL |= (*strStart-'0');
                 }
                 break;
             case 8:
-# 1536 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1536 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
                 sscanf(strStart,"%lo",&tmpVAL);
 
 
@@ -38788,7 +38782,7 @@ private:
 
                 break;
             case 10:
-# 1554 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1554 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
                 sscanf(strStart,"%lu",&tmpVAL);
 
 
@@ -38799,7 +38793,7 @@ private:
 
                 break;
             case 16:
-# 1572 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1572 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
                 sscanf(strStart,"%lx",&tmpVAL);
 
 
@@ -38810,7 +38804,7 @@ private:
 
                 break;
             default:
-                ((true && "Unknown radix") ? static_cast<void> (0) : __assert_fail ("true && \"Unknown radix\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1582, __PRETTY_FUNCTION__));
+                ((true && "Unknown radix") ? static_cast<void> (0) : __assert_fail ("true && \"Unknown radix\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1582, __PRETTY_FUNCTION__));
 
         }
         VAL = isNeg ? (ValType)(-tmpVAL) : (ValType) (tmpVAL);
@@ -38820,7 +38814,7 @@ private:
 
 
     inline ap_private(const std::string& val, uint8_t radix=2): VAL(0) {
-        ((!val.empty() && "String empty?") ? static_cast<void> (0) : __assert_fail ("!val.empty() && \"String empty?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 1592, __PRETTY_FUNCTION__));
+        ((!val.empty() && "String empty?") ? static_cast<void> (0) : __assert_fail ("!val.empty() && \"String empty?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 1592, __PRETTY_FUNCTION__));
         set_canary();
         fromString(val.c_str(), val.size(), radix);
         check_canary();
@@ -38841,6 +38835,7 @@ private:
 
 public:
     inline ap_private() {
+ clear();
         set_canary();
         clearUnusedBits();
         check_canary();
@@ -38866,7 +38861,7 @@ public:
     inline ap_private(half v) : VAL((ValType)v) { set_canary(); clearUnusedBits(); check_canary(); }
     inline ap_private(float v) : VAL((ValType)v) { set_canary(); clearUnusedBits(); check_canary(); }
     inline ap_private(double v) : VAL((ValType)v) { set_canary(); clearUnusedBits(); check_canary(); }
-# 1651 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 1652 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W1, bool _AP_S1, bool _AP_OPT>
     inline ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>& that) : VAL((ValType)that.get_VAL()) {
         set_canary();
@@ -39110,24 +39105,18 @@ public:
     }
 
     template<int _AP_W1, bool _AP_S1> inline ap_private& operator|=(const ap_private<_AP_W1, _AP_S1>& RHS) {
-        if(_AP_W != _AP_W1)
-            fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int |= ap_[u]int.\n");
         VAL = (ValType)(((uint64_t)VAL)|RHS.get_VAL());
         clearUnusedBits();
         return *this;
     }
 
     template<int _AP_W1, bool _AP_S1> inline ap_private& operator^=(const ap_private<_AP_W1, _AP_S1>& RHS){
-        if(_AP_W != _AP_W1)
-            fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int ^= ap_[u]int.\n");
         VAL = (ValType)(((uint64_t)VAL)^RHS.get_VAL());
         clearUnusedBits();
         return *this;
     }
 
     template<int _AP_W1, bool _AP_S1> inline ap_private& operator*=(const ap_private<_AP_W1, _AP_S1>& RHS){
-        if(_AP_W != _AP_W1)
-            fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int *= ap_[u]int.\n");
         VAL = (ValType)(((uint64_t)VAL)*RHS.get_VAL());
         clearUnusedBits();
         return *this;
@@ -39219,7 +39208,7 @@ public:
     inline ap_private& operator*=(uint64_t RHS){ VAL *= (ValType)RHS; clearUnusedBits(); return *this; }
     inline ap_private& operator+=(uint64_t RHS){ VAL += (ValType)RHS; clearUnusedBits(); return *this;}
     inline ap_private& operator-=(uint64_t RHS){ VAL -= (ValType)RHS; clearUnusedBits(); return *this; }
-# 2012 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2007 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline bool isMinSignedValue() const {
         static const uint64_t min_mask = ~(~0ULL << (_AP_W-1));
         return BitWidth == 1 ? VAL == 1 :
@@ -39331,7 +39320,7 @@ public:
 
     template<bool _AP_S2>
     inline ap_private urem(const ap_private<_AP_W, _AP_S2>& RHS) const {
-        ((RHS.get_VAL() != 0 && "Divide by 0") ? static_cast<void> (0) : __assert_fail ("RHS.get_VAL() != 0 && \"Divide by 0\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2123, __PRETTY_FUNCTION__));
+        ((RHS.get_VAL() != 0 && "Divide by 0") ? static_cast<void> (0) : __assert_fail ("RHS.get_VAL() != 0 && \"Divide by 0\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2118, __PRETTY_FUNCTION__));
         return ap_private(((uint64_t)VAL)%((uint64_t)RHS.get_VAL()));
     }
 
@@ -39502,52 +39491,52 @@ public:
 
 
     inline void invert (int i) {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2294, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2295, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2289, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2290, __PRETTY_FUNCTION__));
         flip(i);
     }
 
 
     inline bool test (int i) const {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2301, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2302, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2296, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2297, __PRETTY_FUNCTION__));
         return operator[](i);
     }
 
 
 
     inline void lrotate(int n) {
-        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2309, __PRETTY_FUNCTION__));
-        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2310, __PRETTY_FUNCTION__));
+        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2304, __PRETTY_FUNCTION__));
+        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2305, __PRETTY_FUNCTION__));
         operator = (shl(n) | lshr(_AP_W - n));
     }
 
 
 
     inline void rrotate(int n) {
-        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2317, __PRETTY_FUNCTION__));
-        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2318, __PRETTY_FUNCTION__));
+        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2312, __PRETTY_FUNCTION__));
+        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2313, __PRETTY_FUNCTION__));
         operator = (lshr(n) | shl(_AP_W - n));
     }
 
 
     inline void set (int i, bool v) {
-        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2324, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2325, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2319, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2320, __PRETTY_FUNCTION__));
         v ? set(i) : clear(i);
     }
 
 
     inline void set_bit (int i, bool v) {
-        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2331, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2332, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2326, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2327, __PRETTY_FUNCTION__));
         v ? set(i) : clear(i);
     }
 
 
     inline bool get_bit (int i) const {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2338, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2339, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2333, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2334, __PRETTY_FUNCTION__));
         return (((1ULL << i) & VAL) != 0);
     }
 
@@ -39555,7 +39544,7 @@ public:
     inline void b_not() {
         flip();
     }
-# 2366 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2361 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W2, bool _AP_S2>
     inline typename RType<_AP_W2,_AP_S2>::div
     operator / (const ap_private<_AP_W2,_AP_S2>&op) const {
@@ -39573,10 +39562,10 @@ public:
         typename RType<_AP_W2,_AP_S2>::mod res = typename RType<_AP_W2,_AP_S2>::mod (_AP_S?lhs.srem(rhs):lhs.urem(rhs));
         return res;
     }
-# 2392 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2387 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W2, bool _AP_S2> inline ap_private<_AP_W, _AP_S>& operator /=(const ap_private<_AP_W2,_AP_S2>& op) { *this=operator / (op); return *this; }
     template<int _AP_W2, bool _AP_S2> inline ap_private<_AP_W, _AP_S>& operator %=(const ap_private<_AP_W2,_AP_S2>& op) { *this=operator % (op); return *this; }
-# 2411 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2406 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private operator << (const int op) const { if (op >= _AP_W) return ap_private(0); if (true && op < 0) return *this >> (0-op); return shl(op); }
 
     inline ap_private operator << (const signed char op) const { if (op >= _AP_W) return ap_private(0); if (true && op < 0) return *this >> (0-op); return shl(op); }
@@ -39603,7 +39592,7 @@ public:
             return *this << sh;
         }
     }
-# 2454 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2449 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private operator >> (const int op) const { if (op >= _AP_W) { if (isNegative()) return ap_private(-1); else return ap_private(0); } if (true && op < 0) return *this << (0-op); if (_AP_S) return ashr(op) ; else return lshr(op); }
 
     inline ap_private operator >> (const signed char op) const { if (op >= _AP_W) { if (isNegative()) return ap_private(-1); else return ap_private(0); } if (true && op < 0) return *this << (0-op); if (_AP_S) return ashr(op) ; else return lshr(op); }
@@ -39630,7 +39619,7 @@ public:
             return *this >> sh;
         }
     }
-# 2489 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2484 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W2, bool _AP_S2> inline ap_private<_AP_W, _AP_S>& operator >>=(const ap_private<_AP_W2,_AP_S2>& op) { *this=operator >> (op.get_VAL()); return *this; }
 
 
@@ -39951,11 +39940,11 @@ public:
 template<int _AP_W, bool _AP_S>
 std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix, bool wantSigned) const {
     (((radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!") ? static_cast<void> (0) : __assert_fail ("(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\"",
- "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-# 2808 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+# 2803 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     ,
- 2809
-# 2808 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ 2804
+# 2803 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     , __PRETTY_FUNCTION__))
                                                ;
     static const char *digits[] = {
@@ -39975,7 +39964,7 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix, bool wantSig
                 case 2: result = "0b0"; break;
                 case 8: result = "0o0"; break;
                 case 16: result = "0x0"; break;
-                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2827, __PRETTY_FUNCTION__));
+                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2822, __PRETTY_FUNCTION__));
             }
         } else {
             ap_private<_AP_W, false, true> tmp(*this);
@@ -39995,7 +39984,7 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix, bool wantSig
                 case 2: result += "0b"; break;
                 case 8: result += "0o"; break;
                 case 16: result += "0x"; break;
-                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2847, __PRETTY_FUNCTION__));
+                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2842, __PRETTY_FUNCTION__));
             }
             insert_at += 2;
 
@@ -40038,7 +40027,7 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix, bool wantSig
         ap_private<_AP_W, false, true> APdigit = tmp%divisor;
         ap_private<_AP_W, false, true> tmp2 = tmp/divisor;
         uint32_t digit = (uint32_t)(APdigit.getZExtValue());
-        ((digit < radix && "divide failed") ? static_cast<void> (0) : __assert_fail ("digit < radix && \"divide failed\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2890, __PRETTY_FUNCTION__));
+        ((digit < radix && "divide failed") ? static_cast<void> (0) : __assert_fail ("digit < radix && \"divide failed\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2885, __PRETTY_FUNCTION__));
         result.insert(insert_at,digits[digit]);
         tmp = tmp2;
     }
@@ -40060,10 +40049,10 @@ public:
     static const int width = _AP_W;
 
 private:
-# 2921 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2916 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private(uint32_t numWords, const uint64_t bigVal[]) {
         set_canary();
-        ((bigVal && "Null pointer detected!") ? static_cast<void> (0) : __assert_fail ("bigVal && \"Null pointer detected!\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2923, __PRETTY_FUNCTION__));
+        ((bigVal && "Null pointer detected!") ? static_cast<void> (0) : __assert_fail ("bigVal && \"Null pointer detected!\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2918, __PRETTY_FUNCTION__));
         {
 
             memset(pVal, 0, _AP_N * sizeof(uint64_t));
@@ -40078,15 +40067,15 @@ private:
         }
         check_canary();
     }
-# 2948 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2943 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private(const std::string& val, uint8_t radix=2) {
         set_canary();
-        ((!val.empty() && "The input string is empty.") ? static_cast<void> (0) : __assert_fail ("!val.empty() && \"The input string is empty.\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 2950, __PRETTY_FUNCTION__));
+        ((!val.empty() && "The input string is empty.") ? static_cast<void> (0) : __assert_fail ("!val.empty() && \"The input string is empty.\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 2945, __PRETTY_FUNCTION__));
         const char *c_str = val.c_str();
         fromString(c_str, val.size(), radix);
         check_canary();
     }
-# 2967 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 2962 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private(const char strStart[], uint32_t slen, uint8_t radix) {
         set_canary();
         fromString(strStart, slen, radix);
@@ -40116,7 +40105,7 @@ private:
 
 
     uint64_t pVal[_AP_N];
-# 3005 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3000 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline void check_canary() {}
     inline void set_canary() {}
 
@@ -40301,20 +40290,21 @@ public:
         clearUnusedBits();
         check_canary();
     }
-# 3199 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3194 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ~ap_private() {check_canary();}
 
 
 
     inline ap_private(){
+ clear();
         set_canary();
         clearUnusedBits();
         check_canary();
     }
 
-    inline ap_private(uint64_t* val, uint32_t bits=_AP_W) {((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3209, __PRETTY_FUNCTION__));}
-    inline ap_private(const uint64_t *const val, uint32_t bits) {((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3210, __PRETTY_FUNCTION__));}
-# 3235 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+    inline ap_private(uint64_t* val, uint32_t bits=_AP_W) {((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3205, __PRETTY_FUNCTION__));}
+    inline ap_private(const uint64_t *const val, uint32_t bits) {((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3206, __PRETTY_FUNCTION__));}
+# 3231 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private(int val, bool isSigned=true) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
     inline ap_private(bool val, bool isSigned=false) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
     inline ap_private(signed char val, bool isSigned=true) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
@@ -40329,7 +40319,7 @@ public:
     inline ap_private(half val, bool isSigned=false) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
     inline ap_private(float val, bool isSigned=false) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
     inline ap_private(double val, bool isSigned=false) { set_canary(); pVal[0] = (ValType) val; if (isSigned && int64_t(pVal[0]) < 0) { memset(pVal+1, ~0, sizeof(uint64_t)*(_AP_N-1)); } else { memset(pVal+1, 0, sizeof(uint64_t)*(_AP_N-1)); } clearUnusedBits(); check_canary(); }
-# 3258 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3254 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline bool isSingleWord() const {
         return false;
     }
@@ -40392,24 +40382,24 @@ public:
         enum { numbits=_AP_W};
 
         (((radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!") ? static_cast<void> (0) : __assert_fail ("(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\"",
- "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-# 3319 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+# 3315 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         ,
- 3320
-# 3319 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ 3316
+# 3315 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
         , __PRETTY_FUNCTION__))
                                                    ;
-        ((str && "String is null?") ? static_cast<void> (0) : __assert_fail ("str && \"String is null?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3321, __PRETTY_FUNCTION__));
+        ((str && "String is null?") ? static_cast<void> (0) : __assert_fail ("str && \"String is null?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3317, __PRETTY_FUNCTION__));
         bool isNeg = str[0] == '-';
         if (isNeg)
             str++, slen--;
 
 
         while(*str == '0' && *(str+1) != '\0') {str++; slen--;}
-        (((slen <= numbits || radix != 2) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("(slen <= numbits || radix != 2) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3328, __PRETTY_FUNCTION__));
-        ((((slen - 1)*3 <= numbits || radix != 8) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("((slen - 1)*3 <= numbits || radix != 8) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3329, __PRETTY_FUNCTION__));
-        ((((slen - 1)*4 <= numbits || radix != 16) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("((slen - 1)*4 <= numbits || radix != 16) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3330, __PRETTY_FUNCTION__));
-        (((((slen -1)*64)/22 <= numbits || radix != 10) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("(((slen -1)*64)/22 <= numbits || radix != 10) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3331, __PRETTY_FUNCTION__));
+        (((slen <= numbits || radix != 2) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("(slen <= numbits || radix != 2) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3324, __PRETTY_FUNCTION__));
+        ((((slen - 1)*3 <= numbits || radix != 8) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("((slen - 1)*3 <= numbits || radix != 8) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3325, __PRETTY_FUNCTION__));
+        ((((slen - 1)*4 <= numbits || radix != 16) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("((slen - 1)*4 <= numbits || radix != 16) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3326, __PRETTY_FUNCTION__));
+        (((((slen -1)*64)/22 <= numbits || radix != 10) && "Insufficient bit width") ? static_cast<void> (0) : __assert_fail ("(((slen -1)*64)/22 <= numbits || radix != 10) && \"Insufficient bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3327, __PRETTY_FUNCTION__));
 
         memset(pVal, 0, _AP_N * sizeof(uint64_t));
 
@@ -40432,7 +40422,7 @@ public:
 
 
                 if (!(((cdigit) >= '0' && (cdigit) <= '9') || ((cdigit) >= 'a' && (cdigit) <= 'f') || ((cdigit) >= 'A' && (cdigit) <= 'F')))
-                    ((0 && "Invalid hex digit in string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid hex digit in string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3354, __PRETTY_FUNCTION__));
+                    ((0 && "Invalid hex digit in string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid hex digit in string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3350, __PRETTY_FUNCTION__));
                 if (((cdigit) >= '0' && (cdigit) <= '9'))
                     digit = cdigit - '0';
                 else if (cdigit >= 'a')
@@ -40440,11 +40430,11 @@ public:
                 else if (cdigit >= 'A')
                     digit = cdigit - 'A' + 10;
                 else
-                    ((0 && "huh? we shouldn't get here") ? static_cast<void> (0) : __assert_fail ("0 && \"huh? we shouldn't get here\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3362, __PRETTY_FUNCTION__));
+                    ((0 && "huh? we shouldn't get here") ? static_cast<void> (0) : __assert_fail ("0 && \"huh? we shouldn't get here\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3358, __PRETTY_FUNCTION__));
             } else if (((cdigit) >= '0' && (cdigit) <= '9')) {
                 digit = cdigit - '0';
             } else if (cdigit != '\0'){
-                ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3366, __PRETTY_FUNCTION__));
+                ((0 && "Invalid character in digit string") ? static_cast<void> (0) : __assert_fail ("0 && \"Invalid character in digit string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3362, __PRETTY_FUNCTION__));
             }
 
 
@@ -40562,29 +40552,29 @@ public:
 
 
     inline void invert (int i) {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3484, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3485, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3480, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3481, __PRETTY_FUNCTION__));
         flip(i);
     }
 
 
     inline bool test (int i) const {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3491, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3492, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3487, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3488, __PRETTY_FUNCTION__));
         return operator[](i);
     }
 
 
     inline void set (int i, bool v) {
-        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3498, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3499, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3494, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3495, __PRETTY_FUNCTION__));
         v ? set(i) : clear(i);
     }
 
 
     inline void set_bit (int i, bool v) {
-        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3505, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3506, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to write bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to write bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3501, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to write bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to write bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3502, __PRETTY_FUNCTION__));
         v ? set(i) : clear(i);
     }
 
@@ -40602,31 +40592,31 @@ public:
 
 
     inline bool get (int i) const {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3524, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3525, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3520, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3521, __PRETTY_FUNCTION__));
         return ((maskBit(i) & (pVal[whichWord(i)])) != 0);
     }
 
 
     inline bool get_bit (int i) const {
-        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3531, __PRETTY_FUNCTION__));
-        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3532, __PRETTY_FUNCTION__));
+        ((i >= 0 && "Attempting to read bit with negative index") ? static_cast<void> (0) : __assert_fail ("i >= 0 && \"Attempting to read bit with negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3527, __PRETTY_FUNCTION__));
+        ((i < _AP_W && "Attempting to read bit beyond MSB") ? static_cast<void> (0) : __assert_fail ("i < _AP_W && \"Attempting to read bit beyond MSB\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3528, __PRETTY_FUNCTION__));
         return ((maskBit(i) & (pVal[whichWord(i)])) != 0);
     }
 
 
 
     inline void lrotate(int n) {
-        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3539, __PRETTY_FUNCTION__));
-        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3540, __PRETTY_FUNCTION__));
+        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3535, __PRETTY_FUNCTION__));
+        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3536, __PRETTY_FUNCTION__));
         operator = (shl(n) | lshr(_AP_W - n));
     }
 
 
 
     inline void rrotate(int n) {
-        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3547, __PRETTY_FUNCTION__));
-        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3548, __PRETTY_FUNCTION__));
+        ((n >= 0 && "Attempting to shift negative index") ? static_cast<void> (0) : __assert_fail ("n >= 0 && \"Attempting to shift negative index\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3543, __PRETTY_FUNCTION__));
+        ((n < _AP_W && "Shift value larger than bit width") ? static_cast<void> (0) : __assert_fail ("n < _AP_W && \"Shift value larger than bit width\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3544, __PRETTY_FUNCTION__));
         operator = (lshr(n) | shl(_AP_W - n));
     }
 
@@ -40655,7 +40645,7 @@ public:
 
 
     inline ap_private& flip(uint32_t bitPosition) {
-        ((bitPosition < BitWidth && "Out of the bit-width range!") ? static_cast<void> (0) : __assert_fail ("bitPosition < BitWidth && \"Out of the bit-width range!\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 3577, __PRETTY_FUNCTION__));
+        ((bitPosition < BitWidth && "Out of the bit-width range!") ? static_cast<void> (0) : __assert_fail ("bitPosition < BitWidth && \"Out of the bit-width range!\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 3573, __PRETTY_FUNCTION__));
         if ((*this)[bitPosition]) clear(bitPosition);
         else set(bitPosition);
         return *this;
@@ -40695,10 +40685,10 @@ public:
     operator ^ (const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& a2) {
         return *this ^ a2.get();
     }
-# 3641 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-    template<int _AP_W1, bool _AP_S1> inline ap_private& operator &=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; if(_AP_W != _AP_W1) fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int " "&=" " ap_[u]int.\n"); for (i = 0; i < numWords; ++i) pVal[i] &= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] &= ext; } clearUnusedBits(); return *this; };
-    template<int _AP_W1, bool _AP_S1> inline ap_private& operator |=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; if(_AP_W != _AP_W1) fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int " "|=" " ap_[u]int.\n"); for (i = 0; i < numWords; ++i) pVal[i] |= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] |= ext; } clearUnusedBits(); return *this; };
-    template<int _AP_W1, bool _AP_S1> inline ap_private& operator ^=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; if(_AP_W != _AP_W1) fprintf(stderr, "Warning! Bitsize mismach for ap_[u]int " "^=" " ap_[u]int.\n"); for (i = 0; i < numWords; ++i) pVal[i] ^= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] ^= ext; } clearUnusedBits(); return *this; };
+# 3635 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+    template<int _AP_W1, bool _AP_S1> inline ap_private& operator &=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; for (i = 0; i < numWords; ++i) pVal[i] &= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] &= ext; } clearUnusedBits(); return *this; };
+    template<int _AP_W1, bool _AP_S1> inline ap_private& operator |=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; for (i = 0; i < numWords; ++i) pVal[i] |= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] |= ext; } clearUnusedBits(); return *this; };
+    template<int _AP_W1, bool _AP_S1> inline ap_private& operator ^=(const ap_private<_AP_W1, _AP_S1>& RHS) { const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t numWords = AESL_std::min((int)_AP_N, _AP_N1); uint32_t i; for (i = 0; i < numWords; ++i) pVal[i] ^= RHS.get_pVal(i); if (_AP_N1 < _AP_N) { uint64_t ext = RHS.isNegative()?~0ULL:0; for (;i<_AP_N; i++) pVal[i] ^= ext; } clearUnusedBits(); return *this; };
 
 
 
@@ -40767,10 +40757,10 @@ public:
         free(dest);
         return *this;
     }
-# 3721 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3715 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W2, bool _AP_S2> inline ap_private& operator /=(const ap_private<_AP_W2,_AP_S2>& op) { *this=operator / (op); return *this; }
     template<int _AP_W2, bool _AP_S2> inline ap_private& operator %=(const ap_private<_AP_W2,_AP_S2>& op) { *this=operator % (op); return *this; }
-# 3755 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3749 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W1, bool _AP_S1> inline typename RType<_AP_W1, _AP_S1>::logic operator | (const ap_private<_AP_W1, _AP_S1>& RHS) const { enum { numWords = (RType<_AP_W1, _AP_S1>::logic_w +APINT_BITS_PER_WORD-1)/APINT_BITS_PER_WORD}; typename RType<_AP_W1, _AP_S1>::logic Result; uint32_t i; const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t min_N = std::min((int)_AP_N, _AP_N1); uint32_t max_N = std::max((int)_AP_N, _AP_N1); for (i = 0; i < min_N; ++i) Result.set_pVal(i, pVal[i] | RHS.get_pVal(i)); if (numWords > i) { uint64_t ext = ((_AP_N<_AP_N1 && isNegative() )||(_AP_N1 < _AP_N && RHS.isNegative())) ? ~0ULL : 0; if (_AP_N>_AP_N1) for (;i<max_N;i++) Result.set_pVal(i, pVal[i] | ext); else for (;i<max_N;i++) Result.set_pVal(i, RHS.get_pVal(i) | ext); if (numWords > i) { uint64_t ext2 = ((_AP_N>_AP_N1 && isNegative() )||(_AP_N1 > _AP_N && RHS.isNegative())) ? ~0ULL : 0; Result.set_pVal(i, ext | ext2); } } Result.clearUnusedBits(); return Result; };
     template<int _AP_W1, bool _AP_S1> inline typename RType<_AP_W1, _AP_S1>::logic operator & (const ap_private<_AP_W1, _AP_S1>& RHS) const { enum { numWords = (RType<_AP_W1, _AP_S1>::logic_w +APINT_BITS_PER_WORD-1)/APINT_BITS_PER_WORD}; typename RType<_AP_W1, _AP_S1>::logic Result; uint32_t i; const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t min_N = std::min((int)_AP_N, _AP_N1); uint32_t max_N = std::max((int)_AP_N, _AP_N1); for (i = 0; i < min_N; ++i) Result.set_pVal(i, pVal[i] & RHS.get_pVal(i)); if (numWords > i) { uint64_t ext = ((_AP_N<_AP_N1 && isNegative() )||(_AP_N1 < _AP_N && RHS.isNegative())) ? ~0ULL : 0; if (_AP_N>_AP_N1) for (;i<max_N;i++) Result.set_pVal(i, pVal[i] & ext); else for (;i<max_N;i++) Result.set_pVal(i, RHS.get_pVal(i) & ext); if (numWords > i) { uint64_t ext2 = ((_AP_N>_AP_N1 && isNegative() )||(_AP_N1 > _AP_N && RHS.isNegative())) ? ~0ULL : 0; Result.set_pVal(i, ext & ext2); } } Result.clearUnusedBits(); return Result; };
     template<int _AP_W1, bool _AP_S1> inline typename RType<_AP_W1, _AP_S1>::logic operator ^ (const ap_private<_AP_W1, _AP_S1>& RHS) const { enum { numWords = (RType<_AP_W1, _AP_S1>::logic_w +APINT_BITS_PER_WORD-1)/APINT_BITS_PER_WORD}; typename RType<_AP_W1, _AP_S1>::logic Result; uint32_t i; const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N; uint32_t min_N = std::min((int)_AP_N, _AP_N1); uint32_t max_N = std::max((int)_AP_N, _AP_N1); for (i = 0; i < min_N; ++i) Result.set_pVal(i, pVal[i] ^ RHS.get_pVal(i)); if (numWords > i) { uint64_t ext = ((_AP_N<_AP_N1 && isNegative() )||(_AP_N1 < _AP_N && RHS.isNegative())) ? ~0ULL : 0; if (_AP_N>_AP_N1) for (;i<max_N;i++) Result.set_pVal(i, pVal[i] ^ ext); else for (;i<max_N;i++) Result.set_pVal(i, RHS.get_pVal(i) ^ ext); if (numWords > i) { uint64_t ext2 = ((_AP_N>_AP_N1 && isNegative() )||(_AP_N1 > _AP_N && RHS.isNegative())) ? ~0ULL : 0; Result.set_pVal(i, ext ^ ext2); } } Result.clearUnusedBits(); return Result; };
@@ -40818,7 +40808,7 @@ public:
         typename RType<_AP_W2,_AP_S2>::mod res = typename RType<_AP_W2,_AP_S2>::mod(_AP_S?lhs.srem(rhs):lhs.urem(rhs));
         return res;
     }
-# 3813 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3807 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private operator << (const int op) const { if (op >= _AP_W) return ap_private(0); if (true && op < 0) return *this >> (0-op); return shl(op); }
 
     inline ap_private operator << (const signed char op) const { if (op >= _AP_W) return ap_private(0); if (true && op < 0) return *this >> (0-op); return shl(op); }
@@ -40846,7 +40836,7 @@ public:
             return *this << sh;
         }
     }
-# 3858 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3852 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private operator >> (const int op) const { if (op >= _AP_W) { if (isNegative()) return ap_private(-1); else return ap_private(0); } if (true && op < 0) return *this << (0-op); if (_AP_S) return ashr(op) ; else return lshr(op); }
 
     inline ap_private operator >> (const signed char op) const { if (op >= _AP_W) { if (isNegative()) return ap_private(-1); else return ap_private(0); } if (true && op < 0) return *this << (0-op); if (_AP_S) return ashr(op) ; else return lshr(op); }
@@ -40874,7 +40864,7 @@ public:
             return *this >> sh;
         }
     }
-# 3906 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 3900 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     template<int _AP_W2, bool _AP_S2> inline ap_private& operator >>=(int op) { *this = operator >> (op); return *this; } inline ap_private& operator >>=(unsigned int op) { *this = operator >> (op); return *this; } template<int _AP_W2, bool _AP_S2> inline ap_private& operator >>=(const ap_private<_AP_W2,_AP_S2>& op) { *this = operator >> (op); return *this; }
     template<int _AP_W2, bool _AP_S2> inline ap_private& operator <<=(int op) { *this = operator << (op); return *this; } inline ap_private& operator <<=(unsigned int op) { *this = operator << (op); return *this; } template<int _AP_W2, bool _AP_S2> inline ap_private& operator <<=(const ap_private<_AP_W2,_AP_S2>& op) { *this = operator << (op); return *this; }
 
@@ -41285,7 +41275,7 @@ public:
     inline const uint64_t* getRawData() const {
         return &pVal[0];
     }
-# 4324 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 4318 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private sqrt() const {
 
 
@@ -41365,7 +41355,7 @@ public:
             else
                 return x_old + 1;
         } else
-            ((0 && "Error in ap_private<_AP_W, _AP_S>::sqrt computation") ? static_cast<void> (0) : __assert_fail ("0 && \"Error in ap_private<_AP_W, _AP_S>::sqrt computation\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4403, __PRETTY_FUNCTION__));
+            ((0 && "Error in ap_private<_AP_W, _AP_S>::sqrt computation") ? static_cast<void> (0) : __assert_fail ("0 && \"Error in ap_private<_AP_W, _AP_S>::sqrt computation\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4397, __PRETTY_FUNCTION__));
         return x_old + 1;
     }
 
@@ -41415,7 +41405,7 @@ public:
         clearUnusedBits();
         return *this;
     }
-# 4487 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 4481 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline const ap_private operator++(int) {
         ap_private API(*this);
         ++(*this);
@@ -41508,7 +41498,7 @@ public:
 
 
     inline ap_private ashr(uint32_t shiftAmt) const {
-        ((shiftAmt <= BitWidth && "Invalid shift amount, too big") ? static_cast<void> (0) : __assert_fail ("shiftAmt <= BitWidth && \"Invalid shift amount, too big\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4579, __PRETTY_FUNCTION__));
+        ((shiftAmt <= BitWidth && "Invalid shift amount, too big") ? static_cast<void> (0) : __assert_fail ("shiftAmt <= BitWidth && \"Invalid shift amount, too big\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4573, __PRETTY_FUNCTION__));
 
         if (shiftAmt == 0)
             return *this;
@@ -41641,7 +41631,7 @@ public:
 
 
     inline ap_private shl(uint32_t shiftAmt) const {
-        ((shiftAmt <= BitWidth && "Invalid shift amount, too big") ? static_cast<void> (0) : __assert_fail ("shiftAmt <= BitWidth && \"Invalid shift amount, too big\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4712, __PRETTY_FUNCTION__));
+        ((shiftAmt <= BitWidth && "Invalid shift amount, too big") ? static_cast<void> (0) : __assert_fail ("shiftAmt <= BitWidth && \"Invalid shift amount, too big\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4706, __PRETTY_FUNCTION__));
 
 
 
@@ -41724,7 +41714,7 @@ public:
 
         uint32_t rhsBits = RHS.getActiveBits();
         uint32_t rhsWords = !rhsBits ? 0 : (whichWord(rhsBits - 1) + 1);
-        ((rhsWords && "Divided by zero???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Divided by zero???\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4795, __PRETTY_FUNCTION__));
+        ((rhsWords && "Divided by zero???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Divided by zero???\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4789, __PRETTY_FUNCTION__));
         uint32_t lhsBits = this->getActiveBits();
         uint32_t lhsWords = !lhsBits ? 0 : (whichWord(lhsBits - 1) + 1);
 
@@ -41761,7 +41751,7 @@ public:
             return -(this->udiv((ap_private)(-RHS)));
         return this->udiv(RHS);
     }
-# 4840 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 4834 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline ap_private urem(const ap_private& RHS) const {
 
         uint32_t lhsBits = getActiveBits();
@@ -41770,7 +41760,7 @@ public:
 
         uint32_t rhsBits = RHS.getActiveBits();
         uint32_t rhsWords = !rhsBits ? 0 : (whichWord(rhsBits - 1) + 1);
-        ((rhsWords && "Performing remainder operation by zero ???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Performing remainder operation by zero ???\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4848, __PRETTY_FUNCTION__));
+        ((rhsWords && "Performing remainder operation by zero ???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Performing remainder operation by zero ???\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4842, __PRETTY_FUNCTION__));
 
 
         if (lhsWords == 0) {
@@ -41799,7 +41789,7 @@ public:
         uint32_t lhsWords = !lhsBits ? 0 : (whichWord(lhsBits - 1) + 1);
 
         uint32_t rhsWords = 1;
-        ((rhsWords && "Performing remainder operation by zero ???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Performing remainder operation by zero ???\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4877, __PRETTY_FUNCTION__));
+        ((rhsWords && "Performing remainder operation by zero ???") ? static_cast<void> (0) : __assert_fail ("rhsWords && \"Performing remainder operation by zero ???\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4871, __PRETTY_FUNCTION__));
 
         if (lhsWords == 0) {
 
@@ -41918,7 +41908,7 @@ public:
 
         if (n1 <= APINT_BITS_PER_WORD && n2 <= APINT_BITS_PER_WORD)
             return pVal[0] < RHS;
-        ((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 4996, __PRETTY_FUNCTION__));
+        ((0) ? static_cast<void> (0) : __assert_fail ("0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 4990, __PRETTY_FUNCTION__));
     }
 
     template<bool _AP_S1>
@@ -42008,8 +41998,8 @@ public:
 
     template<int _AP_W1, bool _AP_S1>
     inline void cpSext(const ap_private<_AP_W1, _AP_S1>& that) {
-        ((_AP_W1 < BitWidth && "Invalid ap_private SignExtend request") ? static_cast<void> (0) : __assert_fail ("_AP_W1 < BitWidth && \"Invalid ap_private SignExtend request\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5086, __PRETTY_FUNCTION__));
-        ((_AP_W1 <= MAX_INT_BITS && "Too many bits") ? static_cast<void> (0) : __assert_fail ("_AP_W1 <= MAX_INT_BITS && \"Too many bits\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5087, __PRETTY_FUNCTION__));
+        ((_AP_W1 < BitWidth && "Invalid ap_private SignExtend request") ? static_cast<void> (0) : __assert_fail ("_AP_W1 < BitWidth && \"Invalid ap_private SignExtend request\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5080, __PRETTY_FUNCTION__));
+        ((_AP_W1 <= MAX_INT_BITS && "Too many bits") ? static_cast<void> (0) : __assert_fail ("_AP_W1 <= MAX_INT_BITS && \"Too many bits\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5081, __PRETTY_FUNCTION__));
 
         if (!that.isNegative()) {
             cpZext(that);
@@ -42047,8 +42037,8 @@ public:
 
     template <int _AP_W1, bool _AP_S1>
     inline void cpZext(const ap_private<_AP_W1, _AP_S1>& that) {
-        ((_AP_W1 < BitWidth && "Invalid ap_private ZeroExtend request") ? static_cast<void> (0) : __assert_fail ("_AP_W1 < BitWidth && \"Invalid ap_private ZeroExtend request\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5125, __PRETTY_FUNCTION__));
-        ((_AP_W1 <= MAX_INT_BITS && "Too many bits") ? static_cast<void> (0) : __assert_fail ("_AP_W1 <= MAX_INT_BITS && \"Too many bits\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5126, __PRETTY_FUNCTION__));
+        ((_AP_W1 < BitWidth && "Invalid ap_private ZeroExtend request") ? static_cast<void> (0) : __assert_fail ("_AP_W1 < BitWidth && \"Invalid ap_private ZeroExtend request\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5119, __PRETTY_FUNCTION__));
+        ((_AP_W1 <= MAX_INT_BITS && "Too many bits") ? static_cast<void> (0) : __assert_fail ("_AP_W1 <= MAX_INT_BITS && \"Too many bits\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5120, __PRETTY_FUNCTION__));
         const int _AP_N1 = ap_private<_AP_W1, _AP_S1>::_AP_N;
         int i = 0;
         for (; i < _AP_N1; ++i)
@@ -42111,7 +42101,7 @@ public:
 
 
     inline uint64_t getZExtValue() const {
-        ((getActiveBits() <= 64 && "Too many bits for uint64_t") ? static_cast<void> (0) : __assert_fail ("getActiveBits() <= 64 && \"Too many bits for uint64_t\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5189, __PRETTY_FUNCTION__));
+        ((getActiveBits() <= 64 && "Too many bits for uint64_t") ? static_cast<void> (0) : __assert_fail ("getActiveBits() <= 64 && \"Too many bits for uint64_t\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5183, __PRETTY_FUNCTION__));
         return *pVal;
     }
 
@@ -42120,7 +42110,7 @@ public:
 
 
     inline int64_t getSExtValue() const {
-        ((getActiveBits() <= 64 && "Too many bits for int64_t") ? static_cast<void> (0) : __assert_fail ("getActiveBits() <= 64 && \"Too many bits for int64_t\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5198, __PRETTY_FUNCTION__));
+        ((getActiveBits() <= 64 && "Too many bits for int64_t") ? static_cast<void> (0) : __assert_fail ("getActiveBits() <= 64 && \"Too many bits for int64_t\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5192, __PRETTY_FUNCTION__));
         return int64_t(pVal[0]);
     }
 
@@ -42128,8 +42118,8 @@ public:
 
 
     inline static uint32_t getBitsNeeded(const char* str, uint32_t slen, uint8_t radix) {
-        ((str != 0 && "Invalid value string") ? static_cast<void> (0) : __assert_fail ("str != 0 && \"Invalid value string\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5206, __PRETTY_FUNCTION__));
-        ((slen > 0 && "Invalid string length") ? static_cast<void> (0) : __assert_fail ("slen > 0 && \"Invalid string length\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5207, __PRETTY_FUNCTION__));
+        ((str != 0 && "Invalid value string") ? static_cast<void> (0) : __assert_fail ("str != 0 && \"Invalid value string\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5200, __PRETTY_FUNCTION__));
+        ((slen > 0 && "Invalid string length") ? static_cast<void> (0) : __assert_fail ("slen > 0 && \"Invalid string length\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5201, __PRETTY_FUNCTION__));
 
 
         uint32_t isNegative = str[0] == '-';
@@ -42147,7 +42137,7 @@ public:
             return slen * 4 + isNegative;
 
 
-        ((radix == 10 && "Invalid radix") ? static_cast<void> (0) : __assert_fail ("radix == 10 && \"Invalid radix\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5225, __PRETTY_FUNCTION__));
+        ((radix == 10 && "Invalid radix") ? static_cast<void> (0) : __assert_fail ("radix == 10 && \"Invalid radix\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5219, __PRETTY_FUNCTION__));
 
 
 
@@ -42207,7 +42197,7 @@ public:
         }
         return Count;
     }
-# 5293 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+# 5287 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     inline uint32_t countTrailingZeros() const {
         uint32_t Count = 0;
         uint32_t i = 0;
@@ -42301,7 +42291,7 @@ public:
             if (n > 52)
                 (mantissa) >>= (n - 52);
         } else {
-            ((hiWord > 0 && "High word is negative?") ? static_cast<void> (0) : __assert_fail ("hiWord > 0 && \"High word is negative?\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5386, __PRETTY_FUNCTION__));
+            ((hiWord > 0 && "High word is negative?") ? static_cast<void> (0) : __assert_fail ("hiWord > 0 && \"High word is negative?\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5380, __PRETTY_FUNCTION__));
             uint64_t hibits = (Tmp.get_pVal(hiWord)) << (52 - n % APINT_BITS_PER_WORD);
             uint64_t lobits = (Tmp.get_pVal(hiWord-1)) >> (11 + n % APINT_BITS_PER_WORD);
             mantissa = hibits | lobits;
@@ -42514,11 +42504,11 @@ namespace ap_private_ops {
 template<int _AP_W, bool _AP_S>
 inline std::string ap_private<_AP_W, _AP_S, false>::toString(uint8_t radix, bool wantSigned) const {
     (((radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!") ? static_cast<void> (0) : __assert_fail ("(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\"",
- "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
-# 5598 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
+# 5592 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     ,
- 5599
-# 5598 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h"
+ 5593
+# 5592 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h"
     , __PRETTY_FUNCTION__))
                                                ;
     static const char *digits[] = {
@@ -42553,7 +42543,7 @@ inline std::string ap_private<_AP_W, _AP_S, false>::toString(uint8_t radix, bool
                 case 2: result += "0b"; break;
                 case 8: result += "0o"; break;
                 case 16: result += "0x"; break;
-                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5632, __PRETTY_FUNCTION__));
+                default: (("invalid radix" && 0) ? static_cast<void> (0) : __assert_fail ("\"invalid radix\" && 0", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5626, __PRETTY_FUNCTION__));
             }
             insert_at += 2;
 
@@ -42596,15 +42586,15 @@ inline std::string ap_private<_AP_W, _AP_S, false>::toString(uint8_t radix, bool
         ap_private_ops::divide(tmp, tmp.getNumWords(), divisor, divisor.getNumWords(), &tmp2,
                 &APdigit);
         uint64_t digit = APdigit.getZExtValue();
-        ((digit < radix && "divide failed") ? static_cast<void> (0) : __assert_fail ("digit < radix && \"divide failed\"", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_private.h", 5675, __PRETTY_FUNCTION__));
+        ((digit < radix && "divide failed") ? static_cast<void> (0) : __assert_fail ("digit < radix && \"divide failed\"", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_private.h", 5669, __PRETTY_FUNCTION__));
         result.insert(insert_at,digits[digit]);
         tmp = tmp2;
     }
 
     return result;
 }
-# 99 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h" 2
-# 170 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 99 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h" 2
+# 170 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> struct ap_range_ref;
 template<int _AP_W, bool _AP_S> struct ap_bit_ref;
 
@@ -42615,10 +42605,9 @@ template<int _AP_W, int _AP_I, bool _AP_S,
 template<int _AP_W, int _AP_I, bool _AP_S,
          ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> struct af_bit_ref;
 template<int _AP_W> class ap_uint;
-template<int _AP_W> class ap_int;
 
 enum {AP_BIN=2,AP_OCT=8,AP_DEC=10,AP_HEX=16};
-# 194 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 193 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W1, typename _AP_T1, int _AP_W2, typename _AP_T2>
 struct ap_concat_ref {
 
@@ -42889,98 +42878,6 @@ public:
 
 
     }
-
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator |= (const ap_range_ref<_AP_W2,_AP_S2> &ref) {
-
-    if((h_index-l_index) != (ref.h_index-ref.l_index))
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() |= ap_int<>.range().\n");
-
-    this->d_bv |= ref.d_bv;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator |= (const ap_int<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() |= ap_int<>.\n");
-
-    this->d_bv |= ref;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator |= (const ap_uint<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_uint<>.range() |= ap_uint<>.\n");
-
-    this->d_bv |= ref;
-    return *this;
-  };
-
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator &= (const ap_range_ref<_AP_W2,_AP_S2> &ref) {
-
-    if((h_index-l_index) != (ref.h_index-ref.l_index))
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() &= ap_int<>.range().\n");
-
-    this->d_bv &= ref.d_bv;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator &= (const ap_int<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() &= ap_int<>.\n");
-
-    this->d_bv &= ref;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator &= (const ap_uint<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_uint<>.range() &= ap_uint<>.\n");
-
-    this->d_bv &= ref;
-    return *this;
-  };
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator ^= (const ap_range_ref<_AP_W2,_AP_S2> &ref) {
-
-    if((h_index-l_index) != (ref.h_index-ref.l_index))
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() ^= ap_int<>.range().\n");
-
-    this->d_bv ^= ref.d_bv;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator ^= (const ap_int<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_int<>.range() ^= ap_int<>.\n");
-
-    this->d_bv ^= ref;
-    return *this;
-  };
-
-  template<int _AP_W2>
-  inline ap_range_ref<_AP_W,_AP_S> & operator ^= (const ap_uint<_AP_W2> &ref) {
-
-    if((h_index-l_index+1) != _AP_W2)
-      fprintf(stderr, "Warning! Bitsize mismach for ap_uint<>.range() ^= ap_uint<>.\n");
-
-    this->d_bv ^= ref;
-    return *this;
-  };
 
 
     inline operator ap_private<_AP_W, false> () const
@@ -43478,7 +43375,7 @@ public:
             d_bv.clear(d_index);
         return *this;
     }
-# 1065 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 972 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
     template<int _AP_W2, bool _AP_S2>
     inline ap_bit_ref& operator =(const ap_private<_AP_W2,_AP_S2>& val)
     {
@@ -43633,13 +43530,13 @@ public:
         return val ? "1" : "0";
     }
 };
-# 1239 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1146 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<typename PTR_TYPE, int _AP_W, bool _AP_S> inline PTR_TYPE* operator + (PTR_TYPE* i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op + op2; } template<typename PTR_TYPE, int _AP_W, bool _AP_S> inline PTR_TYPE* operator + (const ap_private<_AP_W,_AP_S> &op, PTR_TYPE* i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 + i_op; }
 template<typename PTR_TYPE, int _AP_W, bool _AP_S> inline PTR_TYPE* operator - (PTR_TYPE* i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op - op2; } template<typename PTR_TYPE, int _AP_W, bool _AP_S> inline PTR_TYPE* operator - (const ap_private<_AP_W,_AP_S> &op, PTR_TYPE* i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 - i_op; }
-# 1264 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1171 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> inline float operator * (float i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op * op2; } template<int _AP_W, bool _AP_S> inline float operator * (const ap_private<_AP_W,_AP_S> &op, float i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 * i_op; } template<int _AP_W, bool _AP_S> inline float operator / (float i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op / op2; } template<int _AP_W, bool _AP_S> inline float operator / (const ap_private<_AP_W,_AP_S> &op, float i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 / i_op; } template<int _AP_W, bool _AP_S> inline float operator + (float i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op + op2; } template<int _AP_W, bool _AP_S> inline float operator + (const ap_private<_AP_W,_AP_S> &op, float i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 + i_op; } template<int _AP_W, bool _AP_S> inline float operator - (float i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op - op2; } template<int _AP_W, bool _AP_S> inline float operator - (const ap_private<_AP_W,_AP_S> &op, float i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 - i_op; }
 template<int _AP_W, bool _AP_S> inline double operator * (double i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op * op2; } template<int _AP_W, bool _AP_S> inline double operator * (const ap_private<_AP_W,_AP_S> &op, double i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 * i_op; } template<int _AP_W, bool _AP_S> inline double operator / (double i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op / op2; } template<int _AP_W, bool _AP_S> inline double operator / (const ap_private<_AP_W,_AP_S> &op, double i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 / i_op; } template<int _AP_W, bool _AP_S> inline double operator + (double i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op + op2; } template<int _AP_W, bool _AP_S> inline double operator + (const ap_private<_AP_W,_AP_S> &op, double i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 + i_op; } template<int _AP_W, bool _AP_S> inline double operator - (double i_op, const ap_private<_AP_W,_AP_S> &op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return i_op - op2; } template<int _AP_W, bool _AP_S> inline double operator - (const ap_private<_AP_W,_AP_S> &op, double i_op) { typename ap_private<_AP_W,_AP_S>::ValType op2 = op; return op2 - i_op; }
-# 1363 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1270 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::mult operator * ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator * (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::mult operator * ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator * (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::plus operator + ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator + (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::plus operator + ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator + (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::minus operator - ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator - (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::minus operator - ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator - (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::div operator / ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator / (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::div operator / ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator / (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::mod operator % ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator % (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::mod operator % ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator % (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::logic operator & ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator & (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::logic operator & ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator & (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::logic operator | ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator | (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::logic operator | ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator | (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1,false>::template RType<_AP_W,_AP_S>::logic operator ^ ( bool i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<1,false>(i_op).operator ^ (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::logic operator ^ ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator ^ (ap_private<1,false>(i_op)); } template<int _AP_W, bool _AP_S> bool operator >> ( bool i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op >> (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::arg1 operator >> ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator >> (i_op); } template<int _AP_W, bool _AP_S> bool operator << ( bool i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op << (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<1,false>::arg1 operator << ( const ap_private<_AP_W,_AP_S> &op, bool i_op) { return op.operator << (i_op); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator == (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator == (op); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator != (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator != (op); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator > (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator > (op); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator >= (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator >= (op); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator < (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator < (op); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator <= (ap_private<1, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( bool op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<1,false>(op2).operator <= (op); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator += ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator += (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator -= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator -= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator *= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator *= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator /= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator /= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator %= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator %= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator &= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator &= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator |= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator |= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator ^= ( ap_private<_AP_W,_AP_S> &op, bool op2) { return op.operator ^= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator >>= ( ap_private<_AP_W,_AP_S> &op, bool op2) { op = op.operator >> (op2); return op; } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator <<= ( ap_private<_AP_W,_AP_S> &op, bool op2) { op = op.operator << (op2); return op; }
 template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::mult operator * ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator * (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::mult operator * ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator * (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::plus operator + ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator + (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::plus operator + ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator + (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::minus operator - ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator - (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::minus operator - ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator - (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::div operator / ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator / (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::div operator / ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator / (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::mod operator % ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator % (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::mod operator % ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator % (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::logic operator & ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator & (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::logic operator & ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator & (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::logic operator | ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator | (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::logic operator | ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator | (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,(-127 - 1) != 0>::template RType<_AP_W,_AP_S>::logic operator ^ ( char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(i_op).operator ^ (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::logic operator ^ ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator ^ (ap_private<8,(-127 - 1) != 0>(i_op)); } template<int _AP_W, bool _AP_S> char operator >> ( char i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op >> (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::arg1 operator >> ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator >> (i_op); } template<int _AP_W, bool _AP_S> char operator << ( char i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op << (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,(-127 - 1) != 0>::arg1 operator << ( const ap_private<_AP_W,_AP_S> &op, char i_op) { return op.operator << (i_op); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator == (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator == (op); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator != (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator != (op); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator > (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator > (op); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator >= (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator >= (op); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator < (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator < (op); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator <= (ap_private<8, (-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator <= (op); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator += ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator += (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator -= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator -= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator *= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator *= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator /= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator /= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator %= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator %= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator &= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator &= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator |= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator |= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator ^= ( ap_private<_AP_W,_AP_S> &op, char op2) { return op.operator ^= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator >>= ( ap_private<_AP_W,_AP_S> &op, char op2) { op = op.operator >> (op2); return op; } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator <<= ( ap_private<_AP_W,_AP_S> &op, char op2) { op = op.operator << (op2); return op; }
 template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::mult operator * ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator * (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::mult operator * ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator * (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::plus operator + ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator + (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::plus operator + ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator + (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::minus operator - ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator - (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::minus operator - ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator - (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::div operator / ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator / (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::div operator / ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator / (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::mod operator % ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator % (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::mod operator % ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator % (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::logic operator & ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator & (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::logic operator & ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator & (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::logic operator | ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator | (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::logic operator | ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator | (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8,true>::template RType<_AP_W,_AP_S>::logic operator ^ ( signed char i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<8,true>(i_op).operator ^ (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::logic operator ^ ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator ^ (ap_private<8,true>(i_op)); } template<int _AP_W, bool _AP_S> signed char operator >> ( signed char i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op >> (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::arg1 operator >> ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator >> (i_op); } template<int _AP_W, bool _AP_S> signed char operator << ( signed char i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op << (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<8,true>::arg1 operator << ( const ap_private<_AP_W,_AP_S> &op, signed char i_op) { return op.operator << (i_op); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator == (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator == (op); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator != (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator != (op); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator > (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator > (op); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator >= (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator >= (op); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator < (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator < (op); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator <= (ap_private<8, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( signed char op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<8,true>(op2).operator <= (op); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator += ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator += (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator -= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator -= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator *= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator *= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator /= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator /= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator %= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator %= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator &= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator &= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator |= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator |= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator ^= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { return op.operator ^= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator >>= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { op = op.operator >> (op2); return op; } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator <<= ( ap_private<_AP_W,_AP_S> &op, signed char op2) { op = op.operator << (op2); return op; }
@@ -43657,7 +43554,7 @@ template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template R
 
 template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::mult operator * ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator * (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::mult operator * ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator * (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::plus operator + ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator + (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::plus operator + ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator + (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::minus operator - ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator - (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::minus operator - ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator - (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::div operator / ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator / (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::div operator / ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator / (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::mod operator % ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator % (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::mod operator % ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator % (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::logic operator & ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator & (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::logic operator & ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator & (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::logic operator | ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator | (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::logic operator | ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator | (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,true>::template RType<_AP_W,_AP_S>::logic operator ^ ( ap_slong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,true>(i_op).operator ^ (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::logic operator ^ ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator ^ (ap_private<64,true>(i_op)); } template<int _AP_W, bool _AP_S> ap_slong operator >> ( ap_slong i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op >> (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::arg1 operator >> ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator >> (i_op); } template<int _AP_W, bool _AP_S> ap_slong operator << ( ap_slong i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op << (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,true>::arg1 operator << ( const ap_private<_AP_W,_AP_S> &op, ap_slong i_op) { return op.operator << (i_op); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator == (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator == (op); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator != (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator != (op); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator > (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator > (op); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator >= (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator >= (op); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator < (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator < (op); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator <= (ap_private<64, true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_slong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,true>(op2).operator <= (op); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator += ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator += (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator -= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator -= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator *= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator *= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator /= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator /= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator %= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator %= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator &= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator &= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator |= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator |= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator ^= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { return op.operator ^= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator >>= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { op = op.operator >> (op2); return op; } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator <<= ( ap_private<_AP_W,_AP_S> &op, ap_slong op2) { op = op.operator << (op2); return op; }
 template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::mult operator * ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator * (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::mult operator * ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator * (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::plus operator + ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator + (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::plus operator + ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator + (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::minus operator - ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator - (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::minus operator - ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator - (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::div operator / ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator / (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::div operator / ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator / (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::mod operator % ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator % (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::mod operator % ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator % (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::logic operator & ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator & (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::logic operator & ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator & (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::logic operator | ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator | (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::logic operator | ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator | (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64,false>::template RType<_AP_W,_AP_S>::logic operator ^ ( ap_ulong i_op, const ap_private<_AP_W,_AP_S> &op) { return ap_private<64,false>(i_op).operator ^ (op); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::logic operator ^ ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator ^ (ap_private<64,false>(i_op)); } template<int _AP_W, bool _AP_S> ap_ulong operator >> ( ap_ulong i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op >> (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::arg1 operator >> ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator >> (i_op); } template<int _AP_W, bool _AP_S> ap_ulong operator << ( ap_ulong i_op, const ap_private<_AP_W,_AP_S, false> &op) { return i_op << (op.get_VAL()); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W,_AP_S>::template RType<64,false>::arg1 operator << ( const ap_private<_AP_W,_AP_S> &op, ap_ulong i_op) { return op.operator << (i_op); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator == (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator == (op); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator != (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator != (op); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator > (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator > (op); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator >= (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator >= (op); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator < (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator < (op); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator <= (ap_private<64, false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_ulong op2, const ap_private<_AP_W,_AP_S, false> &op) { return ap_private<64,false>(op2).operator <= (op); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator += ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator += (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator -= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator -= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator *= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator *= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator /= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator /= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator %= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator %= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator &= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator &= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator |= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator |= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator ^= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { return op.operator ^= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator >>= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { op = op.operator >> (op2); return op; } template<int _AP_W, bool _AP_S> inline ap_private<_AP_W,_AP_S> &operator <<= ( ap_private<_AP_W,_AP_S> &op, ap_ulong op2) { op = op.operator << (op2); return op; }
-# 1417 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1324 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator += ( ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator += (ap_private<_AP_W2, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_range_ref<_AP_W1,_AP_S1>& operator += (ap_range_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<_AP_W1, false> tmp(op1); tmp.operator += (op2); op1 = tmp; return op1; }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator -= ( ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator -= (ap_private<_AP_W2, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_range_ref<_AP_W1,_AP_S1>& operator -= (ap_range_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<_AP_W1, false> tmp(op1); tmp.operator -= (op2); op1 = tmp; return op1; }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator *= ( ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator *= (ap_private<_AP_W2, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_range_ref<_AP_W1,_AP_S1>& operator *= (ap_range_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<_AP_W1, false> tmp(op1); tmp.operator *= (op2); op1 = tmp; return op1; }
@@ -43686,7 +43583,7 @@ template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_pr
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator & ( const ap_range_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<_AP_W1, false>(op1).operator & (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator & ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator & (ap_private<_AP_W2, false>(op2)); }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator | ( const ap_range_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<_AP_W1, false>(op1).operator | (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator | ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator | (ap_private<_AP_W2, false>(op2)); }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator ^ ( const ap_range_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<_AP_W1, false>(op1).operator ^ (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<_AP_W2,_AP_S2>::logic operator ^ ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_range_ref<_AP_W2,_AP_S2>& op2) { return op1.operator ^ (ap_private<_AP_W2, false>(op2)); }
-# 1482 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1389 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator += ( ap_private<_AP_W1,_AP_S1>& op1, ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator += (ap_private<1, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_bit_ref<_AP_W1,_AP_S1>& operator += ( ap_bit_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<1, false> tmp(op1); tmp.operator += (op2); op1 = tmp; return op1; }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator -= ( ap_private<_AP_W1,_AP_S1>& op1, ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator -= (ap_private<1, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_bit_ref<_AP_W1,_AP_S1>& operator -= ( ap_bit_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<1, false> tmp(op1); tmp.operator -= (op2); op1 = tmp; return op1; }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W1,_AP_S1>& operator *= ( ap_private<_AP_W1,_AP_S1>& op1, ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator *= (ap_private<1, false>(op2)); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline ap_bit_ref<_AP_W1,_AP_S1>& operator *= ( ap_bit_ref<_AP_W1,_AP_S1>& op1, ap_private<_AP_W2,_AP_S2>& op2) { ap_private<1, false> tmp(op1); tmp.operator *= (op2); op1 = tmp; return op1; }
@@ -43715,7 +43612,7 @@ template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_pr
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<1, false>::template RType<_AP_W2,_AP_S2>::logic operator & ( const ap_bit_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<1, false>(op1).operator & (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<1,false>::logic operator & ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator & (ap_private<1, false>(op2)); }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<1, false>::template RType<_AP_W2,_AP_S2>::logic operator | ( const ap_bit_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<1, false>(op1).operator | (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<1,false>::logic operator | ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator | (ap_private<1, false>(op2)); }
 template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<1, false>::template RType<_AP_W2,_AP_S2>::logic operator ^ ( const ap_bit_ref<_AP_W1,_AP_S1>& op1, const ap_private<_AP_W2,_AP_S2>& op2) { return ap_private<1, false>(op1).operator ^ (op2); } template<int _AP_W1, bool _AP_S1, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W1,_AP_S1>::template RType<1,false>::logic operator ^ ( const ap_private<_AP_W1,_AP_S1>& op1, const ap_bit_ref<_AP_W2,_AP_S2>& op2) { return op1.operator ^ (ap_private<1, false>(op2)); }
-# 1545 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1452 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) > op2; } template<int _AP_W, bool _AP_S> inline bool operator > ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 > (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator > (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator > (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) < op2; } template<int _AP_W, bool _AP_S> inline bool operator < ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 < (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator < (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator < (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) >= op2; } template<int _AP_W, bool _AP_S> inline bool operator >= ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 >= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator >= (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator >= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) <= op2; } template<int _AP_W, bool _AP_S> inline bool operator <= ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 <= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator <= (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator <= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) == op2; } template<int _AP_W, bool _AP_S> inline bool operator == ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 == (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator == (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator == (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_bit_ref<_AP_W,_AP_S> &op, bool op2) { return (bool(op)) != op2; } template<int _AP_W, bool _AP_S> inline bool operator != ( bool op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 != (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, bool op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator != (ap_private<1,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( bool op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<1,false>(op2).operator != (ap_private<_AP_W + _AP_W1, false>(op)); }
 template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) > op2; } template<int _AP_W, bool _AP_S> inline bool operator > ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 > (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator > (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator > (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) < op2; } template<int _AP_W, bool _AP_S> inline bool operator < ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 < (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator < (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator < (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) >= op2; } template<int _AP_W, bool _AP_S> inline bool operator >= ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 >= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator >= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator >= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) <= op2; } template<int _AP_W, bool _AP_S> inline bool operator <= ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 <= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator <= (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator <= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) == op2; } template<int _AP_W, bool _AP_S> inline bool operator == ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 == (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator == (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator == (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_bit_ref<_AP_W,_AP_S> &op, char op2) { return (bool(op)) != op2; } template<int _AP_W, bool _AP_S> inline bool operator != ( char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 != (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator != (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator != (ap_private<_AP_W + _AP_W1, false>(op)); }
 template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) > op2; } template<int _AP_W, bool _AP_S> inline bool operator > ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 > (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator > (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator > (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) < op2; } template<int _AP_W, bool _AP_S> inline bool operator < ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 < (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator < (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator < (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) >= op2; } template<int _AP_W, bool _AP_S> inline bool operator >= ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 >= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator >= (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator >= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) <= op2; } template<int _AP_W, bool _AP_S> inline bool operator <= ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 <= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator <= (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator <= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) == op2; } template<int _AP_W, bool _AP_S> inline bool operator == ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 == (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator == (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator == (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_bit_ref<_AP_W,_AP_S> &op, signed char op2) { return (bool(op)) != op2; } template<int _AP_W, bool _AP_S> inline bool operator != ( signed char op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 != (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, signed char op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator != (ap_private<8,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( signed char op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<8,true>(op2).operator != (ap_private<_AP_W + _AP_W1, false>(op)); }
@@ -43733,7 +43630,7 @@ template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_
 
 template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) > op2; } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 > (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator > (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator > (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) < op2; } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 < (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator < (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator < (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) >= op2; } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 >= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator >= (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator >= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) <= op2; } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 <= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator <= (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator <= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) == op2; } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 == (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator == (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator == (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (bool(op)) != op2; } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_slong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 != (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_slong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator != (ap_private<64,true>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( ap_slong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,true>(op2).operator != (ap_private<_AP_W + _AP_W1, false>(op)); }
 template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator > ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) > op2; } template<int _AP_W, bool _AP_S> inline bool operator > ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 > (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator > (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator > ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator > (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator < ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) < op2; } template<int _AP_W, bool _AP_S> inline bool operator < ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 < (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator < (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator < ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator < (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator >= ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) >= op2; } template<int _AP_W, bool _AP_S> inline bool operator >= ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 >= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator >= (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator >= ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator >= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator <= ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) <= op2; } template<int _AP_W, bool _AP_S> inline bool operator <= ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 <= (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator <= (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator <= ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator <= (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator == ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) == op2; } template<int _AP_W, bool _AP_S> inline bool operator == ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 == (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator == (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator == ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator == (ap_private<_AP_W + _AP_W1, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline bool operator != ( const ap_bit_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (bool(op)) != op2; } template<int _AP_W, bool _AP_S> inline bool operator != ( ap_ulong op2, const ap_bit_ref<_AP_W,_AP_S> &op) { return op2 != (bool(op)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op, ap_ulong op2) { return (ap_private<_AP_W + _AP_W1, false>(op)).operator != (ap_private<64,false>(op2)); } template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline bool operator != ( ap_ulong op2, const ap_concat_ref<_AP_W,_AP_T, _AP_W1, _AP_T1> &op) { return ap_private<64,false>(op2).operator != (ap_private<_AP_W + _AP_W1, false>(op)); }
-# 1587 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1494 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::plus operator + ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator + (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::plus operator + ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator + (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::minus operator - ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator - (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::minus operator - ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator - (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::mult operator * ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator * (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::mult operator * ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator * (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::div operator / ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator / (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::div operator / ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator / (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::mod operator % ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator % (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::mod operator % ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator % (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::arg1 operator >> ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator >> (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::arg1 operator >> ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator >> (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::arg1 operator << ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator << (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::arg1 operator << ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator << (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::logic operator & ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator & (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::logic operator & ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator & (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::logic operator | ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator | (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::logic operator | ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator | (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<1,false>::logic operator ^ ( const ap_range_ref<_AP_W,_AP_S> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator ^ (ap_private<1,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<1, false>::template RType<_AP_W,false>::logic operator ^ ( bool op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<1,false>(op2).operator ^ (ap_private<_AP_W, false>(op)); }
 template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::plus operator + ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator + (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::plus operator + ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator + (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::minus operator - ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator - (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::minus operator - ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator - (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::mult operator * ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator * (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::mult operator * ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator * (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::div operator / ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator / (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::div operator / ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator / (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::mod operator % ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator % (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::mod operator % ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator % (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::arg1 operator >> ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator >> (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::arg1 operator >> ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator >> (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::arg1 operator << ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator << (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::arg1 operator << ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator << (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::logic operator & ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator & (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::logic operator & ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator & (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::logic operator | ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator | (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::logic operator | ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator | (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,(-127 - 1) != 0>::logic operator ^ ( const ap_range_ref<_AP_W,_AP_S> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator ^ (ap_private<8,(-127 - 1) != 0>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, (-127 - 1) != 0>::template RType<_AP_W,false>::logic operator ^ ( char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,(-127 - 1) != 0>(op2).operator ^ (ap_private<_AP_W, false>(op)); }
 template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::plus operator + ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator + (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::plus operator + ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator + (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::minus operator - ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator - (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::minus operator - ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator - (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::mult operator * ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator * (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::mult operator * ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator * (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::div operator / ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator / (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::div operator / ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator / (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::mod operator % ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator % (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::mod operator % ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator % (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::arg1 operator >> ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator >> (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::arg1 operator >> ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator >> (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::arg1 operator << ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator << (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::arg1 operator << ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator << (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::logic operator & ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator & (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::logic operator & ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator & (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::logic operator | ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator | (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::logic operator | ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator | (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<8,true>::logic operator ^ ( const ap_range_ref<_AP_W,_AP_S> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator ^ (ap_private<8,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<8, true>::template RType<_AP_W,false>::logic operator ^ ( signed char op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<8,true>(op2).operator ^ (ap_private<_AP_W, false>(op)); }
@@ -43751,7 +43648,7 @@ template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::templa
 
 template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::plus operator + ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator + (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::plus operator + ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator + (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::minus operator - ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator - (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::minus operator - ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator - (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::mult operator * ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator * (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::mult operator * ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator * (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::div operator / ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator / (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::div operator / ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator / (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::mod operator % ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator % (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::mod operator % ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator % (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::arg1 operator >> ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator >> (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::arg1 operator >> ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator >> (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::arg1 operator << ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator << (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::arg1 operator << ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator << (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::logic operator & ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator & (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::logic operator & ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator & (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::logic operator | ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator | (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::logic operator | ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator | (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,true>::logic operator ^ ( const ap_range_ref<_AP_W,_AP_S> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator ^ (ap_private<64,true>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, true>::template RType<_AP_W,false>::logic operator ^ ( ap_slong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,true>(op2).operator ^ (ap_private<_AP_W, false>(op)); }
 template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::plus operator + ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator + (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::plus operator + ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator + (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::minus operator - ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator - (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::minus operator - ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator - (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::mult operator * ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator * (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::mult operator * ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator * (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::div operator / ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator / (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::div operator / ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator / (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::mod operator % ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator % (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::mod operator % ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator % (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::arg1 operator >> ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator >> (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::arg1 operator >> ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator >> (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::arg1 operator << ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator << (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::arg1 operator << ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator << (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::logic operator & ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator & (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::logic operator & ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator & (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::logic operator | ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator | (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::logic operator | ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator | (ap_private<_AP_W, false>(op)); } template<int _AP_W, bool _AP_S> inline typename ap_private<_AP_W, false>::template RType<64,false>::logic operator ^ ( const ap_range_ref<_AP_W,_AP_S> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator ^ (ap_private<64,false>(op2)); } template<int _AP_W, bool _AP_S> inline typename ap_private<64, false>::template RType<_AP_W,false>::logic operator ^ ( ap_ulong op2, const ap_range_ref<_AP_W,_AP_S> &op) { return ap_private<64,false>(op2).operator ^ (ap_private<_AP_W, false>(op)); }
-# 1612 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1519 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::plus operator + (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator + (ap_private<_AP_W2, false>(rhs)); }
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::minus operator - (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator - (ap_private<_AP_W2, false>(rhs)); }
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::mult operator * (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator * (ap_private<_AP_W2, false>(rhs)); }
@@ -43762,7 +43659,7 @@ template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_priv
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::logic operator & (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator & (ap_private<_AP_W2, false>(rhs)); }
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::logic operator | (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator | (ap_private<_AP_W2, false>(rhs)); }
 template<int _AP_W, bool _AP_S, int _AP_W2, bool _AP_S2> inline typename ap_private<_AP_W, false>::template RType<_AP_W2, false>::logic operator ^ (const ap_range_ref<_AP_W,_AP_S> &lhs, const ap_range_ref<_AP_W2,_AP_S2> &rhs) { return ap_private<_AP_W,false>(lhs).operator ^ (ap_private<_AP_W2, false>(rhs)); }
-# 1659 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1566 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::plus operator + (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator + (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::minus operator - (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator - (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::mult operator * (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator * (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
@@ -43773,7 +43670,7 @@ template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::logic operator & (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator & (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::logic operator | (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator | (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
 template<int _AP_LW1,typename _AP_LT1,int _AP_LW2,typename _AP_LT2, int _AP_RW1,typename _AP_RT1,int _AP_RW2,typename _AP_RT2> inline typename ap_private<_AP_LW1+_AP_LW2,false>::template RType<_AP_RW1+_AP_RW2,false>::logic operator ^ (const ap_concat_ref<_AP_LW1,_AP_LT1,_AP_LW2,_AP_LT2> &lhs, const ap_concat_ref<_AP_RW1,_AP_RT1,_AP_RW2,_AP_RT2> &rhs) { return ap_private<_AP_LW1+_AP_LW2,false>(lhs).operator ^ (ap_private<_AP_RW1+_AP_RW2,false>(rhs)); }
-# 1814 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1721 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 1, false > operator, (const ap_private<_AP_W, _AP_S> &op1, bool op2) { ap_private<1 + _AP_W, false> val(op2); ap_private<1 + _AP_W, false> ret(op1); ret <<= 1; if (false) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret;} template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 1, false > operator, (bool op1, const ap_private<_AP_W, _AP_S>& op2) { ap_private<1 + _AP_W, false> val(op1); ap_private<1 + _AP_W, false> ret(op2); if (_AP_S) { ret <<= 1; ret >>= 1; } ret |= val << _AP_W; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 1, false > operator, (const ap_range_ref<_AP_W, _AP_S> &op1, bool op2) { ap_private<1 + _AP_W, false> val(op2); ap_private<1 + _AP_W, false> ret(op1); ret <<= 1; if (false) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 1, false > operator, (bool op1, const ap_range_ref<_AP_W, _AP_S> &op2) { ap_private<1 + _AP_W, false> val(op1); ap_private<1 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private<1 + 1, false > operator, (const ap_bit_ref<_AP_W, _AP_S> &op1, bool op2) { ap_private<1 + 1, false> val(op2); val[1] = op1; return val; } template<int _AP_W, bool _AP_S> inline ap_private<1 + 1, false > operator, (bool op1, const ap_bit_ref<_AP_W, _AP_S> &op2) { ap_private<1 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; } template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 1, false > operator, (const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op1, bool op2) { ap_private<1 + _AP_W + _AP_W2, false> val(op2); ap_private<1 + _AP_W + _AP_W2, false> ret(op1); if (false) { val <<= _AP_W + _AP_W2; val >>= _AP_W + _AP_W2; } ret <<= 1; ret |= val; return ret; }template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 1, false > operator, (bool op1, const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op2) { ap_private<1 + _AP_W + _AP_W2, false> val(op1); ap_private<1 + _AP_W + _AP_W2, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; }template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 1, false > operator, (const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, bool op2) { ap_private<1 + _AP_W, false> val(op2); ap_private<1 + _AP_W, false> ret(op1); if (false) { val <<= _AP_W; val >>= _AP_W; } ret <<= 1; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 1, false > operator, (bool op1, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<1 + _AP_W, false> val(op1); ap_private<1 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 1, false> operator, (const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, bool op2) { ap_private<1 + 1, false> val(op2); val[1] = op1; return val; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 1, false> operator, (bool op1, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<1 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; }
 template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (const ap_private<_AP_W, _AP_S> &op1, char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); ret <<= 8; if ((-127 - 1) != 0) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret;} template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (char op1, const ap_private<_AP_W, _AP_S>& op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); if (_AP_S) { ret <<= 8; ret >>= 8; } ret |= val << _AP_W; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (const ap_range_ref<_AP_W, _AP_S> &op1, char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); ret <<= 8; if ((-127 - 1) != 0) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (char op1, const ap_range_ref<_AP_W, _AP_S> &op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private<8 + 1, false > operator, (const ap_bit_ref<_AP_W, _AP_S> &op1, char op2) { ap_private<8 + 1, false> val(op2); val[8] = op1; return val; } template<int _AP_W, bool _AP_S> inline ap_private<8 + 1, false > operator, (char op1, const ap_bit_ref<_AP_W, _AP_S> &op2) { ap_private<8 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; } template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 8, false > operator, (const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op1, char op2) { ap_private<8 + _AP_W + _AP_W2, (-127 - 1) != 0> val(op2); ap_private<8 + _AP_W + _AP_W2, (-127 - 1) != 0> ret(op1); if ((-127 - 1) != 0) { val <<= _AP_W + _AP_W2; val >>= _AP_W + _AP_W2; } ret <<= 8; ret |= val; return ret; }template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 8, false > operator, (char op1, const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op2) { ap_private<8 + _AP_W + _AP_W2, (-127 - 1) != 0> val(op1); ap_private<8 + _AP_W + _AP_W2, (-127 - 1) != 0> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; }template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 8, false > operator, (const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); if ((-127 - 1) != 0) { val <<= _AP_W; val >>= _AP_W; } ret <<= 8; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 8, false > operator, (char op1, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 8, false> operator, (const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, char op2) { ap_private<8 + 1, (-127 - 1) != 0> val(op2); val[8] = op1; return val; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 8, false> operator, (char op1, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<8 + 1, (-127 - 1) != 0> val(op1); val <<= 1; val[0] = op2; return val; }
 template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (const ap_private<_AP_W, _AP_S> &op1, signed char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); ret <<= 8; if (true) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret;} template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (signed char op1, const ap_private<_AP_W, _AP_S>& op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); if (_AP_S) { ret <<= 8; ret >>= 8; } ret |= val << _AP_W; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (const ap_range_ref<_AP_W, _AP_S> &op1, signed char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); ret <<= 8; if (true) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 8, false > operator, (signed char op1, const ap_range_ref<_AP_W, _AP_S> &op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private<8 + 1, false > operator, (const ap_bit_ref<_AP_W, _AP_S> &op1, signed char op2) { ap_private<8 + 1, false> val(op2); val[8] = op1; return val; } template<int _AP_W, bool _AP_S> inline ap_private<8 + 1, false > operator, (signed char op1, const ap_bit_ref<_AP_W, _AP_S> &op2) { ap_private<8 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; } template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 8, false > operator, (const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op1, signed char op2) { ap_private<8 + _AP_W + _AP_W2, true> val(op2); ap_private<8 + _AP_W + _AP_W2, true> ret(op1); if (true) { val <<= _AP_W + _AP_W2; val >>= _AP_W + _AP_W2; } ret <<= 8; ret |= val; return ret; }template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 8, false > operator, (signed char op1, const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op2) { ap_private<8 + _AP_W + _AP_W2, true> val(op1); ap_private<8 + _AP_W + _AP_W2, true> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; }template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 8, false > operator, (const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, signed char op2) { ap_private<8 + _AP_W, false> val(op2); ap_private<8 + _AP_W, false> ret(op1); if (true) { val <<= _AP_W; val >>= _AP_W; } ret <<= 8; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 8, false > operator, (signed char op1, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<8 + _AP_W, false> val(op1); ap_private<8 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 8, false> operator, (const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, signed char op2) { ap_private<8 + 1, true> val(op2); val[8] = op1; return val; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 8, false> operator, (signed char op1, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<8 + 1, true> val(op1); val <<= 1; val[0] = op2; return val; }
@@ -43791,7 +43688,7 @@ template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator,
 
 template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (const ap_private<_AP_W, _AP_S> &op1, ap_slong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); ret <<= 64; if (true) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret;} template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (ap_slong op1, const ap_private<_AP_W, _AP_S>& op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); if (_AP_S) { ret <<= 64; ret >>= 64; } ret |= val << _AP_W; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (const ap_range_ref<_AP_W, _AP_S> &op1, ap_slong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); ret <<= 64; if (true) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (ap_slong op1, const ap_range_ref<_AP_W, _AP_S> &op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private<64 + 1, false > operator, (const ap_bit_ref<_AP_W, _AP_S> &op1, ap_slong op2) { ap_private<64 + 1, false> val(op2); val[64] = op1; return val; } template<int _AP_W, bool _AP_S> inline ap_private<64 + 1, false > operator, (ap_slong op1, const ap_bit_ref<_AP_W, _AP_S> &op2) { ap_private<64 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; } template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 64, false > operator, (const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op1, ap_slong op2) { ap_private<64 + _AP_W + _AP_W2, true> val(op2); ap_private<64 + _AP_W + _AP_W2, true> ret(op1); if (true) { val <<= _AP_W + _AP_W2; val >>= _AP_W + _AP_W2; } ret <<= 64; ret |= val; return ret; }template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 64, false > operator, (ap_slong op1, const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op2) { ap_private<64 + _AP_W + _AP_W2, true> val(op1); ap_private<64 + _AP_W + _AP_W2, true> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; }template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 64, false > operator, (const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, ap_slong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); if (true) { val <<= _AP_W; val >>= _AP_W; } ret <<= 64; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 64, false > operator, (ap_slong op1, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 64, false> operator, (const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, ap_slong op2) { ap_private<64 + 1, true> val(op2); val[64] = op1; return val; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 64, false> operator, (ap_slong op1, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<64 + 1, true> val(op1); val <<= 1; val[0] = op2; return val; }
 template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (const ap_private<_AP_W, _AP_S> &op1, ap_ulong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); ret <<= 64; if (false) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret;} template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (ap_ulong op1, const ap_private<_AP_W, _AP_S>& op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); if (_AP_S) { ret <<= 64; ret >>= 64; } ret |= val << _AP_W; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (const ap_range_ref<_AP_W, _AP_S> &op1, ap_ulong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); ret <<= 64; if (false) { val <<= _AP_W; val >>= _AP_W; } ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private< _AP_W + 64, false > operator, (ap_ulong op1, const ap_range_ref<_AP_W, _AP_S> &op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, bool _AP_S> inline ap_private<64 + 1, false > operator, (const ap_bit_ref<_AP_W, _AP_S> &op1, ap_ulong op2) { ap_private<64 + 1, false> val(op2); val[64] = op1; return val; } template<int _AP_W, bool _AP_S> inline ap_private<64 + 1, false > operator, (ap_ulong op1, const ap_bit_ref<_AP_W, _AP_S> &op2) { ap_private<64 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; } template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 64, false > operator, (const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op1, ap_ulong op2) { ap_private<64 + _AP_W + _AP_W2, false> val(op2); ap_private<64 + _AP_W + _AP_W2, false> ret(op1); if (false) { val <<= _AP_W + _AP_W2; val >>= _AP_W + _AP_W2; } ret <<= 64; ret |= val; return ret; }template<int _AP_W, typename _AP_T, int _AP_W2, typename _AP_T2> inline ap_private<_AP_W + _AP_W2 + 64, false > operator, (ap_ulong op1, const ap_concat_ref<_AP_W, _AP_T, _AP_W2, _AP_T2> &op2) { ap_private<64 + _AP_W + _AP_W2, false> val(op1); ap_private<64 + _AP_W + _AP_W2, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; }template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 64, false > operator, (const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, ap_ulong op2) { ap_private<64 + _AP_W, false> val(op2); ap_private<64 + _AP_W, false> ret(op1); if (false) { val <<= _AP_W; val >>= _AP_W; } ret <<= 64; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< _AP_W + 64, false > operator, (ap_ulong op1, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<64 + _AP_W, false> val(op1); ap_private<64 + _AP_W, false> ret(op2); int len = op2.length(); val <<= len; ret |= val; return ret; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 64, false> operator, (const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op1, ap_ulong op2) { ap_private<64 + 1, false> val(op2); val[64] = op1; return val; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline ap_private< 1 + 64, false> operator, (ap_ulong op1, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op2) { ap_private<64 + 1, false> val(op1); val <<= 1; val[0] = op2; return val; }
-# 1840 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1747 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator << (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, long rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) << ((int)rhs); }
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator << (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, unsigned long rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) << ((int)rhs); }
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator << (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, unsigned int rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) << ((int)rhs); }
@@ -43802,7 +43699,7 @@ template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator >> (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, unsigned int rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) >> ((int)rhs); }
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator >> (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, ap_ulong rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) >> ((int)rhs); }
 template<int _AP_W, typename _AP_T, int _AP_W1, typename _AP_T1> inline ap_uint<_AP_W+_AP_W1> operator >> (const ap_concat_ref<_AP_W, _AP_T, _AP_W1, _AP_T1> lhs, ap_slong rhs) { return ((ap_uint<_AP_W+_AP_W1>)lhs.get()) >> ((int)rhs); }
-# 1861 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h"
+# 1768 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h"
 template<int _AP_W, bool _AP_S>
 inline std::ostream& operator<<(std::ostream& out, const ap_private<_AP_W,_AP_S> &op)
 {
@@ -43882,12 +43779,12 @@ inline void print(const ap_private<_AP_W,_AP_S> &op, bool fill=true )
     printf("\n");
 
 }
-# 76 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h" 1
-# 75 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_int_sim.h" 1
-# 76 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h" 2
-# 97 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 76 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h" 1
+# 75 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_int_sim.h" 1
+# 76 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h" 2
+# 97 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> struct ap_fixed_base;
 
 
@@ -44448,7 +44345,7 @@ private:
     }
 
     void fromString(const std::string& val, unsigned char radix) {
-        ((radix == 2 || radix == 8 || radix == 10 || radix == 16) ? static_cast<void> (0) : __assert_fail ("radix == 2 || radix == 8 || radix == 10 || radix == 16", "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h", 657, __PRETTY_FUNCTION__));
+        ((radix == 2 || radix == 8 || radix == 10 || radix == 16) ? static_cast<void> (0) : __assert_fail ("radix == 2 || radix == 8 || radix == 10 || radix == 16", "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h", 657, __PRETTY_FUNCTION__));
         V = 0;
         int startPos = 0;
         int endPos = val.length();
@@ -44461,7 +44358,7 @@ private:
             ++startPos;
         } else if (val[0] == '+')
             ++startPos;
-# 692 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 692 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
         ap_fixed_base<((_AP_I) > (4) ? (_AP_I) : (4))+4, ((_AP_I) > (4) ? (_AP_I) : (4))+4, false> integer_bits = 0;
 
 
@@ -44730,7 +44627,7 @@ af_bit_ref;
         typedef ap_fixed_base<div_w, div_i, div_s> div;
         typedef ap_fixed_base<_AP_W, _AP_I, _AP_S> arg1;
     };
-# 971 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 971 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     inline ap_fixed_base() {
     }
 
@@ -44889,7 +44786,7 @@ af_bit_ref;
         *this=(ap_private<64,false>)b;
         report();
     }
-# 1141 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1141 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     inline ap_fixed_base(ap_slong b) {
         *this=(ap_private<64,true>)b;
         report();
@@ -45183,37 +45080,20 @@ af_bit_ref;
     inline float to_float() const {
         if(!V)
             return 0;
-
-
-
-
-
-        bool is_neg = _AP_S && V[_AP_W - 1];
+        bool isneg = _AP_S && V[_AP_W-1];
+        uint64_t res = isneg ? 0x80000000ULL : 0;
         ap_private<_AP_W, false> tmp = V;
-        if (is_neg) tmp = -tmp;
-        int num_zeros = tmp.countLeadingZeros();
-        int msb_idx = _AP_W - 1 - num_zeros;
-        int exp = _AP_I - (_AP_W - msb_idx);
-        msb_idx = (msb_idx < 0) ? 0 : msb_idx;
-        uint32_t tmp32;
-        tmp32 = msb_idx;
-        if (msb_idx < 32) {
-          tmp32 = tmp.to_uint();
-          tmp32 <<= (31 - msb_idx);
-        } else {
-
-          tmp32 = tmp(msb_idx, msb_idx - 31).to_uint();
+        if (isneg) tmp = -tmp;
+        int i = _AP_W -1 - tmp.countLeadingZeros();
+        int exp = _AP_I-(_AP_W-i);
+        res|=((uint64_t)(exp+((1ULL<<(8 -1))-1)))<<23;
+        if(i!=0) {
+            tmp.clear(i);
+            uint32_t man = ((i>23) ? tmp.lshr(i-23) : tmp).to_uint() & 0x7fffff;
+            res |= i<23 ? (man)<<(23 -i)& 0x7fffff : man;
         }
-        union {
-          float f;
-          uint32_t u;
-        } ret;
-        ret.f = tmp32;
-        bool has_carry = (ret.u >> 23) != (((1ULL<<(8 -1))-1) + 31);
-        ret.u &= 0x7fffff;
-        ret.u |= ((uint32_t)(exp + has_carry + ((1ULL<<(8 -1))-1))) << 23;
-        float retval = (is_neg? -ret.f : ret.f);
-        return retval;
+        float dp=rawBitsToFloat(res);
+        return dp;
     }
 
     inline half to_half() const {
@@ -45249,10 +45129,6 @@ af_bit_ref;
 
     inline operator half () const {
            return to_half();
-    }
-
-    inline operator bool () const {
-      return (bool) V.to_bool();
     }
 
     inline operator char () const {
@@ -45291,7 +45167,7 @@ af_bit_ref;
     inline operator unsigned long () const {
         return (unsigned long) to_uint64();
     }
-# 1553 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1532 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     inline operator unsigned long long () const {
         return to_uint64();
     }
@@ -45351,14 +45227,14 @@ af_bit_ref;
         r.V = ((_AP_S||_AP_S2) ? dividend.sdiv(divisior): dividend.udiv(divisior));
         return r;
     }
-# 1630 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1609 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline typename RType<_AP_W2,_AP_I2,_AP_S2>::plus operator + (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { enum {_AP_F=_AP_W-_AP_I, F2=_AP_W2-_AP_I2}; typename RType<_AP_W2,_AP_I2,_AP_S2>::plus r, lhs(*this), rhs(op2); r.V = lhs.V.Add(rhs.V); return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::plus operator + (const ap_fixed_base& op2) const { typename RType<_AP_W,_AP_I,_AP_S>::plus r; r.V = V + op2.V; return r; }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline typename RType<_AP_W2,_AP_I2,_AP_S2>::minus operator - (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { enum {_AP_F=_AP_W-_AP_I, F2=_AP_W2-_AP_I2}; typename RType<_AP_W2,_AP_I2,_AP_S2>::minus r, lhs(*this), rhs(op2); r.V = lhs.V.Sub(rhs.V); return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::minus operator - (const ap_fixed_base& op2) const { typename RType<_AP_W,_AP_I,_AP_S>::minus r; r.V = V - op2.V; return r; }
-# 1653 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1632 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline typename RType<_AP_W2,_AP_I2,_AP_S2>::logic operator & (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { typename RType<_AP_W2,_AP_I2,_AP_S2>::logic r, lhs(*this), rhs(op2); r.V=lhs.V & rhs.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator & (const ap_fixed_base& op2) const { typename RType<_AP_W,_AP_I,_AP_S>::logic r; r.V = V & op2.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator &(int op2) const { return V & (op2<<(_AP_W - _AP_I)); }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline typename RType<_AP_W2,_AP_I2,_AP_S2>::logic operator | (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { typename RType<_AP_W2,_AP_I2,_AP_S2>::logic r, lhs(*this), rhs(op2); r.V=lhs.V | rhs.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator | (const ap_fixed_base& op2) const { typename RType<_AP_W,_AP_I,_AP_S>::logic r; r.V = V | op2.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator |(int op2) const { return V | (op2<<(_AP_W - _AP_I)); }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline typename RType<_AP_W2,_AP_I2,_AP_S2>::logic operator ^ (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { typename RType<_AP_W2,_AP_I2,_AP_S2>::logic r, lhs(*this), rhs(op2); r.V=lhs.V ^ rhs.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator ^ (const ap_fixed_base& op2) const { typename RType<_AP_W,_AP_I,_AP_S>::logic r; r.V = V ^ op2.V; return r; } inline typename RType<_AP_W,_AP_I,_AP_S>::logic operator ^(int op2) const { return V ^ (op2<<(_AP_W - _AP_I)); }
-# 1667 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1646 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base& operator += (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) { *this=operator + (op2) ; return *this; }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base& operator -= (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) { *this=operator - (op2) ; return *this; }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base& operator &= (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) { *this=operator & (op2) ; return *this; }
@@ -45462,7 +45338,7 @@ af_bit_ref;
             else
                 r.V=V<<sh;
         }
-# 1800 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1779 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
         return r;
     }
 
@@ -45477,7 +45353,7 @@ af_bit_ref;
         bool shiftoverflow = sh >= _AP_W;
         r.V = shiftoverflow ? ap_private<_AP_W, _AP_S >(0) : V << sh;
         if (sh == 0) return r;
-# 1835 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1814 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
         return r;
     }
 
@@ -45500,7 +45376,7 @@ af_bit_ref;
             else
                 r.V=_AP_S?V.ashr(sh):V.lshr(sh);
         }
-# 1887 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1866 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
         return r;
     }
 
@@ -45518,7 +45394,7 @@ af_bit_ref;
             NegSrc?r.V.set():r.V.clear();
         else
             r.V=_AP_S?V.ashr(sh):V.lshr(sh);
-# 1917 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1896 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
         return r;
     }
 
@@ -45527,10 +45403,10 @@ af_bit_ref;
         unsigned int sh = op2.to_uint();
         return operator >> (sh);
     }
-# 1936 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1915 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     template<int _AP_W2, bool _AP_S2> inline ap_fixed_base& operator <<=(const ap_private<_AP_W2,_AP_S2>& op2) { *this=operator << (op2); return *this; }
     template<int _AP_W2, bool _AP_S2> inline ap_fixed_base& operator >>=(const ap_private<_AP_W2,_AP_S2>& op2) { *this=operator >> (op2); return *this; }
-# 1953 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 1932 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base operator << (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { return operator << (op2.to_ap_private()); } template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base& operator <<= (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) { *this=operator << (op2); return *this; }
     template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base operator >> (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) const { return operator >> (op2.to_ap_private()); } template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2, ap_o_mode _AP_O2, int _AP_N2> inline ap_fixed_base& operator >>= (const ap_fixed_base<_AP_W2,_AP_I2,_AP_S2,_AP_Q2,_AP_O2, _AP_N2>& op2) { *this=operator >> (op2); return *this; }
 
@@ -45833,7 +45709,6 @@ std::string ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::to_string(
         str += prefix;
         str += '0';
     }
-
     ap_fixed_base<((_AP_W - _AP_I) > (1) ? (_AP_W - _AP_I) : (1)), 0, false> frac_part = tmp;
 
     if (radix == 10) {
@@ -45948,7 +45823,7 @@ inline void rshift(ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ret,
             int i) {
     ret.V = _AP_S ? op.V.ashr(i): op.V.lshr(i);
 }
-# 2380 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 2358 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<> inline ap_fixed_base<1,1,true,AP_TRN,AP_WRAP>::ap_fixed_base(bool i_op):V(i_op) { } template<> inline ap_fixed_base<1,1,false,AP_TRN,AP_WRAP>::ap_fixed_base(bool i_op):V(i_op) { }
 template<> inline ap_fixed_base<8,8,true,AP_TRN,AP_WRAP>::ap_fixed_base(signed char i_op):V(i_op) { } template<> inline ap_fixed_base<8,8,false,AP_TRN,AP_WRAP>::ap_fixed_base(signed char i_op):V(i_op) { }
 template<> inline ap_fixed_base<8,8,true,AP_TRN,AP_WRAP>::ap_fixed_base(unsigned char i_op):V(i_op) { } template<> inline ap_fixed_base<8,8,false,AP_TRN,AP_WRAP>::ap_fixed_base(unsigned char i_op):V(i_op) { }
@@ -46204,7 +46079,7 @@ inline void print(const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& x) 
         print(p2,false);
     }
 }
-# 2767 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 2745 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::plus operator + (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator + (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::plus operator + (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::minus operator - (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator - (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::minus operator - (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::mult operator * (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator * (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::mult operator * (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::div operator / (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator / (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::div operator / (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator / (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::arg1 operator >> (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator >>(ap_private<1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::arg1 operator << (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator <<(ap_private<1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator & (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator & (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator & (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator & (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator | (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator | (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator | (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator | (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator ^ (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator ^ (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<1,1,false>::logic operator ^ (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator ^ (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator == (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator == (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator != (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator != (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator > (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator > (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator >= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator >= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator < (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator < (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator <= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (bool i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<1,1,false>(i_op).operator <= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator += ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator += (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator -= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator -= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator *= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator *= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator /= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator /= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator >>= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator >>= (ap_private<1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator <<= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator <<= (ap_private<1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator &= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator |= (ap_fixed_base<1,1,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, bool i_op) { return op.operator ^= (ap_fixed_base<1,1,false>(i_op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::plus operator + (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator + (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::plus operator + (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::minus operator - (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator - (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::minus operator - (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::mult operator * (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator * (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::mult operator * (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::div operator / (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator / (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::div operator / (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator / (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::arg1 operator >> (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator >>(ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::arg1 operator << (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator <<(ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator & (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator & (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator & (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator & (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator | (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator | (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator | (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator | (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator ^ (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator ^ (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator ^ (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator ^ (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator == (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator == (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator != (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator != (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator > (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator > (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator >= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator >= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator < (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator < (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator <= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator <= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator += ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator += (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator -= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator -= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator *= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator *= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator /= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator /= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator >>= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator >>= (ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator <<= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator <<= (ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator &= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator |= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, char i_op) { return op.operator ^= (ap_fixed_base<8,8,true>(i_op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::plus operator + (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator + (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::plus operator + (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::minus operator - (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator - (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::minus operator - (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::mult operator * (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator * (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::mult operator * (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::div operator / (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator / (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::div operator / (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator / (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::arg1 operator >> (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator >>(ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::arg1 operator << (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator <<(ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator & (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator & (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator & (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator & (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator | (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator | (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator | (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator | (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator ^ (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator ^ (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<8,8,true>::logic operator ^ (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator ^ (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator == (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator == (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator != (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator != (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator > (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator > (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator >= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator >= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator < (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator < (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator <= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (signed char i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<8,8,true>(i_op).operator <= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator += ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator += (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator -= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator -= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator *= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator *= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator /= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator /= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator >>= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator >>= (ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator <<= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator <<= (ap_private<8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator &= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator |= (ap_fixed_base<8,8,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, signed char i_op) { return op.operator ^= (ap_fixed_base<8,8,true>(i_op)); }
@@ -46222,7 +46097,7 @@ template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int
 
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::plus operator + (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator + (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::plus operator + (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::minus operator - (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator - (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::minus operator - (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::mult operator * (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator * (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::mult operator * (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::div operator / (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator / (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::div operator / (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator / (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::arg1 operator >> (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator >>(ap_private<64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::arg1 operator << (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator <<(ap_private<64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator & (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator & (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator & (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator & (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator | (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator | (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator | (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator | (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator ^ (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator ^ (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,true>::logic operator ^ (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator ^ (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator == (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator == (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator != (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator != (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator > (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator > (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator >= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator >= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator < (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator < (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator <= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (ap_slong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,true>(i_op).operator <= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator += ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator += (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator -= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator -= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator *= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator *= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator /= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator /= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator >>= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator >>= (ap_private<64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator <<= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator <<= (ap_private<64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator &= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator |= (ap_fixed_base<64,64,true>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_slong i_op) { return op.operator ^= (ap_fixed_base<64,64,true>(i_op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::plus operator + (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator + (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::plus operator + (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::minus operator - (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator - (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::minus operator - (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::mult operator * (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator * (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::mult operator * (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::div operator / (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator / (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::div operator / (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator / (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::arg1 operator >> (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator >>(ap_private<64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::arg1 operator << (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator <<(ap_private<64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator & (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator & (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator & (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator & (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator | (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator | (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator | (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator | (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator ^ (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator ^ (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S,ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N > inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<64,64,false>::logic operator ^ (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator ^ (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator == (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator == (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator != (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator != (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator > (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator > (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator >= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator >= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator < (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator < (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator <= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= (ap_ulong i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<64,64,false>(i_op).operator <= (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator += ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator += (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator -= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator -= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator *= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator *= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator /= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator /= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator >>= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator >>= (ap_private<64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator <<= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator <<= (ap_private<64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator &= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator |= (ap_fixed_base<64,64,false>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, ap_ulong i_op) { return op.operator ^= (ap_fixed_base<64,64,false>(i_op)); }
-# 2817 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 2795 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>::template RType<_AP_W,_AP_I,_AP_S>::plus operator + ( const ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op).operator + (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<_AP_W2,_AP_W2,_AP_S2>::plus operator + ( const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator + (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>::template RType<_AP_W,_AP_I,_AP_S>::minus operator - ( const ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op).operator - (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<_AP_W2,_AP_W2,_AP_S2>::minus operator - ( const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator - (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>::template RType<_AP_W,_AP_I,_AP_S>::mult operator * ( const ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op).operator * (op); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline typename ap_fixed_base<_AP_W,_AP_I,_AP_S>::template RType<_AP_W2,_AP_W2,_AP_S2>::mult operator * ( const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator * (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); }
@@ -46245,7 +46120,7 @@ template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int 
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator &= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator &= (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W2,_AP_S2>& operator &= ( ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return i_op.operator &= (op.to_ap_private()); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator |= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator |= (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W2,_AP_S2>& operator |= ( ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return i_op.operator |= (op.to_ap_private()); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& operator ^= ( ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op, const ap_private<_AP_W2,_AP_S2>& i_op) { return op.operator ^= (ap_fixed_base<_AP_W2,_AP_W2,_AP_S2>(i_op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O,int _AP_N, int _AP_W2, bool _AP_S2> inline ap_private<_AP_W2,_AP_S2>& operator ^= ( ap_private<_AP_W2,_AP_S2>& i_op, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op) { return i_op.operator ^= (op.to_ap_private()); }
-# 2870 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 2848 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) > op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 > (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) < op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 < (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) >= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 >= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) <= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 <= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) == op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 == (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<1,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( bool op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<1,false>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, bool op2) { return (bool(op)) != op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( bool op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 != (bool(op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) > op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 > (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) < op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 < (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) >= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 >= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) <= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 <= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) == op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 == (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, char op2) { return (bool(op)) != op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 != (bool(op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) > op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 > (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) < op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 < (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) >= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 >= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) <= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 <= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) == op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 == (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<8,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( signed char op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<8,true>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, signed char op2) { return (bool(op)) != op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( signed char op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 != (bool(op)); }
@@ -46263,7 +46138,7 @@ template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int
 
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) > op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 > (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) < op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 < (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) >= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 >= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) <= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 <= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) == op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 == (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<64,true>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( ap_slong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,true>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_slong op2) { return (bool(op)) != op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( ap_slong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 != (bool(op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator > (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) > op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator > ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 > (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator < (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) < op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator < ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 < (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator >= (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) >= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator >= ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 >= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator <= (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator <= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) <= op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator <= ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 <= (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator == (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator == (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) == op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator == ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 == (bool(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (ap_private<_AP_W, false>(op)).operator != (ap_private<64,false>(op2)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( ap_ulong op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return ap_private<64,false>(op2).operator != (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, ap_ulong op2) { return (bool(op)) != op2; } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N> inline bool operator != ( ap_ulong op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2 != (bool(op)); }
-# 2910 "/opt/Xilinx/Vivado/2017.4/include/etc/ap_fixed_sim.h"
+# 2888 "/opt/Xilinx/Vivado_HLS/2017.2/include/etc/ap_fixed_sim.h"
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator > ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S> &op2) { return (ap_private<_AP_W, false>(op)).operator > (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator > (const ap_private<_AP_W2, _AP_S2> &op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator > (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator > ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S2> &op2) { return (ap_private<1, false>(op)).operator > (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator > ( const ap_private<_AP_W2, _AP_S2> &op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator > (ap_private<1,false>(op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator < ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S> &op2) { return (ap_private<_AP_W, false>(op)).operator < (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator < (const ap_private<_AP_W2, _AP_S2> &op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator < (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator < ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S2> &op2) { return (ap_private<1, false>(op)).operator < (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator < ( const ap_private<_AP_W2, _AP_S2> &op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator < (ap_private<1,false>(op)); }
 template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator >= ( const af_range_ref<_AP_W,_AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S> &op2) { return (ap_private<_AP_W, false>(op)).operator >= (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator >= (const ap_private<_AP_W2, _AP_S2> &op2, const af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator >= (ap_private<_AP_W, false>(op)); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator >= ( const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op, const ap_private<_AP_W2, _AP_S2> &op2) { return (ap_private<1, false>(op)).operator >= (op2); } template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N, int _AP_W2, bool _AP_S2> inline bool operator >= ( const ap_private<_AP_W2, _AP_S2> &op2, const af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N> &op) { return op2.operator >= (ap_private<1,false>(op)); }
@@ -46308,7 +46183,7 @@ template<int _AP_W, int _AP_I, bool _AP_S, ap_q_mode _AP_Q, ap_o_mode _AP_O, int
 inline bool operator <= ( double op1, const ap_fixed_base<_AP_W,_AP_I,_AP_S,_AP_Q,_AP_O, _AP_N>& op2) {
   return op2.operator >= (op1);
 }
-# 77 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 2
+# 77 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h" 2
 
 
 template<int _AP_W, int _AP_I, ap_q_mode _AP_Q,
@@ -46325,107 +46200,107 @@ class ap_int: public ap_private<_AP_W, true> {
 
 
 public:
-  typedef ap_private<_AP_W, true> Base;
+    typedef ap_private<_AP_W, true> Base;
 
-  inline ap_int(): Base() {}
-  template<int _AP_W2>
-  inline ap_int(const volatile ap_int<_AP_W2> &op):Base((const ap_private<_AP_W2,true> &)(op)) {}
+    inline ap_int(): Base() {}
+    template<int _AP_W2>
+    inline ap_int(const volatile ap_int<_AP_W2> &op):Base((const ap_private<_AP_W2,true> &)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_int(const ap_int<_AP_W2> &op):Base((const ap_private<_AP_W2,true> &)(op)) {}
+    template<int _AP_W2>
+    inline ap_int(const ap_int<_AP_W2> &op):Base((const ap_private<_AP_W2,true> &)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_int(const ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2,false> &)(op)) {}
+    template<int _AP_W2>
+    inline ap_int(const ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2,false> &)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_int(const volatile ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2,false> &)(op)) {}
+    template<int _AP_W2>
+    inline ap_int(const volatile ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2,false> &)(op)) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_int(const ap_range_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_int(const ap_range_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_int(const ap_bit_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_int(const ap_bit_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
 
-  template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
-  inline ap_int(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref):Base(ref) {}
+    template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
+    inline ap_int(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref):Base(ref) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                 :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                  :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                 :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                  :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_int(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_int(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
-  _AP_N2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
+                  _AP_N2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
-  _AP_N2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
+                  _AP_N2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_int(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
-  _AP_Q2, _AP_O2, _AP_N2>& op):Base(op.to_ap_private()) {}
-
-
-
-  inline ap_int(bool v):Base(v) {}
-  inline ap_int(signed char v):Base(v) {}
-  inline ap_int(unsigned char v):Base(v) {}
-  inline ap_int(short v):Base(v) {}
-  inline ap_int(unsigned short v):Base(v) {}
-  inline ap_int(int v):Base(v) {}
-  inline ap_int(unsigned int v):Base(v) {}
-  inline ap_int(long v):Base(v) {}
-  inline ap_int(unsigned long v):Base(v) {}
-  inline ap_int(unsigned long long v):Base(v) {}
-  inline ap_int(long long v):Base(v) {}
-  inline ap_int(half v):Base(v) {}
-  inline ap_int(float v):Base(v) {}
-  inline ap_int(double v):Base(v) {}
-  inline ap_int(const char* v):Base(v) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_int(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op):Base(op.to_ap_private()) {}
 
 
-  inline ap_int(const char* str, signed char rd):Base(str, rd) {}
+
+    inline ap_int(bool v):Base(v) {}
+    inline ap_int(signed char v):Base(v) {}
+    inline ap_int(unsigned char v):Base(v) {}
+    inline ap_int(short v):Base(v) {}
+    inline ap_int(unsigned short v):Base(v) {}
+    inline ap_int(int v):Base(v) {}
+    inline ap_int(unsigned int v):Base(v) {}
+    inline ap_int(long v):Base(v) {}
+    inline ap_int(unsigned long v):Base(v) {}
+    inline ap_int(unsigned long long v):Base(v) {}
+    inline ap_int(long long v):Base(v) {}
+    inline ap_int(half v):Base(v) {}
+    inline ap_int(float v):Base(v) {}
+    inline ap_int(double v):Base(v) {}
+    inline ap_int(const char* v):Base(v) {}
 
 
-  inline void operator = (const ap_int<_AP_W>& op2) volatile {
-    const_cast<ap_int*>(this)->operator = (op2);
-  }
+    inline ap_int(const char* str, signed char rd):Base(str, rd) {}
 
-  inline void operator = (const volatile ap_int<_AP_W>& op2) volatile {
-    const_cast<Base*>(this)->operator = (op2);
-  }
 
-  inline ap_int<_AP_W>& operator = (const volatile ap_int<_AP_W>& op2) {
-    Base::operator = (const_cast<ap_int<_AP_W>& >(op2));
-    return *this;
-  }
+    inline void operator = (const ap_int<_AP_W>& op2) volatile {
+      const_cast<ap_int*>(this)->operator = (op2);
+    }
 
-  inline ap_int<_AP_W>& operator = (const ap_int<_AP_W>& op2) {
-    Base::operator = ((const ap_private<_AP_W, true>&)op2);
-    return *this;
-  }
+    inline void operator = (const volatile ap_int<_AP_W>& op2) volatile {
+      const_cast<Base*>(this)->operator = (op2);
+    }
+
+    inline ap_int<_AP_W>& operator = (const volatile ap_int<_AP_W>& op2) {
+      Base::operator = (const_cast<ap_int<_AP_W>& >(op2));
+        return *this;
+    }
+
+    inline ap_int<_AP_W>& operator = (const ap_int<_AP_W>& op2) {
+      Base::operator = ((const ap_private<_AP_W, true>&)op2);
+        return *this;
+    }
 
 };
 
@@ -46437,109 +46312,109 @@ class ap_uint: public ap_private<_AP_W, false> {
 
 
 public:
-  typedef ap_private<_AP_W, false> Base;
+    typedef ap_private<_AP_W, false> Base;
 
-  inline ap_uint(): Base() {}
+    inline ap_uint(): Base() {}
   inline ap_uint(const ap_uint<_AP_W>& op) :Base(dynamic_cast<const ap_private<_AP_W, false>&>(op)) {}
   inline ap_uint(const volatile ap_uint<_AP_W>& op):Base(dynamic_cast<const volatile ap_private<_AP_W, false>&>(op)){}
-  template<int _AP_W2>
-  inline ap_uint(const volatile ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2, false>&)(op)) {}
+    template<int _AP_W2>
+    inline ap_uint(const volatile ap_uint<_AP_W2> &op):Base((const ap_private<_AP_W2, false>&)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_uint(const ap_uint<_AP_W2> &op) : Base((const ap_private<_AP_W2, false>&)(op)){}
+    template<int _AP_W2>
+    inline ap_uint(const ap_uint<_AP_W2> &op) : Base((const ap_private<_AP_W2, false>&)(op)){}
 
-  template<int _AP_W2>
-  inline ap_uint(const ap_int<_AP_W2> &op) : Base((const ap_private<_AP_W2, true>&)(op)) {}
+    template<int _AP_W2>
+    inline ap_uint(const ap_int<_AP_W2> &op) : Base((const ap_private<_AP_W2, true>&)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_uint(const volatile ap_int<_AP_W2> &op) : Base((const ap_private<_AP_W2, false>&)(op)) {}
+    template<int _AP_W2>
+    inline ap_uint(const volatile ap_int<_AP_W2> &op) : Base((const ap_private<_AP_W2, false>&)(op)) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_uint(const ap_range_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_uint(const ap_bit_ref<_AP_W2, _AP_S2>& ref):Base(ref) {}
 
-  template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
-  inline ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref):Base(ref) {}
+    template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
+    inline ap_uint(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& ref):Base(ref) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                   :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                   :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op.to_ap_private()) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                   :Base(op.to_ap_private()) {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
-    :Base(op) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2, _AP_N2>& op)
+                   :Base(op) {}
 
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_uint(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_uint(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
-   _AP_N2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
+                  _AP_N2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
-   _AP_N2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const af_range_ref<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2,
+                  _AP_N2>& op):Base(op) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_uint(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
-   _AP_Q2, _AP_O2, _AP_N2>& op):Base(op.to_ap_private()) {}
-
-
-
-  inline ap_uint(bool v):Base(v) {}
-  inline ap_uint(signed char v):Base(v) {}
-  inline ap_uint(unsigned char v):Base(v) {}
-  inline ap_uint(short v):Base(v) {}
-  inline ap_uint(unsigned short v):Base(v) {}
-  inline ap_uint(int v):Base(v) {}
-  inline ap_uint(unsigned int v):Base(v) {}
-  inline ap_uint(long v):Base(v) {}
-  inline ap_uint(unsigned long v):Base(v) {}
-  inline ap_uint(unsigned long long v):Base(v) {}
-  inline ap_uint(long long v):Base(v) {}
-  inline ap_uint(half v):Base(v) {}
-  inline ap_uint(float v):Base(v) {}
-  inline ap_uint(double v):Base(v) {}
-  inline ap_uint(const char* v):Base(v) {}
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_uint(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op):Base(op.to_ap_private()) {}
 
 
-  inline ap_uint(const char* str, signed char rd):Base(str, rd) {}
+
+    inline ap_uint(bool v):Base(v) {}
+    inline ap_uint(signed char v):Base(v) {}
+    inline ap_uint(unsigned char v):Base(v) {}
+    inline ap_uint(short v):Base(v) {}
+    inline ap_uint(unsigned short v):Base(v) {}
+    inline ap_uint(int v):Base(v) {}
+    inline ap_uint(unsigned int v):Base(v) {}
+    inline ap_uint(long v):Base(v) {}
+    inline ap_uint(unsigned long v):Base(v) {}
+    inline ap_uint(unsigned long long v):Base(v) {}
+    inline ap_uint(long long v):Base(v) {}
+    inline ap_uint(half v):Base(v) {}
+    inline ap_uint(float v):Base(v) {}
+    inline ap_uint(double v):Base(v) {}
+    inline ap_uint(const char* v):Base(v) {}
 
 
-  inline void operator = (const ap_uint<_AP_W>& op2) volatile {
-    Base::operator = (op2);
-  }
+    inline ap_uint(const char* str, signed char rd):Base(str, rd) {}
 
-  inline void operator = (const volatile ap_uint<_AP_W>& op2) volatile {
-    Base::operator = (op2);
-  }
 
-  inline ap_uint<_AP_W>& operator = (const volatile ap_uint<_AP_W>& op2) {
-    Base::operator = (op2);
-    return *this;
-  }
+    inline void operator = (const ap_uint<_AP_W>& op2) volatile {
+      Base::operator = (op2);
+    }
 
-  inline ap_uint<_AP_W>& operator = (const ap_uint<_AP_W>& op2) {
-    Base::operator = ((const ap_private<_AP_W, false>&)(op2));
-    return *this;
-  }
+    inline void operator = (const volatile ap_uint<_AP_W>& op2) volatile {
+      Base::operator = (op2);
+    }
+
+    inline ap_uint<_AP_W>& operator = (const volatile ap_uint<_AP_W>& op2) {
+      Base::operator = (op2);
+        return *this;
+    }
+
+    inline ap_uint<_AP_W>& operator = (const ap_uint<_AP_W>& op2) {
+      Base::operator = ((const ap_private<_AP_W, false>&)(op2));
+        return *this;
+    }
 
 };
 
@@ -46555,122 +46430,122 @@ class ap_fixed: public ap_fixed_base<_AP_W, _AP_I, true, _AP_Q, _AP_O, _AP_N> {
 
 
 public:
-  typedef ap_fixed_base<_AP_W, _AP_I, true, _AP_Q, _AP_O, _AP_N> Base;
+    typedef ap_fixed_base<_AP_W, _AP_I, true, _AP_Q, _AP_O, _AP_N> Base;
 
-  inline ap_fixed():Base() {}
+    inline ap_fixed():Base() {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
-    _AP_N2>& op): Base(op) {}
-
-
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
-    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
-         false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
-
-  template<int _AP_W2>
-  inline ap_fixed(const ap_int<_AP_W2>& op):
-    Base(ap_private<_AP_W2, true>(op)) {}
-
-  template<int _AP_W2>
-  inline ap_fixed(const ap_uint<_AP_W2>& op):Base(ap_private<_AP_W2, false>(op)) {}
-
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
-    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
-         true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+            ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
+                    _AP_N2>& op): Base(op) {}
 
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
-    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
-         false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
+                    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
+                   false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
-  template<int _AP_W2>
-  inline ap_fixed(const volatile ap_int<_AP_W2>& op):
-    Base(ap_private<_AP_W2, true>(op)) {}
+    template<int _AP_W2>
+    inline ap_fixed(const ap_int<_AP_W2>& op):
+                   Base(ap_private<_AP_W2, true>(op)) {}
 
-  template<int _AP_W2>
-  inline ap_fixed(const volatile ap_uint<_AP_W2>& op):Base(op) {}
+    template<int _AP_W2>
+    inline ap_fixed(const ap_uint<_AP_W2>& op):Base(ap_private<_AP_W2, false>(op)) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
-    _AP_Q2, _AP_O2, _AP_N2>& op):Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_fixed(const ap_bit_ref<_AP_W2, _AP_S2>& op):
-    Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_fixed(const ap_range_ref<_AP_W2, _AP_S2>& op):
-    Base(op) {}
-
-  template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
-  inline ap_fixed(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& op):
-    Base(op) {}
-
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2,
-    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
-
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_fixed(const af_range_ref<_AP_W2, _AP_I2, _AP_S2,
-    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_fixed(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+            ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
+                    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
+                    true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
 
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2, _AP_O2,
+                    _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
+                   false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
-  inline ap_fixed(bool v):Base(v) {}
-  inline ap_fixed(signed char v):Base(v) {}
-  inline ap_fixed(unsigned char v):Base(v) {}
-  inline ap_fixed(short v):Base(v) {}
-  inline ap_fixed(unsigned short v):Base(v) {}
-  inline ap_fixed(int v):Base(v) {}
-  inline ap_fixed(unsigned int v):Base(v) {}
-  inline ap_fixed(long v):Base(v) {}
-  inline ap_fixed(unsigned long v):Base(v) {}
-  inline ap_fixed(unsigned long long v):Base(v) {}
-  inline ap_fixed(long long v):Base(v) {}
-  inline ap_fixed(half v):Base(v) {}
-  inline ap_fixed(float v):Base(v) {}
-  inline ap_fixed(double v):Base(v) {}
-  inline ap_fixed(const char* v):Base(v) {}
+    template<int _AP_W2>
+    inline ap_fixed(const volatile ap_int<_AP_W2>& op):
+                   Base(ap_private<_AP_W2, true>(op)) {}
+
+    template<int _AP_W2>
+    inline ap_fixed(const volatile ap_uint<_AP_W2>& op):Base(op) {}
+
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op):Base(op) {}
+
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_fixed(const ap_bit_ref<_AP_W2, _AP_S2>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_fixed(const ap_range_ref<_AP_W2, _AP_S2>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
+    inline ap_fixed(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
+
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_fixed(const af_range_ref<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
+
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_fixed(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
 
 
-  inline ap_fixed(const char* str, signed char rd):Base(str, rd) {}
+
+    inline ap_fixed(bool v):Base(v) {}
+    inline ap_fixed(signed char v):Base(v) {}
+    inline ap_fixed(unsigned char v):Base(v) {}
+    inline ap_fixed(short v):Base(v) {}
+    inline ap_fixed(unsigned short v):Base(v) {}
+    inline ap_fixed(int v):Base(v) {}
+    inline ap_fixed(unsigned int v):Base(v) {}
+    inline ap_fixed(long v):Base(v) {}
+    inline ap_fixed(unsigned long v):Base(v) {}
+    inline ap_fixed(unsigned long long v):Base(v) {}
+    inline ap_fixed(long long v):Base(v) {}
+    inline ap_fixed(half v):Base(v) {}
+    inline ap_fixed(float v):Base(v) {}
+    inline ap_fixed(double v):Base(v) {}
+    inline ap_fixed(const char* v):Base(v) {}
 
 
-  inline ap_fixed& operator = (const ap_fixed<_AP_W, _AP_I,
-          _AP_Q, _AP_O, _AP_N>& op) {
-    Base::operator = (op);
-    return *this;
-  }
+    inline ap_fixed(const char* str, signed char rd):Base(str, rd) {}
 
-  inline ap_fixed& operator = (const volatile ap_fixed<_AP_W, _AP_I,
-          _AP_Q, _AP_O, _AP_N>& op) {
-    Base::operator = (op);
-    return *this;
-  }
 
-  inline void operator = (const ap_fixed<_AP_W, _AP_I,
-     _AP_Q, _AP_O, _AP_N>& op) volatile {
-    Base::operator = (op);
-  }
+    inline ap_fixed& operator = (const ap_fixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) {
+      Base::operator = (op);
+        return *this;
+    }
 
-  inline void operator = (const volatile ap_fixed<_AP_W, _AP_I,
-     _AP_Q, _AP_O, _AP_N>& op) volatile {
-    Base::operator = (op);
-  }
+    inline ap_fixed& operator = (const volatile ap_fixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) {
+        Base::operator = (op);
+        return *this;
+    }
+
+    inline void operator = (const ap_fixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) volatile {
+      Base::operator = (op);
+    }
+
+    inline void operator = (const volatile ap_fixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) volatile {
+        Base::operator = (op);
+    }
 
 };
 
@@ -46682,1711 +46557,136 @@ class ap_ufixed: public ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> 
 
 
 public:
-  typedef ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> Base;
+    typedef ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> Base;
 
-  inline ap_ufixed():Base() {}
+    inline ap_ufixed():Base() {}
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2,
-     _AP_O2, _AP_N2>& op) : Base(ap_fixed_base<_AP_W2,
-            _AP_I2, true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
-
-
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2,
-     _AP_O2, _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
-           false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
-
-  template<int _AP_W2>
-  inline ap_ufixed(const ap_int<_AP_W2>& op):
-    Base((const ap_private<_AP_W2, true>&)(op)) {}
-
-  template<int _AP_W2>
-  inline ap_ufixed(const ap_uint<_AP_W2>& op):
-    Base((const ap_private<_AP_W2, false>&)(op)) {}
-
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2,
-     _AP_O2, _AP_N2>& op) : Base(ap_fixed_base<_AP_W2,
-            _AP_I2, true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const ap_fixed<_AP_W2, _AP_I2, _AP_Q2,
+                     _AP_O2, _AP_N2>& op) : Base(ap_fixed_base<_AP_W2,
+                     _AP_I2, true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
 
-  template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2,
-     _AP_O2, _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
-           false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const ap_ufixed<_AP_W2, _AP_I2, _AP_Q2,
+                     _AP_O2, _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
+                      false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
-  template<int _AP_W2>
-  inline ap_ufixed(const volatile ap_int<_AP_W2>& op):
-    Base(ap_private<_AP_W2, true>(op)) {}
+    template<int _AP_W2>
+    inline ap_ufixed(const ap_int<_AP_W2>& op):
+      Base((const ap_private<_AP_W2, true>&)(op)) {}
 
-  template<int _AP_W2>
-  inline ap_ufixed(const volatile ap_uint<_AP_W2>& op):
-    Base(ap_private<_AP_W2, false>(op)) {}
+    template<int _AP_W2>
+    inline ap_ufixed(const ap_uint<_AP_W2>& op):
+      Base((const ap_private<_AP_W2, false>&)(op)) {}
 
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2,
-     _AP_O2, _AP_N2>& op):Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_ufixed(const ap_bit_ref<_AP_W2, _AP_S2>& op):
-    Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_ufixed(const ap_range_ref<_AP_W2, _AP_S2>& op):
-    Base(op) {}
-
-  template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
-  inline ap_ufixed(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& op):
-    Base(op) {}
-
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2,
-     _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
-
-  template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
-    ap_o_mode _AP_O2, int _AP_N2>
-  inline ap_ufixed(const af_range_ref<_AP_W2, _AP_I2, _AP_S2,
-     _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
-
-  template<int _AP_W2, bool _AP_S2>
-  inline ap_ufixed(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const volatile ap_fixed<_AP_W2, _AP_I2, _AP_Q2,
+                     _AP_O2, _AP_N2>& op) : Base(ap_fixed_base<_AP_W2,
+                     _AP_I2, true, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
 
+    template<int _AP_W2, int _AP_I2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const volatile ap_ufixed<_AP_W2, _AP_I2, _AP_Q2,
+                     _AP_O2, _AP_N2>& op): Base(ap_fixed_base<_AP_W2, _AP_I2,
+                      false, _AP_Q2, _AP_O2, _AP_N2>(op)) {}
 
+    template<int _AP_W2>
+    inline ap_ufixed(const volatile ap_int<_AP_W2>& op):
+                     Base(ap_private<_AP_W2, true>(op)) {}
 
-  inline ap_ufixed(bool v):Base(v) {}
-  inline ap_ufixed(signed char v):Base(v) {}
-  inline ap_ufixed(unsigned char v):Base(v) {}
-  inline ap_ufixed(short v):Base(v) {}
-  inline ap_ufixed(unsigned short v):Base(v) {}
-  inline ap_ufixed(int v):Base(v) {}
-  inline ap_ufixed(unsigned int v):Base(v) {}
-  inline ap_ufixed(long v):Base(v) {}
-  inline ap_ufixed(unsigned long v):Base(v) {}
-  inline ap_ufixed(unsigned long long v):Base(v) {}
-  inline ap_ufixed(long long v):Base(v) {}
-  inline ap_ufixed(half v):Base(v) {}
-  inline ap_ufixed(float v):Base(v) {}
-  inline ap_ufixed(double v):Base(v) {}
-  inline ap_ufixed(const char* v):Base(v) {}
+    template<int _AP_W2>
+    inline ap_ufixed(const volatile ap_uint<_AP_W2>& op):
+                     Base(ap_private<_AP_W2, false>(op)) {}
 
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2,
+                     _AP_O2, _AP_N2>& op):Base(op) {}
 
-  inline ap_ufixed(const char* str, signed char rd):Base(str, rd) {}
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_ufixed(const ap_bit_ref<_AP_W2, _AP_S2>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_ufixed(const ap_range_ref<_AP_W2, _AP_S2>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, typename _AP_T2, int _AP_W3, typename _AP_T3>
+    inline ap_ufixed(const ap_concat_ref<_AP_W2, _AP_T2, _AP_W3, _AP_T3>& op):
+                   Base(op) {}
+
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const af_bit_ref<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
+
+    template<int _AP_W2, int _AP_I2, bool _AP_S2, ap_q_mode _AP_Q2,
+             ap_o_mode _AP_O2, int _AP_N2>
+    inline ap_ufixed(const af_range_ref<_AP_W2, _AP_I2, _AP_S2,
+                    _AP_Q2, _AP_O2, _AP_N2>& op): Base(op) {}
+
+    template<int _AP_W2, bool _AP_S2>
+    inline ap_ufixed(const ap_private<_AP_W2, _AP_S2>& op):Base(op) {}
 
 
 
-  inline ap_ufixed& operator = (const ap_ufixed<_AP_W, _AP_I,
-    _AP_Q, _AP_O, _AP_N>& op) {
-    Base::operator = (op);
-    return *this;
-  }
 
-  inline ap_ufixed& operator = (const volatile ap_ufixed<_AP_W, _AP_I,
-    _AP_Q, _AP_O, _AP_N>& op) {
-    Base::V = const_cast<ap_ufixed&>(op);
-    return *this;
-  }
+    inline ap_ufixed(bool v):Base(v) {}
+    inline ap_ufixed(signed char v):Base(v) {}
+    inline ap_ufixed(unsigned char v):Base(v) {}
+    inline ap_ufixed(short v):Base(v) {}
+    inline ap_ufixed(unsigned short v):Base(v) {}
+    inline ap_ufixed(int v):Base(v) {}
+    inline ap_ufixed(unsigned int v):Base(v) {}
+    inline ap_ufixed(long v):Base(v) {}
+    inline ap_ufixed(unsigned long v):Base(v) {}
+    inline ap_ufixed(unsigned long long v):Base(v) {}
+    inline ap_ufixed(long long v):Base(v) {}
+    inline ap_ufixed(half v):Base(v) {}
+    inline ap_ufixed(float v):Base(v) {}
+    inline ap_ufixed(double v):Base(v) {}
+    inline ap_ufixed(const char* v):Base(v) {}
 
-  inline void operator = (const ap_ufixed<_AP_W, _AP_I,
-     _AP_Q, _AP_O, _AP_N>& op) volatile {
-    Base::operator = (op);
-  }
 
-  inline void operator = (const volatile ap_ufixed<_AP_W, _AP_I,
-     _AP_Q, _AP_O, _AP_N>& op) volatile {
-    Base::V = const_cast<ap_ufixed&>(op);
-  }
+    inline ap_ufixed(const char* str, signed char rd):Base(str, rd) {}
+
+
+
+    inline ap_ufixed& operator = (const ap_ufixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) {
+      Base::operator = (op);
+        return *this;
+    }
+
+    inline ap_ufixed& operator = (const volatile ap_ufixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) {
+        Base::V = const_cast<ap_ufixed&>(op);
+        return *this;
+    }
+
+    inline void operator = (const ap_ufixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) volatile {
+      Base::operator = (op);
+    }
+
+    inline void operator = (const volatile ap_ufixed<_AP_W, _AP_I,
+                    _AP_Q, _AP_O, _AP_N>& op) volatile {
+        Base::V = const_cast<ap_ufixed&>(op);
+    }
 
 };
 # 2 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 1
-# 67 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_int.h" 1
-# 68 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 2
-
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed_special.h" 1
-# 66 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed_special.h"
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-       
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-
-
-
-
-# 1 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
-# 41 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-       
-# 42 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-# 47 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 62 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp> class complex;
-  template<> class complex<float>;
-  template<> class complex<double>;
-  template<> class complex<long double>;
-
-
-  template<typename _Tp> _Tp abs(const complex<_Tp>&);
-
-  template<typename _Tp> _Tp arg(const complex<_Tp>&);
-
-  template<typename _Tp> _Tp norm(const complex<_Tp>&);
-
-
-  template<typename _Tp> complex<_Tp> conj(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> polar(const _Tp&, const _Tp& = 0);
-
-
-
-  template<typename _Tp> complex<_Tp> cos(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> cosh(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);
-
-
-
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);
-
-
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);
-
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,
-                                          const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> pow(const _Tp&, const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> sin(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> sinh(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> sqrt(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);
-
-  template<typename _Tp> complex<_Tp> tanh(const complex<_Tp>&);
-# 123 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    struct complex
-    {
-
-      typedef _Tp value_type;
-
-
-
-      complex(const _Tp& __r = _Tp(), const _Tp& __i = _Tp())
-      : _M_real(__r), _M_imag(__i) { }
-
-
-
-
-      template<typename _Up>
-        complex(const complex<_Up>& __z)
- : _M_real(__z.real()), _M_imag(__z.imag()) { }
-# 151 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      _Tp&
-      real() { return _M_real; }
-
-
-      const _Tp&
-      real() const { return _M_real; }
-
-
-      _Tp&
-      imag() { return _M_imag; }
-
-
-      const _Tp&
-      imag() const { return _M_imag; }
-
-
-
-
-      void
-      real(_Tp __val) { _M_real = __val; }
-
-      void
-      imag(_Tp __val) { _M_imag = __val; }
-
-
-      complex<_Tp>& operator=(const _Tp&);
-
-
-
-      complex<_Tp>&
-      operator+=(const _Tp& __t)
-      {
- _M_real += __t;
- return *this;
-      }
-
-
-
-      complex<_Tp>&
-      operator-=(const _Tp& __t)
-      {
- _M_real -= __t;
- return *this;
-      }
-
-
-      complex<_Tp>& operator*=(const _Tp&);
-
-      complex<_Tp>& operator/=(const _Tp&);
-
-
-
-
-
-      template<typename _Up>
-        complex<_Tp>& operator=(const complex<_Up>&);
-
-      template<typename _Up>
-        complex<_Tp>& operator+=(const complex<_Up>&);
-
-      template<typename _Up>
-        complex<_Tp>& operator-=(const complex<_Up>&);
-
-      template<typename _Up>
-        complex<_Tp>& operator*=(const complex<_Up>&);
-
-      template<typename _Up>
-        complex<_Tp>& operator/=(const complex<_Up>&);
-
-      const complex __rep() const
-      { return *this; }
-
-    private:
-      _Tp _M_real;
-      _Tp _M_imag;
-    };
-
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const _Tp& __t)
-    {
-     _M_real = __t;
-     _M_imag = _Tp();
-     return *this;
-    }
-
-
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const _Tp& __t)
-    {
-      _M_real *= __t;
-      _M_imag *= __t;
-      return *this;
-    }
-
-
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const _Tp& __t)
-    {
-      _M_real /= __t;
-      _M_imag /= __t;
-      return *this;
-    }
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const complex<_Up>& __z)
-    {
-      _M_real = __z.real();
-      _M_imag = __z.imag();
-      return *this;
-    }
-
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator+=(const complex<_Up>& __z)
-    {
-      _M_real += __z.real();
-      _M_imag += __z.imag();
-      return *this;
-    }
-
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator-=(const complex<_Up>& __z)
-    {
-      _M_real -= __z.real();
-      _M_imag -= __z.imag();
-      return *this;
-    }
-
-
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
-      _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
-      _M_real = __r;
-      return *this;
-    }
-
-
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() + _M_imag * __z.imag();
-      const _Tp __n = std::norm(__z);
-      _M_imag = (_M_imag * __z.real() - _M_real * __z.imag()) / __n;
-      _M_real = __r / __n;
-      return *this;
-    }
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r += __x;
-      return __r;
-    }
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r(__x, -__y.imag());
-      __r -= __y.real();
-      return __r;
-    }
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r *= __x;
-      return __r;
-    }
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x)
-    { return __x; }
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x)
-    { return complex<_Tp>(-__x.real(), -__x.imag()); }
-
-
-
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() == __y.real() && __x.imag() == __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() == __y && __x.imag() == _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x == __y.real() && _Tp() == __y.imag(); }
-
-
-
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() != __y.real() || __x.imag() != __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() != __y || __x.imag() != _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x != __y.real() || _Tp() != __y.imag(); }
-
-
-
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
-    {
-      _Tp __re_x, __im_x;
-      _CharT __ch;
-      __is >> __ch;
-      if (__ch == '(')
- {
-   __is >> __re_x >> __ch;
-   if (__ch == ',')
-     {
-       __is >> __im_x >> __ch;
-       if (__ch == ')')
-  __x = complex<_Tp>(__re_x, __im_x);
-       else
-  __is.setstate(ios_base::failbit);
-     }
-   else if (__ch == ')')
-     __x = __re_x;
-   else
-     __is.setstate(ios_base::failbit);
- }
-      else
- {
-   __is.putback(__ch);
-   __is >> __re_x;
-   __x = __re_x;
- }
-      return __is;
-    }
-
-
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
-    {
-      basic_ostringstream<_CharT, _Traits> __s;
-      __s.flags(__os.flags());
-      __s.imbue(__os.getloc());
-      __s.precision(__os.precision());
-      __s << '(' << __x.real() << ',' << __x.imag() << ')';
-      return __os << __s.str();
-    }
-# 543 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline _Tp&
-    real(complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    real(const complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline _Tp&
-    imag(complex<_Tp>& __z)
-    { return __z.imag(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    imag(const complex<_Tp>& __z)
-    { return __z.imag(); }
-
-
-
-  template<typename _Tp>
-    inline _Tp
-    __complex_abs(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-      const _Tp __s = std::max(abs(__x), abs(__y));
-      if (__s == _Tp())
-        return __s;
-      __x /= __s;
-      __y /= __s;
-      return __s * sqrt(__x * __x + __y * __y);
-    }
-
-
-  inline float
-  __complex_abs(__complex__ float __z) { return __builtin_cabsf(__z); }
-
-  inline double
-  __complex_abs(__complex__ double __z) { return __builtin_cabs(__z); }
-
-  inline long double
-  __complex_abs(const __complex__ long double& __z)
-  { return __builtin_cabsl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    abs(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
-# 601 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline _Tp
-    __complex_arg(const complex<_Tp>& __z)
-    { return atan2(__z.imag(), __z.real()); }
-
-
-  inline float
-  __complex_arg(__complex__ float __z) { return __builtin_cargf(__z); }
-
-  inline double
-  __complex_arg(__complex__ double __z) { return __builtin_carg(__z); }
-
-  inline long double
-  __complex_arg(const __complex__ long double& __z)
-  { return __builtin_cargl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    arg(const complex<_Tp>& __z) { return __complex_arg(__z.__rep()); }
-# 631 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<bool>
-    struct _Norm_helper
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          const _Tp __x = __z.real();
-          const _Tp __y = __z.imag();
-          return __x * __x + __y * __y;
-        }
-    };
-
-  template<>
-    struct _Norm_helper<true>
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          _Tp __res = std::abs(__z);
-          return __res * __res;
-        }
-    };
-
-  template<typename _Tp>
-    inline _Tp
-    norm(const complex<_Tp>& __z)
-    {
-      return _Norm_helper<__is_floating<_Tp>::__value
- && !0>::_S_do_it(__z);
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    polar(const _Tp& __rho, const _Tp& __theta)
-    { return complex<_Tp>(__rho * cos(__theta), __rho * sin(__theta)); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    conj(const complex<_Tp>& __z)
-    { return complex<_Tp>(__z.real(), -__z.imag()); }
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cos(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cos(__x) * cosh(__y), -sin(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cos(__complex__ float __z) { return __builtin_ccosf(__z); }
-
-  inline __complex__ double
-  __complex_cos(__complex__ double __z) { return __builtin_ccos(__z); }
-
-  inline __complex__ long double
-  __complex_cos(const __complex__ long double& __z)
-  { return __builtin_ccosl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cos(const complex<_Tp>& __z) { return __complex_cos(__z.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cosh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cosh(__x) * cos(__y), sinh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cosh(__complex__ float __z) { return __builtin_ccoshf(__z); }
-
-  inline __complex__ double
-  __complex_cosh(__complex__ double __z) { return __builtin_ccosh(__z); }
-
-  inline __complex__ long double
-  __complex_cosh(const __complex__ long double& __z)
-  { return __builtin_ccoshl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_exp(const complex<_Tp>& __z)
-    { return std::polar(exp(__z.real()), __z.imag()); }
-
-
-  inline __complex__ float
-  __complex_exp(__complex__ float __z) { return __builtin_cexpf(__z); }
-
-  inline __complex__ double
-  __complex_exp(__complex__ double __z) { return __builtin_cexp(__z); }
-
-  inline __complex__ long double
-  __complex_exp(const __complex__ long double& __z)
-  { return __builtin_cexpl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    exp(const complex<_Tp>& __z) { return __complex_exp(__z.__rep()); }
-# 762 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_log(const complex<_Tp>& __z)
-    { return complex<_Tp>(log(std::abs(__z)), std::arg(__z)); }
-
-
-  inline __complex__ float
-  __complex_log(__complex__ float __z) { return __builtin_clogf(__z); }
-
-  inline __complex__ double
-  __complex_log(__complex__ double __z) { return __builtin_clog(__z); }
-
-  inline __complex__ long double
-  __complex_log(const __complex__ long double& __z)
-  { return __builtin_clogl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log10(const complex<_Tp>& __z)
-    { return std::log(__z) / log(_Tp(10.0)); }
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sin(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sin(__x) * cosh(__y), cos(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sin(__complex__ float __z) { return __builtin_csinf(__z); }
-
-  inline __complex__ double
-  __complex_sin(__complex__ double __z) { return __builtin_csin(__z); }
-
-  inline __complex__ long double
-  __complex_sin(const __complex__ long double& __z)
-  { return __builtin_csinl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sin(const complex<_Tp>& __z) { return __complex_sin(__z.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sinh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sinh(__x) * cos(__y), cosh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sinh(__complex__ float __z) { return __builtin_csinhf(__z); }
-
-  inline __complex__ double
-  __complex_sinh(__complex__ double __z) { return __builtin_csinh(__z); }
-
-  inline __complex__ long double
-  __complex_sinh(const __complex__ long double& __z)
-  { return __builtin_csinhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z.__rep()); }
-# 854 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_sqrt(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-
-      if (__x == _Tp())
-        {
-          _Tp __t = sqrt(abs(__y) / 2);
-          return complex<_Tp>(__t, __y < _Tp() ? -__t : __t);
-        }
-      else
-        {
-          _Tp __t = sqrt(2 * (std::abs(__z) + abs(__x)));
-          _Tp __u = __t / 2;
-          return __x > _Tp()
-            ? complex<_Tp>(__u, __y / __t)
-            : complex<_Tp>(abs(__y) / __t, __y < _Tp() ? -__u : __u);
-        }
-    }
-
-
-  inline __complex__ float
-  __complex_sqrt(__complex__ float __z) { return __builtin_csqrtf(__z); }
-
-  inline __complex__ double
-  __complex_sqrt(__complex__ double __z) { return __builtin_csqrt(__z); }
-
-  inline __complex__ long double
-  __complex_sqrt(const __complex__ long double& __z)
-  { return __builtin_csqrtl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z.__rep()); }
-# 898 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tan(const complex<_Tp>& __z)
-    { return std::sin(__z) / std::cos(__z); }
-
-
-  inline __complex__ float
-  __complex_tan(__complex__ float __z) { return __builtin_ctanf(__z); }
-
-  inline __complex__ double
-  __complex_tan(__complex__ double __z) { return __builtin_ctan(__z); }
-
-  inline __complex__ long double
-  __complex_tan(const __complex__ long double& __z)
-  { return __builtin_ctanl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tan(const complex<_Tp>& __z) { return __complex_tan(__z.__rep()); }
-# 926 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tanh(const complex<_Tp>& __z)
-    { return std::sinh(__z) / std::cosh(__z); }
-
-
-  inline __complex__ float
-  __complex_tanh(__complex__ float __z) { return __builtin_ctanhf(__z); }
-
-  inline __complex__ double
-  __complex_tanh(__complex__ double __z) { return __builtin_ctanh(__z); }
-
-  inline __complex__ long double
-  __complex_tanh(const __complex__ long double& __z)
-  { return __builtin_ctanhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z.__rep()); }
-# 956 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_pow_unsigned(complex<_Tp> __x, unsigned __n)
-    {
-      complex<_Tp> __y = __n % 2 ? __x : complex<_Tp>(1);
-
-      while (__n >>= 1)
-        {
-          __x *= __x;
-          if (__n % 2)
-            __y *= __x;
-        }
-
-      return __y;
-    }
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __z, int __n)
-    {
-      return __n < 0
-        ? complex<_Tp>(1) / std::__complex_pow_unsigned(__z, -__n)
-        : std::__complex_pow_unsigned(__z, __n);
-    }
-
-
-  template<typename _Tp>
-    complex<_Tp>
-    pow(const complex<_Tp>& __x, const _Tp& __y)
-    {
-
-
-
-
-      if (__x.imag() == _Tp() && __x.real() > _Tp())
-        return pow(__x.real(), __y);
-
-      complex<_Tp> __t = std::log(__x);
-      return std::polar(exp(__y * __t.real()), __y * __t.imag());
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x == _Tp() ? _Tp() : std::exp(__y * std::log(__x)); }
-
-
-  inline __complex__ float
-  __complex_pow(__complex__ float __x, __complex__ float __y)
-  { return __builtin_cpowf(__x, __y); }
-
-  inline __complex__ double
-  __complex_pow(__complex__ double __x, __complex__ double __y)
-  { return __builtin_cpow(__x, __y); }
-
-  inline __complex__ long double
-  __complex_pow(const __complex__ long double& __x,
-  const __complex__ long double& __y)
-  { return __builtin_cpowl(__x, __y); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __complex_pow(__x.__rep(), __y.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      return __x > _Tp() ? std::polar(pow(__x, __y.real()),
-          __y.imag() * log(__x))
-                  : std::pow(complex<_Tp>(__x), __y);
-    }
-
-
-
-  template<>
-    struct complex<float>
-    {
-      typedef float value_type;
-      typedef __complex__ float _ComplexT;
-
-      complex(_ComplexT __z) : _M_value(__z) { }
-
-      complex(float __r = 0.0f, float __i = 0.0f)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-      explicit complex(const complex<double>&);
-      explicit complex(const complex<long double>&);
-# 1073 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      float&
-      real() { return __real__ _M_value; }
-
-      const float&
-      real() const { return __real__ _M_value; }
-
-      float&
-      imag() { return __imag__ _M_value; }
-
-      const float&
-      imag() const { return __imag__ _M_value; }
-
-
-
-
-      void
-      real(float __val) { __real__ _M_value = __val; }
-
-      void
-      imag(float __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(float __f)
-      {
- _M_value = __f;
- return *this;
-      }
-
-      complex&
-      operator+=(float __f)
-      {
- _M_value += __f;
- return *this;
-      }
-
-      complex&
-      operator-=(float __f)
-      {
- _M_value -= __f;
- return *this;
-      }
-
-      complex&
-      operator*=(float __f)
-      {
- _M_value *= __f;
- return *this;
-      }
-
-      complex&
-      operator/=(float __f)
-      {
- _M_value /= __f;
- return *this;
-      }
-
-
-
-
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-
-
-  template<>
-    struct complex<double>
-    {
-      typedef double value_type;
-      typedef __complex__ double _ComplexT;
-
-      complex(_ComplexT __z) : _M_value(__z) { }
-
-      complex(double __r = 0.0, double __i = 0.0)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-      complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-      explicit complex(const complex<long double>&);
-# 1225 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      double&
-      real() { return __real__ _M_value; }
-
-      const double&
-      real() const { return __real__ _M_value; }
-
-      double&
-      imag() { return __imag__ _M_value; }
-
-      const double&
-      imag() const { return __imag__ _M_value; }
-
-
-
-
-      void
-      real(double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(double __d)
-      {
- _M_value = __d;
- return *this;
-      }
-
-      complex&
-      operator+=(double __d)
-      {
- _M_value += __d;
- return *this;
-      }
-
-      complex&
-      operator-=(double __d)
-      {
- _M_value -= __d;
- return *this;
-      }
-
-      complex&
-      operator*=(double __d)
-      {
- _M_value *= __d;
- return *this;
-      }
-
-      complex&
-      operator/=(double __d)
-      {
- _M_value /= __d;
- return *this;
-      }
-
-
-
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-
-
-  template<>
-    struct complex<long double>
-    {
-      typedef long double value_type;
-      typedef __complex__ long double _ComplexT;
-
-      complex(_ComplexT __z) : _M_value(__z) { }
-
-      complex(long double __r = 0.0L,
-     long double __i = 0.0L)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-      complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-      complex(const complex<double>& __z)
-      : _M_value(__z.__rep()) { }
-# 1378 "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      long double&
-      real() { return __real__ _M_value; }
-
-      const long double&
-      real() const { return __real__ _M_value; }
-
-      long double&
-      imag() { return __imag__ _M_value; }
-
-      const long double&
-      imag() const { return __imag__ _M_value; }
-
-
-
-
-      void
-      real(long double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(long double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(long double __r)
-      {
- _M_value = __r;
- return *this;
-      }
-
-      complex&
-      operator+=(long double __r)
-      {
- _M_value += __r;
- return *this;
-      }
-
-      complex&
-      operator-=(long double __r)
-      {
- _M_value -= __r;
- return *this;
-      }
-
-      complex&
-      operator*=(long double __r)
-      {
- _M_value *= __r;
- return *this;
-      }
-
-      complex&
-      operator/=(long double __r)
-      {
- _M_value /= __r;
- return *this;
-      }
-
-
-
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-
-
-  inline
-  complex<float>::complex(const complex<double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<float>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<double>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-
-
-
-
-  extern template istream& operator>>(istream&, complex<float>&);
-  extern template ostream& operator<<(ostream&, const complex<float>&);
-  extern template istream& operator>>(istream&, complex<double>&);
-  extern template ostream& operator<<(ostream&, const complex<double>&);
-  extern template istream& operator>>(istream&, complex<long double>&);
-  extern template ostream& operator<<(ostream&, const complex<long double>&);
-
-
-  extern template wistream& operator>>(wistream&, complex<float>&);
-  extern template wostream& operator<<(wostream&, const complex<float>&);
-  extern template wistream& operator>>(wistream&, complex<double>&);
-  extern template wostream& operator<<(wostream&, const complex<double>&);
-  extern template wistream& operator>>(wistream&, complex<long double>&);
-  extern template wostream& operator<<(wostream&, const complex<long double>&);
-
-
-
-
-
-
-}
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, _Up>
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<_Tp, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-
-}
-# 67 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed_special.h" 2
-
-
-
-
-
-
-
-namespace std {
-# 92 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed_special.h"
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
-struct complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > {
-  typedef ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> _Tp;
-  typedef _Tp value_type;
-
-
-
-
-  complex() : _M_real(_Tp()), _M_imag(_Tp()) {}
-
-
-  complex(const _Tp &__r, const _Tp &__i = _Tp(0))
-      : _M_real(__r), _M_imag(__i) {}
-
-
-  template <typename _Up>
-  complex(const complex<_Up> &__z) : _M_real(__z.real()), _M_imag(__z.imag()) {}
-
-  _Tp &real() { return _M_real; }
-
-  _Tp &imag() { return _M_imag; }
-
-  const _Tp &real() const { return _M_real; }
-
-  const _Tp &imag() const { return _M_imag; }
-
-  void real(_Tp __val) { _M_real = __val; }
-
-  void imag(_Tp __val) { _M_imag = __val; }
-
-
-
-  complex<_Tp> &operator=(const _Tp __t) {
-    _M_real = __t;
-    _M_imag = _Tp(0);
-    return *this;
-  }
-
-
-
-  complex<_Tp> &operator+=(const _Tp &__t) {
-    _M_real += __t;
-    return *this;
-  }
-
-
-
-  complex<_Tp> &operator-=(const _Tp &__t) {
-    _M_real -= __t;
-    return *this;
-  }
-
-
-
-  complex<_Tp> &operator*=(const _Tp &__t) {
-    _M_real *= __t;
-    _M_imag *= __t;
-    return *this;
-  }
-
-
-
-  complex<_Tp> &operator/=(const _Tp &__t) {
-    _M_real /= __t;
-    _M_imag /= __t;
-    return *this;
-  }
-
-
-  template <typename _Up>
-  complex<_Tp> &operator=(const complex<_Up> &__z) {
-    _M_real = __z.real();
-    _M_imag = __z.imag();
-    return *this;
-  }
-
-
-
-  template <typename _Up>
-  complex<_Tp> &operator+=(const complex<_Up> &__z) {
-    _M_real += __z.real();
-    _M_imag += __z.imag();
-    return *this;
-  }
-
-
-
-  template <typename _Up>
-  complex<_Tp> &operator-=(const complex<_Up> &__z) {
-    _M_real -= __z.real();
-    _M_imag -= __z.imag();
-    return *this;
-  }
-
-
-
-  template <typename _Up>
-  complex<_Tp> &operator*=(const complex<_Up> &__z) {
-    const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
-    _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
-    _M_real = __r;
-    return *this;
-  }
-
-
-
-  template <typename _Up>
-  complex<_Tp> &operator/=(const complex<_Up> &__z) {
-    complex<_Tp> cj (__z.real(), -__z.imag());
-    complex<_Tp> a = (*this) * cj;
-    complex<_Tp> b = cj * __z;
-    _M_real = a.real() / b.real();
-    _M_imag = a.imag() / b.real();
-    return *this;
-  }
-
- private:
-  _Tp _M_real;
-  _Tp _M_imag;
-
-};
-# 221 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed_special.h"
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
-inline bool operator==(
-    const complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > &__x,
-    const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> &__y) {
-  return __x.real() == __y &&
-         __x.imag() == 0;
-}
-
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
-inline bool operator==(
-    const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> &__x,
-    const complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > &__y) {
-  return __x == __y.real() &&
-         0 == __y.imag();
-}
-
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
-inline bool operator!=(
-    const complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > &__x,
-    const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> &__y) {
-  return __x.real() != __y ||
-         __x.imag() != 0;
-}
-
-
-template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
-inline bool operator!=(
-    const ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> &__x,
-    const complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > &__y) {
-  return __x != __y.real() ||
-         0 != __y.imag();
-}
-
-}
-# 72 "/opt/Xilinx/Vivado/2017.4/include/ap_fixed.h" 2
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_fixed.h" 1
+# 67 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_fixed.h"
+# 1 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_int.h" 1
+# 68 "/opt/Xilinx/Vivado_HLS/2017.2/include/ap_fixed.h" 2
 # 3 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h" 2
+using namespace std;
 
  struct rfnoc_axis{
      ap_int<32> data;
@@ -48405,32 +46705,39 @@ inline bool operator!=(
 
 
 
-static ap_int<2> corrSeq[16] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+static ap_int<2> corrSeq[16] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
 
 
- void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start, ap_uint<4> phaseClass);
+typedef ap_fixed<32,22> cor_t;
+typedef ap_fixed<16,11> corTransmit_t;
+
+struct phase{
+ cor_t phaseWindow[16];
+};
+
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start );
 
  class correlate{
  public:
-  void shiftPhaseClass(ap_fixed<16,11> newVal, ap_uint<4> phaseClass);
-  ap_fixed<16,11> correlator(ap_uint<4> phaseClass);
-  ap_fixed<16,11> phaseArray[16];
-  ap_fixed<16,11> phaseClass0[16];
-  ap_fixed<16,11> phaseClass1[16];
-  ap_fixed<16,11> phaseClass2[16];
-  ap_fixed<16,11> phaseClass3[16];
-  ap_fixed<16,11> phaseClass4[16];
-  ap_fixed<16,11> phaseClass5[16];
-  ap_fixed<16,11> phaseClass6[16];
-  ap_fixed<16,11> phaseClass7[16];
-  ap_fixed<16,11> phaseClass8[16];
-  ap_fixed<16,11> phaseClass9[16];
-  ap_fixed<16,11> phaseClass10[16];
-  ap_fixed<16,11> phaseClass11[16];
-  ap_fixed<16,11> phaseClass12[16];
-  ap_fixed<16,11> phaseClass13[16];
-  ap_fixed<16,11> phaseClass14[16];
-  ap_fixed<16,11> phaseClass15[16];
+  void shiftPhaseClass(cor_t newVal, ap_uint<4> phaseClass);
+  cor_t correlator(ap_uint<4> phaseClass);
+  phase phaseArray[16];
+  cor_t phaseClass0[16];
+  cor_t phaseClass1[16];
+  cor_t phaseClass2[16];
+  cor_t phaseClass3[16];
+  cor_t phaseClass4[16];
+  cor_t phaseClass5[16];
+  cor_t phaseClass6[16];
+  cor_t phaseClass7[16];
+  cor_t phaseClass8[16];
+  cor_t phaseClass9[16];
+  cor_t phaseClass10[16];
+  cor_t phaseClass11[16];
+  cor_t phaseClass12[16];
+  cor_t phaseClass13[16];
+  cor_t phaseClass14[16];
+  cor_t phaseClass15[16];
 
  };
 # 5 "/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp" 2
@@ -48440,34 +46747,32 @@ using namespace std;
 int main(){
  rfnoc_axis streamArrayIn[256];
  rfnoc_axis streamArrayOut[256];
- ap_fixed<16,11> test;
- ap_fixed<16,11> test2;
+ corTransmit_t test;
+ cor_t test2;
 
  ifstream inFile;
- inFile.open("lancep2.csv");
+ inFile.open("alexisdumb.csv");
  inFile >> fixed >> setbase(10) >> setprecision(16);
  int count;
  count = 0;
  ofstream result;
- result.open("result.csv", ios::out);
+ result.open("resultSynch.csv", ios::out);
  result << right << fixed << setbase(10) << setprecision(16);
  rfnoc_axis axi;
  rfnoc_axis axiOut;
- correlateTop(&axi,&axiOut,1,0);
+ correlateTop(&axi,&axiOut,1);
  for(int a=0;a<4383;a++){
   ap_uint<4> phaseClass = a%16;
   inFile >> setw(16) >> test;
   axi.data.range(15,0) = test.V;
-  correlateTop(&axi,&axiOut,0,phaseClass);
-  test2.V = axiOut.data.range(15,0);
-  if(test2 != 0 && phaseClass==0){
+  correlateTop(&axi,&axiOut,0);
+  test2.V = axiOut.data.range(31,0);
+  if(phaseClass == 0){
    result << a;
-   result << ",";
-   result << setw(2) << phaseClass;
    result << ",";
    result << setw(16) << test;
    result << ",";
-   result << setw(32) << test2;
+   result << setw(32) << test2.V.VAL;
    result << endl;
   }
 

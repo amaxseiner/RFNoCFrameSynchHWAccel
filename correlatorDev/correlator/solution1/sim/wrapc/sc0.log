@@ -1,0 +1,5 @@
+   Build using "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_correlateTop.cpp
+   Compiling correlator.cpp_pre.cpp.tb.cpp
+   Compiling correlatorTB.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
