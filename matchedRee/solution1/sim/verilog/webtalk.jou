@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Webtalk v2017.2 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Mar 14 15:37:58 2019
-# Process ID: 12724
-# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
-# Command line: wbtcv.exe -mode batch -source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
-# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/webtalk.log
-# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog\webtalk.jou
+# Start of session at: Fri Mar 22 15:47:05 2019
+# Process ID: 29407
+# Current directory: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/webtalk.log
+# Journal file: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/webtalk.jou
 #-----------------------------------------------------------
-source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
+source /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace

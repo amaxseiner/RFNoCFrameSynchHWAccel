@@ -29,62 +29,67 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/.apc/.src</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/.apc/.tb</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/.apc/.tb</location>
+		</link>
+		<link>
+			<name>.reference/matchFilter.h</name>
+			<type>1</type>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/inputCorrr.dat</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat</location>
 		</link>
 		<link>
 			<name>source/matchFilter.cpp</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp</location>
 		</link>
 		<link>
 			<name>source/results.csv</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/results.csv</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/results.csv</location>
 		</link>
 		<link>
 			<name>source/tb_input.txt</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_input.txt</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/tb_input.txt</location>
 		</link>
 		<link>
 			<name>source/tb_output.txt</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_output.txt</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/tb_output.txt</location>
 		</link>
 		<link>
 			<name>testbench/tb_main.cpp</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_main.cpp</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/tb_main.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/directives.tcl</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/script.tcl</location>
+			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

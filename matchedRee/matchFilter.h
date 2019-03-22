@@ -139,7 +139,7 @@
 
 
 
-void matchFilter(axis_fixed &in, axis_fixed &out);
+void matchFilter(axis_fixed *in, axis_fixed *out);
 
 class matchFilter_ff
 {
@@ -154,13 +154,13 @@ public:
 		ap_fixed<16,11> inI;
 		ap_fixed<16,11> inQ;
 		for(int b = 0; b<128; b++){
-			inI = (in[b].data.range(31,16));
-			inQ = (in[b].data.range(15,0));
+			inI.V = (in[b].data.range(31,16));
+			inQ.V = (in[b].data.range(15,0));
 			tempI = tempI + inI;
 			tempQ = tempQ + inQ;
 		}
-		out.data.range(31,16)=tempI;
-		out.data.range(15,0)=tempQ;
+		out.data.range(31,16)=tempI.V;
+		out.data.range(15,0)=tempQ.V;
 		return out;
 	}
 

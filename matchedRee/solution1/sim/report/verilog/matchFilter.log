@@ -4,10 +4,10 @@
 @W [SIM-75] Fifo port 'in_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
 @W [SIM-75] Fifo port 'out_data_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
 @W [SIM-75] Fifo port 'out_last_V' has a default depth of 1. Insufficient depth may cause simulation mismatch or freeze. Please specify the depth in 'set_directive_interface' using the option '-depth'.
-   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Build using "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/g++"
+   Compiling tb_main.cpp_pre.cpp.tb.cpp
    Compiling apatb_matchFilter.cpp
    Compiling matchFilter.cpp_pre.cpp.tb.cpp
-   Compiling tb_main.cpp_pre.cpp.tb.cpp
    Generating cosim.tv.exe
 @I [SIM-302] Starting C TB testing ... 
 @I [SIM-333] Generating C post check test bench ...
@@ -15,29 +15,29 @@
 @I [SIM-323] Starting verilog simulation. 
 @I [SIM-15] Starting XSIM ...
 @I [SIM-316] Starting C post checking ...
-
-D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\solution1\sim\verilog>call D:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.apatb_matchFilter_top -prj matchFilter.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s matchFilter -debug wave 
-INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_matchFilter_top -prj matchFilter.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matchFilter -debug wave 
-Multi-threading is on. Using 6 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
+Running: /opt/Xilinx/Vivado/2017.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matchFilter_top -prj matchFilter.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matchFilter -debug wave 
+Multi-threading is on. Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_matchFilter_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module matchFilter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIbkb_ram
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIcud.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIcud.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIcud_ram
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matchFilter
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
@@ -56,16 +56,16 @@ Compiling module xil_defaultlib.apatb_matchFilter_top
 Built simulation snapshot matchFilter
 
 ****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Mar 14 15:37:35 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Mar 14 15:37:35 2019...
+source /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.dir/matchFilter/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Mar 22 15:46:51 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar 22 15:46:51 2019...
 
 ****** xsim v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
@@ -1295,8 +1295,135 @@ source matchFilter.tcl
 // RTL Simulation : 1165 / 1166 [0.00%] @ "5999875000"
 // RTL Simulation : 1166 / 1166 [0.00%] @ "6005025000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 6005065 ns : File "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" Line 220
-run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 218.453 ; gain = 0.000
+$finish called at time : 6005065 ns : File "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" Line 220
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1030.082 ; gain = 0.000 ; free physical = 6567 ; free virtual = 11344
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Mar 14 15:38:00 2019...
+INFO: [Common 17-206] Exiting xsim at Fri Mar 22 15:47:06 2019...
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
+WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'out_data_V', possible cause: There are uninitialized variables in the C design.
 @I [SIM-1000] *** C/RTL co-simulation finished: PASS ***

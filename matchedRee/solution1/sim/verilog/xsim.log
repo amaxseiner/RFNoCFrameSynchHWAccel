@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # xsim v2017.2 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Mar 14 15:37:36 2019
-# Process ID: 3956
-# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/matchFilter/xsim_script.tcl}
-# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.log
-# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog\xsim.jou
+# Start of session at: Fri Mar 22 15:46:51 2019
+# Process ID: 29363
+# Current directory: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/matchFilter/xsim_script.tcl}
+# Log file: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.log
+# Journal file: /home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/matchFilter/xsim_script.tcl
 # xsim {matchFilter} -autoloadwcfg -tclbatch {matchFilter.tcl}
@@ -1235,7 +1235,7 @@ source matchFilter.tcl
 // RTL Simulation : 1165 / 1166 [0.00%] @ "5999875000"
 // RTL Simulation : 1166 / 1166 [0.00%] @ "6005025000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 6005065 ns : File "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" Line 220
-run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 218.453 ; gain = 0.000
+$finish called at time : 6005065 ns : File "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" Line 220
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1030.082 ; gain = 0.000 ; free physical = 6567 ; free virtual = 11344
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Mar 14 15:38:00 2019...
+INFO: [Common 17-206] Exiting xsim at Fri Mar 22 15:47:06 2019...

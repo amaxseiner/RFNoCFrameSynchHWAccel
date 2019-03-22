@@ -3,26 +3,5 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../tb_main.cpp in debug mode
    Compiling ../../../matchFilter.cpp in debug mode
    Generating csim.exe
-In file included from D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h:172,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_half.h:57,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/ap_int.h:74,
-                 from ../../../matchFilter.h:1,
-                 from ../../../tb_main.cpp:3:
-D:/Xilinx/Vivado_HLS/2017.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
-D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
-In file included from D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h:172,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_half.h:57,
-                 from D:/Xilinx/Vivado_HLS/2017.2/include/ap_int.h:74,
-                 from ../../../matchFilter.h:1,
-                 from ../../../matchFilter.cpp:1:
-D:/Xilinx/Vivado_HLS/2017.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
-D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
-obj/matchFilter.o: In function `Z11matchFilterR10axis_fixedS0_':
-D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\solution1\csim\build/../../../matchFilter.cpp:4: multiple definition of `preamble'
-obj/tb_main.o:D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\solution1\csim\build/../../../tb_main.cpp:5: first defined here
-collect2: ld returned 1 exit status
-make: *** [csim.exe] Error 1
-CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

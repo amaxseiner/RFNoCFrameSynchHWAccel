@@ -5,5 +5,5 @@
 // ==============================================================
 
 extern void AESL_WRAP_matchFilter (
-struct axis_fixed& in,
-struct axis_fixed& out);
+struct axis_fixed* in,
+struct axis_fixed* out);

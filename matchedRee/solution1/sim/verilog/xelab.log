@@ -1,24 +1,25 @@
-INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_matchFilter_top -prj matchFilter.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile D:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matchFilter -debug wave 
-Multi-threading is on. Using 6 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
+Running: /opt/Xilinx/Vivado/2017.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matchFilter_top -prj matchFilter.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matchFilter -debug wave 
+Multi-threading is on. Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_matchFilter_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module matchFilter
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIbkb_ram
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIcud.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter_buffIcud.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIcud_ram
 INFO: [VRFC 10-311] analyzing module matchFilter_buffIcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/verilog/matchFilter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matchFilter
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis

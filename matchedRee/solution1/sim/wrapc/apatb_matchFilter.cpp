@@ -106,12 +106,12 @@ class INTER_TCL_FILE {
 };
 
 extern void matchFilter (
-axis_fixed& in,
-axis_fixed& out);
+axis_fixed* in,
+axis_fixed* out);
 
 void AESL_WRAP_matchFilter (
-axis_fixed& in,
-axis_fixed& out)
+axis_fixed* in,
+axis_fixed* out)
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -223,7 +223,7 @@ axis_fixed& out)
 							// carray: (0) => (0) @ (1)
 							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 							{
-								if (&(out.data) != NULL) // check the null address if the c port is array or others
+								if (&(out[0].data) != NULL) // check the null address if the c port is array or others
 								{
 									out_data_V_lv0_0_0_1[hls_map_index].range(31, 0) = sc_bv<32>(out_data_V_pc_buffer[hls_map_index].range(31, 0));
 									hls_map_index++;
@@ -241,14 +241,14 @@ axis_fixed& out)
 							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 							{
 								// sub                    : i_0
-								// ori_name               : out.data
+								// ori_name               : out[i_0].data
 								// sub_1st_elem           : 0
-								// ori_name_1st_elem      : out.data
-								// output_left_conversion : out.data
+								// ori_name_1st_elem      : out[0].data
+								// output_left_conversion : out[i_0].data
 								// output_type_conversion : (out_data_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str()
-								if (&(out.data) != NULL) // check the null address if the c port is array or others
+								if (&(out[0].data) != NULL) // check the null address if the c port is array or others
 								{
-									out.data = (out_data_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
+									out[i_0].data = (out_data_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
 									hls_map_index++;
 								}
 							}
@@ -358,7 +358,7 @@ axis_fixed& out)
 							// carray: (0) => (0) @ (1)
 							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 							{
-								if (&(out.last) != NULL) // check the null address if the c port is array or others
+								if (&(out[0].last) != NULL) // check the null address if the c port is array or others
 								{
 									out_last_V_lv0_0_0_1[hls_map_index].range(0, 0) = sc_bv<1>(out_last_V_pc_buffer[hls_map_index].range(0, 0));
 									hls_map_index++;
@@ -376,14 +376,14 @@ axis_fixed& out)
 							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 							{
 								// sub                    : i_0
-								// ori_name               : out.last
+								// ori_name               : out[i_0].last
 								// sub_1st_elem           : 0
-								// ori_name_1st_elem      : out.last
-								// output_left_conversion : out.last
+								// ori_name_1st_elem      : out[0].last
+								// output_left_conversion : out[i_0].last
 								// output_type_conversion : (out_last_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str()
-								if (&(out.last) != NULL) // check the null address if the c port is array or others
+								if (&(out[0].last) != NULL) // check the null address if the c port is array or others
 								{
-									out.last = (out_last_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
+									out[i_0].last = (out_last_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
 									hls_map_index++;
 								}
 							}
@@ -446,15 +446,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : in.data
+						// ori_name              : in[i_0].data
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : in.data
+						// ori_name_1st_elem     : in[0].data
 						// regulate_c_name       : in_data_V
-						// input_type_conversion : (in.data).to_string(2).c_str()
-						if (&(in.data) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (in[i_0].data).to_string(2).c_str()
+						if (&(in[0].data) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> in_data_V_tmp_mem;
-							in_data_V_tmp_mem = (in.data).to_string(2).c_str();
+							in_data_V_tmp_mem = (in[i_0].data).to_string(2).c_str();
 							in_data_V_tvin_wrapc_buffer[hls_map_index].range(31, 0) = in_data_V_tmp_mem.range(31, 0);
                                  	       hls_map_index++;
 						}
@@ -494,15 +494,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : in.last
+						// ori_name              : in[i_0].last
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : in.last
+						// ori_name_1st_elem     : in[0].last
 						// regulate_c_name       : in_last_V
-						// input_type_conversion : (in.last).to_string(2).c_str()
-						if (&(in.last) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (in[i_0].last).to_string(2).c_str()
+						if (&(in[0].last) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<1> in_last_V_tmp_mem;
-							in_last_V_tmp_mem = (in.last).to_string(2).c_str();
+							in_last_V_tmp_mem = (in[i_0].last).to_string(2).c_str();
 							in_last_V_tvin_wrapc_buffer[hls_map_index].range(0, 0) = in_last_V_tmp_mem.range(0, 0);
                                  	       hls_map_index++;
 						}
@@ -542,15 +542,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : out.data
+						// ori_name              : out[i_0].data
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : out.data
+						// ori_name_1st_elem     : out[0].data
 						// regulate_c_name       : out_data_V
-						// input_type_conversion : (out.data).to_string(2).c_str()
-						if (&(out.data) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (out[i_0].data).to_string(2).c_str()
+						if (&(out[0].data) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> out_data_V_tmp_mem;
-							out_data_V_tmp_mem = (out.data).to_string(2).c_str();
+							out_data_V_tmp_mem = (out[i_0].data).to_string(2).c_str();
 							out_data_V_tvin_wrapc_buffer[hls_map_index].range(31, 0) = out_data_V_tmp_mem.range(31, 0);
                                  	       hls_map_index++;
 						}
@@ -590,15 +590,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : out.last
+						// ori_name              : out[i_0].last
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : out.last
+						// ori_name_1st_elem     : out[0].last
 						// regulate_c_name       : out_last_V
-						// input_type_conversion : (out.last).to_string(2).c_str()
-						if (&(out.last) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (out[i_0].last).to_string(2).c_str()
+						if (&(out[0].last) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<1> out_last_V_tmp_mem;
-							out_last_V_tmp_mem = (out.last).to_string(2).c_str();
+							out_last_V_tmp_mem = (out[i_0].last).to_string(2).c_str();
 							out_last_V_tvin_wrapc_buffer[hls_map_index].range(0, 0) = out_last_V_tmp_mem.range(0, 0);
                                  	       hls_map_index++;
 						}
@@ -645,15 +645,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : out.data
+						// ori_name              : out[i_0].data
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : out.data
+						// ori_name_1st_elem     : out[0].data
 						// regulate_c_name       : out_data_V
-						// input_type_conversion : (out.data).to_string(2).c_str()
-						if (&(out.data) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (out[i_0].data).to_string(2).c_str()
+						if (&(out[0].data) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<32> out_data_V_tmp_mem;
-							out_data_V_tmp_mem = (out.data).to_string(2).c_str();
+							out_data_V_tmp_mem = (out[i_0].data).to_string(2).c_str();
 							out_data_V_tvout_wrapc_buffer[hls_map_index].range(31, 0) = out_data_V_tmp_mem.range(31, 0);
                                  	       hls_map_index++;
 						}
@@ -693,15 +693,15 @@ axis_fixed& out)
 					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
 					{
 						// sub                   : i_0
-						// ori_name              : out.last
+						// ori_name              : out[i_0].last
 						// sub_1st_elem          : 0
-						// ori_name_1st_elem     : out.last
+						// ori_name_1st_elem     : out[0].last
 						// regulate_c_name       : out_last_V
-						// input_type_conversion : (out.last).to_string(2).c_str()
-						if (&(out.last) != NULL) // check the null address if the c port is array or others
+						// input_type_conversion : (out[i_0].last).to_string(2).c_str()
+						if (&(out[0].last) != NULL) // check the null address if the c port is array or others
 						{
 							sc_lv<1> out_last_V_tmp_mem;
-							out_last_V_tmp_mem = (out.last).to_string(2).c_str();
+							out_last_V_tmp_mem = (out[i_0].last).to_string(2).c_str();
 							out_last_V_tvout_wrapc_buffer[hls_map_index].range(0, 0) = out_last_V_tmp_mem.range(0, 0);
                                  	       hls_map_index++;
 						}

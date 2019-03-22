@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Mar 14 15:37:58 2019'>
+<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Mar 22 15:47:05 2019'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1909853" description="" />
-  <keyValuePair key="date_generated" value="Thu Mar 14 15:37:57 2019" description="" />
-  <keyValuePair key="os_platform" value="WIN64" description="" />
+  <keyValuePair key="date_generated" value="Fri Mar 22 15:47:05 2019" description="" />
+  <keyValuePair key="os_platform" value="LIN64" description="" />
   <keyValuePair key="product_version" value="XSIM v2017.2 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="666c1953-47b6-4271-84d2-f0c49ae5f6b1" description="" />
+  <keyValuePair key="project_id" value="ac4c2e0d-05b2-4858-90e9-0957ee8a8a18" description="" />
   <keyValuePair key="project_iteration" value="2" description="" />
-  <keyValuePair key="random_id" value="03b5585f-2856-48e3-88c3-33871353577d" description="" />
-  <keyValuePair key="registration_id" value="211307188_200471140_210589847_203" description="" />
+  <keyValuePair key="random_id" value="f7cbc1f2-17fa-4801-8537-812193080f98" description="" />
+  <keyValuePair key="registration_id" value="f7cbc1f2-17fa-4801-8537-812193080f98" description="" />
   <keyValuePair key="route_design" value="FALSE" description="" />
   <keyValuePair key="target_device" value="not_applicable" description="" />
   <keyValuePair key="target_family" value="not_applicable" description="" />
@@ -19,11 +19,11 @@
   <keyValuePair key="tool_flow" value="xsim" description="" />
  </section>
  <section name="user_environment" level="1" order="2" description="">
-  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz" description="" />
-  <keyValuePair key="cpu_speed" value="2808 MHz" description="" />
-  <keyValuePair key="os_name" value="Microsoft Windows 8 or later , 64-bit" description="" />
-  <keyValuePair key="os_release" value="major release  (build 9200)" description="" />
-  <keyValuePair key="system_ram" value="8.000 GB" description="" />
+  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i5-4690K CPU @ 3.50GHz" description="" />
+  <keyValuePair key="cpu_speed" value="3866.881 MHz" description="" />
+  <keyValuePair key="os_name" value="Ubuntu" description="" />
+  <keyValuePair key="os_release" value="Ubuntu 16.04.6 LTS" description="" />
+  <keyValuePair key="system_ram" value="16.000 GB" description="" />
   <keyValuePair key="total_processors" value="1" description="" />
  </section>
  <section name="vivado_usage" level="1" order="3" description="">
@@ -36,8 +36,8 @@
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="iteration" value="0" description="" />
    <keyValuePair key="runtime" value="6005065 ns" description="" />
-   <keyValuePair key="simulation_memory" value="15756_KB" description="" />
-   <keyValuePair key="simulation_time" value="7.28_sec" description="" />
+   <keyValuePair key="simulation_memory" value="136324_KB" description="" />
+   <keyValuePair key="simulation_time" value="3.53_sec" description="" />
    <keyValuePair key="trace_waveform" value="true" description="" />
   </section>
  </section>

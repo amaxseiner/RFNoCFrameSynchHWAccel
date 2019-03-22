@@ -1,5 +1,5 @@
 set C_TypeInfoList {{ 
-"matchFilter" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"in": [[], {"reference": "0"}] }, {"out": [[], {"reference": "0"}] }],[],""], 
+"matchFilter" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"in": [[],{ "pointer": "0"}] }, {"out": [[],{ "pointer": "0"}] }],[],""], 
 "0": [ "axis_fixed", {"struct": [[],[],[{ "data": [[], "1"]},{ "last": [[], "2"]}],""]}], 
 "2": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "1": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}]

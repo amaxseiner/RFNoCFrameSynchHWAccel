@@ -41,7 +41,7 @@ int main(){
 	fclose(fp_r);
 	for (int i = 0; i < COUNT; i++)
 		{
-			matchFilter(in[i], out[i]);
+			matchFilter(&in[i], &out[i]);
 			test = out[i].data.range(15,0);
 			//printf(test);
 		}
