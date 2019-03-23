@@ -31922,7 +31922,7 @@ struct phase{
  cor_t phaseWindow[16];
 };
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data);
+void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data);
 
  class correlate{
  public:
@@ -31955,13 +31955,13 @@ using namespace std;
 
 
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
+void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
 
 
 
 _ssdm_op_SpecInterface(0, "ap_ctrl_none", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(&o_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(&i_data, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
@@ -32028,34 +32028,37 @@ switch(currentState) {
 
  break;
  case ST_LOAD:
+  if(!i_data.empty()){
 
-  o_data->last = i_data->last;
-  unScalled.V = i_data->data.range(15,0);
-  newVal = unScalled;
+   tmp_data = i_data.read();
+   out_sample.last = tmp_data.last;
 
-
-
-
-
-  cor.shiftPhaseClass(newVal,phaseClass);
-  out = cor.correlator(phaseClass);
+   newVal = unScalled;
 
 
-  loadCount = loadCount + 1;
-  if(phaseClass == 15){
-   phaseClass=0;
-  } else {
-   phaseClass = phaseClass + 1;
+
+
+
+   cor.shiftPhaseClass(newVal,phaseClass);
+   out = cor.correlator(phaseClass);
+
+
+   loadCount = loadCount + 1;
+   if(phaseClass == 15){
+    phaseClass=0;
+   } else {
+    phaseClass = phaseClass + 1;
+   }
+   out_sample.data = tmp_data.data;
+   o_data.write(out_sample);
+
+
+
+
+
+
+   currentState = ST_LOAD;
   }
-  o_data->data = i_data->data;
-
-
-
-
-
-
-
-  currentState = ST_LOAD;
 
  break;
 }
@@ -32071,7 +32074,7 @@ _ssdm_Unroll(0,0,0, "");
   }
   phaseClass0[0] = newValue;
   break;
-# 233 "correlator.cpp"
+# 236 "correlator.cpp"
  }
 
 
@@ -32085,7 +32088,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
  cor_t corHelperINeg,corHelperIPos,res;
  corHelperINeg = 0;
  corHelperIPos = 0;
-# 254 "correlator.cpp"
+# 257 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -32097,7 +32100,7 @@ _ssdm_Unroll(0,0,0, "");
    }
   }
  break;
-# 415 "correlator.cpp"
+# 418 "correlator.cpp"
  }
 
  if(corHelperIPos > corHelperINeg){

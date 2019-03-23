@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=2.846000,HLS_SYN_LAT=3,HLS_SYN_TPT=2,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=191,HLS_SYN_LUT=383}" *)
+(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=2.846000,HLS_SYN_LAT=2,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=151,HLS_SYN_LUT=272}" *)
 
 module correlateTop (
         ap_clk,
@@ -22,8 +22,7 @@ module correlateTop (
         o_data_TLAST
 );
 
-parameter    ap_ST_fsm_pp0_stage0 = 2'd1;
-parameter    ap_ST_fsm_pp0_stage1 = 2'd2;
+parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
 
 input   ap_clk;
 input   ap_rst_n;
@@ -36,117 +35,87 @@ output   o_data_TVALID;
 input   o_data_TREADY;
 output  [0:0] o_data_TLAST;
 
+reg i_data_TREADY;
+
 reg    ap_rst_n_inv;
-reg   [31:0] i_data_data_V_0_data_out;
-wire    i_data_data_V_0_vld_in;
-wire    i_data_data_V_0_vld_out;
-wire    i_data_data_V_0_ack_in;
-reg    i_data_data_V_0_ack_out;
-reg   [31:0] i_data_data_V_0_payload_A;
-reg   [31:0] i_data_data_V_0_payload_B;
-reg    i_data_data_V_0_sel_rd;
-reg    i_data_data_V_0_sel_wr;
-wire    i_data_data_V_0_sel;
-wire    i_data_data_V_0_load_A;
-wire    i_data_data_V_0_load_B;
-reg   [1:0] i_data_data_V_0_state;
-wire    i_data_data_V_0_state_cmp_full;
-reg   [0:0] i_data_last_V_0_data_out;
-wire    i_data_last_V_0_vld_in;
-wire    i_data_last_V_0_vld_out;
-wire    i_data_last_V_0_ack_in;
-reg    i_data_last_V_0_ack_out;
-reg   [0:0] i_data_last_V_0_payload_A;
-reg   [0:0] i_data_last_V_0_payload_B;
-reg    i_data_last_V_0_sel_rd;
-reg    i_data_last_V_0_sel_wr;
-wire    i_data_last_V_0_sel;
-wire    i_data_last_V_0_load_A;
-wire    i_data_last_V_0_load_B;
-reg   [1:0] i_data_last_V_0_state;
-wire    i_data_last_V_0_state_cmp_full;
-reg   [31:0] o_data_data_V_1_data_out;
-reg    o_data_data_V_1_vld_in;
-wire    o_data_data_V_1_vld_out;
-wire    o_data_data_V_1_ack_in;
-wire    o_data_data_V_1_ack_out;
-reg   [31:0] o_data_data_V_1_payload_A;
-reg   [31:0] o_data_data_V_1_payload_B;
-reg    o_data_data_V_1_sel_rd;
-reg    o_data_data_V_1_sel_wr;
-wire    o_data_data_V_1_sel;
-wire    o_data_data_V_1_load_A;
-wire    o_data_data_V_1_load_B;
-reg   [1:0] o_data_data_V_1_state;
-wire    o_data_data_V_1_state_cmp_full;
-reg   [0:0] o_data_last_V_1_data_out;
-reg    o_data_last_V_1_vld_in;
-wire    o_data_last_V_1_vld_out;
-wire    o_data_last_V_1_ack_in;
-wire    o_data_last_V_1_ack_out;
-reg   [0:0] o_data_last_V_1_payload_A;
-reg   [0:0] o_data_last_V_1_payload_B;
-reg    o_data_last_V_1_sel_rd;
-reg    o_data_last_V_1_sel_wr;
-wire    o_data_last_V_1_sel;
-wire    o_data_last_V_1_load_A;
-wire    o_data_last_V_1_load_B;
-reg   [1:0] o_data_last_V_1_state;
-wire    o_data_last_V_1_state_cmp_full;
+reg   [31:0] o_data_V_data_V_1_data_out;
+reg    o_data_V_data_V_1_vld_in;
+wire    o_data_V_data_V_1_vld_out;
+wire    o_data_V_data_V_1_ack_in;
+wire    o_data_V_data_V_1_ack_out;
+reg   [31:0] o_data_V_data_V_1_payload_A;
+reg   [31:0] o_data_V_data_V_1_payload_B;
+reg    o_data_V_data_V_1_sel_rd;
+reg    o_data_V_data_V_1_sel_wr;
+wire    o_data_V_data_V_1_sel;
+wire    o_data_V_data_V_1_load_A;
+wire    o_data_V_data_V_1_load_B;
+reg   [1:0] o_data_V_data_V_1_state;
+wire    o_data_V_data_V_1_state_cmp_full;
+reg   [0:0] o_data_V_last_V_1_data_out;
+reg    o_data_V_last_V_1_vld_in;
+wire    o_data_V_last_V_1_vld_out;
+wire    o_data_V_last_V_1_ack_in;
+wire    o_data_V_last_V_1_ack_out;
+reg   [0:0] o_data_V_last_V_1_payload_A;
+reg   [0:0] o_data_V_last_V_1_payload_B;
+reg    o_data_V_last_V_1_sel_rd;
+reg    o_data_V_last_V_1_sel_wr;
+wire    o_data_V_last_V_1_sel;
+wire    o_data_V_last_V_1_load_A;
+wire    o_data_V_last_V_1_load_B;
+reg   [1:0] o_data_V_last_V_1_state;
+wire    o_data_V_last_V_1_state_cmp_full;
 reg   [0:0] currentState;
 reg   [3:0] phaseClass_V;
 reg   [31:0] loadCount_V;
 reg    i_data_TDATA_blk_n;
-(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
-wire    ap_CS_fsm_pp0_stage1;
-wire    ap_block_pp0_stage1;
-reg   [0:0] currentState_load_reg_263;
+(* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
-reg    ap_enable_reg_pp0_iter1;
 wire    ap_block_pp0_stage0;
+wire   [0:0] currentState_load_load_fu_88_p1;
+wire   [0:0] tmp_nbreadreq_fu_54_p4;
 reg    o_data_TDATA_blk_n;
-reg   [0:0] ap_reg_pp0_iter1_currentState_load_reg_263;
-wire    ap_block_state1_pp0_stage0_iter0;
-reg    ap_block_state3_pp0_stage0_iter1;
+reg    ap_enable_reg_pp0_iter1;
+reg   [0:0] currentState_load_reg_150;
+reg   [0:0] tmp_reg_154;
+reg    ap_enable_reg_pp0_iter2;
+reg   [0:0] ap_reg_pp0_iter1_currentState_load_reg_150;
+reg   [0:0] ap_reg_pp0_iter1_tmp_reg_154;
+reg    ap_predicate_op9_read_state1;
+reg    ap_block_state1_pp0_stage0_iter0;
+wire    ap_block_state2_pp0_stage0_iter1;
+reg    ap_predicate_op14_write_state2;
+reg    ap_block_state2_io;
+reg    ap_block_state3_pp0_stage0_iter2;
+reg    ap_predicate_op40_write_state3;
 reg    ap_block_state3_io;
 reg    ap_block_pp0_stage0_11001;
-reg   [0:0] o_data_last_V_tmp_reg_267;
-reg    ap_block_state2_pp0_stage1_iter0;
-reg    ap_block_state4_pp0_stage1_iter1;
-reg    ap_block_state4_io;
-reg    ap_block_pp0_stage1_11001;
-reg    ap_block_pp0_stage1_subdone;
-wire   [3:0] tmp_6_fu_217_p2;
-wire   [31:0] tmp_4_fu_251_p2;
-reg    ap_block_pp0_stage0_01001;
-reg    ap_block_pp0_stage1_01001;
-reg   [1:0] ap_NS_fsm;
+reg   [31:0] tmp_data_V_reg_158;
+reg   [0:0] tmp_last_V_reg_163;
 reg    ap_block_pp0_stage0_subdone;
+wire   [3:0] tmp_5_fu_138_p2;
+wire   [31:0] tmp_3_fu_126_p2;
+reg    ap_block_pp0_stage0_01001;
+reg   [0:0] ap_NS_fsm;
 wire    ap_reset_idle_pp0;
 reg    ap_idle_pp0;
 wire    ap_enable_pp0;
-reg    ap_condition_459;
-reg    ap_condition_463;
 
 // power-on initialization
 initial begin
-#0 i_data_data_V_0_sel_rd = 1'b0;
-#0 i_data_data_V_0_sel_wr = 1'b0;
-#0 i_data_data_V_0_state = 2'd0;
-#0 i_data_last_V_0_sel_rd = 1'b0;
-#0 i_data_last_V_0_sel_wr = 1'b0;
-#0 i_data_last_V_0_state = 2'd0;
-#0 o_data_data_V_1_sel_rd = 1'b0;
-#0 o_data_data_V_1_sel_wr = 1'b0;
-#0 o_data_data_V_1_state = 2'd0;
-#0 o_data_last_V_1_sel_rd = 1'b0;
-#0 o_data_last_V_1_sel_wr = 1'b0;
-#0 o_data_last_V_1_state = 2'd0;
+#0 o_data_V_data_V_1_sel_rd = 1'b0;
+#0 o_data_V_data_V_1_sel_wr = 1'b0;
+#0 o_data_V_data_V_1_state = 2'd0;
+#0 o_data_V_last_V_1_sel_rd = 1'b0;
+#0 o_data_V_last_V_1_sel_wr = 1'b0;
+#0 o_data_V_last_V_1_state = 2'd0;
 #0 currentState = 1'd0;
 #0 phaseClass_V = 4'd0;
 #0 loadCount_V = 32'd0;
-#0 ap_CS_fsm = 2'd1;
+#0 ap_CS_fsm = 1'd1;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_enable_reg_pp0_iter2 = 1'b0;
 end
 
 always @ (posedge ap_clk) begin
@@ -161,8 +130,18 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage1_subdone) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
             ap_enable_reg_pp0_iter1 <= 1'b1;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        ap_enable_reg_pp0_iter2 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
         end
     end
 end
@@ -171,80 +150,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         currentState <= 1'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        if ((((currentState_load_load_fu_88_p1 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((ap_predicate_op9_read_state1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
             currentState <= 1'd1;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_data_V_0_sel_rd <= 1'b0;
-    end else begin
-        if (((i_data_data_V_0_ack_out == 1'b1) & (i_data_data_V_0_vld_out == 1'b1))) begin
-            i_data_data_V_0_sel_rd <= ~i_data_data_V_0_sel_rd;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_data_V_0_sel_wr <= 1'b0;
-    end else begin
-        if (((i_data_data_V_0_ack_in == 1'b1) & (i_data_data_V_0_vld_in == 1'b1))) begin
-            i_data_data_V_0_sel_wr <= ~i_data_data_V_0_sel_wr;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_data_V_0_state <= 2'd0;
-    end else begin
-        if ((((i_data_data_V_0_vld_in == 1'b0) & (i_data_data_V_0_state == 2'd2)) | ((i_data_data_V_0_vld_in == 1'b0) & (i_data_data_V_0_state == 2'd3) & (i_data_data_V_0_ack_out == 1'b1)))) begin
-            i_data_data_V_0_state <= 2'd2;
-        end else if ((((i_data_data_V_0_ack_out == 1'b0) & (i_data_data_V_0_state == 2'd1)) | ((i_data_data_V_0_ack_out == 1'b0) & (i_data_data_V_0_state == 2'd3) & (i_data_data_V_0_vld_in == 1'b1)))) begin
-            i_data_data_V_0_state <= 2'd1;
-        end else if (((~((i_data_data_V_0_vld_in == 1'b0) & (i_data_data_V_0_ack_out == 1'b1)) & ~((i_data_data_V_0_ack_out == 1'b0) & (i_data_data_V_0_vld_in == 1'b1)) & (i_data_data_V_0_state == 2'd3)) | ((i_data_data_V_0_state == 2'd1) & (i_data_data_V_0_ack_out == 1'b1)) | ((i_data_data_V_0_state == 2'd2) & (i_data_data_V_0_vld_in == 1'b1)))) begin
-            i_data_data_V_0_state <= 2'd3;
-        end else begin
-            i_data_data_V_0_state <= 2'd2;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_last_V_0_sel_rd <= 1'b0;
-    end else begin
-        if (((i_data_last_V_0_ack_out == 1'b1) & (i_data_last_V_0_vld_out == 1'b1))) begin
-            i_data_last_V_0_sel_rd <= ~i_data_last_V_0_sel_rd;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_last_V_0_sel_wr <= 1'b0;
-    end else begin
-        if (((i_data_last_V_0_ack_in == 1'b1) & (i_data_last_V_0_vld_in == 1'b1))) begin
-            i_data_last_V_0_sel_wr <= ~i_data_last_V_0_sel_wr;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        i_data_last_V_0_state <= 2'd0;
-    end else begin
-        if ((((i_data_last_V_0_state == 2'd3) & (i_data_last_V_0_vld_in == 1'b0) & (i_data_last_V_0_ack_out == 1'b1)) | ((i_data_last_V_0_state == 2'd2) & (i_data_last_V_0_vld_in == 1'b0)))) begin
-            i_data_last_V_0_state <= 2'd2;
-        end else if ((((i_data_last_V_0_state == 2'd3) & (i_data_last_V_0_ack_out == 1'b0) & (i_data_last_V_0_vld_in == 1'b1)) | ((i_data_last_V_0_state == 2'd1) & (i_data_last_V_0_ack_out == 1'b0)))) begin
-            i_data_last_V_0_state <= 2'd1;
-        end else if ((((i_data_last_V_0_state == 2'd1) & (i_data_last_V_0_ack_out == 1'b1)) | ((i_data_last_V_0_state == 2'd2) & (i_data_last_V_0_vld_in == 1'b1)) | (~((i_data_last_V_0_vld_in == 1'b0) & (i_data_last_V_0_ack_out == 1'b1)) & ~((i_data_last_V_0_ack_out == 1'b0) & (i_data_last_V_0_vld_in == 1'b1)) & (i_data_last_V_0_state == 2'd3)))) begin
-            i_data_last_V_0_state <= 2'd3;
-        end else begin
-            i_data_last_V_0_state <= 2'd2;
         end
     end
 end
@@ -253,10 +160,10 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         loadCount_V <= 32'd0;
     end else begin
-        if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            if ((1'b1 == ap_condition_463)) begin
-                loadCount_V <= tmp_4_fu_251_p2;
-            end else if ((1'b1 == ap_condition_459)) begin
+        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+            if ((ap_predicate_op40_write_state3 == 1'b1)) begin
+                loadCount_V <= tmp_3_fu_126_p2;
+            end else if ((ap_reg_pp0_iter1_currentState_load_reg_150 == 1'd0)) begin
                 loadCount_V <= 32'd0;
             end
         end
@@ -265,72 +172,72 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_data_V_1_sel_rd <= 1'b0;
+        o_data_V_data_V_1_sel_rd <= 1'b0;
     end else begin
-        if (((o_data_data_V_1_ack_out == 1'b1) & (o_data_data_V_1_vld_out == 1'b1))) begin
-            o_data_data_V_1_sel_rd <= ~o_data_data_V_1_sel_rd;
+        if (((o_data_V_data_V_1_ack_out == 1'b1) & (o_data_V_data_V_1_vld_out == 1'b1))) begin
+            o_data_V_data_V_1_sel_rd <= ~o_data_V_data_V_1_sel_rd;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_data_V_1_sel_wr <= 1'b0;
+        o_data_V_data_V_1_sel_wr <= 1'b0;
     end else begin
-        if (((o_data_data_V_1_ack_in == 1'b1) & (o_data_data_V_1_vld_in == 1'b1))) begin
-            o_data_data_V_1_sel_wr <= ~o_data_data_V_1_sel_wr;
+        if (((o_data_V_data_V_1_ack_in == 1'b1) & (o_data_V_data_V_1_vld_in == 1'b1))) begin
+            o_data_V_data_V_1_sel_wr <= ~o_data_V_data_V_1_sel_wr;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_data_V_1_state <= 2'd0;
+        o_data_V_data_V_1_state <= 2'd0;
     end else begin
-        if ((((o_data_data_V_1_state == 2'd2) & (o_data_data_V_1_vld_in == 1'b0)) | ((o_data_data_V_1_state == 2'd3) & (o_data_data_V_1_vld_in == 1'b0) & (o_data_data_V_1_ack_out == 1'b1)))) begin
-            o_data_data_V_1_state <= 2'd2;
-        end else if ((((o_data_data_V_1_state == 2'd1) & (o_data_data_V_1_ack_out == 1'b0)) | ((o_data_data_V_1_state == 2'd3) & (o_data_data_V_1_ack_out == 1'b0) & (o_data_data_V_1_vld_in == 1'b1)))) begin
-            o_data_data_V_1_state <= 2'd1;
-        end else if (((~((o_data_data_V_1_vld_in == 1'b0) & (o_data_data_V_1_ack_out == 1'b1)) & ~((o_data_data_V_1_ack_out == 1'b0) & (o_data_data_V_1_vld_in == 1'b1)) & (o_data_data_V_1_state == 2'd3)) | ((o_data_data_V_1_state == 2'd1) & (o_data_data_V_1_ack_out == 1'b1)) | ((o_data_data_V_1_state == 2'd2) & (o_data_data_V_1_vld_in == 1'b1)))) begin
-            o_data_data_V_1_state <= 2'd3;
+        if ((((o_data_V_data_V_1_state == 2'd2) & (o_data_V_data_V_1_vld_in == 1'b0)) | ((o_data_V_data_V_1_state == 2'd3) & (o_data_V_data_V_1_vld_in == 1'b0) & (o_data_V_data_V_1_ack_out == 1'b1)))) begin
+            o_data_V_data_V_1_state <= 2'd2;
+        end else if ((((o_data_V_data_V_1_state == 2'd1) & (o_data_V_data_V_1_ack_out == 1'b0)) | ((o_data_V_data_V_1_state == 2'd3) & (o_data_V_data_V_1_ack_out == 1'b0) & (o_data_V_data_V_1_vld_in == 1'b1)))) begin
+            o_data_V_data_V_1_state <= 2'd1;
+        end else if (((~((o_data_V_data_V_1_vld_in == 1'b0) & (o_data_V_data_V_1_ack_out == 1'b1)) & ~((o_data_V_data_V_1_ack_out == 1'b0) & (o_data_V_data_V_1_vld_in == 1'b1)) & (o_data_V_data_V_1_state == 2'd3)) | ((o_data_V_data_V_1_state == 2'd1) & (o_data_V_data_V_1_ack_out == 1'b1)) | ((o_data_V_data_V_1_state == 2'd2) & (o_data_V_data_V_1_vld_in == 1'b1)))) begin
+            o_data_V_data_V_1_state <= 2'd3;
         end else begin
-            o_data_data_V_1_state <= 2'd2;
+            o_data_V_data_V_1_state <= 2'd2;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_last_V_1_sel_rd <= 1'b0;
+        o_data_V_last_V_1_sel_rd <= 1'b0;
     end else begin
-        if (((o_data_last_V_1_ack_out == 1'b1) & (o_data_last_V_1_vld_out == 1'b1))) begin
-            o_data_last_V_1_sel_rd <= ~o_data_last_V_1_sel_rd;
+        if (((o_data_V_last_V_1_ack_out == 1'b1) & (o_data_V_last_V_1_vld_out == 1'b1))) begin
+            o_data_V_last_V_1_sel_rd <= ~o_data_V_last_V_1_sel_rd;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_last_V_1_sel_wr <= 1'b0;
+        o_data_V_last_V_1_sel_wr <= 1'b0;
     end else begin
-        if (((o_data_last_V_1_ack_in == 1'b1) & (o_data_last_V_1_vld_in == 1'b1))) begin
-            o_data_last_V_1_sel_wr <= ~o_data_last_V_1_sel_wr;
+        if (((o_data_V_last_V_1_ack_in == 1'b1) & (o_data_V_last_V_1_vld_in == 1'b1))) begin
+            o_data_V_last_V_1_sel_wr <= ~o_data_V_last_V_1_sel_wr;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        o_data_last_V_1_state <= 2'd0;
+        o_data_V_last_V_1_state <= 2'd0;
     end else begin
-        if ((((o_data_last_V_1_state == 2'd2) & (o_data_last_V_1_vld_in == 1'b0)) | ((o_data_last_V_1_state == 2'd3) & (o_data_last_V_1_vld_in == 1'b0) & (o_data_last_V_1_ack_out == 1'b1)))) begin
-            o_data_last_V_1_state <= 2'd2;
-        end else if ((((o_data_last_V_1_state == 2'd1) & (o_data_last_V_1_ack_out == 1'b0)) | ((o_data_last_V_1_state == 2'd3) & (o_data_last_V_1_ack_out == 1'b0) & (o_data_last_V_1_vld_in == 1'b1)))) begin
-            o_data_last_V_1_state <= 2'd1;
-        end else if (((~((o_data_last_V_1_vld_in == 1'b0) & (o_data_last_V_1_ack_out == 1'b1)) & ~((o_data_last_V_1_ack_out == 1'b0) & (o_data_last_V_1_vld_in == 1'b1)) & (o_data_last_V_1_state == 2'd3)) | ((o_data_last_V_1_state == 2'd1) & (o_data_last_V_1_ack_out == 1'b1)) | ((o_data_last_V_1_state == 2'd2) & (o_data_last_V_1_vld_in == 1'b1)))) begin
-            o_data_last_V_1_state <= 2'd3;
+        if ((((o_data_V_last_V_1_state == 2'd2) & (o_data_V_last_V_1_vld_in == 1'b0)) | ((o_data_V_last_V_1_state == 2'd3) & (o_data_V_last_V_1_vld_in == 1'b0) & (o_data_V_last_V_1_ack_out == 1'b1)))) begin
+            o_data_V_last_V_1_state <= 2'd2;
+        end else if ((((o_data_V_last_V_1_state == 2'd3) & (o_data_V_last_V_1_ack_out == 1'b0) & (o_data_V_last_V_1_vld_in == 1'b1)) | ((o_data_V_last_V_1_state == 2'd1) & (o_data_V_last_V_1_ack_out == 1'b0)))) begin
+            o_data_V_last_V_1_state <= 2'd1;
+        end else if ((((o_data_V_last_V_1_state == 2'd2) & (o_data_V_last_V_1_vld_in == 1'b1)) | (~((o_data_V_last_V_1_vld_in == 1'b0) & (o_data_V_last_V_1_ack_out == 1'b1)) & ~((o_data_V_last_V_1_ack_out == 1'b0) & (o_data_V_last_V_1_vld_in == 1'b1)) & (o_data_V_last_V_1_state == 2'd3)) | ((o_data_V_last_V_1_state == 2'd1) & (o_data_V_last_V_1_ack_out == 1'b1)))) begin
+            o_data_V_last_V_1_state <= 2'd3;
         end else begin
-            o_data_last_V_1_state <= 2'd2;
+            o_data_V_last_V_1_state <= 2'd2;
         end
     end
 end
@@ -339,77 +246,63 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         phaseClass_V <= 4'd0;
     end else begin
-        if (((currentState_load_reg_263 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            phaseClass_V <= 4'd0;
-        end else if (((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-            phaseClass_V <= tmp_6_fu_217_p2;
+        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+            if ((ap_predicate_op40_write_state3 == 1'b1)) begin
+                phaseClass_V <= tmp_5_fu_138_p2;
+            end else if ((ap_reg_pp0_iter1_currentState_load_reg_150 == 1'd0)) begin
+                phaseClass_V <= 4'd0;
+            end
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_reg_pp0_iter1_currentState_load_reg_263 <= currentState_load_reg_263;
-        currentState_load_reg_263 <= currentState;
+        ap_reg_pp0_iter1_currentState_load_reg_150 <= currentState_load_reg_150;
+        ap_reg_pp0_iter1_tmp_reg_154 <= tmp_reg_154;
+        currentState_load_reg_150 <= currentState;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((i_data_data_V_0_load_A == 1'b1)) begin
-        i_data_data_V_0_payload_A <= i_data_TDATA;
+    if ((o_data_V_data_V_1_load_A == 1'b1)) begin
+        o_data_V_data_V_1_payload_A <= tmp_data_V_reg_158;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((i_data_data_V_0_load_B == 1'b1)) begin
-        i_data_data_V_0_payload_B <= i_data_TDATA;
+    if ((o_data_V_data_V_1_load_B == 1'b1)) begin
+        o_data_V_data_V_1_payload_B <= tmp_data_V_reg_158;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((i_data_last_V_0_load_A == 1'b1)) begin
-        i_data_last_V_0_payload_A <= i_data_TLAST;
+    if ((o_data_V_last_V_1_load_A == 1'b1)) begin
+        o_data_V_last_V_1_payload_A <= tmp_last_V_reg_163;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((i_data_last_V_0_load_B == 1'b1)) begin
-        i_data_last_V_0_payload_B <= i_data_TLAST;
+    if ((o_data_V_last_V_1_load_B == 1'b1)) begin
+        o_data_V_last_V_1_payload_B <= tmp_last_V_reg_163;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((o_data_data_V_1_load_A == 1'b1)) begin
-        o_data_data_V_1_payload_A <= i_data_data_V_0_data_out;
+    if (((ap_predicate_op9_read_state1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        tmp_data_V_reg_158 <= i_data_TDATA;
+        tmp_last_V_reg_163 <= i_data_TLAST;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((o_data_data_V_1_load_B == 1'b1)) begin
-        o_data_data_V_1_payload_B <= i_data_data_V_0_data_out;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((o_data_last_V_1_load_A == 1'b1)) begin
-        o_data_last_V_1_payload_A <= o_data_last_V_tmp_reg_267;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((o_data_last_V_1_load_B == 1'b1)) begin
-        o_data_last_V_1_payload_B <= o_data_last_V_tmp_reg_267;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        o_data_last_V_tmp_reg_267 <= i_data_last_V_0_data_out;
+    if (((currentState == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        tmp_reg_154 <= tmp_nbreadreq_fu_54_p4;
     end
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (1'b1 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (1'b1 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -419,100 +312,65 @@ end
 assign ap_reset_idle_pp0 = 1'b0;
 
 always @ (*) begin
-    if ((((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        i_data_TDATA_blk_n = i_data_data_V_0_state[1'd0];
+    if (((tmp_nbreadreq_fu_54_p4 == 1'd1) & (currentState == 1'd1) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
+        i_data_TDATA_blk_n = i_data_TVALID;
     end else begin
         i_data_TDATA_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
-    if ((((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        i_data_data_V_0_ack_out = 1'b1;
+    if (((ap_predicate_op9_read_state1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        i_data_TREADY = 1'b1;
     end else begin
-        i_data_data_V_0_ack_out = 1'b0;
+        i_data_TREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((i_data_data_V_0_sel == 1'b1)) begin
-        i_data_data_V_0_data_out = i_data_data_V_0_payload_B;
-    end else begin
-        i_data_data_V_0_data_out = i_data_data_V_0_payload_A;
-    end
-end
-
-always @ (*) begin
-    if ((((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        i_data_last_V_0_ack_out = 1'b1;
-    end else begin
-        i_data_last_V_0_ack_out = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((i_data_last_V_0_sel == 1'b1)) begin
-        i_data_last_V_0_data_out = i_data_last_V_0_payload_B;
-    end else begin
-        i_data_last_V_0_data_out = i_data_last_V_0_payload_A;
-    end
-end
-
-always @ (*) begin
-    if ((((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((ap_reg_pp0_iter1_currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
-        o_data_TDATA_blk_n = o_data_data_V_1_state[1'd1];
+    if ((((ap_reg_pp0_iter1_tmp_reg_154 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_150 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0)) | ((tmp_reg_154 == 1'd1) & (currentState_load_reg_150 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0)))) begin
+        o_data_TDATA_blk_n = o_data_V_data_V_1_state[1'd1];
     end else begin
         o_data_TDATA_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
-    if ((o_data_data_V_1_sel == 1'b1)) begin
-        o_data_data_V_1_data_out = o_data_data_V_1_payload_B;
+    if ((o_data_V_data_V_1_sel == 1'b1)) begin
+        o_data_V_data_V_1_data_out = o_data_V_data_V_1_payload_B;
     end else begin
-        o_data_data_V_1_data_out = o_data_data_V_1_payload_A;
+        o_data_V_data_V_1_data_out = o_data_V_data_V_1_payload_A;
     end
 end
 
 always @ (*) begin
-    if (((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        o_data_data_V_1_vld_in = 1'b1;
+    if (((ap_predicate_op14_write_state2 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        o_data_V_data_V_1_vld_in = 1'b1;
     end else begin
-        o_data_data_V_1_vld_in = 1'b0;
+        o_data_V_data_V_1_vld_in = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((o_data_last_V_1_sel == 1'b1)) begin
-        o_data_last_V_1_data_out = o_data_last_V_1_payload_B;
+    if ((o_data_V_last_V_1_sel == 1'b1)) begin
+        o_data_V_last_V_1_data_out = o_data_V_last_V_1_payload_B;
     end else begin
-        o_data_last_V_1_data_out = o_data_last_V_1_payload_A;
+        o_data_V_last_V_1_data_out = o_data_V_last_V_1_payload_A;
     end
 end
 
 always @ (*) begin
-    if (((currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        o_data_last_V_1_vld_in = 1'b1;
+    if (((ap_predicate_op14_write_state2 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        o_data_V_last_V_1_vld_in = 1'b1;
     end else begin
-        o_data_last_V_1_vld_in = 1'b0;
+        o_data_V_last_V_1_vld_in = 1'b0;
     end
 end
 
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_pp0_stage0 : begin
-            if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end
-        end
-        ap_ST_fsm_pp0_stage1 : begin
-            if ((((ap_reset_idle_pp0 == 1'b0) & (1'b0 == ap_block_pp0_stage1_subdone)) | ((1'b0 == ap_block_pp0_stage1_subdone) & (ap_reset_idle_pp0 == 1'b1)))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
-            end
+            ap_NS_fsm = ap_ST_fsm_pp0_stage0;
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -522,138 +380,96 @@ end
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_pp0_stage1 = ap_CS_fsm[32'd1];
-
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_01001 = (((ap_enable_reg_pp0_iter2 == 1'b1) & ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0))) | ((ap_predicate_op9_read_state1 == 1'b1) & (i_data_TVALID == 1'b0) & (1'b1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & ((1'b1 == ap_block_state3_io) | ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0))));
+    ap_block_pp0_stage0_11001 = (((ap_enable_reg_pp0_iter2 == 1'b1) & ((1'b1 == ap_block_state3_io) | (o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0))) | ((1'b1 == ap_block_state2_io) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((ap_predicate_op9_read_state1 == 1'b1) & (i_data_TVALID == 1'b0) & (1'b1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_enable_reg_pp0_iter1 == 1'b1) & ((1'b1 == ap_block_state3_io) | ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0))));
-end
-
-assign ap_block_pp0_stage1 = ~(1'b1 == 1'b1);
-
-always @ (*) begin
-    ap_block_pp0_stage1_01001 = (((ap_enable_reg_pp0_iter1 == 1'b1) & ((o_data_last_V_1_ack_in == 1'b0) | (o_data_data_V_1_ack_in == 1'b0))) | ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0) & (1'b1 == 1'b1)));
+    ap_block_pp0_stage0_subdone = (((ap_enable_reg_pp0_iter2 == 1'b1) & ((1'b1 == ap_block_state3_io) | (o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0))) | ((1'b1 == ap_block_state2_io) & (ap_enable_reg_pp0_iter1 == 1'b1)) | ((ap_predicate_op9_read_state1 == 1'b1) & (i_data_TVALID == 1'b0) & (1'b1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage1_11001 = (((ap_enable_reg_pp0_iter1 == 1'b1) & ((o_data_last_V_1_ack_in == 1'b0) | (o_data_data_V_1_ack_in == 1'b0) | (1'b1 == ap_block_state4_io))) | ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0) & (1'b1 == 1'b1)));
+    ap_block_state1_pp0_stage0_iter0 = ((ap_predicate_op9_read_state1 == 1'b1) & (i_data_TVALID == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage1_subdone = (((ap_enable_reg_pp0_iter1 == 1'b1) & ((o_data_last_V_1_ack_in == 1'b0) | (o_data_data_V_1_ack_in == 1'b0) | (1'b1 == ap_block_state4_io))) | ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0) & (1'b1 == 1'b1)));
+    ap_block_state2_io = ((ap_predicate_op14_write_state2 == 1'b1) & (o_data_V_data_V_1_ack_in == 1'b0));
 end
 
-assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state2_pp0_stage1_iter0 = ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state3_io = ((currentState_load_reg_263 == 1'd1) & (o_data_data_V_1_ack_in == 1'b0));
+    ap_block_state3_io = ((ap_predicate_op40_write_state3 == 1'b1) & (o_data_V_data_V_1_ack_in == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state3_pp0_stage0_iter1 = ((currentState_load_reg_263 == 1'd1) & (i_data_data_V_0_vld_out == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state4_io = ((ap_reg_pp0_iter1_currentState_load_reg_263 == 1'd1) & (o_data_data_V_1_ack_in == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state4_pp0_stage1_iter1 = ((o_data_last_V_1_ack_in == 1'b0) | (o_data_data_V_1_ack_in == 1'b0));
-end
-
-always @ (*) begin
-    ap_condition_459 = ((currentState_load_reg_263 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0));
-end
-
-always @ (*) begin
-    ap_condition_463 = ((ap_reg_pp0_iter1_currentState_load_reg_263 == 1'd1) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1));
+    ap_block_state3_pp0_stage0_iter2 = ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 always @ (*) begin
+    ap_predicate_op14_write_state2 = ((tmp_reg_154 == 1'd1) & (currentState_load_reg_150 == 1'd1));
+end
+
+always @ (*) begin
+    ap_predicate_op40_write_state3 = ((ap_reg_pp0_iter1_tmp_reg_154 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_150 == 1'd1));
+end
+
+always @ (*) begin
+    ap_predicate_op9_read_state1 = ((tmp_nbreadreq_fu_54_p4 == 1'd1) & (currentState == 1'd1));
+end
+
+always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign i_data_TREADY = i_data_last_V_0_state[1'd1];
+assign currentState_load_load_fu_88_p1 = currentState;
 
-assign i_data_data_V_0_ack_in = i_data_data_V_0_state[1'd1];
+assign o_data_TDATA = o_data_V_data_V_1_data_out;
 
-assign i_data_data_V_0_load_A = (i_data_data_V_0_state_cmp_full & ~i_data_data_V_0_sel_wr);
+assign o_data_TLAST = o_data_V_last_V_1_data_out;
 
-assign i_data_data_V_0_load_B = (i_data_data_V_0_state_cmp_full & i_data_data_V_0_sel_wr);
+assign o_data_TVALID = o_data_V_last_V_1_state[1'd0];
 
-assign i_data_data_V_0_sel = i_data_data_V_0_sel_rd;
+assign o_data_V_data_V_1_ack_in = o_data_V_data_V_1_state[1'd1];
 
-assign i_data_data_V_0_state_cmp_full = ((i_data_data_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+assign o_data_V_data_V_1_ack_out = o_data_TREADY;
 
-assign i_data_data_V_0_vld_in = i_data_TVALID;
+assign o_data_V_data_V_1_load_A = (o_data_V_data_V_1_state_cmp_full & ~o_data_V_data_V_1_sel_wr);
 
-assign i_data_data_V_0_vld_out = i_data_data_V_0_state[1'd0];
+assign o_data_V_data_V_1_load_B = (o_data_V_data_V_1_state_cmp_full & o_data_V_data_V_1_sel_wr);
 
-assign i_data_last_V_0_ack_in = i_data_last_V_0_state[1'd1];
+assign o_data_V_data_V_1_sel = o_data_V_data_V_1_sel_rd;
 
-assign i_data_last_V_0_load_A = (i_data_last_V_0_state_cmp_full & ~i_data_last_V_0_sel_wr);
+assign o_data_V_data_V_1_state_cmp_full = ((o_data_V_data_V_1_state != 2'd1) ? 1'b1 : 1'b0);
 
-assign i_data_last_V_0_load_B = (i_data_last_V_0_state_cmp_full & i_data_last_V_0_sel_wr);
+assign o_data_V_data_V_1_vld_out = o_data_V_data_V_1_state[1'd0];
 
-assign i_data_last_V_0_sel = i_data_last_V_0_sel_rd;
+assign o_data_V_last_V_1_ack_in = o_data_V_last_V_1_state[1'd1];
 
-assign i_data_last_V_0_state_cmp_full = ((i_data_last_V_0_state != 2'd1) ? 1'b1 : 1'b0);
+assign o_data_V_last_V_1_ack_out = o_data_TREADY;
 
-assign i_data_last_V_0_vld_in = i_data_TVALID;
+assign o_data_V_last_V_1_load_A = (o_data_V_last_V_1_state_cmp_full & ~o_data_V_last_V_1_sel_wr);
 
-assign i_data_last_V_0_vld_out = i_data_last_V_0_state[1'd0];
+assign o_data_V_last_V_1_load_B = (o_data_V_last_V_1_state_cmp_full & o_data_V_last_V_1_sel_wr);
 
-assign o_data_TDATA = o_data_data_V_1_data_out;
+assign o_data_V_last_V_1_sel = o_data_V_last_V_1_sel_rd;
 
-assign o_data_TLAST = o_data_last_V_1_data_out;
+assign o_data_V_last_V_1_state_cmp_full = ((o_data_V_last_V_1_state != 2'd1) ? 1'b1 : 1'b0);
 
-assign o_data_TVALID = o_data_last_V_1_state[1'd0];
+assign o_data_V_last_V_1_vld_out = o_data_V_last_V_1_state[1'd0];
 
-assign o_data_data_V_1_ack_in = o_data_data_V_1_state[1'd1];
+assign tmp_3_fu_126_p2 = (loadCount_V + 32'd1);
 
-assign o_data_data_V_1_ack_out = o_data_TREADY;
+assign tmp_5_fu_138_p2 = (phaseClass_V + 4'd1);
 
-assign o_data_data_V_1_load_A = (o_data_data_V_1_state_cmp_full & ~o_data_data_V_1_sel_wr);
-
-assign o_data_data_V_1_load_B = (o_data_data_V_1_state_cmp_full & o_data_data_V_1_sel_wr);
-
-assign o_data_data_V_1_sel = o_data_data_V_1_sel_rd;
-
-assign o_data_data_V_1_state_cmp_full = ((o_data_data_V_1_state != 2'd1) ? 1'b1 : 1'b0);
-
-assign o_data_data_V_1_vld_out = o_data_data_V_1_state[1'd0];
-
-assign o_data_last_V_1_ack_in = o_data_last_V_1_state[1'd1];
-
-assign o_data_last_V_1_ack_out = o_data_TREADY;
-
-assign o_data_last_V_1_load_A = (o_data_last_V_1_state_cmp_full & ~o_data_last_V_1_sel_wr);
-
-assign o_data_last_V_1_load_B = (o_data_last_V_1_state_cmp_full & o_data_last_V_1_sel_wr);
-
-assign o_data_last_V_1_sel = o_data_last_V_1_sel_rd;
-
-assign o_data_last_V_1_state_cmp_full = ((o_data_last_V_1_state != 2'd1) ? 1'b1 : 1'b0);
-
-assign o_data_last_V_1_vld_out = o_data_last_V_1_state[1'd0];
-
-assign tmp_4_fu_251_p2 = (loadCount_V + 32'd1);
-
-assign tmp_6_fu_217_p2 = (phaseClass_V + 4'd1);
+assign tmp_nbreadreq_fu_54_p4 = i_data_TVALID;
 
 endmodule //correlateTop

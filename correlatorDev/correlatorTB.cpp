@@ -6,8 +6,6 @@
 using namespace std;
 
 int main(){
-	rfnoc_axis streamArrayIn[256];
-	rfnoc_axis streamArrayOut[256];
 	corTransmit_t test;
 	cor_t test2;
 

@@ -29,7 +29,7 @@ struct phase{
 	cor_t phaseWindow[windowSize];
 };
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data);
+void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data);
 
  class correlate{
  public:
