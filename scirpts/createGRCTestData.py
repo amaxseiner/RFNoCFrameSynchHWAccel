@@ -2,7 +2,7 @@ import scipy
 import numpy as np
 import csv
 
-f= open("/home/alex/Documents/RFNoCFrameSynchHWAccel/scirpts/legitCorText.csv")
+f= open("/home/alex/Documents/RFNoCFrameSynchHWAccel/scirpts/out.csv")
 
 data = []
 
@@ -11,8 +11,8 @@ for line in f:
 
 datanp = np.asarray(data)
 
-datanp.astype(scipy.float32).tofile("test.log")
+datanp.astype(scipy.complex64).tofile("testMatchFilterInput.log")
 
-f = scipy.fromfile(open("/home/alex/Documents/RFNoCFrameSynchHWAccel/scirpts/correlatorTest.log"), dtype=scipy.float32)
+f = scipy.fromfile(open("/home/alex/Documents/RFNoCFrameSynchHWAccel/scirpts/test.log"), dtype=scipy.float32)
 for line in f:
     print line
