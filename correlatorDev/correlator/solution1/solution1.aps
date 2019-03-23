@@ -2,9 +2,6 @@
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
-    <clockList>
-        <clock default="false" name="default" period="10"/>
-    </clockList>
     <config>
         <schedule model="correlateTop"/>
         <config_rtl encoding="onehot" header="" prefix="" reset="state" reset_async="0" reset_level="high"/>
@@ -12,8 +9,7 @@
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
-            <Platform>xilinx/kintex7/kintex7</Platform>
-            <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
+            <Platform>xilinx/null/null</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -43,7 +39,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
+        <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -66,8 +62,12 @@
         <TargetInfo value="xc7k160t:fbg484:-1"/>
     </targetInfo>
     <libraryList>
-        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
-        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
+        <library name="DefaultPlatform" value="xilinx/null/null"/>
+        <library value="xilinx/kintex7/kintex7" name="DefaultPlatform"/>
+        <library value="xilinx/kintex7/kintex7_fpv6" name="DefaultPlatform"/>
     </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="5"/>
+    </clockList>
 </solution>
 

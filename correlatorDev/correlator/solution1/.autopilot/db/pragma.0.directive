@@ -180,6 +180,96 @@
 <directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
 <pragma name="UNROLL"/>
 </directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClass" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlator" label="">
+<pragma name="UNROLL"/>
+</directive>
 <directive functionLabel="" functionName="correlate::correlator" label="">
 <pragma name="UNROLL"/>
 </directive>

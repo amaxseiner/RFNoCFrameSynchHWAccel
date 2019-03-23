@@ -1,0 +1,2027 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlator'
+================================================================
+* Date:           Fri Mar 22 22:30:20 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        correlator
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.16|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    8|    8|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 9
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+* FSM state operations: 
+
+ <State 1>: 3.37ns
+ST_1: phaseClass_V_read (258)  [1/1] 0.00ns
+:0  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
+
+ST_1: StgValue_11 (259)  [1/1] 2.51ns  loc: correlator.cpp:255
+:1  switch i4 %phaseClass_V_read, label %.loopexit [
+    i4 0, label %.preheader653.0
+    i4 1, label %.preheader651.0
+    i4 2, label %.preheader649.0
+    i4 3, label %.preheader647.0
+    i4 4, label %.preheader645.0
+    i4 5, label %.preheader643.0
+    i4 6, label %.preheader641.0
+    i4 7, label %.preheader639.0
+    i4 -8, label %.preheader637.0
+    i4 -7, label %.preheader635.0
+    i4 -6, label %.preheader633.0
+    i4 -5, label %.preheader631.0
+    i4 -4, label %.preheader629.0
+    i4 -3, label %.preheader627.0
+    i4 -2, label %.preheader625.0
+    i4 -1, label %.preheader.0
+  ]
+
+ST_1: cor_phaseClass15_V_1 (261)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:0  %cor_phaseClass15_V_1 = load i32* @cor_phaseClass15_V_15, align 4
+
+ST_1: cor_phaseClass15_V_1_8 (264)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:3  %cor_phaseClass15_V_1_8 = load i32* @cor_phaseClass15_V_12, align 16
+
+ST_1: cor_phaseClass15_V_8 (268)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:7  %cor_phaseClass15_V_8 = load i32* @cor_phaseClass15_V_8, align 16
+
+ST_1: cor_phaseClass15_V_7 (269)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:8  %cor_phaseClass15_V_7 = load i32* @cor_phaseClass15_V_7, align 4
+
+ST_1: cor_phaseClass15_V_6 (270)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:9  %cor_phaseClass15_V_6 = load i32* @cor_phaseClass15_V_6, align 8
+
+ST_1: cor_phaseClass15_V_5 (271)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:10  %cor_phaseClass15_V_5 = load i32* @cor_phaseClass15_V_5, align 4
+
+ST_1: cor_phaseClass15_V_4 (272)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:11  %cor_phaseClass15_V_4 = load i32* @cor_phaseClass15_V_4, align 16
+
+ST_1: cor_phaseClass15_V_3 (273)  [1/1] 0.00ns
+.preheader.0:12  %cor_phaseClass15_V_3 = load i21* @cor_phaseClass15_V_3, align 4
+
+ST_1: extLd30 (274)  [1/1] 0.00ns
+.preheader.0:13  %extLd30 = sext i21 %cor_phaseClass15_V_3 to i32
+
+ST_1: tmp3 (277)  [1/1] 1.73ns  loc: correlator.cpp:410
+.preheader.0:16  %tmp3 = add i32 %cor_phaseClass15_V_7, %cor_phaseClass15_V_8
+
+ST_1: tmp4 (278)  [1/1] 1.73ns  loc: correlator.cpp:410
+.preheader.0:17  %tmp4 = add i32 %extLd30, %cor_phaseClass15_V_6
+
+ST_1: cor_phaseClass15_V_2 (281)  [1/1] 0.00ns
+.preheader.0:20  %cor_phaseClass15_V_2 = load i21* @cor_phaseClass15_V_2, align 4
+
+ST_1: extLd63_cast (282)  [1/1] 0.00ns
+.preheader.0:21  %extLd63_cast = sext i21 %cor_phaseClass15_V_2 to i23
+
+ST_1: cor_phaseClass15_V_1_11 (283)  [1/1] 0.00ns
+.preheader.0:22  %cor_phaseClass15_V_1_11 = load i21* @cor_phaseClass15_V_1, align 4
+
+ST_1: extLd45_cast (284)  [1/1] 0.00ns
+.preheader.0:23  %extLd45_cast = sext i21 %cor_phaseClass15_V_1_11 to i22
+
+ST_1: cor_phaseClass15_V_0 (285)  [1/1] 0.00ns
+.preheader.0:24  %cor_phaseClass15_V_0 = load i21* @cor_phaseClass15_V_0, align 4
+
+ST_1: extLd46_cast (286)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:25  %extLd46_cast = sext i21 %cor_phaseClass15_V_0 to i22
+
+ST_1: tmp6 (287)  [1/1] 1.73ns  loc: correlator.cpp:412
+.preheader.0:26  %tmp6 = add i32 %cor_phaseClass15_V_1, %cor_phaseClass15_V_1_8
+
+ST_1: tmp9 (290)  [1/1] 1.73ns  loc: correlator.cpp:412
+.preheader.0:29  %tmp9 = add i32 %cor_phaseClass15_V_4, %cor_phaseClass15_V_5
+
+ST_1: tmp11 (291)  [1/1] 1.69ns  loc: correlator.cpp:412
+.preheader.0:30  %tmp11 = add i22 %extLd46_cast, %extLd45_cast
+
+ST_1: tmp11_cast_cast (292)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:31  %tmp11_cast_cast = sext i22 %tmp11 to i23
+
+ST_1: tmp10 (293)  [1/1] 1.69ns  loc: correlator.cpp:412
+.preheader.0:32  %tmp10 = add i23 %extLd63_cast, %tmp11_cast_cast
+
+ST_1: cor_phaseClass14_V_1 (299)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:0  %cor_phaseClass14_V_1 = load i32* @cor_phaseClass14_V_15, align 4
+
+ST_1: cor_phaseClass14_V_1_8 (302)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:3  %cor_phaseClass14_V_1_8 = load i32* @cor_phaseClass14_V_12, align 16
+
+ST_1: cor_phaseClass14_V_8 (306)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:7  %cor_phaseClass14_V_8 = load i32* @cor_phaseClass14_V_8, align 16
+
+ST_1: cor_phaseClass14_V_7 (307)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:8  %cor_phaseClass14_V_7 = load i32* @cor_phaseClass14_V_7, align 4
+
+ST_1: cor_phaseClass14_V_6 (308)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:9  %cor_phaseClass14_V_6 = load i32* @cor_phaseClass14_V_6, align 8
+
+ST_1: cor_phaseClass14_V_5 (309)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:10  %cor_phaseClass14_V_5 = load i32* @cor_phaseClass14_V_5, align 4
+
+ST_1: cor_phaseClass14_V_4 (310)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:11  %cor_phaseClass14_V_4 = load i32* @cor_phaseClass14_V_4, align 16
+
+ST_1: cor_phaseClass14_V_3 (311)  [1/1] 0.00ns
+.preheader625.0:12  %cor_phaseClass14_V_3 = load i21* @cor_phaseClass14_V_3, align 4
+
+ST_1: extLd29 (312)  [1/1] 0.00ns
+.preheader625.0:13  %extLd29 = sext i21 %cor_phaseClass14_V_3 to i32
+
+ST_1: tmp15 (315)  [1/1] 1.73ns  loc: correlator.cpp:400
+.preheader625.0:16  %tmp15 = add i32 %cor_phaseClass14_V_7, %cor_phaseClass14_V_8
+
+ST_1: tmp16 (316)  [1/1] 1.73ns  loc: correlator.cpp:400
+.preheader625.0:17  %tmp16 = add i32 %extLd29, %cor_phaseClass14_V_6
+
+ST_1: cor_phaseClass14_V_2 (319)  [1/1] 0.00ns
+.preheader625.0:20  %cor_phaseClass14_V_2 = load i21* @cor_phaseClass14_V_2, align 4
+
+ST_1: extLd61_cast (320)  [1/1] 0.00ns
+.preheader625.0:21  %extLd61_cast = sext i21 %cor_phaseClass14_V_2 to i23
+
+ST_1: cor_phaseClass14_V_1_11 (321)  [1/1] 0.00ns
+.preheader625.0:22  %cor_phaseClass14_V_1_11 = load i21* @cor_phaseClass14_V_1, align 4
+
+ST_1: extLd43_cast (322)  [1/1] 0.00ns
+.preheader625.0:23  %extLd43_cast = sext i21 %cor_phaseClass14_V_1_11 to i22
+
+ST_1: cor_phaseClass14_V_0 (323)  [1/1] 0.00ns
+.preheader625.0:24  %cor_phaseClass14_V_0 = load i21* @cor_phaseClass14_V_0, align 4
+
+ST_1: extLd44_cast (324)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:25  %extLd44_cast = sext i21 %cor_phaseClass14_V_0 to i22
+
+ST_1: tmp18 (325)  [1/1] 1.73ns  loc: correlator.cpp:402
+.preheader625.0:26  %tmp18 = add i32 %cor_phaseClass14_V_1, %cor_phaseClass14_V_1_8
+
+ST_1: tmp21 (328)  [1/1] 1.73ns  loc: correlator.cpp:402
+.preheader625.0:29  %tmp21 = add i32 %cor_phaseClass14_V_4, %cor_phaseClass14_V_5
+
+ST_1: tmp23 (329)  [1/1] 1.69ns  loc: correlator.cpp:402
+.preheader625.0:30  %tmp23 = add i22 %extLd44_cast, %extLd43_cast
+
+ST_1: tmp23_cast_cast (330)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:31  %tmp23_cast_cast = sext i22 %tmp23 to i23
+
+ST_1: tmp22 (331)  [1/1] 1.69ns  loc: correlator.cpp:402
+.preheader625.0:32  %tmp22 = add i23 %extLd61_cast, %tmp23_cast_cast
+
+ST_1: cor_phaseClass13_V_1 (337)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:0  %cor_phaseClass13_V_1 = load i32* @cor_phaseClass13_V_15, align 4
+
+ST_1: cor_phaseClass13_V_1_8 (340)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:3  %cor_phaseClass13_V_1_8 = load i32* @cor_phaseClass13_V_12, align 16
+
+ST_1: cor_phaseClass13_V_8 (344)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:7  %cor_phaseClass13_V_8 = load i32* @cor_phaseClass13_V_8, align 16
+
+ST_1: cor_phaseClass13_V_7 (345)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:8  %cor_phaseClass13_V_7 = load i32* @cor_phaseClass13_V_7, align 4
+
+ST_1: cor_phaseClass13_V_6 (346)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:9  %cor_phaseClass13_V_6 = load i32* @cor_phaseClass13_V_6, align 8
+
+ST_1: cor_phaseClass13_V_5 (347)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:10  %cor_phaseClass13_V_5 = load i32* @cor_phaseClass13_V_5, align 4
+
+ST_1: cor_phaseClass13_V_4 (348)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:11  %cor_phaseClass13_V_4 = load i32* @cor_phaseClass13_V_4, align 16
+
+ST_1: cor_phaseClass13_V_3 (349)  [1/1] 0.00ns
+.preheader627.0:12  %cor_phaseClass13_V_3 = load i21* @cor_phaseClass13_V_3, align 4
+
+ST_1: extLd28 (350)  [1/1] 0.00ns
+.preheader627.0:13  %extLd28 = sext i21 %cor_phaseClass13_V_3 to i32
+
+ST_1: tmp27 (353)  [1/1] 1.73ns  loc: correlator.cpp:390
+.preheader627.0:16  %tmp27 = add i32 %cor_phaseClass13_V_7, %cor_phaseClass13_V_8
+
+ST_1: tmp28 (354)  [1/1] 1.73ns  loc: correlator.cpp:390
+.preheader627.0:17  %tmp28 = add i32 %extLd28, %cor_phaseClass13_V_6
+
+ST_1: cor_phaseClass13_V_2 (357)  [1/1] 0.00ns
+.preheader627.0:20  %cor_phaseClass13_V_2 = load i21* @cor_phaseClass13_V_2, align 4
+
+ST_1: extLd59_cast (358)  [1/1] 0.00ns
+.preheader627.0:21  %extLd59_cast = sext i21 %cor_phaseClass13_V_2 to i23
+
+ST_1: cor_phaseClass13_V_1_11 (359)  [1/1] 0.00ns
+.preheader627.0:22  %cor_phaseClass13_V_1_11 = load i21* @cor_phaseClass13_V_1, align 4
+
+ST_1: extLd41_cast (360)  [1/1] 0.00ns
+.preheader627.0:23  %extLd41_cast = sext i21 %cor_phaseClass13_V_1_11 to i22
+
+ST_1: cor_phaseClass13_V_0 (361)  [1/1] 0.00ns
+.preheader627.0:24  %cor_phaseClass13_V_0 = load i21* @cor_phaseClass13_V_0, align 4
+
+ST_1: extLd42_cast (362)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:25  %extLd42_cast = sext i21 %cor_phaseClass13_V_0 to i22
+
+ST_1: tmp30 (363)  [1/1] 1.73ns  loc: correlator.cpp:392
+.preheader627.0:26  %tmp30 = add i32 %cor_phaseClass13_V_1, %cor_phaseClass13_V_1_8
+
+ST_1: tmp33 (366)  [1/1] 1.73ns  loc: correlator.cpp:392
+.preheader627.0:29  %tmp33 = add i32 %cor_phaseClass13_V_4, %cor_phaseClass13_V_5
+
+ST_1: tmp35 (367)  [1/1] 1.69ns  loc: correlator.cpp:392
+.preheader627.0:30  %tmp35 = add i22 %extLd42_cast, %extLd41_cast
+
+ST_1: tmp35_cast_cast (368)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:31  %tmp35_cast_cast = sext i22 %tmp35 to i23
+
+ST_1: tmp34 (369)  [1/1] 1.69ns  loc: correlator.cpp:392
+.preheader627.0:32  %tmp34 = add i23 %extLd59_cast, %tmp35_cast_cast
+
+ST_1: cor_phaseClass12_V_1 (375)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:0  %cor_phaseClass12_V_1 = load i32* @cor_phaseClass12_V_15, align 4
+
+ST_1: cor_phaseClass12_V_1_8 (378)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:3  %cor_phaseClass12_V_1_8 = load i32* @cor_phaseClass12_V_12, align 16
+
+ST_1: cor_phaseClass12_V_8 (382)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:7  %cor_phaseClass12_V_8 = load i32* @cor_phaseClass12_V_8, align 16
+
+ST_1: cor_phaseClass12_V_7 (383)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:8  %cor_phaseClass12_V_7 = load i32* @cor_phaseClass12_V_7, align 4
+
+ST_1: cor_phaseClass12_V_6 (384)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:9  %cor_phaseClass12_V_6 = load i32* @cor_phaseClass12_V_6, align 8
+
+ST_1: cor_phaseClass12_V_5 (385)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:10  %cor_phaseClass12_V_5 = load i32* @cor_phaseClass12_V_5, align 4
+
+ST_1: cor_phaseClass12_V_4 (386)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:11  %cor_phaseClass12_V_4 = load i32* @cor_phaseClass12_V_4, align 16
+
+ST_1: cor_phaseClass12_V_3 (387)  [1/1] 0.00ns
+.preheader629.0:12  %cor_phaseClass12_V_3 = load i21* @cor_phaseClass12_V_3, align 4
+
+ST_1: extLd27 (388)  [1/1] 0.00ns
+.preheader629.0:13  %extLd27 = sext i21 %cor_phaseClass12_V_3 to i32
+
+ST_1: tmp39 (391)  [1/1] 1.73ns  loc: correlator.cpp:380
+.preheader629.0:16  %tmp39 = add i32 %cor_phaseClass12_V_7, %cor_phaseClass12_V_8
+
+ST_1: tmp40 (392)  [1/1] 1.73ns  loc: correlator.cpp:380
+.preheader629.0:17  %tmp40 = add i32 %extLd27, %cor_phaseClass12_V_6
+
+ST_1: cor_phaseClass12_V_2 (395)  [1/1] 0.00ns
+.preheader629.0:20  %cor_phaseClass12_V_2 = load i21* @cor_phaseClass12_V_2, align 4
+
+ST_1: extLd57_cast (396)  [1/1] 0.00ns
+.preheader629.0:21  %extLd57_cast = sext i21 %cor_phaseClass12_V_2 to i23
+
+ST_1: cor_phaseClass12_V_1_11 (397)  [1/1] 0.00ns
+.preheader629.0:22  %cor_phaseClass12_V_1_11 = load i21* @cor_phaseClass12_V_1, align 4
+
+ST_1: extLd39_cast (398)  [1/1] 0.00ns
+.preheader629.0:23  %extLd39_cast = sext i21 %cor_phaseClass12_V_1_11 to i22
+
+ST_1: cor_phaseClass12_V_0 (399)  [1/1] 0.00ns
+.preheader629.0:24  %cor_phaseClass12_V_0 = load i21* @cor_phaseClass12_V_0, align 4
+
+ST_1: extLd40_cast (400)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:25  %extLd40_cast = sext i21 %cor_phaseClass12_V_0 to i22
+
+ST_1: tmp42 (401)  [1/1] 1.73ns  loc: correlator.cpp:382
+.preheader629.0:26  %tmp42 = add i32 %cor_phaseClass12_V_1, %cor_phaseClass12_V_1_8
+
+ST_1: tmp45 (404)  [1/1] 1.73ns  loc: correlator.cpp:382
+.preheader629.0:29  %tmp45 = add i32 %cor_phaseClass12_V_4, %cor_phaseClass12_V_5
+
+ST_1: tmp47 (405)  [1/1] 1.69ns  loc: correlator.cpp:382
+.preheader629.0:30  %tmp47 = add i22 %extLd40_cast, %extLd39_cast
+
+ST_1: tmp47_cast_cast (406)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:31  %tmp47_cast_cast = sext i22 %tmp47 to i23
+
+ST_1: tmp46 (407)  [1/1] 1.69ns  loc: correlator.cpp:382
+.preheader629.0:32  %tmp46 = add i23 %extLd57_cast, %tmp47_cast_cast
+
+ST_1: cor_phaseClass11_V_1 (413)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:0  %cor_phaseClass11_V_1 = load i32* @cor_phaseClass11_V_15, align 4
+
+ST_1: cor_phaseClass11_V_1_8 (416)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:3  %cor_phaseClass11_V_1_8 = load i32* @cor_phaseClass11_V_12, align 16
+
+ST_1: cor_phaseClass11_V_8 (420)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:7  %cor_phaseClass11_V_8 = load i32* @cor_phaseClass11_V_8, align 16
+
+ST_1: cor_phaseClass11_V_7 (421)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:8  %cor_phaseClass11_V_7 = load i32* @cor_phaseClass11_V_7, align 4
+
+ST_1: cor_phaseClass11_V_6 (422)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:9  %cor_phaseClass11_V_6 = load i32* @cor_phaseClass11_V_6, align 8
+
+ST_1: cor_phaseClass11_V_5 (423)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:10  %cor_phaseClass11_V_5 = load i32* @cor_phaseClass11_V_5, align 4
+
+ST_1: cor_phaseClass11_V_4 (424)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:11  %cor_phaseClass11_V_4 = load i32* @cor_phaseClass11_V_4, align 16
+
+ST_1: cor_phaseClass11_V_3 (425)  [1/1] 0.00ns
+.preheader631.0:12  %cor_phaseClass11_V_3 = load i21* @cor_phaseClass11_V_3, align 4
+
+ST_1: extLd26 (426)  [1/1] 0.00ns
+.preheader631.0:13  %extLd26 = sext i21 %cor_phaseClass11_V_3 to i32
+
+ST_1: tmp51 (429)  [1/1] 1.73ns  loc: correlator.cpp:370
+.preheader631.0:16  %tmp51 = add i32 %cor_phaseClass11_V_7, %cor_phaseClass11_V_8
+
+ST_1: tmp52 (430)  [1/1] 1.73ns  loc: correlator.cpp:370
+.preheader631.0:17  %tmp52 = add i32 %extLd26, %cor_phaseClass11_V_6
+
+ST_1: cor_phaseClass11_V_2 (433)  [1/1] 0.00ns
+.preheader631.0:20  %cor_phaseClass11_V_2 = load i21* @cor_phaseClass11_V_2, align 4
+
+ST_1: extLd55_cast (434)  [1/1] 0.00ns
+.preheader631.0:21  %extLd55_cast = sext i21 %cor_phaseClass11_V_2 to i23
+
+ST_1: cor_phaseClass11_V_1_11 (435)  [1/1] 0.00ns
+.preheader631.0:22  %cor_phaseClass11_V_1_11 = load i21* @cor_phaseClass11_V_1, align 4
+
+ST_1: extLd37_cast (436)  [1/1] 0.00ns
+.preheader631.0:23  %extLd37_cast = sext i21 %cor_phaseClass11_V_1_11 to i22
+
+ST_1: cor_phaseClass11_V_0 (437)  [1/1] 0.00ns
+.preheader631.0:24  %cor_phaseClass11_V_0 = load i21* @cor_phaseClass11_V_0, align 4
+
+ST_1: extLd38_cast (438)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:25  %extLd38_cast = sext i21 %cor_phaseClass11_V_0 to i22
+
+ST_1: tmp54 (439)  [1/1] 1.73ns  loc: correlator.cpp:372
+.preheader631.0:26  %tmp54 = add i32 %cor_phaseClass11_V_1, %cor_phaseClass11_V_1_8
+
+ST_1: tmp57 (442)  [1/1] 1.73ns  loc: correlator.cpp:372
+.preheader631.0:29  %tmp57 = add i32 %cor_phaseClass11_V_4, %cor_phaseClass11_V_5
+
+ST_1: tmp59 (443)  [1/1] 1.69ns  loc: correlator.cpp:372
+.preheader631.0:30  %tmp59 = add i22 %extLd38_cast, %extLd37_cast
+
+ST_1: tmp59_cast_cast (444)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:31  %tmp59_cast_cast = sext i22 %tmp59 to i23
+
+ST_1: tmp58 (445)  [1/1] 1.69ns  loc: correlator.cpp:372
+.preheader631.0:32  %tmp58 = add i23 %extLd55_cast, %tmp59_cast_cast
+
+ST_1: cor_phaseClass10_V_1 (451)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:0  %cor_phaseClass10_V_1 = load i32* @cor_phaseClass10_V_15, align 4
+
+ST_1: cor_phaseClass10_V_1_8 (454)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:3  %cor_phaseClass10_V_1_8 = load i32* @cor_phaseClass10_V_12, align 16
+
+ST_1: cor_phaseClass10_V_8 (458)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:7  %cor_phaseClass10_V_8 = load i32* @cor_phaseClass10_V_8, align 16
+
+ST_1: cor_phaseClass10_V_7 (459)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:8  %cor_phaseClass10_V_7 = load i32* @cor_phaseClass10_V_7, align 4
+
+ST_1: cor_phaseClass10_V_6 (460)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:9  %cor_phaseClass10_V_6 = load i32* @cor_phaseClass10_V_6, align 8
+
+ST_1: cor_phaseClass10_V_5 (461)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:10  %cor_phaseClass10_V_5 = load i32* @cor_phaseClass10_V_5, align 4
+
+ST_1: cor_phaseClass10_V_4 (462)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:11  %cor_phaseClass10_V_4 = load i32* @cor_phaseClass10_V_4, align 16
+
+ST_1: cor_phaseClass10_V_3 (463)  [1/1] 0.00ns
+.preheader633.0:12  %cor_phaseClass10_V_3 = load i21* @cor_phaseClass10_V_3, align 4
+
+ST_1: extLd25 (464)  [1/1] 0.00ns
+.preheader633.0:13  %extLd25 = sext i21 %cor_phaseClass10_V_3 to i32
+
+ST_1: tmp63 (467)  [1/1] 1.73ns  loc: correlator.cpp:360
+.preheader633.0:16  %tmp63 = add i32 %cor_phaseClass10_V_7, %cor_phaseClass10_V_8
+
+ST_1: tmp64 (468)  [1/1] 1.73ns  loc: correlator.cpp:360
+.preheader633.0:17  %tmp64 = add i32 %extLd25, %cor_phaseClass10_V_6
+
+ST_1: cor_phaseClass10_V_2 (471)  [1/1] 0.00ns
+.preheader633.0:20  %cor_phaseClass10_V_2 = load i21* @cor_phaseClass10_V_2, align 4
+
+ST_1: extLd53_cast (472)  [1/1] 0.00ns
+.preheader633.0:21  %extLd53_cast = sext i21 %cor_phaseClass10_V_2 to i23
+
+ST_1: cor_phaseClass10_V_1_11 (473)  [1/1] 0.00ns
+.preheader633.0:22  %cor_phaseClass10_V_1_11 = load i21* @cor_phaseClass10_V_1, align 4
+
+ST_1: extLd35_cast (474)  [1/1] 0.00ns
+.preheader633.0:23  %extLd35_cast = sext i21 %cor_phaseClass10_V_1_11 to i22
+
+ST_1: cor_phaseClass10_V_0 (475)  [1/1] 0.00ns
+.preheader633.0:24  %cor_phaseClass10_V_0 = load i21* @cor_phaseClass10_V_0, align 4
+
+ST_1: extLd36_cast (476)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:25  %extLd36_cast = sext i21 %cor_phaseClass10_V_0 to i22
+
+ST_1: tmp66 (477)  [1/1] 1.73ns  loc: correlator.cpp:362
+.preheader633.0:26  %tmp66 = add i32 %cor_phaseClass10_V_1, %cor_phaseClass10_V_1_8
+
+ST_1: tmp69 (480)  [1/1] 1.73ns  loc: correlator.cpp:362
+.preheader633.0:29  %tmp69 = add i32 %cor_phaseClass10_V_4, %cor_phaseClass10_V_5
+
+ST_1: tmp71 (481)  [1/1] 1.69ns  loc: correlator.cpp:362
+.preheader633.0:30  %tmp71 = add i22 %extLd36_cast, %extLd35_cast
+
+ST_1: tmp71_cast_cast (482)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:31  %tmp71_cast_cast = sext i22 %tmp71 to i23
+
+ST_1: tmp70 (483)  [1/1] 1.69ns  loc: correlator.cpp:362
+.preheader633.0:32  %tmp70 = add i23 %extLd53_cast, %tmp71_cast_cast
+
+ST_1: cor_phaseClass9_V_15 (489)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:0  %cor_phaseClass9_V_15 = load i32* @cor_phaseClass9_V_15, align 4
+
+ST_1: cor_phaseClass9_V_12 (492)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:3  %cor_phaseClass9_V_12 = load i32* @cor_phaseClass9_V_12, align 16
+
+ST_1: cor_phaseClass9_V_8_s (496)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:7  %cor_phaseClass9_V_8_s = load i32* @cor_phaseClass9_V_8, align 16
+
+ST_1: cor_phaseClass9_V_7_s (497)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:8  %cor_phaseClass9_V_7_s = load i32* @cor_phaseClass9_V_7, align 4
+
+ST_1: cor_phaseClass9_V_6_s (498)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:9  %cor_phaseClass9_V_6_s = load i32* @cor_phaseClass9_V_6, align 8
+
+ST_1: cor_phaseClass9_V_5_s (499)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:10  %cor_phaseClass9_V_5_s = load i32* @cor_phaseClass9_V_5, align 4
+
+ST_1: cor_phaseClass9_V_4_s (500)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:11  %cor_phaseClass9_V_4_s = load i32* @cor_phaseClass9_V_4, align 16
+
+ST_1: cor_phaseClass9_V_3_s (501)  [1/1] 0.00ns
+.preheader635.0:12  %cor_phaseClass9_V_3_s = load i21* @cor_phaseClass9_V_3, align 4
+
+ST_1: extLd24 (502)  [1/1] 0.00ns
+.preheader635.0:13  %extLd24 = sext i21 %cor_phaseClass9_V_3_s to i32
+
+ST_1: tmp75 (505)  [1/1] 1.73ns  loc: correlator.cpp:350
+.preheader635.0:16  %tmp75 = add i32 %cor_phaseClass9_V_7_s, %cor_phaseClass9_V_8_s
+
+ST_1: tmp76 (506)  [1/1] 1.73ns  loc: correlator.cpp:350
+.preheader635.0:17  %tmp76 = add i32 %extLd24, %cor_phaseClass9_V_6_s
+
+ST_1: cor_phaseClass9_V_2_s (509)  [1/1] 0.00ns
+.preheader635.0:20  %cor_phaseClass9_V_2_s = load i21* @cor_phaseClass9_V_2, align 4
+
+ST_1: extLd51_cast (510)  [1/1] 0.00ns
+.preheader635.0:21  %extLd51_cast = sext i21 %cor_phaseClass9_V_2_s to i23
+
+ST_1: cor_phaseClass9_V_1_s (511)  [1/1] 0.00ns
+.preheader635.0:22  %cor_phaseClass9_V_1_s = load i21* @cor_phaseClass9_V_1, align 4
+
+ST_1: extLd33_cast (512)  [1/1] 0.00ns
+.preheader635.0:23  %extLd33_cast = sext i21 %cor_phaseClass9_V_1_s to i22
+
+ST_1: cor_phaseClass9_V_0_s (513)  [1/1] 0.00ns
+.preheader635.0:24  %cor_phaseClass9_V_0_s = load i21* @cor_phaseClass9_V_0, align 4
+
+ST_1: extLd34_cast (514)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:25  %extLd34_cast = sext i21 %cor_phaseClass9_V_0_s to i22
+
+ST_1: tmp78 (515)  [1/1] 1.73ns  loc: correlator.cpp:352
+.preheader635.0:26  %tmp78 = add i32 %cor_phaseClass9_V_15, %cor_phaseClass9_V_12
+
+ST_1: tmp81 (518)  [1/1] 1.73ns  loc: correlator.cpp:352
+.preheader635.0:29  %tmp81 = add i32 %cor_phaseClass9_V_4_s, %cor_phaseClass9_V_5_s
+
+ST_1: tmp83 (519)  [1/1] 1.69ns  loc: correlator.cpp:352
+.preheader635.0:30  %tmp83 = add i22 %extLd34_cast, %extLd33_cast
+
+ST_1: tmp83_cast_cast (520)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:31  %tmp83_cast_cast = sext i22 %tmp83 to i23
+
+ST_1: tmp82 (521)  [1/1] 1.69ns  loc: correlator.cpp:352
+.preheader635.0:32  %tmp82 = add i23 %extLd51_cast, %tmp83_cast_cast
+
+ST_1: cor_phaseClass8_V_15 (527)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:0  %cor_phaseClass8_V_15 = load i32* @cor_phaseClass8_V_15, align 4
+
+ST_1: cor_phaseClass8_V_12 (530)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:3  %cor_phaseClass8_V_12 = load i32* @cor_phaseClass8_V_12, align 16
+
+ST_1: cor_phaseClass8_V_8_s (534)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:7  %cor_phaseClass8_V_8_s = load i32* @cor_phaseClass8_V_8, align 16
+
+ST_1: cor_phaseClass8_V_7_s (535)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:8  %cor_phaseClass8_V_7_s = load i32* @cor_phaseClass8_V_7, align 4
+
+ST_1: cor_phaseClass8_V_6_s (536)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:9  %cor_phaseClass8_V_6_s = load i32* @cor_phaseClass8_V_6, align 8
+
+ST_1: cor_phaseClass8_V_5_s (537)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:10  %cor_phaseClass8_V_5_s = load i32* @cor_phaseClass8_V_5, align 4
+
+ST_1: cor_phaseClass8_V_4_s (538)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:11  %cor_phaseClass8_V_4_s = load i32* @cor_phaseClass8_V_4, align 16
+
+ST_1: cor_phaseClass8_V_3_s (539)  [1/1] 0.00ns
+.preheader637.0:12  %cor_phaseClass8_V_3_s = load i21* @cor_phaseClass8_V_3, align 4
+
+ST_1: extLd23 (540)  [1/1] 0.00ns
+.preheader637.0:13  %extLd23 = sext i21 %cor_phaseClass8_V_3_s to i32
+
+ST_1: tmp87 (543)  [1/1] 1.73ns  loc: correlator.cpp:340
+.preheader637.0:16  %tmp87 = add i32 %cor_phaseClass8_V_7_s, %cor_phaseClass8_V_8_s
+
+ST_1: tmp88 (544)  [1/1] 1.73ns  loc: correlator.cpp:340
+.preheader637.0:17  %tmp88 = add i32 %extLd23, %cor_phaseClass8_V_6_s
+
+ST_1: cor_phaseClass8_V_2_s (547)  [1/1] 0.00ns
+.preheader637.0:20  %cor_phaseClass8_V_2_s = load i21* @cor_phaseClass8_V_2, align 4
+
+ST_1: extLd49_cast (548)  [1/1] 0.00ns
+.preheader637.0:21  %extLd49_cast = sext i21 %cor_phaseClass8_V_2_s to i23
+
+ST_1: cor_phaseClass8_V_1_s (549)  [1/1] 0.00ns
+.preheader637.0:22  %cor_phaseClass8_V_1_s = load i21* @cor_phaseClass8_V_1, align 4
+
+ST_1: extLd31_cast (550)  [1/1] 0.00ns
+.preheader637.0:23  %extLd31_cast = sext i21 %cor_phaseClass8_V_1_s to i22
+
+ST_1: cor_phaseClass8_V_0_s (551)  [1/1] 0.00ns
+.preheader637.0:24  %cor_phaseClass8_V_0_s = load i21* @cor_phaseClass8_V_0, align 4
+
+ST_1: extLd32_cast (552)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:25  %extLd32_cast = sext i21 %cor_phaseClass8_V_0_s to i22
+
+ST_1: tmp90 (553)  [1/1] 1.73ns  loc: correlator.cpp:342
+.preheader637.0:26  %tmp90 = add i32 %cor_phaseClass8_V_15, %cor_phaseClass8_V_12
+
+ST_1: tmp93 (556)  [1/1] 1.73ns  loc: correlator.cpp:342
+.preheader637.0:29  %tmp93 = add i32 %cor_phaseClass8_V_4_s, %cor_phaseClass8_V_5_s
+
+ST_1: tmp95 (557)  [1/1] 1.69ns  loc: correlator.cpp:342
+.preheader637.0:30  %tmp95 = add i22 %extLd32_cast, %extLd31_cast
+
+ST_1: tmp95_cast_cast (558)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:31  %tmp95_cast_cast = sext i22 %tmp95 to i23
+
+ST_1: tmp94 (559)  [1/1] 1.69ns  loc: correlator.cpp:342
+.preheader637.0:32  %tmp94 = add i23 %extLd49_cast, %tmp95_cast_cast
+
+ST_1: cor_phaseClass7_V_15 (565)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:0  %cor_phaseClass7_V_15 = load i32* @cor_phaseClass7_V_15, align 4
+
+ST_1: cor_phaseClass7_V_12 (568)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:3  %cor_phaseClass7_V_12 = load i32* @cor_phaseClass7_V_12, align 16
+
+ST_1: cor_phaseClass7_V_8_s (572)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:7  %cor_phaseClass7_V_8_s = load i32* @cor_phaseClass7_V_8, align 16
+
+ST_1: cor_phaseClass7_V_7_s (573)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:8  %cor_phaseClass7_V_7_s = load i32* @cor_phaseClass7_V_7, align 4
+
+ST_1: cor_phaseClass7_V_6_s (574)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:9  %cor_phaseClass7_V_6_s = load i32* @cor_phaseClass7_V_6, align 8
+
+ST_1: cor_phaseClass7_V_5_s (575)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:10  %cor_phaseClass7_V_5_s = load i32* @cor_phaseClass7_V_5, align 4
+
+ST_1: cor_phaseClass7_V_4_s (576)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:11  %cor_phaseClass7_V_4_s = load i32* @cor_phaseClass7_V_4, align 16
+
+ST_1: cor_phaseClass7_V_3_s (577)  [1/1] 0.00ns
+.preheader639.0:12  %cor_phaseClass7_V_3_s = load i21* @cor_phaseClass7_V_3, align 4
+
+ST_1: extLd22 (578)  [1/1] 0.00ns
+.preheader639.0:13  %extLd22 = sext i21 %cor_phaseClass7_V_3_s to i32
+
+ST_1: tmp99 (581)  [1/1] 1.73ns  loc: correlator.cpp:330
+.preheader639.0:16  %tmp99 = add i32 %cor_phaseClass7_V_7_s, %cor_phaseClass7_V_8_s
+
+ST_1: tmp100 (582)  [1/1] 1.73ns  loc: correlator.cpp:330
+.preheader639.0:17  %tmp100 = add i32 %extLd22, %cor_phaseClass7_V_6_s
+
+ST_1: cor_phaseClass7_V_2_s (585)  [1/1] 0.00ns
+.preheader639.0:20  %cor_phaseClass7_V_2_s = load i21* @cor_phaseClass7_V_2, align 4
+
+ST_1: extLd47_cast (586)  [1/1] 0.00ns
+.preheader639.0:21  %extLd47_cast = sext i21 %cor_phaseClass7_V_2_s to i23
+
+ST_1: cor_phaseClass7_V_1_s (587)  [1/1] 0.00ns
+.preheader639.0:22  %cor_phaseClass7_V_1_s = load i21* @cor_phaseClass7_V_1, align 4
+
+ST_1: extLd29_cast (588)  [1/1] 0.00ns
+.preheader639.0:23  %extLd29_cast = sext i21 %cor_phaseClass7_V_1_s to i22
+
+ST_1: cor_phaseClass7_V_0_s (589)  [1/1] 0.00ns
+.preheader639.0:24  %cor_phaseClass7_V_0_s = load i21* @cor_phaseClass7_V_0, align 4
+
+ST_1: extLd30_cast (590)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:25  %extLd30_cast = sext i21 %cor_phaseClass7_V_0_s to i22
+
+ST_1: tmp102 (591)  [1/1] 1.73ns  loc: correlator.cpp:332
+.preheader639.0:26  %tmp102 = add i32 %cor_phaseClass7_V_15, %cor_phaseClass7_V_12
+
+ST_1: tmp105 (594)  [1/1] 1.73ns  loc: correlator.cpp:332
+.preheader639.0:29  %tmp105 = add i32 %cor_phaseClass7_V_4_s, %cor_phaseClass7_V_5_s
+
+ST_1: tmp107 (595)  [1/1] 1.69ns  loc: correlator.cpp:332
+.preheader639.0:30  %tmp107 = add i22 %extLd30_cast, %extLd29_cast
+
+ST_1: tmp107_cast_cast (596)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:31  %tmp107_cast_cast = sext i22 %tmp107 to i23
+
+ST_1: tmp106 (597)  [1/1] 1.69ns  loc: correlator.cpp:332
+.preheader639.0:32  %tmp106 = add i23 %extLd47_cast, %tmp107_cast_cast
+
+ST_1: cor_phaseClass6_V_15 (603)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:0  %cor_phaseClass6_V_15 = load i32* @cor_phaseClass6_V_15, align 4
+
+ST_1: cor_phaseClass6_V_12 (606)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:3  %cor_phaseClass6_V_12 = load i32* @cor_phaseClass6_V_12, align 16
+
+ST_1: cor_phaseClass6_V_8_s (610)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:7  %cor_phaseClass6_V_8_s = load i32* @cor_phaseClass6_V_8, align 16
+
+ST_1: cor_phaseClass6_V_7_s (611)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:8  %cor_phaseClass6_V_7_s = load i32* @cor_phaseClass6_V_7, align 4
+
+ST_1: cor_phaseClass6_V_6_s (612)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:9  %cor_phaseClass6_V_6_s = load i32* @cor_phaseClass6_V_6, align 8
+
+ST_1: cor_phaseClass6_V_5_s (613)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:10  %cor_phaseClass6_V_5_s = load i32* @cor_phaseClass6_V_5, align 4
+
+ST_1: cor_phaseClass6_V_4_s (614)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:11  %cor_phaseClass6_V_4_s = load i32* @cor_phaseClass6_V_4, align 16
+
+ST_1: cor_phaseClass6_V_3_s (615)  [1/1] 0.00ns
+.preheader641.0:12  %cor_phaseClass6_V_3_s = load i21* @cor_phaseClass6_V_3, align 4
+
+ST_1: extLd21 (616)  [1/1] 0.00ns
+.preheader641.0:13  %extLd21 = sext i21 %cor_phaseClass6_V_3_s to i32
+
+ST_1: tmp111 (619)  [1/1] 1.73ns  loc: correlator.cpp:320
+.preheader641.0:16  %tmp111 = add i32 %cor_phaseClass6_V_7_s, %cor_phaseClass6_V_8_s
+
+ST_1: tmp112 (620)  [1/1] 1.73ns  loc: correlator.cpp:320
+.preheader641.0:17  %tmp112 = add i32 %extLd21, %cor_phaseClass6_V_6_s
+
+ST_1: cor_phaseClass6_V_2_s (623)  [1/1] 0.00ns
+.preheader641.0:20  %cor_phaseClass6_V_2_s = load i21* @cor_phaseClass6_V_2, align 4
+
+ST_1: extLd14_cast (624)  [1/1] 0.00ns
+.preheader641.0:21  %extLd14_cast = sext i21 %cor_phaseClass6_V_2_s to i23
+
+ST_1: cor_phaseClass6_V_1_s (625)  [1/1] 0.00ns
+.preheader641.0:22  %cor_phaseClass6_V_1_s = load i21* @cor_phaseClass6_V_1, align 4
+
+ST_1: extLd27_cast (626)  [1/1] 0.00ns
+.preheader641.0:23  %extLd27_cast = sext i21 %cor_phaseClass6_V_1_s to i22
+
+ST_1: cor_phaseClass6_V_0_s (627)  [1/1] 0.00ns
+.preheader641.0:24  %cor_phaseClass6_V_0_s = load i21* @cor_phaseClass6_V_0, align 4
+
+ST_1: extLd28_cast (628)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:25  %extLd28_cast = sext i21 %cor_phaseClass6_V_0_s to i22
+
+ST_1: tmp114 (629)  [1/1] 1.73ns  loc: correlator.cpp:322
+.preheader641.0:26  %tmp114 = add i32 %cor_phaseClass6_V_15, %cor_phaseClass6_V_12
+
+ST_1: tmp117 (632)  [1/1] 1.73ns  loc: correlator.cpp:322
+.preheader641.0:29  %tmp117 = add i32 %cor_phaseClass6_V_4_s, %cor_phaseClass6_V_5_s
+
+ST_1: tmp119 (633)  [1/1] 1.69ns  loc: correlator.cpp:322
+.preheader641.0:30  %tmp119 = add i22 %extLd28_cast, %extLd27_cast
+
+ST_1: tmp119_cast_cast (634)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:31  %tmp119_cast_cast = sext i22 %tmp119 to i23
+
+ST_1: tmp118 (635)  [1/1] 1.69ns  loc: correlator.cpp:322
+.preheader641.0:32  %tmp118 = add i23 %extLd14_cast, %tmp119_cast_cast
+
+ST_1: cor_phaseClass5_V_15 (641)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:0  %cor_phaseClass5_V_15 = load i32* @cor_phaseClass5_V_15, align 4
+
+ST_1: cor_phaseClass5_V_12 (644)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:3  %cor_phaseClass5_V_12 = load i32* @cor_phaseClass5_V_12, align 16
+
+ST_1: cor_phaseClass5_V_8_s (648)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:7  %cor_phaseClass5_V_8_s = load i32* @cor_phaseClass5_V_8, align 16
+
+ST_1: cor_phaseClass5_V_7_s (649)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:8  %cor_phaseClass5_V_7_s = load i32* @cor_phaseClass5_V_7, align 4
+
+ST_1: cor_phaseClass5_V_6_s (650)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:9  %cor_phaseClass5_V_6_s = load i32* @cor_phaseClass5_V_6, align 8
+
+ST_1: cor_phaseClass5_V_5_s (651)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:10  %cor_phaseClass5_V_5_s = load i32* @cor_phaseClass5_V_5, align 4
+
+ST_1: cor_phaseClass5_V_4_s (652)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:11  %cor_phaseClass5_V_4_s = load i32* @cor_phaseClass5_V_4, align 16
+
+ST_1: cor_phaseClass5_V_3_s (653)  [1/1] 0.00ns
+.preheader643.0:12  %cor_phaseClass5_V_3_s = load i21* @cor_phaseClass5_V_3, align 4
+
+ST_1: extLd20 (654)  [1/1] 0.00ns
+.preheader643.0:13  %extLd20 = sext i21 %cor_phaseClass5_V_3_s to i32
+
+ST_1: tmp123 (657)  [1/1] 1.73ns  loc: correlator.cpp:310
+.preheader643.0:16  %tmp123 = add i32 %cor_phaseClass5_V_7_s, %cor_phaseClass5_V_8_s
+
+ST_1: tmp124 (658)  [1/1] 1.73ns  loc: correlator.cpp:310
+.preheader643.0:17  %tmp124 = add i32 %extLd20, %cor_phaseClass5_V_6_s
+
+ST_1: cor_phaseClass5_V_2_s (661)  [1/1] 0.00ns
+.preheader643.0:20  %cor_phaseClass5_V_2_s = load i21* @cor_phaseClass5_V_2, align 4
+
+ST_1: extLd12_cast (662)  [1/1] 0.00ns
+.preheader643.0:21  %extLd12_cast = sext i21 %cor_phaseClass5_V_2_s to i23
+
+ST_1: cor_phaseClass5_V_1_s (663)  [1/1] 0.00ns
+.preheader643.0:22  %cor_phaseClass5_V_1_s = load i21* @cor_phaseClass5_V_1, align 4
+
+ST_1: extLd25_cast (664)  [1/1] 0.00ns
+.preheader643.0:23  %extLd25_cast = sext i21 %cor_phaseClass5_V_1_s to i22
+
+ST_1: cor_phaseClass5_V_0_s (665)  [1/1] 0.00ns
+.preheader643.0:24  %cor_phaseClass5_V_0_s = load i21* @cor_phaseClass5_V_0, align 4
+
+ST_1: extLd26_cast (666)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:25  %extLd26_cast = sext i21 %cor_phaseClass5_V_0_s to i22
+
+ST_1: tmp126 (667)  [1/1] 1.73ns  loc: correlator.cpp:312
+.preheader643.0:26  %tmp126 = add i32 %cor_phaseClass5_V_15, %cor_phaseClass5_V_12
+
+ST_1: tmp129 (670)  [1/1] 1.73ns  loc: correlator.cpp:312
+.preheader643.0:29  %tmp129 = add i32 %cor_phaseClass5_V_4_s, %cor_phaseClass5_V_5_s
+
+ST_1: tmp131 (671)  [1/1] 1.69ns  loc: correlator.cpp:312
+.preheader643.0:30  %tmp131 = add i22 %extLd26_cast, %extLd25_cast
+
+ST_1: tmp131_cast_cast (672)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:31  %tmp131_cast_cast = sext i22 %tmp131 to i23
+
+ST_1: tmp130 (673)  [1/1] 1.69ns  loc: correlator.cpp:312
+.preheader643.0:32  %tmp130 = add i23 %extLd12_cast, %tmp131_cast_cast
+
+ST_1: cor_phaseClass4_V_15 (679)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:0  %cor_phaseClass4_V_15 = load i32* @cor_phaseClass4_V_15, align 4
+
+ST_1: cor_phaseClass4_V_12 (682)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:3  %cor_phaseClass4_V_12 = load i32* @cor_phaseClass4_V_12, align 16
+
+ST_1: cor_phaseClass4_V_8_s (686)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:7  %cor_phaseClass4_V_8_s = load i32* @cor_phaseClass4_V_8, align 16
+
+ST_1: cor_phaseClass4_V_7_s (687)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:8  %cor_phaseClass4_V_7_s = load i32* @cor_phaseClass4_V_7, align 4
+
+ST_1: cor_phaseClass4_V_6_s (688)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:9  %cor_phaseClass4_V_6_s = load i32* @cor_phaseClass4_V_6, align 8
+
+ST_1: cor_phaseClass4_V_5_s (689)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:10  %cor_phaseClass4_V_5_s = load i32* @cor_phaseClass4_V_5, align 4
+
+ST_1: cor_phaseClass4_V_4_s (690)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:11  %cor_phaseClass4_V_4_s = load i32* @cor_phaseClass4_V_4, align 16
+
+ST_1: cor_phaseClass4_V_3_s (691)  [1/1] 0.00ns
+.preheader645.0:12  %cor_phaseClass4_V_3_s = load i21* @cor_phaseClass4_V_3, align 4
+
+ST_1: extLd19 (692)  [1/1] 0.00ns
+.preheader645.0:13  %extLd19 = sext i21 %cor_phaseClass4_V_3_s to i32
+
+ST_1: tmp135 (695)  [1/1] 1.73ns  loc: correlator.cpp:300
+.preheader645.0:16  %tmp135 = add i32 %cor_phaseClass4_V_7_s, %cor_phaseClass4_V_8_s
+
+ST_1: tmp136 (696)  [1/1] 1.73ns  loc: correlator.cpp:300
+.preheader645.0:17  %tmp136 = add i32 %extLd19, %cor_phaseClass4_V_6_s
+
+ST_1: cor_phaseClass4_V_2_s (699)  [1/1] 0.00ns
+.preheader645.0:20  %cor_phaseClass4_V_2_s = load i21* @cor_phaseClass4_V_2, align 4
+
+ST_1: extLd10_cast (700)  [1/1] 0.00ns
+.preheader645.0:21  %extLd10_cast = sext i21 %cor_phaseClass4_V_2_s to i23
+
+ST_1: cor_phaseClass4_V_1_s (701)  [1/1] 0.00ns
+.preheader645.0:22  %cor_phaseClass4_V_1_s = load i21* @cor_phaseClass4_V_1, align 4
+
+ST_1: extLd23_cast (702)  [1/1] 0.00ns
+.preheader645.0:23  %extLd23_cast = sext i21 %cor_phaseClass4_V_1_s to i22
+
+ST_1: cor_phaseClass4_V_0_s (703)  [1/1] 0.00ns
+.preheader645.0:24  %cor_phaseClass4_V_0_s = load i21* @cor_phaseClass4_V_0, align 4
+
+ST_1: extLd24_cast (704)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:25  %extLd24_cast = sext i21 %cor_phaseClass4_V_0_s to i22
+
+ST_1: tmp138 (705)  [1/1] 1.73ns  loc: correlator.cpp:302
+.preheader645.0:26  %tmp138 = add i32 %cor_phaseClass4_V_15, %cor_phaseClass4_V_12
+
+ST_1: tmp141 (708)  [1/1] 1.73ns  loc: correlator.cpp:302
+.preheader645.0:29  %tmp141 = add i32 %cor_phaseClass4_V_4_s, %cor_phaseClass4_V_5_s
+
+ST_1: tmp143 (709)  [1/1] 1.69ns  loc: correlator.cpp:302
+.preheader645.0:30  %tmp143 = add i22 %extLd24_cast, %extLd23_cast
+
+ST_1: tmp143_cast_cast (710)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:31  %tmp143_cast_cast = sext i22 %tmp143 to i23
+
+ST_1: tmp142 (711)  [1/1] 1.69ns  loc: correlator.cpp:302
+.preheader645.0:32  %tmp142 = add i23 %extLd10_cast, %tmp143_cast_cast
+
+ST_1: cor_phaseClass3_V_15 (717)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:0  %cor_phaseClass3_V_15 = load i32* @cor_phaseClass3_V_15, align 4
+
+ST_1: cor_phaseClass3_V_12 (720)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:3  %cor_phaseClass3_V_12 = load i32* @cor_phaseClass3_V_12, align 16
+
+ST_1: cor_phaseClass3_V_8_s (724)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:7  %cor_phaseClass3_V_8_s = load i32* @cor_phaseClass3_V_8, align 16
+
+ST_1: cor_phaseClass3_V_7_s (725)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:8  %cor_phaseClass3_V_7_s = load i32* @cor_phaseClass3_V_7, align 4
+
+ST_1: cor_phaseClass3_V_6_s (726)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:9  %cor_phaseClass3_V_6_s = load i32* @cor_phaseClass3_V_6, align 8
+
+ST_1: cor_phaseClass3_V_5_s (727)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:10  %cor_phaseClass3_V_5_s = load i32* @cor_phaseClass3_V_5, align 4
+
+ST_1: cor_phaseClass3_V_4_s (728)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:11  %cor_phaseClass3_V_4_s = load i32* @cor_phaseClass3_V_4, align 16
+
+ST_1: cor_phaseClass3_V_3_s (729)  [1/1] 0.00ns
+.preheader647.0:12  %cor_phaseClass3_V_3_s = load i21* @cor_phaseClass3_V_3, align 4
+
+ST_1: extLd18 (730)  [1/1] 0.00ns
+.preheader647.0:13  %extLd18 = sext i21 %cor_phaseClass3_V_3_s to i32
+
+ST_1: tmp147 (733)  [1/1] 1.73ns  loc: correlator.cpp:290
+.preheader647.0:16  %tmp147 = add i32 %cor_phaseClass3_V_7_s, %cor_phaseClass3_V_8_s
+
+ST_1: tmp148 (734)  [1/1] 1.73ns  loc: correlator.cpp:290
+.preheader647.0:17  %tmp148 = add i32 %extLd18, %cor_phaseClass3_V_6_s
+
+ST_1: cor_phaseClass3_V_2_s (737)  [1/1] 0.00ns
+.preheader647.0:20  %cor_phaseClass3_V_2_s = load i21* @cor_phaseClass3_V_2, align 4
+
+ST_1: extLd8_cast (738)  [1/1] 0.00ns
+.preheader647.0:21  %extLd8_cast = sext i21 %cor_phaseClass3_V_2_s to i23
+
+ST_1: cor_phaseClass3_V_1_s (739)  [1/1] 0.00ns
+.preheader647.0:22  %cor_phaseClass3_V_1_s = load i21* @cor_phaseClass3_V_1, align 4
+
+ST_1: extLd21_cast (740)  [1/1] 0.00ns
+.preheader647.0:23  %extLd21_cast = sext i21 %cor_phaseClass3_V_1_s to i22
+
+ST_1: cor_phaseClass3_V_0_s (741)  [1/1] 0.00ns
+.preheader647.0:24  %cor_phaseClass3_V_0_s = load i21* @cor_phaseClass3_V_0, align 4
+
+ST_1: extLd22_cast (742)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:25  %extLd22_cast = sext i21 %cor_phaseClass3_V_0_s to i22
+
+ST_1: tmp150 (743)  [1/1] 1.73ns  loc: correlator.cpp:292
+.preheader647.0:26  %tmp150 = add i32 %cor_phaseClass3_V_15, %cor_phaseClass3_V_12
+
+ST_1: tmp153 (746)  [1/1] 1.73ns  loc: correlator.cpp:292
+.preheader647.0:29  %tmp153 = add i32 %cor_phaseClass3_V_4_s, %cor_phaseClass3_V_5_s
+
+ST_1: tmp155 (747)  [1/1] 1.69ns  loc: correlator.cpp:292
+.preheader647.0:30  %tmp155 = add i22 %extLd22_cast, %extLd21_cast
+
+ST_1: tmp155_cast_cast (748)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:31  %tmp155_cast_cast = sext i22 %tmp155 to i23
+
+ST_1: tmp154 (749)  [1/1] 1.69ns  loc: correlator.cpp:292
+.preheader647.0:32  %tmp154 = add i23 %extLd8_cast, %tmp155_cast_cast
+
+ST_1: cor_phaseClass2_V_15 (755)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:0  %cor_phaseClass2_V_15 = load i32* @cor_phaseClass2_V_15, align 4
+
+ST_1: cor_phaseClass2_V_12 (758)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:3  %cor_phaseClass2_V_12 = load i32* @cor_phaseClass2_V_12, align 16
+
+ST_1: cor_phaseClass2_V_8_s (762)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:7  %cor_phaseClass2_V_8_s = load i32* @cor_phaseClass2_V_8, align 16
+
+ST_1: cor_phaseClass2_V_7_s (763)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:8  %cor_phaseClass2_V_7_s = load i32* @cor_phaseClass2_V_7, align 4
+
+ST_1: cor_phaseClass2_V_6_s (764)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:9  %cor_phaseClass2_V_6_s = load i32* @cor_phaseClass2_V_6, align 8
+
+ST_1: cor_phaseClass2_V_5_s (765)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:10  %cor_phaseClass2_V_5_s = load i32* @cor_phaseClass2_V_5, align 4
+
+ST_1: cor_phaseClass2_V_4_s (766)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:11  %cor_phaseClass2_V_4_s = load i32* @cor_phaseClass2_V_4, align 16
+
+ST_1: cor_phaseClass2_V_3_s (767)  [1/1] 0.00ns
+.preheader649.0:12  %cor_phaseClass2_V_3_s = load i21* @cor_phaseClass2_V_3, align 4
+
+ST_1: extLd17 (768)  [1/1] 0.00ns
+.preheader649.0:13  %extLd17 = sext i21 %cor_phaseClass2_V_3_s to i32
+
+ST_1: tmp159 (771)  [1/1] 1.73ns  loc: correlator.cpp:280
+.preheader649.0:16  %tmp159 = add i32 %cor_phaseClass2_V_7_s, %cor_phaseClass2_V_8_s
+
+ST_1: tmp160 (772)  [1/1] 1.73ns  loc: correlator.cpp:280
+.preheader649.0:17  %tmp160 = add i32 %extLd17, %cor_phaseClass2_V_6_s
+
+ST_1: cor_phaseClass2_V_2_s (775)  [1/1] 0.00ns
+.preheader649.0:20  %cor_phaseClass2_V_2_s = load i21* @cor_phaseClass2_V_2, align 4
+
+ST_1: extLd6_cast (776)  [1/1] 0.00ns
+.preheader649.0:21  %extLd6_cast = sext i21 %cor_phaseClass2_V_2_s to i23
+
+ST_1: cor_phaseClass2_V_1_s (777)  [1/1] 0.00ns
+.preheader649.0:22  %cor_phaseClass2_V_1_s = load i21* @cor_phaseClass2_V_1, align 4
+
+ST_1: extLd19_cast (778)  [1/1] 0.00ns
+.preheader649.0:23  %extLd19_cast = sext i21 %cor_phaseClass2_V_1_s to i22
+
+ST_1: cor_phaseClass2_V_0_s (779)  [1/1] 0.00ns
+.preheader649.0:24  %cor_phaseClass2_V_0_s = load i21* @cor_phaseClass2_V_0, align 4
+
+ST_1: extLd20_cast (780)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:25  %extLd20_cast = sext i21 %cor_phaseClass2_V_0_s to i22
+
+ST_1: tmp162 (781)  [1/1] 1.73ns  loc: correlator.cpp:282
+.preheader649.0:26  %tmp162 = add i32 %cor_phaseClass2_V_15, %cor_phaseClass2_V_12
+
+ST_1: tmp165 (784)  [1/1] 1.73ns  loc: correlator.cpp:282
+.preheader649.0:29  %tmp165 = add i32 %cor_phaseClass2_V_4_s, %cor_phaseClass2_V_5_s
+
+ST_1: tmp167 (785)  [1/1] 1.69ns  loc: correlator.cpp:282
+.preheader649.0:30  %tmp167 = add i22 %extLd20_cast, %extLd19_cast
+
+ST_1: tmp167_cast_cast (786)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:31  %tmp167_cast_cast = sext i22 %tmp167 to i23
+
+ST_1: tmp166 (787)  [1/1] 1.69ns  loc: correlator.cpp:282
+.preheader649.0:32  %tmp166 = add i23 %extLd6_cast, %tmp167_cast_cast
+
+ST_1: cor_phaseClass1_V_15 (793)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:0  %cor_phaseClass1_V_15 = load i32* @cor_phaseClass1_V_15, align 4
+
+ST_1: cor_phaseClass1_V_12 (796)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:3  %cor_phaseClass1_V_12 = load i32* @cor_phaseClass1_V_12, align 16
+
+ST_1: cor_phaseClass1_V_8_s (800)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:7  %cor_phaseClass1_V_8_s = load i32* @cor_phaseClass1_V_8, align 16
+
+ST_1: cor_phaseClass1_V_7_s (801)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:8  %cor_phaseClass1_V_7_s = load i32* @cor_phaseClass1_V_7, align 4
+
+ST_1: cor_phaseClass1_V_6_s (802)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:9  %cor_phaseClass1_V_6_s = load i32* @cor_phaseClass1_V_6, align 8
+
+ST_1: cor_phaseClass1_V_5_s (803)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:10  %cor_phaseClass1_V_5_s = load i32* @cor_phaseClass1_V_5, align 4
+
+ST_1: cor_phaseClass1_V_4_s (804)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:11  %cor_phaseClass1_V_4_s = load i32* @cor_phaseClass1_V_4, align 16
+
+ST_1: cor_phaseClass1_V_3_s (805)  [1/1] 0.00ns
+.preheader651.0:12  %cor_phaseClass1_V_3_s = load i21* @cor_phaseClass1_V_3, align 4
+
+ST_1: extLd16 (806)  [1/1] 0.00ns
+.preheader651.0:13  %extLd16 = sext i21 %cor_phaseClass1_V_3_s to i32
+
+ST_1: tmp171 (809)  [1/1] 1.73ns  loc: correlator.cpp:270
+.preheader651.0:16  %tmp171 = add i32 %cor_phaseClass1_V_7_s, %cor_phaseClass1_V_8_s
+
+ST_1: tmp172 (810)  [1/1] 1.73ns  loc: correlator.cpp:270
+.preheader651.0:17  %tmp172 = add i32 %extLd16, %cor_phaseClass1_V_6_s
+
+ST_1: cor_phaseClass1_V_2_s (813)  [1/1] 0.00ns
+.preheader651.0:20  %cor_phaseClass1_V_2_s = load i21* @cor_phaseClass1_V_2, align 4
+
+ST_1: extLd4_cast (814)  [1/1] 0.00ns
+.preheader651.0:21  %extLd4_cast = sext i21 %cor_phaseClass1_V_2_s to i23
+
+ST_1: cor_phaseClass1_V_1_s (815)  [1/1] 0.00ns
+.preheader651.0:22  %cor_phaseClass1_V_1_s = load i21* @cor_phaseClass1_V_1, align 4
+
+ST_1: extLd17_cast (816)  [1/1] 0.00ns
+.preheader651.0:23  %extLd17_cast = sext i21 %cor_phaseClass1_V_1_s to i22
+
+ST_1: cor_phaseClass1_V_0_s (817)  [1/1] 0.00ns
+.preheader651.0:24  %cor_phaseClass1_V_0_s = load i21* @cor_phaseClass1_V_0, align 4
+
+ST_1: extLd18_cast (818)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:25  %extLd18_cast = sext i21 %cor_phaseClass1_V_0_s to i22
+
+ST_1: tmp174 (819)  [1/1] 1.73ns  loc: correlator.cpp:272
+.preheader651.0:26  %tmp174 = add i32 %cor_phaseClass1_V_15, %cor_phaseClass1_V_12
+
+ST_1: tmp177 (822)  [1/1] 1.73ns  loc: correlator.cpp:272
+.preheader651.0:29  %tmp177 = add i32 %cor_phaseClass1_V_4_s, %cor_phaseClass1_V_5_s
+
+ST_1: tmp179 (823)  [1/1] 1.69ns  loc: correlator.cpp:272
+.preheader651.0:30  %tmp179 = add i22 %extLd18_cast, %extLd17_cast
+
+ST_1: tmp179_cast_cast (824)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:31  %tmp179_cast_cast = sext i22 %tmp179 to i23
+
+ST_1: tmp178 (825)  [1/1] 1.69ns  loc: correlator.cpp:272
+.preheader651.0:32  %tmp178 = add i23 %extLd4_cast, %tmp179_cast_cast
+
+ST_1: cor_phaseClass0_V_15 (831)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:0  %cor_phaseClass0_V_15 = load i32* @cor_phaseClass0_V_15, align 4
+
+ST_1: cor_phaseClass0_V_12 (834)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:3  %cor_phaseClass0_V_12 = load i32* @cor_phaseClass0_V_12, align 16
+
+ST_1: cor_phaseClass0_V_8_s (838)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:7  %cor_phaseClass0_V_8_s = load i32* @cor_phaseClass0_V_8, align 16
+
+ST_1: cor_phaseClass0_V_7_s (839)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:8  %cor_phaseClass0_V_7_s = load i32* @cor_phaseClass0_V_7, align 4
+
+ST_1: cor_phaseClass0_V_6_s (840)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:9  %cor_phaseClass0_V_6_s = load i32* @cor_phaseClass0_V_6, align 8
+
+ST_1: cor_phaseClass0_V_5_s (841)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:10  %cor_phaseClass0_V_5_s = load i32* @cor_phaseClass0_V_5, align 4
+
+ST_1: cor_phaseClass0_V_4_s (842)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:11  %cor_phaseClass0_V_4_s = load i32* @cor_phaseClass0_V_4, align 16
+
+ST_1: cor_phaseClass0_V_3_s (843)  [1/1] 0.00ns
+.preheader653.0:12  %cor_phaseClass0_V_3_s = load i21* @cor_phaseClass0_V_3, align 4
+
+ST_1: extLd (844)  [1/1] 0.00ns
+.preheader653.0:13  %extLd = sext i21 %cor_phaseClass0_V_3_s to i32
+
+ST_1: tmp183 (847)  [1/1] 1.73ns  loc: correlator.cpp:260
+.preheader653.0:16  %tmp183 = add i32 %cor_phaseClass0_V_7_s, %cor_phaseClass0_V_8_s
+
+ST_1: tmp184 (848)  [1/1] 1.73ns  loc: correlator.cpp:260
+.preheader653.0:17  %tmp184 = add i32 %extLd, %cor_phaseClass0_V_6_s
+
+ST_1: cor_phaseClass0_V_2_s (851)  [1/1] 0.00ns
+.preheader653.0:20  %cor_phaseClass0_V_2_s = load i21* @cor_phaseClass0_V_2, align 4
+
+ST_1: extLd2_cast (852)  [1/1] 0.00ns
+.preheader653.0:21  %extLd2_cast = sext i21 %cor_phaseClass0_V_2_s to i23
+
+ST_1: cor_phaseClass0_V_1_s (853)  [1/1] 0.00ns
+.preheader653.0:22  %cor_phaseClass0_V_1_s = load i21* @cor_phaseClass0_V_1, align 4
+
+ST_1: extLd16_cast (854)  [1/1] 0.00ns
+.preheader653.0:23  %extLd16_cast = sext i21 %cor_phaseClass0_V_1_s to i22
+
+ST_1: cor_phaseClass0_V_0_s (855)  [1/1] 0.00ns
+.preheader653.0:24  %cor_phaseClass0_V_0_s = load i21* @cor_phaseClass0_V_0, align 4
+
+ST_1: extLd_cast (856)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:25  %extLd_cast = sext i21 %cor_phaseClass0_V_0_s to i22
+
+ST_1: tmp186 (857)  [1/1] 1.73ns  loc: correlator.cpp:262
+.preheader653.0:26  %tmp186 = add i32 %cor_phaseClass0_V_15, %cor_phaseClass0_V_12
+
+ST_1: tmp189 (860)  [1/1] 1.73ns  loc: correlator.cpp:262
+.preheader653.0:29  %tmp189 = add i32 %cor_phaseClass0_V_4_s, %cor_phaseClass0_V_5_s
+
+ST_1: tmp191 (861)  [1/1] 1.69ns  loc: correlator.cpp:262
+.preheader653.0:30  %tmp191 = add i22 %extLd_cast, %extLd16_cast
+
+ST_1: tmp191_cast_cast (862)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:31  %tmp191_cast_cast = sext i22 %tmp191 to i23
+
+ST_1: tmp190 (863)  [1/1] 1.69ns  loc: correlator.cpp:262
+.preheader653.0:32  %tmp190 = add i23 %extLd2_cast, %tmp191_cast_cast
+
+
+ <State 2>: 4.16ns
+ST_2: cor_phaseClass15_V_1_6 (262)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:1  %cor_phaseClass15_V_1_6 = load i32* @cor_phaseClass15_V_14, align 8
+
+ST_2: cor_phaseClass15_V_1_7 (263)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:2  %cor_phaseClass15_V_1_7 = load i32* @cor_phaseClass15_V_13, align 4
+
+ST_2: cor_phaseClass15_V_1_9 (265)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:4  %cor_phaseClass15_V_1_9 = load i32* @cor_phaseClass15_V_11, align 4
+
+ST_2: cor_phaseClass15_V_1_10 (266)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:5  %cor_phaseClass15_V_1_10 = load i32* @cor_phaseClass15_V_10, align 8
+
+ST_2: cor_phaseClass15_V_9 (267)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:6  %cor_phaseClass15_V_9 = load i32* @cor_phaseClass15_V_9, align 4
+
+ST_2: tmp1 (275)  [1/1] 1.39ns  loc: correlator.cpp:410
+.preheader.0:14  %tmp1 = add i32 %cor_phaseClass15_V_9, %cor_phaseClass15_V_1_6
+
+ST_2: tmp (276)  [1/1] 1.39ns  loc: correlator.cpp:410
+.preheader.0:15  %tmp = add i32 %cor_phaseClass15_V_1_7, %tmp1
+
+ST_2: tmp2 (279)  [1/1] 1.39ns  loc: correlator.cpp:410
+.preheader.0:18  %tmp2 = add i32 %tmp3, %tmp4
+
+ST_2: p_Val2_96_s (280)  [1/1] 1.39ns  loc: correlator.cpp:410
+.preheader.0:19  %p_Val2_96_s = add i32 %tmp, %tmp2
+
+ST_2: tmp7 (288)  [1/1] 1.39ns  loc: correlator.cpp:412
+.preheader.0:27  %tmp7 = add i32 %cor_phaseClass15_V_1_10, %cor_phaseClass15_V_1_9
+
+ST_2: tmp5 (289)  [1/1] 1.39ns  loc: correlator.cpp:412
+.preheader.0:28  %tmp5 = add i32 %tmp6, %tmp7
+
+ST_2: tmp10_cast (294)  [1/1] 0.00ns  loc: correlator.cpp:412
+.preheader.0:33  %tmp10_cast = sext i23 %tmp10 to i32
+
+ST_2: tmp8 (295)  [1/1] 1.39ns  loc: correlator.cpp:412
+.preheader.0:34  %tmp8 = add i32 %tmp9, %tmp10_cast
+
+ST_2: p_Val2_93_7 (296)  [1/1] 1.39ns  loc: correlator.cpp:412
+.preheader.0:35  %p_Val2_93_7 = add i32 %tmp5, %tmp8
+
+ST_2: cor_phaseClass14_V_1_6 (300)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:1  %cor_phaseClass14_V_1_6 = load i32* @cor_phaseClass14_V_14, align 8
+
+ST_2: cor_phaseClass14_V_1_7 (301)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:2  %cor_phaseClass14_V_1_7 = load i32* @cor_phaseClass14_V_13, align 4
+
+ST_2: cor_phaseClass14_V_1_9 (303)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:4  %cor_phaseClass14_V_1_9 = load i32* @cor_phaseClass14_V_11, align 4
+
+ST_2: cor_phaseClass14_V_1_10 (304)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:5  %cor_phaseClass14_V_1_10 = load i32* @cor_phaseClass14_V_10, align 8
+
+ST_2: cor_phaseClass14_V_9 (305)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:6  %cor_phaseClass14_V_9 = load i32* @cor_phaseClass14_V_9, align 4
+
+ST_2: tmp13 (313)  [1/1] 1.39ns  loc: correlator.cpp:400
+.preheader625.0:14  %tmp13 = add i32 %cor_phaseClass14_V_9, %cor_phaseClass14_V_1_6
+
+ST_2: tmp12 (314)  [1/1] 1.39ns  loc: correlator.cpp:400
+.preheader625.0:15  %tmp12 = add i32 %cor_phaseClass14_V_1_7, %tmp13
+
+ST_2: tmp14 (317)  [1/1] 1.39ns  loc: correlator.cpp:400
+.preheader625.0:18  %tmp14 = add i32 %tmp15, %tmp16
+
+ST_2: p_Val2_90_s (318)  [1/1] 1.39ns  loc: correlator.cpp:400
+.preheader625.0:19  %p_Val2_90_s = add i32 %tmp12, %tmp14
+
+ST_2: tmp19 (326)  [1/1] 1.39ns  loc: correlator.cpp:402
+.preheader625.0:27  %tmp19 = add i32 %cor_phaseClass14_V_1_10, %cor_phaseClass14_V_1_9
+
+ST_2: tmp17 (327)  [1/1] 1.39ns  loc: correlator.cpp:402
+.preheader625.0:28  %tmp17 = add i32 %tmp18, %tmp19
+
+ST_2: tmp22_cast (332)  [1/1] 0.00ns  loc: correlator.cpp:402
+.preheader625.0:33  %tmp22_cast = sext i23 %tmp22 to i32
+
+ST_2: tmp20 (333)  [1/1] 1.39ns  loc: correlator.cpp:402
+.preheader625.0:34  %tmp20 = add i32 %tmp21, %tmp22_cast
+
+ST_2: p_Val2_87_7 (334)  [1/1] 1.39ns  loc: correlator.cpp:402
+.preheader625.0:35  %p_Val2_87_7 = add i32 %tmp17, %tmp20
+
+ST_2: cor_phaseClass13_V_1_6 (338)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:1  %cor_phaseClass13_V_1_6 = load i32* @cor_phaseClass13_V_14, align 8
+
+ST_2: cor_phaseClass13_V_1_7 (339)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:2  %cor_phaseClass13_V_1_7 = load i32* @cor_phaseClass13_V_13, align 4
+
+ST_2: cor_phaseClass13_V_1_9 (341)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:4  %cor_phaseClass13_V_1_9 = load i32* @cor_phaseClass13_V_11, align 4
+
+ST_2: cor_phaseClass13_V_1_10 (342)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:5  %cor_phaseClass13_V_1_10 = load i32* @cor_phaseClass13_V_10, align 8
+
+ST_2: cor_phaseClass13_V_9 (343)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:6  %cor_phaseClass13_V_9 = load i32* @cor_phaseClass13_V_9, align 4
+
+ST_2: tmp25 (351)  [1/1] 1.39ns  loc: correlator.cpp:390
+.preheader627.0:14  %tmp25 = add i32 %cor_phaseClass13_V_9, %cor_phaseClass13_V_1_6
+
+ST_2: tmp24 (352)  [1/1] 1.39ns  loc: correlator.cpp:390
+.preheader627.0:15  %tmp24 = add i32 %cor_phaseClass13_V_1_7, %tmp25
+
+ST_2: tmp26 (355)  [1/1] 1.39ns  loc: correlator.cpp:390
+.preheader627.0:18  %tmp26 = add i32 %tmp27, %tmp28
+
+ST_2: p_Val2_84_s (356)  [1/1] 1.39ns  loc: correlator.cpp:390
+.preheader627.0:19  %p_Val2_84_s = add i32 %tmp24, %tmp26
+
+ST_2: tmp31 (364)  [1/1] 1.39ns  loc: correlator.cpp:392
+.preheader627.0:27  %tmp31 = add i32 %cor_phaseClass13_V_1_10, %cor_phaseClass13_V_1_9
+
+ST_2: tmp29 (365)  [1/1] 1.39ns  loc: correlator.cpp:392
+.preheader627.0:28  %tmp29 = add i32 %tmp30, %tmp31
+
+ST_2: tmp34_cast (370)  [1/1] 0.00ns  loc: correlator.cpp:392
+.preheader627.0:33  %tmp34_cast = sext i23 %tmp34 to i32
+
+ST_2: tmp32 (371)  [1/1] 1.39ns  loc: correlator.cpp:392
+.preheader627.0:34  %tmp32 = add i32 %tmp33, %tmp34_cast
+
+ST_2: p_Val2_81_7 (372)  [1/1] 1.39ns  loc: correlator.cpp:392
+.preheader627.0:35  %p_Val2_81_7 = add i32 %tmp29, %tmp32
+
+ST_2: cor_phaseClass12_V_1_6 (376)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:1  %cor_phaseClass12_V_1_6 = load i32* @cor_phaseClass12_V_14, align 8
+
+ST_2: cor_phaseClass12_V_1_7 (377)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:2  %cor_phaseClass12_V_1_7 = load i32* @cor_phaseClass12_V_13, align 4
+
+ST_2: cor_phaseClass12_V_1_9 (379)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:4  %cor_phaseClass12_V_1_9 = load i32* @cor_phaseClass12_V_11, align 4
+
+ST_2: cor_phaseClass12_V_1_10 (380)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:5  %cor_phaseClass12_V_1_10 = load i32* @cor_phaseClass12_V_10, align 8
+
+ST_2: cor_phaseClass12_V_9 (381)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:6  %cor_phaseClass12_V_9 = load i32* @cor_phaseClass12_V_9, align 4
+
+ST_2: tmp37 (389)  [1/1] 1.39ns  loc: correlator.cpp:380
+.preheader629.0:14  %tmp37 = add i32 %cor_phaseClass12_V_9, %cor_phaseClass12_V_1_6
+
+ST_2: tmp36 (390)  [1/1] 1.39ns  loc: correlator.cpp:380
+.preheader629.0:15  %tmp36 = add i32 %cor_phaseClass12_V_1_7, %tmp37
+
+ST_2: tmp38 (393)  [1/1] 1.39ns  loc: correlator.cpp:380
+.preheader629.0:18  %tmp38 = add i32 %tmp39, %tmp40
+
+ST_2: p_Val2_78_s (394)  [1/1] 1.39ns  loc: correlator.cpp:380
+.preheader629.0:19  %p_Val2_78_s = add i32 %tmp36, %tmp38
+
+ST_2: tmp43 (402)  [1/1] 1.39ns  loc: correlator.cpp:382
+.preheader629.0:27  %tmp43 = add i32 %cor_phaseClass12_V_1_10, %cor_phaseClass12_V_1_9
+
+ST_2: tmp41 (403)  [1/1] 1.39ns  loc: correlator.cpp:382
+.preheader629.0:28  %tmp41 = add i32 %tmp42, %tmp43
+
+ST_2: tmp46_cast (408)  [1/1] 0.00ns  loc: correlator.cpp:382
+.preheader629.0:33  %tmp46_cast = sext i23 %tmp46 to i32
+
+ST_2: tmp44 (409)  [1/1] 1.39ns  loc: correlator.cpp:382
+.preheader629.0:34  %tmp44 = add i32 %tmp45, %tmp46_cast
+
+ST_2: p_Val2_75_7 (410)  [1/1] 1.39ns  loc: correlator.cpp:382
+.preheader629.0:35  %p_Val2_75_7 = add i32 %tmp41, %tmp44
+
+ST_2: cor_phaseClass11_V_1_6 (414)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:1  %cor_phaseClass11_V_1_6 = load i32* @cor_phaseClass11_V_14, align 8
+
+ST_2: cor_phaseClass11_V_1_7 (415)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:2  %cor_phaseClass11_V_1_7 = load i32* @cor_phaseClass11_V_13, align 4
+
+ST_2: cor_phaseClass11_V_1_9 (417)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:4  %cor_phaseClass11_V_1_9 = load i32* @cor_phaseClass11_V_11, align 4
+
+ST_2: cor_phaseClass11_V_1_10 (418)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:5  %cor_phaseClass11_V_1_10 = load i32* @cor_phaseClass11_V_10, align 8
+
+ST_2: cor_phaseClass11_V_9 (419)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:6  %cor_phaseClass11_V_9 = load i32* @cor_phaseClass11_V_9, align 4
+
+ST_2: tmp49 (427)  [1/1] 1.39ns  loc: correlator.cpp:370
+.preheader631.0:14  %tmp49 = add i32 %cor_phaseClass11_V_9, %cor_phaseClass11_V_1_6
+
+ST_2: tmp48 (428)  [1/1] 1.39ns  loc: correlator.cpp:370
+.preheader631.0:15  %tmp48 = add i32 %cor_phaseClass11_V_1_7, %tmp49
+
+ST_2: tmp50 (431)  [1/1] 1.39ns  loc: correlator.cpp:370
+.preheader631.0:18  %tmp50 = add i32 %tmp51, %tmp52
+
+ST_2: p_Val2_72_s (432)  [1/1] 1.39ns  loc: correlator.cpp:370
+.preheader631.0:19  %p_Val2_72_s = add i32 %tmp48, %tmp50
+
+ST_2: tmp55 (440)  [1/1] 1.39ns  loc: correlator.cpp:372
+.preheader631.0:27  %tmp55 = add i32 %cor_phaseClass11_V_1_10, %cor_phaseClass11_V_1_9
+
+ST_2: tmp53 (441)  [1/1] 1.39ns  loc: correlator.cpp:372
+.preheader631.0:28  %tmp53 = add i32 %tmp54, %tmp55
+
+ST_2: tmp58_cast (446)  [1/1] 0.00ns  loc: correlator.cpp:372
+.preheader631.0:33  %tmp58_cast = sext i23 %tmp58 to i32
+
+ST_2: tmp56 (447)  [1/1] 1.39ns  loc: correlator.cpp:372
+.preheader631.0:34  %tmp56 = add i32 %tmp57, %tmp58_cast
+
+ST_2: p_Val2_69_7 (448)  [1/1] 1.39ns  loc: correlator.cpp:372
+.preheader631.0:35  %p_Val2_69_7 = add i32 %tmp53, %tmp56
+
+ST_2: cor_phaseClass10_V_1_6 (452)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:1  %cor_phaseClass10_V_1_6 = load i32* @cor_phaseClass10_V_14, align 8
+
+ST_2: cor_phaseClass10_V_1_7 (453)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:2  %cor_phaseClass10_V_1_7 = load i32* @cor_phaseClass10_V_13, align 4
+
+ST_2: cor_phaseClass10_V_1_9 (455)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:4  %cor_phaseClass10_V_1_9 = load i32* @cor_phaseClass10_V_11, align 4
+
+ST_2: cor_phaseClass10_V_1_10 (456)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:5  %cor_phaseClass10_V_1_10 = load i32* @cor_phaseClass10_V_10, align 8
+
+ST_2: cor_phaseClass10_V_9 (457)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:6  %cor_phaseClass10_V_9 = load i32* @cor_phaseClass10_V_9, align 4
+
+ST_2: tmp61 (465)  [1/1] 1.39ns  loc: correlator.cpp:360
+.preheader633.0:14  %tmp61 = add i32 %cor_phaseClass10_V_9, %cor_phaseClass10_V_1_6
+
+ST_2: tmp60 (466)  [1/1] 1.39ns  loc: correlator.cpp:360
+.preheader633.0:15  %tmp60 = add i32 %cor_phaseClass10_V_1_7, %tmp61
+
+ST_2: tmp62 (469)  [1/1] 1.39ns  loc: correlator.cpp:360
+.preheader633.0:18  %tmp62 = add i32 %tmp63, %tmp64
+
+ST_2: p_Val2_66_s (470)  [1/1] 1.39ns  loc: correlator.cpp:360
+.preheader633.0:19  %p_Val2_66_s = add i32 %tmp60, %tmp62
+
+ST_2: tmp67 (478)  [1/1] 1.39ns  loc: correlator.cpp:362
+.preheader633.0:27  %tmp67 = add i32 %cor_phaseClass10_V_1_10, %cor_phaseClass10_V_1_9
+
+ST_2: tmp65 (479)  [1/1] 1.39ns  loc: correlator.cpp:362
+.preheader633.0:28  %tmp65 = add i32 %tmp66, %tmp67
+
+ST_2: tmp70_cast (484)  [1/1] 0.00ns  loc: correlator.cpp:362
+.preheader633.0:33  %tmp70_cast = sext i23 %tmp70 to i32
+
+ST_2: tmp68 (485)  [1/1] 1.39ns  loc: correlator.cpp:362
+.preheader633.0:34  %tmp68 = add i32 %tmp69, %tmp70_cast
+
+ST_2: p_Val2_63_7 (486)  [1/1] 1.39ns  loc: correlator.cpp:362
+.preheader633.0:35  %p_Val2_63_7 = add i32 %tmp65, %tmp68
+
+ST_2: cor_phaseClass9_V_14 (490)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:1  %cor_phaseClass9_V_14 = load i32* @cor_phaseClass9_V_14, align 8
+
+ST_2: cor_phaseClass9_V_13 (491)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:2  %cor_phaseClass9_V_13 = load i32* @cor_phaseClass9_V_13, align 4
+
+ST_2: cor_phaseClass9_V_11 (493)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:4  %cor_phaseClass9_V_11 = load i32* @cor_phaseClass9_V_11, align 4
+
+ST_2: cor_phaseClass9_V_10 (494)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:5  %cor_phaseClass9_V_10 = load i32* @cor_phaseClass9_V_10, align 8
+
+ST_2: cor_phaseClass9_V_9_s (495)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:6  %cor_phaseClass9_V_9_s = load i32* @cor_phaseClass9_V_9, align 4
+
+ST_2: tmp73 (503)  [1/1] 1.39ns  loc: correlator.cpp:350
+.preheader635.0:14  %tmp73 = add i32 %cor_phaseClass9_V_9_s, %cor_phaseClass9_V_14
+
+ST_2: tmp72 (504)  [1/1] 1.39ns  loc: correlator.cpp:350
+.preheader635.0:15  %tmp72 = add i32 %cor_phaseClass9_V_13, %tmp73
+
+ST_2: tmp74 (507)  [1/1] 1.39ns  loc: correlator.cpp:350
+.preheader635.0:18  %tmp74 = add i32 %tmp75, %tmp76
+
+ST_2: p_Val2_60_s (508)  [1/1] 1.39ns  loc: correlator.cpp:350
+.preheader635.0:19  %p_Val2_60_s = add i32 %tmp72, %tmp74
+
+ST_2: tmp79 (516)  [1/1] 1.39ns  loc: correlator.cpp:352
+.preheader635.0:27  %tmp79 = add i32 %cor_phaseClass9_V_10, %cor_phaseClass9_V_11
+
+ST_2: tmp77 (517)  [1/1] 1.39ns  loc: correlator.cpp:352
+.preheader635.0:28  %tmp77 = add i32 %tmp78, %tmp79
+
+ST_2: tmp82_cast (522)  [1/1] 0.00ns  loc: correlator.cpp:352
+.preheader635.0:33  %tmp82_cast = sext i23 %tmp82 to i32
+
+ST_2: tmp80 (523)  [1/1] 1.39ns  loc: correlator.cpp:352
+.preheader635.0:34  %tmp80 = add i32 %tmp81, %tmp82_cast
+
+ST_2: p_Val2_57_7 (524)  [1/1] 1.39ns  loc: correlator.cpp:352
+.preheader635.0:35  %p_Val2_57_7 = add i32 %tmp77, %tmp80
+
+ST_2: cor_phaseClass8_V_14 (528)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:1  %cor_phaseClass8_V_14 = load i32* @cor_phaseClass8_V_14, align 8
+
+ST_2: cor_phaseClass8_V_13 (529)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:2  %cor_phaseClass8_V_13 = load i32* @cor_phaseClass8_V_13, align 4
+
+ST_2: cor_phaseClass8_V_11 (531)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:4  %cor_phaseClass8_V_11 = load i32* @cor_phaseClass8_V_11, align 4
+
+ST_2: cor_phaseClass8_V_10 (532)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:5  %cor_phaseClass8_V_10 = load i32* @cor_phaseClass8_V_10, align 8
+
+ST_2: cor_phaseClass8_V_9_s (533)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:6  %cor_phaseClass8_V_9_s = load i32* @cor_phaseClass8_V_9, align 4
+
+ST_2: tmp85 (541)  [1/1] 1.39ns  loc: correlator.cpp:340
+.preheader637.0:14  %tmp85 = add i32 %cor_phaseClass8_V_9_s, %cor_phaseClass8_V_14
+
+ST_2: tmp84 (542)  [1/1] 1.39ns  loc: correlator.cpp:340
+.preheader637.0:15  %tmp84 = add i32 %cor_phaseClass8_V_13, %tmp85
+
+ST_2: tmp86 (545)  [1/1] 1.39ns  loc: correlator.cpp:340
+.preheader637.0:18  %tmp86 = add i32 %tmp87, %tmp88
+
+ST_2: p_Val2_54_s (546)  [1/1] 1.39ns  loc: correlator.cpp:340
+.preheader637.0:19  %p_Val2_54_s = add i32 %tmp84, %tmp86
+
+ST_2: tmp91 (554)  [1/1] 1.39ns  loc: correlator.cpp:342
+.preheader637.0:27  %tmp91 = add i32 %cor_phaseClass8_V_10, %cor_phaseClass8_V_11
+
+ST_2: tmp89 (555)  [1/1] 1.39ns  loc: correlator.cpp:342
+.preheader637.0:28  %tmp89 = add i32 %tmp90, %tmp91
+
+ST_2: tmp94_cast (560)  [1/1] 0.00ns  loc: correlator.cpp:342
+.preheader637.0:33  %tmp94_cast = sext i23 %tmp94 to i32
+
+ST_2: tmp92 (561)  [1/1] 1.39ns  loc: correlator.cpp:342
+.preheader637.0:34  %tmp92 = add i32 %tmp93, %tmp94_cast
+
+ST_2: p_Val2_51_7 (562)  [1/1] 1.39ns  loc: correlator.cpp:342
+.preheader637.0:35  %p_Val2_51_7 = add i32 %tmp89, %tmp92
+
+ST_2: cor_phaseClass7_V_14 (566)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:1  %cor_phaseClass7_V_14 = load i32* @cor_phaseClass7_V_14, align 8
+
+ST_2: cor_phaseClass7_V_13 (567)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:2  %cor_phaseClass7_V_13 = load i32* @cor_phaseClass7_V_13, align 4
+
+ST_2: cor_phaseClass7_V_11 (569)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:4  %cor_phaseClass7_V_11 = load i32* @cor_phaseClass7_V_11, align 4
+
+ST_2: cor_phaseClass7_V_10 (570)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:5  %cor_phaseClass7_V_10 = load i32* @cor_phaseClass7_V_10, align 8
+
+ST_2: cor_phaseClass7_V_9_s (571)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:6  %cor_phaseClass7_V_9_s = load i32* @cor_phaseClass7_V_9, align 4
+
+ST_2: tmp97 (579)  [1/1] 1.39ns  loc: correlator.cpp:330
+.preheader639.0:14  %tmp97 = add i32 %cor_phaseClass7_V_9_s, %cor_phaseClass7_V_14
+
+ST_2: tmp96 (580)  [1/1] 1.39ns  loc: correlator.cpp:330
+.preheader639.0:15  %tmp96 = add i32 %cor_phaseClass7_V_13, %tmp97
+
+ST_2: tmp98 (583)  [1/1] 1.39ns  loc: correlator.cpp:330
+.preheader639.0:18  %tmp98 = add i32 %tmp99, %tmp100
+
+ST_2: p_Val2_48_s (584)  [1/1] 1.39ns  loc: correlator.cpp:330
+.preheader639.0:19  %p_Val2_48_s = add i32 %tmp96, %tmp98
+
+ST_2: tmp103 (592)  [1/1] 1.39ns  loc: correlator.cpp:332
+.preheader639.0:27  %tmp103 = add i32 %cor_phaseClass7_V_10, %cor_phaseClass7_V_11
+
+ST_2: tmp101 (593)  [1/1] 1.39ns  loc: correlator.cpp:332
+.preheader639.0:28  %tmp101 = add i32 %tmp102, %tmp103
+
+ST_2: tmp106_cast (598)  [1/1] 0.00ns  loc: correlator.cpp:332
+.preheader639.0:33  %tmp106_cast = sext i23 %tmp106 to i32
+
+ST_2: tmp104 (599)  [1/1] 1.39ns  loc: correlator.cpp:332
+.preheader639.0:34  %tmp104 = add i32 %tmp105, %tmp106_cast
+
+ST_2: p_Val2_45_7 (600)  [1/1] 1.39ns  loc: correlator.cpp:332
+.preheader639.0:35  %p_Val2_45_7 = add i32 %tmp101, %tmp104
+
+ST_2: cor_phaseClass6_V_14 (604)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:1  %cor_phaseClass6_V_14 = load i32* @cor_phaseClass6_V_14, align 8
+
+ST_2: cor_phaseClass6_V_13 (605)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:2  %cor_phaseClass6_V_13 = load i32* @cor_phaseClass6_V_13, align 4
+
+ST_2: cor_phaseClass6_V_11 (607)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:4  %cor_phaseClass6_V_11 = load i32* @cor_phaseClass6_V_11, align 4
+
+ST_2: cor_phaseClass6_V_10 (608)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:5  %cor_phaseClass6_V_10 = load i32* @cor_phaseClass6_V_10, align 8
+
+ST_2: cor_phaseClass6_V_9_s (609)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:6  %cor_phaseClass6_V_9_s = load i32* @cor_phaseClass6_V_9, align 4
+
+ST_2: tmp109 (617)  [1/1] 1.39ns  loc: correlator.cpp:320
+.preheader641.0:14  %tmp109 = add i32 %cor_phaseClass6_V_9_s, %cor_phaseClass6_V_14
+
+ST_2: tmp108 (618)  [1/1] 1.39ns  loc: correlator.cpp:320
+.preheader641.0:15  %tmp108 = add i32 %cor_phaseClass6_V_13, %tmp109
+
+ST_2: tmp110 (621)  [1/1] 1.39ns  loc: correlator.cpp:320
+.preheader641.0:18  %tmp110 = add i32 %tmp111, %tmp112
+
+ST_2: p_Val2_42_s (622)  [1/1] 1.39ns  loc: correlator.cpp:320
+.preheader641.0:19  %p_Val2_42_s = add i32 %tmp108, %tmp110
+
+ST_2: tmp115 (630)  [1/1] 1.39ns  loc: correlator.cpp:322
+.preheader641.0:27  %tmp115 = add i32 %cor_phaseClass6_V_10, %cor_phaseClass6_V_11
+
+ST_2: tmp113 (631)  [1/1] 1.39ns  loc: correlator.cpp:322
+.preheader641.0:28  %tmp113 = add i32 %tmp114, %tmp115
+
+ST_2: tmp118_cast (636)  [1/1] 0.00ns  loc: correlator.cpp:322
+.preheader641.0:33  %tmp118_cast = sext i23 %tmp118 to i32
+
+ST_2: tmp116 (637)  [1/1] 1.39ns  loc: correlator.cpp:322
+.preheader641.0:34  %tmp116 = add i32 %tmp117, %tmp118_cast
+
+ST_2: p_Val2_39_7 (638)  [1/1] 1.39ns  loc: correlator.cpp:322
+.preheader641.0:35  %p_Val2_39_7 = add i32 %tmp113, %tmp116
+
+ST_2: cor_phaseClass5_V_14 (642)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:1  %cor_phaseClass5_V_14 = load i32* @cor_phaseClass5_V_14, align 8
+
+ST_2: cor_phaseClass5_V_13 (643)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:2  %cor_phaseClass5_V_13 = load i32* @cor_phaseClass5_V_13, align 4
+
+ST_2: cor_phaseClass5_V_11 (645)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:4  %cor_phaseClass5_V_11 = load i32* @cor_phaseClass5_V_11, align 4
+
+ST_2: cor_phaseClass5_V_10 (646)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:5  %cor_phaseClass5_V_10 = load i32* @cor_phaseClass5_V_10, align 8
+
+ST_2: cor_phaseClass5_V_9_s (647)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:6  %cor_phaseClass5_V_9_s = load i32* @cor_phaseClass5_V_9, align 4
+
+ST_2: tmp121 (655)  [1/1] 1.39ns  loc: correlator.cpp:310
+.preheader643.0:14  %tmp121 = add i32 %cor_phaseClass5_V_9_s, %cor_phaseClass5_V_14
+
+ST_2: tmp120 (656)  [1/1] 1.39ns  loc: correlator.cpp:310
+.preheader643.0:15  %tmp120 = add i32 %cor_phaseClass5_V_13, %tmp121
+
+ST_2: tmp122 (659)  [1/1] 1.39ns  loc: correlator.cpp:310
+.preheader643.0:18  %tmp122 = add i32 %tmp123, %tmp124
+
+ST_2: p_Val2_36_s (660)  [1/1] 1.39ns  loc: correlator.cpp:310
+.preheader643.0:19  %p_Val2_36_s = add i32 %tmp120, %tmp122
+
+ST_2: tmp127 (668)  [1/1] 1.39ns  loc: correlator.cpp:312
+.preheader643.0:27  %tmp127 = add i32 %cor_phaseClass5_V_10, %cor_phaseClass5_V_11
+
+ST_2: tmp125 (669)  [1/1] 1.39ns  loc: correlator.cpp:312
+.preheader643.0:28  %tmp125 = add i32 %tmp126, %tmp127
+
+ST_2: tmp130_cast (674)  [1/1] 0.00ns  loc: correlator.cpp:312
+.preheader643.0:33  %tmp130_cast = sext i23 %tmp130 to i32
+
+ST_2: tmp128 (675)  [1/1] 1.39ns  loc: correlator.cpp:312
+.preheader643.0:34  %tmp128 = add i32 %tmp129, %tmp130_cast
+
+ST_2: p_Val2_33_7 (676)  [1/1] 1.39ns  loc: correlator.cpp:312
+.preheader643.0:35  %p_Val2_33_7 = add i32 %tmp125, %tmp128
+
+ST_2: cor_phaseClass4_V_14 (680)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:1  %cor_phaseClass4_V_14 = load i32* @cor_phaseClass4_V_14, align 8
+
+ST_2: cor_phaseClass4_V_13 (681)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:2  %cor_phaseClass4_V_13 = load i32* @cor_phaseClass4_V_13, align 4
+
+ST_2: cor_phaseClass4_V_11 (683)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:4  %cor_phaseClass4_V_11 = load i32* @cor_phaseClass4_V_11, align 4
+
+ST_2: cor_phaseClass4_V_10 (684)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:5  %cor_phaseClass4_V_10 = load i32* @cor_phaseClass4_V_10, align 8
+
+ST_2: cor_phaseClass4_V_9_s (685)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:6  %cor_phaseClass4_V_9_s = load i32* @cor_phaseClass4_V_9, align 4
+
+ST_2: tmp133 (693)  [1/1] 1.39ns  loc: correlator.cpp:300
+.preheader645.0:14  %tmp133 = add i32 %cor_phaseClass4_V_9_s, %cor_phaseClass4_V_14
+
+ST_2: tmp132 (694)  [1/1] 1.39ns  loc: correlator.cpp:300
+.preheader645.0:15  %tmp132 = add i32 %cor_phaseClass4_V_13, %tmp133
+
+ST_2: tmp134 (697)  [1/1] 1.39ns  loc: correlator.cpp:300
+.preheader645.0:18  %tmp134 = add i32 %tmp135, %tmp136
+
+ST_2: p_Val2_30_s (698)  [1/1] 1.39ns  loc: correlator.cpp:300
+.preheader645.0:19  %p_Val2_30_s = add i32 %tmp132, %tmp134
+
+ST_2: tmp139 (706)  [1/1] 1.39ns  loc: correlator.cpp:302
+.preheader645.0:27  %tmp139 = add i32 %cor_phaseClass4_V_10, %cor_phaseClass4_V_11
+
+ST_2: tmp137 (707)  [1/1] 1.39ns  loc: correlator.cpp:302
+.preheader645.0:28  %tmp137 = add i32 %tmp138, %tmp139
+
+ST_2: tmp142_cast (712)  [1/1] 0.00ns  loc: correlator.cpp:302
+.preheader645.0:33  %tmp142_cast = sext i23 %tmp142 to i32
+
+ST_2: tmp140 (713)  [1/1] 1.39ns  loc: correlator.cpp:302
+.preheader645.0:34  %tmp140 = add i32 %tmp141, %tmp142_cast
+
+ST_2: p_Val2_27_7 (714)  [1/1] 1.39ns  loc: correlator.cpp:302
+.preheader645.0:35  %p_Val2_27_7 = add i32 %tmp137, %tmp140
+
+ST_2: cor_phaseClass3_V_14 (718)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:1  %cor_phaseClass3_V_14 = load i32* @cor_phaseClass3_V_14, align 8
+
+ST_2: cor_phaseClass3_V_13 (719)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:2  %cor_phaseClass3_V_13 = load i32* @cor_phaseClass3_V_13, align 4
+
+ST_2: cor_phaseClass3_V_11 (721)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:4  %cor_phaseClass3_V_11 = load i32* @cor_phaseClass3_V_11, align 4
+
+ST_2: cor_phaseClass3_V_10 (722)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:5  %cor_phaseClass3_V_10 = load i32* @cor_phaseClass3_V_10, align 8
+
+ST_2: cor_phaseClass3_V_9_s (723)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:6  %cor_phaseClass3_V_9_s = load i32* @cor_phaseClass3_V_9, align 4
+
+ST_2: tmp145 (731)  [1/1] 1.39ns  loc: correlator.cpp:290
+.preheader647.0:14  %tmp145 = add i32 %cor_phaseClass3_V_9_s, %cor_phaseClass3_V_14
+
+ST_2: tmp144 (732)  [1/1] 1.39ns  loc: correlator.cpp:290
+.preheader647.0:15  %tmp144 = add i32 %cor_phaseClass3_V_13, %tmp145
+
+ST_2: tmp146 (735)  [1/1] 1.39ns  loc: correlator.cpp:290
+.preheader647.0:18  %tmp146 = add i32 %tmp147, %tmp148
+
+ST_2: p_Val2_24_s (736)  [1/1] 1.39ns  loc: correlator.cpp:290
+.preheader647.0:19  %p_Val2_24_s = add i32 %tmp144, %tmp146
+
+ST_2: tmp151 (744)  [1/1] 1.39ns  loc: correlator.cpp:292
+.preheader647.0:27  %tmp151 = add i32 %cor_phaseClass3_V_10, %cor_phaseClass3_V_11
+
+ST_2: tmp149 (745)  [1/1] 1.39ns  loc: correlator.cpp:292
+.preheader647.0:28  %tmp149 = add i32 %tmp150, %tmp151
+
+ST_2: tmp154_cast (750)  [1/1] 0.00ns  loc: correlator.cpp:292
+.preheader647.0:33  %tmp154_cast = sext i23 %tmp154 to i32
+
+ST_2: tmp152 (751)  [1/1] 1.39ns  loc: correlator.cpp:292
+.preheader647.0:34  %tmp152 = add i32 %tmp153, %tmp154_cast
+
+ST_2: p_Val2_21_7 (752)  [1/1] 1.39ns  loc: correlator.cpp:292
+.preheader647.0:35  %p_Val2_21_7 = add i32 %tmp149, %tmp152
+
+ST_2: cor_phaseClass2_V_14 (756)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:1  %cor_phaseClass2_V_14 = load i32* @cor_phaseClass2_V_14, align 8
+
+ST_2: cor_phaseClass2_V_13 (757)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:2  %cor_phaseClass2_V_13 = load i32* @cor_phaseClass2_V_13, align 4
+
+ST_2: cor_phaseClass2_V_11 (759)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:4  %cor_phaseClass2_V_11 = load i32* @cor_phaseClass2_V_11, align 4
+
+ST_2: cor_phaseClass2_V_10 (760)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:5  %cor_phaseClass2_V_10 = load i32* @cor_phaseClass2_V_10, align 8
+
+ST_2: cor_phaseClass2_V_9_s (761)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:6  %cor_phaseClass2_V_9_s = load i32* @cor_phaseClass2_V_9, align 4
+
+ST_2: tmp157 (769)  [1/1] 1.39ns  loc: correlator.cpp:280
+.preheader649.0:14  %tmp157 = add i32 %cor_phaseClass2_V_9_s, %cor_phaseClass2_V_14
+
+ST_2: tmp156 (770)  [1/1] 1.39ns  loc: correlator.cpp:280
+.preheader649.0:15  %tmp156 = add i32 %cor_phaseClass2_V_13, %tmp157
+
+ST_2: tmp158 (773)  [1/1] 1.39ns  loc: correlator.cpp:280
+.preheader649.0:18  %tmp158 = add i32 %tmp159, %tmp160
+
+ST_2: p_Val2_18_s (774)  [1/1] 1.39ns  loc: correlator.cpp:280
+.preheader649.0:19  %p_Val2_18_s = add i32 %tmp156, %tmp158
+
+ST_2: tmp163 (782)  [1/1] 1.39ns  loc: correlator.cpp:282
+.preheader649.0:27  %tmp163 = add i32 %cor_phaseClass2_V_10, %cor_phaseClass2_V_11
+
+ST_2: tmp161 (783)  [1/1] 1.39ns  loc: correlator.cpp:282
+.preheader649.0:28  %tmp161 = add i32 %tmp162, %tmp163
+
+ST_2: tmp166_cast (788)  [1/1] 0.00ns  loc: correlator.cpp:282
+.preheader649.0:33  %tmp166_cast = sext i23 %tmp166 to i32
+
+ST_2: tmp164 (789)  [1/1] 1.39ns  loc: correlator.cpp:282
+.preheader649.0:34  %tmp164 = add i32 %tmp165, %tmp166_cast
+
+ST_2: p_Val2_15_7 (790)  [1/1] 1.39ns  loc: correlator.cpp:282
+.preheader649.0:35  %p_Val2_15_7 = add i32 %tmp161, %tmp164
+
+ST_2: cor_phaseClass1_V_14 (794)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:1  %cor_phaseClass1_V_14 = load i32* @cor_phaseClass1_V_14, align 8
+
+ST_2: cor_phaseClass1_V_13 (795)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:2  %cor_phaseClass1_V_13 = load i32* @cor_phaseClass1_V_13, align 4
+
+ST_2: cor_phaseClass1_V_11 (797)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:4  %cor_phaseClass1_V_11 = load i32* @cor_phaseClass1_V_11, align 4
+
+ST_2: cor_phaseClass1_V_10 (798)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:5  %cor_phaseClass1_V_10 = load i32* @cor_phaseClass1_V_10, align 8
+
+ST_2: cor_phaseClass1_V_9_s (799)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:6  %cor_phaseClass1_V_9_s = load i32* @cor_phaseClass1_V_9, align 4
+
+ST_2: tmp169 (807)  [1/1] 1.39ns  loc: correlator.cpp:270
+.preheader651.0:14  %tmp169 = add i32 %cor_phaseClass1_V_9_s, %cor_phaseClass1_V_14
+
+ST_2: tmp168 (808)  [1/1] 1.39ns  loc: correlator.cpp:270
+.preheader651.0:15  %tmp168 = add i32 %cor_phaseClass1_V_13, %tmp169
+
+ST_2: tmp170 (811)  [1/1] 1.39ns  loc: correlator.cpp:270
+.preheader651.0:18  %tmp170 = add i32 %tmp171, %tmp172
+
+ST_2: p_Val2_12_s (812)  [1/1] 1.39ns  loc: correlator.cpp:270
+.preheader651.0:19  %p_Val2_12_s = add i32 %tmp168, %tmp170
+
+ST_2: tmp175 (820)  [1/1] 1.39ns  loc: correlator.cpp:272
+.preheader651.0:27  %tmp175 = add i32 %cor_phaseClass1_V_10, %cor_phaseClass1_V_11
+
+ST_2: tmp173 (821)  [1/1] 1.39ns  loc: correlator.cpp:272
+.preheader651.0:28  %tmp173 = add i32 %tmp174, %tmp175
+
+ST_2: tmp178_cast (826)  [1/1] 0.00ns  loc: correlator.cpp:272
+.preheader651.0:33  %tmp178_cast = sext i23 %tmp178 to i32
+
+ST_2: tmp176 (827)  [1/1] 1.39ns  loc: correlator.cpp:272
+.preheader651.0:34  %tmp176 = add i32 %tmp177, %tmp178_cast
+
+ST_2: p_Val2_9_7 (828)  [1/1] 1.39ns  loc: correlator.cpp:272
+.preheader651.0:35  %p_Val2_9_7 = add i32 %tmp173, %tmp176
+
+ST_2: cor_phaseClass0_V_14 (832)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:1  %cor_phaseClass0_V_14 = load i32* @cor_phaseClass0_V_14, align 8
+
+ST_2: cor_phaseClass0_V_13 (833)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:2  %cor_phaseClass0_V_13 = load i32* @cor_phaseClass0_V_13, align 4
+
+ST_2: cor_phaseClass0_V_11 (835)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:4  %cor_phaseClass0_V_11 = load i32* @cor_phaseClass0_V_11, align 4
+
+ST_2: cor_phaseClass0_V_10 (836)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:5  %cor_phaseClass0_V_10 = load i32* @cor_phaseClass0_V_10, align 8
+
+ST_2: cor_phaseClass0_V_9_s (837)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:6  %cor_phaseClass0_V_9_s = load i32* @cor_phaseClass0_V_9, align 4
+
+ST_2: tmp181 (845)  [1/1] 1.39ns  loc: correlator.cpp:260
+.preheader653.0:14  %tmp181 = add i32 %cor_phaseClass0_V_9_s, %cor_phaseClass0_V_14
+
+ST_2: tmp180 (846)  [1/1] 1.39ns  loc: correlator.cpp:260
+.preheader653.0:15  %tmp180 = add i32 %cor_phaseClass0_V_13, %tmp181
+
+ST_2: tmp182 (849)  [1/1] 1.39ns  loc: correlator.cpp:260
+.preheader653.0:18  %tmp182 = add i32 %tmp183, %tmp184
+
+ST_2: p_Val2_6_s (850)  [1/1] 1.39ns  loc: correlator.cpp:260
+.preheader653.0:19  %p_Val2_6_s = add i32 %tmp180, %tmp182
+
+ST_2: tmp187 (858)  [1/1] 1.39ns  loc: correlator.cpp:262
+.preheader653.0:27  %tmp187 = add i32 %cor_phaseClass0_V_10, %cor_phaseClass0_V_11
+
+ST_2: tmp185 (859)  [1/1] 1.39ns  loc: correlator.cpp:262
+.preheader653.0:28  %tmp185 = add i32 %tmp186, %tmp187
+
+ST_2: tmp190_cast (864)  [1/1] 0.00ns  loc: correlator.cpp:262
+.preheader653.0:33  %tmp190_cast = sext i23 %tmp190 to i32
+
+ST_2: tmp188 (865)  [1/1] 1.39ns  loc: correlator.cpp:262
+.preheader653.0:34  %tmp188 = add i32 %tmp189, %tmp190_cast
+
+ST_2: p_Val2_3_7 (866)  [1/1] 1.39ns  loc: correlator.cpp:262
+.preheader653.0:35  %p_Val2_3_7 = add i32 %tmp185, %tmp188
+
+
+ <State 3>: 1.73ns
+ST_3: StgValue_588 (297)  [1/1] 1.73ns
+.preheader.0:36  br label %.loopexit
+
+ST_3: StgValue_589 (335)  [1/1] 1.73ns
+.preheader625.0:36  br label %.loopexit
+
+ST_3: StgValue_590 (373)  [1/1] 1.73ns
+.preheader627.0:36  br label %.loopexit
+
+ST_3: StgValue_591 (411)  [1/1] 1.73ns
+.preheader629.0:36  br label %.loopexit
+
+ST_3: StgValue_592 (449)  [1/1] 1.73ns
+.preheader631.0:36  br label %.loopexit
+
+ST_3: StgValue_593 (487)  [1/1] 1.73ns
+.preheader633.0:36  br label %.loopexit
+
+ST_3: StgValue_594 (525)  [1/1] 1.73ns
+.preheader635.0:36  br label %.loopexit
+
+ST_3: StgValue_595 (563)  [1/1] 1.73ns
+.preheader637.0:36  br label %.loopexit
+
+ST_3: StgValue_596 (601)  [1/1] 1.73ns
+.preheader639.0:36  br label %.loopexit
+
+ST_3: StgValue_597 (639)  [1/1] 1.73ns
+.preheader641.0:36  br label %.loopexit
+
+ST_3: StgValue_598 (677)  [1/1] 1.73ns
+.preheader643.0:36  br label %.loopexit
+
+ST_3: StgValue_599 (715)  [1/1] 1.73ns
+.preheader645.0:36  br label %.loopexit
+
+ST_3: StgValue_600 (753)  [1/1] 1.73ns
+.preheader647.0:36  br label %.loopexit
+
+ST_3: StgValue_601 (791)  [1/1] 1.73ns
+.preheader649.0:36  br label %.loopexit
+
+ST_3: StgValue_602 (829)  [1/1] 1.73ns
+.preheader651.0:36  br label %.loopexit
+
+ST_3: StgValue_603 (867)  [1/1] 1.73ns
+.preheader653.0:36  br label %.loopexit
+
+
+ <State 4>: 3.47ns
+ST_4: p_Val2_s (869)  [1/1] 0.00ns  loc: correlator.cpp:412
+.loopexit:0  %p_Val2_s = phi i32 [ 0, %0 ], [ %p_Val2_93_7, %.preheader.0 ], [ %p_Val2_87_7, %.preheader625.0 ], [ %p_Val2_81_7, %.preheader627.0 ], [ %p_Val2_75_7, %.preheader629.0 ], [ %p_Val2_69_7, %.preheader631.0 ], [ %p_Val2_63_7, %.preheader633.0 ], [ %p_Val2_57_7, %.preheader635.0 ], [ %p_Val2_51_7, %.preheader637.0 ], [ %p_Val2_45_7, %.preheader639.0 ], [ %p_Val2_39_7, %.preheader641.0 ], [ %p_Val2_33_7, %.preheader643.0 ], [ %p_Val2_27_7, %.preheader645.0 ], [ %p_Val2_21_7, %.preheader647.0 ], [ %p_Val2_15_7, %.preheader649.0 ], [ %p_Val2_9_7, %.preheader651.0 ], [ %p_Val2_3_7, %.preheader653.0 ]
+
+ST_4: p_Val2_1 (870)  [1/1] 0.00ns  loc: correlator.cpp:410
+.loopexit:1  %p_Val2_1 = phi i32 [ 0, %0 ], [ %p_Val2_96_s, %.preheader.0 ], [ %p_Val2_90_s, %.preheader625.0 ], [ %p_Val2_84_s, %.preheader627.0 ], [ %p_Val2_78_s, %.preheader629.0 ], [ %p_Val2_72_s, %.preheader631.0 ], [ %p_Val2_66_s, %.preheader633.0 ], [ %p_Val2_60_s, %.preheader635.0 ], [ %p_Val2_54_s, %.preheader637.0 ], [ %p_Val2_48_s, %.preheader639.0 ], [ %p_Val2_42_s, %.preheader641.0 ], [ %p_Val2_36_s, %.preheader643.0 ], [ %p_Val2_30_s, %.preheader645.0 ], [ %p_Val2_24_s, %.preheader647.0 ], [ %p_Val2_18_s, %.preheader649.0 ], [ %p_Val2_12_s, %.preheader651.0 ], [ %p_Val2_6_s, %.preheader653.0 ]
+
+ST_4: tmp_s (871)  [1/1] 2.08ns  loc: correlator.cpp:418
+.loopexit:2  %tmp_s = icmp sgt i32 %p_Val2_1, %p_Val2_s
+
+ST_4: p_Val2_s_4 (872)  [1/1] 1.73ns  loc: correlator.cpp:421
+.loopexit:3  %p_Val2_s_4 = sub i32 %p_Val2_s, %p_Val2_1
+
+ST_4: p_Val2_2 (873)  [1/1] 1.73ns  loc: correlator.cpp:419
+.loopexit:4  %p_Val2_2 = sub i32 %p_Val2_1, %p_Val2_s
+
+ST_4: tmp_1 (874)  [1/1] 1.40ns  loc: correlator.cpp:418
+.loopexit:5  %tmp_1 = select i1 %tmp_s, i32 %p_Val2_2, i32 %p_Val2_s_4
+
+
+ <State 5>: 3.35ns
+ST_5: OP1_V_cast (875)  [1/1] 0.00ns  loc: correlator.cpp:423
+.loopexit:6  %OP1_V_cast = sext i32 %tmp_1 to i42
+
+ST_5: p_Val2_3 (876)  [5/5] 3.35ns  loc: correlator.cpp:423
+.loopexit:7  %p_Val2_3 = mul i42 %OP1_V_cast, %OP1_V_cast
+
+
+ <State 6>: 3.35ns
+ST_6: p_Val2_3 (876)  [4/5] 3.35ns  loc: correlator.cpp:423
+.loopexit:7  %p_Val2_3 = mul i42 %OP1_V_cast, %OP1_V_cast
+
+
+ <State 7>: 3.35ns
+ST_7: p_Val2_3 (876)  [3/5] 3.35ns  loc: correlator.cpp:423
+.loopexit:7  %p_Val2_3 = mul i42 %OP1_V_cast, %OP1_V_cast
+
+
+ <State 8>: 3.35ns
+ST_8: p_Val2_3 (876)  [2/5] 3.35ns  loc: correlator.cpp:423
+.loopexit:7  %p_Val2_3 = mul i42 %OP1_V_cast, %OP1_V_cast
+
+
+ <State 9>: 3.35ns
+ST_9: p_Val2_3 (876)  [1/5] 3.35ns  loc: correlator.cpp:423
+.loopexit:7  %p_Val2_3 = mul i42 %OP1_V_cast, %OP1_V_cast
+
+ST_9: res_V (877)  [1/1] 0.00ns  loc: correlator.cpp:423
+.loopexit:8  %res_V = call i32 @_ssdm_op_PartSelect.i32.i42.i32.i32(i42 %p_Val2_3, i32 10, i32 41)
+
+ST_9: StgValue_617 (878)  [1/1] 0.00ns  loc: correlator.cpp:424
+.loopexit:9  ret i32 %res_V
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15_V_1_11') on static variable 'cor_phaseClass15_V_1' [283]  (0 ns)
+	'add' operation ('tmp11', correlator.cpp:412) [291]  (1.69 ns)
+	'add' operation ('tmp10', correlator.cpp:412) [293]  (1.69 ns)
+
+ <State 2>: 4.16ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15_V_1_6', correlator.cpp:412) on static variable 'cor_phaseClass15_V_14' [262]  (0 ns)
+	'add' operation ('tmp1', correlator.cpp:410) [275]  (1.39 ns)
+	'add' operation ('tmp', correlator.cpp:410) [276]  (1.39 ns)
+	'add' operation ('p_Val2_96_s', correlator.cpp:410) [280]  (1.39 ns)
+
+ <State 3>: 1.73ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('__Val2__', correlator.cpp:412) with incoming values : ('p_Val2_93_7', correlator.cpp:412) ('p_Val2_87_7', correlator.cpp:402) ('p_Val2_81_7', correlator.cpp:392) ('p_Val2_75_7', correlator.cpp:382) ('p_Val2_69_7', correlator.cpp:372) ('p_Val2_63_7', correlator.cpp:362) ('p_Val2_57_7', correlator.cpp:352) ('p_Val2_51_7', correlator.cpp:342) ('p_Val2_45_7', correlator.cpp:332) ('p_Val2_39_7', correlator.cpp:322) ('p_Val2_33_7', correlator.cpp:312) ('p_Val2_27_7', correlator.cpp:302) ('p_Val2_21_7', correlator.cpp:292) ('p_Val2_15_7', correlator.cpp:282) ('p_Val2_9_7', correlator.cpp:272) ('p_Val2_3_7', correlator.cpp:262) [869]  (1.73 ns)
+
+ <State 4>: 3.47ns
+The critical path consists of the following:
+	'phi' operation ('__Val2__', correlator.cpp:412) with incoming values : ('p_Val2_93_7', correlator.cpp:412) ('p_Val2_87_7', correlator.cpp:402) ('p_Val2_81_7', correlator.cpp:392) ('p_Val2_75_7', correlator.cpp:382) ('p_Val2_69_7', correlator.cpp:372) ('p_Val2_63_7', correlator.cpp:362) ('p_Val2_57_7', correlator.cpp:352) ('p_Val2_51_7', correlator.cpp:342) ('p_Val2_45_7', correlator.cpp:332) ('p_Val2_39_7', correlator.cpp:322) ('p_Val2_33_7', correlator.cpp:312) ('p_Val2_27_7', correlator.cpp:302) ('p_Val2_21_7', correlator.cpp:292) ('p_Val2_15_7', correlator.cpp:282) ('p_Val2_9_7', correlator.cpp:272) ('p_Val2_3_7', correlator.cpp:262) [869]  (0 ns)
+	'icmp' operation ('tmp_s', correlator.cpp:418) [871]  (2.08 ns)
+	'select' operation ('tmp_1', correlator.cpp:418) [874]  (1.4 ns)
+
+ <State 5>: 3.35ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', correlator.cpp:423) [876]  (3.35 ns)
+
+ <State 6>: 3.35ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', correlator.cpp:423) [876]  (3.35 ns)
+
+ <State 7>: 3.35ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', correlator.cpp:423) [876]  (3.35 ns)
+
+ <State 8>: 3.35ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', correlator.cpp:423) [876]  (3.35 ns)
+
+ <State 9>: 3.35ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', correlator.cpp:423) [876]  (3.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

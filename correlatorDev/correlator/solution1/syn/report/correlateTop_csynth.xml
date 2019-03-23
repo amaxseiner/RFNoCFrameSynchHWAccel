@@ -9,8 +9,8 @@
 <ProductFamily>kintex7</ProductFamily>
 <Part>xc7k160tfbg484-1</Part>
 <TopModelName>correlateTop</TopModelName>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
+<TargetClockPeriod>5.00</TargetClockPeriod>
+<ClockUncertainty>0.62</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
 </UserAssignments>
 
@@ -18,25 +18,25 @@
 <PipelineType>function</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.87</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.16</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>5</Best-caseLatency>
-<Average-caseLatency>5</Average-caseLatency>
-<Worst-caseLatency>5</Worst-caseLatency>
-<PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>6</PipelineDepth>
-<Interval-min>1</Interval-min>
-<Interval-max>1</Interval-max>
+<Best-caseLatency>13</Best-caseLatency>
+<Average-caseLatency>13</Average-caseLatency>
+<Worst-caseLatency>13</Worst-caseLatency>
+<PipelineInitiationInterval>10</PipelineInitiationInterval>
+<PipelineDepth>14</PipelineDepth>
+<Interval-min>10</Interval-min>
+<Interval-max>10</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP48E>4</DSP48E>
-<FF>1744</FF>
-<LUT>1019</LUT>
+<FF>20714</FF>
+<LUT>10123</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>

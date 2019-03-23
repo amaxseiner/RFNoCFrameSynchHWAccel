@@ -44217,10 +44217,6 @@ switch(currentState) {
    loadCount = 0;
    phaseClass=0;
    currentState = ST_LOAD;
-   for(int i = 0;i<16;i++){
-    struct phase temp;
-    cor.phaseArray[i] = temp;
-   }
   }
  break;
  case ST_LOAD: // whenever there is valid input data, shift it in
@@ -44266,112 +44262,112 @@ _ssdm_Unroll(0,0,0, "");
  phaseClass0[a] = phaseClass0[a-1];
   }
   phaseClass0[0] = newValue;
-  break;/*
-	case 1:
-		SHIFT_DATA1: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass1[a] = phaseClass1[a-1];
-		}
-		phaseClass1[0] = newValue;
-		break;
-	case 2:
-		SHIFT_DATA2: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass2[a] = phaseClass2[a-1];
-		}
-		phaseClass2[0] = newValue;
-		break;
-	case 3:
-		SHIFT_DATA3: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass3[a] = phaseClass3[a-1];
-		}
-		phaseClass3[0] = newValue;
-		break;
-	case 4:
-		SHIFT_DATA4: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass4[a] = phaseClass4[a-1];
-		}
-		phaseClass4[0] = newValue;
-		break;
-	case 5:
-		SHIFT_DATA5: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass5[a] = phaseClass5[a-1];
-		}
-		phaseClass5[0] = newValue;
-		break;
-	case 6:
-		SHIFT_DATA6: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass6[a] = phaseClass6[a-1];
-		}
-		phaseClass6[0] = newValue;
-		break;
-	case 7:
-		SHIFT_DATA7: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass7[a] = phaseClass7[a-1];
-		}
-		phaseClass7[0] = newValue;
-		break;
-	case 8:
-		SHIFT_DATA8: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass8[a] = phaseClass8[a-1];
-		}
-		phaseClass8[0] = newValue;
-		break;
-	case 9:
-		SHIFT_DATA9: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass9[a] = phaseClass9[a-1];
-		}
-		phaseClass9[0] = newValue;
-		break;
-	case 10:
-		SHIFT_DATA10: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass10[a] = phaseClass10[a-1];
-		}
-		phaseClass10[0] = newValue;
-		break;
-	case 11:
-		SHIFT_DATA11: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass11[a] = phaseClass11[a-1];
-		}
-		phaseClass11[0] = newValue;
-		break;
-	case 12:
-		SHIFT_DATA12: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass12[a] = phaseClass12[a-1];
-		}
-		phaseClass12[0] = newValue;
-		break;
-	case 13:
-		SHIFT_DATA13: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass13[a] = phaseClass13[a-1];
-		}
-		phaseClass13[0] = newValue;
-		break;
-	case 14:
-		SHIFT_DATA14: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass14[a] = phaseClass14[a-1];
-		}
-		phaseClass14[0] = newValue;
-		break;
-	case 15:
-		SHIFT_DATA15: for(int a = windowSize-1;a>0;a--){
-			#pragma HLS UNROLL
-			phaseClass15[a] = phaseClass15[a-1];
-		}
-		phaseClass15[0] = newValue;
-		break;*/
+  break;
+ case 1:
+  SHIFT_DATA1: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass1[a] = phaseClass1[a-1];
+  }
+  phaseClass1[0] = newValue;
+  break;
+ case 2:
+  SHIFT_DATA2: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass2[a] = phaseClass2[a-1];
+  }
+  phaseClass2[0] = newValue;
+  break;
+ case 3:
+  SHIFT_DATA3: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass3[a] = phaseClass3[a-1];
+  }
+  phaseClass3[0] = newValue;
+  break;
+ case 4:
+  SHIFT_DATA4: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass4[a] = phaseClass4[a-1];
+  }
+  phaseClass4[0] = newValue;
+  break;
+ case 5:
+  SHIFT_DATA5: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass5[a] = phaseClass5[a-1];
+  }
+  phaseClass5[0] = newValue;
+  break;
+ case 6:
+  SHIFT_DATA6: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass6[a] = phaseClass6[a-1];
+  }
+  phaseClass6[0] = newValue;
+  break;
+ case 7:
+  SHIFT_DATA7: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass7[a] = phaseClass7[a-1];
+  }
+  phaseClass7[0] = newValue;
+  break;
+ case 8:
+  SHIFT_DATA8: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass8[a] = phaseClass8[a-1];
+  }
+  phaseClass8[0] = newValue;
+  break;
+ case 9:
+  SHIFT_DATA9: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass9[a] = phaseClass9[a-1];
+  }
+  phaseClass9[0] = newValue;
+  break;
+ case 10:
+  SHIFT_DATA10: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass10[a] = phaseClass10[a-1];
+  }
+  phaseClass10[0] = newValue;
+  break;
+ case 11:
+  SHIFT_DATA11: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass11[a] = phaseClass11[a-1];
+  }
+  phaseClass11[0] = newValue;
+  break;
+ case 12:
+  SHIFT_DATA12: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass12[a] = phaseClass12[a-1];
+  }
+  phaseClass12[0] = newValue;
+  break;
+ case 13:
+  SHIFT_DATA13: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass13[a] = phaseClass13[a-1];
+  }
+  phaseClass13[0] = newValue;
+  break;
+ case 14:
+  SHIFT_DATA14: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass14[a] = phaseClass14[a-1];
+  }
+  phaseClass14[0] = newValue;
+  break;
+ case 15:
+  SHIFT_DATA15: for(int a = 16 -1;a>0;a--){
+_ssdm_Unroll(0,0,0, "");
+ phaseClass15[a] = phaseClass15[a-1];
+  }
+  phaseClass15[0] = newValue;
+  break;
  }
  /*
 	SHIFT_DATA: for(int a = windowSize-1;a>0;a--){
@@ -44403,157 +44399,157 @@ _ssdm_Unroll(0,0,0, "");
     corHelperINeg = corHelperINeg + (phaseClass0[a]);
    }
   }
- break;/*
-	case 1:
-		correlateData1: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass1[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass1[a]);
-			}
-		}
-	break;
-	case 2:
-		correlateData2: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass2[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass2[a]);
-			}
-		}
-	break;
-	case 3:
-		correlateData3: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass3[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass3[a]);
-			}
-		}
-	break;
-	case 4:
-		correlateData4: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass4[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass4[a]);
-			}
-		}
-	break;
-	case 5:
-		correlateData5: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass5[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass5[a]);
-			}
-		}
-	break;
-	case 6:
-		correlateData6: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass6[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass6[a]);
-			}
-		}
-	break;
-	case 7:
-		correlateData7: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass7[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass7[a]);
-			}
-		}
-	break;
-	case 8:
-		correlateData8: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass8[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass8[a]);
-			}
-		}
-	break;
-	case 9:
-		correlateData9: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass9[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass9[a]);
-			}
-		}
-	break;
-	case 10:
-		correlateData10: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass10[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass10[a]);
-			}
-		}
-	break;
-	case 11:
-		correlateData11: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass11[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass11[a]);
-			}
-		}
-	break;
-	case 12:
-		correlateData12: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass12[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass12[a]);
-			}
-		}
-	break;
-	case 13:
-		correlateData13: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass13[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass13[a]);
-			}
-		}
-	break;
-	case 14:
-		correlateData14: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass14[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass14[a]);
-			}
-		}
-	break;
-	case 15:
-		correlateData15: for(int a =windowSize-1;a>=0;a--){
-			#pragma HLS UNROLL
-			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass15[a]);
-			} else {
-				corHelperINeg = corHelperINeg + (phaseClass15[a]);
-			}
-		}
-	break;*/
+ break;
+ case 1:
+  correlateData1: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass1[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass1[a]);
+   }
+  }
+ break;
+ case 2:
+  correlateData2: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass2[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass2[a]);
+   }
+  }
+ break;
+ case 3:
+  correlateData3: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass3[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass3[a]);
+   }
+  }
+ break;
+ case 4:
+  correlateData4: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass4[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass4[a]);
+   }
+  }
+ break;
+ case 5:
+  correlateData5: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass5[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass5[a]);
+   }
+  }
+ break;
+ case 6:
+  correlateData6: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass6[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass6[a]);
+   }
+  }
+ break;
+ case 7:
+  correlateData7: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass7[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass7[a]);
+   }
+  }
+ break;
+ case 8:
+  correlateData8: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass8[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass8[a]);
+   }
+  }
+ break;
+ case 9:
+  correlateData9: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass9[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass9[a]);
+   }
+  }
+ break;
+ case 10:
+  correlateData10: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass10[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass10[a]);
+   }
+  }
+ break;
+ case 11:
+  correlateData11: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass11[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass11[a]);
+   }
+  }
+ break;
+ case 12:
+  correlateData12: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass12[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass12[a]);
+   }
+  }
+ break;
+ case 13:
+  correlateData13: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass13[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass13[a]);
+   }
+  }
+ break;
+ case 14:
+  correlateData14: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass14[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass14[a]);
+   }
+  }
+ break;
+ case 15:
+  correlateData15: for(int a =16 -1;a>=0;a--){
+_ssdm_Unroll(0,0,0, "");
+ if(corrSeq[a] == 1){
+    corHelperIPos = corHelperIPos + (phaseClass15[a]);
+   } else {
+    corHelperINeg = corHelperINeg + (phaseClass15[a]);
+   }
+  }
+ break;
  }
 
  if(corHelperIPos > corHelperINeg){

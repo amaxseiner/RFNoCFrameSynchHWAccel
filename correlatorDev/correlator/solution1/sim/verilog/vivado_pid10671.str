@@ -159,3 +159,19 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 329, 183); // n:a (JVi
 selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 304, 185); // n:a (JViewport:JComponent, cg:JFrame)
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_UPDATE_COMMANDS
+// [GUI Memory]: 60 MB (+265kb) [00:09:17]
+// [GUI Memory]: 63 MB (+90kb) [00:12:27]
+// [GUI Memory]: 66 MB (+230kb) [00:19:17]
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 36 MB. Current time: 3/22/19 8:24:06 PM EDT
+// [GUI Memory]: 70 MB (+213kb) [00:34:32]
+// [GUI Memory]: 74 MB (+453kb) [00:43:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 32 MB. Current time: 3/22/19 8:54:06 PM EDT
+// [GUI Memory]: 78 MB (+373kb) [01:10:57]
+// [GUI Memory]: 82 MB (+222kb) [01:28:40]
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 32 MB. Current time: 3/22/19 9:24:06 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 33 MB. Current time: 3/22/19 9:54:06 PM EDT
+// [GUI Memory]: 87 MB (+1005kb) [02:13:01]
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 33 MB. Current time: 3/22/19 10:24:06 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 32 MB. Current time: 3/22/19 10:54:06 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 32 MB. Current time: 3/22/19 11:24:06 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 984 MB. GUI used memory: 32 MB. Current time: 3/22/19 11:54:06 PM EDT

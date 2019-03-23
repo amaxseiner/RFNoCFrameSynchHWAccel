@@ -80,10 +80,6 @@ switch(currentState) {
 			loadCount = 0;
 			phaseClass=0;
 			currentState = ST_LOAD;
-			for(int i = 0;i<16;i++){
-				struct phase temp;
-				cor.phaseArray[i] = temp;
-			}
 		}
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
@@ -129,7 +125,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
 			phaseClass0[a] = phaseClass0[a-1];
 		}
 		phaseClass0[0] = newValue;
-		break;/*
+		break;
 	case 1:
 		SHIFT_DATA1: for(int a = windowSize-1;a>0;a--){
 			#pragma HLS UNROLL
@@ -234,7 +230,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
 			phaseClass15[a] = phaseClass15[a-1];
 		}
 		phaseClass15[0] = newValue;
-		break;*/
+		break;
 	}
 	/*
 	SHIFT_DATA: for(int a = windowSize-1;a>0;a--){
@@ -266,7 +262,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
 				corHelperINeg = corHelperINeg + (phaseClass0[a]);
 			}
 		}
-	break;/*
+	break;
 	case 1:
 		correlateData1: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
@@ -416,7 +412,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
 				corHelperINeg = corHelperINeg + (phaseClass15[a]);
 			}
 		}
-	break;*/
+	break;
 	}
 
 	if(corHelperIPos > corHelperINeg){
