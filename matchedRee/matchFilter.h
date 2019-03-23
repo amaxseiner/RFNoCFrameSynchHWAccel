@@ -156,8 +156,8 @@ public:
 		for(int b = 0; b<128; b++){
 			inI.V = (in[b].data.range(31,16));
 			inQ.V = (in[b].data.range(15,0));
-			tempI = tempI + inI;
-			tempQ = tempQ + inQ;
+			tempI = tempI + (inI*preamble[b]);
+			tempQ = tempQ + (inQ*preamble[b]);
 		}
 		out.data.range(31,16)=tempI.V;
 		out.data.range(15,0)=tempQ.V;
