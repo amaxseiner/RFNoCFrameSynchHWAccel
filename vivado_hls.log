@@ -1,88 +1,66 @@
-INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'lance' on host 'lancecomp' (Windows NT_amd64 version 6.2) on Sat Mar 09 18:41:29 -0500 2019
-INFO: [HLS 200-10] In directory 'D:/SeniorProject/RFNoCFrameSynchHWAccel'
-INFO: [HLS 200-10] Opening project 'D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee'.
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'alex' on host 'alex-ThinkPad-W530' (Linux_x86_64 version 4.15.0-46-generic) on Sat Mar 23 11:59:05 EDT 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/alex/Documents/RFNoCFrameSynchHWAccel'
+INFO: [HLS 200-10] Opening project '/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee'.
+INFO: [HLS 200-10] Adding design file 'matchedRee/tb_output.txt' to the project
+INFO: [HLS 200-10] Adding design file 'matchedRee/tb_input.txt' to the project
 INFO: [HLS 200-10] Adding design file 'matchedRee/results.csv' to the project
-INFO: [HLS 200-10] Adding design file 'matchedRee/matcherSim.h' to the project
-INFO: [HLS 200-10] Adding design file 'matchedRee/matched.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'matchedRee/matchFilter.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'matchedRee/inputCorrr.dat' to the project
-INFO: [HLS 200-10] Adding test bench file 'matchedRee/matcherTB.cpp' to the project
-INFO: [HLS 200-10] Opening solution 'D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Adding test bench file 'matchedRee/tb_main.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/alex/Documents/RFNoCFrameSynchHWAccel/matchedRee/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-INFO: [HLS 200-10] Analyzing design file 'matchedRee/matched.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ...
 WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 96.547 ; gain = 46.730
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 96.582 ; gain = 46.766
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:30 ; elapsed = 00:00:14 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 1586 ; free virtual = 5641
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:31 ; elapsed = 00:00:15 . Memory (MB): peak = 366.848 ; gain = 13.375 ; free physical = 1578 ; free virtual = 5641
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 113.734 ; gain = 63.918
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 367.301 ; gain = 13.828 ; free physical = 1560 ; free virtual = 5631
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 122.160 ; gain = 72.344
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'MatcherRee' (matchedRee/matched.cpp:29).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA' (matchedRee/matched.cpp:82) in function 'MatcherRee' completely.
-INFO: [XFORM 203-501] Unrolling loop 'CAL_MATCH' (matchedRee/matched.cpp:90) in function 'MatcherRee' completely.
-INFO: [XFORM 203-101] Partitioning array 'buffI.V'  in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'buffQ.V'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:19) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 494.844 ; gain = 141.371 ; free physical = 1553 ; free virtual = 5624
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data.V' (matchedRee/matchFilter.cpp:4).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data.V' (matchedRee/matchFilter.cpp:4).
 INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
-INFO: [XFORM 203-11] Balancing expressions in function 'MatcherRee' (matchedRee/matched.cpp:29)...7 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 152.941 ; gain = 103.125
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 153.773 ; gain = 103.957
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:19) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:17 . Memory (MB): peak = 495.266 ; gain = 141.793 ; free physical = 1518 ; free virtual = 5597
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:18 . Memory (MB): peak = 495.266 ; gain = 141.793 ; free physical = 1509 ; free virtual = 5594
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'MatcherRee' ...
+INFO: [HLS 200-10] Synthesizing 'matchFilter' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Implementing module 'MatcherRee' 
+INFO: [HLS 200-42] -- Implementing module 'matchFilter'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'MatcherRee'.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 15.233 seconds; current allocated memory: 105.750 MB.
+INFO: [HLS 200-111]  Elapsed time: 17.89 seconds; current allocated memory: 85.802 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 106.017 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 86.058 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'MatcherRee' 
+INFO: [HLS 200-10] -- Generating RTL for module 'matchFilter'
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/i_data_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/i_data_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/o_data_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/o_data_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/start_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'MatcherRee' to 'ap_ctrl_none'.
-WARNING: [RTGEN 206-101] Register 'currentState' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_13' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_0' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_0' is power-on initialization.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'MatcherRee'.
-INFO: [HLS 200-111]  Elapsed time: 0.238 seconds; current allocated memory: 106.652 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 153.773 ; gain = 103.957
-INFO: [SYSC 207-301] Generating SystemC RTL for MatcherRee.
-INFO: [VHDL 208-304] Generating VHDL RTL for MatcherRee.
-INFO: [VLOG 209-307] Generating Verilog RTL for MatcherRee.
-INFO: [HLS 200-112] Total elapsed time: 16.551 seconds; peak allocated memory: 106.652 MB.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/in_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/in_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/out_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/out_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matchFilter' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_data_V' to 'matchFilter_buffIbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_last_V' to 'matchFilter_buffIcud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matchFilter'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 86.691 MB.
+INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIbkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIcud_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 495.266 ; gain = 141.793 ; free physical = 1503 ; free virtual = 5594
+INFO: [SYSC 207-301] Generating SystemC RTL for matchFilter.
+INFO: [VHDL 208-304] Generating VHDL RTL for matchFilter.
+INFO: [VLOG 209-307] Generating Verilog RTL for matchFilter.
+INFO: [HLS 200-112] Total elapsed time: 18.67 seconds; peak allocated memory: 86.691 MB.
