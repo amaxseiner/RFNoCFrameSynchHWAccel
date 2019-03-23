@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'shiftPhaseClass'" level="0">
-<item name = "Date">Fri Mar 22 22:30:21 2019
+<item name = "Date">Sat Mar 23 12:45:55 2019
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 2.51, 0.62</column>
+<column name="ap_clk">5.00, 1.15, 0.62</column>
 </table>
 </item>
 </section>
@@ -334,6 +334,7 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_ready">out, 1, ap_ctrl_hs, shiftPhaseClass, return value</column>
 <column name="newValue_V">in, 21, ap_none, newValue_V, scalar</column>
 <column name="phaseClass_V">in, 4, ap_none, phaseClass_V, scalar</column>
 <column name="cor_phaseClass0_V_14_i">in, 32, ap_ovld, cor_phaseClass0_V_14, pointer</column>

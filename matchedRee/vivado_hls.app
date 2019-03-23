@@ -6,11 +6,11 @@
     </Simulation>
     <files xmlns="">
         <file name="../tb_main.cpp" sc="0" tb="1" cflags=" "/>
-        <file name="matchedRee/tb_output.txt" sc="0" tb="false" cflags=""/>
-        <file name="matchedRee/tb_input.txt" sc="0" tb="false" cflags=""/>
-        <file name="matchedRee/results.csv" sc="0" tb="false" cflags=""/>
-        <file name="matchedRee/matchFilter.cpp" sc="0" tb="false" cflags=""/>
         <file name="matchedRee/inputCorrr.dat" sc="0" tb="false" cflags=""/>
+        <file name="matchedRee/matchFilter.cpp" sc="0" tb="false" cflags=""/>
+        <file name="matchedRee/results.csv" sc="0" tb="false" cflags=""/>
+        <file name="matchedRee/tb_input.txt" sc="0" tb="false" cflags=""/>
+        <file name="matchedRee/tb_output.txt" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

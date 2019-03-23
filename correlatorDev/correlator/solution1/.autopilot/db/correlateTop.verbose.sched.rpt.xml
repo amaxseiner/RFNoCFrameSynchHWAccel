@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Fri Mar 22 22:30:20 2019
+<item name = "Date">Sat Mar 23 12:45:54 2019
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.16, 0.62</column>
+<column name="ap_clk">5.00, 4.26, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">13, 13, 10, 10, function</column>
+<column name="">14, 14, 11, 11, function</column>
 </table>
 </item>
 <item name = "Detail">

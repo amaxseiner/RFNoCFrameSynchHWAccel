@@ -1,7 +1,13 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <checksum>
+        <value string="false"/>
+    </checksum>
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
     <config>
         <schedule model="correlateTop"/>
         <config_rtl encoding="onehot" header="" prefix="" reset="state" reset_async="0" reset_level="high"/>
@@ -10,6 +16,8 @@
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/null/null</Platform>
+            <Platform>xilinx/kintex7/kintex7</Platform>
+            <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -45,8 +53,8 @@
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
-    <Simulation>
-        <SimFlow askAgain="true" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim">
+    <Simulation argv="">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="true" compileChoice="gcc" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="xsim" ldflags="" mflags="" compiledLibrary="">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -63,11 +71,8 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/null/null"/>
-        <library value="xilinx/kintex7/kintex7" name="DefaultPlatform"/>
-        <library value="xilinx/kintex7/kintex7_fpv6" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
+        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
-    <clockList>
-        <clock name="default" default="false" period="5"/>
-    </clockList>
 </solution>
 

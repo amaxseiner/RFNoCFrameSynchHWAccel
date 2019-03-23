@@ -18,4 +18,3 @@ axis_fixed buffIn[128];
 	buffIn[0] = *in;
 	*out = filterff.convol(buffIn);
 }
-

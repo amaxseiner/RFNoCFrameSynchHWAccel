@@ -12,22 +12,19 @@
     "Package": "fbg484",
     "Speed": "-1"
   },
-  "HlsSolution": {
-    "Config": [
+  "HlsSolution": {"Config": [
       "config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level=high",
       "config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0"
-    ],
-    "Directives": ["unroll correlator\/SHIFT_DATA0 {} {}"]
-  },
+    ]},
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "10",
+    "ClockPeriod": "5",
     "IsCombLogic": "0",
-    "II": "3",
-    "Latency": "6",
-    "Uncertainty": "1.25"
+    "II": "11",
+    "Latency": "14",
+    "Uncertainty": "0.625"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -114,15 +111,6 @@
         "TLAST": "1"
       }
     },
-    "phaseClass_V": {
-      "type": "data",
-      "dir": "in",
-      "width": "4",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "4"
-        }}
-    },
     "start_V": {
       "type": "data",
       "dir": "in",
@@ -180,10 +168,6 @@
       "dir": "in",
       "width": "1",
       "isVector": "true"
-    },
-    "phaseClass_V": {
-      "dir": "in",
-      "width": "4"
     }
   },
   "CPorts": {
@@ -198,23 +182,17 @@
     "o_data_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "5"
+      "firstOutLatency": "13"
     },
     "o_data_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "5"
+      "firstOutLatency": "13"
     },
     "start_V": {
       "interfaceRef": "start_V",
       "dir": "in",
       "dataWidth": "1",
-      "handshakeRef": "ap_none"
-    },
-    "phaseClass_V": {
-      "interfaceRef": "phaseClass_V",
-      "dir": "in",
-      "dataWidth": "4",
       "handshakeRef": "ap_none"
     }
   },
@@ -224,11 +202,11 @@
       "Instances": [
         {
           "ModuleName": "correlator",
-          "InstanceName": "grp_correlator_fu_602"
+          "InstanceName": "grp_correlator_fu_612"
         },
         {
           "ModuleName": "shiftPhaseClass",
-          "InstanceName": "StgValue_21_shiftPhaseClass_fu_1119"
+          "InstanceName": "StgValue_28_shiftPhaseClass_fu_1129"
         }
       ]
     },
@@ -243,8 +221,8 @@
           "PipelineType": "function"
         },
         "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
+          "Target": "5.00",
+          "Uncertainty": "0.62",
           "Estimate": "1.15"
         },
         "Area": {
@@ -256,51 +234,51 @@
       },
       "correlator": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
           "PipelineII": "1",
-          "PipelineDepth": "2",
+          "PipelineDepth": "9",
           "PipelineType": "function"
         },
         "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.21"
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "4.26"
         },
         "Area": {
-          "DSP48E": "1",
-          "FF": "32",
-          "LUT": "4509",
-          "BRAM_18K": "0"
+          "BRAM_18K": "0",
+          "DSP48E": "4",
+          "FF": "12496",
+          "LUT": "7894"
         }
       },
       "correlateTop": {
         "Latency": {
-          "LatencyBest": "6",
-          "LatencyAvg": "6",
-          "LatencyWorst": "6",
-          "PipelineII": "3",
-          "PipelineDepth": "7",
+          "LatencyBest": "14",
+          "LatencyAvg": "14",
+          "LatencyWorst": "14",
+          "PipelineII": "11",
+          "PipelineDepth": "15",
           "PipelineType": "function"
         },
         "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.21"
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "4.26"
         },
         "Area": {
-          "DSP48E": "1",
-          "FF": "4338",
-          "LUT": "7074",
-          "BRAM_18K": "0"
+          "BRAM_18K": "0",
+          "DSP48E": "4",
+          "FF": "20252",
+          "LUT": "10553"
         }
       }
     }
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-16 13:33:40 EDT",
+    "Time": "2019-03-23 12:46:00 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

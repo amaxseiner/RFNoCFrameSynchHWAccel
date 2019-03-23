@@ -3,7 +3,10 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;command 'ap_source' returned error code&#xA;    while executing&#xA;&quot;source /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="correlator" solutionName="solution1" date="2019-03-23T12:46:18.936-0400"/>
+        <logs message="ERROR: [COSIM 212-345] Cosim only supports the following 'ap_ctrl_none' designs: (1) combinational designs; (2) pipelined design with task inteveral of 1; (3) designs with array streaming or hls_stream or AXI4 stream ports." projectName="correlator" solutionName="solution1" date="2019-03-23T12:46:18.901-0400"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>
@@ -12,24 +15,27 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:22.461-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.654-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.647-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.644-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.637-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.634-0400" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'call' operation ('op_V_assign', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:20.626-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' (correlator.cpp:255:21) into correlator." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:19.319-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' (correlator.cpp:121:3) into shiftPhaseClass." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:18.314-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'i_data.data.V' (correlator.cpp:12)." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:17.564-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'o_data.data.V' (correlator.cpp:12)." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:17.512-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Function 'correlator' does not exist in any synthesis source file." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:16.581-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:16.558-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:07.451-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:07.268-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find library '/opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-03-22T22:30:07.028-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:57.660-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.749-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.739-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.729-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.720-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.710-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.702-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'call' operation ('__Val2__', correlator.cpp:96) to 'correlator' and 'call' operation (correlator.cpp:95) to 'shiftPhaseClass'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:54.690-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' to 'correlator' (correlator.cpp:256:21)" projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:53.012-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' to 'shiftPhaseClass' (correlator.cpp:122:3)" projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:51.370-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'i_data.data.V' (correlator.cpp:12)." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:49.600-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'o_data.data.V' (correlator.cpp:12)." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:49.487-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:46.267-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:30.691-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:30.418-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/opt/Xilinx/Vivado/2017.4/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:45:30.065-0400" type="Warning"/>
       </synLog>
-      <simLog/>
+      <simLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:46:18.092-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/opt/Xilinx/Vivado/2017.4/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-03-23T12:46:17.903-0400" type="Warning"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>

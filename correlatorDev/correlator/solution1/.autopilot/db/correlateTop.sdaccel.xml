@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Fri Mar 22 22:30:23 2019
+<item name = "Date">Sat Mar 23 12:45:58 2019
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -16,22 +16,22 @@
 <item name = "Target clock period (ns)">5.00</item>
 <item name = "Clock uncertainty (ns)">0.62</item>
 <item name = "Target initiation interval">1</item>
-<item name = "Estimated clock period (ns)">4.16</item>
+<item name = "Estimated clock period (ns)">4.26</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">13, 13, 10, 10, function</column>
+<column name="">14, 14, 11, 11, function</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_correlator_fu_602">correlator, 8, 8, 1, 1, function</column>
-<column name="StgValue_27_shiftPhaseClass_fu_1119">shiftPhaseClass, 0, 0, 1, 1, function</column>
+<column name="grp_correlator_fu_612">correlator, 8, 8, 1, 1, function</column>
+<column name="StgValue_28_shiftPhaseClass_fu_1129">shiftPhaseClass, 0, 0, 1, 1, function</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,22 +48,22 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 118, 134</column>
+<column name="Expression">-, -, 0, 314</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, 4, 12873, 9807</column>
+<column name="Instance">0, 4, 12496, 10054</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 182</column>
-<column name="Register">-, -, 7723, -</column>
+<column name="Multiplexer">-, -, -, 185</column>
+<column name="Register">-, -, 7756, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
-<specialColumn name="Utilization (%)">0, ~0, 10, 9</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 9, 10</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_correlator_fu_602">correlator, 0, 4, 12873, 7647</column>
-<column name="StgValue_27_shiftPhaseClass_fu_1119">shiftPhaseClass, 0, 0, 0, 2160</column>
+<column name="grp_correlator_fu_612">correlator, 0, 4, 12496, 7894</column>
+<column name="StgValue_28_shiftPhaseClass_fu_1129">shiftPhaseClass, 0, 0, 0, 2160</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -80,37 +80,39 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="tmp_4_fu_1712_p2">+, 0, 101, 37, 1, 32</column>
-<column name="tmp_6_fu_1685_p2">+, 0, 17, 9, 1, 4</column>
-<column name="ap_block_pp0_stage2_flag00001001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_pp0_stage3_flag00001001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_pp0_stage3_flag00011001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state13_io">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state3_pp0_stage2_iter0">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_2384">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_2388">and, 0, 0, 2, 1, 1</column>
-<column name="i_data_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="i_data_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="i_data_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="i_data_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_data_V_1_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_data_V_1_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_last_V_1_load_A">and, 0, 0, 2, 1, 1</column>
-<column name="o_data_last_V_1_load_B">and, 0, 0, 2, 1, 1</column>
-<column name="i_data_data_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
-<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
-<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
-<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
-<column name="tmp_7_fu_1724_p2">icmp, 0, 0, 16, 32, 25</column>
-<column name="ap_block_pp0_stage2_flag00011001">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state14_pp0_stage3_iter1">or, 0, 0, 2, 1, 1</column>
-<column name="o_data_data_V_tmp_fu_1729_p3">select, 0, 0, 32, 1, 32</column>
-<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ret_V_1_fu_1744_p2">+, 0, 0, 29, 1, 22</column>
+<column name="tmp_4_fu_1772_p2">+, 0, 0, 39, 1, 32</column>
+<column name="tmp_6_fu_1695_p2">+, 0, 0, 13, 1, 4</column>
+<column name="ap_block_pp0_stage2_01001">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_pp0_stage3_01001">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_pp0_stage3_11001">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state14_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state3_pp0_stage2_iter0">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_2434">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_2438">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="tmp_s_fu_1739_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="ap_block_pp0_stage2_11001">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state15_pp0_stage3_iter1">or, 0, 0, 8, 1, 1</column>
+<column name="p_1_fu_1756_p3">select, 0, 0, 22, 1, 22</column>
+<column name="p_s_fu_1749_p3">select, 0, 0, 22, 1, 22</column>
+<column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">50, 11, 1, 11</column>
+<column name="ap_NS_fsm">53, 12, 1, 12</column>
 <column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="i_data_data_V_0_data_out">9, 2, 32, 64</column>
 <column name="i_data_data_V_0_state">15, 3, 2, 6</column>
@@ -127,9 +129,9 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">10, 0, 10, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter1_currentState_load_reg_1738">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter1_currentState_load_reg_1784">1, 0, 1, 0</column>
 <column name="cor_phaseClass0_V_0">21, 0, 21, 0</column>
 <column name="cor_phaseClass0_V_1">21, 0, 21, 0</column>
 <column name="cor_phaseClass0_V_10">32, 0, 32, 0</column>
@@ -387,7 +389,7 @@
 <column name="cor_phaseClass9_V_8">32, 0, 32, 0</column>
 <column name="cor_phaseClass9_V_9">32, 0, 32, 0</column>
 <column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_1738">1, 0, 1, 0</column>
+<column name="currentState_load_reg_1784">1, 0, 1, 0</column>
 <column name="i_data_data_V_0_payload_A">32, 0, 32, 0</column>
 <column name="i_data_data_V_0_payload_B">32, 0, 32, 0</column>
 <column name="i_data_data_V_0_sel_rd">1, 0, 1, 0</column>
@@ -398,6 +400,7 @@
 <column name="i_data_last_V_0_sel_rd">1, 0, 1, 0</column>
 <column name="i_data_last_V_0_sel_wr">1, 0, 1, 0</column>
 <column name="i_data_last_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_last_V_tmp_reg_1794">1, 0, 1, 0</column>
 <column name="loadCount_V">32, 0, 32, 0</column>
 <column name="o_data_data_V_1_payload_A">32, 0, 32, 0</column>
 <column name="o_data_data_V_1_payload_B">32, 0, 32, 0</column>
@@ -409,10 +412,11 @@
 <column name="o_data_last_V_1_sel_rd">1, 0, 1, 0</column>
 <column name="o_data_last_V_1_sel_wr">1, 0, 1, 0</column>
 <column name="o_data_last_V_1_state">2, 0, 2, 0</column>
-<column name="o_data_last_V_tmp_reg_1748">1, 0, 1, 0</column>
-<column name="op_V_assign_reg_1757">32, 0, 32, 0</column>
+<column name="p_Val2_2_reg_1803">32, 0, 32, 0</column>
 <column name="phaseClass_V">4, 0, 4, 0</column>
-<column name="phaseClass_V_load_reg_1742">4, 0, 4, 0</column>
+<column name="phaseClass_V_load_reg_1788">4, 0, 4, 0</column>
+<column name="ret_V_reg_1808">22, 0, 22, 0</column>
+<column name="tmp_192_reg_1815">10, 0, 10, 0</column>
 </table>
 </item>
 </section>
@@ -438,10 +442,10 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">4.16</item>
+<item name = "Max Delay">4.26</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'op_V_assign', correlator.cpp:96">call, 4.16, 4.16, -, -, -, -, -, -, -, -, -, correlator, -</column>
+<column name="'__Val2__', correlator.cpp:96">call, 4.26, 4.26, -, -, -, -, -, -, -, -, -, correlator, -</column>
 </table>
 </item>
 </section>

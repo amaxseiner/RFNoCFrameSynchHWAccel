@@ -11,24 +11,24 @@
 <Name>matchFilter</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>5.33</EstimatedClockPeriod>
+<TargetClockPeriod>5.00</TargetClockPeriod>
+<ClockUncertainty>0.62</ClockUncertainty>
+<EstimatedClockPeriod>4.15</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>514</Best-caseLatency>
-<Average-caseLatency>514</Average-caseLatency>
-<Worst-caseLatency>514</Worst-caseLatency>
-<PipelineInitiationInterval>515</PipelineInitiationInterval>
+<Best-caseLatency>641</Best-caseLatency>
+<Average-caseLatency>641</Average-caseLatency>
+<Worst-caseLatency>641</Worst-caseLatency>
+<PipelineInitiationInterval>642</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
 <TripCount>127</TripCount>
-<Latency>254</Latency>
-<IterationLatency>2</IterationLatency>
-<PipelineDepth>2</PipelineDepth>
+<Latency>381</Latency>
+<IterationLatency>3</IterationLatency>
+<PipelineDepth>3</PipelineDepth>
 </Loop1>
 <Loop2>
 <Name>Loop 2</Name>
@@ -42,8 +42,8 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>1</BRAM_18K>
-<FF>381</FF>
-<LUT>371</LUT>
+<FF>254</FF>
+<LUT>486</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>

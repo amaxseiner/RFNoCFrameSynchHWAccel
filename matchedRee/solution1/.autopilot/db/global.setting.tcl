@@ -1,6 +1,6 @@
 
 set TopModule "matchFilter"
-set ClockPeriod "10.000000"
+set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}

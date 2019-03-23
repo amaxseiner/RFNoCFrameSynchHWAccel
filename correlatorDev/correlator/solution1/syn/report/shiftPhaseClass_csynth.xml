@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.2</Version>
+<Version>2017.4</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -18,7 +18,7 @@
 <PipelineType>function</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>2.51</EstimatedClockPeriod>
+<EstimatedClockPeriod>1.15</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -48,6 +48,17 @@
 </AreaEstimates>
 
 <InterfaceSummary>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>shiftPhaseClass</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
 <RtlPorts>
 <name>newValue_V</name>
 <Object>newValue_V</Object>

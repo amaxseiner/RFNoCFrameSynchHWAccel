@@ -7,10 +7,16 @@ set op mul
 set stage_num 5
 set max_latency -1
 set registered_input 1
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
 set in0_width 32
 set in0_signed 1
 set in1_width 32
 set in1_signed 1
+set ce_width 1
+set ce_signed 0
 set out_width 42
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
@@ -24,10 +30,16 @@ eval "ap_gen_simcore_mul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
 }"
 } else {
@@ -55,10 +67,16 @@ eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
 }"
 } else {
@@ -77,7 +95,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 260 \
+    id 261 \
     name phaseClass_V \
     type other \
     dir I \
@@ -92,7 +110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 261 \
+    id 262 \
     name cor_phaseClass15_V_15 \
     type other \
     dir I \
@@ -107,7 +125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 262 \
+    id 263 \
     name cor_phaseClass15_V_14 \
     type other \
     dir I \
@@ -122,7 +140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 263 \
+    id 264 \
     name cor_phaseClass15_V_13 \
     type other \
     dir I \
@@ -137,7 +155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 264 \
+    id 265 \
     name cor_phaseClass15_V_12 \
     type other \
     dir I \
@@ -152,7 +170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 265 \
+    id 266 \
     name cor_phaseClass15_V_11 \
     type other \
     dir I \
@@ -167,7 +185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 266 \
+    id 267 \
     name cor_phaseClass15_V_10 \
     type other \
     dir I \
@@ -182,7 +200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 267 \
+    id 268 \
     name cor_phaseClass15_V_9 \
     type other \
     dir I \
@@ -197,7 +215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 268 \
+    id 269 \
     name cor_phaseClass15_V_8 \
     type other \
     dir I \
@@ -212,7 +230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 269 \
+    id 270 \
     name cor_phaseClass15_V_7 \
     type other \
     dir I \
@@ -227,7 +245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 270 \
+    id 271 \
     name cor_phaseClass15_V_6 \
     type other \
     dir I \
@@ -242,7 +260,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 271 \
+    id 272 \
     name cor_phaseClass15_V_5 \
     type other \
     dir I \
@@ -257,7 +275,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 272 \
+    id 273 \
     name cor_phaseClass15_V_4 \
     type other \
     dir I \
@@ -272,7 +290,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 273 \
+    id 274 \
     name cor_phaseClass15_V_3 \
     type other \
     dir I \
@@ -287,7 +305,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 274 \
+    id 275 \
     name cor_phaseClass15_V_2 \
     type other \
     dir I \
@@ -302,7 +320,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 275 \
+    id 276 \
     name cor_phaseClass15_V_1 \
     type other \
     dir I \
@@ -317,7 +335,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 276 \
+    id 277 \
     name cor_phaseClass15_V_0 \
     type other \
     dir I \
@@ -332,7 +350,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 277 \
+    id 278 \
     name cor_phaseClass14_V_15 \
     type other \
     dir I \
@@ -347,7 +365,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 278 \
+    id 279 \
     name cor_phaseClass14_V_14 \
     type other \
     dir I \
@@ -362,7 +380,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 279 \
+    id 280 \
     name cor_phaseClass14_V_13 \
     type other \
     dir I \
@@ -377,7 +395,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 280 \
+    id 281 \
     name cor_phaseClass14_V_12 \
     type other \
     dir I \
@@ -392,7 +410,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 281 \
+    id 282 \
     name cor_phaseClass14_V_11 \
     type other \
     dir I \
@@ -407,7 +425,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 282 \
+    id 283 \
     name cor_phaseClass14_V_10 \
     type other \
     dir I \
@@ -422,7 +440,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 283 \
+    id 284 \
     name cor_phaseClass14_V_9 \
     type other \
     dir I \
@@ -437,7 +455,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 284 \
+    id 285 \
     name cor_phaseClass14_V_8 \
     type other \
     dir I \
@@ -452,7 +470,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 285 \
+    id 286 \
     name cor_phaseClass14_V_7 \
     type other \
     dir I \
@@ -467,7 +485,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 286 \
+    id 287 \
     name cor_phaseClass14_V_6 \
     type other \
     dir I \
@@ -482,7 +500,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 287 \
+    id 288 \
     name cor_phaseClass14_V_5 \
     type other \
     dir I \
@@ -497,7 +515,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 288 \
+    id 289 \
     name cor_phaseClass14_V_4 \
     type other \
     dir I \
@@ -512,7 +530,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 289 \
+    id 290 \
     name cor_phaseClass14_V_3 \
     type other \
     dir I \
@@ -527,7 +545,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 290 \
+    id 291 \
     name cor_phaseClass14_V_2 \
     type other \
     dir I \
@@ -542,7 +560,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 291 \
+    id 292 \
     name cor_phaseClass14_V_1 \
     type other \
     dir I \
@@ -557,7 +575,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 292 \
+    id 293 \
     name cor_phaseClass14_V_0 \
     type other \
     dir I \
@@ -572,7 +590,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 293 \
+    id 294 \
     name cor_phaseClass13_V_15 \
     type other \
     dir I \
@@ -587,7 +605,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 294 \
+    id 295 \
     name cor_phaseClass13_V_14 \
     type other \
     dir I \
@@ -602,7 +620,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 295 \
+    id 296 \
     name cor_phaseClass13_V_13 \
     type other \
     dir I \
@@ -617,7 +635,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 296 \
+    id 297 \
     name cor_phaseClass13_V_12 \
     type other \
     dir I \
@@ -632,7 +650,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 297 \
+    id 298 \
     name cor_phaseClass13_V_11 \
     type other \
     dir I \
@@ -647,7 +665,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 298 \
+    id 299 \
     name cor_phaseClass13_V_10 \
     type other \
     dir I \
@@ -662,7 +680,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 299 \
+    id 300 \
     name cor_phaseClass13_V_9 \
     type other \
     dir I \
@@ -677,7 +695,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 300 \
+    id 301 \
     name cor_phaseClass13_V_8 \
     type other \
     dir I \
@@ -692,7 +710,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 301 \
+    id 302 \
     name cor_phaseClass13_V_7 \
     type other \
     dir I \
@@ -707,7 +725,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 302 \
+    id 303 \
     name cor_phaseClass13_V_6 \
     type other \
     dir I \
@@ -722,7 +740,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 303 \
+    id 304 \
     name cor_phaseClass13_V_5 \
     type other \
     dir I \
@@ -737,7 +755,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 304 \
+    id 305 \
     name cor_phaseClass13_V_4 \
     type other \
     dir I \
@@ -752,7 +770,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 305 \
+    id 306 \
     name cor_phaseClass13_V_3 \
     type other \
     dir I \
@@ -767,7 +785,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 306 \
+    id 307 \
     name cor_phaseClass13_V_2 \
     type other \
     dir I \
@@ -782,7 +800,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 307 \
+    id 308 \
     name cor_phaseClass13_V_1 \
     type other \
     dir I \
@@ -797,7 +815,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 308 \
+    id 309 \
     name cor_phaseClass13_V_0 \
     type other \
     dir I \
@@ -812,7 +830,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 309 \
+    id 310 \
     name cor_phaseClass12_V_15 \
     type other \
     dir I \
@@ -827,7 +845,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 310 \
+    id 311 \
     name cor_phaseClass12_V_14 \
     type other \
     dir I \
@@ -842,7 +860,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 311 \
+    id 312 \
     name cor_phaseClass12_V_13 \
     type other \
     dir I \
@@ -857,7 +875,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 312 \
+    id 313 \
     name cor_phaseClass12_V_12 \
     type other \
     dir I \
@@ -872,7 +890,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 313 \
+    id 314 \
     name cor_phaseClass12_V_11 \
     type other \
     dir I \
@@ -887,7 +905,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 314 \
+    id 315 \
     name cor_phaseClass12_V_10 \
     type other \
     dir I \
@@ -902,7 +920,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 315 \
+    id 316 \
     name cor_phaseClass12_V_9 \
     type other \
     dir I \
@@ -917,7 +935,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 316 \
+    id 317 \
     name cor_phaseClass12_V_8 \
     type other \
     dir I \
@@ -932,7 +950,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 317 \
+    id 318 \
     name cor_phaseClass12_V_7 \
     type other \
     dir I \
@@ -947,7 +965,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 318 \
+    id 319 \
     name cor_phaseClass12_V_6 \
     type other \
     dir I \
@@ -962,7 +980,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 319 \
+    id 320 \
     name cor_phaseClass12_V_5 \
     type other \
     dir I \
@@ -977,7 +995,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 320 \
+    id 321 \
     name cor_phaseClass12_V_4 \
     type other \
     dir I \
@@ -992,7 +1010,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 321 \
+    id 322 \
     name cor_phaseClass12_V_3 \
     type other \
     dir I \
@@ -1007,7 +1025,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 322 \
+    id 323 \
     name cor_phaseClass12_V_2 \
     type other \
     dir I \
@@ -1022,7 +1040,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 323 \
+    id 324 \
     name cor_phaseClass12_V_1 \
     type other \
     dir I \
@@ -1037,7 +1055,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 324 \
+    id 325 \
     name cor_phaseClass12_V_0 \
     type other \
     dir I \
@@ -1052,7 +1070,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 325 \
+    id 326 \
     name cor_phaseClass11_V_15 \
     type other \
     dir I \
@@ -1067,7 +1085,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 326 \
+    id 327 \
     name cor_phaseClass11_V_14 \
     type other \
     dir I \
@@ -1082,7 +1100,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 327 \
+    id 328 \
     name cor_phaseClass11_V_13 \
     type other \
     dir I \
@@ -1097,7 +1115,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 328 \
+    id 329 \
     name cor_phaseClass11_V_12 \
     type other \
     dir I \
@@ -1112,7 +1130,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 329 \
+    id 330 \
     name cor_phaseClass11_V_11 \
     type other \
     dir I \
@@ -1127,7 +1145,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 330 \
+    id 331 \
     name cor_phaseClass11_V_10 \
     type other \
     dir I \
@@ -1142,7 +1160,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 331 \
+    id 332 \
     name cor_phaseClass11_V_9 \
     type other \
     dir I \
@@ -1157,7 +1175,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 332 \
+    id 333 \
     name cor_phaseClass11_V_8 \
     type other \
     dir I \
@@ -1172,7 +1190,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 333 \
+    id 334 \
     name cor_phaseClass11_V_7 \
     type other \
     dir I \
@@ -1187,7 +1205,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 334 \
+    id 335 \
     name cor_phaseClass11_V_6 \
     type other \
     dir I \
@@ -1202,7 +1220,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 335 \
+    id 336 \
     name cor_phaseClass11_V_5 \
     type other \
     dir I \
@@ -1217,7 +1235,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 336 \
+    id 337 \
     name cor_phaseClass11_V_4 \
     type other \
     dir I \
@@ -1232,7 +1250,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 337 \
+    id 338 \
     name cor_phaseClass11_V_3 \
     type other \
     dir I \
@@ -1247,7 +1265,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 338 \
+    id 339 \
     name cor_phaseClass11_V_2 \
     type other \
     dir I \
@@ -1262,7 +1280,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 339 \
+    id 340 \
     name cor_phaseClass11_V_1 \
     type other \
     dir I \
@@ -1277,7 +1295,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 340 \
+    id 341 \
     name cor_phaseClass11_V_0 \
     type other \
     dir I \
@@ -1292,7 +1310,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 341 \
+    id 342 \
     name cor_phaseClass10_V_15 \
     type other \
     dir I \
@@ -1307,7 +1325,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 342 \
+    id 343 \
     name cor_phaseClass10_V_14 \
     type other \
     dir I \
@@ -1322,7 +1340,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 343 \
+    id 344 \
     name cor_phaseClass10_V_13 \
     type other \
     dir I \
@@ -1337,7 +1355,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 344 \
+    id 345 \
     name cor_phaseClass10_V_12 \
     type other \
     dir I \
@@ -1352,7 +1370,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 345 \
+    id 346 \
     name cor_phaseClass10_V_11 \
     type other \
     dir I \
@@ -1367,7 +1385,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 346 \
+    id 347 \
     name cor_phaseClass10_V_10 \
     type other \
     dir I \
@@ -1382,7 +1400,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 347 \
+    id 348 \
     name cor_phaseClass10_V_9 \
     type other \
     dir I \
@@ -1397,7 +1415,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 348 \
+    id 349 \
     name cor_phaseClass10_V_8 \
     type other \
     dir I \
@@ -1412,7 +1430,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 349 \
+    id 350 \
     name cor_phaseClass10_V_7 \
     type other \
     dir I \
@@ -1427,7 +1445,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 350 \
+    id 351 \
     name cor_phaseClass10_V_6 \
     type other \
     dir I \
@@ -1442,7 +1460,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 351 \
+    id 352 \
     name cor_phaseClass10_V_5 \
     type other \
     dir I \
@@ -1457,7 +1475,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 352 \
+    id 353 \
     name cor_phaseClass10_V_4 \
     type other \
     dir I \
@@ -1472,7 +1490,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 353 \
+    id 354 \
     name cor_phaseClass10_V_3 \
     type other \
     dir I \
@@ -1487,7 +1505,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 354 \
+    id 355 \
     name cor_phaseClass10_V_2 \
     type other \
     dir I \
@@ -1502,7 +1520,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 355 \
+    id 356 \
     name cor_phaseClass10_V_1 \
     type other \
     dir I \
@@ -1517,7 +1535,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 356 \
+    id 357 \
     name cor_phaseClass10_V_0 \
     type other \
     dir I \
@@ -1532,7 +1550,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 357 \
+    id 358 \
     name cor_phaseClass9_V_15 \
     type other \
     dir I \
@@ -1547,7 +1565,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 358 \
+    id 359 \
     name cor_phaseClass9_V_14 \
     type other \
     dir I \
@@ -1562,7 +1580,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 359 \
+    id 360 \
     name cor_phaseClass9_V_13 \
     type other \
     dir I \
@@ -1577,7 +1595,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 360 \
+    id 361 \
     name cor_phaseClass9_V_12 \
     type other \
     dir I \
@@ -1592,7 +1610,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 361 \
+    id 362 \
     name cor_phaseClass9_V_11 \
     type other \
     dir I \
@@ -1607,7 +1625,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 362 \
+    id 363 \
     name cor_phaseClass9_V_10 \
     type other \
     dir I \
@@ -1622,7 +1640,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 363 \
+    id 364 \
     name cor_phaseClass9_V_9 \
     type other \
     dir I \
@@ -1637,7 +1655,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 364 \
+    id 365 \
     name cor_phaseClass9_V_8 \
     type other \
     dir I \
@@ -1652,7 +1670,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 365 \
+    id 366 \
     name cor_phaseClass9_V_7 \
     type other \
     dir I \
@@ -1667,7 +1685,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 366 \
+    id 367 \
     name cor_phaseClass9_V_6 \
     type other \
     dir I \
@@ -1682,7 +1700,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 367 \
+    id 368 \
     name cor_phaseClass9_V_5 \
     type other \
     dir I \
@@ -1697,7 +1715,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 368 \
+    id 369 \
     name cor_phaseClass9_V_4 \
     type other \
     dir I \
@@ -1712,7 +1730,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 369 \
+    id 370 \
     name cor_phaseClass9_V_3 \
     type other \
     dir I \
@@ -1727,7 +1745,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 370 \
+    id 371 \
     name cor_phaseClass9_V_2 \
     type other \
     dir I \
@@ -1742,7 +1760,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 371 \
+    id 372 \
     name cor_phaseClass9_V_1 \
     type other \
     dir I \
@@ -1757,7 +1775,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 372 \
+    id 373 \
     name cor_phaseClass9_V_0 \
     type other \
     dir I \
@@ -1772,7 +1790,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 373 \
+    id 374 \
     name cor_phaseClass8_V_15 \
     type other \
     dir I \
@@ -1787,7 +1805,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 374 \
+    id 375 \
     name cor_phaseClass8_V_14 \
     type other \
     dir I \
@@ -1802,7 +1820,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 375 \
+    id 376 \
     name cor_phaseClass8_V_13 \
     type other \
     dir I \
@@ -1817,7 +1835,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 376 \
+    id 377 \
     name cor_phaseClass8_V_12 \
     type other \
     dir I \
@@ -1832,7 +1850,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 377 \
+    id 378 \
     name cor_phaseClass8_V_11 \
     type other \
     dir I \
@@ -1847,7 +1865,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 378 \
+    id 379 \
     name cor_phaseClass8_V_10 \
     type other \
     dir I \
@@ -1862,7 +1880,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 379 \
+    id 380 \
     name cor_phaseClass8_V_9 \
     type other \
     dir I \
@@ -1877,7 +1895,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 380 \
+    id 381 \
     name cor_phaseClass8_V_8 \
     type other \
     dir I \
@@ -1892,7 +1910,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 381 \
+    id 382 \
     name cor_phaseClass8_V_7 \
     type other \
     dir I \
@@ -1907,7 +1925,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 382 \
+    id 383 \
     name cor_phaseClass8_V_6 \
     type other \
     dir I \
@@ -1922,7 +1940,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 383 \
+    id 384 \
     name cor_phaseClass8_V_5 \
     type other \
     dir I \
@@ -1937,7 +1955,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 384 \
+    id 385 \
     name cor_phaseClass8_V_4 \
     type other \
     dir I \
@@ -1952,7 +1970,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 385 \
+    id 386 \
     name cor_phaseClass8_V_3 \
     type other \
     dir I \
@@ -1967,7 +1985,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 386 \
+    id 387 \
     name cor_phaseClass8_V_2 \
     type other \
     dir I \
@@ -1982,7 +2000,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 387 \
+    id 388 \
     name cor_phaseClass8_V_1 \
     type other \
     dir I \
@@ -1997,7 +2015,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 388 \
+    id 389 \
     name cor_phaseClass8_V_0 \
     type other \
     dir I \
@@ -2012,7 +2030,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 389 \
+    id 390 \
     name cor_phaseClass7_V_15 \
     type other \
     dir I \
@@ -2027,7 +2045,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 390 \
+    id 391 \
     name cor_phaseClass7_V_14 \
     type other \
     dir I \
@@ -2042,7 +2060,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 391 \
+    id 392 \
     name cor_phaseClass7_V_13 \
     type other \
     dir I \
@@ -2057,7 +2075,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 392 \
+    id 393 \
     name cor_phaseClass7_V_12 \
     type other \
     dir I \
@@ -2072,7 +2090,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 393 \
+    id 394 \
     name cor_phaseClass7_V_11 \
     type other \
     dir I \
@@ -2087,7 +2105,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 394 \
+    id 395 \
     name cor_phaseClass7_V_10 \
     type other \
     dir I \
@@ -2102,7 +2120,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 395 \
+    id 396 \
     name cor_phaseClass7_V_9 \
     type other \
     dir I \
@@ -2117,7 +2135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 396 \
+    id 397 \
     name cor_phaseClass7_V_8 \
     type other \
     dir I \
@@ -2132,7 +2150,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 397 \
+    id 398 \
     name cor_phaseClass7_V_7 \
     type other \
     dir I \
@@ -2147,7 +2165,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 398 \
+    id 399 \
     name cor_phaseClass7_V_6 \
     type other \
     dir I \
@@ -2162,7 +2180,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 399 \
+    id 400 \
     name cor_phaseClass7_V_5 \
     type other \
     dir I \
@@ -2177,7 +2195,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 400 \
+    id 401 \
     name cor_phaseClass7_V_4 \
     type other \
     dir I \
@@ -2192,7 +2210,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 401 \
+    id 402 \
     name cor_phaseClass7_V_3 \
     type other \
     dir I \
@@ -2207,7 +2225,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 402 \
+    id 403 \
     name cor_phaseClass7_V_2 \
     type other \
     dir I \
@@ -2222,7 +2240,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 403 \
+    id 404 \
     name cor_phaseClass7_V_1 \
     type other \
     dir I \
@@ -2237,7 +2255,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 404 \
+    id 405 \
     name cor_phaseClass7_V_0 \
     type other \
     dir I \
@@ -2252,7 +2270,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 405 \
+    id 406 \
     name cor_phaseClass6_V_15 \
     type other \
     dir I \
@@ -2267,7 +2285,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 406 \
+    id 407 \
     name cor_phaseClass6_V_14 \
     type other \
     dir I \
@@ -2282,7 +2300,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 407 \
+    id 408 \
     name cor_phaseClass6_V_13 \
     type other \
     dir I \
@@ -2297,7 +2315,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 408 \
+    id 409 \
     name cor_phaseClass6_V_12 \
     type other \
     dir I \
@@ -2312,7 +2330,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 409 \
+    id 410 \
     name cor_phaseClass6_V_11 \
     type other \
     dir I \
@@ -2327,7 +2345,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 410 \
+    id 411 \
     name cor_phaseClass6_V_10 \
     type other \
     dir I \
@@ -2342,7 +2360,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 411 \
+    id 412 \
     name cor_phaseClass6_V_9 \
     type other \
     dir I \
@@ -2357,7 +2375,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 412 \
+    id 413 \
     name cor_phaseClass6_V_8 \
     type other \
     dir I \
@@ -2372,7 +2390,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 413 \
+    id 414 \
     name cor_phaseClass6_V_7 \
     type other \
     dir I \
@@ -2387,7 +2405,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 414 \
+    id 415 \
     name cor_phaseClass6_V_6 \
     type other \
     dir I \
@@ -2402,7 +2420,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 415 \
+    id 416 \
     name cor_phaseClass6_V_5 \
     type other \
     dir I \
@@ -2417,7 +2435,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 416 \
+    id 417 \
     name cor_phaseClass6_V_4 \
     type other \
     dir I \
@@ -2432,7 +2450,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 417 \
+    id 418 \
     name cor_phaseClass6_V_3 \
     type other \
     dir I \
@@ -2447,7 +2465,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 418 \
+    id 419 \
     name cor_phaseClass6_V_2 \
     type other \
     dir I \
@@ -2462,7 +2480,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 419 \
+    id 420 \
     name cor_phaseClass6_V_1 \
     type other \
     dir I \
@@ -2477,7 +2495,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 420 \
+    id 421 \
     name cor_phaseClass6_V_0 \
     type other \
     dir I \
@@ -2492,7 +2510,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 421 \
+    id 422 \
     name cor_phaseClass5_V_15 \
     type other \
     dir I \
@@ -2507,7 +2525,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 422 \
+    id 423 \
     name cor_phaseClass5_V_14 \
     type other \
     dir I \
@@ -2522,7 +2540,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 423 \
+    id 424 \
     name cor_phaseClass5_V_13 \
     type other \
     dir I \
@@ -2537,7 +2555,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 424 \
+    id 425 \
     name cor_phaseClass5_V_12 \
     type other \
     dir I \
@@ -2552,7 +2570,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 425 \
+    id 426 \
     name cor_phaseClass5_V_11 \
     type other \
     dir I \
@@ -2567,7 +2585,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 426 \
+    id 427 \
     name cor_phaseClass5_V_10 \
     type other \
     dir I \
@@ -2582,7 +2600,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 427 \
+    id 428 \
     name cor_phaseClass5_V_9 \
     type other \
     dir I \
@@ -2597,7 +2615,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 428 \
+    id 429 \
     name cor_phaseClass5_V_8 \
     type other \
     dir I \
@@ -2612,7 +2630,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 429 \
+    id 430 \
     name cor_phaseClass5_V_7 \
     type other \
     dir I \
@@ -2627,7 +2645,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 430 \
+    id 431 \
     name cor_phaseClass5_V_6 \
     type other \
     dir I \
@@ -2642,7 +2660,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 431 \
+    id 432 \
     name cor_phaseClass5_V_5 \
     type other \
     dir I \
@@ -2657,7 +2675,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 432 \
+    id 433 \
     name cor_phaseClass5_V_4 \
     type other \
     dir I \
@@ -2672,7 +2690,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 433 \
+    id 434 \
     name cor_phaseClass5_V_3 \
     type other \
     dir I \
@@ -2687,7 +2705,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 434 \
+    id 435 \
     name cor_phaseClass5_V_2 \
     type other \
     dir I \
@@ -2702,7 +2720,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 435 \
+    id 436 \
     name cor_phaseClass5_V_1 \
     type other \
     dir I \
@@ -2717,7 +2735,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 436 \
+    id 437 \
     name cor_phaseClass5_V_0 \
     type other \
     dir I \
@@ -2732,7 +2750,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 437 \
+    id 438 \
     name cor_phaseClass4_V_15 \
     type other \
     dir I \
@@ -2747,7 +2765,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 438 \
+    id 439 \
     name cor_phaseClass4_V_14 \
     type other \
     dir I \
@@ -2762,7 +2780,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 439 \
+    id 440 \
     name cor_phaseClass4_V_13 \
     type other \
     dir I \
@@ -2777,7 +2795,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 440 \
+    id 441 \
     name cor_phaseClass4_V_12 \
     type other \
     dir I \
@@ -2792,7 +2810,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 441 \
+    id 442 \
     name cor_phaseClass4_V_11 \
     type other \
     dir I \
@@ -2807,7 +2825,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 442 \
+    id 443 \
     name cor_phaseClass4_V_10 \
     type other \
     dir I \
@@ -2822,7 +2840,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 443 \
+    id 444 \
     name cor_phaseClass4_V_9 \
     type other \
     dir I \
@@ -2837,7 +2855,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 444 \
+    id 445 \
     name cor_phaseClass4_V_8 \
     type other \
     dir I \
@@ -2852,7 +2870,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 445 \
+    id 446 \
     name cor_phaseClass4_V_7 \
     type other \
     dir I \
@@ -2867,7 +2885,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 446 \
+    id 447 \
     name cor_phaseClass4_V_6 \
     type other \
     dir I \
@@ -2882,7 +2900,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 447 \
+    id 448 \
     name cor_phaseClass4_V_5 \
     type other \
     dir I \
@@ -2897,7 +2915,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 448 \
+    id 449 \
     name cor_phaseClass4_V_4 \
     type other \
     dir I \
@@ -2912,7 +2930,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 449 \
+    id 450 \
     name cor_phaseClass4_V_3 \
     type other \
     dir I \
@@ -2927,7 +2945,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 450 \
+    id 451 \
     name cor_phaseClass4_V_2 \
     type other \
     dir I \
@@ -2942,7 +2960,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 451 \
+    id 452 \
     name cor_phaseClass4_V_1 \
     type other \
     dir I \
@@ -2957,7 +2975,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 452 \
+    id 453 \
     name cor_phaseClass4_V_0 \
     type other \
     dir I \
@@ -2972,7 +2990,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 453 \
+    id 454 \
     name cor_phaseClass3_V_15 \
     type other \
     dir I \
@@ -2987,7 +3005,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 454 \
+    id 455 \
     name cor_phaseClass3_V_14 \
     type other \
     dir I \
@@ -3002,7 +3020,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 455 \
+    id 456 \
     name cor_phaseClass3_V_13 \
     type other \
     dir I \
@@ -3017,7 +3035,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 456 \
+    id 457 \
     name cor_phaseClass3_V_12 \
     type other \
     dir I \
@@ -3032,7 +3050,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 457 \
+    id 458 \
     name cor_phaseClass3_V_11 \
     type other \
     dir I \
@@ -3047,7 +3065,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 458 \
+    id 459 \
     name cor_phaseClass3_V_10 \
     type other \
     dir I \
@@ -3062,7 +3080,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 459 \
+    id 460 \
     name cor_phaseClass3_V_9 \
     type other \
     dir I \
@@ -3077,7 +3095,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 460 \
+    id 461 \
     name cor_phaseClass3_V_8 \
     type other \
     dir I \
@@ -3092,7 +3110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 461 \
+    id 462 \
     name cor_phaseClass3_V_7 \
     type other \
     dir I \
@@ -3107,7 +3125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 462 \
+    id 463 \
     name cor_phaseClass3_V_6 \
     type other \
     dir I \
@@ -3122,7 +3140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 463 \
+    id 464 \
     name cor_phaseClass3_V_5 \
     type other \
     dir I \
@@ -3137,7 +3155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 464 \
+    id 465 \
     name cor_phaseClass3_V_4 \
     type other \
     dir I \
@@ -3152,7 +3170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 465 \
+    id 466 \
     name cor_phaseClass3_V_3 \
     type other \
     dir I \
@@ -3167,7 +3185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 466 \
+    id 467 \
     name cor_phaseClass3_V_2 \
     type other \
     dir I \
@@ -3182,7 +3200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 467 \
+    id 468 \
     name cor_phaseClass3_V_1 \
     type other \
     dir I \
@@ -3197,7 +3215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 468 \
+    id 469 \
     name cor_phaseClass3_V_0 \
     type other \
     dir I \
@@ -3212,7 +3230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 469 \
+    id 470 \
     name cor_phaseClass2_V_15 \
     type other \
     dir I \
@@ -3227,7 +3245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 470 \
+    id 471 \
     name cor_phaseClass2_V_14 \
     type other \
     dir I \
@@ -3242,7 +3260,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 471 \
+    id 472 \
     name cor_phaseClass2_V_13 \
     type other \
     dir I \
@@ -3257,7 +3275,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 472 \
+    id 473 \
     name cor_phaseClass2_V_12 \
     type other \
     dir I \
@@ -3272,7 +3290,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 473 \
+    id 474 \
     name cor_phaseClass2_V_11 \
     type other \
     dir I \
@@ -3287,7 +3305,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 474 \
+    id 475 \
     name cor_phaseClass2_V_10 \
     type other \
     dir I \
@@ -3302,7 +3320,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 475 \
+    id 476 \
     name cor_phaseClass2_V_9 \
     type other \
     dir I \
@@ -3317,7 +3335,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 476 \
+    id 477 \
     name cor_phaseClass2_V_8 \
     type other \
     dir I \
@@ -3332,7 +3350,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 477 \
+    id 478 \
     name cor_phaseClass2_V_7 \
     type other \
     dir I \
@@ -3347,7 +3365,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 478 \
+    id 479 \
     name cor_phaseClass2_V_6 \
     type other \
     dir I \
@@ -3362,7 +3380,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 479 \
+    id 480 \
     name cor_phaseClass2_V_5 \
     type other \
     dir I \
@@ -3377,7 +3395,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 480 \
+    id 481 \
     name cor_phaseClass2_V_4 \
     type other \
     dir I \
@@ -3392,7 +3410,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 481 \
+    id 482 \
     name cor_phaseClass2_V_3 \
     type other \
     dir I \
@@ -3407,7 +3425,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 482 \
+    id 483 \
     name cor_phaseClass2_V_2 \
     type other \
     dir I \
@@ -3422,7 +3440,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 483 \
+    id 484 \
     name cor_phaseClass2_V_1 \
     type other \
     dir I \
@@ -3437,7 +3455,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 484 \
+    id 485 \
     name cor_phaseClass2_V_0 \
     type other \
     dir I \
@@ -3452,7 +3470,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 485 \
+    id 486 \
     name cor_phaseClass1_V_15 \
     type other \
     dir I \
@@ -3467,7 +3485,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 486 \
+    id 487 \
     name cor_phaseClass1_V_14 \
     type other \
     dir I \
@@ -3482,7 +3500,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 487 \
+    id 488 \
     name cor_phaseClass1_V_13 \
     type other \
     dir I \
@@ -3497,7 +3515,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 488 \
+    id 489 \
     name cor_phaseClass1_V_12 \
     type other \
     dir I \
@@ -3512,7 +3530,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 489 \
+    id 490 \
     name cor_phaseClass1_V_11 \
     type other \
     dir I \
@@ -3527,7 +3545,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 490 \
+    id 491 \
     name cor_phaseClass1_V_10 \
     type other \
     dir I \
@@ -3542,7 +3560,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 491 \
+    id 492 \
     name cor_phaseClass1_V_9 \
     type other \
     dir I \
@@ -3557,7 +3575,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 492 \
+    id 493 \
     name cor_phaseClass1_V_8 \
     type other \
     dir I \
@@ -3572,7 +3590,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 493 \
+    id 494 \
     name cor_phaseClass1_V_7 \
     type other \
     dir I \
@@ -3587,7 +3605,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 494 \
+    id 495 \
     name cor_phaseClass1_V_6 \
     type other \
     dir I \
@@ -3602,7 +3620,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 495 \
+    id 496 \
     name cor_phaseClass1_V_5 \
     type other \
     dir I \
@@ -3617,7 +3635,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 496 \
+    id 497 \
     name cor_phaseClass1_V_4 \
     type other \
     dir I \
@@ -3632,7 +3650,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 497 \
+    id 498 \
     name cor_phaseClass1_V_3 \
     type other \
     dir I \
@@ -3647,7 +3665,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 498 \
+    id 499 \
     name cor_phaseClass1_V_2 \
     type other \
     dir I \
@@ -3662,7 +3680,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 499 \
+    id 500 \
     name cor_phaseClass1_V_1 \
     type other \
     dir I \
@@ -3677,7 +3695,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 500 \
+    id 501 \
     name cor_phaseClass1_V_0 \
     type other \
     dir I \
@@ -3692,7 +3710,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 501 \
+    id 502 \
     name cor_phaseClass0_V_15 \
     type other \
     dir I \
@@ -3707,7 +3725,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 502 \
+    id 503 \
     name cor_phaseClass0_V_14 \
     type other \
     dir I \
@@ -3722,7 +3740,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 503 \
+    id 504 \
     name cor_phaseClass0_V_13 \
     type other \
     dir I \
@@ -3737,7 +3755,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 504 \
+    id 505 \
     name cor_phaseClass0_V_12 \
     type other \
     dir I \
@@ -3752,7 +3770,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 505 \
+    id 506 \
     name cor_phaseClass0_V_11 \
     type other \
     dir I \
@@ -3767,7 +3785,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 506 \
+    id 507 \
     name cor_phaseClass0_V_10 \
     type other \
     dir I \
@@ -3782,7 +3800,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 507 \
+    id 508 \
     name cor_phaseClass0_V_9 \
     type other \
     dir I \
@@ -3797,7 +3815,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 508 \
+    id 509 \
     name cor_phaseClass0_V_8 \
     type other \
     dir I \
@@ -3812,7 +3830,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 509 \
+    id 510 \
     name cor_phaseClass0_V_7 \
     type other \
     dir I \
@@ -3827,7 +3845,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 510 \
+    id 511 \
     name cor_phaseClass0_V_6 \
     type other \
     dir I \
@@ -3842,7 +3860,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 511 \
+    id 512 \
     name cor_phaseClass0_V_5 \
     type other \
     dir I \
@@ -3857,7 +3875,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 512 \
+    id 513 \
     name cor_phaseClass0_V_4 \
     type other \
     dir I \
@@ -3872,7 +3890,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 513 \
+    id 514 \
     name cor_phaseClass0_V_3 \
     type other \
     dir I \
@@ -3887,7 +3905,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 514 \
+    id 515 \
     name cor_phaseClass0_V_2 \
     type other \
     dir I \
@@ -3902,7 +3920,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 515 \
+    id 516 \
     name cor_phaseClass0_V_1 \
     type other \
     dir I \
@@ -3917,7 +3935,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 516 \
+    id 517 \
     name cor_phaseClass0_V_0 \
     type other \
     dir I \

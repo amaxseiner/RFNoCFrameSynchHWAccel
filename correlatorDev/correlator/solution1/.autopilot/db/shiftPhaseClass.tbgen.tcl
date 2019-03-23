@@ -529,8 +529,9 @@ set C_modelArgMapList {[
  	{ "Name" : "cor_phaseClass15_V_1", "interface" : "wire", "bitwidth" : 21, "direction" : "READWRITE", "extern" : 0} , 
  	{ "Name" : "cor_phaseClass15_V_0", "interface" : "wire", "bitwidth" : 21, "direction" : "READWRITE", "extern" : 0} ]}
 # RTL Port declarations: 
-set portNum 754
+set portNum 755
 set portList { 
+	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ newValue_V sc_in sc_lv 21 signal 0 } 
 	{ phaseClass_V sc_in sc_lv 4 signal 1 } 
 	{ cor_phaseClass0_V_14_i sc_in sc_lv 32 signal 2 } 
@@ -1287,7 +1288,8 @@ set portList {
 	{ cor_phaseClass15_V_0_o_ap_vld sc_out sc_logic 1 outvld 257 } 
 }
 set NewPortList {[ 
-	{ "name": "newValue_V", "direction": "in", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "newValue_V", "role": "default" }} , 
+	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "newValue_V", "direction": "in", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "newValue_V", "role": "default" }} , 
  	{ "name": "phaseClass_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "phaseClass_V", "role": "default" }} , 
  	{ "name": "cor_phaseClass0_V_14_i", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "cor_phaseClass0_V_14", "role": "i" }} , 
  	{ "name": "cor_phaseClass0_V_14_o", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "cor_phaseClass0_V_14", "role": "o" }} , 
@@ -2045,8 +2047,8 @@ set NewPortList {[
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "shiftPhaseClass",
-		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "1",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
