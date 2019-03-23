@@ -100,15 +100,6 @@
         "TDATA": "32",
         "TLAST": "1"
       }
-    },
-    "start_V": {
-      "type": "data",
-      "dir": "in",
-      "width": "1",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
-        }}
     }
   },
   "RtlPorts": {
@@ -153,11 +144,6 @@
       "dir": "out",
       "width": "1",
       "isVector": "true"
-    },
-    "start_V": {
-      "dir": "in",
-      "width": "1",
-      "isVector": "true"
     }
   },
   "CPorts": {
@@ -178,12 +164,6 @@
       "interfaceRef": "o_data",
       "dir": "out",
       "firstOutLatency": "1"
-    },
-    "start_V": {
-      "interfaceRef": "start_V",
-      "dir": "in",
-      "dataWidth": "1",
-      "handshakeRef": "ap_none"
     }
   },
   "ModuleInfo": {
@@ -203,7 +183,7 @@
           "Estimate": "2.85"
         },
         "Area": {
-          "FF": "126",
+          "FF": "124",
           "LUT": "311",
           "BRAM_18K": "0",
           "DSP48E": "0"
@@ -212,7 +192,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-23 12:51:42 EDT",
+    "Time": "2019-03-23 16:09:22 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Sat Mar 23 12:51:42 2019
+* Date:           Sat Mar 23 16:09:21 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -54,9 +54,9 @@
 |Instance         |        -|      -|       -|       -|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|     123|
-|Register         |        -|      -|     126|       -|
+|Register         |        -|      -|     124|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      0|     126|     311|
+|Total            |        0|      0|     124|     311|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -80,12 +80,12 @@
     +----------------------------------+----------+-------+---+----+------------+------------+
     |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |tmp_4_fu_266_p2                   |     +    |      0|  0|  39|          32|           1|
-    |tmp_6_fu_239_p2                   |     +    |      0|  0|  13|           4|           1|
+    |tmp_4_fu_256_p2                   |     +    |      0|  0|  39|          32|           1|
+    |tmp_6_fu_229_p2                   |     +    |      0|  0|  13|           4|           1|
     |ap_block_state2_io                |    and   |      0|  0|   8|           1|           1|
     |ap_block_state2_pp0_stage0_iter1  |    and   |      0|  0|   8|           1|           1|
     |ap_block_state3_io                |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_340                  |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_328                  |    and   |      0|  0|   8|           1|           1|
     |i_data_last_V_0_load_A            |    and   |      0|  0|   8|           1|           1|
     |i_data_last_V_0_load_B            |    and   |      0|  0|   8|           1|           1|
     |o_data_data_V_1_load_A            |    and   |      0|  0|   8|           1|           1|
@@ -129,10 +129,9 @@
     |ap_CS_fsm                                   |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_currentState_load_reg_282  |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_start_V_read_reg_278       |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_currentState_load_reg_268  |   1|   0|    1|          0|
     |currentState                                |   1|   0|    1|          0|
-    |currentState_load_reg_282                   |   1|   0|    1|          0|
+    |currentState_load_reg_268                   |   1|   0|    1|          0|
     |i_data_data_V_0_state                       |   2|   0|    2|          0|
     |i_data_last_V_0_payload_A                   |   1|   0|    1|          0|
     |i_data_last_V_0_payload_B                   |   1|   0|    1|          0|
@@ -151,9 +150,8 @@
     |o_data_last_V_1_sel_wr                      |   1|   0|    1|          0|
     |o_data_last_V_1_state                       |   2|   0|    2|          0|
     |phaseClass_V                                |   4|   0|    4|          0|
-    |start_V_read_reg_278                        |   1|   0|    1|          0|
     +--------------------------------------------+----+----+-----+-----------+
-    |Total                                       | 126|   0|  126|          0|
+    |Total                                       | 124|   0|  124|          0|
     +--------------------------------------------+----+----+-----+-----------+
 
 
@@ -175,6 +173,5 @@
 |o_data_TVALID  | out |    1|     axis     | o_data_last_V |    pointer   |
 |o_data_TREADY  |  in |    1|     axis     | o_data_last_V |    pointer   |
 |o_data_TLAST   | out |    1|     axis     | o_data_last_V |    pointer   |
-|start_V        |  in |    1|    ap_none   |    start_V    |    scalar    |
 +---------------+-----+-----+--------------+---------------+--------------+
 

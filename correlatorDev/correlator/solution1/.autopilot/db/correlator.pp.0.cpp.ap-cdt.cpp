@@ -31784,7 +31784,7 @@ struct phase{
  cor_t phaseWindow[16];
 };
 #pragma empty_line
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start );
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data);
 #pragma empty_line
  class correlate{
  public:
@@ -31817,7 +31817,7 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -31884,11 +31884,10 @@ static cor_t out;
 #pragma empty_line
 switch(currentState) {
  case ST_IDLE:
-  if(start){
-   loadCount = 0;
-   phaseClass=0;
-   currentState = ST_LOAD;
-  }
+  loadCount = 0;
+  phaseClass=0;
+  currentState = ST_LOAD;
+#pragma empty_line
  break;
  case ST_LOAD:
 #pragma empty_line
@@ -31911,7 +31910,13 @@ switch(currentState) {
    phaseClass = phaseClass + 1;
   }
   o_data->data = phaseClass;
-#pragma line 114 "correlator.cpp"
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
   currentState = ST_LOAD;
 #pragma empty_line
  break;
@@ -31928,7 +31933,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
   }
   phaseClass0[0] = newValue;
   break;
-#pragma line 235 "correlator.cpp"
+#pragma line 233 "correlator.cpp"
  }
 #pragma empty_line
 #pragma empty_line
@@ -31942,7 +31947,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
  cor_t corHelperINeg,corHelperIPos,res;
  corHelperINeg = 0;
  corHelperIPos = 0;
-#pragma line 256 "correlator.cpp"
+#pragma line 254 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -31954,7 +31959,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
    }
   }
  break;
-#pragma line 417 "correlator.cpp"
+#pragma line 415 "correlator.cpp"
  }
 #pragma empty_line
  if(corHelperIPos > corHelperINeg){

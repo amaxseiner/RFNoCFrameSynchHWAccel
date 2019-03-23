@@ -21,7 +21,6 @@ int main(){
 	result << right << fixed << setbase(10) << setprecision(16);
 	rfnoc_axis axi;
 	rfnoc_axis axiOut;
-	correlateTop(&axi,&axiOut,1);
 	for(int a=0;a<4383;a++){
 		ap_uint<4> phaseClass = a%16;
 		inFile >> setw(16) >> test;

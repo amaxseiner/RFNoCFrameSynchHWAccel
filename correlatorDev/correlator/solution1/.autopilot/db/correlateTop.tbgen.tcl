@@ -1,8 +1,8 @@
 set C_TypeInfoList {{ 
-"correlateTop" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],{ "pointer": "0"}] }, {"o_data": [[],{ "pointer": "0"}] }, {"start": [[],"1"] }],[],""], 
-"0": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "2"]},{ "last": [[], "1"]}],""]}], 
-"2": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
-"1": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}]
+"correlateTop" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"i_data": [[],{ "pointer": "0"}] }, {"o_data": [[],{ "pointer": "0"}] }],[],""], 
+"0": [ "rfnoc_axis", {"struct": [[],[],[{ "data": [[], "1"]},{ "last": [[], "2"]}],""]}], 
+"1": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
+"2": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}]
 }}
 set moduleName correlateTop
 set isCombinational 0
@@ -20,16 +20,14 @@ set C_modelArgList {
 	{ i_data_last_V int 1 regular {axi_s 0 volatile  { i_data Last } }  }
 	{ o_data_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
-	{ start_V int 1 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "i_data_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "i_data.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "o_data_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "o_data.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "o_data_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "o_data.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "start_V", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "start.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
+ 	{ "Name" : "o_data_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "o_data.last.V","cData": "uint1","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 11
+set portNum 10
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -41,7 +39,6 @@ set portList {
 	{ o_data_TVALID sc_out sc_logic 1 outvld 3 } 
 	{ o_data_TREADY sc_in sc_logic 1 outacc 3 } 
 	{ o_data_TLAST sc_out sc_lv 1 signal 3 } 
-	{ start_V sc_in sc_lv 1 signal 4 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -53,8 +50,7 @@ set NewPortList {[
  	{ "name": "o_data_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "o_data_data_V", "role": "default" }} , 
  	{ "name": "o_data_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "o_data_last_V", "role": "default" }} , 
  	{ "name": "o_data_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "o_data_last_V", "role": "default" }} , 
- 	{ "name": "o_data_TLAST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "o_data_last_V", "role": "default" }} , 
- 	{ "name": "start_V", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "start_V", "role": "default" }}  ]}
+ 	{ "name": "o_data_TLAST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "o_data_last_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
@@ -74,7 +70,6 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "o_data_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "o_data_last_V", "Type" : "Axis", "Direction" : "O"},
-			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "phaseClass_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
@@ -96,7 +91,6 @@ set ArgLastReadFirstWriteLatency {
 		i_data_last_V {Type I LastRead 0 FirstWrite -1}
 		o_data_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_last_V {Type O LastRead -1 FirstWrite 1}
-		start_V {Type I LastRead 0 FirstWrite -1}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass_V {Type IO LastRead -1 FirstWrite -1}
 		loadCount_V {Type IO LastRead -1 FirstWrite -1}
@@ -127,7 +121,6 @@ set Spec2ImplPortList {
 	i_data_last_V { axis {  { i_data_TVALID in_vld 0 1 }  { i_data_TREADY in_acc 1 1 }  { i_data_TLAST in_data 0 1 } } }
 	o_data_data_V { axis {  { o_data_TDATA out_data 1 32 } } }
 	o_data_last_V { axis {  { o_data_TVALID out_vld 1 1 }  { o_data_TREADY out_acc 0 1 }  { o_data_TLAST out_data 1 1 } } }
-	start_V { ap_none {  { start_V in_data 0 1 } } }
 }
 
 set busDeadlockParameterList { 

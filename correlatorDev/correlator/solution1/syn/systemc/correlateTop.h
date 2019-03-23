@@ -15,7 +15,7 @@
 namespace ap_rtl {
 
 struct correlateTop : public sc_module {
-    // Port declarations 11
+    // Port declarations 10
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst_n;
     sc_in< sc_lv<32> > i_data_TDATA;
@@ -26,7 +26,6 @@ struct correlateTop : public sc_module {
     sc_out< sc_logic > o_data_TVALID;
     sc_in< sc_logic > o_data_TREADY;
     sc_out< sc_lv<1> > o_data_TLAST;
-    sc_in< sc_lv<1> > start_V;
 
 
     // Module declarations
@@ -94,30 +93,26 @@ struct correlateTop : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0;
-    sc_signal< sc_lv<1> > currentState_load_reg_282;
+    sc_signal< sc_lv<1> > currentState_load_reg_268;
     sc_signal< sc_logic > o_data_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
-    sc_signal< sc_lv<1> > ap_reg_pp0_iter1_currentState_load_reg_282;
-    sc_signal< sc_lv<1> > start_V_read_read_fu_76_p2;
-    sc_signal< sc_lv<1> > start_V_read_reg_278;
+    sc_signal< sc_lv<1> > ap_reg_pp0_iter1_currentState_load_reg_268;
     sc_signal< bool > ap_block_state1_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state2_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state2_io;
     sc_signal< bool > ap_block_state3_pp0_stage0_iter2;
     sc_signal< bool > ap_block_state3_io;
     sc_signal< bool > ap_block_pp0_stage0_11001;
-    sc_signal< sc_lv<1> > ap_reg_pp0_iter1_start_V_read_reg_278;
-    sc_signal< sc_lv<1> > currentState_load_load_fu_106_p1;
-    sc_signal< sc_lv<32> > o_data_data_V_tmp_fu_251_p1;
+    sc_signal< sc_lv<32> > o_data_data_V_tmp_fu_241_p1;
     sc_signal< bool > ap_block_pp0_stage0_subdone;
-    sc_signal< sc_lv<4> > tmp_6_fu_239_p2;
-    sc_signal< sc_lv<32> > tmp_4_fu_266_p2;
+    sc_signal< sc_lv<4> > tmp_6_fu_229_p2;
+    sc_signal< sc_lv<32> > tmp_4_fu_256_p2;
     sc_signal< bool > ap_block_pp0_stage0_01001;
     sc_signal< sc_lv<1> > ap_NS_fsm;
     sc_signal< sc_logic > ap_reset_idle_pp0;
     sc_signal< sc_logic > ap_idle_pp0;
     sc_signal< sc_logic > ap_enable_pp0;
-    sc_signal< bool > ap_condition_340;
+    sc_signal< bool > ap_condition_328;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     static const sc_lv<1> ap_ST_fsm_pp0_stage0;
@@ -145,12 +140,11 @@ struct correlateTop : public sc_module {
     void thread_ap_block_state2_pp0_stage0_iter1();
     void thread_ap_block_state3_io();
     void thread_ap_block_state3_pp0_stage0_iter2();
-    void thread_ap_condition_340();
+    void thread_ap_condition_328();
     void thread_ap_enable_pp0();
     void thread_ap_idle_pp0();
     void thread_ap_reset_idle_pp0();
     void thread_ap_rst_n_inv();
-    void thread_currentState_load_load_fu_106_p1();
     void thread_i_data_TDATA_blk_n();
     void thread_i_data_TREADY();
     void thread_i_data_data_V_0_ack_out();
@@ -178,7 +172,7 @@ struct correlateTop : public sc_module {
     void thread_o_data_data_V_1_state_cmp_full();
     void thread_o_data_data_V_1_vld_in();
     void thread_o_data_data_V_1_vld_out();
-    void thread_o_data_data_V_tmp_fu_251_p1();
+    void thread_o_data_data_V_tmp_fu_241_p1();
     void thread_o_data_last_V_1_ack_in();
     void thread_o_data_last_V_1_ack_out();
     void thread_o_data_last_V_1_data_out();
@@ -188,9 +182,8 @@ struct correlateTop : public sc_module {
     void thread_o_data_last_V_1_state_cmp_full();
     void thread_o_data_last_V_1_vld_in();
     void thread_o_data_last_V_1_vld_out();
-    void thread_start_V_read_read_fu_76_p2();
-    void thread_tmp_4_fu_266_p2();
-    void thread_tmp_6_fu_239_p2();
+    void thread_tmp_4_fu_256_p2();
+    void thread_tmp_6_fu_229_p2();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();
 };

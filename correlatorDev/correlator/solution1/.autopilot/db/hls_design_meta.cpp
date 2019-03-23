@@ -10,6 +10,5 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("o_data_TVALID", 1, hls_out, 3, "axis", "out_vld", 1),
 	Port_Property("o_data_TREADY", 1, hls_in, 3, "axis", "out_acc", 1),
 	Port_Property("o_data_TLAST", 1, hls_out, 3, "axis", "out_data", 1),
-	Port_Property("start_V", 1, hls_in, 4, "ap_none", "in_data", 1),
 };
 const char* HLS_Design_Meta::dut_name = "correlateTop";

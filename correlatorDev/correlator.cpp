@@ -9,7 +9,7 @@ using namespace std;
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data, ap_uint<1> start){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
 
 //#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
@@ -76,11 +76,10 @@ static cor_t out;
 
 switch(currentState) {
 	case ST_IDLE:
-		if(start){ // wait for start signal.
-			loadCount = 0;
-			phaseClass=0;
-			currentState = ST_LOAD;
-		}
+		loadCount = 0;
+		phaseClass=0;
+		currentState = ST_LOAD;
+
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
 		//i_data.read(tmp_data);
@@ -109,7 +108,6 @@ switch(currentState) {
 		} else {
 			o_data->data = 0;
 		}*/
-
 
 		currentState = ST_LOAD;
 

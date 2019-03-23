@@ -13,19 +13,19 @@ WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must 
 INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
 WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 1955 ; free virtual = 4442
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:31 ; elapsed = 00:00:16 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 1948 ; free virtual = 4441
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:32 ; elapsed = 00:00:15 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 455 ; free virtual = 3911
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:33 ; elapsed = 00:00:17 . Memory (MB): peak = 366.844 ; gain = 13.375 ; free physical = 451 ; free virtual = 3911
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 367.363 ; gain = 13.895 ; free physical = 1932 ; free virtual = 4429
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:34 ; elapsed = 00:00:18 . Memory (MB): peak = 367.363 ; gain = 13.895 ; free physical = 436 ; free virtual = 3899
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:95) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 1924 ; free virtual = 4422
+INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:94) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:34 ; elapsed = 00:00:18 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 426 ; free virtual = 3892
 WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'o_data.data.V' (correlator.cpp:12).
 WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'i_data.data.V' (correlator.cpp:12).
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::shiftPhaseClass' (correlator.cpp:122:3).
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::correlator' (correlator.cpp:256:41).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (correlator.cpp:124) in function 'correlate::shiftPhaseClass' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:258) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::shiftPhaseClass' (correlator.cpp:120:3).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::correlator' (correlator.cpp:254:41).
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (correlator.cpp:122) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:256) in function 'correlate::correlator' completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass0.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass1.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass2.V'  in dimension 1 completely.
@@ -43,9 +43,9 @@ INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass13.V'  in dimension 1 co
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass14.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass15.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:95) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:18 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 1893 ; free virtual = 4395
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 1888 ; free virtual = 4393
+INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:94) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 387 ; free virtual = 3864
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:00:19 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 384 ; free virtual = 3862
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'correlateTop' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -55,13 +55,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'correlateTop'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 18.55 seconds; current allocated memory: 88.154 MB.
+INFO: [HLS 200-111]  Elapsed time: 19.15 seconds; current allocated memory: 88.072 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 88.420 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 88.329 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlateTop'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -70,12 +70,11 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/i_data_data_V
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/i_data_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/o_data_data_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/o_data_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/start_V' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlateTop' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlateTop'.
-INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 89.039 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 1887 ; free virtual = 4393
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 88.930 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:00:20 . Memory (MB): peak = 495.301 ; gain = 141.832 ; free physical = 395 ; free virtual = 3862
 INFO: [SYSC 207-301] Generating SystemC RTL for correlateTop.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlateTop.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlateTop.
-INFO: [HLS 200-112] Total elapsed time: 19.18 seconds; peak allocated memory: 89.039 MB.
+INFO: [HLS 200-112] Total elapsed time: 19.74 seconds; peak allocated memory: 88.930 MB.
