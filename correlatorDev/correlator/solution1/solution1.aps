@@ -5,9 +5,6 @@
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
-    <clockList>
-        <clock default="false" name="default" period="5"/>
-    </clockList>
     <config>
         <schedule model="correlateTop"/>
         <config_rtl encoding="onehot" header="" prefix="" reset="state" reset_async="0" reset_level="high"/>
@@ -74,5 +71,8 @@
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
 </solution>
 
