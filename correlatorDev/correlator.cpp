@@ -101,7 +101,7 @@ switch(currentState) {
 		} else {
 			phaseClass = phaseClass + 1;
 		}
-		o_data->data = phaseClass;
+		o_data->data = i_data->data;
 
 		/*if(out > 29000){
 			o_data->data = loadCount;

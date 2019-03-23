@@ -56,7 +56,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "correlateTop",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -75,11 +75,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "unScalled_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "cor_phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "cor_phaseClass0_V_10", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "cor_phaseClass0_V_8", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "cor_phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "cor_phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO"},
@@ -90,20 +87,17 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	correlateTop {
-		i_data_data_V {Type I LastRead 0 FirstWrite -1}
-		i_data_last_V {Type I LastRead 0 FirstWrite -1}
-		o_data_data_V {Type O LastRead -1 FirstWrite 1}
-		o_data_last_V {Type O LastRead -1 FirstWrite 1}
+		i_data_data_V {Type I LastRead 1 FirstWrite -1}
+		i_data_last_V {Type I LastRead 1 FirstWrite -1}
+		o_data_data_V {Type O LastRead -1 FirstWrite 2}
+		o_data_last_V {Type O LastRead -1 FirstWrite 2}
 		currentState {Type IO LastRead -1 FirstWrite -1}
 		phaseClass_V {Type IO LastRead -1 FirstWrite -1}
 		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		unScalled_V {Type O LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_9 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_10 {Type O LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_8 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_7 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_7 {Type O LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_3 {Type IO LastRead -1 FirstWrite -1}
@@ -114,8 +108,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
+	{"Name" : "Latency", "Min" : "3", "Max" : "3"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
 ]}
 
 set PipelineEnableSignalInfo {[

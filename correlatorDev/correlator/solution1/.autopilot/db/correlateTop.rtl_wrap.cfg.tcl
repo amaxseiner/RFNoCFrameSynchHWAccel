@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName0 "i_data"
-set BitWidth0 "32"
+set BitWidth0 "64"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -46,7 +46,7 @@ set DataType0 [list "rfnoc_axis" "struct rfnoc_axis" $structMem0 1 0 $structPara
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend PortList $Port0
 set PortName1 "o_data"
-set BitWidth1 "32"
+set BitWidth1 "64"
 set ArrayOpt1 ""
 set Const1 "0"
 set Volatile1 "0"
