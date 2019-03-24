@@ -232,7 +232,7 @@
 						<name>phaseClass_V_load</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -247,7 +247,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>96</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -667,7 +667,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -682,7 +682,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -710,7 +710,7 @@
 						<name>loadCount_V_load</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -725,7 +725,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
@@ -749,10 +749,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>p_Val2_s</name>
+						<name>tmp_6</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -767,12 +767,12 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -795,7 +795,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -810,7 +810,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
@@ -836,10 +836,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_5</name>
+						<name>tmp_8</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>105</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -854,7 +854,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>104</second>
+										<second>105</second>
 									</item>
 								</second>
 							</item>
@@ -882,7 +882,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>103</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -897,7 +897,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>102</second>
+										<second>103</second>
 									</item>
 								</second>
 							</item>
@@ -926,7 +926,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>107</lineNumber>
+						<lineNumber>108</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -941,7 +941,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>107</second>
+										<second>108</second>
 									</item>
 								</second>
 							</item>
@@ -972,7 +972,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -987,7 +987,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -1016,7 +1016,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>115</lineNumber>
+						<lineNumber>116</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1031,7 +1031,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>115</second>
+										<second>116</second>
 									</item>
 								</second>
 							</item>
@@ -1058,7 +1058,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>117</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1073,7 +1073,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>117</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -1100,7 +1100,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>120</lineNumber>
+						<lineNumber>121</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1115,7 +1115,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>120</second>
+										<second>121</second>
 									</item>
 								</second>
 							</item>
@@ -1381,7 +1381,7 @@
 				<Obj>
 					<type>3</type>
 					<id>48</id>
-					<name>._crit_edge160</name>
+					<name>._crit_edge159</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1414,7 +1414,7 @@
 				<Obj>
 					<type>3</type>
 					<id>50</id>
-					<name>._crit_edge159</name>
+					<name>._crit_edge158</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1437,7 +1437,7 @@
 				<Obj>
 					<type>3</type>
 					<id>52</id>
-					<name>._crit_edge158</name>
+					<name>._crit_edge157</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1667,7 +1667,7 @@
 			<item class_id_reference="20" object_id="_74">
 				<id>100</id>
 				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
+				<source_obj>58</source_obj>
 				<sink_obj>45</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_75">
@@ -1840,7 +1840,7 @@
 		<item>
 			<first>29</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -1903,21 +1903,21 @@
 		<item>
 			<first>40</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>

@@ -31865,7 +31865,7 @@ static cor_t out;
 switch(currentState) {
  case ST_IDLE:
   loadCount = 0;
-  phaseClass=0;
+  phaseClass = 0;
   currentState = ST_LOAD;
 #pragma empty_line
  break;
@@ -31875,6 +31875,7 @@ switch(currentState) {
    tmp_data = i_data.read();
    out_sample.last = tmp_data.last;
 #pragma empty_line
+   unScalled.V = out_sample.data.range(15,0);
    newVal = unScalled;
 #pragma empty_line
 #pragma empty_line
@@ -31887,11 +31888,11 @@ switch(currentState) {
 #pragma empty_line
    loadCount = loadCount + 32;
    if(phaseClass == 15){
-    phaseClass=0;
+    phaseClass = 0;
    } else {
     phaseClass = phaseClass + 1;
    }
-   out_sample.data.range(31,0) = loadCount.range(31,0);
+   out_sample.data.range(31,0) = out.V;
    o_data.write(out_sample);
 #pragma empty_line
 #pragma empty_line
@@ -31916,7 +31917,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
   }
   phaseClass0[0] = newValue;
   break;
-#pragma line 236 "correlator.cpp"
+#pragma line 237 "correlator.cpp"
  }
 #pragma empty_line
 #pragma empty_line
@@ -31930,7 +31931,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
  cor_t corHelperINeg,corHelperIPos,res;
  corHelperINeg = 0;
  corHelperIPos = 0;
-#pragma line 257 "correlator.cpp"
+#pragma line 258 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -31942,7 +31943,7 @@ cor_t correlate::correlator(ap_uint<4> phaseClass){
    }
   }
  break;
-#pragma line 418 "correlator.cpp"
+#pragma line 419 "correlator.cpp"
  }
 #pragma empty_line
  if(corHelperIPos > corHelperINeg){

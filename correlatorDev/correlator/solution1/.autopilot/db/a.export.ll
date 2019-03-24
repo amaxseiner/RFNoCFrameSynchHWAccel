@@ -20,17 +20,17 @@ declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 define void @correlateTop(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V) {
 codeRepl:
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !102
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !106
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !110
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !114
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !100
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !104
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !108
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !112
   call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecReset(i1* @newVal_V, i32 1, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2)
   call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
   call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str2) nounwind
@@ -44,29 +44,29 @@ codeRepl:
   store i32 0, i32* @loadCount_V, align 4
   store i4 0, i4* @phaseClass_V, align 1
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge158
+  br label %._crit_edge157
 
 ; <label>:1                                       ; preds = %codeRepl
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %._crit_edge160, label %._crit_edge159
+  br i1 %tmp, label %._crit_edge159, label %._crit_edge158
 
-._crit_edge160:                                   ; preds = %1
+._crit_edge159:                                   ; preds = %1
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
   %tmp_last_V = extractvalue { i32, i1 } %empty, 1
   store i1 false, i1* @newVal_V, align 1
   %loadCount_V_load = load i32* @loadCount_V, align 4
-  %p_Val2_s = add i32 %loadCount_V_load, 32
-  store i32 %p_Val2_s, i32* @loadCount_V, align 4
-  %tmp_5 = add i4 %phaseClass_V_load, 1
-  store i4 %tmp_5, i4* @phaseClass_V, align 1
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %p_Val2_s, i1 %tmp_last_V)
+  %tmp_6 = add i32 %loadCount_V_load, 32
+  store i32 %tmp_6, i32* @loadCount_V, align 4
+  %tmp_8 = add i4 %phaseClass_V_load, 1
+  store i4 %tmp_8, i4* @phaseClass_V, align 1
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge159
-
-._crit_edge159:                                   ; preds = %._crit_edge160, %1
   br label %._crit_edge158
 
-._crit_edge158:                                   ; preds = %._crit_edge159, %0
+._crit_edge158:                                   ; preds = %._crit_edge159, %1
+  br label %._crit_edge157
+
+._crit_edge157:                                   ; preds = %._crit_edge158, %0
   ret void
 }
 
@@ -118,9 +118,9 @@ entry:
 
 declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 
-!opencl.kernels = !{!0, !7, !10, !16, !16, !16, !19, !25, !19, !19, !19, !19, !19, !25, !28, !28, !19, !19, !19, !25, !29, !29, !29, !25, !31, !34, !34, !36, !38, !38, !40, !42, !42, !44, !44, !28, !19, !46, !49, !52, !52, !19, !19, !19, !19, !54, !56, !59, !59, !65, !65, !19, !19, !67, !70, !19, !19, !72, !72, !73, !73, !75, !36, !65, !65, !19, !76, !78, !80, !80, !82, !84, !86, !19, !19, !88, !88, !89, !88, !88, !91, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19, !88, !88, !19, !19, !93, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19}
+!opencl.kernels = !{!0, !7, !10, !16, !16, !16, !19, !25, !19, !19, !19, !19, !19, !25, !28, !28, !19, !19, !19, !25, !29, !29, !29, !25, !31, !34, !34, !36, !38, !38, !40, !42, !42, !44, !44, !28, !19, !46, !49, !52, !52, !19, !54, !54, !19, !19, !56, !59, !19, !19, !61, !61, !62, !62, !64, !36, !54, !54, !19, !65, !67, !69, !69, !71, !73, !19, !19, !75, !78, !78, !84, !19, !19, !86, !86, !87, !86, !86, !89, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19, !86, !86, !19, !19, !91, !19, !19, !19, !19, !19, !19, !19, !19, !19, !19}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!95}
+!llvm.map.gv = !{!93}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0}
@@ -172,71 +172,69 @@ declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 !47 = metadata !{metadata !"kernel_arg_type", metadata !"const struct rfnoc_axis &"}
 !48 = metadata !{metadata !"kernel_arg_name", metadata !"din"}
 !49 = metadata !{null, metadata !11, metadata !12, metadata !50, metadata !14, metadata !51, metadata !6}
-!50 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<32, true> &"}
+!50 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
 !51 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
-!52 = metadata !{null, metadata !11, metadata !12, metadata !50, metadata !14, metadata !53, metadata !6}
-!53 = metadata !{metadata !"kernel_arg_name", metadata !"ref"}
-!54 = metadata !{null, metadata !11, metadata !12, metadata !55, metadata !14, metadata !51, metadata !6}
-!55 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, false> &"}
+!52 = metadata !{null, metadata !11, metadata !12, metadata !53, metadata !14, metadata !18, metadata !6}
+!53 = metadata !{metadata !"kernel_arg_type", metadata !"ap_ulong"}
+!54 = metadata !{null, metadata !11, metadata !12, metadata !55, metadata !14, metadata !18, metadata !6}
+!55 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
 !56 = metadata !{null, metadata !1, metadata !2, metadata !57, metadata !4, metadata !58, metadata !6}
-!57 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
-!58 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
-!59 = metadata !{null, metadata !60, metadata !61, metadata !62, metadata !63, metadata !64, metadata !6}
-!60 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
-!61 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!62 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
-!63 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!64 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
-!65 = metadata !{null, metadata !11, metadata !12, metadata !66, metadata !14, metadata !18, metadata !6}
-!66 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
-!67 = metadata !{null, metadata !1, metadata !2, metadata !68, metadata !4, metadata !69, metadata !6}
-!68 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"int"}
-!69 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
-!70 = metadata !{null, metadata !1, metadata !2, metadata !71, metadata !4, metadata !33, metadata !6}
-!71 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"const ap_int_base<32, true> &"}
-!72 = metadata !{null, metadata !11, metadata !12, metadata !37, metadata !14, metadata !18, metadata !6}
+!57 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"int"}
+!58 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
+!59 = metadata !{null, metadata !1, metadata !2, metadata !60, metadata !4, metadata !33, metadata !6}
+!60 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"const ap_int_base<32, true> &"}
+!61 = metadata !{null, metadata !11, metadata !12, metadata !37, metadata !14, metadata !18, metadata !6}
+!62 = metadata !{null, metadata !11, metadata !12, metadata !63, metadata !14, metadata !18, metadata !6}
+!63 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &"}
+!64 = metadata !{null, metadata !1, metadata !2, metadata !57, metadata !4, metadata !33, metadata !6}
+!65 = metadata !{null, metadata !1, metadata !2, metadata !66, metadata !4, metadata !58, metadata !6}
+!66 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"int"}
+!67 = metadata !{null, metadata !1, metadata !2, metadata !68, metadata !4, metadata !33, metadata !6}
+!68 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"const ap_int_base<32, true> &"}
+!69 = metadata !{null, metadata !11, metadata !12, metadata !70, metadata !14, metadata !18, metadata !6}
+!70 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 11, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!71 = metadata !{null, metadata !11, metadata !12, metadata !72, metadata !14, metadata !18, metadata !6}
+!72 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<16, 11, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
 !73 = metadata !{null, metadata !11, metadata !12, metadata !74, metadata !14, metadata !18, metadata !6}
-!74 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &"}
-!75 = metadata !{null, metadata !1, metadata !2, metadata !68, metadata !4, metadata !33, metadata !6}
-!76 = metadata !{null, metadata !1, metadata !2, metadata !77, metadata !4, metadata !69, metadata !6}
-!77 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"int"}
-!78 = metadata !{null, metadata !1, metadata !2, metadata !79, metadata !4, metadata !33, metadata !6}
-!79 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"const ap_int_base<32, true> &"}
-!80 = metadata !{null, metadata !11, metadata !12, metadata !81, metadata !14, metadata !18, metadata !6}
-!81 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 11, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!82 = metadata !{null, metadata !11, metadata !12, metadata !83, metadata !14, metadata !18, metadata !6}
-!83 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<16, 11, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!84 = metadata !{null, metadata !11, metadata !12, metadata !85, metadata !14, metadata !18, metadata !6}
-!85 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<32, 22, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!86 = metadata !{null, metadata !11, metadata !12, metadata !87, metadata !14, metadata !27, metadata !6}
-!87 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
-!88 = metadata !{null, metadata !11, metadata !12, metadata !35, metadata !14, metadata !51, metadata !6}
+!74 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<32, 22, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!75 = metadata !{null, metadata !1, metadata !2, metadata !76, metadata !4, metadata !77, metadata !6}
+!76 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
+!77 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
+!78 = metadata !{null, metadata !79, metadata !80, metadata !81, metadata !82, metadata !83, metadata !6}
+!79 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
+!80 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!81 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
+!82 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!83 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
+!84 = metadata !{null, metadata !11, metadata !12, metadata !85, metadata !14, metadata !27, metadata !6}
+!85 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
+!86 = metadata !{null, metadata !11, metadata !12, metadata !35, metadata !14, metadata !51, metadata !6}
+!87 = metadata !{null, metadata !11, metadata !12, metadata !88, metadata !14, metadata !27, metadata !6}
+!88 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<4> &"}
 !89 = metadata !{null, metadata !11, metadata !12, metadata !90, metadata !14, metadata !27, metadata !6}
-!90 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<4> &"}
-!91 = metadata !{null, metadata !11, metadata !12, metadata !92, metadata !14, metadata !27, metadata !6}
-!92 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
-!93 = metadata !{null, metadata !11, metadata !12, metadata !47, metadata !14, metadata !94, metadata !6}
-!94 = metadata !{metadata !"kernel_arg_name", metadata !""}
-!95 = metadata !{metadata !96, [1 x i32]* @llvm_global_ctors_0}
+!90 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
+!91 = metadata !{null, metadata !11, metadata !12, metadata !47, metadata !14, metadata !92, metadata !6}
+!92 = metadata !{metadata !"kernel_arg_name", metadata !""}
+!93 = metadata !{metadata !94, [1 x i32]* @llvm_global_ctors_0}
+!94 = metadata !{metadata !95}
+!95 = metadata !{i32 0, i32 31, metadata !96}
 !96 = metadata !{metadata !97}
-!97 = metadata !{i32 0, i32 31, metadata !98}
+!97 = metadata !{metadata !"llvm.global_ctors.0", metadata !98, metadata !"", i32 0, i32 31}
 !98 = metadata !{metadata !99}
-!99 = metadata !{metadata !"llvm.global_ctors.0", metadata !100, metadata !"", i32 0, i32 31}
+!99 = metadata !{i32 0, i32 0, i32 1}
 !100 = metadata !{metadata !101}
-!101 = metadata !{i32 0, i32 0, i32 1}
+!101 = metadata !{i32 0, i32 31, metadata !102}
 !102 = metadata !{metadata !103}
-!103 = metadata !{i32 0, i32 31, metadata !104}
+!103 = metadata !{metadata !"i_data.V.data.V", metadata !98, metadata !"int32", i32 0, i32 31}
 !104 = metadata !{metadata !105}
-!105 = metadata !{metadata !"i_data.V.data.V", metadata !100, metadata !"int32", i32 0, i32 31}
+!105 = metadata !{i32 0, i32 0, metadata !106}
 !106 = metadata !{metadata !107}
-!107 = metadata !{i32 0, i32 0, metadata !108}
+!107 = metadata !{metadata !"i_data.V.last.V", metadata !98, metadata !"uint1", i32 0, i32 0}
 !108 = metadata !{metadata !109}
-!109 = metadata !{metadata !"i_data.V.last.V", metadata !100, metadata !"uint1", i32 0, i32 0}
+!109 = metadata !{i32 0, i32 31, metadata !110}
 !110 = metadata !{metadata !111}
-!111 = metadata !{i32 0, i32 31, metadata !112}
+!111 = metadata !{metadata !"o_data.V.data.V", metadata !98, metadata !"int32", i32 0, i32 31}
 !112 = metadata !{metadata !113}
-!113 = metadata !{metadata !"o_data.V.data.V", metadata !100, metadata !"int32", i32 0, i32 31}
+!113 = metadata !{i32 0, i32 0, metadata !114}
 !114 = metadata !{metadata !115}
-!115 = metadata !{i32 0, i32 0, metadata !116}
-!116 = metadata !{metadata !117}
-!117 = metadata !{metadata !"o_data.V.last.V", metadata !100, metadata !"uint1", i32 0, i32 0}
+!115 = metadata !{metadata !"o_data.V.last.V", metadata !98, metadata !"uint1", i32 0, i32 0}

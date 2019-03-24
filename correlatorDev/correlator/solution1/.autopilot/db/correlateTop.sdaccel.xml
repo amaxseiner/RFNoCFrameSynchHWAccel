@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Sat Mar 23 22:55:39 2019
+<item name = "Date">Sun Mar 24 00:27:35 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -46,12 +46,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 196</column>
+<column name="Expression">-, -, 0, 164</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 84</column>
-<column name="Register">-, -, 119, -</column>
+<column name="Multiplexer">-, -, -, 75</column>
+<column name="Register">-, -, 54, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -76,21 +76,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="p_Val2_s_fu_114_p2">+, 0, 0, 39, 32, 6</column>
-<column name="tmp_5_fu_137_p2">+, 0, 0, 13, 4, 1</column>
+<column name="tmp_6_fu_125_p2">+, 0, 0, 39, 32, 6</column>
+<column name="tmp_8_fu_137_p2">+, 0, 0, 13, 4, 1</column>
 <column name="ap_block_state1_pp0_stage0_iter0">and, 0, 0, 8, 1, 1</column>
 <column name="ap_block_state2_io">and, 0, 0, 8, 1, 1</column>
 <column name="ap_block_state3_io">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_240">and, 0, 0, 8, 1, 1</column>
-<column name="ap_predicate_op17_write_state2">and, 0, 0, 8, 1, 1</column>
+<column name="ap_predicate_op13_write_state2">and, 0, 0, 8, 1, 1</column>
 <column name="ap_predicate_op39_write_state3">and, 0, 0, 8, 1, 1</column>
 <column name="ap_predicate_op9_read_state1">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_V_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_V_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
 <column name="o_data_V_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
 <column name="o_data_V_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
 <column name="tmp_nbreadreq_fu_56_p4">and, 0, 0, 8, 1, 0</column>
-<column name="o_data_V_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="o_data_V_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
@@ -103,7 +99,6 @@
 <column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="loadCount_V">9, 2, 32, 64</column>
 <column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="o_data_V_data_V_1_data_out">9, 2, 32, 64</column>
 <column name="o_data_V_data_V_1_state">15, 3, 2, 6</column>
 <column name="o_data_V_last_V_1_data_out">9, 2, 1, 2</column>
 <column name="o_data_V_last_V_1_state">15, 3, 2, 6</column>
@@ -120,10 +115,7 @@
 <column name="currentState">1, 0, 1, 0</column>
 <column name="currentState_load_reg_149">1, 0, 1, 0</column>
 <column name="loadCount_V">32, 0, 32, 0</column>
-<column name="o_data_V_data_V_1_payload_A">32, 0, 32, 0</column>
-<column name="o_data_V_data_V_1_payload_B">32, 0, 32, 0</column>
 <column name="o_data_V_data_V_1_sel_rd">1, 0, 1, 0</column>
-<column name="o_data_V_data_V_1_sel_wr">1, 0, 1, 0</column>
 <column name="o_data_V_data_V_1_state">2, 0, 2, 0</column>
 <column name="o_data_V_last_V_1_payload_A">1, 0, 1, 0</column>
 <column name="o_data_V_last_V_1_payload_B">1, 0, 1, 0</column>
@@ -160,9 +152,9 @@
 <item name = "Max Delay">2.85</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'loadCount_V_load', correlator.cpp:100">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
-<column name="'__Val2__', correlator.cpp:100">add, 1.78, 1.78, -, -, -, -, -, -, -, -, -, -, -</column>
-<column name="correlator.cpp:100">store, 1.06, 2.85, &apos;__Val2__&apos;, correlator.cpp:100, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
+<column name="'loadCount_V_load', correlator.cpp:101">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
+<column name="'tmp_6', correlator.cpp:101">add, 1.78, 1.78, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="correlator.cpp:101">store, 1.06, 2.85, &apos;tmp_6&apos;, correlator.cpp:101, -, -, -, -, -, -, -, &apos;loadCount_V&apos;, -, -</column>
 </table>
 </item>
 </section>

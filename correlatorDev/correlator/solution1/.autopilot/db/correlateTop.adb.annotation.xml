@@ -1,4 +1,4 @@
 <annotationInfo>
-<item  id="41" filename="correlator.cpp" linenumber="100" name="p_Val2_s" contextFuncName="correlateTop" moduleName="correlateTop" rtlName="p_Val2_s_fu_114_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
-<item  id="43" filename="correlator.cpp" linenumber="104" name="tmp_5" contextFuncName="correlateTop" moduleName="correlateTop" rtlName="tmp_5_fu_137_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+<item  id="41" filename="correlator.cpp" linenumber="101" name="tmp_6" contextFuncName="correlateTop" moduleName="correlateTop" rtlName="tmp_6_fu_125_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
+<item  id="43" filename="correlator.cpp" linenumber="105" name="tmp_8" contextFuncName="correlateTop" moduleName="correlateTop" rtlName="tmp_8_fu_137_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev"></item>
 </annotationInfo>

@@ -77,7 +77,7 @@ static cor_t out;
 switch(currentState) {
 	case ST_IDLE:
 		loadCount = 0;
-		phaseClass=0;
+		phaseClass = 0;
 		currentState = ST_LOAD;
 
 	break;
@@ -87,6 +87,7 @@ switch(currentState) {
 			tmp_data = i_data.read();
 			out_sample.last = tmp_data.last;
 			// = i_data->data.range(15,0); // RE
+			unScalled.V = out_sample.data.range(15,0);
 			newVal = unScalled;
 			/*if(phaseClass == 0){
 				*result << newVal;
@@ -99,11 +100,11 @@ switch(currentState) {
 			//o_data->data = out.V;
 			loadCount = loadCount + 32;
 			if(phaseClass == 15){
-				phaseClass=0;
+				phaseClass = 0;
 			} else {
 				phaseClass = phaseClass + 1;
 			}
-			out_sample.data.range(31,0) = loadCount.range(31,0);
+			out_sample.data.range(31,0) = out.V;
 			o_data.write(out_sample);
 			/*if(out > 29000){
 				o_data->data = loadCount;

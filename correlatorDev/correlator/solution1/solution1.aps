@@ -1,7 +1,13 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <checksum>
+        <value string="false"/>
+    </checksum>
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
     <config>
         <schedule model="correlateTop"/>
         <config_rtl encoding="onehot" header="" prefix="" reset="state" reset_async="0" reset_level="high"/>
@@ -47,8 +53,8 @@
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
-    <Simulation argv="">
-        <SimFlow askAgain="true" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="xsim" ldflags="" mflags="" compiledLibrary="">
+    <Simulation>
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -68,8 +74,5 @@
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
     </libraryList>
-    <clockList>
-        <clock name="default" default="false" period="5"/>
-    </clockList>
 </solution>
 

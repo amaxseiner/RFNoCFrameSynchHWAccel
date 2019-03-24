@@ -232,7 +232,7 @@
 						<name>phaseClass_V_load</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -247,7 +247,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>96</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -667,7 +667,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>91</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -682,7 +682,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>90</second>
+										<second>91</second>
 									</item>
 								</second>
 							</item>
@@ -710,7 +710,7 @@
 						<name>loadCount_V_load</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -725,7 +725,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
@@ -749,10 +749,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>p_Val2_s</name>
+						<name>tmp_6</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -767,12 +767,12 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -795,7 +795,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>100</lineNumber>
+						<lineNumber>101</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -810,7 +810,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>100</second>
+										<second>101</second>
 									</item>
 								</second>
 							</item>
@@ -836,10 +836,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_5</name>
+						<name>tmp_8</name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>105</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -854,7 +854,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>104</second>
+										<second>105</second>
 									</item>
 								</second>
 							</item>
@@ -882,7 +882,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>103</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -897,7 +897,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>102</second>
+										<second>103</second>
 									</item>
 								</second>
 							</item>
@@ -926,7 +926,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>107</lineNumber>
+						<lineNumber>108</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -941,7 +941,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>107</second>
+										<second>108</second>
 									</item>
 								</second>
 							</item>
@@ -972,7 +972,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>114</lineNumber>
+						<lineNumber>115</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -987,7 +987,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>114</second>
+										<second>115</second>
 									</item>
 								</second>
 							</item>
@@ -1016,7 +1016,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>115</lineNumber>
+						<lineNumber>116</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1031,7 +1031,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>115</second>
+										<second>116</second>
 									</item>
 								</second>
 							</item>
@@ -1058,7 +1058,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>117</lineNumber>
+						<lineNumber>118</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1073,7 +1073,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>117</second>
+										<second>118</second>
 									</item>
 								</second>
 							</item>
@@ -1100,7 +1100,7 @@
 						<name></name>
 						<fileName>correlator.cpp</fileName>
 						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev</fileDirectory>
-						<lineNumber>120</lineNumber>
+						<lineNumber>121</lineNumber>
 						<contextFuncName>correlateTop</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1115,7 +1115,7 @@
 											<first>correlator.cpp</first>
 											<second>correlateTop</second>
 										</first>
-										<second>120</second>
+										<second>121</second>
 									</item>
 								</second>
 							</item>
@@ -1381,7 +1381,7 @@
 				<Obj>
 					<type>3</type>
 					<id>48</id>
-					<name>._crit_edge160</name>
+					<name>._crit_edge159</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1414,7 +1414,7 @@
 				<Obj>
 					<type>3</type>
 					<id>50</id>
-					<name>._crit_edge159</name>
+					<name>._crit_edge158</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1437,7 +1437,7 @@
 				<Obj>
 					<type>3</type>
 					<id>52</id>
-					<name>._crit_edge158</name>
+					<name>._crit_edge157</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1667,7 +1667,7 @@
 			<item class_id_reference="20" object_id="_74">
 				<id>100</id>
 				<edge_type>1</edge_type>
-				<source_obj>41</source_obj>
+				<source_obj>58</source_obj>
 				<sink_obj>45</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_75">
@@ -1870,132 +1870,132 @@
 			<item class_id_reference="26" object_id="_105">
 				<id>2</id>
 				<operations>
-					<count>5</count>
+					<count>1</count>
 					<item_version>0</item_version>
 					<item class_id_reference="28" object_id="_106">
-						<id>29</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_107">
-						<id>40</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_108">
-						<id>41</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_109">
-						<id>42</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_110">
 						<id>45</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_111">
+			<item class_id_reference="26" object_id="_107">
 				<id>3</id>
 				<operations>
-					<count>25</count>
+					<count>29</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_112">
+					<item class_id_reference="28" object_id="_108">
 						<id>9</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_113">
+					<item class_id_reference="28" object_id="_109">
 						<id>10</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_114">
+					<item class_id_reference="28" object_id="_110">
 						<id>11</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_115">
+					<item class_id_reference="28" object_id="_111">
 						<id>12</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_116">
+					<item class_id_reference="28" object_id="_112">
 						<id>13</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_117">
+					<item class_id_reference="28" object_id="_113">
 						<id>14</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_118">
+					<item class_id_reference="28" object_id="_114">
 						<id>15</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_119">
+					<item class_id_reference="28" object_id="_115">
 						<id>16</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_120">
+					<item class_id_reference="28" object_id="_116">
 						<id>17</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_121">
+					<item class_id_reference="28" object_id="_117">
 						<id>18</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_122">
+					<item class_id_reference="28" object_id="_118">
 						<id>19</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_123">
+					<item class_id_reference="28" object_id="_119">
 						<id>20</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_124">
+					<item class_id_reference="28" object_id="_120">
 						<id>21</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_125">
+					<item class_id_reference="28" object_id="_121">
 						<id>22</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_126">
+					<item class_id_reference="28" object_id="_122">
 						<id>23</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_127">
+					<item class_id_reference="28" object_id="_123">
 						<id>25</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_128">
+					<item class_id_reference="28" object_id="_124">
 						<id>26</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_129">
+					<item class_id_reference="28" object_id="_125">
+						<id>29</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_126">
 						<id>30</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_130">
+					<item class_id_reference="28" object_id="_127">
 						<id>32</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_128">
+						<id>40</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_129">
+						<id>41</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_130">
+						<id>42</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
@@ -2095,7 +2095,7 @@
 		<item>
 			<first>29</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2158,21 +2158,21 @@
 		<item>
 			<first>40</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -2326,7 +2326,7 @@
 			</second>
 		</item>
 		<item>
-			<first>84</first>
+			<first>85</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2335,7 +2335,7 @@
 			</second>
 		</item>
 		<item>
-			<first>90</first>
+			<first>91</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2343,7 +2343,7 @@
 			</second>
 		</item>
 		<item>
-			<first>94</first>
+			<first>95</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2351,7 +2351,7 @@
 			</second>
 		</item>
 		<item>
-			<first>98</first>
+			<first>99</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2359,39 +2359,7 @@
 			</second>
 		</item>
 		<item>
-			<first>104</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>29</item>
-			</second>
-		</item>
-		<item>
-			<first>110</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>40</item>
-			</second>
-		</item>
-		<item>
-			<first>114</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>41</item>
-			</second>
-		</item>
-		<item>
-			<first>121</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>42</item>
-			</second>
-		</item>
-		<item>
-			<first>127</first>
+			<first>105</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2399,11 +2367,43 @@
 			</second>
 		</item>
 		<item>
-			<first>131</first>
+			<first>109</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>29</item>
+			</second>
+		</item>
+		<item>
+			<first>115</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>30</item>
+			</second>
+		</item>
+		<item>
+			<first>121</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>40</item>
+			</second>
+		</item>
+		<item>
+			<first>125</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>41</item>
+			</second>
+		</item>
+		<item>
+			<first>131</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>42</item>
 			</second>
 		</item>
 		<item>
@@ -2427,7 +2427,7 @@
 		<count>3</count>
 		<item_version>0</item_version>
 		<item class_id="47" tracking_level="0" version="0">
-			<first>p_Val2_s_fu_114</first>
+			<first>tmp_6_fu_125</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2435,7 +2435,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_5_fu_137</first>
+			<first>tmp_8_fu_137</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2443,7 +2443,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_last_V_fu_94</first>
+			<first>tmp_last_V_fu_95</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2459,7 +2459,7 @@
 		<count>12</count>
 		<item_version>0</item_version>
 		<item>
-			<first>StgValue_11_store_fu_98</first>
+			<first>StgValue_11_store_fu_99</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2467,7 +2467,7 @@
 			</second>
 		</item>
 		<item>
-			<first>StgValue_13_store_fu_104</first>
+			<first>StgValue_31_store_fu_109</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2475,19 +2475,19 @@
 			</second>
 		</item>
 		<item>
-			<first>StgValue_16_store_fu_121</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>42</item>
-			</second>
-		</item>
-		<item>
-			<first>StgValue_35_store_fu_131</first>
+			<first>StgValue_32_store_fu_115</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>30</item>
+			</second>
+		</item>
+		<item>
+			<first>StgValue_36_store_fu_131</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>42</item>
 			</second>
 		</item>
 		<item>
@@ -2499,7 +2499,7 @@
 			</second>
 		</item>
 		<item>
-			<first>currentState_load_load_fu_90</first>
+			<first>currentState_load_load_fu_91</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2515,7 +2515,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_store_fu_84</first>
+			<first>grp_store_fu_85</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2533,7 +2533,7 @@
 			</second>
 		</item>
 		<item>
-			<first>loadCount_V_load_load_fu_110</first>
+			<first>loadCount_V_load_load_fu_121</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2541,7 +2541,7 @@
 			</second>
 		</item>
 		<item>
-			<first>phaseClass_V_load_load_fu_127</first>
+			<first>phaseClass_V_load_load_fu_105</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2566,7 +2566,7 @@
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
 	<dp_reg_nodes>
-		<count>4</count>
+		<count>3</count>
 		<item_version>0</item_version>
 		<item>
 			<first>149</first>
@@ -2592,17 +2592,9 @@
 				<item>38</item>
 			</second>
 		</item>
-		<item>
-			<first>162</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>41</item>
-			</second>
-		</item>
 	</dp_reg_nodes>
 	<dp_regname_nodes>
-		<count>4</count>
+		<count>3</count>
 		<item_version>0</item_version>
 		<item>
 			<first>currentState_load_reg_149</first>
@@ -2610,14 +2602,6 @@
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>24</item>
-			</second>
-		</item>
-		<item>
-			<first>p_Val2_s_reg_162</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>41</item>
 			</second>
 		</item>
 		<item>
