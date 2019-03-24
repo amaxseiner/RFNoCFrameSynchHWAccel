@@ -25,7 +25,7 @@ int main(){
 		ap_uint<4> phaseClass = a%16;
 		inFile >> setw(16) >> test;
 		axi.data.range(15,0) = test.V;
-		correlateTop(&axi,&axiOut,0);
+		correlateTop(&axi,&axiOut);
 		test2.V = axiOut.data.range(31,0);
 		if(phaseClass == 0){
 			result << a;

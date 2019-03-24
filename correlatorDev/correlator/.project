@@ -29,62 +29,67 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.src</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.tb</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/correlator.h</name>
+			<name>.reference/apatb_correlateTop.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.h</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/autowrap/systemc/apatb_correlateTop.cpp</location>
+		</link>
+		<link>
+			<name>.reference/apatb_correlateTop.h</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/autowrap/systemc/apatb_correlateTop.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/alexisdumb.csv</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/alexisdumb.csv</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/alexisdumb.csv</location>
 		</link>
 		<link>
 			<name>source/correlator.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp</location>
 		</link>
 		<link>
 			<name>source/joeIsAnIdiot.csv</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/joeIsAnIdiot.csv</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/joeIsAnIdiot.csv</location>
 		</link>
 		<link>
 			<name>source/rfnoc.h</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h</location>
 		</link>
 		<link>
 			<name>testbench/correlatorTB.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/directives.tcl</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/script.tcl</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # xsim v2017.2 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Mar 22 19:53:17 2019
-# Process ID: 10561
-# Current directory: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog
-# Command line: xsim -mode tcl -source {xsim.dir/correlateTop/xsim_script.tcl}
-# Log file: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog/xsim.log
-# Journal file: /home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog/xsim.jou
+# Start of session at: Sat Mar 23 20:27:53 2019
+# Process ID: 1408
+# Current directory: D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/correlateTop/xsim_script.tcl}
+# Log file: D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog/xsim.log
+# Journal file: D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/sim/verilog\xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/correlateTop/xsim_script.tcl
 source correlateTop.tcl

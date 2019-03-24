@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="alexisdumb.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/alexisdumb.csv"/>
-    <originFiles name="correlator.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator.cpp"/>
-    <originFiles name="joeIsAnIdiot.csv" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/joeIsAnIdiot.csv"/>
-    <originFiles name="rfnoc.h" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/rfnoc.h"/>
+    <originFiles name="rfnoc.h" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\correlatorDev\rfnoc.h"/>
+    <originFiles name="joeIsAnIdiot.csv" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\correlatorDev\joeIsAnIdiot.csv"/>
+    <originFiles name="correlator.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\correlatorDev\correlator.cpp"/>
+    <originFiles name="alexisdumb.csv" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\correlatorDev\alexisdumb.csv"/>
   </source>
   <testbench>
-    <originFiles name="correlatorTB.cpp" path="/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlatorTB.cpp"/>
+    <originFiles name="correlatorTB.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\correlatorDev\correlatorTB.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

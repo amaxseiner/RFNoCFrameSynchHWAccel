@@ -48,8 +48,6 @@ using namespace sc_dt;
 // wrapc file define: "o_data_last_V"
 #define AUTOTB_TVOUT_o_data_last_V  "../tv/cdatafile/c.correlateTop.autotvout_o_data_last_V.dat"
 #define AUTOTB_TVIN_o_data_last_V  "../tv/cdatafile/c.correlateTop.autotvin_o_data_last_V.dat"
-// wrapc file define: "start_V"
-#define AUTOTB_TVIN_start_V  "../tv/cdatafile/c.correlateTop.autotvin_start_V.dat"
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
@@ -66,7 +64,6 @@ class INTER_TCL_FILE {
 			i_data_last_V_depth = 0;
 			o_data_data_V_depth = 0;
 			o_data_last_V_depth = 0;
-			start_V_depth = 0;
 			trans_num =0;
 		}
 
@@ -90,7 +87,6 @@ class INTER_TCL_FILE {
 			total_list << "{i_data_last_V " << i_data_last_V_depth << "}\n";
 			total_list << "{o_data_data_V " << o_data_data_V_depth << "}\n";
 			total_list << "{o_data_last_V " << o_data_last_V_depth << "}\n";
-			total_list << "{start_V " << start_V_depth << "}\n";
 			return total_list.str();
 		}
 
@@ -102,7 +98,6 @@ class INTER_TCL_FILE {
 		int i_data_last_V_depth;
 		int o_data_data_V_depth;
 		int o_data_last_V_depth;
-		int start_V_depth;
 		int trans_num;
 
 	private:
@@ -112,13 +107,11 @@ class INTER_TCL_FILE {
 
 extern void correlateTop (
 rfnoc_axis* i_data,
-rfnoc_axis* o_data,
-ap_uint<1> start);
+rfnoc_axis* o_data);
 
 void AESL_WRAP_correlateTop (
 rfnoc_axis* i_data,
-rfnoc_axis* o_data,
-ap_uint<1> start)
+rfnoc_axis* o_data)
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -432,10 +425,6 @@ ap_uint<1> start)
 		char* tvout_o_data_last_V = new char[50];
 		aesl_fh.touch(AUTOTB_TVOUT_o_data_last_V);
 
-		// "start_V"
-		char* tvin_start_V = new char[50];
-		aesl_fh.touch(AUTOTB_TVIN_start_V);
-
 		CodeState = DUMP_INPUTS;
 		static INTER_TCL_FILE tcl_file(INTER_TCL);
 		int leading_zero;
@@ -632,52 +621,10 @@ ap_uint<1> start)
 		// release memory allocation
 		delete [] o_data_last_V_tvin_wrapc_buffer;
 
-		// [[transaction]]
-		sprintf(tvin_start_V, "[[transaction]] %d\n", AESL_transaction);
-		aesl_fh.write(AUTOTB_TVIN_start_V, tvin_start_V);
-
-		sc_bv<1> start_V_tvin_wrapc_buffer;
-
-		// RTL Name: start_V
-		{
-			// bitslice(0, 0)
-			{
-				// celement: start.V(0, 0)
-				{
-					// carray: (0) => (0) @ (0)
-					{
-						// sub                   : 
-						// ori_name              : start
-						// sub_1st_elem          : 
-						// ori_name_1st_elem     : start
-						// regulate_c_name       : start_V
-						// input_type_conversion : (start).to_string(2).c_str()
-						if (&(start) != NULL) // check the null address if the c port is array or others
-						{
-							sc_lv<1> start_V_tmp_mem;
-							start_V_tmp_mem = (start).to_string(2).c_str();
-							start_V_tvin_wrapc_buffer.range(0, 0) = start_V_tmp_mem.range(0, 0);
-						}
-					}
-				}
-			}
-		}
-
-		// dump tv to file
-		for (int i = 0; i < 1; i++)
-		{
-			sprintf(tvin_start_V, "%s\n", (start_V_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
-			aesl_fh.write(AUTOTB_TVIN_start_V, tvin_start_V);
-		}
-
-		tcl_file.set_num(1, &tcl_file.start_V_depth);
-		sprintf(tvin_start_V, "[[/transaction]] \n");
-		aesl_fh.write(AUTOTB_TVIN_start_V, tvin_start_V);
-
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		correlateTop(i_data, o_data, start);
+		correlateTop(i_data, o_data);
 
 		CodeState = DUMP_OUTPUTS;
 
@@ -788,8 +735,6 @@ ap_uint<1> start)
 		// release memory allocation: "o_data_last_V"
 		delete [] tvout_o_data_last_V;
 		delete [] tvin_o_data_last_V;
-		// release memory allocation: "start_V"
-		delete [] tvin_start_V;
 
 		AESL_transaction++;
 

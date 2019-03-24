@@ -5,13 +5,12 @@
 # 
 # ==============================================================
 
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fpo_v7_0:$::env(LD_LIBRARY_PATH)
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fpo_v7_0"
 
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/opencv:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fft_v9_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fir_v7_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/dds_v6_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /usr/lib/x86_64-linux-gnu:$::env(LD_LIBRARY_PATH)
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/opencv"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fft_v9_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fir_v7_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/dds_v6_0"
 
 source check_sim.tcl
 
@@ -67,8 +66,8 @@ file delete -force ".exit.err"
 file delete -force ".aesl_error"
 file delete -force "err.log"
 
-if {[file isfile run_xsim.sh]} {
-	set ret [catch {eval exec "sh ./run_xsim.sh | tee temp2.log" >&@ stdout} err]
+if {[file isfile run_xsim.bat]} {
+	set ret [catch {eval exec "./run_xsim.bat | tee temp2.log" >&@ stdout} err]
 }
 
 cd ../tv/rtldatafile

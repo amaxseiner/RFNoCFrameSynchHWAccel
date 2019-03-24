@@ -56,7 +56,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "correlateTop",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "Aligned", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -75,8 +75,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "loadCount_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "unScalled_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "newVal_V", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass0_V_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_10", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "cor_phaseClass0_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "cor_phaseClass0_V_7", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_6", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "cor_phaseClass0_V_7", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "cor_phaseClass0_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "cor_phaseClass0_V_3", "Type" : "OVld", "Direction" : "IO"},
@@ -96,8 +99,11 @@ set ArgLastReadFirstWriteLatency {
 		loadCount_V {Type IO LastRead -1 FirstWrite -1}
 		unScalled_V {Type O LastRead -1 FirstWrite -1}
 		newVal_V {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_9 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_10 {Type O LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_8 {Type IO LastRead -1 FirstWrite -1}
+		cor_phaseClass0_V_7 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_6 {Type IO LastRead -1 FirstWrite -1}
-		cor_phaseClass0_V_7 {Type O LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_5 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_4 {Type IO LastRead -1 FirstWrite -1}
 		cor_phaseClass0_V_3 {Type IO LastRead -1 FirstWrite -1}

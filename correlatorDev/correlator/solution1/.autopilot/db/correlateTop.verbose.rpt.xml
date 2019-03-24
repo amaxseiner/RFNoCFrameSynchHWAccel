@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Sat Mar 23 16:09:21 2019
+<item name = "Date">Sat Mar 23 20:26:42 2019
 </item>
-<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">correlator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 2.85, 0.62</column>
+<column name="ap_clk">5.00, 2.76, 0.63</column>
 </table>
 </item>
 </section>
@@ -47,7 +47,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 188</column>
+<column name="Expression">-, -, 118, 77</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
@@ -77,25 +77,25 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="tmp_4_fu_256_p2">+, 0, 0, 39, 32, 1</column>
-<column name="tmp_6_fu_229_p2">+, 0, 0, 13, 4, 1</column>
-<column name="ap_block_state2_io">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state3_io">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_328">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
-<column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 8, 1, 1</column>
-<column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
+<column name="tmp_4_fu_292_p2">+, 0, 101, 37, 32, 1</column>
+<column name="tmp_6_fu_265_p2">+, 0, 17, 9, 4, 1</column>
+<column name="ap_block_state2_io">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_331">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_data_V_1_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_data_V_1_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_last_V_1_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_last_V_1_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="ap_block_pp0_stage0_flag00001001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_flag00011001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -118,9 +118,9 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter1_currentState_load_reg_268">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter1_currentState_load_reg_304">1, 0, 1, 0</column>
 <column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_268">1, 0, 1, 0</column>
+<column name="currentState_load_reg_304">1, 0, 1, 0</column>
 <column name="i_data_data_V_0_state">2, 0, 2, 0</column>
 <column name="i_data_last_V_0_payload_A">1, 0, 1, 0</column>
 <column name="i_data_last_V_0_payload_B">1, 0, 1, 0</column>

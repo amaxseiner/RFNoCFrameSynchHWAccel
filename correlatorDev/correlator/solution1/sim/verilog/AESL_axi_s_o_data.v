@@ -11,7 +11,7 @@
 `define TV_OUT_o_data_TDATA "../tv/rtldatafile/rtl.correlateTop.autotvout_o_data_data_V.dat"
 `define TV_OUT_o_data_TLAST "../tv/rtldatafile/rtl.correlateTop.autotvout_o_data_last_V.dat"
 
-`define AUTOTB_TRANSACTION_NUM 4384
+`define AUTOTB_TRANSACTION_NUM 4383
 
 module AESL_axi_s_o_data (
     input clk,

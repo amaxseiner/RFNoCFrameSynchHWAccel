@@ -5,12 +5,11 @@
 # 
 # ==============================================================
 
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fpo_v7_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/opencv:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fft_v9_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fir_v7_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/dds_v6_0:$::env(LD_LIBRARY_PATH)
-set ::env(LD_LIBRARY_PATH) /usr/lib/x86_64-linux-gnu:$::env(LD_LIBRARY_PATH)
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fpo_v7_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/opencv"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fft_v9_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fir_v7_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/dds_v6_0"
 
 source check_sim.tcl
 
@@ -264,11 +263,12 @@ proc sim {} {
 	set info_code 15
 	set tool_name "XSIM"
 	dump_message $info_code $tool_name
+	
 	if {$::AESL_AUTOSIM::gDebug == 1} {
-		puts stdout "[debug_prompt arg .run_sim.tcl] \"sh ./run_xsim.sh\"";
+		puts stdout "[debug_prompt arg .run_sim.tcl] \"./run_xsim.bat\"";
 	}
 	
-	set cmdret [catch {eval exec "sh ./run_xsim.sh | tee temp.log" >&@ stdout} err]
+	set cmdret [catch {eval exec "./run_xsim.bat | tee temp.log" >&@ stdout} err]
 	
 	cpfilecontent temp.log ../../.temp11.log
 	

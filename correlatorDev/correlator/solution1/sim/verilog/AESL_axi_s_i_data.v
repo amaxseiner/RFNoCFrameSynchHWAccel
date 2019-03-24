@@ -11,7 +11,7 @@
 `define TV_IN_i_data_TDATA "../tv/cdatafile/c.correlateTop.autotvin_i_data_data_V.dat"
 `define TV_IN_i_data_TLAST "../tv/cdatafile/c.correlateTop.autotvin_i_data_last_V.dat"
 
-`define AUTOTB_TRANSACTION_NUM 4384
+`define AUTOTB_TRANSACTION_NUM 4383
 
 module AESL_axi_s_i_data (
     input clk,

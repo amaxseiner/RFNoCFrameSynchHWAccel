@@ -1,4 +1,4 @@
-   Build using "/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/g++"
+   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
    Compiling apatb_correlateTop.cpp
    Compiling correlator.cpp_pre.cpp.tb.cpp
    Compiling correlatorTB.cpp_pre.cpp.tb.cpp

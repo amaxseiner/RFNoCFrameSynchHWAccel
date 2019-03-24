@@ -15,39 +15,35 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "correlateTop.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_correlateTop_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_CLOCK_PERIOD_DIV2 5.00
+`define AUTOTB_CLOCK_PERIOD_DIV2 2.50
 `define AUTOTB_II 1
-`define AUTOTB_LATENCY 5
+`define AUTOTB_LATENCY 2
 
 `define AESL_DEPTH_i_data_data_V 1
 `define AESL_DEPTH_i_data_last_V 1
 `define AESL_DEPTH_o_data_data_V 1
 `define AESL_DEPTH_o_data_last_V 1
-`define AESL_DEPTH_start_V 1
 `define AUTOTB_TVIN_i_data_data_V  "../tv/cdatafile/c.correlateTop.autotvin_i_data_data_V.dat"
 `define AUTOTB_TVIN_i_data_last_V  "../tv/cdatafile/c.correlateTop.autotvin_i_data_last_V.dat"
 `define AUTOTB_TVIN_o_data_data_V  "../tv/cdatafile/c.correlateTop.autotvin_o_data_data_V.dat"
 `define AUTOTB_TVIN_o_data_last_V  "../tv/cdatafile/c.correlateTop.autotvin_o_data_last_V.dat"
-`define AUTOTB_TVIN_start_V  "../tv/cdatafile/c.correlateTop.autotvin_start_V.dat"
 `define AUTOTB_TVIN_i_data_data_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvin_i_data_data_V.dat"
 `define AUTOTB_TVIN_i_data_last_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvin_i_data_last_V.dat"
 `define AUTOTB_TVIN_o_data_data_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvin_o_data_data_V.dat"
 `define AUTOTB_TVIN_o_data_last_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvin_o_data_last_V.dat"
-`define AUTOTB_TVIN_start_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvin_start_V.dat"
 `define AUTOTB_TVOUT_o_data_data_V  "../tv/cdatafile/c.correlateTop.autotvout_o_data_data_V.dat"
 `define AUTOTB_TVOUT_o_data_last_V  "../tv/cdatafile/c.correlateTop.autotvout_o_data_last_V.dat"
 `define AUTOTB_TVOUT_o_data_data_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvout_o_data_data_V.dat"
 `define AUTOTB_TVOUT_o_data_last_V_out_wrapc  "../tv/rtldatafile/rtl.correlateTop.autotvout_o_data_last_V.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 4384;
+parameter AUTOTB_TRANSACTION_NUM = 4383;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 5;
+parameter LATENCY_ESTIMATION = 2;
 parameter LENGTH_i_data_data_V = 1;
 parameter LENGTH_i_data_last_V = 1;
 parameter LENGTH_o_data_data_V = 1;
 parameter LENGTH_o_data_last_V = 1;
-parameter LENGTH_start_V = 1;
 
 task read_token;
     input integer fp;
@@ -85,7 +81,12 @@ wire [31 : 0] o_data_TDATA;
 wire  o_data_TVALID;
 wire  o_data_TREADY;
 wire [0 : 0] o_data_TLAST;
-wire [0 : 0] start_V;
+reg [31:0] ap_c_n_tvin_trans_num_i_data_data_V;
+reg [31:0] ap_c_n_tvin_trans_num_i_data_last_V;
+reg [31:0] ap_c_n_tvin_trans_num_o_data_data_V;
+reg [31:0] ap_c_n_tvin_trans_num_o_data_last_V;
+reg [31:0] ap_c_n_tvout_trans_num_o_data_data_V;
+reg [31:0] ap_c_n_tvout_trans_num_o_data_last_V;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -110,8 +111,7 @@ wire ap_rst_n_n;
     .o_data_TDATA(o_data_TDATA),
     .o_data_TVALID(o_data_TVALID),
     .o_data_TREADY(o_data_TREADY),
-    .o_data_TLAST(o_data_TLAST),
-    .start_V(start_V));
+    .o_data_TLAST(o_data_TLAST));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -123,60 +123,6 @@ assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
 
 
-
-
-// The signal of port start_V
-reg [0: 0] AESL_REG_start_V = 0;
-assign start_V = AESL_REG_start_V;
-initial begin : read_file_process_start_V
-    integer fp;
-    integer err;
-    integer ret;
-    integer proc_rand;
-    reg [127  : 0] token;
-    integer i;
-    reg transaction_finish;
-    integer transaction_idx;
-    transaction_idx = 0;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVIN_start_V,"r");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_start_V);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    if (token != "[[[runtime]]]") begin
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    while (token != "[[[/runtime]]]") begin
-        if (token != "[[transaction]]") begin
-            $display("ERROR: Simulation using HLS TB failed.");
-              $finish;
-        end
-        read_token(fp, token);  // skip transaction number
-          read_token(fp, token);
-            # 0.2;
-            while(ready_wire !== 1) begin
-                @(posedge AESL_clock);
-                # 0.2;
-            end
-        if(token != "[[/transaction]]") begin
-            ret = $sscanf(token, "0x%x", AESL_REG_start_V);
-              if (ret != 1) begin
-                  $display("Failed to parse token!");
-                $display("ERROR: Simulation using HLS TB failed.");
-                  $finish;
-              end
-            @(posedge AESL_clock);
-              read_token(fp, token);
-        end
-          read_token(fp, token);
-    end
-    $fclose(fp);
-end
 
 
 wire i_data_ready;
@@ -292,9 +238,6 @@ reg [31:0] size_o_data_data_V_backup;
 reg end_o_data_last_V;
 reg [31:0] size_o_data_last_V;
 reg [31:0] size_o_data_last_V_backup;
-reg end_start_V;
-reg [31:0] size_start_V;
-reg [31:0] size_start_V_backup;
 
 initial begin : initial_process
     integer proc_rand;
@@ -303,22 +246,40 @@ initial begin : initial_process
     repeat(3) @ (posedge AESL_clock);
     rst = 1;
 end
-initial begin : gen_ap_ctrl_none_start
-    reg [31:0] start_cnt;
-    start = 0;
-    start_cnt = 0;
-    ce = 1;
-    wait (AESL_reset === 1);
-    @ (posedge AESL_clock);
-    while (ready_cnt < AUTOTB_TRANSACTION_NUM + 1) begin
-        start = 1;
-        start_cnt = start_cnt + 1;
-        @ (posedge AESL_clock);
-        start = 0;
-        repeat (`AUTOTB_II - 1) @ (posedge AESL_clock);
+    // i_data_data_V : axi_s
+    reg ready_i_data_data_V;
+    
+    always @ (*) begin
+        if (end_i_data_data_V) begin
+            ready_i_data_data_V <= 1;
+        end else if (ap_c_n_tvin_trans_num_i_data_data_V > ready_cnt) begin
+            ready_i_data_data_V <= 1;
+        end else begin
+            ready_i_data_data_V <= 0;
+        end
     end
-    start <= 0;
-end
+    
+    // o_data_data_V : axi_s
+    reg ready_o_data_data_V;
+    
+    always @ (*) begin
+        if (end_o_data_data_V) begin
+            ready_o_data_data_V <= 1;
+        end else if (ap_c_n_tvin_trans_num_o_data_data_V > ready_cnt) begin
+            ready_o_data_data_V <= 1;
+        end else begin
+            ready_o_data_data_V <= 0;
+        end
+    end
+    
+    // start
+    always @ (*) begin
+        if (~AESL_reset) begin
+            start <= 0;
+        end else begin
+            start <= ready_i_data_data_V && ready_o_data_data_V;
+        end
+    end
 
 always @(AESL_done)
 begin
@@ -340,7 +301,7 @@ initial begin : ready_last_n_process
   ready_last_n <= 0;
 end
 
-assign ready = AESL_start | ready_initial;
+assign ready = AESL_start;
 assign ready_wire = ready;
 initial begin : done_delay_last_n_process
   done_delay_last_n = 1;
@@ -376,25 +337,170 @@ begin
           interface_done = 0;
   end
 end
-initial begin : gen_ap_ctrl_none_done
-    integer wait_i;
-    AESL_done <= 0;
-    wait(AESL_reset === 1);
-    for (wait_i = 0; wait_i < `AUTOTB_LATENCY ; wait_i = wait_i + 1) begin
-        @(posedge AESL_clock);
-    end
-    AESL_done <= 1;
-    @(posedge AESL_clock);
-    AESL_done <= 0;
-    while(done_cnt < AUTOTB_TRANSACTION_NUM) begin
-        for (wait_i = 0; wait_i < `AUTOTB_II - 1; wait_i = wait_i + 1) begin
-            @(posedge AESL_clock);
+    // o_data_data_V : axi_s
+    reg done_o_data_data_V;
+    
+    always @ (*) begin
+        if (end_o_data_data_V) begin
+            done_o_data_data_V <= 1;
+        end else if (ap_c_n_tvout_trans_num_o_data_data_V > done_cnt + 1) begin
+            done_o_data_data_V <= 1;
+        end else if (size_o_data_data_V > 1) begin
+            done_o_data_data_V <= 0;
+        end else if (o_data_TVALID == 1) begin
+            done_o_data_data_V <= 1;
+        end else begin
+            done_o_data_data_V <= 0;
         end
-        AESL_done <= 1;
-        @(posedge AESL_clock);
-        AESL_done <= 0;
     end
-end
+    
+    // o_data_last_V : axi_s
+    reg done_o_data_last_V;
+    
+    always @ (*) begin
+        if (end_o_data_last_V) begin
+            done_o_data_last_V <= 1;
+        end else if (ap_c_n_tvout_trans_num_o_data_last_V > done_cnt + 1) begin
+            done_o_data_last_V <= 1;
+        end else if (size_o_data_last_V > 1) begin
+            done_o_data_last_V <= 0;
+        end else if (o_data_TVALID == 1) begin
+            done_o_data_last_V <= 1;
+        end else begin
+            done_o_data_last_V <= 0;
+        end
+    end
+    
+    // AESL_done
+    always @ (*) begin
+        if (~AESL_reset) begin
+            AESL_done <= 0;
+        end else begin
+            AESL_done <= done_o_data_data_V && done_o_data_last_V;
+        end
+    end
+    
+    `define STREAM_SIZE_IN_i_data_data_V "../tv/stream_size/stream_size_in_i_data_data_V.dat"
+    
+    initial begin : gen_ap_c_n_tvin_trans_num_i_data_data_V
+        integer fp_i_data_data_V;
+        reg [127:0] token_i_data_data_V;
+        integer ret;
+        
+        ap_c_n_tvin_trans_num_i_data_data_V = 0;
+        end_i_data_data_V = 0;
+        wait (AESL_reset === 1);
+        
+        fp_i_data_data_V = $fopen(`AUTOTB_TVIN_i_data_data_V, "r");
+        if(fp_i_data_data_V == 0) begin
+            $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_i_data_data_V);
+            $finish;
+        end
+        read_token(fp_i_data_data_V, token_i_data_data_V); // should be [[[runtime]]]
+        if (token_i_data_data_V != "[[[runtime]]]") begin
+            $display("ERROR: token_i_data_data_V != \"[[[runtime]]]\"");
+            $finish;
+        end
+        ap_c_n_tvin_trans_num_i_data_data_V = ap_c_n_tvin_trans_num_i_data_data_V + 1;
+        read_token(fp_i_data_data_V, token_i_data_data_V); // should be [[transaction]] or [[[/runtime]]]
+        if (token_i_data_data_V == "[[[/runtime]]]") begin
+            $fclose(fp_i_data_data_V);
+            end_i_data_data_V = 1;
+        end else begin
+            end_i_data_data_V = 0;
+            read_token(fp_i_data_data_V, token_i_data_data_V); // should be transaction number
+            read_token(fp_i_data_data_V, token_i_data_data_V);
+        end
+        while (token_i_data_data_V == "[[/transaction]]" && end_i_data_data_V == 0) begin
+            ap_c_n_tvin_trans_num_i_data_data_V = ap_c_n_tvin_trans_num_i_data_data_V + 1;
+            read_token(fp_i_data_data_V, token_i_data_data_V); // should be [[transaction]] or [[[/runtime]]]
+            if (token_i_data_data_V == "[[[/runtime]]]") begin
+                $fclose(fp_i_data_data_V);
+                end_i_data_data_V = 1;
+            end else begin
+                end_i_data_data_V = 0;
+                read_token(fp_i_data_data_V, token_i_data_data_V); // should be transaction number
+                read_token(fp_i_data_data_V, token_i_data_data_V);
+            end
+        end
+        forever begin
+            @ (posedge AESL_clock);
+            if (end_i_data_data_V == 0) begin
+                if (i_data_TREADY == 1) begin
+                    read_token(fp_i_data_data_V, token_i_data_data_V);
+                    while (token_i_data_data_V == "[[/transaction]]" && end_i_data_data_V == 0) begin
+                        ap_c_n_tvin_trans_num_i_data_data_V = ap_c_n_tvin_trans_num_i_data_data_V + 1;
+                        read_token(fp_i_data_data_V, token_i_data_data_V); // should be [[transaction]] or [[[/runtime]]]
+                        if (token_i_data_data_V == "[[[/runtime]]]") begin
+                            $fclose(fp_i_data_data_V);
+                            end_i_data_data_V = 1;
+                        end else begin
+                            end_i_data_data_V = 0;
+                            read_token(fp_i_data_data_V, token_i_data_data_V); // should be transaction number
+                            read_token(fp_i_data_data_V, token_i_data_data_V);
+                        end
+                    end
+                end
+            end else begin
+                ap_c_n_tvin_trans_num_i_data_data_V = ap_c_n_tvin_trans_num_i_data_data_V + 1;
+            end
+        end
+    end
+    
+    
+    initial begin : proc_ap_c_n_tvin_trans_num_o_data_data_V
+        ap_c_n_tvin_trans_num_o_data_data_V = AUTOTB_TRANSACTION_NUM + 1;
+    end
+    `define STREAM_SIZE_OUT_o_data_data_V "../tv/stream_size/stream_size_out_o_data_data_V.dat"
+    
+    initial begin : proc_ap_c_n_tvout_trans_num_o_data_data_V
+        integer fp_o_data_data_V;
+        reg [127:0] token_o_data_data_V;
+        integer ret;
+        
+        ap_c_n_tvout_trans_num_o_data_data_V = 0;
+        end_o_data_data_V = 0;
+        wait (AESL_reset === 1);
+        
+        while(done_cnt < AUTOTB_TRANSACTION_NUM) begin
+            ap_c_n_tvout_trans_num_o_data_data_V = ap_c_n_tvout_trans_num_o_data_data_V + 1;
+            size_o_data_data_V = LENGTH_o_data_data_V;
+            while (size_o_data_data_V > 0) begin
+                @ (posedge AESL_clock);
+                if (o_data_TVALID == 1) begin
+                    size_o_data_data_V = size_o_data_data_V - 1;
+                end
+            end
+        end
+        end_o_data_data_V = 1;
+    end
+    
+    initial begin : proc_ap_c_n_tvin_trans_num_o_data_last_V
+        ap_c_n_tvin_trans_num_o_data_last_V = AUTOTB_TRANSACTION_NUM + 1;
+    end
+    `define STREAM_SIZE_OUT_o_data_last_V "../tv/stream_size/stream_size_out_o_data_last_V.dat"
+    
+    initial begin : proc_ap_c_n_tvout_trans_num_o_data_last_V
+        integer fp_o_data_last_V;
+        reg [127:0] token_o_data_last_V;
+        integer ret;
+        
+        ap_c_n_tvout_trans_num_o_data_last_V = 0;
+        end_o_data_last_V = 0;
+        wait (AESL_reset === 1);
+        
+        while(done_cnt < AUTOTB_TRANSACTION_NUM) begin
+            ap_c_n_tvout_trans_num_o_data_last_V = ap_c_n_tvout_trans_num_o_data_last_V + 1;
+            size_o_data_last_V = LENGTH_o_data_last_V;
+            while (size_o_data_last_V > 0) begin
+                @ (posedge AESL_clock);
+                if (o_data_TVALID == 1) begin
+                    size_o_data_last_V = size_o_data_last_V - 1;
+                end
+            end
+        end
+        end_o_data_last_V = 1;
+    end
 
 reg dump_tvout_finish_o_data_data_V;
 

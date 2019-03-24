@@ -87,7 +87,6 @@ proc check_tvin_file {} {
          "c.correlateTop.autotvin_i_data_last_V.dat"
          "c.correlateTop.autotvin_o_data_data_V.dat"
          "c.correlateTop.autotvin_o_data_last_V.dat"
-         "c.correlateTop.autotvin_start_V.dat"
          "c.correlateTop.autotvout_o_data_data_V.dat"
          "c.correlateTop.autotvout_o_data_last_V.dat"
     }

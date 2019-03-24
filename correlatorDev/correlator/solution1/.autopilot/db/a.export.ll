@@ -1,6 +1,6 @@
-; ModuleID = '/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc'
-target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
-target triple = "x86_64-unknown-linux-gnu"
+; ModuleID = 'D:/SeniorProject/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc'
+target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
+target triple = "i686-pc-mingw32"
 
 @unScalled_V = internal global i16 0
 @phaseClass_V = internal global i4 0
@@ -10,6 +10,7 @@ target triple = "x86_64-unknown-linux-gnu"
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @currentState = internal unnamed_addr global i1 false, align 1
 @correlateTop_str = internal unnamed_addr constant [13 x i8] c"correlateTop\00"
+@cor_phaseClass0_V_9 = internal unnamed_addr global i32 0
 @cor_phaseClass0_V_8 = internal unnamed_addr global i32 0
 @cor_phaseClass0_V_7 = internal unnamed_addr global i32 0
 @cor_phaseClass0_V_6 = internal unnamed_addr global i32 0
@@ -17,6 +18,8 @@ target triple = "x86_64-unknown-linux-gnu"
 @cor_phaseClass0_V_4 = internal unnamed_addr global i32 0
 @cor_phaseClass0_V_3 = internal global i21 0
 @cor_phaseClass0_V_2 = internal global i21 0
+@cor_phaseClass0_V_11 = internal unnamed_addr global i32 0
+@cor_phaseClass0_V_10 = internal unnamed_addr global i32 0
 @cor_phaseClass0_V_1 = internal unnamed_addr global i21 0
 @cor_phaseClass0_V_0 = internal unnamed_addr global i21 0
 @p_str4 = private unnamed_addr constant [5 x i8] c"both\00", align 1
@@ -62,9 +65,15 @@ codeRepl:
   %op_V_read_assign = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %p_Val2_1, i5 0)
   store i21 %op_V_read_assign, i21* @newVal_V, align 4
   %cond_i = icmp eq i4 %phaseClass_V_load, 0
-  br i1 %cond_i, label %.preheader.0.i, label %shiftPhaseClass.exit
+  br i1 %cond_i, label %.preheader.0.i, label %correlator.exit
 
 .preheader.0.i:                                   ; preds = %._crit_edge140
+  %cor_phaseClass0_V_9_s = load i32* @cor_phaseClass0_V_9, align 4
+  store i32 %cor_phaseClass0_V_9_s, i32* @cor_phaseClass0_V_10, align 8
+  %cor_phaseClass0_V_8_s = load i32* @cor_phaseClass0_V_8, align 16
+  store i32 %cor_phaseClass0_V_8_s, i32* @cor_phaseClass0_V_9, align 4
+  %cor_phaseClass0_V_7_s = load i32* @cor_phaseClass0_V_7, align 4
+  store i32 %cor_phaseClass0_V_7_s, i32* @cor_phaseClass0_V_8, align 16
   %cor_phaseClass0_V_6_s = load i32* @cor_phaseClass0_V_6, align 8
   store i32 %cor_phaseClass0_V_6_s, i32* @cor_phaseClass0_V_7, align 4
   %cor_phaseClass0_V_5_s = load i32* @cor_phaseClass0_V_5, align 4
@@ -81,9 +90,9 @@ codeRepl:
   %cor_phaseClass0_V_0_s = load i21* @cor_phaseClass0_V_0, align 4
   store i21 %cor_phaseClass0_V_0_s, i21* @cor_phaseClass0_V_1, align 4
   store i21 %op_V_read_assign, i21* @cor_phaseClass0_V_0, align 4
-  br label %shiftPhaseClass.exit
+  br label %correlator.exit
 
-shiftPhaseClass.exit:                             ; preds = %.preheader.0.i, %._crit_edge140
+correlator.exit:                                  ; preds = %.preheader.0.i, %._crit_edge140
   %loadCount_V_load = load i32* @loadCount_V, align 4
   %tmp_4 = add i32 %loadCount_V_load, 1
   store i32 %tmp_4, i32* @loadCount_V, align 4
@@ -93,7 +102,7 @@ shiftPhaseClass.exit:                             ; preds = %.preheader.0.i, %._
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_data_V, i1* %o_data_last_V, i32 %o_data_data_V_tmp, i1 %i_data_last_V_tmp)
   br label %._crit_edge139
 
-._crit_edge139:                                   ; preds = %shiftPhaseClass.exit, %0
+._crit_edge139:                                   ; preds = %correlator.exit, %0
   store i1 true, i1* @currentState, align 1
   ret void
 }
@@ -150,7 +159,7 @@ entry:
   ret i21 %empty_5
 }
 
-declare void @_GLOBAL__I_a() nounwind section ".text.startup"
+declare void @_GLOBAL__I_a() nounwind
 
 !opencl.kernels = !{!0, !7, !11, !17, !17, !17, !20, !26, !20, !20, !20, !20, !20, !26, !29, !29, !20, !20, !20, !26, !30, !30, !30, !26, !32, !35, !35, !37, !39, !39, !41, !43, !43, !45, !45, !29, !20, !47, !47, !20, !49, !49, !20, !20, !51, !54, !20, !20, !56, !56, !57, !57, !59, !37, !49, !49, !60, !62, !64, !64, !66, !68, !20, !20, !70, !73, !73, !79, !81, !81, !83, !81, !81, !84, !20, !20, !20, !20, !20, !20, !20, !20, !20, !20, !20, !81, !81, !20, !20, !20, !20, !20, !20, !20, !20, !20, !20, !20, !20}
 !hls.encrypted.func = !{}
