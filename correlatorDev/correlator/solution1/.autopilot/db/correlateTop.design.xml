@@ -14,23 +14,23 @@
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>0.62</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
-<EstimatedClockPeriod>2.85</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.84</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>2</Best-caseLatency>
-<Average-caseLatency>2</Average-caseLatency>
-<Worst-caseLatency>2</Worst-caseLatency>
+<Best-caseLatency>11</Best-caseLatency>
+<Average-caseLatency>11</Average-caseLatency>
+<Worst-caseLatency>11</Worst-caseLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>3</PipelineDepth>
+<PipelineDepth>12</PipelineDepth>
 <PipelineType>function</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>54</FF>
-<LUT>239</LUT>
 <BRAM_18K>0</BRAM_18K>
-<DSP48E>0</DSP48E>
+<DSP48E>4</DSP48E>
+<FF>1531</FF>
+<LUT>1103</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -58,11 +58,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TDATA</name>
-<Object>i_data_V_data_V</Object>
+<Object>i_data_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>data</Attribute>
@@ -70,11 +70,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TVALID</name>
-<Object>i_data_V_last_V</Object>
+<Object>i_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
@@ -82,11 +82,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TREADY</name>
-<Object>i_data_V_last_V</Object>
+<Object>i_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
@@ -94,11 +94,11 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TLAST</name>
-<Object>i_data_V_last_V</Object>
+<Object>i_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
-<IOConfig></IOConfig>
+<IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>data</Attribute>
@@ -106,7 +106,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TDATA</name>
-<Object>o_data_V_data_V</Object>
+<Object>o_data_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -118,7 +118,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TVALID</name>
-<Object>o_data_V_last_V</Object>
+<Object>o_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -130,7 +130,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TREADY</name>
-<Object>o_data_V_last_V</Object>
+<Object>o_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -142,7 +142,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TLAST</name>
-<Object>o_data_V_last_V</Object>
+<Object>o_data_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

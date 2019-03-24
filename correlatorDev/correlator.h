@@ -1,3 +1,4 @@
+#include <hls_stream.h>
 #include "ap_int.h"
 #include "ap_fixed.h"
 using namespace std;
@@ -29,12 +30,12 @@ struct phase{
 	cor_t phaseWindow[windowSize];
 };
 
-void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data);
+void correlateTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 
  class correlate{
  public:
-	 void shiftPhaseClass(cor_t newVal, ap_uint<4> phaseClass);
-	 cor_t correlator(ap_uint<4> phaseClass);
+	 void shiftPhaseClass(cor_t newVal, ap_uint<5> phaseClass);
+	 cor_t correlator(ap_uint<5> phaseClass);
 	 phase phaseArray[16];
 	 cor_t phaseClass0[windowSize];
 	 cor_t phaseClass1[windowSize];

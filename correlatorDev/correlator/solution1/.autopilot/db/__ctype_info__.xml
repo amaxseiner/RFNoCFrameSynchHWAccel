@@ -1,6 +1,6 @@
 <InterfaceSummary>
 <RtlPorts>
-<name>i_data_V_data_V</name>
+<name>i_data_data_V</name>
 <CType>
 <TypeName>ap_int 32</TypeName>
 <TypeWidth>32</TypeWidth>
@@ -10,7 +10,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>i_data_V_last_V</name>
+<name>i_data_last_V</name>
 <CType>
 <TypeName>ap_uint 1</TypeName>
 <TypeWidth>1</TypeWidth>
@@ -20,7 +20,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>o_data_V_data_V</name>
+<name>o_data_data_V</name>
 <CType>
 <TypeName>ap_int 32</TypeName>
 <TypeWidth>32</TypeWidth>
@@ -30,7 +30,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>o_data_V_last_V</name>
+<name>o_data_last_V</name>
 <CType>
 <TypeName>ap_uint 1</TypeName>
 <TypeWidth>1</TypeWidth>

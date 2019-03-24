@@ -21,7 +21,7 @@
     "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "1",
-    "Latency": "2",
+    "Latency": "11",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -36,8 +36,14 @@
   },
   "Files": {
     "CSource": ["..\/..\/correlator.cpp"],
-    "Vhdl": ["impl\/vhdl\/correlateTop.vhd"],
-    "Verilog": ["impl\/verilog\/correlateTop.v"],
+    "Vhdl": [
+      "impl\/vhdl\/correlateTop_mul_bkb.vhd",
+      "impl\/vhdl\/correlateTop.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/correlateTop_mul_bkb.v",
+      "impl\/verilog\/correlateTop.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -147,52 +153,52 @@
     }
   },
   "CPorts": {
-    "i_data_V_data_V": {
+    "i_data_data_V": {
       "interfaceRef": "i_data",
       "dir": "in"
     },
-    "i_data_V_last_V": {
+    "i_data_last_V": {
       "interfaceRef": "i_data",
       "dir": "in"
     },
-    "o_data_V_data_V": {
+    "o_data_data_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "1"
+      "firstOutLatency": "10"
     },
-    "o_data_V_last_V": {
+    "o_data_last_V": {
       "interfaceRef": "o_data",
       "dir": "out",
-      "firstOutLatency": "1"
+      "firstOutLatency": "10"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {"ModuleName": "correlateTop"},
     "Metrics": {"correlateTop": {
         "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "2",
-          "LatencyWorst": "2",
+          "LatencyBest": "11",
+          "LatencyAvg": "11",
+          "LatencyWorst": "11",
           "PipelineII": "1",
-          "PipelineDepth": "3",
+          "PipelineDepth": "12",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "2.85"
+          "Estimate": "3.84"
         },
         "Area": {
-          "FF": "54",
-          "LUT": "239",
           "BRAM_18K": "0",
-          "DSP48E": "0"
+          "DSP48E": "4",
+          "FF": "1531",
+          "LUT": "1103"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-24 00:27:36 EDT",
+    "Time": "2019-03-24 03:10:28 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

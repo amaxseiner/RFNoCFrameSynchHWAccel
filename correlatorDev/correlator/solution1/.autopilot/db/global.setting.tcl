@@ -11,7 +11,7 @@ set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
 set FftOrFirFlag 0
-set NbRWValue 1
+set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 0
@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../../correlator.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
+set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
 set TBFiles {verilog ../../correlatorTB.cpp bc ../../correlatorTB.cpp vhdl ../../correlatorTB.cpp sc ../../correlatorTB.cpp cas ../../correlatorTB.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

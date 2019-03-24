@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <hls_stream.h>
+#include "hls_stream.h"
 #include "correlator.h"
 
 using namespace std;
@@ -9,7 +9,7 @@ using namespace std;
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
+void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
 
 //#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
@@ -76,51 +76,48 @@ static cor_t out;
 
 switch(currentState) {
 	case ST_IDLE:
-		loadCount = 0;
-		phaseClass = 0;
+
+			loadCount = 0;
+			phaseClass=0;
 		currentState = ST_LOAD;
 
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
-		if(!i_data.empty()){
-			//i_data.read(tmp_data);
-			tmp_data = i_data.read();
-			out_sample.last = tmp_data.last;
-			// = i_data->data.range(15,0); // RE
-			unScalled.V = out_sample.data.range(15,0);
-			newVal = unScalled;
-			/*if(phaseClass == 0){
-				*result << newVal;
-				*result << ",";
-				*result << endl;
-			}*/
-			cor.shiftPhaseClass(newVal,phaseClass);
-			out = cor.correlator(phaseClass);
-			//corHelperI = 0;
-			//o_data->data = out.V;
-			loadCount = loadCount + 32;
-			if(phaseClass == 15){
-				phaseClass = 0;
-			} else {
-				phaseClass = phaseClass + 1;
-			}
-			out_sample.data.range(31,0) = out.V;
-			o_data.write(out_sample);
-			/*if(out > 29000){
-				o_data->data = loadCount;
-			} else {
-				o_data->data = 0;
-			}*/
-
-			currentState = ST_LOAD;
+		//i_data.read(tmp_data);
+		o_data->last = i_data->last;
+		unScalled.V = i_data->data.range(15,0); // RE
+		newVal = unScalled;
+		/*if(phaseClass == 0){
+			*result << newVal;
+			*result << ",";
+			*result << endl;
+		}*/
+		cor.shiftPhaseClass(newVal,phaseClass);
+		out = cor.correlator(phaseClass);
+		//corHelperI = 0;
+		//o_data->data = out.V;
+		loadCount = loadCount + 1;
+		if(phaseClass == 15){
+			phaseClass=0;
+		} else {
+			phaseClass = phaseClass + 1;
 		}
+
+		if(out > 29000){
+			o_data->data = loadCount;
+		} else {
+			o_data->data = 0;
+		}
+
+
+		currentState = ST_LOAD;
 
 	break;
 }
 
 }
 
-void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
+void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
 	switch(phaseClass){
 	case 0:
 		SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
@@ -243,7 +240,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<4> phaseClass){
 
 }
 
-cor_t correlate::correlator(ap_uint<4> phaseClass){
+cor_t correlate::correlator(ap_uint<5> phaseClass){
 	cor_t corHelperINeg,corHelperIPos,res;
 	corHelperINeg = 0;
 	corHelperIPos = 0;

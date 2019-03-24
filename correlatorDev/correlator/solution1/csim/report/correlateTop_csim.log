@@ -1,17 +1,7 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../correlatorTB.cpp in debug mode
-csim.mk:80: recipe for target 'obj/correlatorTB.o' failed
-In file included from ../../../../correlatorTB.cpp:4:0:
-../../../../correlator.h:32:19: error: variable or field ‘correlateTop’ declared void
-../../../../correlator.h:32:19: error: ‘hls’ has not been declared
-../../../../correlator.h:32:41: error: expected primary-expression before ‘>’ token
-../../../../correlator.h:32:43: error: ‘i_data’ was not declared in this scope
-../../../../correlator.h:32:51: error: ‘hls’ has not been declared
-../../../../correlator.h:32:73: error: expected primary-expression before ‘>’ token
-../../../../correlator.h:32:75: error: ‘o_data’ was not declared in this scope
-../../../../correlatorTB.cpp: In function ‘int main()’:
-../../../../correlatorTB.cpp:26:28: error: ‘correlateTop’ was not declared in this scope
-make: *** [obj/correlatorTB.o] Error 1
-CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+   Compiling ../../../../correlator.cpp in debug mode
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************
