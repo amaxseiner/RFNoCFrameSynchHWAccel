@@ -31911,7 +31911,7 @@ switch(currentState) {
    } else {
     phaseClass = phaseClass + 1;
    }
-   out_sample.data = tmp_data.data;
+   out_sample.data = loadCount;
    o_data.write(out_sample);
 #pragma empty_line
 #pragma empty_line

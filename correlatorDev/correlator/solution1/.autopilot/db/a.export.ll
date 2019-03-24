@@ -44,30 +44,29 @@ codeRepl:
   store i32 0, i32* @loadCount_V, align 4
   store i4 0, i4* @phaseClass_V, align 1
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge130
+  br label %._crit_edge129
 
 ; <label>:1                                       ; preds = %codeRepl
   %tmp = call i1 @_ssdm_op_NbReadReq.axis.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32 1)
-  br i1 %tmp, label %._crit_edge132, label %._crit_edge131
+  br i1 %tmp, label %._crit_edge131, label %._crit_edge130
 
-._crit_edge132:                                   ; preds = %1
+._crit_edge131:                                   ; preds = %1
   %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
-  %tmp_data_V = extractvalue { i32, i1 } %empty, 0
   %tmp_last_V = extractvalue { i32, i1 } %empty, 1
   store i1 false, i1* @newVal_V, align 1
   %loadCount_V_load = load i32* @loadCount_V, align 4
-  %tmp_3 = add i32 %loadCount_V_load, 1
-  store i32 %tmp_3, i32* @loadCount_V, align 4
+  %out_sample_data_V = add i32 %loadCount_V_load, 1
+  store i32 %out_sample_data_V, i32* @loadCount_V, align 4
   %tmp_5 = add i4 %phaseClass_V_load, 1
   store i4 %tmp_5, i4* @phaseClass_V, align 1
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 %tmp_last_V)
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)
   store i1 true, i1* @currentState, align 1
-  br label %._crit_edge131
-
-._crit_edge131:                                   ; preds = %._crit_edge132, %1
   br label %._crit_edge130
 
-._crit_edge130:                                   ; preds = %._crit_edge131, %0
+._crit_edge130:                                   ; preds = %._crit_edge131, %1
+  br label %._crit_edge129
+
+._crit_edge129:                                   ; preds = %._crit_edge130, %0
   ret void
 }
 

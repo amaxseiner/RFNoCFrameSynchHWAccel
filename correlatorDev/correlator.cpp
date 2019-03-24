@@ -103,7 +103,7 @@ switch(currentState) {
 			} else {
 				phaseClass = phaseClass + 1;
 			}
-			out_sample.data = tmp_data.data;
+			out_sample.data = loadCount;
 			o_data.write(out_sample);
 			/*if(out > 29000){
 				o_data->data = loadCount;
