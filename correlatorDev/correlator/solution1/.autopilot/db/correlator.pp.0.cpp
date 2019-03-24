@@ -31885,13 +31885,13 @@ switch(currentState) {
    out = cor.correlator(phaseClass);
 
 
-   loadCount = loadCount + 1;
+   loadCount = loadCount + 32;
    if(phaseClass == 15){
     phaseClass=0;
    } else {
     phaseClass = phaseClass + 1;
    }
-   out_sample.data = loadCount;
+   out_sample.data.range(31,0) = loadCount.range(31,0);
    o_data.write(out_sample);
 
 
