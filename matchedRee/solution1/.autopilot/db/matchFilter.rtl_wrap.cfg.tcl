@@ -5,14 +5,14 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName0 "in"
-set BitWidth0 "32"
+set BitWidth0 "64"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
-set Pointer0 "1"
+set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
-set Interface0 "wire"
+set Interface0 [list AP_STREAM 0] 
 set structMem0 ""
 set PortName00 "data"
 set BitWidth00 "32"
@@ -46,14 +46,14 @@ set DataType0 [list "axis_fixed" "struct axis_fixed" $structMem0 1 0 $structPara
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend PortList $Port0
 set PortName1 "out"
-set BitWidth1 "32"
+set BitWidth1 "64"
 set ArrayOpt1 ""
 set Const1 "0"
 set Volatile1 "0"
-set Pointer1 "1"
+set Pointer1 "0"
 set Reference1 "0"
 set Dims1 [list 0]
-set Interface1 "wire"
+set Interface1 [list AP_STREAM 0] 
 set structMem1 ""
 set PortName10 "data"
 set BitWidth10 "32"

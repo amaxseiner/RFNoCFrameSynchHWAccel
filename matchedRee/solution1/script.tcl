@@ -5,11 +5,11 @@
 ############################################################
 open_project matchedRee
 set_top matchFilter
-add_files matchedRee/inputCorrr.dat
-add_files matchedRee/matchFilter.cpp
-add_files matchedRee/results.csv
-add_files matchedRee/tb_input.txt
 add_files matchedRee/tb_output.txt
+add_files matchedRee/tb_input.txt
+add_files matchedRee/results.csv
+add_files matchedRee/matchFilter.cpp
+add_files matchedRee/inputCorrr.dat
 add_files -tb matchedRee/tb_main.cpp
 open_solution "solution1"
 set_part {xc7k160tfbg484-1} -tool vivado

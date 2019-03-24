@@ -1,5 +1,6 @@
 #include "ap_int.h"
-//#include "ap_fixed.h"
+#include "ap_fixed.h"
+#include <hls_stream.h>
 
 #define SIZE = 128;
  struct axis_fixed{
@@ -139,7 +140,7 @@
 
 
 
-void matchFilter(axis_fixed *in, axis_fixed *out);
+void matchFilter(hls::stream<axis_fixed> in, hls::stream<axis_fixed> out);
 
 class matchFilter_ff
 {

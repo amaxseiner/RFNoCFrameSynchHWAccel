@@ -12,8 +12,8 @@
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>0.63</ClockUncertainty>
-<EstimatedClockPeriod>4.33</EstimatedClockPeriod>
+<ClockUncertainty>0.62</ClockUncertainty>
+<EstimatedClockPeriod>4.04</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>897</Best-caseLatency>
@@ -43,8 +43,8 @@
 <Resources>
 <BRAM_18K>1</BRAM_18K>
 <DSP48E>2</DSP48E>
-<FF>2404</FF>
-<LUT>1011</LUT>
+<FF>295</FF>
+<LUT>1119</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -72,7 +72,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>in_r_TDATA</name>
-<Object>in_data_V</Object>
+<Object>in_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -84,7 +84,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>in_r_TVALID</name>
-<Object>in_last_V</Object>
+<Object>in_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -96,7 +96,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>in_r_TREADY</name>
-<Object>in_last_V</Object>
+<Object>in_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -108,7 +108,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>in_r_TLAST</name>
-<Object>in_last_V</Object>
+<Object>in_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -120,7 +120,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_r_TDATA</name>
-<Object>out_data_V</Object>
+<Object>out_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -132,7 +132,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_r_TVALID</name>
-<Object>out_last_V</Object>
+<Object>out_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -144,7 +144,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_r_TREADY</name>
-<Object>out_last_V</Object>
+<Object>out_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -156,7 +156,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_r_TLAST</name>
-<Object>out_last_V</Object>
+<Object>out_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

@@ -20,7 +20,7 @@
     "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "641",
+    "Latency": "897",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -38,11 +38,15 @@
     "Vhdl": [
       "impl\/vhdl\/matchFilter_buffIbkb.vhd",
       "impl\/vhdl\/matchFilter_buffIcud.vhd",
+      "impl\/vhdl\/matchFilter_mac_meOg.vhd",
+      "impl\/vhdl\/matchFilter_mux_1dEe.vhd",
       "impl\/vhdl\/matchFilter.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/matchFilter_buffIbkb.v",
       "impl\/verilog\/matchFilter_buffIcud.v",
+      "impl\/verilog\/matchFilter_mac_meOg.v",
+      "impl\/verilog\/matchFilter_mux_1dEe.v",
       "impl\/verilog\/matchFilter.v"
     ],
     "Misc": ["impl\/misc\/logo.png"]
@@ -154,20 +158,20 @@
     }
   },
   "CPorts": {
-    "in_data_V": {
+    "in_V_data_V": {
       "interfaceRef": "in_r",
       "dir": "in"
     },
-    "in_last_V": {
+    "in_V_last_V": {
       "interfaceRef": "in_r",
       "dir": "in"
     },
-    "out_data_V": {
+    "out_V_data_V": {
       "interfaceRef": "out_r",
       "dir": "out",
       "firstOutLatency": "3"
     },
-    "out_last_V": {
+    "out_V_last_V": {
       "interfaceRef": "out_r",
       "dir": "out",
       "firstOutLatency": "3"
@@ -177,17 +181,17 @@
     "Hierarchy": {"ModuleName": "matchFilter"},
     "Metrics": {"matchFilter": {
         "Latency": {
-          "LatencyBest": "641",
-          "LatencyAvg": "641",
-          "LatencyWorst": "641",
-          "PipelineII": "642",
+          "LatencyBest": "897",
+          "LatencyAvg": "897",
+          "LatencyWorst": "897",
+          "PipelineII": "898",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "4.15"
+          "Estimate": "4.04"
         },
         "Loops": [
           {
@@ -200,22 +204,22 @@
           {
             "Name": "Loop 2",
             "TripCount": "128",
-            "Latency": "256",
+            "Latency": "512",
             "PipelineII": "",
-            "PipelineDepth": "2"
+            "PipelineDepth": "4"
           }
         ],
         "Area": {
           "BRAM_18K": "1",
-          "FF": "254",
-          "LUT": "486",
-          "DSP48E": "0"
+          "DSP48E": "2",
+          "FF": "295",
+          "LUT": "1119"
         }
       }}
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-03-23 11:59:24 EDT",
+    "Time": "2019-03-24 13:55:38 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
