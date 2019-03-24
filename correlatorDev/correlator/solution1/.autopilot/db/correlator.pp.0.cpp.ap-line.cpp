@@ -144,9 +144,186 @@ extern "C" {
 #pragma line 8 "<command line>" 2
 #pragma line 1 "<built-in>" 2
 #pragma line 1 "correlator.cpp" 2
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
-#pragma line 37 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
-#pragma line 37 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+#pragma empty_line
+#pragma line 1 "./correlator.h" 1
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 1
+#pragma line 66 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
+#pragma line 58 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h"
+enum SsdmDataTypes {
+    _ssdm_sc_int = 0,
+    _ssdm_c_int = _ssdm_sc_int,
+    _ssdm_sc_uint = 1,
+    _ssdm_c_uint = _ssdm_sc_uint,
+    _ssdm_sc_bigint = 2,
+    _ssdm_sc_biguint = 3,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmPortTypes {
+    _ssdm_sc_in = 0,
+    _ssdm_sc_out = 1,
+    _ssdm_sc_inout = 2,
+    _ssdm_sc_in_clk,
+#pragma empty_line
+    _ssdm_fifo_in,
+    _ssdm_sc_fifo_in = _ssdm_fifo_in,
+    _ssdm_tlm_fifo_in = _ssdm_fifo_in,
+    _ssdm_fifo_out,
+    _ssdm_sc_fifo_out = _ssdm_fifo_out,
+    _ssdm_tlm_fifo_out = _ssdm_fifo_out,
+    _ssdm_fifo_inout,
+    _ssdm_sc_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_tlm_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_sc_bus,
+    _ssdm_hls_bus_port = _ssdm_sc_bus,
+    _ssdm_AXI4M_bus_port = _ssdm_sc_bus,
+    _ssdm_port_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmProcessTypes {
+    _ssdm_method = 0,
+    _ssdm_sc_method = _ssdm_method,
+    _ssdm_thread = 1,
+    _ssdm_sc_thread = _ssdm_thread,
+    _ssdm_cthread = 2,
+    _ssdm_sc_cthread = _ssdm_cthread,
+    _ssdm_process_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmSensitiveTypes {
+    _ssdm_sensitive = 0,
+    _ssdm_sensitive_pos,
+    _ssdm_sensitive_neg,
+    _ssdm_sensitive_reset0,
+    _ssdm_sensitive_reset1,
+    _ssdm_sensitive_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmChannelTypes {
+    _ssdm_sc_sig,
+    _ssdm_fifo,
+    _ssdm_sc_fifo = _ssdm_fifo,
+    _ssdm_mem_fifo,
+    _ssdm_sc_mem_fifo = _ssdm_mem_fifo,
+};
+#pragma empty_line
+#pragma empty_line
+enum SsdmRegionTypes {
+    _ssdm_region_reset,
+    _ssdm_region_protocol,
+    _ssdm_region_pipeline,
+    _ssdm_region_parallel,
+};
+#pragma line 67 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 2
+#pragma empty_line
+#pragma empty_line
+namespace hls {
+#pragma line 78 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
+template<typename __STREAM_T__>
+class stream
+{
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) stream() {
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) stream(const char* name) {
+    }
+#pragma empty_line
+#pragma empty_line
+  private:
+    inline __attribute__((always_inline)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) stream& operator= (const stream< __STREAM_T__ >& chn) {
+        V = chn.V;
+        return *this;
+    }
+#pragma empty_line
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) void operator >> (__STREAM_T__& rdata) {
+        read(rdata);
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) void operator << (const __STREAM_T__& wdata) {
+        write(wdata);
+    }
+#pragma empty_line
+#pragma empty_line
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) bool empty() const {
+        bool tmp = _ssdm_StreamCanRead(&V);
+        return !tmp;
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) bool full() const {
+        bool tmp = _ssdm_StreamCanWrite(&V);
+        return !tmp;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) void read(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        dout = tmp;
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) __STREAM_T__ read() {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        return tmp;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) bool read_nb(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        bool empty_n = _ssdm_StreamNbRead(&V, &tmp);
+        dout = tmp;
+        return empty_n;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) void write(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        _ssdm_StreamWrite(&V, &tmp);
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) bool write_nb(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        bool full_n = _ssdm_StreamNbWrite(&V, &tmp);
+        return full_n;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) unsigned size() {
+        unsigned size = _ssdm_StreamSize(&V);
+        return size;
+    }
+#pragma empty_line
+  public:
+    __STREAM_T__ V;
+};
+#pragma empty_line
+}
+#pragma line 2 "./correlator.h" 2
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h" 1
+#pragma line 60 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h"
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h" 1
+#pragma line 32 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h"
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
+#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 #pragma empty_line
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
 #pragma line 153 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
@@ -184,7 +361,2135 @@ namespace std
 #pragma empty_line
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3
 #pragma line 397 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
-#pragma line 39 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+#pragma line 43 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
+#pragma line 36 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+#pragma line 36 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+#pragma line 68 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  template<typename _Iterator, typename _Container>
+    class __normal_iterator;
+#pragma empty_line
+#pragma empty_line
+}
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  struct __true_type { };
+  struct __false_type { };
+#pragma empty_line
+  template<bool>
+    struct __truth_type
+    { typedef __false_type __type; };
+#pragma empty_line
+  template<>
+    struct __truth_type<true>
+    { typedef __true_type __type; };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<class _Sp, class _Tp>
+    struct __traitor
+    {
+      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<typename, typename>
+    struct __are_same
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<typename _Tp>
+    struct __are_same<_Tp, _Tp>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_void
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_void<void>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_integer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __is_integer<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma line 198 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+  template<>
+    struct __is_integer<short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<unsigned short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<unsigned int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<unsigned long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_integer<unsigned long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_floating
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __is_floating<float>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_floating<double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_floating<long double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_pointer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_pointer<_Tp*>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_normal_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<typename _Iterator, typename _Container>
+    struct __is_normal_iterator< __gnu_cxx::__normal_iterator<_Iterator,
+             _Container> >
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_arithmetic
+    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_fundamental
+    : public __traitor<__is_void<_Tp>, __is_arithmetic<_Tp> >
+    { };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_scalar
+    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
+    { };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_char
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_char<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __is_char<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_byte
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_byte<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_byte<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __is_byte<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __is_move_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+#pragma line 422 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+}
+#pragma line 44 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
+#pragma line 33 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+#pragma line 33 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<bool, typename>
+    struct __enable_if
+    { };
+#pragma empty_line
+  template<typename _Tp>
+    struct __enable_if<true, _Tp>
+    { typedef _Tp __type; };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct __conditional_type
+    { typedef _Iftrue __type; };
+#pragma empty_line
+  template<typename _Iftrue, typename _Iffalse>
+    struct __conditional_type<false, _Iftrue, _Iffalse>
+    { typedef _Iffalse __type; };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __add_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+#pragma empty_line
+    public:
+      typedef typename __if_type::__type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<char>
+    { typedef unsigned char __type; };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<signed char>
+    { typedef unsigned char __type; };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<short>
+    { typedef unsigned short __type; };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<int>
+    { typedef unsigned int __type; };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<long>
+    { typedef unsigned long __type; };
+#pragma empty_line
+  template<>
+    struct __add_unsigned<long long>
+    { typedef unsigned long long __type; };
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __add_unsigned<bool>;
+#pragma empty_line
+  template<>
+    struct __add_unsigned<wchar_t>;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __remove_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+#pragma empty_line
+    public:
+      typedef typename __if_type::__type __type;
+    };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<char>
+    { typedef signed char __type; };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<unsigned char>
+    { typedef signed char __type; };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<unsigned short>
+    { typedef short __type; };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<unsigned int>
+    { typedef int __type; };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<unsigned long>
+    { typedef long __type; };
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<unsigned long long>
+    { typedef long long __type; };
+#pragma empty_line
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<bool>;
+#pragma empty_line
+  template<>
+    struct __remove_unsigned<wchar_t>;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type* __ptr)
+    { return __ptr == 0; }
+#pragma empty_line
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type)
+    { return false; }
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
+    struct __promote
+    { typedef double __type; };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp>
+    struct __promote<_Tp, false>
+    { };
+#pragma empty_line
+  template<>
+    struct __promote<long double>
+    { typedef long double __type; };
+#pragma empty_line
+  template<>
+    struct __promote<double>
+    { typedef double __type; };
+#pragma empty_line
+  template<>
+    struct __promote<float>
+    { typedef float __type; };
+#pragma empty_line
+  template<typename _Tp, typename _Up,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type>
+    struct __promote_2
+    {
+      typedef __typeof__(_Tp2() + _Up2()) __type;
+    };
+#pragma empty_line
+  template<typename _Tp, typename _Up, typename _Vp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type>
+    struct __promote_3
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
+    };
+#pragma empty_line
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type,
+           typename _Wp2 = typename __promote<_Wp>::__type>
+    struct __promote_4
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
+    };
+#pragma empty_line
+#pragma empty_line
+}
+#pragma line 45 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+#pragma line 1 "/usr/include/math.h" 1 3 4
+#pragma line 28 "/usr/include/math.h" 3 4
+extern "C" {
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 1 3 4
+#pragma line 25 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h" 1 3 4
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 2 3 4
+#pragma line 32 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_val.h" 1 3 4
+#pragma line 36 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_valf.h" 1 3 4
+#pragma line 38 "/usr/include/math.h" 2 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_vall.h" 1 3 4
+#pragma line 39 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/inf.h" 1 3 4
+#pragma line 42 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/nan.h" 1 3 4
+#pragma line 45 "/usr/include/math.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 1 3 4
+#pragma line 28 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4
+typedef float float_t;
+typedef double double_t;
+#pragma line 49 "/usr/include/math.h" 2 3 4
+#pragma line 83 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern double acos (double __x) throw (); extern double __acos (double __x) throw ();
+#pragma empty_line
+extern double asin (double __x) throw (); extern double __asin (double __x) throw ();
+#pragma empty_line
+extern double atan (double __x) throw (); extern double __atan (double __x) throw ();
+#pragma empty_line
+extern double atan2 (double __y, double __x) throw (); extern double __atan2 (double __y, double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double cos (double __x) throw (); extern double __cos (double __x) throw ();
+#pragma empty_line
+extern double sin (double __x) throw (); extern double __sin (double __x) throw ();
+#pragma empty_line
+extern double tan (double __x) throw (); extern double __tan (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double cosh (double __x) throw (); extern double __cosh (double __x) throw ();
+#pragma empty_line
+extern double sinh (double __x) throw (); extern double __sinh (double __x) throw ();
+#pragma empty_line
+extern double tanh (double __x) throw (); extern double __tanh (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern void sincos (double __x, double *__sinx, double *__cosx) throw (); extern void __sincos (double __x, double *__sinx, double *__cosx) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double acosh (double __x) throw (); extern double __acosh (double __x) throw ();
+#pragma empty_line
+extern double asinh (double __x) throw (); extern double __asinh (double __x) throw ();
+#pragma empty_line
+extern double atanh (double __x) throw (); extern double __atanh (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double exp (double __x) throw (); extern double __exp (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double frexp (double __x, int *__exponent) throw (); extern double __frexp (double __x, int *__exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double ldexp (double __x, int __exponent) throw (); extern double __ldexp (double __x, int __exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double log (double __x) throw (); extern double __log (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double log10 (double __x) throw (); extern double __log10 (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double modf (double __x, double *__iptr) throw (); extern double __modf (double __x, double *__iptr) throw () __attribute__ ((__nonnull__ (2)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double exp10 (double __x) throw (); extern double __exp10 (double __x) throw ();
+#pragma empty_line
+extern double pow10 (double __x) throw (); extern double __pow10 (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double expm1 (double __x) throw (); extern double __expm1 (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double log1p (double __x) throw (); extern double __log1p (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double logb (double __x) throw (); extern double __logb (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double exp2 (double __x) throw (); extern double __exp2 (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double log2 (double __x) throw (); extern double __log2 (double __x) throw ();
+#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern double pow (double __x, double __y) throw (); extern double __pow (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double sqrt (double __x) throw (); extern double __sqrt (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double hypot (double __x, double __y) throw (); extern double __hypot (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double cbrt (double __x) throw (); extern double __cbrt (double __x) throw ();
+#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern double ceil (double __x) throw () __attribute__ ((__const__)); extern double __ceil (double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern double fabs (double __x) throw () __attribute__ ((__const__)); extern double __fabs (double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern double floor (double __x) throw () __attribute__ ((__const__)); extern double __floor (double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern double fmod (double __x, double __y) throw (); extern double __fmod (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isinf (double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __finite (double __value) throw () __attribute__ ((__const__));
+#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int isinf (double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int finite (double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern double drem (double __x, double __y) throw (); extern double __drem (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double significand (double __x) throw (); extern double __significand (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double copysign (double __x, double __y) throw () __attribute__ ((__const__)); extern double __copysign (double __x, double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double nan (const char *__tagb) throw () __attribute__ ((__const__)); extern double __nan (const char *__tagb) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isnan (double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int isnan (double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double j0 (double) throw (); extern double __j0 (double) throw ();
+extern double j1 (double) throw (); extern double __j1 (double) throw ();
+extern double jn (int, double) throw (); extern double __jn (int, double) throw ();
+extern double y0 (double) throw (); extern double __y0 (double) throw ();
+extern double y1 (double) throw (); extern double __y1 (double) throw ();
+extern double yn (int, double) throw (); extern double __yn (int, double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double erf (double) throw (); extern double __erf (double) throw ();
+extern double erfc (double) throw (); extern double __erfc (double) throw ();
+extern double lgamma (double) throw (); extern double __lgamma (double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double tgamma (double) throw (); extern double __tgamma (double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double gamma (double) throw (); extern double __gamma (double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double lgamma_r (double, int *__signgamp) throw (); extern double __lgamma_r (double, int *__signgamp) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double rint (double __x) throw (); extern double __rint (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double nextafter (double __x, double __y) throw () __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+extern double nexttoward (double __x, long double __y) throw () __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double remainder (double __x, double __y) throw (); extern double __remainder (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double scalbn (double __x, int __n) throw (); extern double __scalbn (double __x, int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int ilogb (double __x) throw (); extern int __ilogb (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double scalbln (double __x, long int __n) throw (); extern double __scalbln (double __x, long int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double nearbyint (double __x) throw (); extern double __nearbyint (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double round (double __x) throw () __attribute__ ((__const__)); extern double __round (double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double trunc (double __x) throw () __attribute__ ((__const__)); extern double __trunc (double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double remquo (double __x, double __y, int *__quo) throw (); extern double __remquo (double __x, double __y, int *__quo) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lrint (double __x) throw (); extern long int __lrint (double __x) throw ();
+__extension__
+extern long long int llrint (double __x) throw (); extern long long int __llrint (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lround (double __x) throw (); extern long int __lround (double __x) throw ();
+__extension__
+extern long long int llround (double __x) throw (); extern long long int __llround (double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double fdim (double __x, double __y) throw (); extern double __fdim (double __x, double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern double fmax (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmax (double __x, double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern double fmin (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmin (double __x, double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __fpclassify (double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __signbit (double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double fma (double __x, double __y, double __z) throw (); extern double __fma (double __x, double __y, double __z) throw ();
+#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int __issignaling (double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern double scalb (double __x, double __n) throw (); extern double __scalb (double __x, double __n) throw ();
+#pragma line 84 "/usr/include/math.h" 2 3 4
+#pragma line 104 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern float acosf (float __x) throw (); extern float __acosf (float __x) throw ();
+#pragma empty_line
+extern float asinf (float __x) throw (); extern float __asinf (float __x) throw ();
+#pragma empty_line
+extern float atanf (float __x) throw (); extern float __atanf (float __x) throw ();
+#pragma empty_line
+extern float atan2f (float __y, float __x) throw (); extern float __atan2f (float __y, float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float cosf (float __x) throw (); extern float __cosf (float __x) throw ();
+#pragma empty_line
+extern float sinf (float __x) throw (); extern float __sinf (float __x) throw ();
+#pragma empty_line
+extern float tanf (float __x) throw (); extern float __tanf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float coshf (float __x) throw (); extern float __coshf (float __x) throw ();
+#pragma empty_line
+extern float sinhf (float __x) throw (); extern float __sinhf (float __x) throw ();
+#pragma empty_line
+extern float tanhf (float __x) throw (); extern float __tanhf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern void sincosf (float __x, float *__sinx, float *__cosx) throw (); extern void __sincosf (float __x, float *__sinx, float *__cosx) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float acoshf (float __x) throw (); extern float __acoshf (float __x) throw ();
+#pragma empty_line
+extern float asinhf (float __x) throw (); extern float __asinhf (float __x) throw ();
+#pragma empty_line
+extern float atanhf (float __x) throw (); extern float __atanhf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float expf (float __x) throw (); extern float __expf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float frexpf (float __x, int *__exponent) throw (); extern float __frexpf (float __x, int *__exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float ldexpf (float __x, int __exponent) throw (); extern float __ldexpf (float __x, int __exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float logf (float __x) throw (); extern float __logf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float log10f (float __x) throw (); extern float __log10f (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float modff (float __x, float *__iptr) throw (); extern float __modff (float __x, float *__iptr) throw () __attribute__ ((__nonnull__ (2)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float exp10f (float __x) throw (); extern float __exp10f (float __x) throw ();
+#pragma empty_line
+extern float pow10f (float __x) throw (); extern float __pow10f (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float expm1f (float __x) throw (); extern float __expm1f (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float log1pf (float __x) throw (); extern float __log1pf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float logbf (float __x) throw (); extern float __logbf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float exp2f (float __x) throw (); extern float __exp2f (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float log2f (float __x) throw (); extern float __log2f (float __x) throw ();
+#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern float powf (float __x, float __y) throw (); extern float __powf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float sqrtf (float __x) throw (); extern float __sqrtf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float hypotf (float __x, float __y) throw (); extern float __hypotf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float cbrtf (float __x) throw (); extern float __cbrtf (float __x) throw ();
+#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern float ceilf (float __x) throw () __attribute__ ((__const__)); extern float __ceilf (float __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern float fabsf (float __x) throw () __attribute__ ((__const__)); extern float __fabsf (float __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern float floorf (float __x) throw () __attribute__ ((__const__)); extern float __floorf (float __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern float fmodf (float __x, float __y) throw (); extern float __fmodf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isinff (float __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __finitef (float __value) throw () __attribute__ ((__const__));
+#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int isinff (float __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int finitef (float __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern float dremf (float __x, float __y) throw (); extern float __dremf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float significandf (float __x) throw (); extern float __significandf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float copysignf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float nanf (const char *__tagb) throw () __attribute__ ((__const__)); extern float __nanf (const char *__tagb) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isnanf (float __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int isnanf (float __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float j0f (float) throw (); extern float __j0f (float) throw ();
+extern float j1f (float) throw (); extern float __j1f (float) throw ();
+extern float jnf (int, float) throw (); extern float __jnf (int, float) throw ();
+extern float y0f (float) throw (); extern float __y0f (float) throw ();
+extern float y1f (float) throw (); extern float __y1f (float) throw ();
+extern float ynf (int, float) throw (); extern float __ynf (int, float) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float erff (float) throw (); extern float __erff (float) throw ();
+extern float erfcf (float) throw (); extern float __erfcf (float) throw ();
+extern float lgammaf (float) throw (); extern float __lgammaf (float) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float tgammaf (float) throw (); extern float __tgammaf (float) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float gammaf (float) throw (); extern float __gammaf (float) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float lgammaf_r (float, int *__signgamp) throw (); extern float __lgammaf_r (float, int *__signgamp) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float rintf (float __x) throw (); extern float __rintf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float nextafterf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+extern float nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float remainderf (float __x, float __y) throw (); extern float __remainderf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float scalbnf (float __x, int __n) throw (); extern float __scalbnf (float __x, int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int ilogbf (float __x) throw (); extern int __ilogbf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float scalblnf (float __x, long int __n) throw (); extern float __scalblnf (float __x, long int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float nearbyintf (float __x) throw (); extern float __nearbyintf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float roundf (float __x) throw () __attribute__ ((__const__)); extern float __roundf (float __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float truncf (float __x) throw () __attribute__ ((__const__)); extern float __truncf (float __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float remquof (float __x, float __y, int *__quo) throw (); extern float __remquof (float __x, float __y, int *__quo) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lrintf (float __x) throw (); extern long int __lrintf (float __x) throw ();
+__extension__
+extern long long int llrintf (float __x) throw (); extern long long int __llrintf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lroundf (float __x) throw (); extern long int __lroundf (float __x) throw ();
+__extension__
+extern long long int llroundf (float __x) throw (); extern long long int __llroundf (float __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float fdimf (float __x, float __y) throw (); extern float __fdimf (float __x, float __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern float fmaxf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fmaxf (float __x, float __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern float fminf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fminf (float __x, float __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __fpclassifyf (float __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __signbitf (float __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float fmaf (float __x, float __y, float __z) throw (); extern float __fmaf (float __x, float __y, float __z) throw ();
+#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int __issignalingf (float __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern float scalbf (float __x, float __n) throw (); extern float __scalbf (float __x, float __n) throw ();
+#pragma line 105 "/usr/include/math.h" 2 3 4
+#pragma line 151 "/usr/include/math.h" 3 4
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
+#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern long double acosl (long double __x) throw (); extern long double __acosl (long double __x) throw ();
+#pragma empty_line
+extern long double asinl (long double __x) throw (); extern long double __asinl (long double __x) throw ();
+#pragma empty_line
+extern long double atanl (long double __x) throw (); extern long double __atanl (long double __x) throw ();
+#pragma empty_line
+extern long double atan2l (long double __y, long double __x) throw (); extern long double __atan2l (long double __y, long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double cosl (long double __x) throw (); extern long double __cosl (long double __x) throw ();
+#pragma empty_line
+extern long double sinl (long double __x) throw (); extern long double __sinl (long double __x) throw ();
+#pragma empty_line
+extern long double tanl (long double __x) throw (); extern long double __tanl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double coshl (long double __x) throw (); extern long double __coshl (long double __x) throw ();
+#pragma empty_line
+extern long double sinhl (long double __x) throw (); extern long double __sinhl (long double __x) throw ();
+#pragma empty_line
+extern long double tanhl (long double __x) throw (); extern long double __tanhl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern void sincosl (long double __x, long double *__sinx, long double *__cosx) throw (); extern void __sincosl (long double __x, long double *__sinx, long double *__cosx) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double acoshl (long double __x) throw (); extern long double __acoshl (long double __x) throw ();
+#pragma empty_line
+extern long double asinhl (long double __x) throw (); extern long double __asinhl (long double __x) throw ();
+#pragma empty_line
+extern long double atanhl (long double __x) throw (); extern long double __atanhl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double expl (long double __x) throw (); extern long double __expl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double frexpl (long double __x, int *__exponent) throw (); extern long double __frexpl (long double __x, int *__exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double ldexpl (long double __x, int __exponent) throw (); extern long double __ldexpl (long double __x, int __exponent) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double logl (long double __x) throw (); extern long double __logl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double log10l (long double __x) throw (); extern long double __log10l (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double modfl (long double __x, long double *__iptr) throw (); extern long double __modfl (long double __x, long double *__iptr) throw () __attribute__ ((__nonnull__ (2)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double exp10l (long double __x) throw (); extern long double __exp10l (long double __x) throw ();
+#pragma empty_line
+extern long double pow10l (long double __x) throw (); extern long double __pow10l (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double expm1l (long double __x) throw (); extern long double __expm1l (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double log1pl (long double __x) throw (); extern long double __log1pl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double logbl (long double __x) throw (); extern long double __logbl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double exp2l (long double __x) throw (); extern long double __exp2l (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double log2l (long double __x) throw (); extern long double __log2l (long double __x) throw ();
+#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern long double powl (long double __x, long double __y) throw (); extern long double __powl (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double sqrtl (long double __x) throw (); extern long double __sqrtl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double hypotl (long double __x, long double __y) throw (); extern long double __hypotl (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double cbrtl (long double __x) throw (); extern long double __cbrtl (long double __x) throw ();
+#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern long double ceill (long double __x) throw () __attribute__ ((__const__)); extern long double __ceill (long double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern long double fabsl (long double __x) throw () __attribute__ ((__const__)); extern long double __fabsl (long double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern long double floorl (long double __x) throw () __attribute__ ((__const__)); extern long double __floorl (long double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern long double fmodl (long double __x, long double __y) throw (); extern long double __fmodl (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isinfl (long double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __finitel (long double __value) throw () __attribute__ ((__const__));
+#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int isinfl (long double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int finitel (long double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern long double dreml (long double __x, long double __y) throw (); extern long double __dreml (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double significandl (long double __x) throw (); extern long double __significandl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double copysignl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double nanl (const char *__tagb) throw () __attribute__ ((__const__)); extern long double __nanl (const char *__tagb) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __isnanl (long double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int isnanl (long double __value) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double j0l (long double) throw (); extern long double __j0l (long double) throw ();
+extern long double j1l (long double) throw (); extern long double __j1l (long double) throw ();
+extern long double jnl (int, long double) throw (); extern long double __jnl (int, long double) throw ();
+extern long double y0l (long double) throw (); extern long double __y0l (long double) throw ();
+extern long double y1l (long double) throw (); extern long double __y1l (long double) throw ();
+extern long double ynl (int, long double) throw (); extern long double __ynl (int, long double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double erfl (long double) throw (); extern long double __erfl (long double) throw ();
+extern long double erfcl (long double) throw (); extern long double __erfcl (long double) throw ();
+extern long double lgammal (long double) throw (); extern long double __lgammal (long double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double tgammal (long double) throw (); extern long double __tgammal (long double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double gammal (long double) throw (); extern long double __gammal (long double) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double lgammal_r (long double, int *__signgamp) throw (); extern long double __lgammal_r (long double, int *__signgamp) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double rintl (long double __x) throw (); extern long double __rintl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+extern long double nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double remainderl (long double __x, long double __y) throw (); extern long double __remainderl (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double scalbnl (long double __x, int __n) throw (); extern long double __scalbnl (long double __x, int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int ilogbl (long double __x) throw (); extern int __ilogbl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double scalblnl (long double __x, long int __n) throw (); extern long double __scalblnl (long double __x, long int __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double nearbyintl (long double __x) throw (); extern long double __nearbyintl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double roundl (long double __x) throw () __attribute__ ((__const__)); extern long double __roundl (long double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double truncl (long double __x) throw () __attribute__ ((__const__)); extern long double __truncl (long double __x) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double remquol (long double __x, long double __y, int *__quo) throw (); extern long double __remquol (long double __x, long double __y, int *__quo) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lrintl (long double __x) throw (); extern long int __lrintl (long double __x) throw ();
+__extension__
+extern long long int llrintl (long double __x) throw (); extern long long int __llrintl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long int lroundl (long double __x) throw (); extern long int __lroundl (long double __x) throw ();
+__extension__
+extern long long int llroundl (long double __x) throw (); extern long long int __llroundl (long double __x) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double fdiml (long double __x, long double __y) throw (); extern long double __fdiml (long double __x, long double __y) throw ();
+#pragma empty_line
+#pragma empty_line
+extern long double fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern long double fminl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fminl (long double __x, long double __y) throw () __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern int __fpclassifyl (long double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+extern int __signbitl (long double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double fmal (long double __x, long double __y, long double __z) throw (); extern long double __fmal (long double __x, long double __y, long double __z) throw ();
+#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
+extern int __issignalingl (long double __value) throw ()
+     __attribute__ ((__const__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern long double scalbl (long double __x, long double __n) throw (); extern long double __scalbl (long double __x, long double __n) throw ();
+#pragma line 152 "/usr/include/math.h" 2 3 4
+#pragma line 168 "/usr/include/math.h" 3 4
+extern int signgam;
+#pragma line 209 "/usr/include/math.h" 3 4
+enum
+  {
+    FP_NAN =
+#pragma empty_line
+      0,
+    FP_INFINITE =
+#pragma empty_line
+      1,
+    FP_ZERO =
+#pragma empty_line
+      2,
+    FP_SUBNORMAL =
+#pragma empty_line
+      3,
+    FP_NORMAL =
+#pragma empty_line
+      4
+  };
+#pragma line 347 "/usr/include/math.h" 3 4
+typedef enum
+{
+  _IEEE_ = -1,
+  _SVID_,
+  _XOPEN_,
+  _POSIX_,
+  _ISOC_
+} _LIB_VERSION_TYPE;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern _LIB_VERSION_TYPE _LIB_VERSION;
+#pragma line 370 "/usr/include/math.h" 3 4
+struct __exception
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  {
+    int type;
+    char *name;
+    double arg1;
+    double arg2;
+    double retval;
+  };
+#pragma empty_line
+#pragma empty_line
+extern int matherr (struct __exception *__exc) throw ();
+#pragma line 534 "/usr/include/math.h" 3 4
+}
+#pragma line 46 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+#pragma line 76 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  inline double
+  abs(double __x)
+  { return __builtin_fabs(__x); }
+#pragma empty_line
+  inline float
+  abs(float __x)
+  { return __builtin_fabsf(__x); }
+#pragma empty_line
+  inline long double
+  abs(long double __x)
+  { return __builtin_fabsl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    abs(_Tp __x)
+    { return __builtin_fabs(__x); }
+#pragma empty_line
+  using ::acos;
+#pragma empty_line
+  inline float
+  acos(float __x)
+  { return __builtin_acosf(__x); }
+#pragma empty_line
+  inline long double
+  acos(long double __x)
+  { return __builtin_acosl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    acos(_Tp __x)
+    { return __builtin_acos(__x); }
+#pragma empty_line
+  using ::asin;
+#pragma empty_line
+  inline float
+  asin(float __x)
+  { return __builtin_asinf(__x); }
+#pragma empty_line
+  inline long double
+  asin(long double __x)
+  { return __builtin_asinl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    asin(_Tp __x)
+    { return __builtin_asin(__x); }
+#pragma empty_line
+  using ::atan;
+#pragma empty_line
+  inline float
+  atan(float __x)
+  { return __builtin_atanf(__x); }
+#pragma empty_line
+  inline long double
+  atan(long double __x)
+  { return __builtin_atanl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    atan(_Tp __x)
+    { return __builtin_atan(__x); }
+#pragma empty_line
+  using ::atan2;
+#pragma empty_line
+  inline float
+  atan2(float __y, float __x)
+  { return __builtin_atan2f(__y, __x); }
+#pragma empty_line
+  inline long double
+  atan2(long double __y, long double __x)
+  { return __builtin_atan2l(__y, __x); }
+#pragma empty_line
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    atan2(_Tp __y, _Up __x)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return atan2(__type(__y), __type(__x));
+    }
+#pragma empty_line
+  using ::ceil;
+#pragma empty_line
+  inline float
+  ceil(float __x)
+  { return __builtin_ceilf(__x); }
+#pragma empty_line
+  inline long double
+  ceil(long double __x)
+  { return __builtin_ceill(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    ceil(_Tp __x)
+    { return __builtin_ceil(__x); }
+#pragma empty_line
+  using ::cos;
+#pragma empty_line
+  inline float
+  cos(float __x)
+  { return __builtin_cosf(__x); }
+#pragma empty_line
+  inline long double
+  cos(long double __x)
+  { return __builtin_cosl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cos(_Tp __x)
+    { return __builtin_cos(__x); }
+#pragma empty_line
+  using ::cosh;
+#pragma empty_line
+  inline float
+  cosh(float __x)
+  { return __builtin_coshf(__x); }
+#pragma empty_line
+  inline long double
+  cosh(long double __x)
+  { return __builtin_coshl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cosh(_Tp __x)
+    { return __builtin_cosh(__x); }
+#pragma empty_line
+  using ::exp;
+#pragma empty_line
+  inline float
+  exp(float __x)
+  { return __builtin_expf(__x); }
+#pragma empty_line
+  inline long double
+  exp(long double __x)
+  { return __builtin_expl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    exp(_Tp __x)
+    { return __builtin_exp(__x); }
+#pragma empty_line
+  using ::fabs;
+#pragma empty_line
+  inline float
+  fabs(float __x)
+  { return __builtin_fabsf(__x); }
+#pragma empty_line
+  inline long double
+  fabs(long double __x)
+  { return __builtin_fabsl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    fabs(_Tp __x)
+    { return __builtin_fabs(__x); }
+#pragma empty_line
+  using ::floor;
+#pragma empty_line
+  inline float
+  floor(float __x)
+  { return __builtin_floorf(__x); }
+#pragma empty_line
+  inline long double
+  floor(long double __x)
+  { return __builtin_floorl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    floor(_Tp __x)
+    { return __builtin_floor(__x); }
+#pragma empty_line
+  using ::fmod;
+#pragma empty_line
+  inline float
+  fmod(float __x, float __y)
+  { return __builtin_fmodf(__x, __y); }
+#pragma empty_line
+  inline long double
+  fmod(long double __x, long double __y)
+  { return __builtin_fmodl(__x, __y); }
+#pragma empty_line
+  using ::frexp;
+#pragma empty_line
+  inline float
+  frexp(float __x, int* __exp)
+  { return __builtin_frexpf(__x, __exp); }
+#pragma empty_line
+  inline long double
+  frexp(long double __x, int* __exp)
+  { return __builtin_frexpl(__x, __exp); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    frexp(_Tp __x, int* __exp)
+    { return __builtin_frexp(__x, __exp); }
+#pragma empty_line
+  using ::ldexp;
+#pragma empty_line
+  inline float
+  ldexp(float __x, int __exp)
+  { return __builtin_ldexpf(__x, __exp); }
+#pragma empty_line
+  inline long double
+  ldexp(long double __x, int __exp)
+  { return __builtin_ldexpl(__x, __exp); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+  ldexp(_Tp __x, int __exp)
+  { return __builtin_ldexp(__x, __exp); }
+#pragma empty_line
+  using ::log;
+#pragma empty_line
+  inline float
+  log(float __x)
+  { return __builtin_logf(__x); }
+#pragma empty_line
+  inline long double
+  log(long double __x)
+  { return __builtin_logl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log(_Tp __x)
+    { return __builtin_log(__x); }
+#pragma empty_line
+  using ::log10;
+#pragma empty_line
+  inline float
+  log10(float __x)
+  { return __builtin_log10f(__x); }
+#pragma empty_line
+  inline long double
+  log10(long double __x)
+  { return __builtin_log10l(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log10(_Tp __x)
+    { return __builtin_log10(__x); }
+#pragma empty_line
+  using ::modf;
+#pragma empty_line
+  inline float
+  modf(float __x, float* __iptr)
+  { return __builtin_modff(__x, __iptr); }
+#pragma empty_line
+  inline long double
+  modf(long double __x, long double* __iptr)
+  { return __builtin_modfl(__x, __iptr); }
+#pragma empty_line
+  using ::pow;
+#pragma empty_line
+  inline float
+  pow(float __x, float __y)
+  { return __builtin_powf(__x, __y); }
+#pragma empty_line
+  inline long double
+  pow(long double __x, long double __y)
+  { return __builtin_powl(__x, __y); }
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  inline double
+  pow(double __x, int __i)
+  { return __builtin_powi(__x, __i); }
+#pragma empty_line
+  inline float
+  pow(float __x, int __n)
+  { return __builtin_powif(__x, __n); }
+#pragma empty_line
+  inline long double
+  pow(long double __x, int __n)
+  { return __builtin_powil(__x, __n); }
+#pragma empty_line
+#pragma empty_line
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    pow(_Tp __x, _Up __y)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return pow(__type(__x), __type(__y));
+    }
+#pragma empty_line
+  using ::sin;
+#pragma empty_line
+  inline float
+  sin(float __x)
+  { return __builtin_sinf(__x); }
+#pragma empty_line
+  inline long double
+  sin(long double __x)
+  { return __builtin_sinl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sin(_Tp __x)
+    { return __builtin_sin(__x); }
+#pragma empty_line
+  using ::sinh;
+#pragma empty_line
+  inline float
+  sinh(float __x)
+  { return __builtin_sinhf(__x); }
+#pragma empty_line
+  inline long double
+  sinh(long double __x)
+  { return __builtin_sinhl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sinh(_Tp __x)
+    { return __builtin_sinh(__x); }
+#pragma empty_line
+  using ::sqrt;
+#pragma empty_line
+  inline float
+  sqrt(float __x)
+  { return __builtin_sqrtf(__x); }
+#pragma empty_line
+  inline long double
+  sqrt(long double __x)
+  { return __builtin_sqrtl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sqrt(_Tp __x)
+    { return __builtin_sqrt(__x); }
+#pragma empty_line
+  using ::tan;
+#pragma empty_line
+  inline float
+  tan(float __x)
+  { return __builtin_tanf(__x); }
+#pragma empty_line
+  inline long double
+  tan(long double __x)
+  { return __builtin_tanl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tan(_Tp __x)
+    { return __builtin_tan(__x); }
+#pragma empty_line
+  using ::tanh;
+#pragma empty_line
+  inline float
+  tanh(float __x)
+  { return __builtin_tanhf(__x); }
+#pragma empty_line
+  inline long double
+  tanh(long double __x)
+  { return __builtin_tanhl(__x); }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tanh(_Tp __x)
+    { return __builtin_tanh(__x); }
+#pragma empty_line
+#pragma empty_line
+}
+#pragma line 480 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma line 730 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    fpclassify(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_fpclassify(0, 1, 4,
+      3, 2, __type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isfinite(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isfinite(__type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isinf(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isinf(__type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnan(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnan(__type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnormal(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnormal(__type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    signbit(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_signbit(__type(__f));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreater(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreaterequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreaterequal(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isless(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isless(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessequal(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessgreater(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isunordered(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isunordered(__type(__f1), __type(__f2));
+    }
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+}
+#pragma line 33 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h" 2
+using std::fpclassify;
+using std::isfinite;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+using std::isinf;
+using std::isnan;
+#pragma empty_line
+using std::isnormal;
+using std::signbit;
+using std::isgreater;
+using std::isgreaterequal;
+using std::isless;
+using std::islessequal;
+using std::islessgreater;
+using std::isunordered;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+typedef __fp16 half;
+#pragma line 3274 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h"
+extern half half_nan(const char *tagp);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern half half_atan(half t);
+extern half half_atan2(half y, half x);
+extern half half_copysign(half x, half y);
+#pragma empty_line
+extern half half_fabs(half x);
+#pragma empty_line
+extern half half_abs(half x);
+extern half half_fma(half x, half y, half z);
+extern half half_mad(half x, half y, half z);
+extern half half_frexp (half x, int* exp);
+extern half half_ldexp (half x, int exp);
+extern half half_fmax(half x, half y);
+#pragma empty_line
+extern half half_fmin(half x, half y);
+#pragma empty_line
+extern half half_asin(half t_in);
+extern half half_acos(half t_in);
+extern half half_sin(half t_in);
+extern half half_cos(half t_in);
+extern void half_sincos(half x, half *sin, half *cos);
+extern half half_sinh(half t_in);
+extern half half_cosh(half t_in);
+extern half half_sinpi(half t_in);
+extern half half_cospi(half t_in);
+extern half half_recip(half x);
+extern half half_sqrt(half x);
+extern half half_rsqrt(half x);
+extern half half_cbrt(half x);
+extern half half_hypot(half x, half y);
+extern half half_log(half x);
+extern half half_log10(half x);
+extern half half_log2(half x);
+extern half half_logb(half x);
+extern half half_log1p(half x);
+extern int half_ilogb(half x);
+extern half half_exp(half x);
+extern half half_exp10(half x);
+extern half half_exp2(half x);
+extern half half_expm1(half x);
+extern half half_pow(half x, half y);
+extern half half_powr(half x, half y);
+extern half half_pown(half x, int y);
+extern half half_rootn(half x, int y);
+extern half half_floor(half x);
+#pragma empty_line
+extern half half_ceil(half x);
+#pragma empty_line
+extern half half_trunc(half x);
+#pragma empty_line
+extern half half_round(half x);
+#pragma empty_line
+extern half half_nearbyint(half x);
+extern half half_rint(half x);
+extern long int half_lrint(half x);
+extern long long int half_llrint(half x);
+extern long int half_lround(half x);
+extern long long int half_llround(half x);
+extern half half_modf(half x, half *intpart);
+#pragma empty_line
+extern half half_fract(half x, half *intpart);
+extern half half_nextafter(half x, half y);
+extern half half_fmod(half x, half y);
+extern half half_remainder(half x, half y);
+extern half half_remquo(half x, half y, int* quo);
+extern half half_divide(half x, half y);
+#pragma line 61 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h" 2
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int_syn.h" 1
+#pragma line 68 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int_syn.h"
+#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+#pragma line 37 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+#pragma line 37 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+#pragma empty_line
+#pragma empty_line
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
 #pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
 #pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
@@ -1389,519 +3694,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 }
 #pragma line 62 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
-#pragma line 36 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-#pragma line 36 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-#pragma line 68 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
 #pragma empty_line
 #pragma empty_line
-  template<typename _Iterator, typename _Container>
-    class __normal_iterator;
-#pragma empty_line
-#pragma empty_line
-}
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  struct __true_type { };
-  struct __false_type { };
-#pragma empty_line
-  template<bool>
-    struct __truth_type
-    { typedef __false_type __type; };
-#pragma empty_line
-  template<>
-    struct __truth_type<true>
-    { typedef __true_type __type; };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<class _Sp, class _Tp>
-    struct __traitor
-    {
-      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
-      typedef typename __truth_type<__value>::__type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<typename, typename>
-    struct __are_same
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<typename _Tp>
-    struct __are_same<_Tp, _Tp>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_void
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_void<void>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_integer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __is_integer<bool>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __is_integer<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma line 198 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-  template<>
-    struct __is_integer<short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<unsigned short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<unsigned int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<unsigned long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_integer<unsigned long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_floating
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __is_floating<float>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_floating<double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_floating<long double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_pointer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_pointer<_Tp*>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_normal_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<typename _Iterator, typename _Container>
-    struct __is_normal_iterator< __gnu_cxx::__normal_iterator<_Iterator,
-             _Container> >
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_arithmetic
-    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
-    { };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_fundamental
-    : public __traitor<__is_void<_Tp>, __is_arithmetic<_Tp> >
-    { };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_scalar
-    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
-    { };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_char
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_char<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __is_char<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_byte
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_byte<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_byte<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __is_byte<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __is_move_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-#pragma line 422 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-}
-#pragma line 63 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
-#pragma line 33 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
-#pragma line 33 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<bool, typename>
-    struct __enable_if
-    { };
-#pragma empty_line
-  template<typename _Tp>
-    struct __enable_if<true, _Tp>
-    { typedef _Tp __type; };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    struct __conditional_type
-    { typedef _Iftrue __type; };
-#pragma empty_line
-  template<typename _Iftrue, typename _Iffalse>
-    struct __conditional_type<false, _Iftrue, _Iffalse>
-    { typedef _Iffalse __type; };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __add_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-#pragma empty_line
-    public:
-      typedef typename __if_type::__type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<char>
-    { typedef unsigned char __type; };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<signed char>
-    { typedef unsigned char __type; };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<short>
-    { typedef unsigned short __type; };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<int>
-    { typedef unsigned int __type; };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<long>
-    { typedef unsigned long __type; };
-#pragma empty_line
-  template<>
-    struct __add_unsigned<long long>
-    { typedef unsigned long long __type; };
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __add_unsigned<bool>;
-#pragma empty_line
-  template<>
-    struct __add_unsigned<wchar_t>;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __remove_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-#pragma empty_line
-    public:
-      typedef typename __if_type::__type __type;
-    };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<char>
-    { typedef signed char __type; };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<unsigned char>
-    { typedef signed char __type; };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<unsigned short>
-    { typedef short __type; };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<unsigned int>
-    { typedef int __type; };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<unsigned long>
-    { typedef long __type; };
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<unsigned long long>
-    { typedef long long __type; };
-#pragma empty_line
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<bool>;
-#pragma empty_line
-  template<>
-    struct __remove_unsigned<wchar_t>;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Type>
-    inline bool
-    __is_null_pointer(_Type* __ptr)
-    { return __ptr == 0; }
-#pragma empty_line
-  template<typename _Type>
-    inline bool
-    __is_null_pointer(_Type)
-    { return false; }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
-    struct __promote
-    { typedef double __type; };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp>
-    struct __promote<_Tp, false>
-    { };
-#pragma empty_line
-  template<>
-    struct __promote<long double>
-    { typedef long double __type; };
-#pragma empty_line
-  template<>
-    struct __promote<double>
-    { typedef double __type; };
-#pragma empty_line
-  template<>
-    struct __promote<float>
-    { typedef float __type; };
-#pragma empty_line
-  template<typename _Tp, typename _Up,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type>
-    struct __promote_2
-    {
-      typedef __typeof__(_Tp2() + _Up2()) __type;
-    };
-#pragma empty_line
-  template<typename _Tp, typename _Up, typename _Vp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type>
-    struct __promote_3
-    {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
-    };
-#pragma empty_line
-  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type,
-           typename _Wp2 = typename __promote<_Wp>::__type>
-    struct __promote_4
-    {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
-    };
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 64 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 1 3
 #pragma line 32 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
 #pragma line 32 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 3
@@ -18761,4398 +20555,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 #pragma empty_line
 }
-#pragma line 2 "correlator.cpp" 2
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
-#pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-#pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+#pragma line 69 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int_syn.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
-#pragma line 40 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-#pragma line 40 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
 #pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  class codecvt_base
-  {
-  public:
-    enum result
-    {
-      ok,
-      partial,
-      error,
-      noconv
-    };
-  };
-#pragma line 67 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class __codecvt_abstract_base
-    : public locale::facet, public codecvt_base
-    {
-    public:
-#pragma empty_line
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-#pragma line 115 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      out(state_type& __state, const intern_type* __from,
-   const intern_type* __from_end, const intern_type*& __from_next,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const
-      {
- return this->do_out(__state, __from, __from_end, __from_next,
-       __to, __to_end, __to_next);
-      }
-#pragma line 154 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
-       extern_type*& __to_next) const
-      { return this->do_unshift(__state, __to,__to_end,__to_next); }
-#pragma line 195 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      result
-      in(state_type& __state, const extern_type* __from,
-  const extern_type* __from_end, const extern_type*& __from_next,
-  intern_type* __to, intern_type* __to_end,
-  intern_type*& __to_next) const
-      {
- return this->do_in(__state, __from, __from_end, __from_next,
-      __to, __to_end, __to_next);
-      }
-#pragma empty_line
-      int
-      encoding() const throw()
-      { return this->do_encoding(); }
-#pragma empty_line
-      bool
-      always_noconv() const throw()
-      { return this->do_always_noconv(); }
-#pragma empty_line
-      int
-      length(state_type& __state, const extern_type* __from,
-      const extern_type* __end, size_t __max) const
-      { return this->do_length(__state, __from, __end, __max); }
-#pragma empty_line
-      int
-      max_length() const throw()
-      { return this->do_max_length(); }
-#pragma empty_line
-    protected:
-      explicit
-      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
-#pragma empty_line
-      virtual
-      ~__codecvt_abstract_base() { }
-#pragma line 236 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw() = 0;
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw() = 0;
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const = 0;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw() = 0;
-    };
-#pragma line 275 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-   template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt
-    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
-    {
-    public:
-#pragma empty_line
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0)
-      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt() { }
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw();
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw();
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-    };
-#pragma empty_line
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
-#pragma empty_line
-#pragma empty_line
-  template<>
-    class codecvt<char, char, mbstate_t>
-    : public __codecvt_abstract_base<char, char, mbstate_t>
-    {
-    public:
-#pragma empty_line
-      typedef char intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0);
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt();
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw();
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw();
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-  };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<>
-    class codecvt<wchar_t, char, mbstate_t>
-    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
-    {
-    public:
-#pragma empty_line
-      typedef wchar_t intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0);
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt();
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state,
-      const extern_type* __from, const extern_type* __from_end,
-      const extern_type*& __from_next,
-      intern_type* __to, intern_type* __to_end,
-      intern_type*& __to_next) const;
-#pragma empty_line
-      virtual
-      int do_encoding() const throw();
-#pragma empty_line
-      virtual
-      bool do_always_noconv() const throw();
-#pragma empty_line
-      virtual
-      int do_length(state_type&, const extern_type* __from,
-      const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
-    {
-    public:
-      explicit
-      codecvt_byname(const char* __s, size_t __refs = 0)
-      : codecvt<_InternT, _ExternT, _StateT>(__refs)
-      {
- if (__builtin_strcmp(__s, "C") != 0
-     && __builtin_strcmp(__s, "POSIX") != 0)
-   {
-     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
-     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
-   }
-      }
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt_byname() { }
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  extern template class codecvt_byname<char, char, mbstate_t>;
-#pragma empty_line
-  extern template
-    const codecvt<char, char, mbstate_t>&
-    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
-#pragma empty_line
-  extern template
-    bool
-    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
-#pragma empty_line
-#pragma empty_line
-  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
-#pragma empty_line
-  extern template
-    const codecvt<wchar_t, char, mbstate_t>&
-    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-#pragma empty_line
-  extern template
-    bool
-    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 42 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/stdio.h" 1 3 4
-#pragma line 29 "/usr/include/stdio.h" 3 4
-extern "C" {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-#pragma line 34 "/usr/include/stdio.h" 2 3 4
-#pragma line 74 "/usr/include/stdio.h" 3 4
-#pragma line 1 "/usr/include/libio.h" 1 3 4
-#pragma line 31 "/usr/include/libio.h" 3 4
-#pragma line 1 "/usr/include/_G_config.h" 1 3 4
-#pragma line 15 "/usr/include/_G_config.h" 3 4
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-#pragma line 16 "/usr/include/_G_config.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/wchar.h" 1 3 4
-#pragma line 21 "/usr/include/_G_config.h" 2 3 4
-typedef struct
-{
-  __off_t __pos;
-  __mbstate_t __state;
-} _G_fpos_t;
-typedef struct
-{
-  __off64_t __pos;
-  __mbstate_t __state;
-} _G_fpos64_t;
-#pragma line 32 "/usr/include/libio.h" 2 3 4
-#pragma line 144 "/usr/include/libio.h" 3 4
-struct _IO_jump_t; struct _IO_FILE;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef void _IO_lock_t;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-struct _IO_marker {
-  struct _IO_marker *_next;
-  struct _IO_FILE *_sbuf;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  int _pos;
-#pragma line 173 "/usr/include/libio.h" 3 4
-};
-#pragma empty_line
-#pragma empty_line
-enum __codecvt_result
-{
-  __codecvt_ok,
-  __codecvt_partial,
-  __codecvt_error,
-  __codecvt_noconv
-};
-#pragma line 241 "/usr/include/libio.h" 3 4
-struct _IO_FILE {
-  int _flags;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  char* _IO_read_ptr;
-  char* _IO_read_end;
-  char* _IO_read_base;
-  char* _IO_write_base;
-  char* _IO_write_ptr;
-  char* _IO_write_end;
-  char* _IO_buf_base;
-  char* _IO_buf_end;
-#pragma empty_line
-  char *_IO_save_base;
-  char *_IO_backup_base;
-  char *_IO_save_end;
-#pragma empty_line
-  struct _IO_marker *_markers;
-#pragma empty_line
-  struct _IO_FILE *_chain;
-#pragma empty_line
-  int _fileno;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  int _flags2;
-#pragma empty_line
-  __off_t _old_offset;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  unsigned short _cur_column;
-  signed char _vtable_offset;
-  char _shortbuf[1];
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  _IO_lock_t *_lock;
-#pragma line 289 "/usr/include/libio.h" 3 4
-  __off64_t _offset;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  void *__pad1;
-  void *__pad2;
-  void *__pad3;
-  void *__pad4;
-#pragma empty_line
-  size_t __pad5;
-  int _mode;
-#pragma empty_line
-  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
-#pragma empty_line
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-struct _IO_FILE_plus;
-#pragma empty_line
-extern struct _IO_FILE_plus _IO_2_1_stdin_;
-extern struct _IO_FILE_plus _IO_2_1_stdout_;
-extern struct _IO_FILE_plus _IO_2_1_stderr_;
-#pragma line 333 "/usr/include/libio.h" 3 4
-typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
-     size_t __n);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
-#pragma empty_line
-#pragma empty_line
-typedef int __io_close_fn (void *__cookie);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef __io_read_fn cookie_read_function_t;
-typedef __io_write_fn cookie_write_function_t;
-typedef __io_seek_fn cookie_seek_function_t;
-typedef __io_close_fn cookie_close_function_t;
-#pragma empty_line
-#pragma empty_line
-typedef struct
-{
-  __io_read_fn *read;
-  __io_write_fn *write;
-  __io_seek_fn *seek;
-  __io_close_fn *close;
-} _IO_cookie_io_functions_t;
-typedef _IO_cookie_io_functions_t cookie_io_functions_t;
-#pragma empty_line
-struct _IO_cookie_file;
-#pragma empty_line
-#pragma empty_line
-extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
-        void *__cookie, _IO_cookie_io_functions_t __fns);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern "C" {
-#pragma empty_line
-#pragma empty_line
-extern int __underflow (_IO_FILE *);
-extern int __uflow (_IO_FILE *);
-extern int __overflow (_IO_FILE *, int);
-#pragma line 429 "/usr/include/libio.h" 3 4
-extern int _IO_getc (_IO_FILE *__fp);
-extern int _IO_putc (int __c, _IO_FILE *__fp);
-extern int _IO_feof (_IO_FILE *__fp) throw ();
-extern int _IO_ferror (_IO_FILE *__fp) throw ();
-#pragma empty_line
-extern int _IO_peekc_locked (_IO_FILE *__fp);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void _IO_flockfile (_IO_FILE *) throw ();
-extern void _IO_funlockfile (_IO_FILE *) throw ();
-extern int _IO_ftrylockfile (_IO_FILE *) throw ();
-#pragma line 459 "/usr/include/libio.h" 3 4
-extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
-   __gnuc_va_list, int *__restrict);
-extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
-    __gnuc_va_list);
-extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
-extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
-#pragma empty_line
-extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
-extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
-#pragma empty_line
-extern void _IO_free_backup_area (_IO_FILE *) throw ();
-#pragma line 521 "/usr/include/libio.h" 3 4
-}
-#pragma line 75 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef __gnuc_va_list va_list;
-#pragma line 110 "/usr/include/stdio.h" 3 4
-typedef _G_fpos_t fpos_t;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef _G_fpos64_t fpos64_t;
-#pragma line 164 "/usr/include/stdio.h" 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
-#pragma line 165 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern struct _IO_FILE *stdin;
-extern struct _IO_FILE *stdout;
-extern struct _IO_FILE *stderr;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int remove (const char *__filename) throw ();
-#pragma empty_line
-extern int rename (const char *__old, const char *__new) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int renameat (int __oldfd, const char *__old, int __newfd,
-       const char *__new) throw ();
-#pragma line 195 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile (void) ;
-#pragma line 205 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile64 (void) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern char *tmpnam (char *__s) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern char *tmpnam_r (char *__s) throw () ;
-#pragma line 227 "/usr/include/stdio.h" 3 4
-extern char *tempnam (const char *__dir, const char *__pfx)
-     throw () __attribute__ ((__malloc__)) ;
-#pragma line 237 "/usr/include/stdio.h" 3 4
-extern int fclose (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int fflush (FILE *__stream);
-#pragma line 252 "/usr/include/stdio.h" 3 4
-extern int fflush_unlocked (FILE *__stream);
-#pragma line 262 "/usr/include/stdio.h" 3 4
-extern int fcloseall (void);
-#pragma line 272 "/usr/include/stdio.h" 3 4
-extern FILE *fopen (const char *__restrict __filename,
-      const char *__restrict __modes) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern FILE *freopen (const char *__restrict __filename,
-        const char *__restrict __modes,
-        FILE *__restrict __stream) ;
-#pragma line 297 "/usr/include/stdio.h" 3 4
-extern FILE *fopen64 (const char *__restrict __filename,
-        const char *__restrict __modes) ;
-extern FILE *freopen64 (const char *__restrict __filename,
-   const char *__restrict __modes,
-   FILE *__restrict __stream) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern FILE *fdopen (int __fd, const char *__modes) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern FILE *fopencookie (void *__restrict __magic_cookie,
-     const char *__restrict __modes,
-     _IO_cookie_io_functions_t __io_funcs) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
-  throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
-      int __modes, size_t __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
-         size_t __size) throw ();
-#pragma empty_line
-#pragma empty_line
-extern void setlinebuf (FILE *__stream) throw ();
-#pragma line 356 "/usr/include/stdio.h" 3 4
-extern int fprintf (FILE *__restrict __stream,
-      const char *__restrict __format, ...);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int printf (const char *__restrict __format, ...);
-#pragma empty_line
-extern int sprintf (char *__restrict __s,
-      const char *__restrict __format, ...) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
-#pragma empty_line
-extern int vsprintf (char *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int snprintf (char *__restrict __s, size_t __maxlen,
-       const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
-#pragma empty_line
-extern int vsnprintf (char *__restrict __s, size_t __maxlen,
-        const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
-        __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0))) ;
-extern int __asprintf (char **__restrict __ptr,
-         const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-extern int asprintf (char **__restrict __ptr,
-       const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int vdprintf (int __fd, const char *__restrict __fmt,
-       __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__printf__, 2, 0)));
-extern int dprintf (int __fd, const char *__restrict __fmt, ...)
-     __attribute__ ((__format__ (__printf__, 2, 3)));
-#pragma line 425 "/usr/include/stdio.h" 3 4
-extern int fscanf (FILE *__restrict __stream,
-     const char *__restrict __format, ...) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int scanf (const char *__restrict __format, ...) ;
-#pragma empty_line
-extern int sscanf (const char *__restrict __s,
-     const char *__restrict __format, ...) throw ();
-#pragma line 471 "/usr/include/stdio.h" 3 4
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
-      __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
-#pragma empty_line
-#pragma empty_line
-extern int vsscanf (const char *__restrict __s,
-      const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
-#pragma line 531 "/usr/include/stdio.h" 3 4
-extern int fgetc (FILE *__stream);
-extern int getc (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int getchar (void);
-#pragma line 550 "/usr/include/stdio.h" 3 4
-extern int getc_unlocked (FILE *__stream);
-extern int getchar_unlocked (void);
-#pragma line 561 "/usr/include/stdio.h" 3 4
-extern int fgetc_unlocked (FILE *__stream);
-#pragma line 573 "/usr/include/stdio.h" 3 4
-extern int fputc (int __c, FILE *__stream);
-extern int putc (int __c, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int putchar (int __c);
-#pragma line 594 "/usr/include/stdio.h" 3 4
-extern int fputc_unlocked (int __c, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int putc_unlocked (int __c, FILE *__stream);
-extern int putchar_unlocked (int __c);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int getw (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-extern int putw (int __w, FILE *__stream);
-#pragma line 622 "/usr/include/stdio.h" 3 4
-extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
-          ;
-#pragma line 638 "/usr/include/stdio.h" 3 4
-extern char *gets (char *__s) __attribute__ ((__deprecated__));
-#pragma line 649 "/usr/include/stdio.h" 3 4
-extern char *fgets_unlocked (char *__restrict __s, int __n,
-        FILE *__restrict __stream) ;
-#pragma line 665 "/usr/include/stdio.h" 3 4
-extern __ssize_t __getdelim (char **__restrict __lineptr,
-          size_t *__restrict __n, int __delimiter,
-          FILE *__restrict __stream) ;
-extern __ssize_t getdelim (char **__restrict __lineptr,
-        size_t *__restrict __n, int __delimiter,
-        FILE *__restrict __stream) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern __ssize_t getline (char **__restrict __lineptr,
-       size_t *__restrict __n,
-       FILE *__restrict __stream) ;
-#pragma line 689 "/usr/include/stdio.h" 3 4
-extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int puts (const char *__s);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int ungetc (int __c, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern size_t fread (void *__restrict __ptr, size_t __size,
-       size_t __n, FILE *__restrict __stream) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-        size_t __n, FILE *__restrict __s);
-#pragma line 726 "/usr/include/stdio.h" 3 4
-extern int fputs_unlocked (const char *__restrict __s,
-      FILE *__restrict __stream);
-#pragma line 737 "/usr/include/stdio.h" 3 4
-extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
-         size_t __n, FILE *__restrict __stream) ;
-extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
-          size_t __n, FILE *__restrict __stream);
-#pragma line 749 "/usr/include/stdio.h" 3 4
-extern int fseek (FILE *__stream, long int __off, int __whence);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int ftell (FILE *__stream) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void rewind (FILE *__stream);
-#pragma line 773 "/usr/include/stdio.h" 3 4
-extern int fseeko (FILE *__stream, __off_t __off, int __whence);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern __off_t ftello (FILE *__stream) ;
-#pragma line 798 "/usr/include/stdio.h" 3 4
-extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int fsetpos (FILE *__stream, const fpos_t *__pos);
-#pragma line 818 "/usr/include/stdio.h" 3 4
-extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
-extern __off64_t ftello64 (FILE *__stream) ;
-extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
-extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void clearerr (FILE *__stream) throw ();
-#pragma empty_line
-extern int feof (FILE *__stream) throw () ;
-#pragma empty_line
-extern int ferror (FILE *__stream) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void clearerr_unlocked (FILE *__stream) throw ();
-extern int feof_unlocked (FILE *__stream) throw () ;
-extern int ferror_unlocked (FILE *__stream) throw () ;
-#pragma line 846 "/usr/include/stdio.h" 3 4
-extern void perror (const char *__s);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
-#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
-extern int sys_nerr;
-extern const char *const sys_errlist[];
-#pragma empty_line
-#pragma empty_line
-extern int _sys_nerr;
-extern const char *const _sys_errlist[];
-#pragma line 854 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int fileno (FILE *__stream) throw () ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int fileno_unlocked (FILE *__stream) throw () ;
-#pragma line 872 "/usr/include/stdio.h" 3 4
-extern FILE *popen (const char *__command, const char *__modes) ;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int pclose (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern char *ctermid (char *__s) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern char *cuserid (char *__s);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-struct obstack;
-#pragma empty_line
-#pragma empty_line
-extern int obstack_printf (struct obstack *__restrict __obstack,
-      const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
-extern int obstack_vprintf (struct obstack *__restrict __obstack,
-       const char *__restrict __format,
-       __gnuc_va_list __args)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void flockfile (FILE *__stream) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int ftrylockfile (FILE *__stream) throw () ;
-#pragma empty_line
-#pragma empty_line
-extern void funlockfile (FILE *__stream) throw ();
-#pragma line 942 "/usr/include/stdio.h" 3 4
-}
-#pragma line 44 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
-#pragma line 91 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace std
-{
-  using ::FILE;
-  using ::fpos_t;
-#pragma empty_line
-  using ::clearerr;
-  using ::fclose;
-  using ::feof;
-  using ::ferror;
-  using ::fflush;
-  using ::fgetc;
-  using ::fgetpos;
-  using ::fgets;
-  using ::fopen;
-  using ::fprintf;
-  using ::fputc;
-  using ::fputs;
-  using ::fread;
-  using ::freopen;
-  using ::fscanf;
-  using ::fseek;
-  using ::fsetpos;
-  using ::ftell;
-  using ::fwrite;
-  using ::getc;
-  using ::getchar;
-  using ::gets;
-  using ::perror;
-  using ::printf;
-  using ::putc;
-  using ::putchar;
-  using ::puts;
-  using ::remove;
-  using ::rename;
-  using ::rewind;
-  using ::scanf;
-  using ::setbuf;
-  using ::setvbuf;
-  using ::sprintf;
-  using ::sscanf;
-  using ::tmpfile;
-  using ::tmpnam;
-  using ::ungetc;
-  using ::vfprintf;
-  using ::vprintf;
-  using ::vsprintf;
-}
-#pragma line 147 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace __gnu_cxx
-{
-#pragma line 165 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-  using ::snprintf;
-  using ::vfscanf;
-  using ::vscanf;
-  using ::vsnprintf;
-  using ::vsscanf;
-#pragma empty_line
-}
-#pragma empty_line
-namespace std
-{
-  using ::__gnu_cxx::snprintf;
-  using ::__gnu_cxx::vfscanf;
-  using ::__gnu_cxx::vscanf;
-  using ::__gnu_cxx::vsnprintf;
-  using ::__gnu_cxx::vsscanf;
-}
-#pragma line 43 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
-#pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-#pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
-#pragma line 36 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 3
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma line 37 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  typedef __gthread_mutex_t __c_lock;
-#pragma empty_line
-#pragma empty_line
-  typedef FILE __c_file;
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT>
-    class __basic_file;
-#pragma empty_line
-#pragma empty_line
-  template<>
-    class __basic_file<char>
-    {
-#pragma empty_line
-      __c_file* _M_cfile;
-#pragma empty_line
-#pragma empty_line
-      bool _M_cfile_created;
-#pragma empty_line
-    public:
-      __basic_file(__c_lock* __lock = 0) throw ();
-#pragma empty_line
-      __basic_file*
-      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
-#pragma empty_line
-      __basic_file*
-      sys_open(__c_file* __file, ios_base::openmode);
-#pragma empty_line
-      __basic_file*
-      sys_open(int __fd, ios_base::openmode __mode) throw ();
-#pragma empty_line
-      __basic_file*
-      close();
-#pragma empty_line
-      __attribute__ ((__pure__)) bool
-      is_open() const throw ();
-#pragma empty_line
-      __attribute__ ((__pure__)) int
-      fd() throw ();
-#pragma empty_line
-      __attribute__ ((__pure__)) __c_file*
-      file() throw ();
-#pragma empty_line
-      ~__basic_file();
-#pragma empty_line
-      streamsize
-      xsputn(const char* __s, streamsize __n);
-#pragma empty_line
-      streamsize
-      xsputn_2(const char* __s1, streamsize __n1,
-        const char* __s2, streamsize __n2);
-#pragma empty_line
-      streamsize
-      xsgetn(char* __s, streamsize __n);
-#pragma empty_line
-      streamoff
-      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
-#pragma empty_line
-      int
-      sync();
-#pragma empty_line
-      streamsize
-      showmanyc();
-    };
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 44 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma line 67 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-#pragma empty_line
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef __basic_file<char> __file_type;
-      typedef typename traits_type::state_type __state_type;
-      typedef codecvt<char_type, char, __state_type> __codecvt_type;
-#pragma empty_line
-      friend class ios_base;
-#pragma empty_line
-    protected:
-#pragma empty_line
-#pragma empty_line
-      __c_lock _M_lock;
-#pragma empty_line
-#pragma empty_line
-      __file_type _M_file;
-#pragma empty_line
-#pragma empty_line
-      ios_base::openmode _M_mode;
-#pragma empty_line
-#pragma empty_line
-      __state_type _M_state_beg;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      __state_type _M_state_cur;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      __state_type _M_state_last;
-#pragma empty_line
-#pragma empty_line
-      char_type* _M_buf;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      size_t _M_buf_size;
-#pragma empty_line
-#pragma empty_line
-      bool _M_buf_allocated;
-#pragma line 129 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      bool _M_reading;
-      bool _M_writing;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      char_type _M_pback;
-      char_type* _M_pback_cur_save;
-      char_type* _M_pback_end_save;
-      bool _M_pback_init;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      const __codecvt_type* _M_codecvt;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      char* _M_ext_buf;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      streamsize _M_ext_buf_size;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      const char* _M_ext_next;
-      char* _M_ext_end;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      void
-      _M_create_pback()
-      {
- if (!_M_pback_init)
-   {
-     _M_pback_cur_save = this->gptr();
-     _M_pback_end_save = this->egptr();
-     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
-     _M_pback_init = true;
-   }
-      }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      void
-      _M_destroy_pback() throw()
-      {
- if (_M_pback_init)
-   {
-#pragma empty_line
-     _M_pback_cur_save += this->gptr() != this->eback();
-     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
-     _M_pback_init = false;
-   }
-      }
-#pragma empty_line
-    public:
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      basic_filebuf();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      virtual
-      ~basic_filebuf()
-      { this->close(); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open() const throw()
-      { return _M_file.is_open(); }
-#pragma line 265 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      open(const char* __s, ios_base::openmode __mode);
-#pragma line 292 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      close();
-#pragma empty_line
-    protected:
-      void
-      _M_allocate_internal_buffer();
-#pragma empty_line
-      void
-      _M_destroy_internal_buffer() throw();
-#pragma empty_line
-#pragma empty_line
-      virtual streamsize
-      showmanyc();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      virtual int_type
-      underflow();
-#pragma empty_line
-      virtual int_type
-      pbackfail(int_type __c = _Traits::eof());
-#pragma line 324 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      virtual int_type
-      overflow(int_type __c = _Traits::eof());
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      _M_convert_to_external(char_type*, streamsize);
-#pragma line 344 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n);
-#pragma empty_line
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-#pragma empty_line
-      virtual pos_type
-      seekpos(pos_type __pos,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-#pragma empty_line
-#pragma empty_line
-      pos_type
-      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
-#pragma empty_line
-      int
-      _M_get_ext_pos(__state_type &__state);
-#pragma empty_line
-      virtual int
-      sync();
-#pragma empty_line
-      virtual void
-      imbue(const locale& __loc);
-#pragma empty_line
-      virtual streamsize
-      xsgetn(char_type* __s, streamsize __n);
-#pragma empty_line
-      virtual streamsize
-      xsputn(const char_type* __s, streamsize __n);
-#pragma empty_line
-#pragma empty_line
-      bool
-      _M_terminate_output();
-#pragma line 390 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      _M_set_buffer(streamsize __off)
-      {
-  const bool __testin = _M_mode & ios_base::in;
-  const bool __testout = _M_mode & ios_base::out;
-#pragma empty_line
- if (__testin && __off > 0)
-   this->setg(_M_buf, _M_buf, _M_buf + __off);
- else
-   this->setg(_M_buf, _M_buf, _M_buf);
-#pragma empty_line
- if (__testout && __off == 0 && _M_buf_size > 1 )
-   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
- else
-   this->setp(0, 0);
-      }
-    };
-#pragma line 418 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_ifstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-#pragma empty_line
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-#pragma empty_line
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-#pragma line 445 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_ifstream() : __istream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma line 458 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 490 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_ifstream()
-      { }
-#pragma line 500 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma line 529 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s, ios_base::openmode __mode = ios_base::in)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::in))
-   this->setstate(ios_base::failbit);
- else
-#pragma empty_line
-#pragma empty_line
-   this->clear();
-      }
-#pragma line 567 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma line 586 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_ofstream : public basic_ostream<_CharT,_Traits>
-    {
-    public:
-#pragma empty_line
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-#pragma empty_line
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-#pragma line 613 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_ofstream(): __ostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma line 627 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_ofstream(const char* __s,
-       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
-      : __ostream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 661 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_ofstream()
-      { }
-#pragma line 671 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma line 700 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::out))
-   this->setstate(ios_base::failbit);
- else
-#pragma empty_line
-#pragma empty_line
-   this->clear();
-      }
-#pragma line 740 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma line 759 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-  template<typename _CharT, typename _Traits>
-    class basic_fstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-#pragma empty_line
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-#pragma empty_line
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ios<char_type, traits_type> __ios_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-#pragma line 787 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      basic_fstream()
-      : __iostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma line 799 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      explicit
-      basic_fstream(const char* __s,
-      ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __iostream_type(0), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 830 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      ~basic_fstream()
-      { }
-#pragma line 840 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma line 869 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::in | ios_base::out)
-      {
- if (!_M_filebuf.open(__s, __mode))
-   this->setstate(ios_base::failbit);
- else
-#pragma empty_line
-#pragma empty_line
-   this->clear();
-      }
-#pragma line 909 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma empty_line
-#pragma empty_line
-}
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
-#pragma line 39 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-#pragma line 39 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_allocate_internal_buffer()
-    {
-#pragma empty_line
-#pragma empty_line
-      if (!_M_buf_allocated && !_M_buf)
- {
-   _M_buf = new char_type[_M_buf_size];
-   _M_buf_allocated = true;
- }
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_destroy_internal_buffer() throw()
-    {
-      if (_M_buf_allocated)
- {
-   delete [] _M_buf;
-   _M_buf = 0;
-   _M_buf_allocated = false;
- }
-      delete [] _M_ext_buf;
-      _M_ext_buf = 0;
-      _M_ext_buf_size = 0;
-      _M_ext_next = 0;
-      _M_ext_end = 0;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    basic_filebuf<_CharT, _Traits>::
-    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
-    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
-    _M_state_last(), _M_buf(0), _M_buf_size(8192),
-    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
-    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
-    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
-    _M_ext_end(0)
-    {
-      if (has_facet<__codecvt_type>(this->_M_buf_locale))
- _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    open(const char* __s, ios_base::openmode __mode)
-    {
-      __filebuf_type *__ret = 0;
-      if (!this->is_open())
- {
-   _M_file.open(__s, __mode);
-   if (this->is_open())
-     {
-       _M_allocate_internal_buffer();
-       _M_mode = __mode;
-#pragma empty_line
-#pragma empty_line
-       _M_reading = false;
-       _M_writing = false;
-       _M_set_buffer(-1);
-#pragma empty_line
-#pragma empty_line
-       _M_state_last = _M_state_cur = _M_state_beg;
-#pragma empty_line
-#pragma empty_line
-       if ((__mode & ios_base::ate)
-    && this->seekoff(0, ios_base::end, __mode)
-    == pos_type(off_type(-1)))
-  this->close();
-       else
-  __ret = this;
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    close()
-    {
-      if (!this->is_open())
- return 0;
-#pragma empty_line
-      bool __testfail = false;
-      {
-#pragma empty_line
- struct __close_sentry
- {
-   basic_filebuf *__fb;
-   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
-   ~__close_sentry ()
-   {
-     __fb->_M_mode = ios_base::openmode(0);
-     __fb->_M_pback_init = false;
-     __fb->_M_destroy_internal_buffer();
-     __fb->_M_reading = false;
-     __fb->_M_writing = false;
-     __fb->_M_set_buffer(-1);
-     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
-   }
- } __cs (this);
-#pragma empty_line
- if (true)
-   {
-     if (!_M_terminate_output())
-       __testfail = true;
-   }
- if (false)
-   {
-     _M_file.close();
-                            ;
-   }
- if (false)
-   { __testfail = true; }
-      }
-#pragma empty_line
-      if (!_M_file.close())
- __testfail = true;
-#pragma empty_line
-      if (__testfail)
- return 0;
-      else
- return this;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    showmanyc()
-    {
-      streamsize __ret = -1;
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin && this->is_open())
- {
-#pragma empty_line
-#pragma empty_line
-   __ret = this->egptr() - this->gptr();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   if (__check_facet(_M_codecvt).encoding() >= 0)
-#pragma empty_line
-     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   _M_destroy_pback();
-#pragma empty_line
-   if (this->gptr() < this->egptr())
-     return traits_type::to_int_type(*this->gptr());
-#pragma empty_line
-#pragma empty_line
-   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-#pragma empty_line
-#pragma empty_line
-   bool __got_eof = false;
-#pragma empty_line
-   streamsize __ilen = 0;
-   codecvt_base::result __r = codecvt_base::ok;
-   if (__check_facet(_M_codecvt).always_noconv())
-     {
-       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
-          __buflen);
-       if (__ilen == 0)
-  __got_eof = true;
-     }
-   else
-     {
-#pragma empty_line
-#pragma empty_line
-       const int __enc = _M_codecvt->encoding();
-       streamsize __blen;
-       streamsize __rlen;
-       if (__enc > 0)
-  __blen = __rlen = __buflen * __enc;
-       else
-  {
-    __blen = __buflen + _M_codecvt->max_length() - 1;
-    __rlen = __buflen;
-  }
-       const streamsize __remainder = _M_ext_end - _M_ext_next;
-       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       if (_M_reading && this->egptr() == this->eback() && __remainder)
-  __rlen = 0;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       if (_M_ext_buf_size < __blen)
-  {
-    char* __buf = new char[__blen];
-    if (__remainder)
-      __builtin_memcpy(__buf, _M_ext_next, __remainder);
-#pragma empty_line
-    delete [] _M_ext_buf;
-    _M_ext_buf = __buf;
-    _M_ext_buf_size = __blen;
-  }
-       else if (__remainder)
-  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-#pragma empty_line
-       _M_ext_next = _M_ext_buf;
-       _M_ext_end = _M_ext_buf + __remainder;
-       _M_state_last = _M_state_cur;
-#pragma empty_line
-       do
-  {
-    if (__rlen > 0)
-      {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
-   {
-     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid"));
-#pragma empty_line
-#pragma empty_line
-   }
-        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
-        if (__elen == 0)
-   __got_eof = true;
-        else if (__elen == -1)
-   break;
-        _M_ext_end += __elen;
-      }
-#pragma empty_line
-    char_type* __iend = this->eback();
-    if (_M_ext_next < _M_ext_end)
-      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
-      _M_ext_end, _M_ext_next,
-      this->eback(),
-      this->eback() + __buflen, __iend);
-    if (__r == codecvt_base::noconv)
-      {
-        size_t __avail = _M_ext_end - _M_ext_buf;
-        __ilen = std::min(__avail, __buflen);
-        traits_type::copy(this->eback(),
-     reinterpret_cast<char_type*>
-     (_M_ext_buf), __ilen);
-        _M_ext_next = _M_ext_buf + __ilen;
-      }
-    else
-      __ilen = __iend - this->eback();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-    if (__r == codecvt_base::error)
-      break;
-#pragma empty_line
-    __rlen = 1;
-  }
-       while (__ilen == 0 && !__got_eof);
-     }
-#pragma empty_line
-   if (__ilen > 0)
-     {
-       _M_set_buffer(__ilen);
-       _M_reading = true;
-       __ret = traits_type::to_int_type(*this->gptr());
-     }
-   else if (__got_eof)
-     {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       _M_set_buffer(-1);
-       _M_reading = false;
-#pragma empty_line
-#pragma empty_line
-       if (__r == codecvt_base::partial)
-  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file"));
-#pragma empty_line
-     }
-   else if (__r == codecvt_base::error)
-     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file"));
-#pragma empty_line
-   else
-     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file"));
-#pragma empty_line
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    pbackfail(int_type __i)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-#pragma empty_line
-#pragma empty_line
-   const bool __testpb = _M_pback_init;
-   const bool __testeof = traits_type::eq_int_type(__i, __ret);
-   int_type __tmp;
-   if (this->eback() < this->gptr())
-     {
-       this->gbump(-1);
-       __tmp = traits_type::to_int_type(*this->gptr());
-     }
-   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
-     {
-       __tmp = this->underflow();
-       if (traits_type::eq_int_type(__tmp, __ret))
-  return __ret;
-     }
-   else
-     {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       return __ret;
-     }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
-     __ret = __i;
-   else if (__testeof)
-     __ret = traits_type::not_eof(__i);
-   else if (!__testpb)
-     {
-       _M_create_pback();
-       _M_reading = true;
-       *this->gptr() = traits_type::to_char_type(__i);
-       __ret = __i;
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    overflow(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testeof = traits_type::eq_int_type(__c, __ret);
-      const bool __testout = _M_mode & ios_base::out;
-      if (__testout)
- {
-          if (_M_reading)
-            {
-              _M_destroy_pback();
-              const int __gptr_off = _M_get_ext_pos(_M_state_last);
-              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
-                  == pos_type(off_type(-1)))
-                return __ret;
-            }
-   if (this->pbase() < this->pptr())
-     {
-#pragma empty_line
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       if (_M_convert_to_external(this->pbase(),
-      this->pptr() - this->pbase()))
-  {
-    _M_set_buffer(0);
-    __ret = traits_type::not_eof(__c);
-  }
-     }
-   else if (_M_buf_size > 1)
-     {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       _M_set_buffer(0);
-       _M_writing = true;
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-       __ret = traits_type::not_eof(__c);
-     }
-   else
-     {
-#pragma empty_line
-       char_type __conv = traits_type::to_char_type(__c);
-       if (__testeof || _M_convert_to_external(&__conv, 1))
-  {
-    _M_writing = true;
-    __ret = traits_type::not_eof(__c);
-  }
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
-    {
-#pragma empty_line
-      streamsize __elen;
-      streamsize __plen;
-      if (__check_facet(_M_codecvt).always_noconv())
- {
-   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
-   __plen = __ilen;
- }
-      else
- {
-#pragma empty_line
-#pragma empty_line
-   streamsize __blen = __ilen * _M_codecvt->max_length();
-   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
-#pragma empty_line
-   char* __bend;
-   const char_type* __iend;
-   codecvt_base::result __r;
-   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
-    __iend, __buf, __buf + __blen, __bend);
-#pragma empty_line
-   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
-     __blen = __bend - __buf;
-   else if (__r == codecvt_base::noconv)
-     {
-#pragma empty_line
-       __buf = reinterpret_cast<char*>(__ibuf);
-       __blen = __ilen;
-     }
-   else
-     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-#pragma empty_line
-#pragma empty_line
-   __elen = _M_file.xsputn(__buf, __blen);
-   __plen = __blen;
-#pragma empty_line
-#pragma empty_line
-   if (__r == codecvt_base::partial && __elen == __plen)
-     {
-       const char_type* __iresume = __iend;
-       streamsize __rlen = this->pptr() - __iend;
-       __r = _M_codecvt->out(_M_state_cur, __iresume,
-        __iresume + __rlen, __iend, __buf,
-        __buf + __blen, __bend);
-       if (__r != codecvt_base::error)
-  {
-    __rlen = __bend - __buf;
-    __elen = _M_file.xsputn(__buf, __rlen);
-    __plen = __rlen;
-  }
-       else
-  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-#pragma empty_line
-     }
- }
-      return __elen == __plen;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsgetn(_CharT* __s, streamsize __n)
-    {
-#pragma empty_line
-      streamsize __ret = 0;
-      if (_M_pback_init)
- {
-   if (__n > 0 && this->gptr() == this->eback())
-     {
-       *__s++ = *this->gptr();
-       this->gbump(1);
-       __ret = 1;
-       --__n;
-     }
-   _M_destroy_pback();
- }
-      else if (_M_writing)
- {
-    if (overflow() == traits_type::eof())
-      return __ret;
-    _M_set_buffer(-1);
-    _M_writing = false;
-  }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      const bool __testin = _M_mode & ios_base::in;
-      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-#pragma empty_line
-      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
-     && __testin)
-   {
-#pragma empty_line
-     const streamsize __avail = this->egptr() - this->gptr();
-     if (__avail != 0)
-       {
-        traits_type::copy(__s, this->gptr(), __avail);
-         __s += __avail;
-        this->setg(this->eback(), this->gptr() + __avail,
-     this->egptr());
-        __ret += __avail;
-        __n -= __avail;
-       }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-     streamsize __len;
-     for (;;)
-       {
-         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
-           __n);
-         if (__len == -1)
-    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file"));
-#pragma empty_line
-         if (__len == 0)
-    break;
-#pragma empty_line
-         __n -= __len;
-         __ret += __len;
-         if (__n == 0)
-    break;
-#pragma empty_line
-         __s += __len;
-       }
-#pragma empty_line
-     if (__n == 0)
-       {
-         _M_set_buffer(0);
-         _M_reading = true;
-       }
-     else if (__len == 0)
-       {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-         _M_set_buffer(-1);
-         _M_reading = false;
-       }
-   }
-      else
-   __ret += __streambuf_type::xsgetn(__s, __n);
-#pragma empty_line
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsputn(const _CharT* __s, streamsize __n)
-    {
-      streamsize __ret = 0;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-      const bool __testout = _M_mode & ios_base::out;
-      if (__check_facet(_M_codecvt).always_noconv()
-     && __testout && !_M_reading)
- {
-#pragma empty_line
-   const streamsize __chunk = 1ul << 10;
-   streamsize __bufavail = this->epptr() - this->pptr();
-#pragma empty_line
-#pragma empty_line
-   if (!_M_writing && _M_buf_size > 1)
-     __bufavail = _M_buf_size - 1;
-#pragma empty_line
-   const streamsize __limit = std::min(__chunk, __bufavail);
-   if (__n >= __limit)
-     {
-       const streamsize __buffill = this->pptr() - this->pbase();
-       const char* __buf = reinterpret_cast<const char*>(this->pbase());
-       __ret = _M_file.xsputn_2(__buf, __buffill,
-           reinterpret_cast<const char*>(__s),
-           __n);
-       if (__ret == __buffill + __n)
-  {
-    _M_set_buffer(0);
-    _M_writing = true;
-  }
-       if (__ret > __buffill)
-  __ret -= __buffill;
-       else
-  __ret = 0;
-     }
-   else
-     __ret = __streambuf_type::xsputn(__s, __n);
- }
-       else
-  __ret = __streambuf_type::xsputn(__s, __n);
-       return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    setbuf(char_type* __s, streamsize __n)
-    {
-      if (!this->is_open())
- {
-   if (__s == 0 && __n == 0)
-     _M_buf_size = 1;
-   else if (__s && __n > 0)
-     {
-#pragma line 701 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-       _M_buf = __s;
-       _M_buf_size = __n;
-     }
- }
-      return this;
-    }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
-    {
-      int __width = 0;
-      if (_M_codecvt)
- __width = _M_codecvt->encoding();
-      if (__width < 0)
- __width = 0;
-#pragma empty_line
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testfail = __off != 0 && __width <= 0;
-      if (this->is_open() && !__testfail)
- {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   bool __no_movement = __way == ios_base::cur && __off == 0
-     && (!_M_writing || _M_codecvt->always_noconv());
-#pragma empty_line
-#pragma empty_line
-   if (!__no_movement)
-     _M_destroy_pback();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   __state_type __state = _M_state_beg;
-   off_type __computed_off = __off * __width;
-   if (_M_reading && __way == ios_base::cur)
-     {
-       __state = _M_state_last;
-       __computed_off += _M_get_ext_pos(__state);
-     }
-   if (!__no_movement)
-     __ret = _M_seek(__computed_off, __way, __state);
-   else
-     {
-       if (_M_writing)
-  __computed_off = this->pptr() - this->pbase();
-#pragma empty_line
-        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
-        if (__file_off != off_type(-1))
-  {
-    __ret = __file_off + __computed_off;
-    __ret.state(__state);
-  }
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekpos(pos_type __pos, ios_base::openmode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (this->is_open())
- {
-#pragma empty_line
-   _M_destroy_pback();
-   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (_M_terminate_output())
- {
-   off_type __file_off = _M_file.seekoff(__off, __way);
-   if (__file_off != off_type(-1))
-     {
-       _M_reading = false;
-       _M_writing = false;
-       _M_ext_next = _M_ext_end = _M_ext_buf;
-       _M_set_buffer(-1);
-       _M_state_cur = __state;
-       __ret = __file_off;
-       __ret.state(_M_state_cur);
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    int basic_filebuf<_CharT, _Traits>::
-    _M_get_ext_pos(__state_type& __state)
-    {
-      if (_M_codecvt->always_noconv())
-        return this->gptr() - this->egptr();
-      else
-        {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-          const int __gptr_off =
-            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
-                               this->gptr() - this->eback());
-          return _M_ext_buf + __gptr_off - _M_ext_end;
-        }
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_terminate_output()
-    {
-#pragma empty_line
-      bool __testvalid = true;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __testvalid = false;
- }
-#pragma empty_line
-#pragma empty_line
-      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
-   && __testvalid)
- {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   const size_t __blen = 128;
-   char __buf[__blen];
-   codecvt_base::result __r;
-   streamsize __ilen = 0;
-#pragma empty_line
-   do
-     {
-       char* __next;
-       __r = _M_codecvt->unshift(_M_state_cur, __buf,
-     __buf + __blen, __next);
-       if (__r == codecvt_base::error)
-  __testvalid = false;
-       else if (__r == codecvt_base::ok ||
-         __r == codecvt_base::partial)
-  {
-    __ilen = __next - __buf;
-    if (__ilen > 0)
-      {
-        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
-        if (__elen != __ilen)
-   __testvalid = false;
-      }
-  }
-     }
-   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
-#pragma empty_line
-   if (__testvalid)
-     {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-       const int_type __tmp = this->overflow();
-       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-  __testvalid = false;
-     }
- }
-      return __testvalid;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    int
-    basic_filebuf<_CharT, _Traits>::
-    sync()
-    {
-#pragma empty_line
-#pragma empty_line
-      int __ret = 0;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __ret = -1;
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    imbue(const locale& __loc)
-    {
-      bool __testvalid = true;
-#pragma empty_line
-      const __codecvt_type* _M_codecvt_tmp = 0;
-      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
- _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
-#pragma empty_line
-      if (this->is_open())
- {
-#pragma empty_line
-   if ((_M_reading || _M_writing)
-       && __check_facet(_M_codecvt).encoding() == -1)
-     __testvalid = false;
-   else
-     {
-       if (_M_reading)
-  {
-    if (__check_facet(_M_codecvt).always_noconv())
-      {
-        if (_M_codecvt_tmp
-     && !__check_facet(_M_codecvt_tmp).always_noconv())
-   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
-                 != pos_type(off_type(-1));
-      }
-    else
-      {
-#pragma empty_line
-        _M_ext_next = _M_ext_buf
-   + _M_codecvt->length(_M_state_last, _M_ext_buf,
-          _M_ext_next,
-          this->gptr() - this->eback());
-        const streamsize __remainder = _M_ext_end - _M_ext_next;
-        if (__remainder)
-   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-#pragma empty_line
-        _M_ext_next = _M_ext_buf;
-        _M_ext_end = _M_ext_buf + __remainder;
-        _M_set_buffer(-1);
-        _M_state_last = _M_state_cur = _M_state_beg;
-      }
-  }
-       else if (_M_writing && (__testvalid = _M_terminate_output()))
-  _M_set_buffer(-1);
-     }
- }
-#pragma empty_line
-      if (__testvalid)
- _M_codecvt = _M_codecvt_tmp;
-      else
- _M_codecvt = 0;
-    }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  extern template class basic_filebuf<char>;
-  extern template class basic_ifstream<char>;
-  extern template class basic_ofstream<char>;
-  extern template class basic_fstream<char>;
-#pragma empty_line
-#pragma empty_line
-  extern template class basic_filebuf<wchar_t>;
-  extern template class basic_ifstream<wchar_t>;
-  extern template class basic_ofstream<wchar_t>;
-  extern template class basic_fstream<wchar_t>;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 921 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 3 "correlator.cpp" 2
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 1
-#pragma line 66 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
-#pragma line 58 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h"
-enum SsdmDataTypes {
-    _ssdm_sc_int = 0,
-    _ssdm_c_int = _ssdm_sc_int,
-    _ssdm_sc_uint = 1,
-    _ssdm_c_uint = _ssdm_sc_uint,
-    _ssdm_sc_bigint = 2,
-    _ssdm_sc_biguint = 3,
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-enum SsdmPortTypes {
-    _ssdm_sc_in = 0,
-    _ssdm_sc_out = 1,
-    _ssdm_sc_inout = 2,
-    _ssdm_sc_in_clk,
-#pragma empty_line
-    _ssdm_fifo_in,
-    _ssdm_sc_fifo_in = _ssdm_fifo_in,
-    _ssdm_tlm_fifo_in = _ssdm_fifo_in,
-    _ssdm_fifo_out,
-    _ssdm_sc_fifo_out = _ssdm_fifo_out,
-    _ssdm_tlm_fifo_out = _ssdm_fifo_out,
-    _ssdm_fifo_inout,
-    _ssdm_sc_fifo_inout = _ssdm_fifo_inout,
-    _ssdm_tlm_fifo_inout = _ssdm_fifo_inout,
-    _ssdm_sc_bus,
-    _ssdm_hls_bus_port = _ssdm_sc_bus,
-    _ssdm_AXI4M_bus_port = _ssdm_sc_bus,
-    _ssdm_port_end,
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-enum SsdmProcessTypes {
-    _ssdm_method = 0,
-    _ssdm_sc_method = _ssdm_method,
-    _ssdm_thread = 1,
-    _ssdm_sc_thread = _ssdm_thread,
-    _ssdm_cthread = 2,
-    _ssdm_sc_cthread = _ssdm_cthread,
-    _ssdm_process_end,
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-enum SsdmSensitiveTypes {
-    _ssdm_sensitive = 0,
-    _ssdm_sensitive_pos,
-    _ssdm_sensitive_neg,
-    _ssdm_sensitive_reset0,
-    _ssdm_sensitive_reset1,
-    _ssdm_sensitive_end,
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-enum SsdmChannelTypes {
-    _ssdm_sc_sig,
-    _ssdm_fifo,
-    _ssdm_sc_fifo = _ssdm_fifo,
-    _ssdm_mem_fifo,
-    _ssdm_sc_mem_fifo = _ssdm_mem_fifo,
-};
-#pragma empty_line
-#pragma empty_line
-enum SsdmRegionTypes {
-    _ssdm_region_reset,
-    _ssdm_region_protocol,
-    _ssdm_region_pipeline,
-    _ssdm_region_parallel,
-};
-#pragma line 67 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 2
-#pragma empty_line
-#pragma empty_line
-namespace hls {
-#pragma line 78 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
-template<typename __STREAM_T__>
-class stream
-{
-  public:
-#pragma empty_line
-    inline __attribute__((always_inline)) stream() {
-    }
-#pragma empty_line
-    inline __attribute__((always_inline)) stream(const char* name) {
-    }
-#pragma empty_line
-#pragma empty_line
-  private:
-    inline __attribute__((always_inline)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
-    }
-#pragma empty_line
-    inline __attribute__((always_inline)) stream& operator= (const stream< __STREAM_T__ >& chn) {
-        V = chn.V;
-        return *this;
-    }
-#pragma empty_line
-  public:
-#pragma empty_line
-    inline __attribute__((always_inline)) void operator >> (__STREAM_T__& rdata) {
-        read(rdata);
-    }
-#pragma empty_line
-    inline __attribute__((always_inline)) void operator << (const __STREAM_T__& wdata) {
-        write(wdata);
-    }
-#pragma empty_line
-#pragma empty_line
-  public:
-#pragma empty_line
-    inline __attribute__((always_inline)) bool empty() const {
-        bool tmp = _ssdm_StreamCanRead(&V);
-        return !tmp;
-    }
-#pragma empty_line
-    inline __attribute__((always_inline)) bool full() const {
-        bool tmp = _ssdm_StreamCanWrite(&V);
-        return !tmp;
-    }
-#pragma empty_line
-#pragma empty_line
-    inline __attribute__((always_inline)) void read(__STREAM_T__& dout) {
-        __STREAM_T__ tmp;
-        _ssdm_StreamRead(&V, &tmp);
-        dout = tmp;
-    }
-#pragma empty_line
-    inline __attribute__((always_inline)) __STREAM_T__ read() {
-        __STREAM_T__ tmp;
-        _ssdm_StreamRead(&V, &tmp);
-        return tmp;
-    }
-#pragma empty_line
-#pragma empty_line
-    inline __attribute__((always_inline)) bool read_nb(__STREAM_T__& dout) {
-        __STREAM_T__ tmp;
-        bool empty_n = _ssdm_StreamNbRead(&V, &tmp);
-        dout = tmp;
-        return empty_n;
-    }
-#pragma empty_line
-#pragma empty_line
-    inline __attribute__((always_inline)) void write(const __STREAM_T__& din) {
-        __STREAM_T__ tmp = din;
-        _ssdm_StreamWrite(&V, &tmp);
-    }
-#pragma empty_line
-#pragma empty_line
-    inline __attribute__((always_inline)) bool write_nb(const __STREAM_T__& din) {
-        __STREAM_T__ tmp = din;
-        bool full_n = _ssdm_StreamNbWrite(&V, &tmp);
-        return full_n;
-    }
-#pragma empty_line
-#pragma empty_line
-    inline __attribute__((always_inline)) unsigned size() {
-        unsigned size = _ssdm_StreamSize(&V);
-        return size;
-    }
-#pragma empty_line
-  public:
-    __STREAM_T__ V;
-};
-#pragma empty_line
-}
-#pragma line 4 "correlator.cpp" 2
-#pragma line 1 "./correlator.h" 1
-#pragma empty_line
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h" 1
-#pragma line 60 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h"
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h" 1
-#pragma line 32 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h"
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-#pragma line 41 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/math.h" 1 3 4
-#pragma line 28 "/usr/include/math.h" 3 4
-extern "C" {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 1 3 4
-#pragma line 25 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h" 1 3 4
-#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 2 3 4
-#pragma line 32 "/usr/include/math.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_val.h" 1 3 4
-#pragma line 36 "/usr/include/math.h" 2 3 4
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_valf.h" 1 3 4
-#pragma line 38 "/usr/include/math.h" 2 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/huge_vall.h" 1 3 4
-#pragma line 39 "/usr/include/math.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/inf.h" 1 3 4
-#pragma line 42 "/usr/include/math.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/nan.h" 1 3 4
-#pragma line 45 "/usr/include/math.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 1 3 4
-#pragma line 28 "/usr/include/x86_64-linux-gnu/bits/mathdef.h" 3 4
-typedef float float_t;
-typedef double double_t;
-#pragma line 49 "/usr/include/math.h" 2 3 4
-#pragma line 83 "/usr/include/math.h" 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
-#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern double acos (double __x) throw (); extern double __acos (double __x) throw ();
-#pragma empty_line
-extern double asin (double __x) throw (); extern double __asin (double __x) throw ();
-#pragma empty_line
-extern double atan (double __x) throw (); extern double __atan (double __x) throw ();
-#pragma empty_line
-extern double atan2 (double __y, double __x) throw (); extern double __atan2 (double __y, double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double cos (double __x) throw (); extern double __cos (double __x) throw ();
-#pragma empty_line
-extern double sin (double __x) throw (); extern double __sin (double __x) throw ();
-#pragma empty_line
-extern double tan (double __x) throw (); extern double __tan (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double cosh (double __x) throw (); extern double __cosh (double __x) throw ();
-#pragma empty_line
-extern double sinh (double __x) throw (); extern double __sinh (double __x) throw ();
-#pragma empty_line
-extern double tanh (double __x) throw (); extern double __tanh (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void sincos (double __x, double *__sinx, double *__cosx) throw (); extern void __sincos (double __x, double *__sinx, double *__cosx) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double acosh (double __x) throw (); extern double __acosh (double __x) throw ();
-#pragma empty_line
-extern double asinh (double __x) throw (); extern double __asinh (double __x) throw ();
-#pragma empty_line
-extern double atanh (double __x) throw (); extern double __atanh (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double exp (double __x) throw (); extern double __exp (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double frexp (double __x, int *__exponent) throw (); extern double __frexp (double __x, int *__exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double ldexp (double __x, int __exponent) throw (); extern double __ldexp (double __x, int __exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double log (double __x) throw (); extern double __log (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double log10 (double __x) throw (); extern double __log10 (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double modf (double __x, double *__iptr) throw (); extern double __modf (double __x, double *__iptr) throw () __attribute__ ((__nonnull__ (2)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double exp10 (double __x) throw (); extern double __exp10 (double __x) throw ();
-#pragma empty_line
-extern double pow10 (double __x) throw (); extern double __pow10 (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double expm1 (double __x) throw (); extern double __expm1 (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double log1p (double __x) throw (); extern double __log1p (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double logb (double __x) throw (); extern double __logb (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double exp2 (double __x) throw (); extern double __exp2 (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double log2 (double __x) throw (); extern double __log2 (double __x) throw ();
-#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern double pow (double __x, double __y) throw (); extern double __pow (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double sqrt (double __x) throw (); extern double __sqrt (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double hypot (double __x, double __y) throw (); extern double __hypot (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double cbrt (double __x) throw (); extern double __cbrt (double __x) throw ();
-#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern double ceil (double __x) throw () __attribute__ ((__const__)); extern double __ceil (double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern double fabs (double __x) throw () __attribute__ ((__const__)); extern double __fabs (double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern double floor (double __x) throw () __attribute__ ((__const__)); extern double __floor (double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern double fmod (double __x, double __y) throw (); extern double __fmod (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isinf (double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __finite (double __value) throw () __attribute__ ((__const__));
-#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int isinf (double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int finite (double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern double drem (double __x, double __y) throw (); extern double __drem (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double significand (double __x) throw (); extern double __significand (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double copysign (double __x, double __y) throw () __attribute__ ((__const__)); extern double __copysign (double __x, double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double nan (const char *__tagb) throw () __attribute__ ((__const__)); extern double __nan (const char *__tagb) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isnan (double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int isnan (double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double j0 (double) throw (); extern double __j0 (double) throw ();
-extern double j1 (double) throw (); extern double __j1 (double) throw ();
-extern double jn (int, double) throw (); extern double __jn (int, double) throw ();
-extern double y0 (double) throw (); extern double __y0 (double) throw ();
-extern double y1 (double) throw (); extern double __y1 (double) throw ();
-extern double yn (int, double) throw (); extern double __yn (int, double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double erf (double) throw (); extern double __erf (double) throw ();
-extern double erfc (double) throw (); extern double __erfc (double) throw ();
-extern double lgamma (double) throw (); extern double __lgamma (double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double tgamma (double) throw (); extern double __tgamma (double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double gamma (double) throw (); extern double __gamma (double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double lgamma_r (double, int *__signgamp) throw (); extern double __lgamma_r (double, int *__signgamp) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double rint (double __x) throw (); extern double __rint (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double nextafter (double __x, double __y) throw () __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-extern double nexttoward (double __x, long double __y) throw () __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double remainder (double __x, double __y) throw (); extern double __remainder (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double scalbn (double __x, int __n) throw (); extern double __scalbn (double __x, int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int ilogb (double __x) throw (); extern int __ilogb (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double scalbln (double __x, long int __n) throw (); extern double __scalbln (double __x, long int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double nearbyint (double __x) throw (); extern double __nearbyint (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double round (double __x) throw () __attribute__ ((__const__)); extern double __round (double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double trunc (double __x) throw () __attribute__ ((__const__)); extern double __trunc (double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double remquo (double __x, double __y, int *__quo) throw (); extern double __remquo (double __x, double __y, int *__quo) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lrint (double __x) throw (); extern long int __lrint (double __x) throw ();
-__extension__
-extern long long int llrint (double __x) throw (); extern long long int __llrint (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lround (double __x) throw (); extern long int __lround (double __x) throw ();
-__extension__
-extern long long int llround (double __x) throw (); extern long long int __llround (double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double fdim (double __x, double __y) throw (); extern double __fdim (double __x, double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern double fmax (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmax (double __x, double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern double fmin (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmin (double __x, double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __fpclassify (double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __signbit (double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double fma (double __x, double __y, double __z) throw (); extern double __fma (double __x, double __y, double __z) throw ();
-#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int __issignaling (double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern double scalb (double __x, double __n) throw (); extern double __scalb (double __x, double __n) throw ();
-#pragma line 84 "/usr/include/math.h" 2 3 4
-#pragma line 104 "/usr/include/math.h" 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
-#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern float acosf (float __x) throw (); extern float __acosf (float __x) throw ();
-#pragma empty_line
-extern float asinf (float __x) throw (); extern float __asinf (float __x) throw ();
-#pragma empty_line
-extern float atanf (float __x) throw (); extern float __atanf (float __x) throw ();
-#pragma empty_line
-extern float atan2f (float __y, float __x) throw (); extern float __atan2f (float __y, float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float cosf (float __x) throw (); extern float __cosf (float __x) throw ();
-#pragma empty_line
-extern float sinf (float __x) throw (); extern float __sinf (float __x) throw ();
-#pragma empty_line
-extern float tanf (float __x) throw (); extern float __tanf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float coshf (float __x) throw (); extern float __coshf (float __x) throw ();
-#pragma empty_line
-extern float sinhf (float __x) throw (); extern float __sinhf (float __x) throw ();
-#pragma empty_line
-extern float tanhf (float __x) throw (); extern float __tanhf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void sincosf (float __x, float *__sinx, float *__cosx) throw (); extern void __sincosf (float __x, float *__sinx, float *__cosx) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float acoshf (float __x) throw (); extern float __acoshf (float __x) throw ();
-#pragma empty_line
-extern float asinhf (float __x) throw (); extern float __asinhf (float __x) throw ();
-#pragma empty_line
-extern float atanhf (float __x) throw (); extern float __atanhf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float expf (float __x) throw (); extern float __expf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float frexpf (float __x, int *__exponent) throw (); extern float __frexpf (float __x, int *__exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float ldexpf (float __x, int __exponent) throw (); extern float __ldexpf (float __x, int __exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float logf (float __x) throw (); extern float __logf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float log10f (float __x) throw (); extern float __log10f (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float modff (float __x, float *__iptr) throw (); extern float __modff (float __x, float *__iptr) throw () __attribute__ ((__nonnull__ (2)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float exp10f (float __x) throw (); extern float __exp10f (float __x) throw ();
-#pragma empty_line
-extern float pow10f (float __x) throw (); extern float __pow10f (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float expm1f (float __x) throw (); extern float __expm1f (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float log1pf (float __x) throw (); extern float __log1pf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float logbf (float __x) throw (); extern float __logbf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float exp2f (float __x) throw (); extern float __exp2f (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float log2f (float __x) throw (); extern float __log2f (float __x) throw ();
-#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern float powf (float __x, float __y) throw (); extern float __powf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float sqrtf (float __x) throw (); extern float __sqrtf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float hypotf (float __x, float __y) throw (); extern float __hypotf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float cbrtf (float __x) throw (); extern float __cbrtf (float __x) throw ();
-#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern float ceilf (float __x) throw () __attribute__ ((__const__)); extern float __ceilf (float __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern float fabsf (float __x) throw () __attribute__ ((__const__)); extern float __fabsf (float __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern float floorf (float __x) throw () __attribute__ ((__const__)); extern float __floorf (float __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern float fmodf (float __x, float __y) throw (); extern float __fmodf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isinff (float __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __finitef (float __value) throw () __attribute__ ((__const__));
-#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int isinff (float __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int finitef (float __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern float dremf (float __x, float __y) throw (); extern float __dremf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float significandf (float __x) throw (); extern float __significandf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float copysignf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float nanf (const char *__tagb) throw () __attribute__ ((__const__)); extern float __nanf (const char *__tagb) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isnanf (float __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int isnanf (float __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float j0f (float) throw (); extern float __j0f (float) throw ();
-extern float j1f (float) throw (); extern float __j1f (float) throw ();
-extern float jnf (int, float) throw (); extern float __jnf (int, float) throw ();
-extern float y0f (float) throw (); extern float __y0f (float) throw ();
-extern float y1f (float) throw (); extern float __y1f (float) throw ();
-extern float ynf (int, float) throw (); extern float __ynf (int, float) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float erff (float) throw (); extern float __erff (float) throw ();
-extern float erfcf (float) throw (); extern float __erfcf (float) throw ();
-extern float lgammaf (float) throw (); extern float __lgammaf (float) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float tgammaf (float) throw (); extern float __tgammaf (float) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float gammaf (float) throw (); extern float __gammaf (float) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float lgammaf_r (float, int *__signgamp) throw (); extern float __lgammaf_r (float, int *__signgamp) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float rintf (float __x) throw (); extern float __rintf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float nextafterf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-extern float nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float remainderf (float __x, float __y) throw (); extern float __remainderf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float scalbnf (float __x, int __n) throw (); extern float __scalbnf (float __x, int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int ilogbf (float __x) throw (); extern int __ilogbf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float scalblnf (float __x, long int __n) throw (); extern float __scalblnf (float __x, long int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float nearbyintf (float __x) throw (); extern float __nearbyintf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float roundf (float __x) throw () __attribute__ ((__const__)); extern float __roundf (float __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float truncf (float __x) throw () __attribute__ ((__const__)); extern float __truncf (float __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float remquof (float __x, float __y, int *__quo) throw (); extern float __remquof (float __x, float __y, int *__quo) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lrintf (float __x) throw (); extern long int __lrintf (float __x) throw ();
-__extension__
-extern long long int llrintf (float __x) throw (); extern long long int __llrintf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lroundf (float __x) throw (); extern long int __lroundf (float __x) throw ();
-__extension__
-extern long long int llroundf (float __x) throw (); extern long long int __llroundf (float __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float fdimf (float __x, float __y) throw (); extern float __fdimf (float __x, float __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern float fmaxf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fmaxf (float __x, float __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern float fminf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fminf (float __x, float __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __fpclassifyf (float __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __signbitf (float __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float fmaf (float __x, float __y, float __z) throw (); extern float __fmaf (float __x, float __y, float __z) throw ();
-#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int __issignalingf (float __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern float scalbf (float __x, float __n) throw (); extern float __scalbf (float __x, float __n) throw ();
-#pragma line 105 "/usr/include/math.h" 2 3 4
-#pragma line 151 "/usr/include/math.h" 3 4
-#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4
-#pragma line 54 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern long double acosl (long double __x) throw (); extern long double __acosl (long double __x) throw ();
-#pragma empty_line
-extern long double asinl (long double __x) throw (); extern long double __asinl (long double __x) throw ();
-#pragma empty_line
-extern long double atanl (long double __x) throw (); extern long double __atanl (long double __x) throw ();
-#pragma empty_line
-extern long double atan2l (long double __y, long double __x) throw (); extern long double __atan2l (long double __y, long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double cosl (long double __x) throw (); extern long double __cosl (long double __x) throw ();
-#pragma empty_line
-extern long double sinl (long double __x) throw (); extern long double __sinl (long double __x) throw ();
-#pragma empty_line
-extern long double tanl (long double __x) throw (); extern long double __tanl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double coshl (long double __x) throw (); extern long double __coshl (long double __x) throw ();
-#pragma empty_line
-extern long double sinhl (long double __x) throw (); extern long double __sinhl (long double __x) throw ();
-#pragma empty_line
-extern long double tanhl (long double __x) throw (); extern long double __tanhl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void sincosl (long double __x, long double *__sinx, long double *__cosx) throw (); extern void __sincosl (long double __x, long double *__sinx, long double *__cosx) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double acoshl (long double __x) throw (); extern long double __acoshl (long double __x) throw ();
-#pragma empty_line
-extern long double asinhl (long double __x) throw (); extern long double __asinhl (long double __x) throw ();
-#pragma empty_line
-extern long double atanhl (long double __x) throw (); extern long double __atanhl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double expl (long double __x) throw (); extern long double __expl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double frexpl (long double __x, int *__exponent) throw (); extern long double __frexpl (long double __x, int *__exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double ldexpl (long double __x, int __exponent) throw (); extern long double __ldexpl (long double __x, int __exponent) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double logl (long double __x) throw (); extern long double __logl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double log10l (long double __x) throw (); extern long double __log10l (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double modfl (long double __x, long double *__iptr) throw (); extern long double __modfl (long double __x, long double *__iptr) throw () __attribute__ ((__nonnull__ (2)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double exp10l (long double __x) throw (); extern long double __exp10l (long double __x) throw ();
-#pragma empty_line
-extern long double pow10l (long double __x) throw (); extern long double __pow10l (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double expm1l (long double __x) throw (); extern long double __expm1l (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double log1pl (long double __x) throw (); extern long double __log1pl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double logbl (long double __x) throw (); extern long double __logbl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double exp2l (long double __x) throw (); extern long double __exp2l (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double log2l (long double __x) throw (); extern long double __log2l (long double __x) throw ();
-#pragma line 153 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern long double powl (long double __x, long double __y) throw (); extern long double __powl (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double sqrtl (long double __x) throw (); extern long double __sqrtl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double hypotl (long double __x, long double __y) throw (); extern long double __hypotl (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double cbrtl (long double __x) throw (); extern long double __cbrtl (long double __x) throw ();
-#pragma line 178 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern long double ceill (long double __x) throw () __attribute__ ((__const__)); extern long double __ceill (long double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern long double fabsl (long double __x) throw () __attribute__ ((__const__)); extern long double __fabsl (long double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern long double floorl (long double __x) throw () __attribute__ ((__const__)); extern long double __floorl (long double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern long double fmodl (long double __x, long double __y) throw (); extern long double __fmodl (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isinfl (long double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __finitel (long double __value) throw () __attribute__ ((__const__));
-#pragma line 204 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int isinfl (long double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int finitel (long double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern long double dreml (long double __x, long double __y) throw (); extern long double __dreml (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double significandl (long double __x) throw (); extern long double __significandl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double copysignl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double nanl (const char *__tagb) throw () __attribute__ ((__const__)); extern long double __nanl (const char *__tagb) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __isnanl (long double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int isnanl (long double __value) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double j0l (long double) throw (); extern long double __j0l (long double) throw ();
-extern long double j1l (long double) throw (); extern long double __j1l (long double) throw ();
-extern long double jnl (int, long double) throw (); extern long double __jnl (int, long double) throw ();
-extern long double y0l (long double) throw (); extern long double __y0l (long double) throw ();
-extern long double y1l (long double) throw (); extern long double __y1l (long double) throw ();
-extern long double ynl (int, long double) throw (); extern long double __ynl (int, long double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double erfl (long double) throw (); extern long double __erfl (long double) throw ();
-extern long double erfcl (long double) throw (); extern long double __erfcl (long double) throw ();
-extern long double lgammal (long double) throw (); extern long double __lgammal (long double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double tgammal (long double) throw (); extern long double __tgammal (long double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double gammal (long double) throw (); extern long double __gammal (long double) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double lgammal_r (long double, int *__signgamp) throw (); extern long double __lgammal_r (long double, int *__signgamp) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double rintl (long double __x) throw (); extern long double __rintl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-extern long double nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double remainderl (long double __x, long double __y) throw (); extern long double __remainderl (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double scalbnl (long double __x, int __n) throw (); extern long double __scalbnl (long double __x, int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int ilogbl (long double __x) throw (); extern int __ilogbl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double scalblnl (long double __x, long int __n) throw (); extern long double __scalblnl (long double __x, long int __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double nearbyintl (long double __x) throw (); extern long double __nearbyintl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double roundl (long double __x) throw () __attribute__ ((__const__)); extern long double __roundl (long double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double truncl (long double __x) throw () __attribute__ ((__const__)); extern long double __truncl (long double __x) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double remquol (long double __x, long double __y, int *__quo) throw (); extern long double __remquol (long double __x, long double __y, int *__quo) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lrintl (long double __x) throw (); extern long int __lrintl (long double __x) throw ();
-__extension__
-extern long long int llrintl (long double __x) throw (); extern long long int __llrintl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long int lroundl (long double __x) throw (); extern long int __lroundl (long double __x) throw ();
-__extension__
-extern long long int llroundl (long double __x) throw (); extern long long int __llroundl (long double __x) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double fdiml (long double __x, long double __y) throw (); extern long double __fdiml (long double __x, long double __y) throw ();
-#pragma empty_line
-#pragma empty_line
-extern long double fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern long double fminl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fminl (long double __x, long double __y) throw () __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern int __fpclassifyl (long double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-extern int __signbitl (long double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double fmal (long double __x, long double __y, long double __z) throw (); extern long double __fmal (long double __x, long double __y, long double __z) throw ();
-#pragma line 375 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4
-extern int __issignalingl (long double __value) throw ()
-     __attribute__ ((__const__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern long double scalbl (long double __x, long double __n) throw (); extern long double __scalbl (long double __x, long double __n) throw ();
-#pragma line 152 "/usr/include/math.h" 2 3 4
-#pragma line 168 "/usr/include/math.h" 3 4
-extern int signgam;
-#pragma line 209 "/usr/include/math.h" 3 4
-enum
-  {
-    FP_NAN =
-#pragma empty_line
-      0,
-    FP_INFINITE =
-#pragma empty_line
-      1,
-    FP_ZERO =
-#pragma empty_line
-      2,
-    FP_SUBNORMAL =
-#pragma empty_line
-      3,
-    FP_NORMAL =
-#pragma empty_line
-      4
-  };
-#pragma line 347 "/usr/include/math.h" 3 4
-typedef enum
-{
-  _IEEE_ = -1,
-  _SVID_,
-  _XOPEN_,
-  _POSIX_,
-  _ISOC_
-} _LIB_VERSION_TYPE;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern _LIB_VERSION_TYPE _LIB_VERSION;
-#pragma line 370 "/usr/include/math.h" 3 4
-struct __exception
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  {
-    int type;
-    char *name;
-    double arg1;
-    double arg2;
-    double retval;
-  };
-#pragma empty_line
-#pragma empty_line
-extern int matherr (struct __exception *__exc) throw ();
-#pragma line 534 "/usr/include/math.h" 3 4
-}
-#pragma line 46 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
-#pragma line 76 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  inline double
-  abs(double __x)
-  { return __builtin_fabs(__x); }
-#pragma empty_line
-  inline float
-  abs(float __x)
-  { return __builtin_fabsf(__x); }
-#pragma empty_line
-  inline long double
-  abs(long double __x)
-  { return __builtin_fabsl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    abs(_Tp __x)
-    { return __builtin_fabs(__x); }
-#pragma empty_line
-  using ::acos;
-#pragma empty_line
-  inline float
-  acos(float __x)
-  { return __builtin_acosf(__x); }
-#pragma empty_line
-  inline long double
-  acos(long double __x)
-  { return __builtin_acosl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    acos(_Tp __x)
-    { return __builtin_acos(__x); }
-#pragma empty_line
-  using ::asin;
-#pragma empty_line
-  inline float
-  asin(float __x)
-  { return __builtin_asinf(__x); }
-#pragma empty_line
-  inline long double
-  asin(long double __x)
-  { return __builtin_asinl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    asin(_Tp __x)
-    { return __builtin_asin(__x); }
-#pragma empty_line
-  using ::atan;
-#pragma empty_line
-  inline float
-  atan(float __x)
-  { return __builtin_atanf(__x); }
-#pragma empty_line
-  inline long double
-  atan(long double __x)
-  { return __builtin_atanl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    atan(_Tp __x)
-    { return __builtin_atan(__x); }
-#pragma empty_line
-  using ::atan2;
-#pragma empty_line
-  inline float
-  atan2(float __y, float __x)
-  { return __builtin_atan2f(__y, __x); }
-#pragma empty_line
-  inline long double
-  atan2(long double __y, long double __x)
-  { return __builtin_atan2l(__y, __x); }
-#pragma empty_line
-  template<typename _Tp, typename _Up>
-    inline
-    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
-    atan2(_Tp __y, _Up __x)
-    {
-      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
-      return atan2(__type(__y), __type(__x));
-    }
-#pragma empty_line
-  using ::ceil;
-#pragma empty_line
-  inline float
-  ceil(float __x)
-  { return __builtin_ceilf(__x); }
-#pragma empty_line
-  inline long double
-  ceil(long double __x)
-  { return __builtin_ceill(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    ceil(_Tp __x)
-    { return __builtin_ceil(__x); }
-#pragma empty_line
-  using ::cos;
-#pragma empty_line
-  inline float
-  cos(float __x)
-  { return __builtin_cosf(__x); }
-#pragma empty_line
-  inline long double
-  cos(long double __x)
-  { return __builtin_cosl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    cos(_Tp __x)
-    { return __builtin_cos(__x); }
-#pragma empty_line
-  using ::cosh;
-#pragma empty_line
-  inline float
-  cosh(float __x)
-  { return __builtin_coshf(__x); }
-#pragma empty_line
-  inline long double
-  cosh(long double __x)
-  { return __builtin_coshl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    cosh(_Tp __x)
-    { return __builtin_cosh(__x); }
-#pragma empty_line
-  using ::exp;
-#pragma empty_line
-  inline float
-  exp(float __x)
-  { return __builtin_expf(__x); }
-#pragma empty_line
-  inline long double
-  exp(long double __x)
-  { return __builtin_expl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    exp(_Tp __x)
-    { return __builtin_exp(__x); }
-#pragma empty_line
-  using ::fabs;
-#pragma empty_line
-  inline float
-  fabs(float __x)
-  { return __builtin_fabsf(__x); }
-#pragma empty_line
-  inline long double
-  fabs(long double __x)
-  { return __builtin_fabsl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    fabs(_Tp __x)
-    { return __builtin_fabs(__x); }
-#pragma empty_line
-  using ::floor;
-#pragma empty_line
-  inline float
-  floor(float __x)
-  { return __builtin_floorf(__x); }
-#pragma empty_line
-  inline long double
-  floor(long double __x)
-  { return __builtin_floorl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    floor(_Tp __x)
-    { return __builtin_floor(__x); }
-#pragma empty_line
-  using ::fmod;
-#pragma empty_line
-  inline float
-  fmod(float __x, float __y)
-  { return __builtin_fmodf(__x, __y); }
-#pragma empty_line
-  inline long double
-  fmod(long double __x, long double __y)
-  { return __builtin_fmodl(__x, __y); }
-#pragma empty_line
-  using ::frexp;
-#pragma empty_line
-  inline float
-  frexp(float __x, int* __exp)
-  { return __builtin_frexpf(__x, __exp); }
-#pragma empty_line
-  inline long double
-  frexp(long double __x, int* __exp)
-  { return __builtin_frexpl(__x, __exp); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    frexp(_Tp __x, int* __exp)
-    { return __builtin_frexp(__x, __exp); }
-#pragma empty_line
-  using ::ldexp;
-#pragma empty_line
-  inline float
-  ldexp(float __x, int __exp)
-  { return __builtin_ldexpf(__x, __exp); }
-#pragma empty_line
-  inline long double
-  ldexp(long double __x, int __exp)
-  { return __builtin_ldexpl(__x, __exp); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-  ldexp(_Tp __x, int __exp)
-  { return __builtin_ldexp(__x, __exp); }
-#pragma empty_line
-  using ::log;
-#pragma empty_line
-  inline float
-  log(float __x)
-  { return __builtin_logf(__x); }
-#pragma empty_line
-  inline long double
-  log(long double __x)
-  { return __builtin_logl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    log(_Tp __x)
-    { return __builtin_log(__x); }
-#pragma empty_line
-  using ::log10;
-#pragma empty_line
-  inline float
-  log10(float __x)
-  { return __builtin_log10f(__x); }
-#pragma empty_line
-  inline long double
-  log10(long double __x)
-  { return __builtin_log10l(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    log10(_Tp __x)
-    { return __builtin_log10(__x); }
-#pragma empty_line
-  using ::modf;
-#pragma empty_line
-  inline float
-  modf(float __x, float* __iptr)
-  { return __builtin_modff(__x, __iptr); }
-#pragma empty_line
-  inline long double
-  modf(long double __x, long double* __iptr)
-  { return __builtin_modfl(__x, __iptr); }
-#pragma empty_line
-  using ::pow;
-#pragma empty_line
-  inline float
-  pow(float __x, float __y)
-  { return __builtin_powf(__x, __y); }
-#pragma empty_line
-  inline long double
-  pow(long double __x, long double __y)
-  { return __builtin_powl(__x, __y); }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  inline double
-  pow(double __x, int __i)
-  { return __builtin_powi(__x, __i); }
-#pragma empty_line
-  inline float
-  pow(float __x, int __n)
-  { return __builtin_powif(__x, __n); }
-#pragma empty_line
-  inline long double
-  pow(long double __x, int __n)
-  { return __builtin_powil(__x, __n); }
-#pragma empty_line
-#pragma empty_line
-  template<typename _Tp, typename _Up>
-    inline
-    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
-    pow(_Tp __x, _Up __y)
-    {
-      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
-      return pow(__type(__x), __type(__y));
-    }
-#pragma empty_line
-  using ::sin;
-#pragma empty_line
-  inline float
-  sin(float __x)
-  { return __builtin_sinf(__x); }
-#pragma empty_line
-  inline long double
-  sin(long double __x)
-  { return __builtin_sinl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sin(_Tp __x)
-    { return __builtin_sin(__x); }
-#pragma empty_line
-  using ::sinh;
-#pragma empty_line
-  inline float
-  sinh(float __x)
-  { return __builtin_sinhf(__x); }
-#pragma empty_line
-  inline long double
-  sinh(long double __x)
-  { return __builtin_sinhl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sinh(_Tp __x)
-    { return __builtin_sinh(__x); }
-#pragma empty_line
-  using ::sqrt;
-#pragma empty_line
-  inline float
-  sqrt(float __x)
-  { return __builtin_sqrtf(__x); }
-#pragma empty_line
-  inline long double
-  sqrt(long double __x)
-  { return __builtin_sqrtl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sqrt(_Tp __x)
-    { return __builtin_sqrt(__x); }
-#pragma empty_line
-  using ::tan;
-#pragma empty_line
-  inline float
-  tan(float __x)
-  { return __builtin_tanf(__x); }
-#pragma empty_line
-  inline long double
-  tan(long double __x)
-  { return __builtin_tanl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    tan(_Tp __x)
-    { return __builtin_tan(__x); }
-#pragma empty_line
-  using ::tanh;
-#pragma empty_line
-  inline float
-  tanh(float __x)
-  { return __builtin_tanhf(__x); }
-#pragma empty_line
-  inline long double
-  tanh(long double __x)
-  { return __builtin_tanhl(__x); }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    tanh(_Tp __x)
-    { return __builtin_tanh(__x); }
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 480 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma line 730 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    fpclassify(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_fpclassify(0, 1, 4,
-      3, 2, __type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isfinite(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isfinite(__type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isinf(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isinf(__type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isnan(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isnan(__type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isnormal(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isnormal(__type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    signbit(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_signbit(__type(__f));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isgreater(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isgreater(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isgreaterequal(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isgreaterequal(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isless(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isless(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    islessequal(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_islessequal(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    islessgreater(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_islessgreater(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isunordered(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isunordered(__type(__f1), __type(__f2));
-    }
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-}
-#pragma line 33 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h" 2
-using std::fpclassify;
-using std::isfinite;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-using std::isinf;
-using std::isnan;
-#pragma empty_line
-using std::isnormal;
-using std::signbit;
-using std::isgreater;
-using std::isgreaterequal;
-using std::isless;
-using std::islessequal;
-using std::islessgreater;
-using std::isunordered;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef __fp16 half;
-#pragma line 3274 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_half.h"
-extern half half_nan(const char *tagp);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern half half_atan(half t);
-extern half half_atan2(half y, half x);
-extern half half_copysign(half x, half y);
-#pragma empty_line
-extern half half_fabs(half x);
-#pragma empty_line
-extern half half_abs(half x);
-extern half half_fma(half x, half y, half z);
-extern half half_mad(half x, half y, half z);
-extern half half_frexp (half x, int* exp);
-extern half half_ldexp (half x, int exp);
-extern half half_fmax(half x, half y);
-#pragma empty_line
-extern half half_fmin(half x, half y);
-#pragma empty_line
-extern half half_asin(half t_in);
-extern half half_acos(half t_in);
-extern half half_sin(half t_in);
-extern half half_cos(half t_in);
-extern void half_sincos(half x, half *sin, half *cos);
-extern half half_sinh(half t_in);
-extern half half_cosh(half t_in);
-extern half half_sinpi(half t_in);
-extern half half_cospi(half t_in);
-extern half half_recip(half x);
-extern half half_sqrt(half x);
-extern half half_rsqrt(half x);
-extern half half_cbrt(half x);
-extern half half_hypot(half x, half y);
-extern half half_log(half x);
-extern half half_log10(half x);
-extern half half_log2(half x);
-extern half half_logb(half x);
-extern half half_log1p(half x);
-extern int half_ilogb(half x);
-extern half half_exp(half x);
-extern half half_exp10(half x);
-extern half half_exp2(half x);
-extern half half_expm1(half x);
-extern half half_pow(half x, half y);
-extern half half_powr(half x, half y);
-extern half half_pown(half x, int y);
-extern half half_rootn(half x, int y);
-extern half half_floor(half x);
-#pragma empty_line
-extern half half_ceil(half x);
-#pragma empty_line
-extern half half_trunc(half x);
-#pragma empty_line
-extern half half_round(half x);
-#pragma empty_line
-extern half half_nearbyint(half x);
-extern half half_rint(half x);
-extern long int half_lrint(half x);
-extern long long int half_llrint(half x);
-extern long int half_lround(half x);
-extern long long int half_llround(half x);
-extern half half_modf(half x, half *intpart);
-#pragma empty_line
-extern half half_fract(half x, half *intpart);
-extern half half_nextafter(half x, half y);
-extern half half_fmod(half x, half y);
-extern half half_remainder(half x, half y);
-extern half half_remquo(half x, half y, int* quo);
-extern half half_divide(half x, half y);
-#pragma line 61 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int.h" 2
-#pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int_syn.h" 1
-#pragma line 73 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_int_syn.h"
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 1 3
 #pragma line 38 "/home/ece492fa18/Vivado/2017.4/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 3
 #pragma line 1 "/usr/include/limits.h" 1 3 4
@@ -31790,7 +29197,7 @@ void correlateTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
   cor_t phaseClass15[16];
 #pragma empty_line
  };
-#pragma line 5 "correlator.cpp" 2
+#pragma line 3 "correlator.cpp" 2
 #pragma empty_line
 using namespace std;
 #pragma empty_line
@@ -31798,7 +29205,7 @@ using namespace std;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
+void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -31872,9 +29279,10 @@ switch(currentState) {
 #pragma empty_line
  break;
  case ST_LOAD:
+  i_data.read(tmp_data);
+  out_sample.last = tmp_data.last;
 #pragma empty_line
-  o_data->last = i_data->last;
-  unScalled.V = i_data->data.range(15,0);
+  unScalled.V = tmp_data.data.range(15,0);
   newVal = unScalled;
 #pragma empty_line
 #pragma empty_line
@@ -31893,9 +29301,12 @@ switch(currentState) {
   }
 #pragma empty_line
   if(out > 29000){
-   o_data->data = loadCount;
+   out_sample.data = loadCount;
+#pragma empty_line
   } else {
-   o_data->data = 0;
+   out_sample.data = 0;
+   o_data.write(out_sample);
+#pragma empty_line
   }
 #pragma empty_line
 #pragma empty_line
@@ -31915,7 +29326,7 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
   }
   phaseClass0[0] = newValue;
   break;
-#pragma line 234 "correlator.cpp"
+#pragma line 236 "correlator.cpp"
  }
 #pragma empty_line
 #pragma empty_line
@@ -31929,7 +29340,7 @@ cor_t correlate::correlator(ap_uint<5> phaseClass){
  cor_t corHelperINeg,corHelperIPos,res;
  corHelperINeg = 0;
  corHelperIPos = 0;
-#pragma line 255 "correlator.cpp"
+#pragma line 257 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -31941,7 +29352,7 @@ cor_t correlate::correlator(ap_uint<5> phaseClass){
    }
   }
  break;
-#pragma line 416 "correlator.cpp"
+#pragma line 418 "correlator.cpp"
  }
 #pragma empty_line
  if(corHelperIPos > corHelperINeg){

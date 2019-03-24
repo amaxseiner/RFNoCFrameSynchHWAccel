@@ -1,6 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include "hls_stream.h"
+
 #include "correlator.h"
 
 using namespace std;
@@ -9,7 +7,7 @@ using namespace std;
 #define windowSize 16
 #define curThres 5
 
-void correlateTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
+void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
 
 //#pragma HLS RESOURCE variable=o_data latency=1
 //#pragma HLS INTERFACE axis port=phaseClassIn
@@ -83,9 +81,10 @@ switch(currentState) {
 
 	break;
 	case ST_LOAD: // whenever there is valid input data, shift it in
-		//i_data.read(tmp_data);
-		o_data->last = i_data->last;
-		unScalled.V = i_data->data.range(15,0); // RE
+		i_data.read(tmp_data);
+		out_sample.last = tmp_data.last;
+		//o_data->last = i_data->last;
+		unScalled.V = tmp_data.data.range(15,0); // RE
 		newVal = unScalled;
 		/*if(phaseClass == 0){
 			*result << newVal;
@@ -104,9 +103,12 @@ switch(currentState) {
 		}
 
 		if(out > 29000){
-			o_data->data = loadCount;
+			out_sample.data = loadCount;
+			//o_data->data = loadCount;
 		} else {
-			o_data->data = 0;
+			out_sample.data = 0;
+			o_data.write(out_sample);
+			//o_data->data = 0;
 		}
 
 

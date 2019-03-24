@@ -22,11 +22,11 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>11</Best-caseLatency>
-<Average-caseLatency>11</Average-caseLatency>
-<Worst-caseLatency>11</Worst-caseLatency>
+<Best-caseLatency>12</Best-caseLatency>
+<Average-caseLatency>12</Average-caseLatency>
+<Worst-caseLatency>12</Worst-caseLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>12</PipelineDepth>
+<PipelineDepth>13</PipelineDepth>
 <Interval-min>1</Interval-min>
 <Interval-max>1</Interval-max>
 </SummaryOfOverallLatency>
@@ -36,8 +36,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>4</DSP48E>
-<FF>1531</FF>
-<LUT>1103</LUT>
+<FF>1469</FF>
+<LUT>1054</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>650</BRAM_18K>
@@ -72,7 +72,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TDATA</name>
-<Object>i_data_data_V</Object>
+<Object>i_data_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -84,7 +84,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TVALID</name>
-<Object>i_data_last_V</Object>
+<Object>i_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -96,7 +96,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TREADY</name>
-<Object>i_data_last_V</Object>
+<Object>i_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -108,7 +108,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>i_data_TLAST</name>
-<Object>i_data_last_V</Object>
+<Object>i_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -120,7 +120,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TDATA</name>
-<Object>o_data_data_V</Object>
+<Object>o_data_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -132,7 +132,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TVALID</name>
-<Object>o_data_last_V</Object>
+<Object>o_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -144,7 +144,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TREADY</name>
-<Object>o_data_last_V</Object>
+<Object>o_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -156,7 +156,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>o_data_TLAST</name>
-<Object>o_data_last_V</Object>
+<Object>o_data_V_last_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>

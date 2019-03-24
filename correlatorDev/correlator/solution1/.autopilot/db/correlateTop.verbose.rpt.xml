@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Sun Mar 24 03:10:27 2019
+<item name = "Date">Sun Mar 24 03:14:13 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">11, 11, 1, 1, function</column>
+<column name="">12, 12, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">
@@ -47,12 +47,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 870</column>
+<column name="Expression">-, -, 0, 830</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 4, 215, 1</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 168</column>
-<column name="Register">0, -, 1316, 64</column>
+<column name="Multiplexer">-, -, -, 159</column>
+<column name="Register">0, -, 1254, 64</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
 <specialColumn name="Utilization (%)">0, ~0, ~0, 1</specialColumn>
 </table>
@@ -78,68 +78,65 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="p_Val2_3_7_i_fu_452_p2">+, 0, 0, 32, 32, 32</column>
-<column name="p_Val2_6_i_fu_430_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp10_fu_408_p2">+, 0, 0, 30, 23, 23</column>
-<column name="tmp11_fu_398_p2">+, 0, 0, 29, 22, 22</column>
-<column name="tmp1_fu_362_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp2_fu_426_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp3_fu_374_p2">+, 0, 0, 39, 32, 32</column>
-<column name="tmp4_fu_380_p2">+, 0, 0, 39, 32, 32</column>
-<column name="tmp5_fu_439_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp6_fu_386_p2">+, 0, 0, 39, 32, 32</column>
-<column name="tmp7_fu_435_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp8_fu_447_p2">+, 0, 0, 32, 32, 32</column>
-<column name="tmp9_fu_392_p2">+, 0, 0, 39, 32, 32</column>
-<column name="tmp_6_fu_512_p2">+, 0, 0, 39, 32, 1</column>
-<column name="tmp_8_fu_414_p2">+, 0, 0, 13, 4, 1</column>
-<column name="tmp_fu_368_p2">+, 0, 0, 32, 32, 32</column>
-<column name="p_Val2_9_i_fu_469_p2">-, 0, 0, 39, 32, 32</column>
-<column name="p_Val2_i_fu_463_p2">-, 0, 0, 39, 32, 32</column>
-<column name="ap_block_state11_io">and, 0, 0, 8, 1, 1</column>
+<column name="out_sample_data_V_fu_518_p2">+, 0, 0, 39, 32, 1</column>
+<column name="p_Val2_3_7_i_fu_453_p2">+, 0, 0, 32, 32, 32</column>
+<column name="p_Val2_6_i_fu_431_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp10_fu_409_p2">+, 0, 0, 30, 23, 23</column>
+<column name="tmp11_fu_399_p2">+, 0, 0, 29, 22, 22</column>
+<column name="tmp1_fu_363_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp2_fu_427_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp3_fu_375_p2">+, 0, 0, 39, 32, 32</column>
+<column name="tmp4_fu_381_p2">+, 0, 0, 39, 32, 32</column>
+<column name="tmp5_fu_440_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp6_fu_387_p2">+, 0, 0, 39, 32, 32</column>
+<column name="tmp7_fu_436_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp8_fu_448_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp9_fu_393_p2">+, 0, 0, 39, 32, 32</column>
+<column name="tmp_9_fu_415_p2">+, 0, 0, 13, 4, 1</column>
+<column name="tmp_fu_369_p2">+, 0, 0, 32, 32, 32</column>
+<column name="p_Val2_9_i_fu_470_p2">-, 0, 0, 39, 32, 32</column>
+<column name="p_Val2_i_fu_464_p2">-, 0, 0, 39, 32, 32</column>
 <column name="ap_block_state12_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state13_io">and, 0, 0, 8, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_440">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="i_data_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="o_data_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="cond_i_fu_190_p2">icmp, 0, 0, 9, 4, 1</column>
-<column name="i_data_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="i_data_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="o_data_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="o_data_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="tmp_9_fu_524_p2">icmp, 0, 0, 18, 32, 25</column>
-<column name="tmp_i_fu_457_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="ap_condition_455">and, 0, 0, 8, 1, 1</column>
+<column name="ap_predicate_op120_write_state13">and, 0, 0, 8, 1, 1</column>
+<column name="ap_predicate_op98_write_state12">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="cond_i_fu_191_p2">icmp, 0, 0, 9, 4, 1</column>
+<column name="i_data_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="i_data_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_V_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="tmp_i_fu_458_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_s_fu_503_p2">icmp, 0, 0, 18, 32, 25</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state12_pp0_stage0_iter11">or, 0, 0, 8, 1, 1</column>
-<column name="o_data_data_V_tmp_fu_529_p3">select, 0, 0, 32, 1, 32</column>
-<column name="tmp_1_i_fu_475_p3">select, 0, 0, 32, 1, 32</column>
+<column name="ap_block_state13_pp0_stage0_iter12">or, 0, 0, 8, 1, 1</column>
+<column name="tmp_1_i_fu_476_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_112">9, 2, 32, 64</column>
-<column name="ap_phi_reg_pp0_iter2_p_Val2_3_reg_123">9, 2, 32, 64</column>
-<column name="ap_phi_reg_pp0_iter4_p_Val2_2_reg_112">9, 2, 32, 64</column>
-<column name="ap_phi_reg_pp0_iter4_p_Val2_3_reg_123">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_113">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_3_reg_124">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter4_p_Val2_2_reg_113">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter4_p_Val2_3_reg_124">9, 2, 32, 64</column>
 <column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="i_data_data_V_0_data_out">9, 2, 32, 64</column>
-<column name="i_data_data_V_0_state">15, 3, 2, 6</column>
-<column name="i_data_last_V_0_data_out">9, 2, 1, 2</column>
-<column name="i_data_last_V_0_state">15, 3, 2, 6</column>
+<column name="i_data_V_data_V_0_data_out">9, 2, 32, 64</column>
+<column name="i_data_V_data_V_0_state">15, 3, 2, 6</column>
+<column name="i_data_V_last_V_0_data_out">9, 2, 1, 2</column>
+<column name="i_data_V_last_V_0_state">15, 3, 2, 6</column>
 <column name="loadCount_V">9, 2, 32, 64</column>
 <column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="o_data_data_V_1_data_out">9, 2, 32, 64</column>
-<column name="o_data_data_V_1_state">15, 3, 2, 6</column>
-<column name="o_data_last_V_1_data_out">9, 2, 1, 2</column>
-<column name="o_data_last_V_1_state">15, 3, 2, 6</column>
+<column name="o_data_V_data_V_1_state">15, 3, 2, 6</column>
+<column name="o_data_V_last_V_1_data_out">9, 2, 1, 2</column>
+<column name="o_data_V_last_V_1_state">15, 3, 2, 6</column>
 <column name="phaseClass_V">9, 2, 4, 8</column>
 </table>
 </item>
@@ -149,6 +146,7 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter12">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
@@ -157,22 +155,23 @@
 <column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
-<column name="ap_phi_reg_pp0_iter1_p_Val2_2_reg_112">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter1_p_Val2_3_reg_123">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_112">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter2_p_Val2_3_reg_123">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter3_p_Val2_2_reg_112">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter3_p_Val2_3_reg_123">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter4_p_Val2_2_reg_112">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter4_p_Val2_3_reg_123">32, 0, 32, 0</column>
-<column name="ap_reg_pp0_iter2_cond_i_reg_547">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter2_tmp10_reg_586">18, 0, 23, 5</column>
-<column name="ap_reg_pp0_iter2_tmp9_reg_581">27, 0, 32, 5</column>
-<column name="cond_i_reg_547">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_2_reg_113">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_p_Val2_3_reg_124">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_2_reg_113">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_p_Val2_3_reg_124">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter3_p_Val2_2_reg_113">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter3_p_Val2_3_reg_124">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter4_p_Val2_2_reg_113">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter4_p_Val2_3_reg_124">32, 0, 32, 0</column>
+<column name="ap_reg_pp0_iter11_tmp_s_reg_614">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter2_cond_i_reg_539">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter2_tmp10_reg_578">18, 0, 23, 5</column>
+<column name="ap_reg_pp0_iter2_tmp9_reg_573">27, 0, 32, 5</column>
+<column name="cond_i_reg_539">1, 0, 1, 0</column>
 <column name="cor_phaseClass0_V_0">16, 0, 21, 5</column>
 <column name="cor_phaseClass0_V_1">16, 0, 21, 5</column>
 <column name="cor_phaseClass0_V_10">27, 0, 32, 5</column>
-<column name="cor_phaseClass0_V_10_reg_551">27, 0, 32, 5</column>
+<column name="cor_phaseClass0_V_10_reg_543">27, 0, 32, 5</column>
 <column name="cor_phaseClass0_V_11">27, 0, 32, 5</column>
 <column name="cor_phaseClass0_V_12">27, 0, 32, 5</column>
 <column name="cor_phaseClass0_V_13">27, 0, 32, 5</column>
@@ -185,44 +184,42 @@
 <column name="cor_phaseClass0_V_7">27, 0, 32, 5</column>
 <column name="cor_phaseClass0_V_8">27, 0, 32, 5</column>
 <column name="cor_phaseClass0_V_9">27, 0, 32, 5</column>
-<column name="cor_phaseClass0_V_9_s_reg_556">27, 0, 32, 5</column>
+<column name="cor_phaseClass0_V_9_s_reg_548">27, 0, 32, 5</column>
 <column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_538">1, 0, 1, 0</column>
-<column name="i_data_data_V_0_payload_A">32, 0, 32, 0</column>
-<column name="i_data_data_V_0_payload_B">32, 0, 32, 0</column>
-<column name="i_data_data_V_0_sel_rd">1, 0, 1, 0</column>
-<column name="i_data_data_V_0_sel_wr">1, 0, 1, 0</column>
-<column name="i_data_data_V_0_state">2, 0, 2, 0</column>
-<column name="i_data_last_V_0_payload_A">1, 0, 1, 0</column>
-<column name="i_data_last_V_0_payload_B">1, 0, 1, 0</column>
-<column name="i_data_last_V_0_sel_rd">1, 0, 1, 0</column>
-<column name="i_data_last_V_0_sel_wr">1, 0, 1, 0</column>
-<column name="i_data_last_V_0_state">2, 0, 2, 0</column>
-<column name="i_data_last_V_tmp_reg_542">1, 0, 1, 0</column>
+<column name="currentState_load_reg_530">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_V_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_state">2, 0, 2, 0</column>
 <column name="loadCount_V">32, 0, 32, 0</column>
-<column name="o_data_data_V_1_payload_A">32, 0, 32, 0</column>
-<column name="o_data_data_V_1_payload_B">32, 0, 32, 0</column>
-<column name="o_data_data_V_1_sel_rd">1, 0, 1, 0</column>
-<column name="o_data_data_V_1_sel_wr">1, 0, 1, 0</column>
-<column name="o_data_data_V_1_state">2, 0, 2, 0</column>
-<column name="o_data_last_V_1_payload_A">1, 0, 1, 0</column>
-<column name="o_data_last_V_1_payload_B">1, 0, 1, 0</column>
-<column name="o_data_last_V_1_sel_rd">1, 0, 1, 0</column>
-<column name="o_data_last_V_1_sel_wr">1, 0, 1, 0</column>
-<column name="o_data_last_V_1_state">2, 0, 2, 0</column>
-<column name="p_Val2_6_i_reg_591">27, 0, 32, 5</column>
+<column name="o_data_V_data_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_data_V_1_state">2, 0, 2, 0</column>
+<column name="o_data_V_last_V_1_payload_A">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_payload_B">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_state">2, 0, 2, 0</column>
+<column name="p_Val2_6_i_reg_583">27, 0, 32, 5</column>
 <column name="phaseClass_V">4, 0, 4, 0</column>
-<column name="res_V_reg_617">32, 0, 32, 0</column>
-<column name="tmp10_reg_586">18, 0, 23, 5</column>
-<column name="tmp3_reg_566">27, 0, 32, 5</column>
-<column name="tmp4_reg_571">27, 0, 32, 5</column>
-<column name="tmp5_reg_596">27, 0, 32, 5</column>
-<column name="tmp6_reg_576">27, 0, 32, 5</column>
-<column name="tmp9_reg_581">27, 0, 32, 5</column>
-<column name="tmp_1_i_reg_606">32, 0, 32, 0</column>
-<column name="tmp_reg_561">27, 0, 32, 5</column>
-<column name="currentState_load_reg_538">64, 32, 1, 0</column>
-<column name="i_data_last_V_tmp_reg_542">64, 32, 1, 0</column>
+<column name="res_V_reg_609">32, 0, 32, 0</column>
+<column name="tmp10_reg_578">18, 0, 23, 5</column>
+<column name="tmp3_reg_558">27, 0, 32, 5</column>
+<column name="tmp4_reg_563">27, 0, 32, 5</column>
+<column name="tmp5_reg_588">27, 0, 32, 5</column>
+<column name="tmp6_reg_568">27, 0, 32, 5</column>
+<column name="tmp9_reg_573">27, 0, 32, 5</column>
+<column name="tmp_1_i_reg_598">32, 0, 32, 0</column>
+<column name="tmp_last_V_reg_534">1, 0, 1, 0</column>
+<column name="tmp_reg_553">27, 0, 32, 5</column>
+<column name="tmp_s_reg_614">1, 0, 1, 0</column>
+<column name="currentState_load_reg_530">64, 32, 1, 0</column>
+<column name="tmp_last_V_reg_534">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -234,14 +231,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="ap_clk">in, 1, ap_ctrl_none, correlateTop, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_none, correlateTop, return value</column>
-<column name="i_data_TDATA">in, 32, axis, i_data_data_V, pointer</column>
-<column name="i_data_TVALID">in, 1, axis, i_data_last_V, pointer</column>
-<column name="i_data_TREADY">out, 1, axis, i_data_last_V, pointer</column>
-<column name="i_data_TLAST">in, 1, axis, i_data_last_V, pointer</column>
-<column name="o_data_TDATA">out, 32, axis, o_data_data_V, pointer</column>
-<column name="o_data_TVALID">out, 1, axis, o_data_last_V, pointer</column>
-<column name="o_data_TREADY">in, 1, axis, o_data_last_V, pointer</column>
-<column name="o_data_TLAST">out, 1, axis, o_data_last_V, pointer</column>
+<column name="i_data_TDATA">in, 32, axis, i_data_V_data_V, pointer</column>
+<column name="i_data_TVALID">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TREADY">out, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TLAST">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="o_data_TDATA">out, 32, axis, o_data_V_data_V, pointer</column>
+<column name="o_data_TVALID">out, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TREADY">in, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TLAST">out, 1, axis, o_data_V_last_V, pointer</column>
 </table>
 </item>
 </section>
