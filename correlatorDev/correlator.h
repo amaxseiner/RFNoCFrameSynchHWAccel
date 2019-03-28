@@ -23,7 +23,7 @@ using namespace std;
 static ap_int<2> corrSeq[windowSize] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
 		//{-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
 
-typedef ap_fixed<32,22> cor_t;
+typedef ap_int<16> cor_t;
 typedef ap_fixed<16,11> corTransmit_t;
 
 struct phase{
@@ -34,11 +34,12 @@ void correlateTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 
  class correlate{
  public:
-	 void shiftPhaseClass(cor_t newVal, ap_uint<5> phaseClass);
-	 cor_t correlator(ap_uint<5> phaseClass);
-	 phase phaseArray[16];
-	 cor_t phaseClass0[windowSize];
-	 cor_t phaseClass1[windowSize];
+	 void shiftPhaseClass(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
+	 ap_int<32> correlator(ap_uint<4> phaseClass);
+	 //phase phaseArray[16];
+	 cor_t phaseClass0i[windowSize];
+	 cor_t phaseClass0q[windowSize];
+	 /*cor_t phaseClass1[windowSize];
 	 cor_t phaseClass2[windowSize];
 	 cor_t phaseClass3[windowSize];
 	 cor_t phaseClass4[windowSize];
@@ -52,6 +53,6 @@ void correlateTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 	 cor_t phaseClass12[windowSize];
 	 cor_t phaseClass13[windowSize];
 	 cor_t phaseClass14[windowSize];
-	 cor_t phaseClass15[windowSize];
+	 cor_t phaseClass15[windowSize];*/
 
  };

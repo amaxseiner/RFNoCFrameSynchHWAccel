@@ -25,112 +25,14 @@
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass0"/>
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass1"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass2"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass3"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass4"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass5"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass6"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass7"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass8"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass9"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass10"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass11"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass12"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass13"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass14"/>
-<option name="complete" positionalBoolean="type" value=""/>
-<option name="dim" value="1"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="ARRAY_PARTITION">
-<option name="variable" positionalBoolean="4" value="cor.phaseClass15"/>
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0q"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
 </pragma>
@@ -144,27 +46,17 @@
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="newVal"/>
+<option name="variable" positionalBoolean="4" value="newVali"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="unScalled"/>
+<option name="variable" positionalBoolean="4" value="newValq"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="loadCount"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="corHelperI"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="correlateTop" label="">
-<pragma name="RESET">
-<option name="variable" positionalBoolean="4" value="corHelperQ"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTop" label="">

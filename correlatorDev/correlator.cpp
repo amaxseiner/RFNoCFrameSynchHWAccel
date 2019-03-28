@@ -1,4 +1,3 @@
-
 #include "correlator.h"
 
 using namespace std;
@@ -19,8 +18,10 @@ void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data
 
 static correlate cor;
 
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass1 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0i complete dim=1
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0q complete dim=1
+
+/*#pragma HLS ARRAY_PARTITION variable=cor.phaseClass1 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass2 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass3 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass4 complete dim=1
@@ -34,15 +35,15 @@ static correlate cor;
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass12 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass13 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass14 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass15 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass15 complete dim=1*/
 
 #pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
-static cor_t newVal;
-#pragma HLS RESET variable=newVal
+static cor_t newVali;
+#pragma HLS RESET variable=newVali
 
-static corTransmit_t unScalled;
-#pragma HLS RESET variable=unScalled
+static cor_t newValq;
+#pragma HLS RESET variable=newValq
 
   rfnoc_axis classType;
 
@@ -53,12 +54,6 @@ static corTransmit_t unScalled;
 
   rfnoc_axis tmp_data;
 
-  static cor_t corHelperI;
-#pragma HLS RESET variable=corHelperI
-
-  static cor_t corHelperQ;
-#pragma HLS RESET variable=corHelperQ
-
   static ap_uint<4> phaseClass;
 #pragma HLS RESET variable=phaseClass
 
@@ -68,7 +63,7 @@ static corTransmit_t unScalled;
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 
-static cor_t out;
+static ap_int<32> out;
 
 // Waits for the 'start' signal, reads input samples and shifts them into the shift register storage
 
@@ -84,14 +79,14 @@ switch(currentState) {
 		i_data.read(tmp_data);
 		out_sample.last = tmp_data.last;
 		//o_data->last = i_data->last;
-		unScalled.V = tmp_data.data.range(15,0); // RE
-		newVal = unScalled;
+		newVali = tmp_data.data.range(15,0); // RE
+		newValq = tmp_data.data.range(31,16);
 		/*if(phaseClass == 0){
 			*result << newVal;
 			*result << ",";
 			*result << endl;
 		}*/
-		cor.shiftPhaseClass(newVal,phaseClass);
+		cor.shiftPhaseClass(newVali,newValq,phaseClass);
 		out = cor.correlator(phaseClass);
 		//corHelperI = 0;
 		//o_data->data = out.V;
@@ -102,8 +97,9 @@ switch(currentState) {
 			phaseClass = phaseClass + 1;
 		}
 
-		if(out > 29000){
-			out_sample.data = loadCount;
+		if(out != 0){
+			out_sample.data = out;
+			o_data.write(out_sample);
 			//o_data->data = loadCount;
 		} else {
 			out_sample.data = 0;
@@ -119,14 +115,16 @@ switch(currentState) {
 
 }
 
-void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
+void correlate::shiftPhaseClass(cor_t newValuei,cor_t newValueq,ap_uint<4> phaseClass){
 	switch(phaseClass){
 	case 0:
 		SHIFT_DATA0: for(int a = windowSize-1;a>0;a--){
 			#pragma HLS UNROLL
-			phaseClass0[a] = phaseClass0[a-1];
+			phaseClass0i[a] = phaseClass0i[a-1];
+			phaseClass0q[a] = phaseClass0q[a-1];
 		}
-		phaseClass0[0] = newValue;
+		phaseClass0i[0] = newValuei;
+		phaseClass0q[0] = newValueq;
 		break;/*
 	case 1:
 		SHIFT_DATA1: for(int a = windowSize-1;a>0;a--){
@@ -242,10 +240,14 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
 
 }
 
-cor_t correlate::correlator(ap_uint<5> phaseClass){
-	cor_t corHelperINeg,corHelperIPos,res;
+ap_int<32> correlate::correlator(ap_uint<4> phaseClass){
+	ap_int<32> res;
+	cor_t corHelperINeg,corHelperIPos,resi;
+	cor_t corHelperQNeg,corHelperQPos,resq;
 	corHelperINeg = 0;
 	corHelperIPos = 0;
+	corHelperQNeg = 0;
+	corHelperQPos = 0;
 	/*correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 			if(corrSeq[a] == 1){
@@ -259,9 +261,12 @@ cor_t correlate::correlator(ap_uint<5> phaseClass){
 		correlateData0: for(int a =windowSize-1;a>=0;a--){
 			#pragma HLS UNROLL
 			if(corrSeq[a] == 1){
-				corHelperIPos = corHelperIPos + (phaseClass0[a]);
+				corHelperIPos = corHelperIPos + (phaseClass0i[a]);
+				corHelperQPos = corHelperQPos + (phaseClass0q[a]);
 			} else {
-				corHelperINeg = corHelperINeg + (phaseClass0[a]);
+				corHelperINeg = corHelperINeg + (phaseClass0i[a]);
+				corHelperQNeg = corHelperQNeg + (phaseClass0q[a]);
+
 			}
 		}
 	break;/*
@@ -418,11 +423,22 @@ cor_t correlate::correlator(ap_uint<5> phaseClass){
 	}
 
 	if(corHelperIPos > corHelperINeg){
-		res = corHelperIPos - corHelperINeg;
+		resi = corHelperIPos - corHelperINeg;
 	} else {
-		res = corHelperINeg - corHelperIPos;
+		resi = corHelperINeg - corHelperIPos;
 	}
-	res = res*res;
+
+
+	if(corHelperIPos > corHelperINeg){
+		resq = corHelperQPos - corHelperQNeg;
+	} else {
+		resq = corHelperQNeg - corHelperQPos;
+	}
+
+	resi = resi*resi;
+	resq = resq*resq;
+	res.range(15,0) = resi;
+	res.range(31,16) = resq;
 	return res;
 }
 
