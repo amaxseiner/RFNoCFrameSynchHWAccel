@@ -2,8 +2,8 @@ set C_TypeInfoList {{
 "matchFilter" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"in": [[],"0"] }, {"out": [[],"0"] }],[],""], 
 "0": [ "stream<axis_fixed>", {"hls_type": {"stream": [[[[],"1"]],"2"]}}], 
 "1": [ "axis_fixed", {"struct": [[],[],[{ "data": [[], "3"]},{ "last": [[], "4"]}],""]}], 
-"4": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"3": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}],
+"3": [ "ap_int<32>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 32}}]],""]}}], 
+"4": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "2": ["hls", ""]
 }}
 set moduleName matchFilter
@@ -58,7 +58,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5"],
 		"CDFG" : "matchFilter",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -74,9 +74,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "out_V_last_V", "Type" : "Axis", "Direction" : "O"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffIn_data_V_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffIn_last_V_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mux_1dEe_U1", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mac_meOg_U2", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mac_meOg_U3", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mux_1dEe_U0", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mac_meOg_U1", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.matchFilter_mac_meOg_U2", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
