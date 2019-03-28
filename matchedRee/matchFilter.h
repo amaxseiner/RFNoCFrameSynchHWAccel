@@ -8,7 +8,7 @@
      ap_uint<1> last;
    };
 
-	static ap_fixed<16,11> preamble[128] = {0.00554,
+	static ap_int<16> preamble[128] = {0.00554,
 			0.00536,
 			0.00452,
 			0.00306,
@@ -147,21 +147,21 @@ class matchFilter_ff
 public:
 	axis_fixed convol(axis_fixed in[128]){
 		axis_fixed out;
-		ap_fixed<16,11> tempI;
-		ap_fixed<16,11> tempQ;
+		ap_int<16> tempI;
+		ap_int<16> tempQ;
 		out.last =in[0].last;
 		tempI = 0.0;
 		tempQ = 0.0;
-		ap_fixed<16,11> inI;
-		ap_fixed<16,11> inQ;
+		ap_int<16> inI;
+		ap_int<16> inQ;
 		for(int b = 0; b<128; b++){
-			inI.V = (in[b].data.range(31,16));
-			inQ.V = (in[b].data.range(15,0));
+			inI = (in[b].data.range(31,16));
+			inQ = (in[b].data.range(15,0));
 			tempI = tempI + (inI*preamble[b]);
 			tempQ = tempQ + (inQ*preamble[b]);
 		}
-		out.data.range(31,16)=tempI.V;
-		out.data.range(15,0)=tempQ.V;
+		out.data.range(31,16)=tempI;
+		out.data.range(15,0)=tempQ;
 		return out;
 	}
 
