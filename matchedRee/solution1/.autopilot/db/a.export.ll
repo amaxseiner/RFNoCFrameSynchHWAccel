@@ -30,7 +30,7 @@ define void @matchFilter(i32* %in_V_data_V, i1* %in_V_last_V, i32* %out_V_data_V
   %a = phi i7 [ -1, %0 ], [ %a_1, %2 ]
   %a_cast2 = zext i7 %a to i32
   %tmp = icmp eq i7 %a, 0
-  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 127, i64 127, i64 127)
+  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 127, i64 127, i64 127)
   br i1 %tmp, label %3, label %2
 
 ; <label>:2                                       ; preds = %1
@@ -54,35 +54,29 @@ define void @matchFilter(i32* %in_V_data_V, i1* %in_V_last_V, i32* %out_V_data_V
   br label %4
 
 ; <label>:4                                       ; preds = %5, %3
-  %p_i = phi i16 [ 0, %3 ], [ %tempI_V, %5 ]
   %p_1_i = phi i16 [ 0, %3 ], [ %tempQ_V, %5 ]
   %b_i = phi i8 [ 0, %3 ], [ %b, %5 ]
   %b_i_cast1 = zext i8 %b_i to i32
   %exitcond_i = icmp eq i8 %b_i, -128
-  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)
+  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)
   %b = add i8 %b_i, 1
   br i1 %exitcond_i, label %convol.exit, label %5
 
 ; <label>:5                                       ; preds = %4
   %buffIn_data_V_addr_3 = getelementptr [128 x i32]* %buffIn_data_V, i32 0, i32 %b_i_cast1
   %p_Val2_s = load i32* %buffIn_data_V_addr_3, align 4
-  %inI_V = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_s, i32 16, i32 31)
   %inQ_V = trunc i32 %p_Val2_s to i16
   %tmp_3 = trunc i8 %b_i to i7
   %tmp_1 = call i16 @_ssdm_op_Mux.ap_auto.128i16.i7(i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 1, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i7 %tmp_3)
-  %p_2_i = mul i16 %tmp_1, %inI_V
-  %tempI_V = add i16 %p_2_i, %p_i
-  %p_3_i = mul i16 %tmp_1, %inQ_V
-  %tempQ_V = add i16 %p_3_i, %p_1_i
+  %p_2_i = mul i16 %inQ_V, %tmp_1
+  %tempQ_V = add i16 %p_2_i, %p_1_i
   br label %4
 
 convol.exit:                                      ; preds = %4
-  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %p_i, i16 %p_1_i)
+  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %p_1_i)
   call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %out_V_data_V, i1* %out_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
   ret void
 }
-
-declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
@@ -118,20 +112,15 @@ entry:
 define weak { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32*, i1*) {
 entry:
   %empty = load i32* %0
-  %empty_7 = load i1* %1
+  %empty_5 = load i1* %1
   %mrv_0 = insertvalue { i32, i1 } undef, i32 %empty, 0
-  %mrv1 = insertvalue { i32, i1 } %mrv_0, i1 %empty_7, 1
+  %mrv1 = insertvalue { i32, i1 } %mrv_0, i1 %empty_5, 1
   ret { i32, i1 } %mrv1
 }
 
 declare i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8, i32, i32) nounwind readnone
 
-define weak i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32, i32, i32) nounwind readnone {
-entry:
-  %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
-  %empty_8 = trunc i32 %empty to i16
-  ret i16 %empty_8
-}
+declare i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32, i32, i32) nounwind readnone
 
 define weak i16 @_ssdm_op_Mux.ap_auto.128i16.i7(i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i7) {
 entry:
@@ -654,10 +643,10 @@ case127:                                          ; preds = %entry
 define weak i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16, i16) nounwind readnone {
 entry:
   %empty = zext i16 %0 to i32
-  %empty_9 = zext i16 %1 to i32
-  %empty_10 = shl i32 %empty, 16
-  %empty_11 = or i32 %empty_10, %empty_9
-  ret i32 %empty_11
+  %empty_6 = zext i16 %1 to i32
+  %empty_7 = shl i32 %empty, 16
+  %empty_8 = or i32 %empty_7, %empty_6
+  ret i32 %empty_8
 }
 
 declare void @_GLOBAL__I_a25() nounwind

@@ -157,7 +157,8 @@ public:
 		for(int b = 0; b<128; b++){
 			inI = (in[b].data.range(31,16));
 			inQ = (in[b].data.range(15,0));
-			tempI = tempI + (inI*preamble[b]);
+			//tempI = tempI + (inI*preamble[b]);
+			tempI = 0;
 			tempQ = tempQ + (inQ*preamble[b]);
 		}
 		out.data.range(31,16)=tempI;

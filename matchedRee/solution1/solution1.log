@@ -13,12 +13,12 @@ WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have 
 INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ... 
 WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 97.980 ; gain = 48.105
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 97.980 ; gain = 48.105
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 97.520 ; gain = 47.813
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 97.539 ; gain = 47.832
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<121, 68, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:441).
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<121, 68, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:34 . Memory (MB): peak = 416.957 ; gain = 367.082
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 417.375 ; gain = 367.668
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:438) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:441) automatically.
@@ -26,14 +26,14 @@ INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'hls
 INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<short, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, double>' into '__hls_fptosi_double_i16' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:46) automatically.
 INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:23) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:36 . Memory (MB): peak = 533.105 ; gain = 483.230
-WARNING: [XFORM 203-104] Completely partitioning array 'preamble.V'  accessed through non-constant indices on dimension 1 (matchedRee/matchFilter.h:160:21), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 534.977 ; gain = 485.270
+WARNING: [XFORM 203-104] Completely partitioning array 'preamble.V'  accessed through non-constant indices on dimension 1 (matchedRee/matchFilter.h:162:21), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
 INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
 INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, double>' into '__hls_fptosi_double_i16' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:46) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i16' into 'matchFilter_ff::convol' (matchedRee/matchFilter.h:153) automatically.
 INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:23) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:38 . Memory (MB): peak = 643.645 ; gain = 593.770
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:38 . Memory (MB): peak = 643.789 ; gain = 593.914
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 645.688 ; gain = 595.980
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 645.688 ; gain = 595.980
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'matchFilter' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -41,13 +41,13 @@ INFO: [HLS 200-10] -- Implementing module 'matchFilter'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 39.124 seconds; current allocated memory: 557.879 MB.
+INFO: [HLS 200-111]  Elapsed time: 29.428 seconds; current allocated memory: 557.864 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.533 seconds; current allocated memory: 558.191 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 558.153 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matchFilter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -60,14 +60,14 @@ INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_data_V' to 'matchFil
 INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_last_V' to 'matchFilter_buffIcud' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'matchFilter_mux_1287_16_1' to 'matchFilter_mux_1dEe' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'matchFilter_mac_muladd_16s_16s_16ns_16_3' to 'matchFilter_mac_meOg' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'matchFilter_mac_meOg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchFilter_mac_meOg': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'matchFilter_mux_1dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matchFilter'.
-INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 559.225 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 559.155 MB.
 INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIbkb_ram' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIcud_ram' using distributed RAMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 643.789 ; gain = 593.914
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 645.688 ; gain = 595.980
 INFO: [SYSC 207-301] Generating SystemC RTL for matchFilter.
 INFO: [VHDL 208-304] Generating VHDL RTL for matchFilter.
 INFO: [VLOG 209-307] Generating Verilog RTL for matchFilter.
-INFO: [HLS 200-112] Total elapsed time: 41.213 seconds; peak allocated memory: 559.225 MB.
+INFO: [HLS 200-112] Total elapsed time: 31.139 seconds; peak allocated memory: 559.155 MB.
