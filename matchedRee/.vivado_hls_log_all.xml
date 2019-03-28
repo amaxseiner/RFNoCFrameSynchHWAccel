@@ -12,11 +12,11 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'preamble.V'  accessed through non-constant indices on dimension 1 (matchedRee/matchFilter.h:160:21), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="matchedRee" solutionName="solution1" date="2019-03-24T13:55:35.972-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-24T13:55:33.199-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-24T13:55:33.194-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-24T13:55:33.186-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-24T13:55:20.028-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'preamble.V'  accessed through non-constant indices on dimension 1 (matchedRee/matchFilter.h:162:21), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="matchedRee" solutionName="solution1" date="2019-03-28T14:07:53.539-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-28T14:07:35.228-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-28T14:07:26.565-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-28T14:07:26.545-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="matchedRee" solutionName="solution1" date="2019-03-28T14:07:26.533-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
