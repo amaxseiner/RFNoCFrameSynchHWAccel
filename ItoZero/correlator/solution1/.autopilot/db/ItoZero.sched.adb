@@ -17,14 +17,14 @@
 						<id>1</id>
 						<name>i_data_V_data_V</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
 						<lineNumber>28</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo class_id="6" tracking_level="0" version="0">
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="7" tracking_level="0" version="0">
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second class_id="8" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -59,14 +59,14 @@
 						<id>2</id>
 						<name>i_data_V_last_V</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
 						<lineNumber>28</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -101,14 +101,14 @@
 						<id>3</id>
 						<name>o_data_V_data_V</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
 						<lineNumber>28</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -143,14 +143,14 @@
 						<id>4</id>
 						<name>o_data_V_last_V</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
 						<lineNumber>28</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -208,310 +208,23 @@
 			</item>
 		</ports>
 		<nodes class_id="12" tracking_level="0" version="0">
-			<count>15</count>
+			<count>7</count>
 			<item_version>0</item_version>
 			<item class_id="13" tracking_level="1" version="0" object_id="_6">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>13</id>
-						<name>start_V_read</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>46</item>
-					<item>47</item>
-				</oprand_edges>
-				<opcode>read</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_7">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>23</id>
-						<name>currentState_load</name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>62</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>62</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>48</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_8">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>26</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>69</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>69</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>49</item>
-					<item>50</item>
-					<item>51</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_9">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>28</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>71</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>71</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>52</item>
-					<item>53</item>
-					<item>54</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_10">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>30</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>72</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>72</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>56</item>
-					<item>57</item>
-					<item>202</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_11">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>31</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>74</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>74</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>58</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_12">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>33</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>75</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>75</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>59</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_13">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>35</id>
+						<id>17</id>
 						<name>empty</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>77</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -520,7 +233,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>77</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -534,28 +247,28 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>61</item>
-					<item>62</item>
-					<item>63</item>
+					<item>26</item>
+					<item>27</item>
+					<item>28</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_14">
+			<item class_id_reference="13" object_id="_7">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>36</id>
+						<id>18</id>
 						<name>tmp_data_V_1</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>77</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -564,7 +277,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>77</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -578,26 +291,26 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>64</item>
+					<item>29</item>
 				</oprand_edges>
 				<opcode>extractvalue</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_15">
+			<item class_id_reference="13" object_id="_8">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>37</id>
+						<id>19</id>
 						<name>tmp_last_V</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>77</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -606,7 +319,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>77</second>
+										<second>50</second>
 									</item>
 								</second>
 							</item>
@@ -620,26 +333,26 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>65</item>
+					<item>30</item>
 				</oprand_edges>
 				<opcode>extractvalue</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_16">
+			<item class_id_reference="13" object_id="_9">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>38</id>
+						<id>20</id>
 						<name>tmp</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>52</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -648,7 +361,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>79</second>
+										<second>52</second>
 									</item>
 								</second>
 							</item>
@@ -662,26 +375,26 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>66</item>
+					<item>31</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_17">
+			<item class_id_reference="13" object_id="_10">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>39</id>
+						<id>21</id>
 						<name>p_Result_s</name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>52</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -690,7 +403,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>79</second>
+										<second>52</second>
 									</item>
 								</second>
 							</item>
@@ -704,28 +417,28 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>68</item>
-					<item>70</item>
-					<item>71</item>
+					<item>33</item>
+					<item>35</item>
+					<item>36</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_18">
+			<item class_id_reference="13" object_id="_11">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>40</id>
+						<id>22</id>
 						<name></name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>83</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -734,7 +447,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>83</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -748,30 +461,30 @@
 				<oprand_edges>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item>73</item>
-					<item>74</item>
-					<item>75</item>
-					<item>76</item>
-					<item>77</item>
+					<item>38</item>
+					<item>39</item>
+					<item>40</item>
+					<item>41</item>
+					<item>42</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="13" object_id="_19">
+			<item class_id_reference="13" object_id="_12">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>41</id>
+						<id>23</id>
 						<name></name>
 						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>84</lineNumber>
+						<fileDirectory>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>ItoZero</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
+								<first>/home/alex/Documents/RFNoCFrameSynchHWAccel/ItoZero</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -780,49 +493,7 @@
 											<first>ItoZero.cpp</first>
 											<second>ItoZero</second>
 										</first>
-										<second>84</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>78</item>
-				</oprand_edges>
-				<opcode>br</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="13" object_id="_20">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>43</id>
-						<name></name>
-						<fileName>ItoZero.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</fileDirectory>
-						<lineNumber>87</lineNumber>
-						<contextFuncName>ItoZero</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel/ItoZero</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>ItoZero.cpp</first>
-											<second>ItoZero</second>
-										</first>
-										<second>87</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -842,36 +513,13 @@
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
-			<count>2</count>
+			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="16" tracking_level="1" version="0" object_id="_21">
+			<item class_id="16" tracking_level="1" version="0" object_id="_13">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>55</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>1</content>
-			</item>
-			<item class_id_reference="16" object_id="_22">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>69</id>
+						<id>34</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -892,108 +540,13 @@
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
-			<count>6</count>
+			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_23">
+			<item class_id="18" tracking_level="1" version="0" object_id="_14">
 				<Obj>
 					<type>3</type>
-					<id>27</id>
-					<name>.preheader99.preheader</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>13</item>
-					<item>23</item>
-					<item>26</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_24">
-				<Obj>
-					<type>3</type>
-					<id>29</id>
-					<name></name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>28</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_25">
-				<Obj>
-					<type>3</type>
-					<id>32</id>
-					<name></name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>30</item>
-					<item>31</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_26">
-				<Obj>
-					<type>3</type>
-					<id>34</id>
-					<name>._crit_edge129</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>33</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_27">
-				<Obj>
-					<type>3</type>
-					<id>42</id>
-					<name></name>
+					<id>24</id>
+					<name>ItoZero</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1009,240 +562,91 @@
 				<node_objs>
 					<count>7</count>
 					<item_version>0</item_version>
-					<item>35</item>
-					<item>36</item>
-					<item>37</item>
-					<item>38</item>
-					<item>39</item>
-					<item>40</item>
-					<item>41</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_28">
-				<Obj>
-					<type>3</type>
-					<id>44</id>
-					<name>._crit_edge128</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>43</item>
+					<item>17</item>
+					<item>18</item>
+					<item>19</item>
+					<item>20</item>
+					<item>21</item>
+					<item>22</item>
+					<item>23</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>32</count>
+			<count>11</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_29">
-				<id>47</id>
-				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
-				<sink_obj>13</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_30">
-				<id>48</id>
-				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
-				<sink_obj>23</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_31">
-				<id>49</id>
-				<edge_type>1</edge_type>
-				<source_obj>23</source_obj>
-				<sink_obj>26</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_32">
-				<id>50</id>
-				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>26</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_33">
-				<id>51</id>
-				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>26</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_34">
-				<id>52</id>
-				<edge_type>1</edge_type>
-				<source_obj>13</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_35">
-				<id>53</id>
-				<edge_type>2</edge_type>
-				<source_obj>34</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_36">
-				<id>54</id>
-				<edge_type>2</edge_type>
-				<source_obj>32</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_37">
-				<id>56</id>
-				<edge_type>1</edge_type>
-				<source_obj>55</source_obj>
-				<sink_obj>30</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_38">
-				<id>57</id>
-				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
-				<sink_obj>30</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_39">
-				<id>58</id>
-				<edge_type>2</edge_type>
-				<source_obj>34</source_obj>
-				<sink_obj>31</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_40">
-				<id>59</id>
-				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
-				<sink_obj>33</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_41">
-				<id>62</id>
+			<item class_id="20" tracking_level="1" version="0" object_id="_15">
+				<id>27</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
-				<sink_obj>35</sink_obj>
+				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_42">
-				<id>63</id>
+			<item class_id_reference="20" object_id="_16">
+				<id>28</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
-				<sink_obj>35</sink_obj>
+				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_43">
-				<id>64</id>
+			<item class_id_reference="20" object_id="_17">
+				<id>29</id>
 				<edge_type>1</edge_type>
-				<source_obj>35</source_obj>
-				<sink_obj>36</sink_obj>
+				<source_obj>17</source_obj>
+				<sink_obj>18</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_44">
-				<id>65</id>
+			<item class_id_reference="20" object_id="_18">
+				<id>30</id>
 				<edge_type>1</edge_type>
-				<source_obj>35</source_obj>
-				<sink_obj>37</sink_obj>
+				<source_obj>17</source_obj>
+				<sink_obj>19</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_45">
-				<id>66</id>
+			<item class_id_reference="20" object_id="_19">
+				<id>31</id>
 				<edge_type>1</edge_type>
-				<source_obj>36</source_obj>
-				<sink_obj>38</sink_obj>
+				<source_obj>18</source_obj>
+				<sink_obj>20</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_46">
-				<id>70</id>
+			<item class_id_reference="20" object_id="_20">
+				<id>35</id>
 				<edge_type>1</edge_type>
-				<source_obj>69</source_obj>
-				<sink_obj>39</sink_obj>
+				<source_obj>34</source_obj>
+				<sink_obj>21</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_47">
-				<id>71</id>
+			<item class_id_reference="20" object_id="_21">
+				<id>36</id>
 				<edge_type>1</edge_type>
-				<source_obj>38</source_obj>
-				<sink_obj>39</sink_obj>
+				<source_obj>20</source_obj>
+				<sink_obj>21</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_48">
-				<id>74</id>
+			<item class_id_reference="20" object_id="_22">
+				<id>39</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
-				<sink_obj>40</sink_obj>
+				<sink_obj>22</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_49">
-				<id>75</id>
+			<item class_id_reference="20" object_id="_23">
+				<id>40</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
-				<sink_obj>40</sink_obj>
+				<sink_obj>22</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_50">
-				<id>76</id>
+			<item class_id_reference="20" object_id="_24">
+				<id>41</id>
 				<edge_type>1</edge_type>
-				<source_obj>39</source_obj>
-				<sink_obj>40</sink_obj>
+				<source_obj>21</source_obj>
+				<sink_obj>22</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_51">
-				<id>77</id>
+			<item class_id_reference="20" object_id="_25">
+				<id>42</id>
 				<edge_type>1</edge_type>
-				<source_obj>37</source_obj>
-				<sink_obj>40</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_52">
-				<id>78</id>
-				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
-				<sink_obj>41</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_53">
-				<id>195</id>
-				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>42</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_54">
-				<id>196</id>
-				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>29</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_55">
-				<id>197</id>
-				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>32</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_56">
-				<id>198</id>
-				<edge_type>2</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>34</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_57">
-				<id>199</id>
-				<edge_type>2</edge_type>
-				<source_obj>32</source_obj>
-				<sink_obj>34</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_58">
-				<id>200</id>
-				<edge_type>2</edge_type>
-				<source_obj>34</source_obj>
-				<sink_obj>44</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_59">
-				<id>201</id>
-				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>44</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>202</id>
-				<edge_type>4</edge_type>
-				<source_obj>23</source_obj>
-				<sink_obj>30</sink_obj>
+				<source_obj>19</source_obj>
+				<sink_obj>22</sink_obj>
 			</item>
 		</edges>
 	</cdfg>
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_61">
+		<item class_id="22" tracking_level="1" version="0" object_id="_26">
 			<mId>1</mId>
 			<mTag>ItoZero</mTag>
 			<mType>0</mType>
@@ -1251,14 +655,9 @@
 				<item_version>0</item_version>
 			</sub_regions>
 			<basic_blocks>
-				<count>6</count>
+				<count>1</count>
 				<item_version>0</item_version>
-				<item>27</item>
-				<item>29</item>
-				<item>32</item>
-				<item>34</item>
-				<item>42</item>
-				<item>44</item>
+				<item>24</item>
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>3</mDepth>
@@ -1273,108 +672,52 @@
 	<fsm class_id="-1"></fsm>
 	<res class_id="-1"></res>
 	<node_label_latency class_id="26" tracking_level="0" version="0">
-		<count>15</count>
+		<count>7</count>
 		<item_version>0</item_version>
 		<item class_id="27" tracking_level="0" version="0">
-			<first>13</first>
+			<first>17</first>
 			<second class_id="28" tracking_level="0" version="0">
 				<first>0</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
+			<first>18</first>
+			<second>
+				<first>1</first>
 				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>19</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>20</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>21</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>22</first>
+			<second>
+				<first>1</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>23</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>26</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>28</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>30</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>31</first>
-			<second>
-				<first>2</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>33</first>
-			<second>
-				<first>2</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>35</first>
-			<second>
-				<first>0</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>36</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>37</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>38</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>39</first>
-			<second>
-				<first>1</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>40</first>
-			<second>
-				<first>1</first>
-				<second>1</second>
-			</second>
-		</item>
-		<item>
-			<first>41</first>
-			<second>
-				<first>2</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>43</first>
 			<second>
 				<first>2</first>
 				<second>0</second>
@@ -1382,47 +725,12 @@
 		</item>
 	</node_label_latency>
 	<bblk_ent_exit class_id="29" tracking_level="0" version="0">
-		<count>6</count>
+		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>27</first>
+			<first>24</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
-				<second>2</second>
-			</second>
-		</item>
-		<item>
-			<first>29</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>32</first>
-			<second>
-				<first>0</first>
-				<second>2</second>
-			</second>
-		</item>
-		<item>
-			<first>34</first>
-			<second>
-				<first>2</first>
-				<second>2</second>
-			</second>
-		</item>
-		<item>
-			<first>42</first>
-			<second>
-				<first>0</first>
-				<second>2</second>
-			</second>
-		</item>
-		<item>
-			<first>44</first>
-			<second>
-				<first>2</first>
 				<second>2</second>
 			</second>
 		</item>
@@ -1430,17 +738,12 @@
 	<regions class_id="32" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="33" tracking_level="1" version="0" object_id="_62">
+		<item class_id="33" tracking_level="1" version="0" object_id="_27">
 			<region_name>ItoZero</region_name>
 			<basic_blocks>
-				<count>6</count>
+				<count>1</count>
 				<item_version>0</item_version>
-				<item>27</item>
-				<item>29</item>
-				<item>32</item>
-				<item>34</item>
-				<item>42</item>
-				<item>44</item>
+				<item>24</item>
 			</basic_blocks>
 			<nodes>
 				<count>0</count>

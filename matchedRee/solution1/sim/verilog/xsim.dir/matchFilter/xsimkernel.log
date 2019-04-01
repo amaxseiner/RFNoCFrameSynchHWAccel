@@ -1,0 +1,7 @@
+Running: xsim.dir/matchFilter/xsimk -simmode gui -wdb matchFilter.wdb -simrunnum 0 -socket 59527
+Design successfully loaded
+Design Loading Memory Usage: 42032 KB (Peak: 42032 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 136324 KB (Peak: 189304 KB)
+Simulation CPU Usage: 3530 ms

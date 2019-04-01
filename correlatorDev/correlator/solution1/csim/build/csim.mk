@@ -9,6 +9,8 @@ CSIM_DESIGN = 1
 
 __SIM_FPO__ = 1
 
+__HLS_FPO_v6_1__ = 1
+
 __SIM_MATHHLS__ = 1
 
 __SIM_OPENCV__ = 1
@@ -21,11 +23,11 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../correlatorTB.cpp
+HLS_SOURCES = ../../../../correlatorTB.cpp ../../../../correlator.cpp
 
 TARGET := csim.exe
 
-AUTOPILOT_ROOT := /opt/Xilinx/Vivado/2017.4
+AUTOPILOT_ROOT := /home/ece492fa18/Vivado/2017.4
 AUTOPILOT_MACH := lnx64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
@@ -33,7 +35,7 @@ ifdef AP_GCC_M32
 endif
 IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc/bin
+  AP_GCC_PATH := /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin
@@ -50,6 +52,8 @@ IFLAG += -I "${AUTOPILOT_TECH}/generic/SystemC/AESL_comp"
 IFLAG += -I "${AUTOPILOT_TOOL}/auto_cc/include"
 IFLAG += -I "/usr/include/x86_64-linux-gnu"
 IFLAG += -D__SIM_FPO__
+
+IFLAG += -D__HLS_FPO_v6_1__
 
 IFLAG += -D__SIM_OPENCV__
 
@@ -77,3 +81,9 @@ $(ObjDir)/correlatorTB.o: ../../../../correlatorTB.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/correlatorTB.d
+
+$(ObjDir)/correlator.o: ../../../../correlator.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../correlator.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/correlator.d

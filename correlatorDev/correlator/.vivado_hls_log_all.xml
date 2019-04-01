@@ -12,8 +12,11 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Port 'correlator/phaseClass_V' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="correlator" solutionName="solution1" date="2019-03-04T23:38:33.268-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-04T23:38:33.243-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-03-28T14:56:21.865-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-28T14:56:17.272-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-03-28T14:56:05.188-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-03-28T14:56:05.072-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/ece492fa18/Vivado/2017.4/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-03-28T14:56:04.889-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

@@ -5,90 +5,69 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 ==============================================================
 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-INFO: [HLS 200-10] Analyzing design file 'matchedRee/matched.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ... 
 WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 96.977 ; gain = 47.301
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 97.012 ; gain = 47.336
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 97.520 ; gain = 47.813
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 97.539 ; gain = 47.832
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 114.059 ; gain = 64.383
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<121, 68, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:441).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<121, 68, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 417.375 ; gain = 367.668
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 121.098 ; gain = 71.422
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'MatcherRee' (matchedRee/matched.cpp:29).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA' (matchedRee/matched.cpp:86) in function 'MatcherRee' completely.
-INFO: [XFORM 203-501] Unrolling loop 'CAL_MATCH' (matchedRee/matched.cpp:97) in function 'MatcherRee' completely.
-INFO: [XFORM 203-101] Partitioning array 'buffI.V'  in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'buffQ.V'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:438) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:441) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:473) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<short, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, double>' into '__hls_fptosi_double_i16' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:23) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 534.977 ; gain = 485.270
+WARNING: [XFORM 203-104] Completely partitioning array 'preamble.V'  accessed through non-constant indices on dimension 1 (matchedRee/matchFilter.h:162:21), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
 INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 152.301 ; gain = 102.625
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:28 . Memory (MB): peak = 154.887 ; gain = 105.211
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<short, double>' into '__hls_fptosi_double_i16' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i16' into 'matchFilter_ff::convol' (matchedRee/matchFilter.h:153) automatically.
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchFilter' (matchedRee/matchFilter.cpp:23) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 645.688 ; gain = 595.980
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 645.688 ; gain = 595.980
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'MatcherRee' ...
+INFO: [HLS 200-10] Synthesizing 'matchFilter' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Implementing module 'MatcherRee' 
+INFO: [HLS 200-10] -- Implementing module 'matchFilter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'MatcherRee'.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 10.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 28.015 seconds; current allocated memory: 106.632 MB.
+INFO: [HLS 200-111]  Elapsed time: 29.428 seconds; current allocated memory: 557.864 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.543 seconds; current allocated memory: 107.450 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 558.153 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'MatcherRee' 
+INFO: [HLS 200-10] -- Generating RTL for module 'matchFilter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/i_data_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/i_data_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/o_data_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/o_data_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'MatcherRee/start_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'MatcherRee' to 'ap_ctrl_none'.
-WARNING: [RTGEN 206-101] Register 'currentState' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_13' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_13' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffQ_V_0' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffI_V_0' is power-on initialization.
-INFO: [SYN 201-210] Renamed object name 'MatcherRee_mac_muladd_8ns_16s_21ns_21_1' to 'MatcherRee_mac_mubkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'MatcherRee_mac_muladd_9ns_16s_21ns_21_1' to 'MatcherRee_mac_mucud' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'MatcherRee_mac_mubkb': 10 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'MatcherRee_mac_mucud': 18 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'MatcherRee'.
-INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 109.199 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:31 . Memory (MB): peak = 157.055 ; gain = 107.379
-INFO: [SYSC 207-301] Generating SystemC RTL for MatcherRee.
-INFO: [VHDL 208-304] Generating VHDL RTL for MatcherRee.
-INFO: [VLOG 209-307] Generating Verilog RTL for MatcherRee.
-INFO: [HLS 200-112] Total elapsed time: 30.962 seconds; peak allocated memory: 109.199 MB.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchFilter/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matchFilter' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_data_V' to 'matchFilter_buffIbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchFilter_buffIn_last_V' to 'matchFilter_buffIcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchFilter_mux_1287_16_1' to 'matchFilter_mux_1dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchFilter_mac_muladd_16s_16s_16ns_16_3' to 'matchFilter_mac_meOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matchFilter_mac_meOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchFilter_mux_1dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matchFilter'.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 559.155 MB.
+INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIbkb_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matchFilter_buffIcud_ram' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 645.688 ; gain = 595.980
+INFO: [SYSC 207-301] Generating SystemC RTL for matchFilter.
+INFO: [VHDL 208-304] Generating VHDL RTL for matchFilter.
+INFO: [VLOG 209-307] Generating Verilog RTL for matchFilter.
+INFO: [HLS 200-112] Total elapsed time: 31.139 seconds; peak allocated memory: 559.155 MB.

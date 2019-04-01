@@ -83,21 +83,6 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 5 \
-    name start_V \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_start_V \
-    op interface \
-    ports { start_V { I 1 vector } } \
-} "
-}
-
 
 # Adapter definition:
 set PortName ap_clk

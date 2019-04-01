@@ -5,13 +5,13 @@
 # 
 # ==============================================================
 
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/tools/fpo_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/tools/opencv
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/tools/fft_v9_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/tools/fir_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/tools/dds_v6_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/tools/fpo_v6_1
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/tools/opencv
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/tools/fft_v9_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/tools/fir_v7_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/tools/dds_v6_0
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/usr/lib/x86_64-linux-gnu
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado/2017.4/lnx64/csim
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/ece492fa18/Vivado/2017.4/lnx64/csim
 ### C sim ###
 if {![file exists csim.exe]} {
   puts "@E C-simulation is not set up properly. Please re-run csim."

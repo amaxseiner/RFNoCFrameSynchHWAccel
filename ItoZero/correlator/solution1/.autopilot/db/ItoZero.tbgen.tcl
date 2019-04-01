@@ -22,7 +22,7 @@ set C_modelArgList {
 	{ i_data_V_last_V int 1 regular {axi_s 0 volatile  { i_data Last } }  }
 	{ o_data_V_data_V int 32 regular {axi_s 1 volatile  { o_data Data } }  }
 	{ o_data_V_last_V int 1 regular {axi_s 1 volatile  { o_data Last } }  }
-	{ start_V int 1 regular  }
+	{ start_V int 1 unused  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "i_data_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "i_data.V.data.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -76,8 +76,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "o_data_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "o_data_V_last_V", "Type" : "Axis", "Direction" : "O"},
-			{"Name" : "start_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "currentState", "Type" : "OVld", "Direction" : "IO"}]}]}
+			{"Name" : "start_V", "Type" : "None", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -86,8 +85,7 @@ set ArgLastReadFirstWriteLatency {
 		i_data_V_last_V {Type I LastRead 0 FirstWrite -1}
 		o_data_V_data_V {Type O LastRead -1 FirstWrite 1}
 		o_data_V_last_V {Type O LastRead -1 FirstWrite 1}
-		start_V {Type I LastRead 0 FirstWrite -1}
-		currentState {Type IO LastRead -1 FirstWrite -1}}}
+		start_V {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

@@ -1,42 +1,39 @@
 #include <iostream>
-#include "ap_int.h"
-#include "correlatorSim.h"
+#include <fstream>
+
+#include "correlator.h"
 
 using namespace std;
 
-int main(char argc,char **arg){
-	rfnoc_axis streamArrayIn[256];
-	rfnoc_axis streamArrayOut[256];
-	ap_fixed<16,11> test;
+int main(){
+	corTransmit_t test;
+	cor_t test2;
+
 	ifstream inFile;
-	inFile.open("inputCorrr.dat");
-	inFile >> fixed >> setbase(10) >> setprecision(8);
+	inFile.open("alexisdumb.csv");
+	inFile >> fixed >> setbase(10) >> setprecision(16);
 	int count;
 	count = 0;
 	ofstream result;
-	result.open("result.csv", ios::out);
+	result.open("resultSynch.csv", ios::out);
 	result << right << fixed << setbase(10) << setprecision(16);
-	for(int a=0;a<5376;a++){
+	rfnoc_axis axi;
+	rfnoc_axis axiOut;
+	for(int a=0;a<4383;a++){
 		ap_uint<4> phaseClass = a%16;
-		rfnoc_axis axi;
-		inFile>> setw(16) >> test;
+		inFile >> setw(16) >> test;
 		axi.data.range(15,0) = test.V;
-		/*if(a%16 == 0){
-
-			result << count;
-			result << ",";
+		correlateTop(&axi,&axiOut);
+		test2.V = axiOut.data.range(31,0);
+		if(phaseClass == 0){
 			result << a;
 			result << ",";
-			count += 1;
-		}*/
-		/*
-		result << setw(16) << test;
-		//result << ",";
-		result << endl;*/
+			result << setw(16) << test;
+			result << ",";
+			result << setw(32) << test2.V.VAL;
+			result << endl;
+		}
 
-		correlation(axi,&streamArrayOut[a],&result,phaseClass);
-		//result << setw(32) << streamArrayOut[a].data;
-		//result << endl;
 	}
 
 	//displayOutput(&result);

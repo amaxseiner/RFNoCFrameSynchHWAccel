@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ItoZero'" level="0">
-<item name = "Date">Tue Feb 19 18:47:09 2019
+<item name = "Date">Thu Mar 21 16:40:14 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -16,7 +16,7 @@
 <item name = "Target clock period (ns)">5.00</item>
 <item name = "Clock uncertainty (ns)">0.62</item>
 <item name = "Target initiation interval">1</item>
-<item name = "Estimated clock period (ns)">0.48</item>
+<item name = "Estimated clock period (ns)">0.00</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
@@ -46,12 +46,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 152</column>
+<column name="Expression">-, -, 0, 128</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 114</column>
-<column name="Register">-, -, 154, -</column>
+<column name="Register">-, -, 151, -</column>
 <specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -76,9 +76,6 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_block_state2_io">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state3_io">and, 0, 0, 8, 1, 1</column>
 <column name="i_data_V_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
 <column name="i_data_V_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
 <column name="i_data_V_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
@@ -116,9 +113,6 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_reg_pp0_iter1_currentState_load_reg_110">1, 0, 1, 0</column>
-<column name="currentState">1, 0, 1, 0</column>
-<column name="currentState_load_reg_110">1, 0, 1, 0</column>
 <column name="i_data_V_data_V_0_payload_A">32, 0, 32, 0</column>
 <column name="i_data_V_data_V_0_payload_B">32, 0, 32, 0</column>
 <column name="i_data_V_data_V_0_sel_rd">1, 0, 1, 0</column>
@@ -164,10 +158,9 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">0.48</item>
+<item name = "Max Delay">0.00</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'currentState_load', ItoZero.cpp:62">load, 0.00, 0.00, -, -, -, -, -, -, -, -, &apos;currentState&apos;, -, -</column>
 </table>
 </item>
 </section>

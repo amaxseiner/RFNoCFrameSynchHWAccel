@@ -37,6 +37,11 @@
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/matchFilter.h</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.h</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
@@ -47,14 +52,9 @@
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat</location>
 		</link>
 		<link>
-			<name>source/matched.cpp</name>
+			<name>source/matchFilter.cpp</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matched.cpp</location>
-		</link>
-		<link>
-			<name>source/matcherSim.h</name>
-			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matcherSim.h</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp</location>
 		</link>
 		<link>
 			<name>source/results.csv</name>
@@ -62,9 +62,19 @@
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/results.csv</location>
 		</link>
 		<link>
-			<name>testbench/matcherTB.cpp</name>
+			<name>source/tb_input.txt</name>
 			<type>1</type>
-			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matcherTB.cpp</location>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_input.txt</location>
+		</link>
+		<link>
+			<name>source/tb_output.txt</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_output.txt</location>
+		</link>
+		<link>
+			<name>testbench/tb_main.cpp</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_main.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

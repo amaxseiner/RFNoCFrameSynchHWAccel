@@ -5,7 +5,7 @@
 
 
 git fetch
-git pull origin usingTypesForSynthesis
+git pull origin dev
 
 cp /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlator.v ~/rfnoc/src/rfnoc-corrr/rfnoc/fpga-src/
 cp /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlator.v ~/rfnoc/src/uhd-fpga/usrp3/lib/rfnoc/

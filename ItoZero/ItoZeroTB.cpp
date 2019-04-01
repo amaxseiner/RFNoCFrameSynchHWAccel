@@ -19,7 +19,7 @@ int main(int argc, char **argv){
 	//for(int i =0;i<10;i++){
 	streamArrayIn.write(temp);
 	//}
-	ItoZero(streamArrayIn,streamArrayOut,start);
+	ItoZero(streamArrayIn,streamArrayOut);
 
 	return 0;
 }

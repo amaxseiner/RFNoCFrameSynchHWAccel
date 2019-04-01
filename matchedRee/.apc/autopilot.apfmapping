@@ -2,11 +2,12 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="inputCorrr.dat" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\inputCorrr.dat"/>
-    <originFiles name="matcherSim.h" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherSim.h"/>
+    <originFiles name="matchFilter.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matchFilter.cpp"/>
     <originFiles name="results.csv" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\results.csv"/>
-    <originFiles name="matched.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matched.cpp"/>
+    <originFiles name="tb_input.txt" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\tb_input.txt"/>
+    <originFiles name="tb_output.txt" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\tb_output.txt"/>
   </source>
   <testbench>
-    <originFiles name="matcherTB.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\matcherTB.cpp"/>
+    <originFiles name="tb_main.cpp" path="D:\SeniorProject\RFNoCFrameSynchHWAccel\matchedRee\tb_main.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

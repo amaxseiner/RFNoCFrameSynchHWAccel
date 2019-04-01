@@ -1,6 +1,6 @@
 
-set TopModule "correlator"
-set ClockPeriod "10.000000"
+set TopModule "correlateTop"
+set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
@@ -11,10 +11,10 @@ set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
 set FftOrFirFlag 0
-set NbRWValue 1
+set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 0
+set HasDSPModule 1
 set ResetLevelFlag 0
 set ResetStyle "state"
 set ResetSyncFlag 1
@@ -43,13 +43,13 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../../correlator.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/alex/Documents/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
-set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
+set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/solution1.directive}
+set TBFiles {verilog ../../correlatorTB.cpp bc ../../correlatorTB.cpp vhdl ../../correlatorTB.cpp sc ../../correlatorTB.cpp cas ../../correlatorTB.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
-set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set PlatformFiles {{DefaultPlatform {xilinx/kintex7/kintex7 xilinx/kintex7/kintex7_fpv6}}}

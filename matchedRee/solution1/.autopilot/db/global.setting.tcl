@@ -1,11 +1,11 @@
 
-set TopModule "MatcherRee"
-set ClockPeriod "10.000000"
+set TopModule "matchFilter"
+set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
 set CombLogicFlag 0
-set PipelineFlag 1
+set PipelineFlag 0
 set DataflowTaskPipelineFlag  1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
@@ -19,7 +19,7 @@ set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
-set ResetVariableFlag 1
+set ResetVariableFlag 0
 set fsmEncStyle "onehot"
 set maxFanout "0"
 set RtlPrefix ""
@@ -41,10 +41,10 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
-set SourceFiles {sc {} c ../matched.cpp}
+set SourceFiles {sc {} c ../matchFilter.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive}
-set TBFiles {verilog ../matcherTB.cpp bc ../matcherTB.cpp vhdl ../matcherTB.cpp sc ../matcherTB.cpp cas ../matcherTB.cpp c {}}
+set TBFiles {verilog ../tb_main.cpp bc ../tb_main.cpp vhdl ../tb_main.cpp sc ../tb_main.cpp cas ../tb_main.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
