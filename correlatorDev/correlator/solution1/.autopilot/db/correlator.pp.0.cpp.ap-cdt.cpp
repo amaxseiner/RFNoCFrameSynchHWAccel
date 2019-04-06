@@ -144,7 +144,6 @@ extern "C" {
 #pragma line 8 "<command line>" 2
 #pragma line 1 "<built-in>" 2
 #pragma line 1 "correlator.cpp" 2
-#pragma empty_line
 #pragma line 1 "./correlator.h" 1
 #pragma line 1 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h" 1
 #pragma line 66 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/hls_stream.h"
@@ -29185,7 +29184,7 @@ using namespace std;
 static ap_int<2> corrSeq[16] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
 #pragma empty_line
 #pragma empty_line
-typedef ap_fixed<32,22> cor_t;
+typedef ap_int<16> cor_t;
 typedef ap_fixed<16,11> corTransmit_t;
 #pragma empty_line
 struct phase{
@@ -29196,28 +29195,14 @@ void correlateTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 #pragma empty_line
  class correlate{
  public:
-  void shiftPhaseClass(cor_t newVal, ap_uint<5> phaseClass);
-  cor_t correlator(ap_uint<5> phaseClass);
-  phase phaseArray[16];
-  cor_t phaseClass0[16];
-  cor_t phaseClass1[16];
-  cor_t phaseClass2[16];
-  cor_t phaseClass3[16];
-  cor_t phaseClass4[16];
-  cor_t phaseClass5[16];
-  cor_t phaseClass6[16];
-  cor_t phaseClass7[16];
-  cor_t phaseClass8[16];
-  cor_t phaseClass9[16];
-  cor_t phaseClass10[16];
-  cor_t phaseClass11[16];
-  cor_t phaseClass12[16];
-  cor_t phaseClass13[16];
-  cor_t phaseClass14[16];
-  cor_t phaseClass15[16];
+  void shiftPhaseClass(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
+  ap_int<32> correlator(ap_uint<4> phaseClass);
 #pragma empty_line
+  cor_t phaseClass0i[16];
+  cor_t phaseClass0q[16];
+#pragma line 58 "./correlator.h"
  };
-#pragma line 3 "correlator.cpp" 2
+#pragma line 2 "correlator.cpp" 2
 #pragma empty_line
 using namespace std;
 #pragma empty_line
@@ -29237,30 +29222,16 @@ void correlateTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data
 #pragma empty_line
 static correlate cor;
 #pragma empty_line
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass1 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass2 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass3 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass4 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass5 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass6 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass7 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass8 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass9 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass10 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass11 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass12 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass13 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass14 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=cor.phaseClass15 complete dim=1
-#pragma empty_line
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0i complete dim=1
+#pragma HLS ARRAY_PARTITION variable=cor.phaseClass0q complete dim=1
+#pragma line 40 "correlator.cpp"
 #pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 #pragma empty_line
-static cor_t newVal;
-#pragma HLS RESET variable=&newVal
+static cor_t newVali;
+#pragma HLS RESET variable=&newVali
 #pragma empty_line
-static corTransmit_t unScalled;
-#pragma HLS RESET variable=&unScalled
+static cor_t newValq;
+#pragma HLS RESET variable=&newValq
 #pragma empty_line
  rfnoc_axis classType;
 #pragma empty_line
@@ -29271,13 +29242,7 @@ static corTransmit_t unScalled;
 #pragma empty_line
  rfnoc_axis tmp_data;
 #pragma empty_line
-  static cor_t corHelperI;
-#pragma HLS RESET variable=&corHelperI
-#pragma empty_line
- static cor_t corHelperQ;
-#pragma HLS RESET variable=&corHelperQ
-#pragma empty_line
- static ap_uint<4> phaseClass;
+  static ap_uint<4> phaseClass;
 #pragma HLS RESET variable=&phaseClass
 #pragma empty_line
 #pragma empty_line
@@ -29286,7 +29251,7 @@ static corTransmit_t unScalled;
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 #pragma empty_line
-static cor_t out;
+static ap_int<32> out;
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -29302,14 +29267,14 @@ switch(currentState) {
   i_data.read(tmp_data);
   out_sample.last = tmp_data.last;
 #pragma empty_line
-  unScalled.V = tmp_data.data.range(15,0);
-  newVal = unScalled;
+  newVali = tmp_data.data.range(15,0);
+  newValq = tmp_data.data.range(31,16);
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-  cor.shiftPhaseClass(newVal,phaseClass);
+  cor.shiftPhaseClass(newVali,newValq,phaseClass);
   out = cor.correlator(phaseClass);
 #pragma empty_line
 #pragma empty_line
@@ -29320,8 +29285,9 @@ switch(currentState) {
    phaseClass = phaseClass + 1;
   }
 #pragma empty_line
-  if(out > 29000){
-   out_sample.data = loadCount;
+  if(out != 0){
+   out_sample.data = out;
+   o_data.write(out_sample);
 #pragma empty_line
   } else {
    out_sample.data = 0;
@@ -29337,16 +29303,18 @@ switch(currentState) {
 #pragma empty_line
 }
 #pragma empty_line
-void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
+void correlate::shiftPhaseClass(cor_t newValuei,cor_t newValueq,ap_uint<4> phaseClass){
  switch(phaseClass){
  case 0:
   SHIFT_DATA0: for(int a = 16 -1;a>0;a--){
 #pragma HLS UNROLL
- phaseClass0[a] = phaseClass0[a-1];
+ phaseClass0i[a] = phaseClass0i[a-1];
+   phaseClass0q[a] = phaseClass0q[a-1];
   }
-  phaseClass0[0] = newValue;
+  phaseClass0i[0] = newValuei;
+  phaseClass0q[0] = newValueq;
   break;
-#pragma line 236 "correlator.cpp"
+#pragma line 234 "correlator.cpp"
  }
 #pragma empty_line
 #pragma empty_line
@@ -29356,30 +29324,48 @@ void correlate::shiftPhaseClass(cor_t newValue, ap_uint<5> phaseClass){
 #pragma empty_line
 }
 #pragma empty_line
-cor_t correlate::correlator(ap_uint<5> phaseClass){
- cor_t corHelperINeg,corHelperIPos,res;
+ap_int<32> correlate::correlator(ap_uint<4> phaseClass){
+ ap_int<32> res;
+ cor_t corHelperINeg,corHelperIPos,resi;
+ cor_t corHelperQNeg,corHelperQPos,resq;
  corHelperINeg = 0;
  corHelperIPos = 0;
-#pragma line 257 "correlator.cpp"
+ corHelperQNeg = 0;
+ corHelperQPos = 0;
+#pragma line 259 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass0[a]);
+    corHelperIPos = corHelperIPos + (phaseClass0i[a]);
+    corHelperQPos = corHelperQPos + (phaseClass0q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass0[a]);
+    corHelperINeg = corHelperINeg + (phaseClass0i[a]);
+    corHelperQNeg = corHelperQNeg + (phaseClass0q[a]);
+#pragma empty_line
    }
   }
  break;
-#pragma line 418 "correlator.cpp"
+#pragma line 423 "correlator.cpp"
  }
 #pragma empty_line
  if(corHelperIPos > corHelperINeg){
-  res = corHelperIPos - corHelperINeg;
+  resi = corHelperIPos - corHelperINeg;
  } else {
-  res = corHelperINeg - corHelperIPos;
+  resi = corHelperINeg - corHelperIPos;
  }
- res = res*res;
+#pragma empty_line
+#pragma empty_line
+ if(corHelperIPos > corHelperINeg){
+  resq = corHelperQPos - corHelperQNeg;
+ } else {
+  resq = corHelperQNeg - corHelperQPos;
+ }
+#pragma empty_line
+ resi = resi*resi;
+ resq = resq*resq;
+ res.range(15,0) = resi;
+ res.range(31,16) = resq;
  return res;
 }

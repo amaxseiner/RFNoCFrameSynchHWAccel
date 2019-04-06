@@ -26,7 +26,7 @@ SC_MODULE(correlateTop_mul_bkb) {
 
 
 
-    ACMP_mul_ss<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_mul_ss_U;
+    ACMP_mul_ss<ID, 3, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_mul_ss_U;
 
     SC_CTOR(correlateTop_mul_bkb):  ACMP_mul_ss_U ("ACMP_mul_ss_U") {
         ACMP_mul_ss_U.clk(clk);
