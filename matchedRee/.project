@@ -37,6 +37,11 @@
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/apatb_matchTop.cpp</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/sim/autowrap/systemc/apatb_matchTop.cpp</location>
+		</link>
+		<link>
 			<name>.reference/matchFilter.h</name>
 			<type>1</type>
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.h</location>
@@ -45,6 +50,11 @@
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
+		</link>
+		<link>
+			<name>source/IMLANCE.csv</name>
+			<type>1</type>
+			<location>D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/IMLANCE.csv</location>
 		</link>
 		<link>
 			<name>source/inputCorrr.dat</name>

@@ -1,0 +1,420 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matchTop'" level="0">
+<item name = "Date">Sat Apr  6 15:22:03 2019
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">matchedRee</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k160tfbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.35, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">254, 254, 255, 255, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_convol_fu_578">convol, 121, 121, 121, 121, none</column>
+<column name="grp_shiftSampleIn_fu_1095">shiftSampleIn, 128, 128, 128, 128, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 22</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 194, 13679, 7929</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 152</column>
+<column name="Register">-, -, 4285, -</column>
+<specialColumn name="Available">650, 600, 202800, 101400</specialColumn>
+<specialColumn name="Utilization (%)">0, 32, 8, 7</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_convol_fu_578">convol, 0, 194, 13612, 4255</column>
+<column name="grp_shiftSampleIn_fu_1095">shiftSampleIn, 0, 0, 67, 3674</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_data_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_V_data_V_1_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_V_data_V_1_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_V_last_V_1_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="o_data_V_last_V_1_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="i_data_V_data_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="i_data_V_last_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="o_data_V_data_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="o_data_V_last_V_1_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="ap_block_state6">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">38, 7, 1, 7</column>
+<column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="i_data_V_data_V_0_data_out">9, 2, 32, 64</column>
+<column name="i_data_V_data_V_0_state">15, 3, 2, 6</column>
+<column name="i_data_V_last_V_0_data_out">9, 2, 1, 2</column>
+<column name="i_data_V_last_V_0_state">15, 3, 2, 6</column>
+<column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="o_data_V_data_V_1_data_out">9, 2, 32, 64</column>
+<column name="o_data_V_data_V_1_state">15, 3, 2, 6</column>
+<column name="o_data_V_last_V_1_data_out">9, 2, 1, 2</column>
+<column name="o_data_V_last_V_1_state">15, 3, 2, 6</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_reg_grp_convol_fu_578_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_shiftSampleIn_fu_1095_ap_start">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_V_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_state">2, 0, 2, 0</column>
+<column name="match_matchBufferI_V">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_1">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_10">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_100">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_101">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_102">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_103">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_104">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_105">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_106">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_107">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_108">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_109">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_11">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_110">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_111">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_112">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_113">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_114">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_115">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_116">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_117">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_118">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_119">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_12">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_120">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_121">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_122">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_123">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_124">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_125">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_126">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_127">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_13">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_14">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_15">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_16">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_17">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_18">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_19">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_2">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_20">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_21">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_22">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_23">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_24">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_25">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_26">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_27">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_28">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_29">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_3">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_30">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_31">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_32">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_33">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_34">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_35">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_36">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_37">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_38">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_39">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_4">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_40">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_41">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_42">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_43">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_44">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_45">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_46">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_47">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_48">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_49">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_5">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_50">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_51">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_52">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_53">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_54">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_55">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_56">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_57">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_58">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_59">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_6">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_60">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_61">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_62">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_63">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_64">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_65">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_66">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_67">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_68">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_69">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_7">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_70">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_71">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_72">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_73">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_74">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_75">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_76">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_77">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_78">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_79">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_8">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_80">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_81">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_82">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_83">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_84">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_85">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_86">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_87">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_88">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_89">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_9">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_90">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_91">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_92">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_93">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_94">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_95">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_96">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_97">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_98">16, 0, 16, 0</column>
+<column name="match_matchBufferI_V_99">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_1">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_10">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_100">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_101">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_102">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_103">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_104">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_105">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_106">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_107">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_108">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_109">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_11">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_110">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_111">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_112">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_113">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_114">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_115">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_116">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_117">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_118">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_119">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_12">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_120">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_121">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_122">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_123">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_124">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_125">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_126">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_127">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_13">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_14">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_15">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_16">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_17">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_18">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_19">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_2">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_20">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_21">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_22">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_23">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_24">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_25">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_26">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_27">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_28">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_29">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_3">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_30">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_31">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_32">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_33">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_34">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_35">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_36">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_37">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_38">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_39">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_4">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_40">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_41">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_42">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_43">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_44">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_45">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_46">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_47">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_48">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_49">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_5">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_50">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_51">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_52">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_53">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_54">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_55">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_56">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_57">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_58">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_59">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_6">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_60">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_61">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_62">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_63">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_64">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_65">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_66">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_67">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_68">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_69">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_7">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_70">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_71">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_72">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_73">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_74">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_75">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_76">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_77">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_78">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_79">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_8">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_80">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_81">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_82">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_83">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_84">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_85">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_86">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_87">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_88">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_89">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_9">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_90">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_91">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_92">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_93">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_94">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_95">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_96">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_97">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_98">16, 0, 16, 0</column>
+<column name="match_matchBufferQ_V_99">16, 0, 16, 0</column>
+<column name="o_data_V_data_V_1_payload_A">32, 0, 32, 0</column>
+<column name="o_data_V_data_V_1_payload_B">32, 0, 32, 0</column>
+<column name="o_data_V_data_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_data_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_V_data_V_1_state">2, 0, 2, 0</column>
+<column name="o_data_V_last_V_1_payload_A">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_payload_B">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_state">2, 0, 2, 0</column>
+<column name="p_Result_1_reg_1659">16, 0, 16, 0</column>
+<column name="tmp_last_V_reg_1649">1, 0, 1, 0</column>
+<column name="tmp_reg_1654">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, matchTop, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, matchTop, return value</column>
+<column name="i_data_TDATA">in, 32, axis, i_data_V_data_V, pointer</column>
+<column name="i_data_TVALID">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TREADY">out, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TLAST">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="o_data_TDATA">out, 32, axis, o_data_V_data_V, pointer</column>
+<column name="o_data_TVALID">out, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TREADY">in, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TLAST">out, 1, axis, o_data_V_last_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -5,12 +5,11 @@
 # 
 # ==============================================================
 
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fpo_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/opencv
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fft_v9_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/fir_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/dds_v6_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/usr/lib/x86_64-linux-gnu
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fpo_v7_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/opencv"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fft_v9_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/fir_v7_0"
+set ::env(PATH) "$::env(PATH);D:/Xilinx/Vivado_HLS/2017.2/win64/tools/dds_v6_0"
 ### C sim ###
 if {![file exists csim.exe]} {
   puts "@E C-simulation is not set up properly. Please re-run csim."

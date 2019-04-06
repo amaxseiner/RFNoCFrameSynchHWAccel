@@ -1,0 +1,17 @@
+In file included from D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h:172,
+                 from D:/Xilinx/Vivado_HLS/2017.2/include/hls_half.h:57,
+                 from D:/Xilinx/Vivado_HLS/2017.2/include/ap_int.h:74,
+                 from apatb_matchTop.cpp:15:
+D:/Xilinx/Vivado_HLS/2017.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
+D:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+In file included from apatb_matchTop.cpp:20:0:
+D:/Xilinx/Vivado_HLS/2017.2/include/ap_stream.h:70:2: warning: #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-Wcpp]
+D:/Xilinx/Vivado_HLS/2017.2/include/hls_stream.h: In function 'void AESL_WRAP_matchTop(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>)':
+D:/Xilinx/Vivado_HLS/2017.2/include/hls_stream.h:139:5: error: 'hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]' is private
+apatb_matchTop.cpp:553:26: error: within this context
+apatb_matchTop.cpp:116:13: error:   initializing argument 1 of 'void matchTop(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>)'
+D:/Xilinx/Vivado_HLS/2017.2/include/hls_stream.h:139:5: error: 'hls::stream<__STREAM_T__>::stream(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = rfnoc_axis]' is private
+apatb_matchTop.cpp:553:26: error: within this context
+apatb_matchTop.cpp:116:13: error:   initializing argument 2 of 'void matchTop(hls::stream<rfnoc_axis>, hls::stream<rfnoc_axis>)'
+make: *** [obj/apatb_matchTop.o] Error 1

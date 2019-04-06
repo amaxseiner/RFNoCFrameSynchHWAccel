@@ -4,7 +4,8 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project matchedRee
-set_top matchFilter
+set_top matchTop
+add_files matchedRee/IMLANCE.csv
 add_files matchedRee/inputCorrr.dat
 add_files matchedRee/matchFilter.cpp
 add_files matchedRee/results.csv

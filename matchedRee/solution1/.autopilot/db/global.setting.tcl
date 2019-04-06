@@ -1,5 +1,5 @@
 
-set TopModule "matchFilter"
+set TopModule "matchTop"
 set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
@@ -19,7 +19,7 @@ set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
-set ResetVariableFlag 0
+set ResetVariableFlag 1
 set fsmEncStyle "onehot"
 set maxFanout "0"
 set RtlPrefix ""

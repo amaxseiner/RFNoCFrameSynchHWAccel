@@ -33447,12 +33447,12 @@ class stream
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
- struct axis_fixed{
+ struct rfnoc_axis{
      ap_int<32> data;
      ap_uint<1> last;
    };
 #pragma empty_line
- static ap_int<16> preamble[128] = {0.00554,
+ static ap_fixed<16,3> preamble[128] = {0.00554,
    0.00536,
    0.00452,
    0.00306,
@@ -33582,57 +33582,92 @@ class stream
    0.00536
 };
 #pragma empty_line
+//typedef ap_fixed<16,11> match16bit;
+void matchFilter(hls::stream<rfnoc_axis> in, hls::stream<rfnoc_axis> out);
+//void matchTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 #pragma empty_line
-#pragma empty_line
-void matchFilter(hls::stream<axis_fixed> in, hls::stream<axis_fixed> out);
-#pragma empty_line
-class matchFilter_ff
-{
+class matchFilter_ff{
 public:
- axis_fixed convol(axis_fixed in[128]){_ssdm_SpecArrayDimSize(in,128);
-  axis_fixed out;
-  ap_int<16> tempI;
-  ap_int<16> tempQ;
-  out.last =in[0].last;
-  tempI = 0.0;
-  tempQ = 0.0;
-  ap_int<16> inI;
-  ap_int<16> inQ;
-  for(int b = 0; b<128; b++){
-   inI = (in[b].data.range(31,16));
-   inQ = (in[b].data.range(15,0));
-   //tempI = tempI + (inI*preamble[b]);
-   tempI = 0;
-   tempQ = tempQ + (inQ*preamble[b]);
-  }
-  out.data.range(31,16)=tempI;
-  out.data.range(15,0)=tempQ;
-  return out;
- }
+ void shiftSampleIn(ap_fixed<16,8> newVali, ap_fixed<16,8> newValq);
+ ap_int<32> convol();
+ ap_fixed<16,8> matchBufferI[128];
+ ap_fixed<16,8> matchBufferQ[128];
 #pragma empty_line
 };
 #pragma line 2 "matchedRee/matchFilter.cpp" 2
-//#include <stdio.h>
 #pragma empty_line
-void matchFilter(hls::stream<axis_fixed> in, hls::stream<axis_fixed> out){
-#pragma HLS INTERFACE axis depth=1 port=&in
-#pragma HLS INTERFACE axis depth=1 port=&out
+//NEW ATTEMPT
+using namespace std;
+void matchTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
+//void matchTop(rfnoc_axis *i_data, rfnoc_axis *o_data){
 #pragma HLS INTERFACE ap_ctrl_none port=return
+#pragma HLS INTERFACE axis port=&o_data
+#pragma HLS INTERFACE axis port=&i_data
+//#pragma HLS PIPELINE II=1
+#pragma empty_line
+static matchFilter_ff match;
+#pragma HLS ARRAY_PARTITION variable=match.matchBufferQ complete dim=1
+#pragma HLS ARRAY_PARTITION variable=match.matchBufferI complete dim=1
 #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 #pragma empty_line
-static matchFilter_ff filterff;
+static ap_fixed<16,8> newVali;
+#pragma HLS RESET variable=&newVali
 #pragma empty_line
-axis_fixed tmp_data;
+static ap_fixed<16,8> newValq;
+#pragma HLS RESET variable=&newValq
 #pragma empty_line
-axis_fixed out_sample;
+rfnoc_axis out_sample;
+rfnoc_axis tmp_data;
+static ap_int<32> out;
 #pragma empty_line
-axis_fixed buffIn[128];
+//Read in data then correlate
+ i_data.read(tmp_data);
+    //tmp_data = *i_data;
+ out_sample.last = tmp_data.last;
+ newVali.V = tmp_data.data.range(15,0);
+ newValq.V = tmp_data.data.range(31,16);
+ match.shiftSampleIn(newVali,newValq);
+ out = match.convol();
+ out_sample.data = out;
+ //if(out != 0){
+  //out_sample.data = out;
+ o_data.write(out_sample);
+  //o_data->data = out;
+ //}
+ //else {
+  //out_sample.data = 0;
+  //o_data.write(out_sample);
+  //o_data->data = 0;
+ //}
 #pragma empty_line
-tmp_data = in.read();
- for(int a = 128-1; a > 0; a--){
-  buffIn[a] = buffIn[a-1];
+}
+void matchFilter_ff::shiftSampleIn(ap_fixed<16,8> newVali, ap_fixed<16,8> newValq){
+ for(int a=128-1;a>0;a--){
+  //#pragma HLS UNROLL
+  matchBufferI[a]=matchBufferI[a-1];
+  matchBufferQ[a]=matchBufferQ[a-1];
  }
- buffIn[0] = tmp_data;
- out_sample = filterff.convol(buffIn);
- out.write(out_sample);
+ matchBufferI[0] = newVali;
+ matchBufferQ[0] = newValq;
+}
+#pragma empty_line
+//might need a bits to fixed converter
+ap_int<32> matchFilter_ff::convol(){
+ ap_int<32> res;
+ ap_fixed<32,16> tempQ,tempI;
+ ap_fixed<16,8> resI, resQ;
+ ap_int<16> resIint, resQint;
+ tempQ=0;
+ tempI =0;
+#pragma empty_line
+ for(int b=0;b<128;b++){
+#pragma HLS UNROLL
+ tempQ = tempQ+(matchBufferQ[b] * preamble[b]);
+  tempI = tempI+(matchBufferI[b] * preamble[b]);
+ }
+ resI = tempI;
+ resQ = tempQ;
+ res.range(15,0) = resI.V;
+ res.range(31,16) = resQ.V;
+ return res;
 }
