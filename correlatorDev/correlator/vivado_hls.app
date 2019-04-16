@@ -6,10 +6,10 @@
     </Simulation>
     <files xmlns="">
         <file name="../../correlatorTB.cpp" sc="0" tb="1" cflags=" "/>
-        <file name="alexisdumb.csv" sc="0" tb="false" cflags=""/>
-        <file name="correlator.cpp" sc="0" tb="false" cflags=""/>
-        <file name="joeIsAnIdiot.csv" sc="0" tb="false" cflags=""/>
         <file name="rfnoc.h" sc="0" tb="false" cflags=""/>
+        <file name="joeIsAnIdiot.csv" sc="0" tb="false" cflags=""/>
+        <file name="correlator.cpp" sc="0" tb="false" cflags=""/>
+        <file name="alexisdumb.csv" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

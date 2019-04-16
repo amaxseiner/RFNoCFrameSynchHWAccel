@@ -1144,9 +1144,5 @@
 #pragma line 221 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_fixed_special.h" ::: 29115
 #pragma line 56 "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_fixed.h" 2 ::: 29152
 #pragma line 4 "./correlator.h" 2 ::: 29153
-#pragma line 58 "./correlator.h" ::: 29192
-#pragma line 2 "correlator.cpp" 2 ::: 29194
-#pragma line 40 "correlator.cpp" ::: 29216
-#pragma line 234 "correlator.cpp" ::: 29306
-#pragma line 259 "correlator.cpp" ::: 29324
-#pragma line 423 "correlator.cpp" ::: 29339
+#pragma line 2 "correlator.cpp" 2 ::: 29225
+#pragma line 307 "correlator.cpp" ::: 29523

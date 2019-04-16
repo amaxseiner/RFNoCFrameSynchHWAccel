@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTop'" level="0">
-<item name = "Date">Thu Mar 28 14:56:21 2019
+<item name = "Date">Sat Apr  6 12:35:26 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">correlator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.03, 0.62</column>
+<column name="ap_clk">5.00, 4.18, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">10, 10, 1, 1, function</column>
+<column name="">1, 11, 1, 11, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_correlator_fu_1103">correlator, 4, 6, 4, 6, none</column>
+<column name="StgValue_35_shiftPhaseClass_fu_2132">shiftPhaseClass, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
