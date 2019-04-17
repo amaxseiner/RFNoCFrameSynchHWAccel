@@ -6,10 +6,8 @@
 // ===========================================================
 
 `timescale 1 ns / 1 ps 
-`include "correlateTop_mul_bkb.v"
-`include "correlator.v"
-`include "shiftPhaseClass.v"
-(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.177375,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=11630,HLS_SYN_LUT=13302}" *)
+
+(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.177375,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=11629,HLS_SYN_LUT=13747}" *)
 
 module correlateTop (
         ap_clk,

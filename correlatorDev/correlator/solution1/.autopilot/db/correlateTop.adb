@@ -2327,7 +2327,7 @@
               <name/>
               <fileName>correlator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>128</lineNumber>
+              <lineNumber>126</lineNumber>
               <contextFuncName>correlateTop</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2342,7 +2342,7 @@
                         <first>correlator.cpp</first>
                         <second>correlateTop</second>
                       </first>
-                      <second>128</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
@@ -2369,7 +2369,7 @@
               <name/>
               <fileName>correlator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>126</lineNumber>
+              <lineNumber>125</lineNumber>
               <contextFuncName>correlateTop</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2384,7 +2384,7 @@
                         <first>correlator.cpp</first>
                         <second>correlateTop</second>
                       </first>
-                      <second>126</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
@@ -2413,7 +2413,7 @@
               <name/>
               <fileName>correlator.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>131</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>correlateTop</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2428,7 +2428,7 @@
                         <first>correlator.cpp</first>
                         <second>correlateTop</second>
                       </first>
-                      <second>131</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -9434,7 +9434,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>11</mMinLatency>
+        <mMinLatency>10</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -9857,11 +9857,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>3207</second>
+              <second>3206</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>8591</second>
+              <second>9036</second>
             </item>
           </second>
         </item>

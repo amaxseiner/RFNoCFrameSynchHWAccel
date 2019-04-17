@@ -20,8 +20,12 @@ using namespace std;
 
 #define windowSize 16
 
-static ap_int<2> corrSeq[windowSize] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
-		//{-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+static ap_int<2> corrSeq[windowSize] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+
+static ap_int<2> corrSeqSynch[windowSize] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
+
+static ap_int<2> corrSeqPreamble[windowSize] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+//{-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
 
 typedef ap_int<16> cor_t;
 typedef ap_fixed<16,11> corTransmit_t;

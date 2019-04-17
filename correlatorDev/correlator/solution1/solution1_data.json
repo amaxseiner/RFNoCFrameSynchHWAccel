@@ -215,11 +215,11 @@
       "correlator": {
         "Latency": {
           "LatencyBest": "4",
-          "LatencyAvg": "6",
-          "LatencyWorst": "6",
+          "LatencyAvg": "5",
+          "LatencyWorst": "5",
           "PipelineIIMin": "4",
-          "PipelineIIMax": "6",
-          "PipelineII": "4 ~ 6",
+          "PipelineIIMax": "5",
+          "PipelineII": "4 ~ 5",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -230,8 +230,8 @@
         },
         "Area": {
           "DSP48E": "2",
-          "FF": "3207",
-          "LUT": "8591",
+          "FF": "3206",
+          "LUT": "9036",
           "BRAM_18K": "0"
         }
       },
@@ -239,10 +239,10 @@
         "Latency": {
           "LatencyBest": "1",
           "LatencyAvg": "6",
-          "LatencyWorst": "11",
+          "LatencyWorst": "10",
           "PipelineIIMin": "2",
-          "PipelineIIMax": "12",
-          "PipelineII": "2 ~ 12",
+          "PipelineIIMax": "11",
+          "PipelineII": "2 ~ 11",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -253,8 +253,8 @@
         },
         "Area": {
           "DSP48E": "2",
-          "FF": "11630",
-          "LUT": "13302",
+          "FF": "11629",
+          "LUT": "13747",
           "BRAM_18K": "0"
         }
       }
@@ -262,7 +262,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-04-06 12:35:34 EDT",
+    "Time": "2019-04-17 14:29:28 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

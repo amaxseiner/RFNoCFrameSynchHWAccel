@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'correlateTop'
 ================================================================
-* Date:           Sat Apr  6 12:35:33 2019
+* Date:           Wed Apr 17 14:29:27 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        correlator
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    1|   11|    1|   11|   none  |
+    |    1|   10|    1|   10|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                     |                 |  Latency  |  Interval | Pipeline|
         |               Instance              |      Module     | min | max | min | max |   Type  |
         +-------------------------------------+-----------------+-----+-----+-----+-----+---------+
-        |grp_correlator_fu_1103               |correlator       |    4|    6|    4|    6|   none  |
+        |grp_correlator_fu_1103               |correlator       |    4|    5|    4|    5|   none  |
         |StgValue_35_shiftPhaseClass_fu_2132  |shiftPhaseClass  |    0|    0|    0|    0|   none  |
         +-------------------------------------+-----------------+-----+-----+-----+-----+---------+
 
@@ -57,12 +57,12 @@
 |DSP              |        -|      -|       -|       -|
 |Expression       |        -|      -|       0|     206|
 |FIFO             |        -|      -|       -|       -|
-|Instance         |        -|      2|    3207|   12911|
+|Instance         |        -|      2|    3206|   13356|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|     185|
 |Register         |        -|      -|    8423|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      2|   11630|   13302|
+|Total            |        0|      2|   11629|   13747|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
@@ -74,10 +74,10 @@
     +-------------------------------------+-----------------+---------+-------+------+------+
     |               Instance              |      Module     | BRAM_18K| DSP48E|  FF  |  LUT |
     +-------------------------------------+-----------------+---------+-------+------+------+
-    |grp_correlator_fu_1103               |correlator       |        0|      2|  3207|  8591|
+    |grp_correlator_fu_1103               |correlator       |        0|      2|  3206|  9036|
     |StgValue_35_shiftPhaseClass_fu_2132  |shiftPhaseClass  |        0|      0|     0|  4320|
     +-------------------------------------+-----------------+---------+-------+------+------+
-    |Total                                |                 |        0|      2|  3207| 12911|
+    |Total                                |                 |        0|      2|  3206| 13356|
     +-------------------------------------+-----------------+---------+-------+------+------+
 
     * DSP48: 
@@ -762,16 +762,16 @@ ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsM
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !101"
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !105"
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @correlateTop_str) nounwind"
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:13]
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:14]
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [correlator.cpp:15]
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass0i_V_0, i16* @cor_phaseClass0i_V_1, i16* @cor_phaseClass0i_V_2, i16* @cor_phaseClass0i_V_3, i16* @cor_phaseClass0i_V_4, i16* @cor_phaseClass0i_V_5, i16* @cor_phaseClass0i_V_6, i16* @cor_phaseClass0i_V_7, i16* @cor_phaseClass0i_V_8, i16* @cor_phaseClass0i_V_9, i16* @cor_phaseClass0i_V_10, i16* @cor_phaseClass0i_V_11, i16* @cor_phaseClass0i_V_12, i16* @cor_phaseClass0i_V_13, i16* @cor_phaseClass0i_V_14, i16* @cor_phaseClass0i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:22]
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVali_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:58]
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newValq_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:61]
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:68]
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i4* @phaseClass_V, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:73]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4) nounwind" [correlator.cpp:13]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4) nounwind" [correlator.cpp:14]
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str4, [1 x i8]* @p_str4) nounwind" [correlator.cpp:15]
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass0i_V_0, i16* @cor_phaseClass0i_V_1, i16* @cor_phaseClass0i_V_2, i16* @cor_phaseClass0i_V_3, i16* @cor_phaseClass0i_V_4, i16* @cor_phaseClass0i_V_5, i16* @cor_phaseClass0i_V_6, i16* @cor_phaseClass0i_V_7, i16* @cor_phaseClass0i_V_8, i16* @cor_phaseClass0i_V_9, i16* @cor_phaseClass0i_V_10, i16* @cor_phaseClass0i_V_11, i16* @cor_phaseClass0i_V_12, i16* @cor_phaseClass0i_V_13, i16* @cor_phaseClass0i_V_14, i16* @cor_phaseClass0i_V_15, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:22]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newVali_V, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:58]
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @newValq_V, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:61]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:68]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i4* @phaseClass_V, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:73]
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%currentState_load = load i1* @currentState, align 1" [correlator.cpp:79]
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind" [correlator.cpp:79]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str4) nounwind" [correlator.cpp:79]
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%phaseClass_V_load = load i4* @phaseClass_V, align 1" [correlator.cpp:104]
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %currentState_load, label %._crit_edge191, label %0" [correlator.cpp:85]
 ST_1 : Operation 24 [1/1] (1.06ns)   --->   "store i32 0, i32* @loadCount_V, align 4" [correlator.cpp:88]
@@ -811,9 +811,9 @@ ST_6 : Operation 47 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.vola
 ST_6 : Operation 48 [1/1] (0.00ns)   --->   "br label %3" [correlator.cpp:119]
 ST_6 : Operation 49 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)" [correlator.cpp:121]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_6 : Operation 50 [1/1] (0.00ns)   --->   "br label %3"
-ST_6 : Operation 51 [1/1] (0.00ns)   --->   "br label %._crit_edge190" [correlator.cpp:128]
-ST_6 : Operation 52 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:126]
-ST_6 : Operation 53 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:131]
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "br label %._crit_edge190" [correlator.cpp:126]
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "store i1 true, i1* @currentState, align 1" [correlator.cpp:125]
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "ret void" [correlator.cpp:129]
 
 
 ============================================================
@@ -6150,7 +6150,7 @@ StgValue_53       (ret          ) [ 0000000]
 <pin id="1055" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
+<StgValue><ssdm name="p_str4"/></StgValue>
 </bind>
 </comp>
 
@@ -6159,7 +6159,7 @@ StgValue_53       (ret          ) [ 0000000]
 <pin id="1057" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str5"/></StgValue>
 </bind>
 </comp>
 
@@ -6177,7 +6177,7 @@ StgValue_53       (ret          ) [ 0000000]
 <pin id="1061" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -10830,7 +10830,7 @@ StgValue_53       (ret          ) [ 0000000]
 |----------|-------------------------------------|---------|---------|---------|
 | Operation|           Functional Unit           |  DSP48E |    FF   |   LUT   |
 |----------|-------------------------------------|---------|---------|---------|
-|   call   |        grp_correlator_fu_1103       |    2    |   4196  |   8201  |
+|   call   |        grp_correlator_fu_1103       |    2    |   4196  |   8649  |
 |          | StgValue_35_shiftPhaseClass_fu_2132 |    0    |    0    |    0    |
 |----------|-------------------------------------|---------|---------|---------|
 |    add   |            tmp_4_fu_3219            |    0    |    0    |    13   |
@@ -10849,7 +10849,7 @@ StgValue_53       (ret          ) [ 0000000]
 |----------|-------------------------------------|---------|---------|---------|
 |partselect|          p_Result_1_fu_3202         |    0    |    0    |    0    |
 |----------|-------------------------------------|---------|---------|---------|
-|   Total  |                                     |    2    |   4196  |   8271  |
+|   Total  |                                     |    2    |   4196  |   8719  |
 |----------|-------------------------------------|---------|---------|---------|
 
 Memories:
@@ -10883,10 +10883,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    2   |    -   |  4196  |  8271  |
+|  Function |    2   |    -   |  4196  |  8719  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    1   |    -   |    9   |
 |  Register |    -   |    -   |   39   |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    2   |    1   |  4235  |  8280  |
+|   Total   |    2   |    1   |  4235  |  8728  |
 +-----------+--------+--------+--------+--------+

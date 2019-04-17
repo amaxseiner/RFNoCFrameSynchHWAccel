@@ -12,13 +12,13 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:30.716-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' to 'correlator' (correlator.cpp:22:21)" projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:23.410-0400" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' to 'shiftPhaseClass' (correlator.cpp:22:3)" projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:22.345-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:16.115-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:01.587-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:01.460-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/ece492fa18/Vivado/2017.4/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-04-06T12:35:01.277-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="correlator" solutionName="solution1" date="2019-04-17T14:29:24.671-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' to 'correlator' (correlator.cpp:22:21)" projectName="correlator" solutionName="solution1" date="2019-04-17T14:29:17.287-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' to 'shiftPhaseClass' (correlator.cpp:22:3)" projectName="correlator" solutionName="solution1" date="2019-04-17T14:29:16.214-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-04-17T14:29:10.105-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="correlator" solutionName="solution1" date="2019-04-17T14:28:55.877-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="correlator" solutionName="solution1" date="2019-04-17T14:28:55.761-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/ece492fa18/Vivado/2017.4/common/technology/xilinx/null/null.lib'." projectName="correlator" solutionName="solution1" date="2019-04-17T14:28:55.613-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

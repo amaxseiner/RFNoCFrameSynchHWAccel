@@ -29161,7 +29161,11 @@ using namespace std;
 
 
 
-static ap_int<2> corrSeq[16] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
+static ap_int<2> corrSeq[16] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
+
+static ap_int<2> corrSeqSynch[16] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1};
+
+static ap_int<2> corrSeqPreamble[16] = {-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
 
 
 typedef ap_int<16> cor_t;
@@ -29337,9 +29341,7 @@ switch(currentState) {
 
   }
 
-
   currentState = ST_LOAD;
-
  break;
 }
 
@@ -29511,7 +29513,7 @@ ap_int<32> correlate::correlator(ap_uint<4> phaseClass){
  corHelperIPos = 0;
  corHelperQNeg = 0;
  corHelperQPos = 0;
-# 307 "correlator.cpp"
+# 305 "correlator.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -29714,7 +29716,6 @@ ap_int<32> correlate::correlator(ap_uint<4> phaseClass){
  } else {
   resi = corHelperINeg - corHelperIPos;
  }
-
 
  if(corHelperIPos > corHelperINeg){
   resq = corHelperQPos - corHelperQNeg;

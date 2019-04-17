@@ -6,8 +6,8 @@
 
 source /home/ece492fa18/Vivado/2017.4/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/home/ece492fa18/Vivado/2017.4/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-46-generic) on Sat Apr 06 11:57:24 EDT 2019
+INFO: [HLS 200-10] For user 'ece492fa18' on host 'srn1-PowerEdge-R730' (Linux_x86_64 version 4.15.0-46-generic) on Wed Apr 17 14:02:33 EDT 2019
 INFO: [HLS 200-10] On os Ubuntu 16.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator'
 INFO: [HLS 200-10] Bringing up Vivado HLS GUI ...
-INFO: [Common 17-206] Exiting vivado_hls at Sat Apr  6 15:56:37 2019...
+INFO: [Common 17-206] Exiting vivado_hls at Wed Apr 17 15:10:32 2019...
