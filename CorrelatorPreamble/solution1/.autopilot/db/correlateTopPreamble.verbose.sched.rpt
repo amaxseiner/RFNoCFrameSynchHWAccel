@@ -1,0 +1,293 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlateTopPreamble'
+================================================================
+* Date:           Wed Apr 17 15:25:24 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        CorrelatorPreamble
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.22|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|   10|    2|   11|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (currentState_load)
+	6  / (!currentState_load)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 1.03ns
+ST_1: StgValue_7 (522)  [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !93
+
+ST_1: StgValue_8 (523)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !97
+
+ST_1: StgValue_9 (524)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !101
+
+ST_1: StgValue_10 (525)  [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !105
+
+ST_1: StgValue_11 (526)  [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @correlateTopPreamble_1) nounwind
+
+ST_1: StgValue_12 (527)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:13
+codeRepl:5  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_13 (528)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:14
+codeRepl:6  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_14 (529)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:15
+codeRepl:7  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_15 (530)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:22
+codeRepl:8  call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass0i_V_0, i16* @cor_phaseClass0i_V_1, i16* @cor_phaseClass0i_V_2, i16* @cor_phaseClass0i_V_3, i16* @cor_phaseClass0i_V_4, i16* @cor_phaseClass0i_V_5, i16* @cor_phaseClass0i_V_6, i16* @cor_phaseClass0i_V_7, i16* @cor_phaseClass0i_V_8, i16* @cor_phaseClass0i_V_9, i16* @cor_phaseClass0i_V_10, i16* @cor_phaseClass0i_V_11, i16* @cor_phaseClass0i_V_12, i16* @cor_phaseClass0i_V_13, i16* @cor_phaseClass0i_V_14, i16* @cor_phaseClass0i_V_15, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_16 (531)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:58
+codeRepl:9  call void (...)* @_ssdm_op_SpecReset(i16* @newVali_V, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_17 (532)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:61
+codeRepl:10  call void (...)* @_ssdm_op_SpecReset(i16* @newValq_V, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_18 (533)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:68
+codeRepl:11  call void (...)* @_ssdm_op_SpecReset(i32* @loadCount_V, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: StgValue_19 (534)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:73
+codeRepl:12  call void (...)* @_ssdm_op_SpecReset(i4* @phaseClass_V, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: currentState_load (535)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:79
+codeRepl:13  %currentState_load = load i1* @currentState, align 1
+
+ST_1: StgValue_21 (536)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:79
+codeRepl:14  call void (...)* @_ssdm_op_SpecReset(i1* @currentState, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: phaseClass_V_load (537)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:104
+codeRepl:15  %phaseClass_V_load = load i4* @phaseClass_V, align 1
+
+ST_1: StgValue_23 (538)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:85
+codeRepl:16  br i1 %currentState_load, label %._crit_edge182, label %0
+
+ST_1: StgValue_24 (540)  [1/1] 1.03ns  loc: CorrelatorPreamble/correlatorPre.cpp:88
+:0  store i32 0, i32* @loadCount_V, align 4
+
+ST_1: StgValue_25 (541)  [1/1] 1.03ns  loc: CorrelatorPreamble/correlatorPre.cpp:89
+:1  store i4 0, i4* @phaseClass_V, align 1
+
+ST_1: StgValue_26 (542)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:92
+:2  br label %._crit_edge181
+
+ST_1: empty (544)  [2/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:94
+._crit_edge182:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+
+
+ <State 2>: 2.51ns
+ST_2: empty (544)  [1/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:94
+._crit_edge182:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+
+ST_2: tmp_data_V_1 (545)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:94
+._crit_edge182:1  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
+
+ST_2: tmp_last_V (546)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:94
+._crit_edge182:2  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
+
+ST_2: tmp (547)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:97
+._crit_edge182:3  %tmp = trunc i32 %tmp_data_V_1 to i16
+
+ST_2: StgValue_32 (548)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:97
+._crit_edge182:4  store i16 %tmp, i16* @newVali_V, align 2
+
+ST_2: p_Result_1 (549)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:98
+._crit_edge182:5  %p_Result_1 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp_data_V_1, i32 16, i32 31)
+
+ST_2: StgValue_34 (550)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:98
+._crit_edge182:6  store i16 %p_Result_1, i16* @newValq_V, align 2
+
+ST_2: StgValue_35 (551)  [1/1] 2.51ns  loc: CorrelatorPreamble/correlatorPre.cpp:104
+._crit_edge182:7  call fastcc void @shiftPhaseClassPre(i16 %tmp, i16 %p_Result_1, i4 %phaseClass_V_load)
+
+
+ <State 3>: 2.68ns
+ST_3: tmp_data_V (552)  [2/2] 2.51ns  loc: CorrelatorPreamble/correlatorPre.cpp:105
+._crit_edge182:8  %tmp_data_V = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
+
+ST_3: tmp_4 (556)  [1/1] 1.65ns  loc: CorrelatorPreamble/correlatorPre.cpp:112
+._crit_edge182:12  %tmp_4 = add i4 1, %phaseClass_V_load
+
+ST_3: StgValue_38 (557)  [1/1] 1.03ns  loc: CorrelatorPreamble/correlatorPre.cpp:110
+._crit_edge182:13  store i4 %tmp_4, i4* @phaseClass_V, align 1
+
+
+ <State 4>: 3.49ns
+ST_4: tmp_data_V (552)  [1/2] 3.49ns  loc: CorrelatorPreamble/correlatorPre.cpp:105
+._crit_edge182:8  %tmp_data_V = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
+
+
+ <State 5>: 2.76ns
+ST_5: loadCount_V_load (553)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:108
+._crit_edge182:9  %loadCount_V_load = load i32* @loadCount_V, align 4
+
+ST_5: tmp_2 (554)  [1/1] 1.73ns  loc: CorrelatorPreamble/correlatorPre.cpp:108
+._crit_edge182:10  %tmp_2 = add i32 1, %loadCount_V_load
+
+ST_5: StgValue_42 (555)  [1/1] 1.03ns  loc: CorrelatorPreamble/correlatorPre.cpp:108
+._crit_edge182:11  store i32 %tmp_2, i32* @loadCount_V, align 4
+
+ST_5: tmp_5 (558)  [1/1] 2.08ns  loc: CorrelatorPreamble/correlatorPre.cpp:115
+._crit_edge182:14  %tmp_5 = icmp eq i32 %tmp_data_V, 0
+
+ST_5: StgValue_44 (559)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:115
+._crit_edge182:15  br i1 %tmp_5, label %2, label %1
+
+ST_5: StgValue_45 (561)  [2/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:117
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 %tmp_last_V)
+
+ST_5: StgValue_46 (564)  [2/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:121
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
+
+
+ <State 6>: 0.00ns
+ST_6: StgValue_47 (561)  [1/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:117
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 %tmp_last_V)
+
+ST_6: StgValue_48 (562)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:119
+:1  br label %3
+
+ST_6: StgValue_49 (564)  [1/2] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:121
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
+
+ST_6: StgValue_50 (565)  [1/1] 0.00ns
+:1  br label %3
+
+ST_6: StgValue_51 (567)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:126
+:0  br label %._crit_edge181
+
+ST_6: StgValue_52 (569)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:125
+._crit_edge181:0  store i1 true, i1* @currentState, align 1
+
+ST_6: StgValue_53 (570)  [1/1] 0.00ns  loc: CorrelatorPreamble/correlatorPre.cpp:129
+._crit_edge181:1  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.03ns
+The critical path consists of the following:
+	'store' operation (CorrelatorPreamble/correlatorPre.cpp:88) of constant 0 on static variable 'loadCount_V' [540]  (1.03 ns)
+
+ <State 2>: 2.51ns
+The critical path consists of the following:
+	axis read on port 'i_data_V_data_V' (CorrelatorPreamble/correlatorPre.cpp:94) [544]  (0 ns)
+	'call' operation (CorrelatorPreamble/correlatorPre.cpp:104) to 'shiftPhaseClassPre' [551]  (2.51 ns)
+
+ <State 3>: 2.68ns
+The critical path consists of the following:
+	'add' operation ('tmp_4', CorrelatorPreamble/correlatorPre.cpp:112) [556]  (1.65 ns)
+	'store' operation (CorrelatorPreamble/correlatorPre.cpp:110) of variable 'tmp_4', CorrelatorPreamble/correlatorPre.cpp:112 on static variable 'phaseClass_V' [557]  (1.03 ns)
+
+ <State 4>: 3.49ns
+The critical path consists of the following:
+	'call' operation ('tmp.data.V', CorrelatorPreamble/correlatorPre.cpp:105) to 'correlatorPre' [552]  (3.49 ns)
+
+ <State 5>: 2.76ns
+The critical path consists of the following:
+	'load' operation ('loadCount_V_load', CorrelatorPreamble/correlatorPre.cpp:108) on static variable 'loadCount_V' [553]  (0 ns)
+	'add' operation ('tmp_2', CorrelatorPreamble/correlatorPre.cpp:108) [554]  (1.73 ns)
+	'store' operation (CorrelatorPreamble/correlatorPre.cpp:108) of variable 'tmp_2', CorrelatorPreamble/correlatorPre.cpp:108 on static variable 'loadCount_V' [555]  (1.03 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
