@@ -1,0 +1,3166 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlatorSynch'
+================================================================
+* Date:           Wed Apr 17 15:34:40 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        CorrelatorSynch
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k160tfbg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.28|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|    5|    4|    5|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+	3  / false
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 4.22ns
+ST_1: StgValue_7 (514)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:22
+:0  call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass0i_V_0, i16* @cor_phaseClass0i_V_1, i16* @cor_phaseClass0i_V_2, i16* @cor_phaseClass0i_V_3, i16* @cor_phaseClass0i_V_4, i16* @cor_phaseClass0i_V_5, i16* @cor_phaseClass0i_V_6, i16* @cor_phaseClass0i_V_7, i16* @cor_phaseClass0i_V_8, i16* @cor_phaseClass0i_V_9, i16* @cor_phaseClass0i_V_10, i16* @cor_phaseClass0i_V_11, i16* @cor_phaseClass0i_V_12, i16* @cor_phaseClass0i_V_13, i16* @cor_phaseClass0i_V_14, i16* @cor_phaseClass0i_V_15, i32 1, [1 x i8]* @p_str2) nounwind
+
+ST_1: phaseClass_V_read (515)  [1/1] 0.00ns
+:1  %phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)
+
+ST_1: StgValue_9 (516)  [1/1] 2.51ns  loc: CorrelatorSynch/correlatorSynch.cpp:305
+:2  switch i4 %phaseClass_V_read, label %.loopexit [
+    i4 0, label %.preheader2939.0
+    i4 1, label %.preheader2937.0
+    i4 2, label %.preheader2935.0
+    i4 3, label %.preheader2933.0
+    i4 4, label %.preheader2931.0
+    i4 5, label %.preheader2929.0
+    i4 6, label %.preheader2927.0
+    i4 7, label %.preheader2925.0
+    i4 -8, label %.preheader2923.0
+    i4 -7, label %.preheader2921.0
+    i4 -6, label %.preheader2919.0
+    i4 -5, label %.preheader2917.0
+    i4 -4, label %.preheader2915.0
+    i4 -3, label %.preheader2913.0
+    i4 -2, label %.preheader2911.0
+    i4 -1, label %.preheader.0
+  ]
+
+ST_1: cor_phaseClass15i_V_s (518)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:0  %cor_phaseClass15i_V_s = load i16* @cor_phaseClass15i_V_15, align 2
+
+ST_1: cor_phaseClass15q_V_s (519)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:1  %cor_phaseClass15q_V_s = load i16* @cor_phaseClass15q_V_15, align 2
+
+ST_1: cor_phaseClass15i_V_15 (520)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:2  %cor_phaseClass15i_V_15 = load i16* @cor_phaseClass15i_V_14, align 4
+
+ST_1: cor_phaseClass15q_V_15 (521)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:3  %cor_phaseClass15q_V_15 = load i16* @cor_phaseClass15q_V_14, align 4
+
+ST_1: cor_phaseClass15i_V_16 (522)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:4  %cor_phaseClass15i_V_16 = load i16* @cor_phaseClass15i_V_13, align 2
+
+ST_1: cor_phaseClass15q_V_16 (523)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:5  %cor_phaseClass15q_V_16 = load i16* @cor_phaseClass15q_V_13, align 2
+
+ST_1: cor_phaseClass15i_V_17 (524)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:6  %cor_phaseClass15i_V_17 = load i16* @cor_phaseClass15i_V_12, align 8
+
+ST_1: cor_phaseClass15q_V_17 (525)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:7  %cor_phaseClass15q_V_17 = load i16* @cor_phaseClass15q_V_12, align 8
+
+ST_1: cor_phaseClass15i_V_18 (526)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:8  %cor_phaseClass15i_V_18 = load i16* @cor_phaseClass15i_V_11, align 2
+
+ST_1: cor_phaseClass15q_V_18 (527)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:9  %cor_phaseClass15q_V_18 = load i16* @cor_phaseClass15q_V_11, align 2
+
+ST_1: cor_phaseClass15i_V_19 (528)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:10  %cor_phaseClass15i_V_19 = load i16* @cor_phaseClass15i_V_10, align 4
+
+ST_1: cor_phaseClass15q_V_19 (529)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:11  %cor_phaseClass15q_V_19 = load i16* @cor_phaseClass15q_V_10, align 4
+
+ST_1: cor_phaseClass15i_V_20 (530)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:12  %cor_phaseClass15i_V_20 = load i16* @cor_phaseClass15i_V_9, align 2
+
+ST_1: cor_phaseClass15q_V_20 (531)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:13  %cor_phaseClass15q_V_20 = load i16* @cor_phaseClass15q_V_9, align 2
+
+ST_1: cor_phaseClass15i_V_21 (532)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:14  %cor_phaseClass15i_V_21 = load i16* @cor_phaseClass15i_V_8, align 16
+
+ST_1: cor_phaseClass15q_V_21 (533)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:15  %cor_phaseClass15q_V_21 = load i16* @cor_phaseClass15q_V_8, align 16
+
+ST_1: cor_phaseClass15i_V_22 (534)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:16  %cor_phaseClass15i_V_22 = load i16* @cor_phaseClass15i_V_7, align 2
+
+ST_1: cor_phaseClass15q_V_22 (535)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:17  %cor_phaseClass15q_V_22 = load i16* @cor_phaseClass15q_V_7, align 2
+
+ST_1: cor_phaseClass15i_V_23 (536)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:18  %cor_phaseClass15i_V_23 = load i16* @cor_phaseClass15i_V_6, align 4
+
+ST_1: cor_phaseClass15q_V_23 (537)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:19  %cor_phaseClass15q_V_23 = load i16* @cor_phaseClass15q_V_6, align 4
+
+ST_1: cor_phaseClass15i_V_24 (538)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:20  %cor_phaseClass15i_V_24 = load i16* @cor_phaseClass15i_V_5, align 2
+
+ST_1: cor_phaseClass15q_V_24 (539)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:21  %cor_phaseClass15q_V_24 = load i16* @cor_phaseClass15q_V_5, align 2
+
+ST_1: cor_phaseClass15i_V_25 (540)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:22  %cor_phaseClass15i_V_25 = load i16* @cor_phaseClass15i_V_4, align 8
+
+ST_1: cor_phaseClass15q_V_25 (541)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:23  %cor_phaseClass15q_V_25 = load i16* @cor_phaseClass15q_V_4, align 8
+
+ST_1: cor_phaseClass15i_V_26 (542)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:24  %cor_phaseClass15i_V_26 = load i16* @cor_phaseClass15i_V_3, align 2
+
+ST_1: tmp1 (543)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:25  %tmp1 = add i16 %cor_phaseClass15i_V_15, %cor_phaseClass15i_V_20
+
+ST_1: tmp (544)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:26  %tmp = add i16 %tmp1, %cor_phaseClass15i_V_16
+
+ST_1: tmp3 (545)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:27  %tmp3 = add i16 %cor_phaseClass15i_V_21, %cor_phaseClass15i_V_22
+
+ST_1: tmp4 (546)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:28  %tmp4 = add i16 %cor_phaseClass15i_V_23, %cor_phaseClass15i_V_26
+
+ST_1: tmp2 (547)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:29  %tmp2 = add i16 %tmp4, %tmp3
+
+ST_1: corHelperIPos_V_15_s (548)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.preheader.0:30  %corHelperIPos_V_15_s = add i16 %tmp2, %tmp
+
+ST_1: cor_phaseClass15q_V_26 (549)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:31  %cor_phaseClass15q_V_26 = load i16* @cor_phaseClass15q_V_3, align 2
+
+ST_1: tmp6 (550)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:32  %tmp6 = add i16 %cor_phaseClass15q_V_15, %cor_phaseClass15q_V_20
+
+ST_1: tmp5 (551)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:33  %tmp5 = add i16 %tmp6, %cor_phaseClass15q_V_16
+
+ST_1: tmp8 (552)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:34  %tmp8 = add i16 %cor_phaseClass15q_V_21, %cor_phaseClass15q_V_22
+
+ST_1: tmp9 (553)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:35  %tmp9 = add i16 %cor_phaseClass15q_V_23, %cor_phaseClass15q_V_26
+
+ST_1: tmp7 (554)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:36  %tmp7 = add i16 %tmp9, %tmp8
+
+ST_1: corHelperQPos_V_15_s (555)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.preheader.0:37  %corHelperQPos_V_15_s = add i16 %tmp7, %tmp5
+
+ST_1: cor_phaseClass15i_V_27 (556)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:38  %cor_phaseClass15i_V_27 = load i16* @cor_phaseClass15i_V_2, align 4
+
+ST_1: cor_phaseClass15q_V_27 (557)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:39  %cor_phaseClass15q_V_27 = load i16* @cor_phaseClass15q_V_2, align 4
+
+ST_1: cor_phaseClass15i_V_28 (558)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:40  %cor_phaseClass15i_V_28 = load i16* @cor_phaseClass15i_V_1, align 2
+
+ST_1: cor_phaseClass15q_V_28 (559)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:41  %cor_phaseClass15q_V_28 = load i16* @cor_phaseClass15q_V_1, align 2
+
+ST_1: cor_phaseClass15i_V_29 (560)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:42  %cor_phaseClass15i_V_29 = load i16* @cor_phaseClass15i_V_s, align 16
+
+ST_1: tmp11 (561)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:43  %tmp11 = add i16 %cor_phaseClass15i_V_17, %cor_phaseClass15i_V_s
+
+ST_1: tmp12 (562)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:44  %tmp12 = add i16 %cor_phaseClass15i_V_18, %cor_phaseClass15i_V_19
+
+ST_1: tmp14 (564)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:46  %tmp14 = add i16 %cor_phaseClass15i_V_24, %cor_phaseClass15i_V_25
+
+ST_1: tmp16 (565)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:47  %tmp16 = add i16 %cor_phaseClass15i_V_28, %cor_phaseClass15i_V_29
+
+ST_1: tmp15 (566)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:48  %tmp15 = add i16 %tmp16, %cor_phaseClass15i_V_27
+
+ST_1: tmp13 (567)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:49  %tmp13 = add i16 %tmp15, %tmp14
+
+ST_1: cor_phaseClass15q_V_29 (569)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:51  %cor_phaseClass15q_V_29 = load i16* @cor_phaseClass15q_V_s, align 16
+
+ST_1: tmp18 (570)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:52  %tmp18 = add i16 %cor_phaseClass15q_V_17, %cor_phaseClass15q_V_s
+
+ST_1: tmp19 (571)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:53  %tmp19 = add i16 %cor_phaseClass15q_V_18, %cor_phaseClass15q_V_19
+
+ST_1: tmp21 (573)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:55  %tmp21 = add i16 %cor_phaseClass15q_V_24, %cor_phaseClass15q_V_25
+
+ST_1: tmp23 (574)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:56  %tmp23 = add i16 %cor_phaseClass15q_V_28, %cor_phaseClass15q_V_29
+
+ST_1: tmp22 (575)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:57  %tmp22 = add i16 %tmp23, %cor_phaseClass15q_V_27
+
+ST_1: tmp20 (576)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:58  %tmp20 = add i16 %tmp22, %tmp21
+
+ST_1: cor_phaseClass14i_V_s (580)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:0  %cor_phaseClass14i_V_s = load i16* @cor_phaseClass14i_V_15, align 2
+
+ST_1: cor_phaseClass14q_V_s (581)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:1  %cor_phaseClass14q_V_s = load i16* @cor_phaseClass14q_V_15, align 2
+
+ST_1: cor_phaseClass14i_V_15 (582)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:2  %cor_phaseClass14i_V_15 = load i16* @cor_phaseClass14i_V_14, align 4
+
+ST_1: cor_phaseClass14q_V_15 (583)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:3  %cor_phaseClass14q_V_15 = load i16* @cor_phaseClass14q_V_14, align 4
+
+ST_1: cor_phaseClass14i_V_16 (584)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:4  %cor_phaseClass14i_V_16 = load i16* @cor_phaseClass14i_V_13, align 2
+
+ST_1: cor_phaseClass14q_V_16 (585)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:5  %cor_phaseClass14q_V_16 = load i16* @cor_phaseClass14q_V_13, align 2
+
+ST_1: cor_phaseClass14i_V_17 (586)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:6  %cor_phaseClass14i_V_17 = load i16* @cor_phaseClass14i_V_12, align 8
+
+ST_1: cor_phaseClass14q_V_17 (587)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:7  %cor_phaseClass14q_V_17 = load i16* @cor_phaseClass14q_V_12, align 8
+
+ST_1: cor_phaseClass14i_V_18 (588)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:8  %cor_phaseClass14i_V_18 = load i16* @cor_phaseClass14i_V_11, align 2
+
+ST_1: cor_phaseClass14q_V_18 (589)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:9  %cor_phaseClass14q_V_18 = load i16* @cor_phaseClass14q_V_11, align 2
+
+ST_1: cor_phaseClass14i_V_19 (590)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:10  %cor_phaseClass14i_V_19 = load i16* @cor_phaseClass14i_V_10, align 4
+
+ST_1: cor_phaseClass14q_V_19 (591)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:11  %cor_phaseClass14q_V_19 = load i16* @cor_phaseClass14q_V_10, align 4
+
+ST_1: cor_phaseClass14i_V_20 (592)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:12  %cor_phaseClass14i_V_20 = load i16* @cor_phaseClass14i_V_9, align 2
+
+ST_1: cor_phaseClass14q_V_20 (593)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:13  %cor_phaseClass14q_V_20 = load i16* @cor_phaseClass14q_V_9, align 2
+
+ST_1: cor_phaseClass14i_V_21 (594)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:14  %cor_phaseClass14i_V_21 = load i16* @cor_phaseClass14i_V_8, align 16
+
+ST_1: cor_phaseClass14q_V_21 (595)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:15  %cor_phaseClass14q_V_21 = load i16* @cor_phaseClass14q_V_8, align 16
+
+ST_1: cor_phaseClass14i_V_22 (596)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:16  %cor_phaseClass14i_V_22 = load i16* @cor_phaseClass14i_V_7, align 2
+
+ST_1: cor_phaseClass14q_V_22 (597)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:17  %cor_phaseClass14q_V_22 = load i16* @cor_phaseClass14q_V_7, align 2
+
+ST_1: cor_phaseClass14i_V_23 (598)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:18  %cor_phaseClass14i_V_23 = load i16* @cor_phaseClass14i_V_6, align 4
+
+ST_1: cor_phaseClass14q_V_23 (599)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:19  %cor_phaseClass14q_V_23 = load i16* @cor_phaseClass14q_V_6, align 4
+
+ST_1: cor_phaseClass14i_V_24 (600)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:20  %cor_phaseClass14i_V_24 = load i16* @cor_phaseClass14i_V_5, align 2
+
+ST_1: cor_phaseClass14q_V_24 (601)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:21  %cor_phaseClass14q_V_24 = load i16* @cor_phaseClass14q_V_5, align 2
+
+ST_1: cor_phaseClass14i_V_25 (602)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:22  %cor_phaseClass14i_V_25 = load i16* @cor_phaseClass14i_V_4, align 8
+
+ST_1: cor_phaseClass14q_V_25 (603)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:23  %cor_phaseClass14q_V_25 = load i16* @cor_phaseClass14q_V_4, align 8
+
+ST_1: cor_phaseClass14i_V_26 (604)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:24  %cor_phaseClass14i_V_26 = load i16* @cor_phaseClass14i_V_3, align 2
+
+ST_1: tmp25 (605)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:25  %tmp25 = add i16 %cor_phaseClass14i_V_15, %cor_phaseClass14i_V_20
+
+ST_1: tmp24 (606)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:26  %tmp24 = add i16 %tmp25, %cor_phaseClass14i_V_16
+
+ST_1: tmp27 (607)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:27  %tmp27 = add i16 %cor_phaseClass14i_V_21, %cor_phaseClass14i_V_22
+
+ST_1: tmp28 (608)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:28  %tmp28 = add i16 %cor_phaseClass14i_V_23, %cor_phaseClass14i_V_26
+
+ST_1: tmp26 (609)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:29  %tmp26 = add i16 %tmp28, %tmp27
+
+ST_1: corHelperIPos_V_14_s (610)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:480
+.preheader2911.0:30  %corHelperIPos_V_14_s = add i16 %tmp26, %tmp24
+
+ST_1: cor_phaseClass14q_V_26 (611)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:31  %cor_phaseClass14q_V_26 = load i16* @cor_phaseClass14q_V_3, align 2
+
+ST_1: tmp30 (612)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:32  %tmp30 = add i16 %cor_phaseClass14q_V_15, %cor_phaseClass14q_V_20
+
+ST_1: tmp29 (613)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:33  %tmp29 = add i16 %tmp30, %cor_phaseClass14q_V_16
+
+ST_1: tmp32 (614)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:34  %tmp32 = add i16 %cor_phaseClass14q_V_21, %cor_phaseClass14q_V_22
+
+ST_1: tmp33 (615)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:35  %tmp33 = add i16 %cor_phaseClass14q_V_23, %cor_phaseClass14q_V_26
+
+ST_1: tmp31 (616)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:36  %tmp31 = add i16 %tmp33, %tmp32
+
+ST_1: corHelperQPos_V_14_s (617)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:481
+.preheader2911.0:37  %corHelperQPos_V_14_s = add i16 %tmp31, %tmp29
+
+ST_1: cor_phaseClass14i_V_27 (618)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:38  %cor_phaseClass14i_V_27 = load i16* @cor_phaseClass14i_V_2, align 4
+
+ST_1: cor_phaseClass14q_V_27 (619)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:39  %cor_phaseClass14q_V_27 = load i16* @cor_phaseClass14q_V_2, align 4
+
+ST_1: cor_phaseClass14i_V_28 (620)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:40  %cor_phaseClass14i_V_28 = load i16* @cor_phaseClass14i_V_1, align 2
+
+ST_1: cor_phaseClass14q_V_28 (621)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:41  %cor_phaseClass14q_V_28 = load i16* @cor_phaseClass14q_V_1, align 2
+
+ST_1: cor_phaseClass14i_V_29 (622)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:42  %cor_phaseClass14i_V_29 = load i16* @cor_phaseClass14i_V_s, align 16
+
+ST_1: tmp35 (623)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:43  %tmp35 = add i16 %cor_phaseClass14i_V_17, %cor_phaseClass14i_V_s
+
+ST_1: tmp36 (624)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:44  %tmp36 = add i16 %cor_phaseClass14i_V_18, %cor_phaseClass14i_V_19
+
+ST_1: tmp38 (626)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:46  %tmp38 = add i16 %cor_phaseClass14i_V_24, %cor_phaseClass14i_V_25
+
+ST_1: tmp40 (627)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:47  %tmp40 = add i16 %cor_phaseClass14i_V_28, %cor_phaseClass14i_V_29
+
+ST_1: tmp39 (628)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:48  %tmp39 = add i16 %tmp40, %cor_phaseClass14i_V_27
+
+ST_1: tmp37 (629)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:49  %tmp37 = add i16 %tmp39, %tmp38
+
+ST_1: cor_phaseClass14q_V_29 (631)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:51  %cor_phaseClass14q_V_29 = load i16* @cor_phaseClass14q_V_s, align 16
+
+ST_1: tmp42 (632)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:52  %tmp42 = add i16 %cor_phaseClass14q_V_17, %cor_phaseClass14q_V_s
+
+ST_1: tmp43 (633)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:53  %tmp43 = add i16 %cor_phaseClass14q_V_18, %cor_phaseClass14q_V_19
+
+ST_1: tmp45 (635)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:55  %tmp45 = add i16 %cor_phaseClass14q_V_24, %cor_phaseClass14q_V_25
+
+ST_1: tmp47 (636)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:56  %tmp47 = add i16 %cor_phaseClass14q_V_28, %cor_phaseClass14q_V_29
+
+ST_1: tmp46 (637)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:57  %tmp46 = add i16 %tmp47, %cor_phaseClass14q_V_27
+
+ST_1: tmp44 (638)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:58  %tmp44 = add i16 %tmp46, %tmp45
+
+ST_1: cor_phaseClass13i_V_s (642)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:0  %cor_phaseClass13i_V_s = load i16* @cor_phaseClass13i_V_15, align 2
+
+ST_1: cor_phaseClass13q_V_s (643)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:1  %cor_phaseClass13q_V_s = load i16* @cor_phaseClass13q_V_15, align 2
+
+ST_1: cor_phaseClass13i_V_15 (644)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:2  %cor_phaseClass13i_V_15 = load i16* @cor_phaseClass13i_V_14, align 4
+
+ST_1: cor_phaseClass13q_V_15 (645)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:3  %cor_phaseClass13q_V_15 = load i16* @cor_phaseClass13q_V_14, align 4
+
+ST_1: cor_phaseClass13i_V_16 (646)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:4  %cor_phaseClass13i_V_16 = load i16* @cor_phaseClass13i_V_13, align 2
+
+ST_1: cor_phaseClass13q_V_16 (647)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:5  %cor_phaseClass13q_V_16 = load i16* @cor_phaseClass13q_V_13, align 2
+
+ST_1: cor_phaseClass13i_V_17 (648)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:6  %cor_phaseClass13i_V_17 = load i16* @cor_phaseClass13i_V_12, align 8
+
+ST_1: cor_phaseClass13q_V_17 (649)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:7  %cor_phaseClass13q_V_17 = load i16* @cor_phaseClass13q_V_12, align 8
+
+ST_1: cor_phaseClass13i_V_18 (650)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:8  %cor_phaseClass13i_V_18 = load i16* @cor_phaseClass13i_V_11, align 2
+
+ST_1: cor_phaseClass13q_V_18 (651)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:9  %cor_phaseClass13q_V_18 = load i16* @cor_phaseClass13q_V_11, align 2
+
+ST_1: cor_phaseClass13i_V_19 (652)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:10  %cor_phaseClass13i_V_19 = load i16* @cor_phaseClass13i_V_10, align 4
+
+ST_1: cor_phaseClass13q_V_19 (653)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:11  %cor_phaseClass13q_V_19 = load i16* @cor_phaseClass13q_V_10, align 4
+
+ST_1: cor_phaseClass13i_V_20 (654)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:12  %cor_phaseClass13i_V_20 = load i16* @cor_phaseClass13i_V_9, align 2
+
+ST_1: cor_phaseClass13q_V_20 (655)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:13  %cor_phaseClass13q_V_20 = load i16* @cor_phaseClass13q_V_9, align 2
+
+ST_1: cor_phaseClass13i_V_21 (656)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:14  %cor_phaseClass13i_V_21 = load i16* @cor_phaseClass13i_V_8, align 16
+
+ST_1: cor_phaseClass13q_V_21 (657)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:15  %cor_phaseClass13q_V_21 = load i16* @cor_phaseClass13q_V_8, align 16
+
+ST_1: cor_phaseClass13i_V_22 (658)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:16  %cor_phaseClass13i_V_22 = load i16* @cor_phaseClass13i_V_7, align 2
+
+ST_1: cor_phaseClass13q_V_22 (659)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:17  %cor_phaseClass13q_V_22 = load i16* @cor_phaseClass13q_V_7, align 2
+
+ST_1: cor_phaseClass13i_V_23 (660)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:18  %cor_phaseClass13i_V_23 = load i16* @cor_phaseClass13i_V_6, align 4
+
+ST_1: cor_phaseClass13q_V_23 (661)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:19  %cor_phaseClass13q_V_23 = load i16* @cor_phaseClass13q_V_6, align 4
+
+ST_1: cor_phaseClass13i_V_24 (662)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:20  %cor_phaseClass13i_V_24 = load i16* @cor_phaseClass13i_V_5, align 2
+
+ST_1: cor_phaseClass13q_V_24 (663)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:21  %cor_phaseClass13q_V_24 = load i16* @cor_phaseClass13q_V_5, align 2
+
+ST_1: cor_phaseClass13i_V_25 (664)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:22  %cor_phaseClass13i_V_25 = load i16* @cor_phaseClass13i_V_4, align 8
+
+ST_1: cor_phaseClass13q_V_25 (665)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:23  %cor_phaseClass13q_V_25 = load i16* @cor_phaseClass13q_V_4, align 8
+
+ST_1: cor_phaseClass13i_V_26 (666)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:24  %cor_phaseClass13i_V_26 = load i16* @cor_phaseClass13i_V_3, align 2
+
+ST_1: tmp49 (667)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:25  %tmp49 = add i16 %cor_phaseClass13i_V_15, %cor_phaseClass13i_V_20
+
+ST_1: tmp48 (668)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:26  %tmp48 = add i16 %tmp49, %cor_phaseClass13i_V_16
+
+ST_1: tmp51 (669)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:27  %tmp51 = add i16 %cor_phaseClass13i_V_21, %cor_phaseClass13i_V_22
+
+ST_1: tmp52 (670)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:28  %tmp52 = add i16 %cor_phaseClass13i_V_23, %cor_phaseClass13i_V_26
+
+ST_1: tmp50 (671)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:29  %tmp50 = add i16 %tmp52, %tmp51
+
+ST_1: corHelperIPos_V_13_s (672)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:468
+.preheader2913.0:30  %corHelperIPos_V_13_s = add i16 %tmp50, %tmp48
+
+ST_1: cor_phaseClass13q_V_26 (673)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:31  %cor_phaseClass13q_V_26 = load i16* @cor_phaseClass13q_V_3, align 2
+
+ST_1: tmp54 (674)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:32  %tmp54 = add i16 %cor_phaseClass13q_V_15, %cor_phaseClass13q_V_20
+
+ST_1: tmp53 (675)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:33  %tmp53 = add i16 %tmp54, %cor_phaseClass13q_V_16
+
+ST_1: tmp56 (676)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:34  %tmp56 = add i16 %cor_phaseClass13q_V_21, %cor_phaseClass13q_V_22
+
+ST_1: tmp57 (677)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:35  %tmp57 = add i16 %cor_phaseClass13q_V_23, %cor_phaseClass13q_V_26
+
+ST_1: tmp55 (678)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:36  %tmp55 = add i16 %tmp57, %tmp56
+
+ST_1: corHelperQPos_V_13_s (679)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:469
+.preheader2913.0:37  %corHelperQPos_V_13_s = add i16 %tmp55, %tmp53
+
+ST_1: cor_phaseClass13i_V_27 (680)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:38  %cor_phaseClass13i_V_27 = load i16* @cor_phaseClass13i_V_2, align 4
+
+ST_1: cor_phaseClass13q_V_27 (681)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:39  %cor_phaseClass13q_V_27 = load i16* @cor_phaseClass13q_V_2, align 4
+
+ST_1: cor_phaseClass13i_V_28 (682)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:40  %cor_phaseClass13i_V_28 = load i16* @cor_phaseClass13i_V_1, align 2
+
+ST_1: cor_phaseClass13q_V_28 (683)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:41  %cor_phaseClass13q_V_28 = load i16* @cor_phaseClass13q_V_1, align 2
+
+ST_1: cor_phaseClass13i_V_29 (684)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:42  %cor_phaseClass13i_V_29 = load i16* @cor_phaseClass13i_V_s, align 16
+
+ST_1: tmp59 (685)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:43  %tmp59 = add i16 %cor_phaseClass13i_V_17, %cor_phaseClass13i_V_s
+
+ST_1: tmp60 (686)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:44  %tmp60 = add i16 %cor_phaseClass13i_V_18, %cor_phaseClass13i_V_19
+
+ST_1: tmp62 (688)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:46  %tmp62 = add i16 %cor_phaseClass13i_V_24, %cor_phaseClass13i_V_25
+
+ST_1: tmp64 (689)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:47  %tmp64 = add i16 %cor_phaseClass13i_V_28, %cor_phaseClass13i_V_29
+
+ST_1: tmp63 (690)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:48  %tmp63 = add i16 %tmp64, %cor_phaseClass13i_V_27
+
+ST_1: tmp61 (691)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:49  %tmp61 = add i16 %tmp63, %tmp62
+
+ST_1: cor_phaseClass13q_V_29 (693)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:51  %cor_phaseClass13q_V_29 = load i16* @cor_phaseClass13q_V_s, align 16
+
+ST_1: tmp66 (694)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:52  %tmp66 = add i16 %cor_phaseClass13q_V_17, %cor_phaseClass13q_V_s
+
+ST_1: tmp67 (695)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:53  %tmp67 = add i16 %cor_phaseClass13q_V_18, %cor_phaseClass13q_V_19
+
+ST_1: tmp69 (697)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:55  %tmp69 = add i16 %cor_phaseClass13q_V_24, %cor_phaseClass13q_V_25
+
+ST_1: tmp71 (698)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:56  %tmp71 = add i16 %cor_phaseClass13q_V_28, %cor_phaseClass13q_V_29
+
+ST_1: tmp70 (699)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:57  %tmp70 = add i16 %tmp71, %cor_phaseClass13q_V_27
+
+ST_1: tmp68 (700)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:58  %tmp68 = add i16 %tmp70, %tmp69
+
+ST_1: cor_phaseClass12i_V_s (704)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:0  %cor_phaseClass12i_V_s = load i16* @cor_phaseClass12i_V_15, align 2
+
+ST_1: cor_phaseClass12q_V_s (705)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:1  %cor_phaseClass12q_V_s = load i16* @cor_phaseClass12q_V_15, align 2
+
+ST_1: cor_phaseClass12i_V_15 (706)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:2  %cor_phaseClass12i_V_15 = load i16* @cor_phaseClass12i_V_14, align 4
+
+ST_1: cor_phaseClass12q_V_15 (707)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:3  %cor_phaseClass12q_V_15 = load i16* @cor_phaseClass12q_V_14, align 4
+
+ST_1: cor_phaseClass12i_V_16 (708)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:4  %cor_phaseClass12i_V_16 = load i16* @cor_phaseClass12i_V_13, align 2
+
+ST_1: cor_phaseClass12q_V_16 (709)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:5  %cor_phaseClass12q_V_16 = load i16* @cor_phaseClass12q_V_13, align 2
+
+ST_1: cor_phaseClass12i_V_17 (710)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:6  %cor_phaseClass12i_V_17 = load i16* @cor_phaseClass12i_V_12, align 8
+
+ST_1: cor_phaseClass12q_V_17 (711)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:7  %cor_phaseClass12q_V_17 = load i16* @cor_phaseClass12q_V_12, align 8
+
+ST_1: cor_phaseClass12i_V_18 (712)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:8  %cor_phaseClass12i_V_18 = load i16* @cor_phaseClass12i_V_11, align 2
+
+ST_1: cor_phaseClass12q_V_18 (713)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:9  %cor_phaseClass12q_V_18 = load i16* @cor_phaseClass12q_V_11, align 2
+
+ST_1: cor_phaseClass12i_V_19 (714)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:10  %cor_phaseClass12i_V_19 = load i16* @cor_phaseClass12i_V_10, align 4
+
+ST_1: cor_phaseClass12q_V_19 (715)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:11  %cor_phaseClass12q_V_19 = load i16* @cor_phaseClass12q_V_10, align 4
+
+ST_1: cor_phaseClass12i_V_20 (716)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:12  %cor_phaseClass12i_V_20 = load i16* @cor_phaseClass12i_V_9, align 2
+
+ST_1: cor_phaseClass12q_V_20 (717)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:13  %cor_phaseClass12q_V_20 = load i16* @cor_phaseClass12q_V_9, align 2
+
+ST_1: cor_phaseClass12i_V_21 (718)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:14  %cor_phaseClass12i_V_21 = load i16* @cor_phaseClass12i_V_8, align 16
+
+ST_1: cor_phaseClass12q_V_21 (719)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:15  %cor_phaseClass12q_V_21 = load i16* @cor_phaseClass12q_V_8, align 16
+
+ST_1: cor_phaseClass12i_V_22 (720)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:16  %cor_phaseClass12i_V_22 = load i16* @cor_phaseClass12i_V_7, align 2
+
+ST_1: cor_phaseClass12q_V_22 (721)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:17  %cor_phaseClass12q_V_22 = load i16* @cor_phaseClass12q_V_7, align 2
+
+ST_1: cor_phaseClass12i_V_23 (722)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:18  %cor_phaseClass12i_V_23 = load i16* @cor_phaseClass12i_V_6, align 4
+
+ST_1: cor_phaseClass12q_V_23 (723)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:19  %cor_phaseClass12q_V_23 = load i16* @cor_phaseClass12q_V_6, align 4
+
+ST_1: cor_phaseClass12i_V_24 (724)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:20  %cor_phaseClass12i_V_24 = load i16* @cor_phaseClass12i_V_5, align 2
+
+ST_1: cor_phaseClass12q_V_24 (725)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:21  %cor_phaseClass12q_V_24 = load i16* @cor_phaseClass12q_V_5, align 2
+
+ST_1: cor_phaseClass12i_V_25 (726)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:22  %cor_phaseClass12i_V_25 = load i16* @cor_phaseClass12i_V_4, align 8
+
+ST_1: cor_phaseClass12q_V_25 (727)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:23  %cor_phaseClass12q_V_25 = load i16* @cor_phaseClass12q_V_4, align 8
+
+ST_1: cor_phaseClass12i_V_26 (728)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:24  %cor_phaseClass12i_V_26 = load i16* @cor_phaseClass12i_V_3, align 2
+
+ST_1: tmp73 (729)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:25  %tmp73 = add i16 %cor_phaseClass12i_V_15, %cor_phaseClass12i_V_20
+
+ST_1: tmp72 (730)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:26  %tmp72 = add i16 %tmp73, %cor_phaseClass12i_V_16
+
+ST_1: tmp75 (731)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:27  %tmp75 = add i16 %cor_phaseClass12i_V_21, %cor_phaseClass12i_V_22
+
+ST_1: tmp76 (732)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:28  %tmp76 = add i16 %cor_phaseClass12i_V_23, %cor_phaseClass12i_V_26
+
+ST_1: tmp74 (733)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:29  %tmp74 = add i16 %tmp76, %tmp75
+
+ST_1: corHelperIPos_V_12_s (734)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:456
+.preheader2915.0:30  %corHelperIPos_V_12_s = add i16 %tmp74, %tmp72
+
+ST_1: cor_phaseClass12q_V_26 (735)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:31  %cor_phaseClass12q_V_26 = load i16* @cor_phaseClass12q_V_3, align 2
+
+ST_1: tmp78 (736)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:32  %tmp78 = add i16 %cor_phaseClass12q_V_15, %cor_phaseClass12q_V_20
+
+ST_1: tmp77 (737)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:33  %tmp77 = add i16 %tmp78, %cor_phaseClass12q_V_16
+
+ST_1: tmp80 (738)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:34  %tmp80 = add i16 %cor_phaseClass12q_V_21, %cor_phaseClass12q_V_22
+
+ST_1: tmp81 (739)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:35  %tmp81 = add i16 %cor_phaseClass12q_V_23, %cor_phaseClass12q_V_26
+
+ST_1: tmp79 (740)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:36  %tmp79 = add i16 %tmp81, %tmp80
+
+ST_1: corHelperQPos_V_12_s (741)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:457
+.preheader2915.0:37  %corHelperQPos_V_12_s = add i16 %tmp79, %tmp77
+
+ST_1: cor_phaseClass12i_V_27 (742)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:38  %cor_phaseClass12i_V_27 = load i16* @cor_phaseClass12i_V_2, align 4
+
+ST_1: cor_phaseClass12q_V_27 (743)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:39  %cor_phaseClass12q_V_27 = load i16* @cor_phaseClass12q_V_2, align 4
+
+ST_1: cor_phaseClass12i_V_28 (744)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:40  %cor_phaseClass12i_V_28 = load i16* @cor_phaseClass12i_V_1, align 2
+
+ST_1: cor_phaseClass12q_V_28 (745)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:41  %cor_phaseClass12q_V_28 = load i16* @cor_phaseClass12q_V_1, align 2
+
+ST_1: cor_phaseClass12i_V_29 (746)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:42  %cor_phaseClass12i_V_29 = load i16* @cor_phaseClass12i_V_s, align 16
+
+ST_1: tmp83 (747)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:43  %tmp83 = add i16 %cor_phaseClass12i_V_17, %cor_phaseClass12i_V_s
+
+ST_1: tmp84 (748)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:44  %tmp84 = add i16 %cor_phaseClass12i_V_18, %cor_phaseClass12i_V_19
+
+ST_1: tmp86 (750)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:46  %tmp86 = add i16 %cor_phaseClass12i_V_24, %cor_phaseClass12i_V_25
+
+ST_1: tmp88 (751)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:47  %tmp88 = add i16 %cor_phaseClass12i_V_28, %cor_phaseClass12i_V_29
+
+ST_1: tmp87 (752)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:48  %tmp87 = add i16 %tmp88, %cor_phaseClass12i_V_27
+
+ST_1: tmp85 (753)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:49  %tmp85 = add i16 %tmp87, %tmp86
+
+ST_1: cor_phaseClass12q_V_29 (755)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:51  %cor_phaseClass12q_V_29 = load i16* @cor_phaseClass12q_V_s, align 16
+
+ST_1: tmp90 (756)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:52  %tmp90 = add i16 %cor_phaseClass12q_V_17, %cor_phaseClass12q_V_s
+
+ST_1: tmp91 (757)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:53  %tmp91 = add i16 %cor_phaseClass12q_V_18, %cor_phaseClass12q_V_19
+
+ST_1: tmp93 (759)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:55  %tmp93 = add i16 %cor_phaseClass12q_V_24, %cor_phaseClass12q_V_25
+
+ST_1: tmp95 (760)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:56  %tmp95 = add i16 %cor_phaseClass12q_V_28, %cor_phaseClass12q_V_29
+
+ST_1: tmp94 (761)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:57  %tmp94 = add i16 %tmp95, %cor_phaseClass12q_V_27
+
+ST_1: tmp92 (762)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:58  %tmp92 = add i16 %tmp94, %tmp93
+
+ST_1: cor_phaseClass11i_V_s (766)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:0  %cor_phaseClass11i_V_s = load i16* @cor_phaseClass11i_V_15, align 2
+
+ST_1: cor_phaseClass11q_V_s (767)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:1  %cor_phaseClass11q_V_s = load i16* @cor_phaseClass11q_V_15, align 2
+
+ST_1: cor_phaseClass11i_V_15 (768)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:2  %cor_phaseClass11i_V_15 = load i16* @cor_phaseClass11i_V_14, align 4
+
+ST_1: cor_phaseClass11q_V_15 (769)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:3  %cor_phaseClass11q_V_15 = load i16* @cor_phaseClass11q_V_14, align 4
+
+ST_1: cor_phaseClass11i_V_16 (770)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:4  %cor_phaseClass11i_V_16 = load i16* @cor_phaseClass11i_V_13, align 2
+
+ST_1: cor_phaseClass11q_V_16 (771)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:5  %cor_phaseClass11q_V_16 = load i16* @cor_phaseClass11q_V_13, align 2
+
+ST_1: cor_phaseClass11i_V_17 (772)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:6  %cor_phaseClass11i_V_17 = load i16* @cor_phaseClass11i_V_12, align 8
+
+ST_1: cor_phaseClass11q_V_17 (773)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:7  %cor_phaseClass11q_V_17 = load i16* @cor_phaseClass11q_V_12, align 8
+
+ST_1: cor_phaseClass11i_V_18 (774)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:8  %cor_phaseClass11i_V_18 = load i16* @cor_phaseClass11i_V_11, align 2
+
+ST_1: cor_phaseClass11q_V_18 (775)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:9  %cor_phaseClass11q_V_18 = load i16* @cor_phaseClass11q_V_11, align 2
+
+ST_1: cor_phaseClass11i_V_19 (776)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:10  %cor_phaseClass11i_V_19 = load i16* @cor_phaseClass11i_V_10, align 4
+
+ST_1: cor_phaseClass11q_V_19 (777)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:11  %cor_phaseClass11q_V_19 = load i16* @cor_phaseClass11q_V_10, align 4
+
+ST_1: cor_phaseClass11i_V_20 (778)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:12  %cor_phaseClass11i_V_20 = load i16* @cor_phaseClass11i_V_9, align 2
+
+ST_1: cor_phaseClass11q_V_20 (779)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:13  %cor_phaseClass11q_V_20 = load i16* @cor_phaseClass11q_V_9, align 2
+
+ST_1: cor_phaseClass11i_V_21 (780)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:14  %cor_phaseClass11i_V_21 = load i16* @cor_phaseClass11i_V_8, align 16
+
+ST_1: cor_phaseClass11q_V_21 (781)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:15  %cor_phaseClass11q_V_21 = load i16* @cor_phaseClass11q_V_8, align 16
+
+ST_1: cor_phaseClass11i_V_22 (782)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:16  %cor_phaseClass11i_V_22 = load i16* @cor_phaseClass11i_V_7, align 2
+
+ST_1: cor_phaseClass11q_V_22 (783)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:17  %cor_phaseClass11q_V_22 = load i16* @cor_phaseClass11q_V_7, align 2
+
+ST_1: cor_phaseClass11i_V_23 (784)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:18  %cor_phaseClass11i_V_23 = load i16* @cor_phaseClass11i_V_6, align 4
+
+ST_1: cor_phaseClass11q_V_23 (785)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:19  %cor_phaseClass11q_V_23 = load i16* @cor_phaseClass11q_V_6, align 4
+
+ST_1: cor_phaseClass11i_V_24 (786)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:20  %cor_phaseClass11i_V_24 = load i16* @cor_phaseClass11i_V_5, align 2
+
+ST_1: cor_phaseClass11q_V_24 (787)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:21  %cor_phaseClass11q_V_24 = load i16* @cor_phaseClass11q_V_5, align 2
+
+ST_1: cor_phaseClass11i_V_25 (788)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:22  %cor_phaseClass11i_V_25 = load i16* @cor_phaseClass11i_V_4, align 8
+
+ST_1: cor_phaseClass11q_V_25 (789)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:23  %cor_phaseClass11q_V_25 = load i16* @cor_phaseClass11q_V_4, align 8
+
+ST_1: cor_phaseClass11i_V_26 (790)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:24  %cor_phaseClass11i_V_26 = load i16* @cor_phaseClass11i_V_3, align 2
+
+ST_1: tmp97 (791)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:25  %tmp97 = add i16 %cor_phaseClass11i_V_15, %cor_phaseClass11i_V_20
+
+ST_1: tmp96 (792)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:26  %tmp96 = add i16 %tmp97, %cor_phaseClass11i_V_16
+
+ST_1: tmp99 (793)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:27  %tmp99 = add i16 %cor_phaseClass11i_V_21, %cor_phaseClass11i_V_22
+
+ST_1: tmp100 (794)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:28  %tmp100 = add i16 %cor_phaseClass11i_V_23, %cor_phaseClass11i_V_26
+
+ST_1: tmp98 (795)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:29  %tmp98 = add i16 %tmp100, %tmp99
+
+ST_1: corHelperIPos_V_11_s (796)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:444
+.preheader2917.0:30  %corHelperIPos_V_11_s = add i16 %tmp98, %tmp96
+
+ST_1: cor_phaseClass11q_V_26 (797)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:31  %cor_phaseClass11q_V_26 = load i16* @cor_phaseClass11q_V_3, align 2
+
+ST_1: tmp102 (798)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:32  %tmp102 = add i16 %cor_phaseClass11q_V_15, %cor_phaseClass11q_V_20
+
+ST_1: tmp101 (799)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:33  %tmp101 = add i16 %tmp102, %cor_phaseClass11q_V_16
+
+ST_1: tmp104 (800)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:34  %tmp104 = add i16 %cor_phaseClass11q_V_21, %cor_phaseClass11q_V_22
+
+ST_1: tmp105 (801)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:35  %tmp105 = add i16 %cor_phaseClass11q_V_23, %cor_phaseClass11q_V_26
+
+ST_1: tmp103 (802)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:36  %tmp103 = add i16 %tmp105, %tmp104
+
+ST_1: corHelperQPos_V_11_s (803)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:445
+.preheader2917.0:37  %corHelperQPos_V_11_s = add i16 %tmp103, %tmp101
+
+ST_1: cor_phaseClass11i_V_27 (804)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:38  %cor_phaseClass11i_V_27 = load i16* @cor_phaseClass11i_V_2, align 4
+
+ST_1: cor_phaseClass11q_V_27 (805)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:39  %cor_phaseClass11q_V_27 = load i16* @cor_phaseClass11q_V_2, align 4
+
+ST_1: cor_phaseClass11i_V_28 (806)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:40  %cor_phaseClass11i_V_28 = load i16* @cor_phaseClass11i_V_1, align 2
+
+ST_1: cor_phaseClass11q_V_28 (807)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:41  %cor_phaseClass11q_V_28 = load i16* @cor_phaseClass11q_V_1, align 2
+
+ST_1: cor_phaseClass11i_V_29 (808)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:42  %cor_phaseClass11i_V_29 = load i16* @cor_phaseClass11i_V_s, align 16
+
+ST_1: tmp107 (809)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:43  %tmp107 = add i16 %cor_phaseClass11i_V_17, %cor_phaseClass11i_V_s
+
+ST_1: tmp108 (810)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:44  %tmp108 = add i16 %cor_phaseClass11i_V_18, %cor_phaseClass11i_V_19
+
+ST_1: tmp110 (812)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:46  %tmp110 = add i16 %cor_phaseClass11i_V_24, %cor_phaseClass11i_V_25
+
+ST_1: tmp112 (813)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:47  %tmp112 = add i16 %cor_phaseClass11i_V_28, %cor_phaseClass11i_V_29
+
+ST_1: tmp111 (814)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:48  %tmp111 = add i16 %tmp112, %cor_phaseClass11i_V_27
+
+ST_1: tmp109 (815)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:49  %tmp109 = add i16 %tmp111, %tmp110
+
+ST_1: cor_phaseClass11q_V_29 (817)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:51  %cor_phaseClass11q_V_29 = load i16* @cor_phaseClass11q_V_s, align 16
+
+ST_1: tmp114 (818)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:52  %tmp114 = add i16 %cor_phaseClass11q_V_17, %cor_phaseClass11q_V_s
+
+ST_1: tmp115 (819)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:53  %tmp115 = add i16 %cor_phaseClass11q_V_18, %cor_phaseClass11q_V_19
+
+ST_1: tmp117 (821)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:55  %tmp117 = add i16 %cor_phaseClass11q_V_24, %cor_phaseClass11q_V_25
+
+ST_1: tmp119 (822)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:56  %tmp119 = add i16 %cor_phaseClass11q_V_28, %cor_phaseClass11q_V_29
+
+ST_1: tmp118 (823)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:57  %tmp118 = add i16 %tmp119, %cor_phaseClass11q_V_27
+
+ST_1: tmp116 (824)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:58  %tmp116 = add i16 %tmp118, %tmp117
+
+ST_1: cor_phaseClass10i_V_s (828)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:0  %cor_phaseClass10i_V_s = load i16* @cor_phaseClass10i_V_15, align 2
+
+ST_1: cor_phaseClass10q_V_s (829)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:1  %cor_phaseClass10q_V_s = load i16* @cor_phaseClass10q_V_15, align 2
+
+ST_1: cor_phaseClass10i_V_15 (830)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:2  %cor_phaseClass10i_V_15 = load i16* @cor_phaseClass10i_V_14, align 4
+
+ST_1: cor_phaseClass10q_V_15 (831)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:3  %cor_phaseClass10q_V_15 = load i16* @cor_phaseClass10q_V_14, align 4
+
+ST_1: cor_phaseClass10i_V_16 (832)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:4  %cor_phaseClass10i_V_16 = load i16* @cor_phaseClass10i_V_13, align 2
+
+ST_1: cor_phaseClass10q_V_16 (833)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:5  %cor_phaseClass10q_V_16 = load i16* @cor_phaseClass10q_V_13, align 2
+
+ST_1: cor_phaseClass10i_V_17 (834)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:6  %cor_phaseClass10i_V_17 = load i16* @cor_phaseClass10i_V_12, align 8
+
+ST_1: cor_phaseClass10q_V_17 (835)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:7  %cor_phaseClass10q_V_17 = load i16* @cor_phaseClass10q_V_12, align 8
+
+ST_1: cor_phaseClass10i_V_18 (836)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:8  %cor_phaseClass10i_V_18 = load i16* @cor_phaseClass10i_V_11, align 2
+
+ST_1: cor_phaseClass10q_V_18 (837)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:9  %cor_phaseClass10q_V_18 = load i16* @cor_phaseClass10q_V_11, align 2
+
+ST_1: cor_phaseClass10i_V_19 (838)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:10  %cor_phaseClass10i_V_19 = load i16* @cor_phaseClass10i_V_10, align 4
+
+ST_1: cor_phaseClass10q_V_19 (839)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:11  %cor_phaseClass10q_V_19 = load i16* @cor_phaseClass10q_V_10, align 4
+
+ST_1: cor_phaseClass10i_V_20 (840)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:12  %cor_phaseClass10i_V_20 = load i16* @cor_phaseClass10i_V_9, align 2
+
+ST_1: cor_phaseClass10q_V_20 (841)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:13  %cor_phaseClass10q_V_20 = load i16* @cor_phaseClass10q_V_9, align 2
+
+ST_1: cor_phaseClass10i_V_21 (842)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:14  %cor_phaseClass10i_V_21 = load i16* @cor_phaseClass10i_V_8, align 16
+
+ST_1: cor_phaseClass10q_V_21 (843)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:15  %cor_phaseClass10q_V_21 = load i16* @cor_phaseClass10q_V_8, align 16
+
+ST_1: cor_phaseClass10i_V_22 (844)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:16  %cor_phaseClass10i_V_22 = load i16* @cor_phaseClass10i_V_7, align 2
+
+ST_1: cor_phaseClass10q_V_22 (845)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:17  %cor_phaseClass10q_V_22 = load i16* @cor_phaseClass10q_V_7, align 2
+
+ST_1: cor_phaseClass10i_V_23 (846)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:18  %cor_phaseClass10i_V_23 = load i16* @cor_phaseClass10i_V_6, align 4
+
+ST_1: cor_phaseClass10q_V_23 (847)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:19  %cor_phaseClass10q_V_23 = load i16* @cor_phaseClass10q_V_6, align 4
+
+ST_1: cor_phaseClass10i_V_24 (848)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:20  %cor_phaseClass10i_V_24 = load i16* @cor_phaseClass10i_V_5, align 2
+
+ST_1: cor_phaseClass10q_V_24 (849)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:21  %cor_phaseClass10q_V_24 = load i16* @cor_phaseClass10q_V_5, align 2
+
+ST_1: cor_phaseClass10i_V_25 (850)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:22  %cor_phaseClass10i_V_25 = load i16* @cor_phaseClass10i_V_4, align 8
+
+ST_1: cor_phaseClass10q_V_25 (851)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:23  %cor_phaseClass10q_V_25 = load i16* @cor_phaseClass10q_V_4, align 8
+
+ST_1: cor_phaseClass10i_V_26 (852)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:24  %cor_phaseClass10i_V_26 = load i16* @cor_phaseClass10i_V_3, align 2
+
+ST_1: tmp121 (853)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:25  %tmp121 = add i16 %cor_phaseClass10i_V_15, %cor_phaseClass10i_V_20
+
+ST_1: tmp120 (854)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:26  %tmp120 = add i16 %tmp121, %cor_phaseClass10i_V_16
+
+ST_1: tmp123 (855)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:27  %tmp123 = add i16 %cor_phaseClass10i_V_21, %cor_phaseClass10i_V_22
+
+ST_1: tmp124 (856)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:28  %tmp124 = add i16 %cor_phaseClass10i_V_23, %cor_phaseClass10i_V_26
+
+ST_1: tmp122 (857)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:29  %tmp122 = add i16 %tmp124, %tmp123
+
+ST_1: corHelperIPos_V_10_s (858)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:432
+.preheader2919.0:30  %corHelperIPos_V_10_s = add i16 %tmp122, %tmp120
+
+ST_1: cor_phaseClass10q_V_26 (859)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:31  %cor_phaseClass10q_V_26 = load i16* @cor_phaseClass10q_V_3, align 2
+
+ST_1: tmp126 (860)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:32  %tmp126 = add i16 %cor_phaseClass10q_V_15, %cor_phaseClass10q_V_20
+
+ST_1: tmp125 (861)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:33  %tmp125 = add i16 %tmp126, %cor_phaseClass10q_V_16
+
+ST_1: tmp128 (862)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:34  %tmp128 = add i16 %cor_phaseClass10q_V_21, %cor_phaseClass10q_V_22
+
+ST_1: tmp129 (863)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:35  %tmp129 = add i16 %cor_phaseClass10q_V_23, %cor_phaseClass10q_V_26
+
+ST_1: tmp127 (864)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:36  %tmp127 = add i16 %tmp129, %tmp128
+
+ST_1: corHelperQPos_V_10_s (865)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:433
+.preheader2919.0:37  %corHelperQPos_V_10_s = add i16 %tmp127, %tmp125
+
+ST_1: cor_phaseClass10i_V_27 (866)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:38  %cor_phaseClass10i_V_27 = load i16* @cor_phaseClass10i_V_2, align 4
+
+ST_1: cor_phaseClass10q_V_27 (867)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:39  %cor_phaseClass10q_V_27 = load i16* @cor_phaseClass10q_V_2, align 4
+
+ST_1: cor_phaseClass10i_V_28 (868)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:40  %cor_phaseClass10i_V_28 = load i16* @cor_phaseClass10i_V_1, align 2
+
+ST_1: cor_phaseClass10q_V_28 (869)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:41  %cor_phaseClass10q_V_28 = load i16* @cor_phaseClass10q_V_1, align 2
+
+ST_1: cor_phaseClass10i_V_29 (870)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:42  %cor_phaseClass10i_V_29 = load i16* @cor_phaseClass10i_V_s, align 16
+
+ST_1: tmp131 (871)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:43  %tmp131 = add i16 %cor_phaseClass10i_V_17, %cor_phaseClass10i_V_s
+
+ST_1: tmp132 (872)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:44  %tmp132 = add i16 %cor_phaseClass10i_V_18, %cor_phaseClass10i_V_19
+
+ST_1: tmp134 (874)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:46  %tmp134 = add i16 %cor_phaseClass10i_V_24, %cor_phaseClass10i_V_25
+
+ST_1: tmp136 (875)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:47  %tmp136 = add i16 %cor_phaseClass10i_V_28, %cor_phaseClass10i_V_29
+
+ST_1: tmp135 (876)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:48  %tmp135 = add i16 %tmp136, %cor_phaseClass10i_V_27
+
+ST_1: tmp133 (877)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:49  %tmp133 = add i16 %tmp135, %tmp134
+
+ST_1: cor_phaseClass10q_V_29 (879)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:51  %cor_phaseClass10q_V_29 = load i16* @cor_phaseClass10q_V_s, align 16
+
+ST_1: tmp138 (880)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:52  %tmp138 = add i16 %cor_phaseClass10q_V_17, %cor_phaseClass10q_V_s
+
+ST_1: tmp139 (881)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:53  %tmp139 = add i16 %cor_phaseClass10q_V_18, %cor_phaseClass10q_V_19
+
+ST_1: tmp141 (883)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:55  %tmp141 = add i16 %cor_phaseClass10q_V_24, %cor_phaseClass10q_V_25
+
+ST_1: tmp143 (884)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:56  %tmp143 = add i16 %cor_phaseClass10q_V_28, %cor_phaseClass10q_V_29
+
+ST_1: tmp142 (885)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:57  %tmp142 = add i16 %tmp143, %cor_phaseClass10q_V_27
+
+ST_1: tmp140 (886)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:58  %tmp140 = add i16 %tmp142, %tmp141
+
+ST_1: cor_phaseClass9i_V_1 (890)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:0  %cor_phaseClass9i_V_1 = load i16* @cor_phaseClass9i_V_15, align 2
+
+ST_1: cor_phaseClass9q_V_1 (891)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:1  %cor_phaseClass9q_V_1 = load i16* @cor_phaseClass9q_V_15, align 2
+
+ST_1: cor_phaseClass9i_V_1_6 (892)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:2  %cor_phaseClass9i_V_1_6 = load i16* @cor_phaseClass9i_V_14, align 4
+
+ST_1: cor_phaseClass9q_V_1_6 (893)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:3  %cor_phaseClass9q_V_1_6 = load i16* @cor_phaseClass9q_V_14, align 4
+
+ST_1: cor_phaseClass9i_V_1_7 (894)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:4  %cor_phaseClass9i_V_1_7 = load i16* @cor_phaseClass9i_V_13, align 2
+
+ST_1: cor_phaseClass9q_V_1_7 (895)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:5  %cor_phaseClass9q_V_1_7 = load i16* @cor_phaseClass9q_V_13, align 2
+
+ST_1: cor_phaseClass9i_V_1_8 (896)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:6  %cor_phaseClass9i_V_1_8 = load i16* @cor_phaseClass9i_V_12, align 8
+
+ST_1: cor_phaseClass9q_V_1_8 (897)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:7  %cor_phaseClass9q_V_1_8 = load i16* @cor_phaseClass9q_V_12, align 8
+
+ST_1: cor_phaseClass9i_V_1_9 (898)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:8  %cor_phaseClass9i_V_1_9 = load i16* @cor_phaseClass9i_V_11, align 2
+
+ST_1: cor_phaseClass9q_V_1_9 (899)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:9  %cor_phaseClass9q_V_1_9 = load i16* @cor_phaseClass9q_V_11, align 2
+
+ST_1: cor_phaseClass9i_V_1_10 (900)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:10  %cor_phaseClass9i_V_1_10 = load i16* @cor_phaseClass9i_V_10, align 4
+
+ST_1: cor_phaseClass9q_V_1_10 (901)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:11  %cor_phaseClass9q_V_1_10 = load i16* @cor_phaseClass9q_V_10, align 4
+
+ST_1: cor_phaseClass9i_V_9 (902)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:12  %cor_phaseClass9i_V_9 = load i16* @cor_phaseClass9i_V_9, align 2
+
+ST_1: cor_phaseClass9q_V_9 (903)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:13  %cor_phaseClass9q_V_9 = load i16* @cor_phaseClass9q_V_9, align 2
+
+ST_1: cor_phaseClass9i_V_8 (904)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:14  %cor_phaseClass9i_V_8 = load i16* @cor_phaseClass9i_V_8, align 16
+
+ST_1: cor_phaseClass9q_V_8 (905)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:15  %cor_phaseClass9q_V_8 = load i16* @cor_phaseClass9q_V_8, align 16
+
+ST_1: cor_phaseClass9i_V_7 (906)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:16  %cor_phaseClass9i_V_7 = load i16* @cor_phaseClass9i_V_7, align 2
+
+ST_1: cor_phaseClass9q_V_7 (907)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:17  %cor_phaseClass9q_V_7 = load i16* @cor_phaseClass9q_V_7, align 2
+
+ST_1: cor_phaseClass9i_V_6 (908)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:18  %cor_phaseClass9i_V_6 = load i16* @cor_phaseClass9i_V_6, align 4
+
+ST_1: cor_phaseClass9q_V_6 (909)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:19  %cor_phaseClass9q_V_6 = load i16* @cor_phaseClass9q_V_6, align 4
+
+ST_1: cor_phaseClass9i_V_5 (910)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:20  %cor_phaseClass9i_V_5 = load i16* @cor_phaseClass9i_V_5, align 2
+
+ST_1: cor_phaseClass9q_V_5 (911)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:21  %cor_phaseClass9q_V_5 = load i16* @cor_phaseClass9q_V_5, align 2
+
+ST_1: cor_phaseClass9i_V_4 (912)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:22  %cor_phaseClass9i_V_4 = load i16* @cor_phaseClass9i_V_4, align 8
+
+ST_1: cor_phaseClass9q_V_4 (913)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:23  %cor_phaseClass9q_V_4 = load i16* @cor_phaseClass9q_V_4, align 8
+
+ST_1: cor_phaseClass9i_V_3 (914)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:24  %cor_phaseClass9i_V_3 = load i16* @cor_phaseClass9i_V_3, align 2
+
+ST_1: tmp145 (915)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:25  %tmp145 = add i16 %cor_phaseClass9i_V_1_6, %cor_phaseClass9i_V_9
+
+ST_1: tmp144 (916)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:26  %tmp144 = add i16 %tmp145, %cor_phaseClass9i_V_1_7
+
+ST_1: tmp147 (917)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:27  %tmp147 = add i16 %cor_phaseClass9i_V_8, %cor_phaseClass9i_V_7
+
+ST_1: tmp148 (918)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:28  %tmp148 = add i16 %cor_phaseClass9i_V_6, %cor_phaseClass9i_V_3
+
+ST_1: tmp146 (919)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:29  %tmp146 = add i16 %tmp148, %tmp147
+
+ST_1: corHelperIPos_V_9_s (920)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:420
+.preheader2921.0:30  %corHelperIPos_V_9_s = add i16 %tmp146, %tmp144
+
+ST_1: cor_phaseClass9q_V_3 (921)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:31  %cor_phaseClass9q_V_3 = load i16* @cor_phaseClass9q_V_3, align 2
+
+ST_1: tmp150 (922)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:32  %tmp150 = add i16 %cor_phaseClass9q_V_1_6, %cor_phaseClass9q_V_9
+
+ST_1: tmp149 (923)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:33  %tmp149 = add i16 %tmp150, %cor_phaseClass9q_V_1_7
+
+ST_1: tmp152 (924)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:34  %tmp152 = add i16 %cor_phaseClass9q_V_8, %cor_phaseClass9q_V_7
+
+ST_1: tmp153 (925)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:35  %tmp153 = add i16 %cor_phaseClass9q_V_6, %cor_phaseClass9q_V_3
+
+ST_1: tmp151 (926)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:36  %tmp151 = add i16 %tmp153, %tmp152
+
+ST_1: corHelperQPos_V_9_s (927)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:421
+.preheader2921.0:37  %corHelperQPos_V_9_s = add i16 %tmp151, %tmp149
+
+ST_1: cor_phaseClass9i_V_2 (928)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:38  %cor_phaseClass9i_V_2 = load i16* @cor_phaseClass9i_V_2, align 4
+
+ST_1: cor_phaseClass9q_V_2 (929)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:39  %cor_phaseClass9q_V_2 = load i16* @cor_phaseClass9q_V_2, align 4
+
+ST_1: cor_phaseClass9i_V_1_11 (930)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:40  %cor_phaseClass9i_V_1_11 = load i16* @cor_phaseClass9i_V_1, align 2
+
+ST_1: cor_phaseClass9q_V_1_11 (931)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:41  %cor_phaseClass9q_V_1_11 = load i16* @cor_phaseClass9q_V_1, align 2
+
+ST_1: cor_phaseClass9i_V_0 (932)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:42  %cor_phaseClass9i_V_0 = load i16* @cor_phaseClass9i_V_0, align 16
+
+ST_1: tmp155 (933)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:43  %tmp155 = add i16 %cor_phaseClass9i_V_1_8, %cor_phaseClass9i_V_1
+
+ST_1: tmp156 (934)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:44  %tmp156 = add i16 %cor_phaseClass9i_V_1_9, %cor_phaseClass9i_V_1_10
+
+ST_1: tmp158 (936)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:46  %tmp158 = add i16 %cor_phaseClass9i_V_5, %cor_phaseClass9i_V_4
+
+ST_1: tmp160 (937)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:47  %tmp160 = add i16 %cor_phaseClass9i_V_1_11, %cor_phaseClass9i_V_0
+
+ST_1: tmp159 (938)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:48  %tmp159 = add i16 %tmp160, %cor_phaseClass9i_V_2
+
+ST_1: tmp157 (939)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:49  %tmp157 = add i16 %tmp159, %tmp158
+
+ST_1: cor_phaseClass9q_V_0 (941)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:51  %cor_phaseClass9q_V_0 = load i16* @cor_phaseClass9q_V_0, align 16
+
+ST_1: tmp162 (942)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:52  %tmp162 = add i16 %cor_phaseClass9q_V_1_8, %cor_phaseClass9q_V_1
+
+ST_1: tmp163 (943)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:53  %tmp163 = add i16 %cor_phaseClass9q_V_1_9, %cor_phaseClass9q_V_1_10
+
+ST_1: tmp165 (945)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:55  %tmp165 = add i16 %cor_phaseClass9q_V_5, %cor_phaseClass9q_V_4
+
+ST_1: tmp167 (946)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:56  %tmp167 = add i16 %cor_phaseClass9q_V_1_11, %cor_phaseClass9q_V_0
+
+ST_1: tmp166 (947)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:57  %tmp166 = add i16 %tmp167, %cor_phaseClass9q_V_2
+
+ST_1: tmp164 (948)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:58  %tmp164 = add i16 %tmp166, %tmp165
+
+ST_1: cor_phaseClass8i_V_1 (952)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:0  %cor_phaseClass8i_V_1 = load i16* @cor_phaseClass8i_V_15, align 2
+
+ST_1: cor_phaseClass8q_V_1 (953)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:1  %cor_phaseClass8q_V_1 = load i16* @cor_phaseClass8q_V_15, align 2
+
+ST_1: cor_phaseClass8i_V_1_6 (954)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:2  %cor_phaseClass8i_V_1_6 = load i16* @cor_phaseClass8i_V_14, align 4
+
+ST_1: cor_phaseClass8q_V_1_6 (955)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:3  %cor_phaseClass8q_V_1_6 = load i16* @cor_phaseClass8q_V_14, align 4
+
+ST_1: cor_phaseClass8i_V_1_7 (956)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:4  %cor_phaseClass8i_V_1_7 = load i16* @cor_phaseClass8i_V_13, align 2
+
+ST_1: cor_phaseClass8q_V_1_7 (957)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:5  %cor_phaseClass8q_V_1_7 = load i16* @cor_phaseClass8q_V_13, align 2
+
+ST_1: cor_phaseClass8i_V_1_8 (958)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:6  %cor_phaseClass8i_V_1_8 = load i16* @cor_phaseClass8i_V_12, align 8
+
+ST_1: cor_phaseClass8q_V_1_8 (959)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:7  %cor_phaseClass8q_V_1_8 = load i16* @cor_phaseClass8q_V_12, align 8
+
+ST_1: cor_phaseClass8i_V_1_9 (960)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:8  %cor_phaseClass8i_V_1_9 = load i16* @cor_phaseClass8i_V_11, align 2
+
+ST_1: cor_phaseClass8q_V_1_9 (961)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:9  %cor_phaseClass8q_V_1_9 = load i16* @cor_phaseClass8q_V_11, align 2
+
+ST_1: cor_phaseClass8i_V_1_10 (962)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:10  %cor_phaseClass8i_V_1_10 = load i16* @cor_phaseClass8i_V_10, align 4
+
+ST_1: cor_phaseClass8q_V_1_10 (963)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:11  %cor_phaseClass8q_V_1_10 = load i16* @cor_phaseClass8q_V_10, align 4
+
+ST_1: cor_phaseClass8i_V_9 (964)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:12  %cor_phaseClass8i_V_9 = load i16* @cor_phaseClass8i_V_9, align 2
+
+ST_1: cor_phaseClass8q_V_9 (965)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:13  %cor_phaseClass8q_V_9 = load i16* @cor_phaseClass8q_V_9, align 2
+
+ST_1: cor_phaseClass8i_V_8 (966)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:14  %cor_phaseClass8i_V_8 = load i16* @cor_phaseClass8i_V_8, align 16
+
+ST_1: cor_phaseClass8q_V_8 (967)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:15  %cor_phaseClass8q_V_8 = load i16* @cor_phaseClass8q_V_8, align 16
+
+ST_1: cor_phaseClass8i_V_7 (968)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:16  %cor_phaseClass8i_V_7 = load i16* @cor_phaseClass8i_V_7, align 2
+
+ST_1: cor_phaseClass8q_V_7 (969)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:17  %cor_phaseClass8q_V_7 = load i16* @cor_phaseClass8q_V_7, align 2
+
+ST_1: cor_phaseClass8i_V_6 (970)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:18  %cor_phaseClass8i_V_6 = load i16* @cor_phaseClass8i_V_6, align 4
+
+ST_1: cor_phaseClass8q_V_6 (971)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:19  %cor_phaseClass8q_V_6 = load i16* @cor_phaseClass8q_V_6, align 4
+
+ST_1: cor_phaseClass8i_V_5 (972)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:20  %cor_phaseClass8i_V_5 = load i16* @cor_phaseClass8i_V_5, align 2
+
+ST_1: cor_phaseClass8q_V_5 (973)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:21  %cor_phaseClass8q_V_5 = load i16* @cor_phaseClass8q_V_5, align 2
+
+ST_1: cor_phaseClass8i_V_4 (974)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:22  %cor_phaseClass8i_V_4 = load i16* @cor_phaseClass8i_V_4, align 8
+
+ST_1: cor_phaseClass8q_V_4 (975)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:23  %cor_phaseClass8q_V_4 = load i16* @cor_phaseClass8q_V_4, align 8
+
+ST_1: cor_phaseClass8i_V_3 (976)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:24  %cor_phaseClass8i_V_3 = load i16* @cor_phaseClass8i_V_3, align 2
+
+ST_1: tmp169 (977)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:25  %tmp169 = add i16 %cor_phaseClass8i_V_1_6, %cor_phaseClass8i_V_9
+
+ST_1: tmp168 (978)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:26  %tmp168 = add i16 %tmp169, %cor_phaseClass8i_V_1_7
+
+ST_1: tmp171 (979)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:27  %tmp171 = add i16 %cor_phaseClass8i_V_8, %cor_phaseClass8i_V_7
+
+ST_1: tmp172 (980)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:28  %tmp172 = add i16 %cor_phaseClass8i_V_6, %cor_phaseClass8i_V_3
+
+ST_1: tmp170 (981)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:29  %tmp170 = add i16 %tmp172, %tmp171
+
+ST_1: corHelperIPos_V_8_s (982)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:408
+.preheader2923.0:30  %corHelperIPos_V_8_s = add i16 %tmp170, %tmp168
+
+ST_1: cor_phaseClass8q_V_3 (983)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:31  %cor_phaseClass8q_V_3 = load i16* @cor_phaseClass8q_V_3, align 2
+
+ST_1: tmp174 (984)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:32  %tmp174 = add i16 %cor_phaseClass8q_V_1_6, %cor_phaseClass8q_V_9
+
+ST_1: tmp173 (985)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:33  %tmp173 = add i16 %tmp174, %cor_phaseClass8q_V_1_7
+
+ST_1: tmp176 (986)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:34  %tmp176 = add i16 %cor_phaseClass8q_V_8, %cor_phaseClass8q_V_7
+
+ST_1: tmp177 (987)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:35  %tmp177 = add i16 %cor_phaseClass8q_V_6, %cor_phaseClass8q_V_3
+
+ST_1: tmp175 (988)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:36  %tmp175 = add i16 %tmp177, %tmp176
+
+ST_1: corHelperQPos_V_8_s (989)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:409
+.preheader2923.0:37  %corHelperQPos_V_8_s = add i16 %tmp175, %tmp173
+
+ST_1: cor_phaseClass8i_V_2 (990)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:38  %cor_phaseClass8i_V_2 = load i16* @cor_phaseClass8i_V_2, align 4
+
+ST_1: cor_phaseClass8q_V_2 (991)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:39  %cor_phaseClass8q_V_2 = load i16* @cor_phaseClass8q_V_2, align 4
+
+ST_1: cor_phaseClass8i_V_1_11 (992)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:40  %cor_phaseClass8i_V_1_11 = load i16* @cor_phaseClass8i_V_1, align 2
+
+ST_1: cor_phaseClass8q_V_1_11 (993)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:41  %cor_phaseClass8q_V_1_11 = load i16* @cor_phaseClass8q_V_1, align 2
+
+ST_1: cor_phaseClass8i_V_0 (994)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:42  %cor_phaseClass8i_V_0 = load i16* @cor_phaseClass8i_V_0, align 16
+
+ST_1: tmp179 (995)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:43  %tmp179 = add i16 %cor_phaseClass8i_V_1_8, %cor_phaseClass8i_V_1
+
+ST_1: tmp180 (996)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:44  %tmp180 = add i16 %cor_phaseClass8i_V_1_9, %cor_phaseClass8i_V_1_10
+
+ST_1: tmp182 (998)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:46  %tmp182 = add i16 %cor_phaseClass8i_V_5, %cor_phaseClass8i_V_4
+
+ST_1: tmp184 (999)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:47  %tmp184 = add i16 %cor_phaseClass8i_V_1_11, %cor_phaseClass8i_V_0
+
+ST_1: tmp183 (1000)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:48  %tmp183 = add i16 %tmp184, %cor_phaseClass8i_V_2
+
+ST_1: tmp181 (1001)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:49  %tmp181 = add i16 %tmp183, %tmp182
+
+ST_1: cor_phaseClass8q_V_0 (1003)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:51  %cor_phaseClass8q_V_0 = load i16* @cor_phaseClass8q_V_0, align 16
+
+ST_1: tmp186 (1004)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:52  %tmp186 = add i16 %cor_phaseClass8q_V_1_8, %cor_phaseClass8q_V_1
+
+ST_1: tmp187 (1005)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:53  %tmp187 = add i16 %cor_phaseClass8q_V_1_9, %cor_phaseClass8q_V_1_10
+
+ST_1: tmp189 (1007)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:55  %tmp189 = add i16 %cor_phaseClass8q_V_5, %cor_phaseClass8q_V_4
+
+ST_1: tmp191 (1008)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:56  %tmp191 = add i16 %cor_phaseClass8q_V_1_11, %cor_phaseClass8q_V_0
+
+ST_1: tmp190 (1009)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:57  %tmp190 = add i16 %tmp191, %cor_phaseClass8q_V_2
+
+ST_1: tmp188 (1010)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:58  %tmp188 = add i16 %tmp190, %tmp189
+
+ST_1: cor_phaseClass7i_V_1 (1014)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:0  %cor_phaseClass7i_V_1 = load i16* @cor_phaseClass7i_V_15, align 2
+
+ST_1: cor_phaseClass7q_V_1 (1015)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:1  %cor_phaseClass7q_V_1 = load i16* @cor_phaseClass7q_V_15, align 2
+
+ST_1: cor_phaseClass7i_V_1_6 (1016)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:2  %cor_phaseClass7i_V_1_6 = load i16* @cor_phaseClass7i_V_14, align 4
+
+ST_1: cor_phaseClass7q_V_1_6 (1017)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:3  %cor_phaseClass7q_V_1_6 = load i16* @cor_phaseClass7q_V_14, align 4
+
+ST_1: cor_phaseClass7i_V_1_7 (1018)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:4  %cor_phaseClass7i_V_1_7 = load i16* @cor_phaseClass7i_V_13, align 2
+
+ST_1: cor_phaseClass7q_V_1_7 (1019)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:5  %cor_phaseClass7q_V_1_7 = load i16* @cor_phaseClass7q_V_13, align 2
+
+ST_1: cor_phaseClass7i_V_1_8 (1020)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:6  %cor_phaseClass7i_V_1_8 = load i16* @cor_phaseClass7i_V_12, align 8
+
+ST_1: cor_phaseClass7q_V_1_8 (1021)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:7  %cor_phaseClass7q_V_1_8 = load i16* @cor_phaseClass7q_V_12, align 8
+
+ST_1: cor_phaseClass7i_V_1_9 (1022)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:8  %cor_phaseClass7i_V_1_9 = load i16* @cor_phaseClass7i_V_11, align 2
+
+ST_1: cor_phaseClass7q_V_1_9 (1023)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:9  %cor_phaseClass7q_V_1_9 = load i16* @cor_phaseClass7q_V_11, align 2
+
+ST_1: cor_phaseClass7i_V_1_10 (1024)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:10  %cor_phaseClass7i_V_1_10 = load i16* @cor_phaseClass7i_V_10, align 4
+
+ST_1: cor_phaseClass7q_V_1_10 (1025)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:11  %cor_phaseClass7q_V_1_10 = load i16* @cor_phaseClass7q_V_10, align 4
+
+ST_1: cor_phaseClass7i_V_9 (1026)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:12  %cor_phaseClass7i_V_9 = load i16* @cor_phaseClass7i_V_9, align 2
+
+ST_1: cor_phaseClass7q_V_9 (1027)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:13  %cor_phaseClass7q_V_9 = load i16* @cor_phaseClass7q_V_9, align 2
+
+ST_1: cor_phaseClass7i_V_8 (1028)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:14  %cor_phaseClass7i_V_8 = load i16* @cor_phaseClass7i_V_8, align 16
+
+ST_1: cor_phaseClass7q_V_8 (1029)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:15  %cor_phaseClass7q_V_8 = load i16* @cor_phaseClass7q_V_8, align 16
+
+ST_1: cor_phaseClass7i_V_7 (1030)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:16  %cor_phaseClass7i_V_7 = load i16* @cor_phaseClass7i_V_7, align 2
+
+ST_1: cor_phaseClass7q_V_7 (1031)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:17  %cor_phaseClass7q_V_7 = load i16* @cor_phaseClass7q_V_7, align 2
+
+ST_1: cor_phaseClass7i_V_6 (1032)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:18  %cor_phaseClass7i_V_6 = load i16* @cor_phaseClass7i_V_6, align 4
+
+ST_1: cor_phaseClass7q_V_6 (1033)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:19  %cor_phaseClass7q_V_6 = load i16* @cor_phaseClass7q_V_6, align 4
+
+ST_1: cor_phaseClass7i_V_5 (1034)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:20  %cor_phaseClass7i_V_5 = load i16* @cor_phaseClass7i_V_5, align 2
+
+ST_1: cor_phaseClass7q_V_5 (1035)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:21  %cor_phaseClass7q_V_5 = load i16* @cor_phaseClass7q_V_5, align 2
+
+ST_1: cor_phaseClass7i_V_4 (1036)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:22  %cor_phaseClass7i_V_4 = load i16* @cor_phaseClass7i_V_4, align 8
+
+ST_1: cor_phaseClass7q_V_4 (1037)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:23  %cor_phaseClass7q_V_4 = load i16* @cor_phaseClass7q_V_4, align 8
+
+ST_1: cor_phaseClass7i_V_3 (1038)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:24  %cor_phaseClass7i_V_3 = load i16* @cor_phaseClass7i_V_3, align 2
+
+ST_1: tmp193 (1039)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:25  %tmp193 = add i16 %cor_phaseClass7i_V_1_6, %cor_phaseClass7i_V_9
+
+ST_1: tmp192 (1040)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:26  %tmp192 = add i16 %tmp193, %cor_phaseClass7i_V_1_7
+
+ST_1: tmp195 (1041)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:27  %tmp195 = add i16 %cor_phaseClass7i_V_8, %cor_phaseClass7i_V_7
+
+ST_1: tmp196 (1042)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:28  %tmp196 = add i16 %cor_phaseClass7i_V_6, %cor_phaseClass7i_V_3
+
+ST_1: tmp194 (1043)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:29  %tmp194 = add i16 %tmp196, %tmp195
+
+ST_1: corHelperIPos_V_7_s (1044)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:396
+.preheader2925.0:30  %corHelperIPos_V_7_s = add i16 %tmp194, %tmp192
+
+ST_1: cor_phaseClass7q_V_3 (1045)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:31  %cor_phaseClass7q_V_3 = load i16* @cor_phaseClass7q_V_3, align 2
+
+ST_1: tmp198 (1046)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:32  %tmp198 = add i16 %cor_phaseClass7q_V_1_6, %cor_phaseClass7q_V_9
+
+ST_1: tmp197 (1047)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:33  %tmp197 = add i16 %tmp198, %cor_phaseClass7q_V_1_7
+
+ST_1: tmp200 (1048)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:34  %tmp200 = add i16 %cor_phaseClass7q_V_8, %cor_phaseClass7q_V_7
+
+ST_1: tmp201 (1049)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:35  %tmp201 = add i16 %cor_phaseClass7q_V_6, %cor_phaseClass7q_V_3
+
+ST_1: tmp199 (1050)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:36  %tmp199 = add i16 %tmp201, %tmp200
+
+ST_1: corHelperQPos_V_7_s (1051)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:397
+.preheader2925.0:37  %corHelperQPos_V_7_s = add i16 %tmp199, %tmp197
+
+ST_1: cor_phaseClass7i_V_2 (1052)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:38  %cor_phaseClass7i_V_2 = load i16* @cor_phaseClass7i_V_2, align 4
+
+ST_1: cor_phaseClass7q_V_2 (1053)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:39  %cor_phaseClass7q_V_2 = load i16* @cor_phaseClass7q_V_2, align 4
+
+ST_1: cor_phaseClass7i_V_1_11 (1054)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:40  %cor_phaseClass7i_V_1_11 = load i16* @cor_phaseClass7i_V_1, align 2
+
+ST_1: cor_phaseClass7q_V_1_11 (1055)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:41  %cor_phaseClass7q_V_1_11 = load i16* @cor_phaseClass7q_V_1, align 2
+
+ST_1: cor_phaseClass7i_V_0 (1056)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:42  %cor_phaseClass7i_V_0 = load i16* @cor_phaseClass7i_V_0, align 16
+
+ST_1: tmp203 (1057)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:43  %tmp203 = add i16 %cor_phaseClass7i_V_1_8, %cor_phaseClass7i_V_1
+
+ST_1: tmp204 (1058)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:44  %tmp204 = add i16 %cor_phaseClass7i_V_1_9, %cor_phaseClass7i_V_1_10
+
+ST_1: tmp206 (1060)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:46  %tmp206 = add i16 %cor_phaseClass7i_V_5, %cor_phaseClass7i_V_4
+
+ST_1: tmp208 (1061)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:47  %tmp208 = add i16 %cor_phaseClass7i_V_1_11, %cor_phaseClass7i_V_0
+
+ST_1: tmp207 (1062)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:48  %tmp207 = add i16 %tmp208, %cor_phaseClass7i_V_2
+
+ST_1: tmp205 (1063)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:49  %tmp205 = add i16 %tmp207, %tmp206
+
+ST_1: cor_phaseClass7q_V_0 (1065)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:51  %cor_phaseClass7q_V_0 = load i16* @cor_phaseClass7q_V_0, align 16
+
+ST_1: tmp210 (1066)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:52  %tmp210 = add i16 %cor_phaseClass7q_V_1_8, %cor_phaseClass7q_V_1
+
+ST_1: tmp211 (1067)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:53  %tmp211 = add i16 %cor_phaseClass7q_V_1_9, %cor_phaseClass7q_V_1_10
+
+ST_1: tmp213 (1069)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:55  %tmp213 = add i16 %cor_phaseClass7q_V_5, %cor_phaseClass7q_V_4
+
+ST_1: tmp215 (1070)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:56  %tmp215 = add i16 %cor_phaseClass7q_V_1_11, %cor_phaseClass7q_V_0
+
+ST_1: tmp214 (1071)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:57  %tmp214 = add i16 %tmp215, %cor_phaseClass7q_V_2
+
+ST_1: tmp212 (1072)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:58  %tmp212 = add i16 %tmp214, %tmp213
+
+ST_1: cor_phaseClass6i_V_1 (1076)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:0  %cor_phaseClass6i_V_1 = load i16* @cor_phaseClass6i_V_15, align 2
+
+ST_1: cor_phaseClass6q_V_1 (1077)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:1  %cor_phaseClass6q_V_1 = load i16* @cor_phaseClass6q_V_15, align 2
+
+ST_1: cor_phaseClass6i_V_1_6 (1078)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:2  %cor_phaseClass6i_V_1_6 = load i16* @cor_phaseClass6i_V_14, align 4
+
+ST_1: cor_phaseClass6q_V_1_6 (1079)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:3  %cor_phaseClass6q_V_1_6 = load i16* @cor_phaseClass6q_V_14, align 4
+
+ST_1: cor_phaseClass6i_V_1_7 (1080)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:4  %cor_phaseClass6i_V_1_7 = load i16* @cor_phaseClass6i_V_13, align 2
+
+ST_1: cor_phaseClass6q_V_1_7 (1081)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:5  %cor_phaseClass6q_V_1_7 = load i16* @cor_phaseClass6q_V_13, align 2
+
+ST_1: cor_phaseClass6i_V_1_8 (1082)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:6  %cor_phaseClass6i_V_1_8 = load i16* @cor_phaseClass6i_V_12, align 8
+
+ST_1: cor_phaseClass6q_V_1_8 (1083)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:7  %cor_phaseClass6q_V_1_8 = load i16* @cor_phaseClass6q_V_12, align 8
+
+ST_1: cor_phaseClass6i_V_1_9 (1084)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:8  %cor_phaseClass6i_V_1_9 = load i16* @cor_phaseClass6i_V_11, align 2
+
+ST_1: cor_phaseClass6q_V_1_9 (1085)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:9  %cor_phaseClass6q_V_1_9 = load i16* @cor_phaseClass6q_V_11, align 2
+
+ST_1: cor_phaseClass6i_V_1_10 (1086)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:10  %cor_phaseClass6i_V_1_10 = load i16* @cor_phaseClass6i_V_10, align 4
+
+ST_1: cor_phaseClass6q_V_1_10 (1087)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:11  %cor_phaseClass6q_V_1_10 = load i16* @cor_phaseClass6q_V_10, align 4
+
+ST_1: cor_phaseClass6i_V_9 (1088)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:12  %cor_phaseClass6i_V_9 = load i16* @cor_phaseClass6i_V_9, align 2
+
+ST_1: cor_phaseClass6q_V_9 (1089)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:13  %cor_phaseClass6q_V_9 = load i16* @cor_phaseClass6q_V_9, align 2
+
+ST_1: cor_phaseClass6i_V_8 (1090)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:14  %cor_phaseClass6i_V_8 = load i16* @cor_phaseClass6i_V_8, align 16
+
+ST_1: cor_phaseClass6q_V_8 (1091)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:15  %cor_phaseClass6q_V_8 = load i16* @cor_phaseClass6q_V_8, align 16
+
+ST_1: cor_phaseClass6i_V_7 (1092)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:16  %cor_phaseClass6i_V_7 = load i16* @cor_phaseClass6i_V_7, align 2
+
+ST_1: cor_phaseClass6q_V_7 (1093)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:17  %cor_phaseClass6q_V_7 = load i16* @cor_phaseClass6q_V_7, align 2
+
+ST_1: cor_phaseClass6i_V_6 (1094)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:18  %cor_phaseClass6i_V_6 = load i16* @cor_phaseClass6i_V_6, align 4
+
+ST_1: cor_phaseClass6q_V_6 (1095)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:19  %cor_phaseClass6q_V_6 = load i16* @cor_phaseClass6q_V_6, align 4
+
+ST_1: cor_phaseClass6i_V_5 (1096)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:20  %cor_phaseClass6i_V_5 = load i16* @cor_phaseClass6i_V_5, align 2
+
+ST_1: cor_phaseClass6q_V_5 (1097)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:21  %cor_phaseClass6q_V_5 = load i16* @cor_phaseClass6q_V_5, align 2
+
+ST_1: cor_phaseClass6i_V_4 (1098)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:22  %cor_phaseClass6i_V_4 = load i16* @cor_phaseClass6i_V_4, align 8
+
+ST_1: cor_phaseClass6q_V_4 (1099)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:23  %cor_phaseClass6q_V_4 = load i16* @cor_phaseClass6q_V_4, align 8
+
+ST_1: cor_phaseClass6i_V_3 (1100)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:24  %cor_phaseClass6i_V_3 = load i16* @cor_phaseClass6i_V_3, align 2
+
+ST_1: tmp217 (1101)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:25  %tmp217 = add i16 %cor_phaseClass6i_V_1_6, %cor_phaseClass6i_V_9
+
+ST_1: tmp216 (1102)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:26  %tmp216 = add i16 %tmp217, %cor_phaseClass6i_V_1_7
+
+ST_1: tmp219 (1103)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:27  %tmp219 = add i16 %cor_phaseClass6i_V_8, %cor_phaseClass6i_V_7
+
+ST_1: tmp220 (1104)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:28  %tmp220 = add i16 %cor_phaseClass6i_V_6, %cor_phaseClass6i_V_3
+
+ST_1: tmp218 (1105)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:29  %tmp218 = add i16 %tmp220, %tmp219
+
+ST_1: corHelperIPos_V_6_s (1106)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:384
+.preheader2927.0:30  %corHelperIPos_V_6_s = add i16 %tmp218, %tmp216
+
+ST_1: cor_phaseClass6q_V_3 (1107)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:31  %cor_phaseClass6q_V_3 = load i16* @cor_phaseClass6q_V_3, align 2
+
+ST_1: tmp222 (1108)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:32  %tmp222 = add i16 %cor_phaseClass6q_V_1_6, %cor_phaseClass6q_V_9
+
+ST_1: tmp221 (1109)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:33  %tmp221 = add i16 %tmp222, %cor_phaseClass6q_V_1_7
+
+ST_1: tmp224 (1110)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:34  %tmp224 = add i16 %cor_phaseClass6q_V_8, %cor_phaseClass6q_V_7
+
+ST_1: tmp225 (1111)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:35  %tmp225 = add i16 %cor_phaseClass6q_V_6, %cor_phaseClass6q_V_3
+
+ST_1: tmp223 (1112)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:36  %tmp223 = add i16 %tmp225, %tmp224
+
+ST_1: corHelperQPos_V_6_s (1113)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:385
+.preheader2927.0:37  %corHelperQPos_V_6_s = add i16 %tmp223, %tmp221
+
+ST_1: cor_phaseClass6i_V_2 (1114)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:38  %cor_phaseClass6i_V_2 = load i16* @cor_phaseClass6i_V_2, align 4
+
+ST_1: cor_phaseClass6q_V_2 (1115)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:39  %cor_phaseClass6q_V_2 = load i16* @cor_phaseClass6q_V_2, align 4
+
+ST_1: cor_phaseClass6i_V_1_11 (1116)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:40  %cor_phaseClass6i_V_1_11 = load i16* @cor_phaseClass6i_V_1, align 2
+
+ST_1: cor_phaseClass6q_V_1_11 (1117)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:41  %cor_phaseClass6q_V_1_11 = load i16* @cor_phaseClass6q_V_1, align 2
+
+ST_1: cor_phaseClass6i_V_0 (1118)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:42  %cor_phaseClass6i_V_0 = load i16* @cor_phaseClass6i_V_0, align 16
+
+ST_1: tmp227 (1119)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:43  %tmp227 = add i16 %cor_phaseClass6i_V_1_8, %cor_phaseClass6i_V_1
+
+ST_1: tmp228 (1120)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:44  %tmp228 = add i16 %cor_phaseClass6i_V_1_9, %cor_phaseClass6i_V_1_10
+
+ST_1: tmp230 (1122)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:46  %tmp230 = add i16 %cor_phaseClass6i_V_5, %cor_phaseClass6i_V_4
+
+ST_1: tmp232 (1123)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:47  %tmp232 = add i16 %cor_phaseClass6i_V_1_11, %cor_phaseClass6i_V_0
+
+ST_1: tmp231 (1124)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:48  %tmp231 = add i16 %tmp232, %cor_phaseClass6i_V_2
+
+ST_1: tmp229 (1125)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:49  %tmp229 = add i16 %tmp231, %tmp230
+
+ST_1: cor_phaseClass6q_V_0 (1127)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:51  %cor_phaseClass6q_V_0 = load i16* @cor_phaseClass6q_V_0, align 16
+
+ST_1: tmp234 (1128)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:52  %tmp234 = add i16 %cor_phaseClass6q_V_1_8, %cor_phaseClass6q_V_1
+
+ST_1: tmp235 (1129)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:53  %tmp235 = add i16 %cor_phaseClass6q_V_1_9, %cor_phaseClass6q_V_1_10
+
+ST_1: tmp237 (1131)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:55  %tmp237 = add i16 %cor_phaseClass6q_V_5, %cor_phaseClass6q_V_4
+
+ST_1: tmp239 (1132)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:56  %tmp239 = add i16 %cor_phaseClass6q_V_1_11, %cor_phaseClass6q_V_0
+
+ST_1: tmp238 (1133)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:57  %tmp238 = add i16 %tmp239, %cor_phaseClass6q_V_2
+
+ST_1: tmp236 (1134)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:58  %tmp236 = add i16 %tmp238, %tmp237
+
+ST_1: cor_phaseClass5i_V_1 (1138)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:0  %cor_phaseClass5i_V_1 = load i16* @cor_phaseClass5i_V_15, align 2
+
+ST_1: cor_phaseClass5q_V_1 (1139)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:1  %cor_phaseClass5q_V_1 = load i16* @cor_phaseClass5q_V_15, align 2
+
+ST_1: cor_phaseClass5i_V_1_6 (1140)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:2  %cor_phaseClass5i_V_1_6 = load i16* @cor_phaseClass5i_V_14, align 4
+
+ST_1: cor_phaseClass5q_V_1_6 (1141)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:3  %cor_phaseClass5q_V_1_6 = load i16* @cor_phaseClass5q_V_14, align 4
+
+ST_1: cor_phaseClass5i_V_1_7 (1142)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:4  %cor_phaseClass5i_V_1_7 = load i16* @cor_phaseClass5i_V_13, align 2
+
+ST_1: cor_phaseClass5q_V_1_7 (1143)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:5  %cor_phaseClass5q_V_1_7 = load i16* @cor_phaseClass5q_V_13, align 2
+
+ST_1: cor_phaseClass5i_V_1_8 (1144)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:6  %cor_phaseClass5i_V_1_8 = load i16* @cor_phaseClass5i_V_12, align 8
+
+ST_1: cor_phaseClass5q_V_1_8 (1145)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:7  %cor_phaseClass5q_V_1_8 = load i16* @cor_phaseClass5q_V_12, align 8
+
+ST_1: cor_phaseClass5i_V_1_9 (1146)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:8  %cor_phaseClass5i_V_1_9 = load i16* @cor_phaseClass5i_V_11, align 2
+
+ST_1: cor_phaseClass5q_V_1_9 (1147)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:9  %cor_phaseClass5q_V_1_9 = load i16* @cor_phaseClass5q_V_11, align 2
+
+ST_1: cor_phaseClass5i_V_1_10 (1148)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:10  %cor_phaseClass5i_V_1_10 = load i16* @cor_phaseClass5i_V_10, align 4
+
+ST_1: cor_phaseClass5q_V_1_10 (1149)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:11  %cor_phaseClass5q_V_1_10 = load i16* @cor_phaseClass5q_V_10, align 4
+
+ST_1: cor_phaseClass5i_V_9 (1150)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:12  %cor_phaseClass5i_V_9 = load i16* @cor_phaseClass5i_V_9, align 2
+
+ST_1: cor_phaseClass5q_V_9 (1151)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:13  %cor_phaseClass5q_V_9 = load i16* @cor_phaseClass5q_V_9, align 2
+
+ST_1: cor_phaseClass5i_V_8 (1152)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:14  %cor_phaseClass5i_V_8 = load i16* @cor_phaseClass5i_V_8, align 16
+
+ST_1: cor_phaseClass5q_V_8 (1153)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:15  %cor_phaseClass5q_V_8 = load i16* @cor_phaseClass5q_V_8, align 16
+
+ST_1: cor_phaseClass5i_V_7 (1154)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:16  %cor_phaseClass5i_V_7 = load i16* @cor_phaseClass5i_V_7, align 2
+
+ST_1: cor_phaseClass5q_V_7 (1155)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:17  %cor_phaseClass5q_V_7 = load i16* @cor_phaseClass5q_V_7, align 2
+
+ST_1: cor_phaseClass5i_V_6 (1156)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:18  %cor_phaseClass5i_V_6 = load i16* @cor_phaseClass5i_V_6, align 4
+
+ST_1: cor_phaseClass5q_V_6 (1157)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:19  %cor_phaseClass5q_V_6 = load i16* @cor_phaseClass5q_V_6, align 4
+
+ST_1: cor_phaseClass5i_V_5 (1158)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:20  %cor_phaseClass5i_V_5 = load i16* @cor_phaseClass5i_V_5, align 2
+
+ST_1: cor_phaseClass5q_V_5 (1159)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:21  %cor_phaseClass5q_V_5 = load i16* @cor_phaseClass5q_V_5, align 2
+
+ST_1: cor_phaseClass5i_V_4 (1160)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:22  %cor_phaseClass5i_V_4 = load i16* @cor_phaseClass5i_V_4, align 8
+
+ST_1: cor_phaseClass5q_V_4 (1161)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:23  %cor_phaseClass5q_V_4 = load i16* @cor_phaseClass5q_V_4, align 8
+
+ST_1: cor_phaseClass5i_V_3 (1162)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:24  %cor_phaseClass5i_V_3 = load i16* @cor_phaseClass5i_V_3, align 2
+
+ST_1: tmp241 (1163)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:25  %tmp241 = add i16 %cor_phaseClass5i_V_1_6, %cor_phaseClass5i_V_9
+
+ST_1: tmp240 (1164)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:26  %tmp240 = add i16 %tmp241, %cor_phaseClass5i_V_1_7
+
+ST_1: tmp243 (1165)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:27  %tmp243 = add i16 %cor_phaseClass5i_V_8, %cor_phaseClass5i_V_7
+
+ST_1: tmp244 (1166)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:28  %tmp244 = add i16 %cor_phaseClass5i_V_6, %cor_phaseClass5i_V_3
+
+ST_1: tmp242 (1167)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:29  %tmp242 = add i16 %tmp244, %tmp243
+
+ST_1: corHelperIPos_V_5_s (1168)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:372
+.preheader2929.0:30  %corHelperIPos_V_5_s = add i16 %tmp242, %tmp240
+
+ST_1: cor_phaseClass5q_V_3 (1169)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:31  %cor_phaseClass5q_V_3 = load i16* @cor_phaseClass5q_V_3, align 2
+
+ST_1: tmp246 (1170)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:32  %tmp246 = add i16 %cor_phaseClass5q_V_1_6, %cor_phaseClass5q_V_9
+
+ST_1: tmp245 (1171)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:33  %tmp245 = add i16 %tmp246, %cor_phaseClass5q_V_1_7
+
+ST_1: tmp248 (1172)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:34  %tmp248 = add i16 %cor_phaseClass5q_V_8, %cor_phaseClass5q_V_7
+
+ST_1: tmp249 (1173)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:35  %tmp249 = add i16 %cor_phaseClass5q_V_6, %cor_phaseClass5q_V_3
+
+ST_1: tmp247 (1174)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:36  %tmp247 = add i16 %tmp249, %tmp248
+
+ST_1: corHelperQPos_V_5_s (1175)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:373
+.preheader2929.0:37  %corHelperQPos_V_5_s = add i16 %tmp247, %tmp245
+
+ST_1: cor_phaseClass5i_V_2 (1176)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:38  %cor_phaseClass5i_V_2 = load i16* @cor_phaseClass5i_V_2, align 4
+
+ST_1: cor_phaseClass5q_V_2 (1177)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:39  %cor_phaseClass5q_V_2 = load i16* @cor_phaseClass5q_V_2, align 4
+
+ST_1: cor_phaseClass5i_V_1_11 (1178)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:40  %cor_phaseClass5i_V_1_11 = load i16* @cor_phaseClass5i_V_1, align 2
+
+ST_1: cor_phaseClass5q_V_1_11 (1179)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:41  %cor_phaseClass5q_V_1_11 = load i16* @cor_phaseClass5q_V_1, align 2
+
+ST_1: cor_phaseClass5i_V_0 (1180)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:42  %cor_phaseClass5i_V_0 = load i16* @cor_phaseClass5i_V_0, align 16
+
+ST_1: tmp251 (1181)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:43  %tmp251 = add i16 %cor_phaseClass5i_V_1_8, %cor_phaseClass5i_V_1
+
+ST_1: tmp252 (1182)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:44  %tmp252 = add i16 %cor_phaseClass5i_V_1_9, %cor_phaseClass5i_V_1_10
+
+ST_1: tmp254 (1184)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:46  %tmp254 = add i16 %cor_phaseClass5i_V_5, %cor_phaseClass5i_V_4
+
+ST_1: tmp256 (1185)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:47  %tmp256 = add i16 %cor_phaseClass5i_V_1_11, %cor_phaseClass5i_V_0
+
+ST_1: tmp255 (1186)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:48  %tmp255 = add i16 %tmp256, %cor_phaseClass5i_V_2
+
+ST_1: tmp253 (1187)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:49  %tmp253 = add i16 %tmp255, %tmp254
+
+ST_1: cor_phaseClass5q_V_0 (1189)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:51  %cor_phaseClass5q_V_0 = load i16* @cor_phaseClass5q_V_0, align 16
+
+ST_1: tmp258 (1190)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:52  %tmp258 = add i16 %cor_phaseClass5q_V_1_8, %cor_phaseClass5q_V_1
+
+ST_1: tmp259 (1191)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:53  %tmp259 = add i16 %cor_phaseClass5q_V_1_9, %cor_phaseClass5q_V_1_10
+
+ST_1: tmp261 (1193)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:55  %tmp261 = add i16 %cor_phaseClass5q_V_5, %cor_phaseClass5q_V_4
+
+ST_1: tmp263 (1194)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:56  %tmp263 = add i16 %cor_phaseClass5q_V_1_11, %cor_phaseClass5q_V_0
+
+ST_1: tmp262 (1195)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:57  %tmp262 = add i16 %tmp263, %cor_phaseClass5q_V_2
+
+ST_1: tmp260 (1196)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:58  %tmp260 = add i16 %tmp262, %tmp261
+
+ST_1: cor_phaseClass4i_V_1 (1200)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:0  %cor_phaseClass4i_V_1 = load i16* @cor_phaseClass4i_V_15, align 2
+
+ST_1: cor_phaseClass4q_V_1 (1201)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:1  %cor_phaseClass4q_V_1 = load i16* @cor_phaseClass4q_V_15, align 2
+
+ST_1: cor_phaseClass4i_V_1_6 (1202)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:2  %cor_phaseClass4i_V_1_6 = load i16* @cor_phaseClass4i_V_14, align 4
+
+ST_1: cor_phaseClass4q_V_1_6 (1203)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:3  %cor_phaseClass4q_V_1_6 = load i16* @cor_phaseClass4q_V_14, align 4
+
+ST_1: cor_phaseClass4i_V_1_7 (1204)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:4  %cor_phaseClass4i_V_1_7 = load i16* @cor_phaseClass4i_V_13, align 2
+
+ST_1: cor_phaseClass4q_V_1_7 (1205)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:5  %cor_phaseClass4q_V_1_7 = load i16* @cor_phaseClass4q_V_13, align 2
+
+ST_1: cor_phaseClass4i_V_1_8 (1206)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:6  %cor_phaseClass4i_V_1_8 = load i16* @cor_phaseClass4i_V_12, align 8
+
+ST_1: cor_phaseClass4q_V_1_8 (1207)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:7  %cor_phaseClass4q_V_1_8 = load i16* @cor_phaseClass4q_V_12, align 8
+
+ST_1: cor_phaseClass4i_V_1_9 (1208)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:8  %cor_phaseClass4i_V_1_9 = load i16* @cor_phaseClass4i_V_11, align 2
+
+ST_1: cor_phaseClass4q_V_1_9 (1209)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:9  %cor_phaseClass4q_V_1_9 = load i16* @cor_phaseClass4q_V_11, align 2
+
+ST_1: cor_phaseClass4i_V_1_10 (1210)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:10  %cor_phaseClass4i_V_1_10 = load i16* @cor_phaseClass4i_V_10, align 4
+
+ST_1: cor_phaseClass4q_V_1_10 (1211)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:11  %cor_phaseClass4q_V_1_10 = load i16* @cor_phaseClass4q_V_10, align 4
+
+ST_1: cor_phaseClass4i_V_9 (1212)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:12  %cor_phaseClass4i_V_9 = load i16* @cor_phaseClass4i_V_9, align 2
+
+ST_1: cor_phaseClass4q_V_9 (1213)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:13  %cor_phaseClass4q_V_9 = load i16* @cor_phaseClass4q_V_9, align 2
+
+ST_1: cor_phaseClass4i_V_8 (1214)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:14  %cor_phaseClass4i_V_8 = load i16* @cor_phaseClass4i_V_8, align 16
+
+ST_1: cor_phaseClass4q_V_8 (1215)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:15  %cor_phaseClass4q_V_8 = load i16* @cor_phaseClass4q_V_8, align 16
+
+ST_1: cor_phaseClass4i_V_7 (1216)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:16  %cor_phaseClass4i_V_7 = load i16* @cor_phaseClass4i_V_7, align 2
+
+ST_1: cor_phaseClass4q_V_7 (1217)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:17  %cor_phaseClass4q_V_7 = load i16* @cor_phaseClass4q_V_7, align 2
+
+ST_1: cor_phaseClass4i_V_6 (1218)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:18  %cor_phaseClass4i_V_6 = load i16* @cor_phaseClass4i_V_6, align 4
+
+ST_1: cor_phaseClass4q_V_6 (1219)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:19  %cor_phaseClass4q_V_6 = load i16* @cor_phaseClass4q_V_6, align 4
+
+ST_1: cor_phaseClass4i_V_5 (1220)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:20  %cor_phaseClass4i_V_5 = load i16* @cor_phaseClass4i_V_5, align 2
+
+ST_1: cor_phaseClass4q_V_5 (1221)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:21  %cor_phaseClass4q_V_5 = load i16* @cor_phaseClass4q_V_5, align 2
+
+ST_1: cor_phaseClass4i_V_4 (1222)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:22  %cor_phaseClass4i_V_4 = load i16* @cor_phaseClass4i_V_4, align 8
+
+ST_1: cor_phaseClass4q_V_4 (1223)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:23  %cor_phaseClass4q_V_4 = load i16* @cor_phaseClass4q_V_4, align 8
+
+ST_1: cor_phaseClass4i_V_3 (1224)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:24  %cor_phaseClass4i_V_3 = load i16* @cor_phaseClass4i_V_3, align 2
+
+ST_1: tmp265 (1225)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:25  %tmp265 = add i16 %cor_phaseClass4i_V_1_6, %cor_phaseClass4i_V_9
+
+ST_1: tmp264 (1226)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:26  %tmp264 = add i16 %tmp265, %cor_phaseClass4i_V_1_7
+
+ST_1: tmp267 (1227)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:27  %tmp267 = add i16 %cor_phaseClass4i_V_8, %cor_phaseClass4i_V_7
+
+ST_1: tmp268 (1228)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:28  %tmp268 = add i16 %cor_phaseClass4i_V_6, %cor_phaseClass4i_V_3
+
+ST_1: tmp266 (1229)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:29  %tmp266 = add i16 %tmp268, %tmp267
+
+ST_1: corHelperIPos_V_4_s (1230)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:359
+.preheader2931.0:30  %corHelperIPos_V_4_s = add i16 %tmp266, %tmp264
+
+ST_1: cor_phaseClass4q_V_3 (1231)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:31  %cor_phaseClass4q_V_3 = load i16* @cor_phaseClass4q_V_3, align 2
+
+ST_1: tmp270 (1232)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:32  %tmp270 = add i16 %cor_phaseClass4q_V_1_6, %cor_phaseClass4q_V_9
+
+ST_1: tmp269 (1233)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:33  %tmp269 = add i16 %tmp270, %cor_phaseClass4q_V_1_7
+
+ST_1: tmp272 (1234)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:34  %tmp272 = add i16 %cor_phaseClass4q_V_8, %cor_phaseClass4q_V_7
+
+ST_1: tmp273 (1235)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:35  %tmp273 = add i16 %cor_phaseClass4q_V_6, %cor_phaseClass4q_V_3
+
+ST_1: tmp271 (1236)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:36  %tmp271 = add i16 %tmp273, %tmp272
+
+ST_1: corHelperQPos_V_4_s (1237)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:360
+.preheader2931.0:37  %corHelperQPos_V_4_s = add i16 %tmp271, %tmp269
+
+ST_1: cor_phaseClass4i_V_2 (1238)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:38  %cor_phaseClass4i_V_2 = load i16* @cor_phaseClass4i_V_2, align 4
+
+ST_1: cor_phaseClass4q_V_2 (1239)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:39  %cor_phaseClass4q_V_2 = load i16* @cor_phaseClass4q_V_2, align 4
+
+ST_1: cor_phaseClass4i_V_1_11 (1240)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:40  %cor_phaseClass4i_V_1_11 = load i16* @cor_phaseClass4i_V_1, align 2
+
+ST_1: cor_phaseClass4q_V_1_11 (1241)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:41  %cor_phaseClass4q_V_1_11 = load i16* @cor_phaseClass4q_V_1, align 2
+
+ST_1: cor_phaseClass4i_V_0 (1242)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:42  %cor_phaseClass4i_V_0 = load i16* @cor_phaseClass4i_V_0, align 16
+
+ST_1: tmp275 (1243)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:43  %tmp275 = add i16 %cor_phaseClass4i_V_1_8, %cor_phaseClass4i_V_1
+
+ST_1: tmp276 (1244)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:44  %tmp276 = add i16 %cor_phaseClass4i_V_1_9, %cor_phaseClass4i_V_1_10
+
+ST_1: tmp278 (1246)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:46  %tmp278 = add i16 %cor_phaseClass4i_V_5, %cor_phaseClass4i_V_4
+
+ST_1: tmp280 (1247)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:47  %tmp280 = add i16 %cor_phaseClass4i_V_1_11, %cor_phaseClass4i_V_0
+
+ST_1: tmp279 (1248)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:48  %tmp279 = add i16 %tmp280, %cor_phaseClass4i_V_2
+
+ST_1: tmp277 (1249)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:49  %tmp277 = add i16 %tmp279, %tmp278
+
+ST_1: cor_phaseClass4q_V_0 (1251)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:51  %cor_phaseClass4q_V_0 = load i16* @cor_phaseClass4q_V_0, align 16
+
+ST_1: tmp282 (1252)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:52  %tmp282 = add i16 %cor_phaseClass4q_V_1_8, %cor_phaseClass4q_V_1
+
+ST_1: tmp283 (1253)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:53  %tmp283 = add i16 %cor_phaseClass4q_V_1_9, %cor_phaseClass4q_V_1_10
+
+ST_1: tmp285 (1255)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:55  %tmp285 = add i16 %cor_phaseClass4q_V_5, %cor_phaseClass4q_V_4
+
+ST_1: tmp287 (1256)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:56  %tmp287 = add i16 %cor_phaseClass4q_V_1_11, %cor_phaseClass4q_V_0
+
+ST_1: tmp286 (1257)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:57  %tmp286 = add i16 %tmp287, %cor_phaseClass4q_V_2
+
+ST_1: tmp284 (1258)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:58  %tmp284 = add i16 %tmp286, %tmp285
+
+ST_1: cor_phaseClass3i_V_1 (1262)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:0  %cor_phaseClass3i_V_1 = load i16* @cor_phaseClass3i_V_15, align 2
+
+ST_1: cor_phaseClass3q_V_1 (1263)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:1  %cor_phaseClass3q_V_1 = load i16* @cor_phaseClass3q_V_15, align 2
+
+ST_1: cor_phaseClass3i_V_1_6 (1264)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:2  %cor_phaseClass3i_V_1_6 = load i16* @cor_phaseClass3i_V_14, align 4
+
+ST_1: cor_phaseClass3q_V_1_6 (1265)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:3  %cor_phaseClass3q_V_1_6 = load i16* @cor_phaseClass3q_V_14, align 4
+
+ST_1: cor_phaseClass3i_V_1_7 (1266)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:4  %cor_phaseClass3i_V_1_7 = load i16* @cor_phaseClass3i_V_13, align 2
+
+ST_1: cor_phaseClass3q_V_1_7 (1267)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:5  %cor_phaseClass3q_V_1_7 = load i16* @cor_phaseClass3q_V_13, align 2
+
+ST_1: cor_phaseClass3i_V_1_8 (1268)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:6  %cor_phaseClass3i_V_1_8 = load i16* @cor_phaseClass3i_V_12, align 8
+
+ST_1: cor_phaseClass3q_V_1_8 (1269)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:7  %cor_phaseClass3q_V_1_8 = load i16* @cor_phaseClass3q_V_12, align 8
+
+ST_1: cor_phaseClass3i_V_1_9 (1270)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:8  %cor_phaseClass3i_V_1_9 = load i16* @cor_phaseClass3i_V_11, align 2
+
+ST_1: cor_phaseClass3q_V_1_9 (1271)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:9  %cor_phaseClass3q_V_1_9 = load i16* @cor_phaseClass3q_V_11, align 2
+
+ST_1: cor_phaseClass3i_V_1_10 (1272)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:10  %cor_phaseClass3i_V_1_10 = load i16* @cor_phaseClass3i_V_10, align 4
+
+ST_1: cor_phaseClass3q_V_1_10 (1273)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:11  %cor_phaseClass3q_V_1_10 = load i16* @cor_phaseClass3q_V_10, align 4
+
+ST_1: cor_phaseClass3i_V_9 (1274)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:12  %cor_phaseClass3i_V_9 = load i16* @cor_phaseClass3i_V_9, align 2
+
+ST_1: cor_phaseClass3q_V_9 (1275)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:13  %cor_phaseClass3q_V_9 = load i16* @cor_phaseClass3q_V_9, align 2
+
+ST_1: cor_phaseClass3i_V_8 (1276)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:14  %cor_phaseClass3i_V_8 = load i16* @cor_phaseClass3i_V_8, align 16
+
+ST_1: cor_phaseClass3q_V_8 (1277)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:15  %cor_phaseClass3q_V_8 = load i16* @cor_phaseClass3q_V_8, align 16
+
+ST_1: cor_phaseClass3i_V_7 (1278)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:16  %cor_phaseClass3i_V_7 = load i16* @cor_phaseClass3i_V_7, align 2
+
+ST_1: cor_phaseClass3q_V_7 (1279)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:17  %cor_phaseClass3q_V_7 = load i16* @cor_phaseClass3q_V_7, align 2
+
+ST_1: cor_phaseClass3i_V_6 (1280)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:18  %cor_phaseClass3i_V_6 = load i16* @cor_phaseClass3i_V_6, align 4
+
+ST_1: cor_phaseClass3q_V_6 (1281)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:19  %cor_phaseClass3q_V_6 = load i16* @cor_phaseClass3q_V_6, align 4
+
+ST_1: cor_phaseClass3i_V_5 (1282)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:20  %cor_phaseClass3i_V_5 = load i16* @cor_phaseClass3i_V_5, align 2
+
+ST_1: cor_phaseClass3q_V_5 (1283)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:21  %cor_phaseClass3q_V_5 = load i16* @cor_phaseClass3q_V_5, align 2
+
+ST_1: cor_phaseClass3i_V_4 (1284)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:22  %cor_phaseClass3i_V_4 = load i16* @cor_phaseClass3i_V_4, align 8
+
+ST_1: cor_phaseClass3q_V_4 (1285)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:23  %cor_phaseClass3q_V_4 = load i16* @cor_phaseClass3q_V_4, align 8
+
+ST_1: cor_phaseClass3i_V_3 (1286)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:24  %cor_phaseClass3i_V_3 = load i16* @cor_phaseClass3i_V_3, align 2
+
+ST_1: tmp289 (1287)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:25  %tmp289 = add i16 %cor_phaseClass3i_V_1_6, %cor_phaseClass3i_V_9
+
+ST_1: tmp288 (1288)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:26  %tmp288 = add i16 %tmp289, %cor_phaseClass3i_V_1_7
+
+ST_1: tmp291 (1289)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:27  %tmp291 = add i16 %cor_phaseClass3i_V_8, %cor_phaseClass3i_V_7
+
+ST_1: tmp292 (1290)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:28  %tmp292 = add i16 %cor_phaseClass3i_V_6, %cor_phaseClass3i_V_3
+
+ST_1: tmp290 (1291)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:29  %tmp290 = add i16 %tmp292, %tmp291
+
+ST_1: corHelperIPos_V_3_s (1292)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:347
+.preheader2933.0:30  %corHelperIPos_V_3_s = add i16 %tmp290, %tmp288
+
+ST_1: cor_phaseClass3q_V_3 (1293)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:31  %cor_phaseClass3q_V_3 = load i16* @cor_phaseClass3q_V_3, align 2
+
+ST_1: tmp294 (1294)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:32  %tmp294 = add i16 %cor_phaseClass3q_V_1_6, %cor_phaseClass3q_V_9
+
+ST_1: tmp293 (1295)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:33  %tmp293 = add i16 %tmp294, %cor_phaseClass3q_V_1_7
+
+ST_1: tmp296 (1296)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:34  %tmp296 = add i16 %cor_phaseClass3q_V_8, %cor_phaseClass3q_V_7
+
+ST_1: tmp297 (1297)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:35  %tmp297 = add i16 %cor_phaseClass3q_V_6, %cor_phaseClass3q_V_3
+
+ST_1: tmp295 (1298)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:36  %tmp295 = add i16 %tmp297, %tmp296
+
+ST_1: corHelperQPos_V_3_s (1299)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:348
+.preheader2933.0:37  %corHelperQPos_V_3_s = add i16 %tmp295, %tmp293
+
+ST_1: cor_phaseClass3i_V_2 (1300)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:38  %cor_phaseClass3i_V_2 = load i16* @cor_phaseClass3i_V_2, align 4
+
+ST_1: cor_phaseClass3q_V_2 (1301)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:39  %cor_phaseClass3q_V_2 = load i16* @cor_phaseClass3q_V_2, align 4
+
+ST_1: cor_phaseClass3i_V_1_11 (1302)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:40  %cor_phaseClass3i_V_1_11 = load i16* @cor_phaseClass3i_V_1, align 2
+
+ST_1: cor_phaseClass3q_V_1_11 (1303)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:41  %cor_phaseClass3q_V_1_11 = load i16* @cor_phaseClass3q_V_1, align 2
+
+ST_1: cor_phaseClass3i_V_0 (1304)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:42  %cor_phaseClass3i_V_0 = load i16* @cor_phaseClass3i_V_0, align 16
+
+ST_1: tmp299 (1305)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:43  %tmp299 = add i16 %cor_phaseClass3i_V_1_8, %cor_phaseClass3i_V_1
+
+ST_1: tmp300 (1306)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:44  %tmp300 = add i16 %cor_phaseClass3i_V_1_9, %cor_phaseClass3i_V_1_10
+
+ST_1: tmp302 (1308)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:46  %tmp302 = add i16 %cor_phaseClass3i_V_5, %cor_phaseClass3i_V_4
+
+ST_1: tmp304 (1309)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:47  %tmp304 = add i16 %cor_phaseClass3i_V_1_11, %cor_phaseClass3i_V_0
+
+ST_1: tmp303 (1310)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:48  %tmp303 = add i16 %tmp304, %cor_phaseClass3i_V_2
+
+ST_1: tmp301 (1311)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:49  %tmp301 = add i16 %tmp303, %tmp302
+
+ST_1: cor_phaseClass3q_V_0 (1313)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:51  %cor_phaseClass3q_V_0 = load i16* @cor_phaseClass3q_V_0, align 16
+
+ST_1: tmp306 (1314)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:52  %tmp306 = add i16 %cor_phaseClass3q_V_1_8, %cor_phaseClass3q_V_1
+
+ST_1: tmp307 (1315)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:53  %tmp307 = add i16 %cor_phaseClass3q_V_1_9, %cor_phaseClass3q_V_1_10
+
+ST_1: tmp309 (1317)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:55  %tmp309 = add i16 %cor_phaseClass3q_V_5, %cor_phaseClass3q_V_4
+
+ST_1: tmp311 (1318)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:56  %tmp311 = add i16 %cor_phaseClass3q_V_1_11, %cor_phaseClass3q_V_0
+
+ST_1: tmp310 (1319)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:57  %tmp310 = add i16 %tmp311, %cor_phaseClass3q_V_2
+
+ST_1: tmp308 (1320)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:58  %tmp308 = add i16 %tmp310, %tmp309
+
+ST_1: cor_phaseClass2i_V_1 (1324)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:0  %cor_phaseClass2i_V_1 = load i16* @cor_phaseClass2i_V_15, align 2
+
+ST_1: cor_phaseClass2q_V_1 (1325)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:1  %cor_phaseClass2q_V_1 = load i16* @cor_phaseClass2q_V_15, align 2
+
+ST_1: cor_phaseClass2i_V_1_6 (1326)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:2  %cor_phaseClass2i_V_1_6 = load i16* @cor_phaseClass2i_V_14, align 4
+
+ST_1: cor_phaseClass2q_V_1_6 (1327)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:3  %cor_phaseClass2q_V_1_6 = load i16* @cor_phaseClass2q_V_14, align 4
+
+ST_1: cor_phaseClass2i_V_1_7 (1328)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:4  %cor_phaseClass2i_V_1_7 = load i16* @cor_phaseClass2i_V_13, align 2
+
+ST_1: cor_phaseClass2q_V_1_7 (1329)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:5  %cor_phaseClass2q_V_1_7 = load i16* @cor_phaseClass2q_V_13, align 2
+
+ST_1: cor_phaseClass2i_V_1_8 (1330)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:6  %cor_phaseClass2i_V_1_8 = load i16* @cor_phaseClass2i_V_12, align 8
+
+ST_1: cor_phaseClass2q_V_1_8 (1331)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:7  %cor_phaseClass2q_V_1_8 = load i16* @cor_phaseClass2q_V_12, align 8
+
+ST_1: cor_phaseClass2i_V_1_9 (1332)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:8  %cor_phaseClass2i_V_1_9 = load i16* @cor_phaseClass2i_V_11, align 2
+
+ST_1: cor_phaseClass2q_V_1_9 (1333)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:9  %cor_phaseClass2q_V_1_9 = load i16* @cor_phaseClass2q_V_11, align 2
+
+ST_1: cor_phaseClass2i_V_1_10 (1334)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:10  %cor_phaseClass2i_V_1_10 = load i16* @cor_phaseClass2i_V_10, align 4
+
+ST_1: cor_phaseClass2q_V_1_10 (1335)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:11  %cor_phaseClass2q_V_1_10 = load i16* @cor_phaseClass2q_V_10, align 4
+
+ST_1: cor_phaseClass2i_V_9 (1336)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:12  %cor_phaseClass2i_V_9 = load i16* @cor_phaseClass2i_V_9, align 2
+
+ST_1: cor_phaseClass2q_V_9 (1337)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:13  %cor_phaseClass2q_V_9 = load i16* @cor_phaseClass2q_V_9, align 2
+
+ST_1: cor_phaseClass2i_V_8 (1338)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:14  %cor_phaseClass2i_V_8 = load i16* @cor_phaseClass2i_V_8, align 16
+
+ST_1: cor_phaseClass2q_V_8 (1339)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:15  %cor_phaseClass2q_V_8 = load i16* @cor_phaseClass2q_V_8, align 16
+
+ST_1: cor_phaseClass2i_V_7 (1340)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:16  %cor_phaseClass2i_V_7 = load i16* @cor_phaseClass2i_V_7, align 2
+
+ST_1: cor_phaseClass2q_V_7 (1341)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:17  %cor_phaseClass2q_V_7 = load i16* @cor_phaseClass2q_V_7, align 2
+
+ST_1: cor_phaseClass2i_V_6 (1342)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:18  %cor_phaseClass2i_V_6 = load i16* @cor_phaseClass2i_V_6, align 4
+
+ST_1: cor_phaseClass2q_V_6 (1343)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:19  %cor_phaseClass2q_V_6 = load i16* @cor_phaseClass2q_V_6, align 4
+
+ST_1: cor_phaseClass2i_V_5 (1344)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:20  %cor_phaseClass2i_V_5 = load i16* @cor_phaseClass2i_V_5, align 2
+
+ST_1: cor_phaseClass2q_V_5 (1345)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:21  %cor_phaseClass2q_V_5 = load i16* @cor_phaseClass2q_V_5, align 2
+
+ST_1: cor_phaseClass2i_V_4 (1346)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:22  %cor_phaseClass2i_V_4 = load i16* @cor_phaseClass2i_V_4, align 8
+
+ST_1: cor_phaseClass2q_V_4 (1347)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:23  %cor_phaseClass2q_V_4 = load i16* @cor_phaseClass2q_V_4, align 8
+
+ST_1: cor_phaseClass2i_V_3 (1348)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:24  %cor_phaseClass2i_V_3 = load i16* @cor_phaseClass2i_V_3, align 2
+
+ST_1: tmp313 (1349)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:25  %tmp313 = add i16 %cor_phaseClass2i_V_1_6, %cor_phaseClass2i_V_9
+
+ST_1: tmp312 (1350)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:26  %tmp312 = add i16 %tmp313, %cor_phaseClass2i_V_1_7
+
+ST_1: tmp315 (1351)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:27  %tmp315 = add i16 %cor_phaseClass2i_V_8, %cor_phaseClass2i_V_7
+
+ST_1: tmp316 (1352)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:28  %tmp316 = add i16 %cor_phaseClass2i_V_6, %cor_phaseClass2i_V_3
+
+ST_1: tmp314 (1353)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:29  %tmp314 = add i16 %tmp316, %tmp315
+
+ST_1: corHelperIPos_V_2_s (1354)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:335
+.preheader2935.0:30  %corHelperIPos_V_2_s = add i16 %tmp314, %tmp312
+
+ST_1: cor_phaseClass2q_V_3 (1355)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:31  %cor_phaseClass2q_V_3 = load i16* @cor_phaseClass2q_V_3, align 2
+
+ST_1: tmp318 (1356)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:32  %tmp318 = add i16 %cor_phaseClass2q_V_1_6, %cor_phaseClass2q_V_9
+
+ST_1: tmp317 (1357)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:33  %tmp317 = add i16 %tmp318, %cor_phaseClass2q_V_1_7
+
+ST_1: tmp320 (1358)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:34  %tmp320 = add i16 %cor_phaseClass2q_V_8, %cor_phaseClass2q_V_7
+
+ST_1: tmp321 (1359)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:35  %tmp321 = add i16 %cor_phaseClass2q_V_6, %cor_phaseClass2q_V_3
+
+ST_1: tmp319 (1360)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:36  %tmp319 = add i16 %tmp321, %tmp320
+
+ST_1: corHelperQPos_V_2_s (1361)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:336
+.preheader2935.0:37  %corHelperQPos_V_2_s = add i16 %tmp319, %tmp317
+
+ST_1: cor_phaseClass2i_V_2 (1362)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:38  %cor_phaseClass2i_V_2 = load i16* @cor_phaseClass2i_V_2, align 4
+
+ST_1: cor_phaseClass2q_V_2 (1363)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:39  %cor_phaseClass2q_V_2 = load i16* @cor_phaseClass2q_V_2, align 4
+
+ST_1: cor_phaseClass2i_V_1_11 (1364)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:40  %cor_phaseClass2i_V_1_11 = load i16* @cor_phaseClass2i_V_1, align 2
+
+ST_1: cor_phaseClass2q_V_1_11 (1365)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:41  %cor_phaseClass2q_V_1_11 = load i16* @cor_phaseClass2q_V_1, align 2
+
+ST_1: cor_phaseClass2i_V_0 (1366)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:42  %cor_phaseClass2i_V_0 = load i16* @cor_phaseClass2i_V_0, align 16
+
+ST_1: tmp323 (1367)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:43  %tmp323 = add i16 %cor_phaseClass2i_V_1_8, %cor_phaseClass2i_V_1
+
+ST_1: tmp324 (1368)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:44  %tmp324 = add i16 %cor_phaseClass2i_V_1_9, %cor_phaseClass2i_V_1_10
+
+ST_1: tmp326 (1370)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:46  %tmp326 = add i16 %cor_phaseClass2i_V_5, %cor_phaseClass2i_V_4
+
+ST_1: tmp328 (1371)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:47  %tmp328 = add i16 %cor_phaseClass2i_V_1_11, %cor_phaseClass2i_V_0
+
+ST_1: tmp327 (1372)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:48  %tmp327 = add i16 %tmp328, %cor_phaseClass2i_V_2
+
+ST_1: tmp325 (1373)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:49  %tmp325 = add i16 %tmp327, %tmp326
+
+ST_1: cor_phaseClass2q_V_0 (1375)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:51  %cor_phaseClass2q_V_0 = load i16* @cor_phaseClass2q_V_0, align 16
+
+ST_1: tmp330 (1376)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:52  %tmp330 = add i16 %cor_phaseClass2q_V_1_8, %cor_phaseClass2q_V_1
+
+ST_1: tmp331 (1377)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:53  %tmp331 = add i16 %cor_phaseClass2q_V_1_9, %cor_phaseClass2q_V_1_10
+
+ST_1: tmp333 (1379)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:55  %tmp333 = add i16 %cor_phaseClass2q_V_5, %cor_phaseClass2q_V_4
+
+ST_1: tmp335 (1380)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:56  %tmp335 = add i16 %cor_phaseClass2q_V_1_11, %cor_phaseClass2q_V_0
+
+ST_1: tmp334 (1381)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:57  %tmp334 = add i16 %tmp335, %cor_phaseClass2q_V_2
+
+ST_1: tmp332 (1382)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:58  %tmp332 = add i16 %tmp334, %tmp333
+
+ST_1: cor_phaseClass1i_V_1 (1386)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:0  %cor_phaseClass1i_V_1 = load i16* @cor_phaseClass1i_V_15, align 2
+
+ST_1: cor_phaseClass1q_V_1 (1387)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:1  %cor_phaseClass1q_V_1 = load i16* @cor_phaseClass1q_V_15, align 2
+
+ST_1: cor_phaseClass1i_V_1_6 (1388)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:2  %cor_phaseClass1i_V_1_6 = load i16* @cor_phaseClass1i_V_14, align 4
+
+ST_1: cor_phaseClass1q_V_1_6 (1389)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:3  %cor_phaseClass1q_V_1_6 = load i16* @cor_phaseClass1q_V_14, align 4
+
+ST_1: cor_phaseClass1i_V_1_7 (1390)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:4  %cor_phaseClass1i_V_1_7 = load i16* @cor_phaseClass1i_V_13, align 2
+
+ST_1: cor_phaseClass1q_V_1_7 (1391)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:5  %cor_phaseClass1q_V_1_7 = load i16* @cor_phaseClass1q_V_13, align 2
+
+ST_1: cor_phaseClass1i_V_1_8 (1392)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:6  %cor_phaseClass1i_V_1_8 = load i16* @cor_phaseClass1i_V_12, align 8
+
+ST_1: cor_phaseClass1q_V_1_8 (1393)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:7  %cor_phaseClass1q_V_1_8 = load i16* @cor_phaseClass1q_V_12, align 8
+
+ST_1: cor_phaseClass1i_V_1_9 (1394)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:8  %cor_phaseClass1i_V_1_9 = load i16* @cor_phaseClass1i_V_11, align 2
+
+ST_1: cor_phaseClass1q_V_1_9 (1395)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:9  %cor_phaseClass1q_V_1_9 = load i16* @cor_phaseClass1q_V_11, align 2
+
+ST_1: cor_phaseClass1i_V_1_10 (1396)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:10  %cor_phaseClass1i_V_1_10 = load i16* @cor_phaseClass1i_V_10, align 4
+
+ST_1: cor_phaseClass1q_V_1_10 (1397)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:11  %cor_phaseClass1q_V_1_10 = load i16* @cor_phaseClass1q_V_10, align 4
+
+ST_1: cor_phaseClass1i_V_9 (1398)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:12  %cor_phaseClass1i_V_9 = load i16* @cor_phaseClass1i_V_9, align 2
+
+ST_1: cor_phaseClass1q_V_9 (1399)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:13  %cor_phaseClass1q_V_9 = load i16* @cor_phaseClass1q_V_9, align 2
+
+ST_1: cor_phaseClass1i_V_8 (1400)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:14  %cor_phaseClass1i_V_8 = load i16* @cor_phaseClass1i_V_8, align 16
+
+ST_1: cor_phaseClass1q_V_8 (1401)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:15  %cor_phaseClass1q_V_8 = load i16* @cor_phaseClass1q_V_8, align 16
+
+ST_1: cor_phaseClass1i_V_7 (1402)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:16  %cor_phaseClass1i_V_7 = load i16* @cor_phaseClass1i_V_7, align 2
+
+ST_1: cor_phaseClass1q_V_7 (1403)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:17  %cor_phaseClass1q_V_7 = load i16* @cor_phaseClass1q_V_7, align 2
+
+ST_1: cor_phaseClass1i_V_6 (1404)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:18  %cor_phaseClass1i_V_6 = load i16* @cor_phaseClass1i_V_6, align 4
+
+ST_1: cor_phaseClass1q_V_6 (1405)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:19  %cor_phaseClass1q_V_6 = load i16* @cor_phaseClass1q_V_6, align 4
+
+ST_1: cor_phaseClass1i_V_5 (1406)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:20  %cor_phaseClass1i_V_5 = load i16* @cor_phaseClass1i_V_5, align 2
+
+ST_1: cor_phaseClass1q_V_5 (1407)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:21  %cor_phaseClass1q_V_5 = load i16* @cor_phaseClass1q_V_5, align 2
+
+ST_1: cor_phaseClass1i_V_4 (1408)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:22  %cor_phaseClass1i_V_4 = load i16* @cor_phaseClass1i_V_4, align 8
+
+ST_1: cor_phaseClass1q_V_4 (1409)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:23  %cor_phaseClass1q_V_4 = load i16* @cor_phaseClass1q_V_4, align 8
+
+ST_1: cor_phaseClass1i_V_3 (1410)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:24  %cor_phaseClass1i_V_3 = load i16* @cor_phaseClass1i_V_3, align 2
+
+ST_1: tmp337 (1411)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:25  %tmp337 = add i16 %cor_phaseClass1i_V_1_6, %cor_phaseClass1i_V_9
+
+ST_1: tmp336 (1412)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:26  %tmp336 = add i16 %tmp337, %cor_phaseClass1i_V_1_7
+
+ST_1: tmp339 (1413)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:27  %tmp339 = add i16 %cor_phaseClass1i_V_8, %cor_phaseClass1i_V_7
+
+ST_1: tmp340 (1414)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:28  %tmp340 = add i16 %cor_phaseClass1i_V_6, %cor_phaseClass1i_V_3
+
+ST_1: tmp338 (1415)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:29  %tmp338 = add i16 %tmp340, %tmp339
+
+ST_1: corHelperIPos_V_1_s (1416)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:323
+.preheader2937.0:30  %corHelperIPos_V_1_s = add i16 %tmp338, %tmp336
+
+ST_1: cor_phaseClass1q_V_3 (1417)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:31  %cor_phaseClass1q_V_3 = load i16* @cor_phaseClass1q_V_3, align 2
+
+ST_1: tmp342 (1418)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:32  %tmp342 = add i16 %cor_phaseClass1q_V_1_6, %cor_phaseClass1q_V_9
+
+ST_1: tmp341 (1419)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:33  %tmp341 = add i16 %tmp342, %cor_phaseClass1q_V_1_7
+
+ST_1: tmp344 (1420)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:34  %tmp344 = add i16 %cor_phaseClass1q_V_8, %cor_phaseClass1q_V_7
+
+ST_1: tmp345 (1421)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:35  %tmp345 = add i16 %cor_phaseClass1q_V_6, %cor_phaseClass1q_V_3
+
+ST_1: tmp343 (1422)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:36  %tmp343 = add i16 %tmp345, %tmp344
+
+ST_1: corHelperQPos_V_1_s (1423)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:324
+.preheader2937.0:37  %corHelperQPos_V_1_s = add i16 %tmp343, %tmp341
+
+ST_1: cor_phaseClass1i_V_2 (1424)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:38  %cor_phaseClass1i_V_2 = load i16* @cor_phaseClass1i_V_2, align 4
+
+ST_1: cor_phaseClass1q_V_2 (1425)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:39  %cor_phaseClass1q_V_2 = load i16* @cor_phaseClass1q_V_2, align 4
+
+ST_1: cor_phaseClass1i_V_1_11 (1426)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:40  %cor_phaseClass1i_V_1_11 = load i16* @cor_phaseClass1i_V_1, align 2
+
+ST_1: cor_phaseClass1q_V_1_11 (1427)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:41  %cor_phaseClass1q_V_1_11 = load i16* @cor_phaseClass1q_V_1, align 2
+
+ST_1: cor_phaseClass1i_V_0 (1428)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:42  %cor_phaseClass1i_V_0 = load i16* @cor_phaseClass1i_V_0, align 16
+
+ST_1: tmp347 (1429)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:43  %tmp347 = add i16 %cor_phaseClass1i_V_1_8, %cor_phaseClass1i_V_1
+
+ST_1: tmp348 (1430)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:44  %tmp348 = add i16 %cor_phaseClass1i_V_1_9, %cor_phaseClass1i_V_1_10
+
+ST_1: tmp350 (1432)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:46  %tmp350 = add i16 %cor_phaseClass1i_V_5, %cor_phaseClass1i_V_4
+
+ST_1: tmp352 (1433)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:47  %tmp352 = add i16 %cor_phaseClass1i_V_1_11, %cor_phaseClass1i_V_0
+
+ST_1: tmp351 (1434)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:48  %tmp351 = add i16 %tmp352, %cor_phaseClass1i_V_2
+
+ST_1: tmp349 (1435)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:49  %tmp349 = add i16 %tmp351, %tmp350
+
+ST_1: cor_phaseClass1q_V_0 (1437)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:51  %cor_phaseClass1q_V_0 = load i16* @cor_phaseClass1q_V_0, align 16
+
+ST_1: tmp354 (1438)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:52  %tmp354 = add i16 %cor_phaseClass1q_V_1_8, %cor_phaseClass1q_V_1
+
+ST_1: tmp355 (1439)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:53  %tmp355 = add i16 %cor_phaseClass1q_V_1_9, %cor_phaseClass1q_V_1_10
+
+ST_1: tmp357 (1441)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:55  %tmp357 = add i16 %cor_phaseClass1q_V_5, %cor_phaseClass1q_V_4
+
+ST_1: tmp359 (1442)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:56  %tmp359 = add i16 %cor_phaseClass1q_V_1_11, %cor_phaseClass1q_V_0
+
+ST_1: tmp358 (1443)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:57  %tmp358 = add i16 %tmp359, %cor_phaseClass1q_V_2
+
+ST_1: tmp356 (1444)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:58  %tmp356 = add i16 %tmp358, %tmp357
+
+ST_1: cor_phaseClass0i_V_1 (1448)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:0  %cor_phaseClass0i_V_1 = load i16* @cor_phaseClass0i_V_15, align 2
+
+ST_1: cor_phaseClass0q_V_1 (1449)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:1  %cor_phaseClass0q_V_1 = load i16* @cor_phaseClass0q_V_15, align 2
+
+ST_1: cor_phaseClass0i_V_1_6 (1450)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:2  %cor_phaseClass0i_V_1_6 = load i16* @cor_phaseClass0i_V_14, align 4
+
+ST_1: cor_phaseClass0q_V_1_6 (1451)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:3  %cor_phaseClass0q_V_1_6 = load i16* @cor_phaseClass0q_V_14, align 4
+
+ST_1: cor_phaseClass0i_V_1_7 (1452)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:4  %cor_phaseClass0i_V_1_7 = load i16* @cor_phaseClass0i_V_13, align 2
+
+ST_1: cor_phaseClass0q_V_1_7 (1453)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:5  %cor_phaseClass0q_V_1_7 = load i16* @cor_phaseClass0q_V_13, align 2
+
+ST_1: cor_phaseClass0i_V_1_8 (1454)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:6  %cor_phaseClass0i_V_1_8 = load i16* @cor_phaseClass0i_V_12, align 8
+
+ST_1: cor_phaseClass0q_V_1_8 (1455)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:7  %cor_phaseClass0q_V_1_8 = load i16* @cor_phaseClass0q_V_12, align 8
+
+ST_1: cor_phaseClass0i_V_1_9 (1456)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:8  %cor_phaseClass0i_V_1_9 = load i16* @cor_phaseClass0i_V_11, align 2
+
+ST_1: cor_phaseClass0q_V_1_9 (1457)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:9  %cor_phaseClass0q_V_1_9 = load i16* @cor_phaseClass0q_V_11, align 2
+
+ST_1: cor_phaseClass0i_V_1_10 (1458)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:10  %cor_phaseClass0i_V_1_10 = load i16* @cor_phaseClass0i_V_10, align 4
+
+ST_1: cor_phaseClass0q_V_1_10 (1459)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:11  %cor_phaseClass0q_V_1_10 = load i16* @cor_phaseClass0q_V_10, align 4
+
+ST_1: cor_phaseClass0i_V_9 (1460)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:12  %cor_phaseClass0i_V_9 = load i16* @cor_phaseClass0i_V_9, align 2
+
+ST_1: cor_phaseClass0q_V_9 (1461)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:13  %cor_phaseClass0q_V_9 = load i16* @cor_phaseClass0q_V_9, align 2
+
+ST_1: cor_phaseClass0i_V_8 (1462)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:14  %cor_phaseClass0i_V_8 = load i16* @cor_phaseClass0i_V_8, align 16
+
+ST_1: cor_phaseClass0q_V_8 (1463)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:15  %cor_phaseClass0q_V_8 = load i16* @cor_phaseClass0q_V_8, align 16
+
+ST_1: cor_phaseClass0i_V_7 (1464)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:16  %cor_phaseClass0i_V_7 = load i16* @cor_phaseClass0i_V_7, align 2
+
+ST_1: cor_phaseClass0q_V_7 (1465)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:17  %cor_phaseClass0q_V_7 = load i16* @cor_phaseClass0q_V_7, align 2
+
+ST_1: cor_phaseClass0i_V_6 (1466)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:18  %cor_phaseClass0i_V_6 = load i16* @cor_phaseClass0i_V_6, align 4
+
+ST_1: cor_phaseClass0q_V_6 (1467)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:19  %cor_phaseClass0q_V_6 = load i16* @cor_phaseClass0q_V_6, align 4
+
+ST_1: cor_phaseClass0i_V_5 (1468)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:20  %cor_phaseClass0i_V_5 = load i16* @cor_phaseClass0i_V_5, align 2
+
+ST_1: cor_phaseClass0q_V_5 (1469)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:21  %cor_phaseClass0q_V_5 = load i16* @cor_phaseClass0q_V_5, align 2
+
+ST_1: cor_phaseClass0i_V_4 (1470)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:22  %cor_phaseClass0i_V_4 = load i16* @cor_phaseClass0i_V_4, align 8
+
+ST_1: cor_phaseClass0q_V_4 (1471)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:23  %cor_phaseClass0q_V_4 = load i16* @cor_phaseClass0q_V_4, align 8
+
+ST_1: cor_phaseClass0i_V_3 (1472)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:24  %cor_phaseClass0i_V_3 = load i16* @cor_phaseClass0i_V_3, align 2
+
+ST_1: tmp361 (1473)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:25  %tmp361 = add i16 %cor_phaseClass0i_V_1_6, %cor_phaseClass0i_V_9
+
+ST_1: tmp360 (1474)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:26  %tmp360 = add i16 %tmp361, %cor_phaseClass0i_V_1_7
+
+ST_1: tmp363 (1475)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:27  %tmp363 = add i16 %cor_phaseClass0i_V_8, %cor_phaseClass0i_V_7
+
+ST_1: tmp364 (1476)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:28  %tmp364 = add i16 %cor_phaseClass0i_V_6, %cor_phaseClass0i_V_3
+
+ST_1: tmp362 (1477)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:29  %tmp362 = add i16 %tmp364, %tmp363
+
+ST_1: corHelperIPos_V_5 (1478)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:310
+.preheader2939.0:30  %corHelperIPos_V_5 = add i16 %tmp362, %tmp360
+
+ST_1: cor_phaseClass0q_V_3 (1479)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:31  %cor_phaseClass0q_V_3 = load i16* @cor_phaseClass0q_V_3, align 2
+
+ST_1: tmp366 (1480)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:32  %tmp366 = add i16 %cor_phaseClass0q_V_1_6, %cor_phaseClass0q_V_9
+
+ST_1: tmp365 (1481)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:33  %tmp365 = add i16 %tmp366, %cor_phaseClass0q_V_1_7
+
+ST_1: tmp368 (1482)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:34  %tmp368 = add i16 %cor_phaseClass0q_V_8, %cor_phaseClass0q_V_7
+
+ST_1: tmp369 (1483)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:35  %tmp369 = add i16 %cor_phaseClass0q_V_6, %cor_phaseClass0q_V_3
+
+ST_1: tmp367 (1484)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:36  %tmp367 = add i16 %tmp369, %tmp368
+
+ST_1: corHelperQPos_V_5 (1485)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:311
+.preheader2939.0:37  %corHelperQPos_V_5 = add i16 %tmp367, %tmp365
+
+ST_1: cor_phaseClass0i_V_2 (1486)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:38  %cor_phaseClass0i_V_2 = load i16* @cor_phaseClass0i_V_2, align 4
+
+ST_1: cor_phaseClass0q_V_2 (1487)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:39  %cor_phaseClass0q_V_2 = load i16* @cor_phaseClass0q_V_2, align 4
+
+ST_1: cor_phaseClass0i_V_1_11 (1488)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:40  %cor_phaseClass0i_V_1_11 = load i16* @cor_phaseClass0i_V_1, align 2
+
+ST_1: cor_phaseClass0q_V_1_11 (1489)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:41  %cor_phaseClass0q_V_1_11 = load i16* @cor_phaseClass0q_V_1, align 2
+
+ST_1: cor_phaseClass0i_V_0 (1490)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:42  %cor_phaseClass0i_V_0 = load i16* @cor_phaseClass0i_V_0, align 16
+
+ST_1: tmp371 (1491)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:43  %tmp371 = add i16 %cor_phaseClass0i_V_1_8, %cor_phaseClass0i_V_1
+
+ST_1: tmp372 (1492)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:44  %tmp372 = add i16 %cor_phaseClass0i_V_1_9, %cor_phaseClass0i_V_1_10
+
+ST_1: tmp374 (1494)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:46  %tmp374 = add i16 %cor_phaseClass0i_V_5, %cor_phaseClass0i_V_4
+
+ST_1: tmp376 (1495)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:47  %tmp376 = add i16 %cor_phaseClass0i_V_1_11, %cor_phaseClass0i_V_0
+
+ST_1: tmp375 (1496)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:48  %tmp375 = add i16 %tmp376, %cor_phaseClass0i_V_2
+
+ST_1: tmp373 (1497)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:49  %tmp373 = add i16 %tmp375, %tmp374
+
+ST_1: cor_phaseClass0q_V_0 (1499)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:51  %cor_phaseClass0q_V_0 = load i16* @cor_phaseClass0q_V_0, align 16
+
+ST_1: tmp378 (1500)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:52  %tmp378 = add i16 %cor_phaseClass0q_V_1_8, %cor_phaseClass0q_V_1
+
+ST_1: tmp379 (1501)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:53  %tmp379 = add i16 %cor_phaseClass0q_V_1_9, %cor_phaseClass0q_V_1_10
+
+ST_1: tmp381 (1503)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:55  %tmp381 = add i16 %cor_phaseClass0q_V_5, %cor_phaseClass0q_V_4
+
+ST_1: tmp383 (1504)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:56  %tmp383 = add i16 %cor_phaseClass0q_V_1_11, %cor_phaseClass0q_V_0
+
+ST_1: tmp382 (1505)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:57  %tmp382 = add i16 %tmp383, %cor_phaseClass0q_V_2
+
+ST_1: tmp380 (1506)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:58  %tmp380 = add i16 %tmp382, %tmp381
+
+
+ <State 2>: 4.28ns
+ST_2: tmp10 (563)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:45  %tmp10 = add i16 %tmp12, %tmp11
+
+ST_2: corHelperINeg_V_15_7 (568)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.preheader.0:50  %corHelperINeg_V_15_7 = add i16 %tmp13, %tmp10
+
+ST_2: tmp17 (572)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:54  %tmp17 = add i16 %tmp19, %tmp18
+
+ST_2: corHelperQNeg_V_15_7 (577)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.preheader.0:59  %corHelperQNeg_V_15_7 = add i16 %tmp20, %tmp17
+
+ST_2: StgValue_910 (578)  [1/1] 1.73ns
+.preheader.0:60  br label %.loopexit
+
+ST_2: tmp34 (625)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:45  %tmp34 = add i16 %tmp36, %tmp35
+
+ST_2: corHelperINeg_V_14_7 (630)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:483
+.preheader2911.0:50  %corHelperINeg_V_14_7 = add i16 %tmp37, %tmp34
+
+ST_2: tmp41 (634)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:54  %tmp41 = add i16 %tmp43, %tmp42
+
+ST_2: corHelperQNeg_V_14_7 (639)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:484
+.preheader2911.0:59  %corHelperQNeg_V_14_7 = add i16 %tmp44, %tmp41
+
+ST_2: StgValue_915 (640)  [1/1] 1.73ns
+.preheader2911.0:60  br label %.loopexit
+
+ST_2: tmp58 (687)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:45  %tmp58 = add i16 %tmp60, %tmp59
+
+ST_2: corHelperINeg_V_13_7 (692)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:471
+.preheader2913.0:50  %corHelperINeg_V_13_7 = add i16 %tmp61, %tmp58
+
+ST_2: tmp65 (696)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:54  %tmp65 = add i16 %tmp67, %tmp66
+
+ST_2: corHelperQNeg_V_13_7 (701)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:472
+.preheader2913.0:59  %corHelperQNeg_V_13_7 = add i16 %tmp68, %tmp65
+
+ST_2: StgValue_920 (702)  [1/1] 1.73ns
+.preheader2913.0:60  br label %.loopexit
+
+ST_2: tmp82 (749)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:45  %tmp82 = add i16 %tmp84, %tmp83
+
+ST_2: corHelperINeg_V_12_7 (754)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:459
+.preheader2915.0:50  %corHelperINeg_V_12_7 = add i16 %tmp85, %tmp82
+
+ST_2: tmp89 (758)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:54  %tmp89 = add i16 %tmp91, %tmp90
+
+ST_2: corHelperQNeg_V_12_7 (763)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:460
+.preheader2915.0:59  %corHelperQNeg_V_12_7 = add i16 %tmp92, %tmp89
+
+ST_2: StgValue_925 (764)  [1/1] 1.73ns
+.preheader2915.0:60  br label %.loopexit
+
+ST_2: tmp106 (811)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:45  %tmp106 = add i16 %tmp108, %tmp107
+
+ST_2: corHelperINeg_V_11_7 (816)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:447
+.preheader2917.0:50  %corHelperINeg_V_11_7 = add i16 %tmp109, %tmp106
+
+ST_2: tmp113 (820)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:54  %tmp113 = add i16 %tmp115, %tmp114
+
+ST_2: corHelperQNeg_V_11_7 (825)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:448
+.preheader2917.0:59  %corHelperQNeg_V_11_7 = add i16 %tmp116, %tmp113
+
+ST_2: StgValue_930 (826)  [1/1] 1.73ns
+.preheader2917.0:60  br label %.loopexit
+
+ST_2: tmp130 (873)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:45  %tmp130 = add i16 %tmp132, %tmp131
+
+ST_2: corHelperINeg_V_10_7 (878)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:435
+.preheader2919.0:50  %corHelperINeg_V_10_7 = add i16 %tmp133, %tmp130
+
+ST_2: tmp137 (882)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:54  %tmp137 = add i16 %tmp139, %tmp138
+
+ST_2: corHelperQNeg_V_10_7 (887)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:436
+.preheader2919.0:59  %corHelperQNeg_V_10_7 = add i16 %tmp140, %tmp137
+
+ST_2: StgValue_935 (888)  [1/1] 1.73ns
+.preheader2919.0:60  br label %.loopexit
+
+ST_2: tmp154 (935)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:45  %tmp154 = add i16 %tmp156, %tmp155
+
+ST_2: corHelperINeg_V_9_7 (940)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:423
+.preheader2921.0:50  %corHelperINeg_V_9_7 = add i16 %tmp157, %tmp154
+
+ST_2: tmp161 (944)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:54  %tmp161 = add i16 %tmp163, %tmp162
+
+ST_2: corHelperQNeg_V_9_7 (949)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:424
+.preheader2921.0:59  %corHelperQNeg_V_9_7 = add i16 %tmp164, %tmp161
+
+ST_2: StgValue_940 (950)  [1/1] 1.73ns
+.preheader2921.0:60  br label %.loopexit
+
+ST_2: tmp178 (997)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:45  %tmp178 = add i16 %tmp180, %tmp179
+
+ST_2: corHelperINeg_V_8_7 (1002)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:411
+.preheader2923.0:50  %corHelperINeg_V_8_7 = add i16 %tmp181, %tmp178
+
+ST_2: tmp185 (1006)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:54  %tmp185 = add i16 %tmp187, %tmp186
+
+ST_2: corHelperQNeg_V_8_7 (1011)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:412
+.preheader2923.0:59  %corHelperQNeg_V_8_7 = add i16 %tmp188, %tmp185
+
+ST_2: StgValue_945 (1012)  [1/1] 1.73ns
+.preheader2923.0:60  br label %.loopexit
+
+ST_2: tmp202 (1059)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:45  %tmp202 = add i16 %tmp204, %tmp203
+
+ST_2: corHelperINeg_V_7_7 (1064)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:399
+.preheader2925.0:50  %corHelperINeg_V_7_7 = add i16 %tmp205, %tmp202
+
+ST_2: tmp209 (1068)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:54  %tmp209 = add i16 %tmp211, %tmp210
+
+ST_2: corHelperQNeg_V_7_7 (1073)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:400
+.preheader2925.0:59  %corHelperQNeg_V_7_7 = add i16 %tmp212, %tmp209
+
+ST_2: StgValue_950 (1074)  [1/1] 1.73ns
+.preheader2925.0:60  br label %.loopexit
+
+ST_2: tmp226 (1121)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:45  %tmp226 = add i16 %tmp228, %tmp227
+
+ST_2: corHelperINeg_V_6_7 (1126)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:387
+.preheader2927.0:50  %corHelperINeg_V_6_7 = add i16 %tmp229, %tmp226
+
+ST_2: tmp233 (1130)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:54  %tmp233 = add i16 %tmp235, %tmp234
+
+ST_2: corHelperQNeg_V_6_7 (1135)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:388
+.preheader2927.0:59  %corHelperQNeg_V_6_7 = add i16 %tmp236, %tmp233
+
+ST_2: StgValue_955 (1136)  [1/1] 1.73ns
+.preheader2927.0:60  br label %.loopexit
+
+ST_2: tmp250 (1183)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:45  %tmp250 = add i16 %tmp252, %tmp251
+
+ST_2: corHelperINeg_V_5_7 (1188)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:375
+.preheader2929.0:50  %corHelperINeg_V_5_7 = add i16 %tmp253, %tmp250
+
+ST_2: tmp257 (1192)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:54  %tmp257 = add i16 %tmp259, %tmp258
+
+ST_2: corHelperQNeg_V_5_7 (1197)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:376
+.preheader2929.0:59  %corHelperQNeg_V_5_7 = add i16 %tmp260, %tmp257
+
+ST_2: StgValue_960 (1198)  [1/1] 1.73ns
+.preheader2929.0:60  br label %.loopexit
+
+ST_2: tmp274 (1245)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:45  %tmp274 = add i16 %tmp276, %tmp275
+
+ST_2: corHelperINeg_V_4_7 (1250)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:362
+.preheader2931.0:50  %corHelperINeg_V_4_7 = add i16 %tmp277, %tmp274
+
+ST_2: tmp281 (1254)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:54  %tmp281 = add i16 %tmp283, %tmp282
+
+ST_2: corHelperQNeg_V_4_7 (1259)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:363
+.preheader2931.0:59  %corHelperQNeg_V_4_7 = add i16 %tmp284, %tmp281
+
+ST_2: StgValue_965 (1260)  [1/1] 1.73ns
+.preheader2931.0:60  br label %.loopexit
+
+ST_2: tmp298 (1307)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:45  %tmp298 = add i16 %tmp300, %tmp299
+
+ST_2: corHelperINeg_V_3_7 (1312)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:350
+.preheader2933.0:50  %corHelperINeg_V_3_7 = add i16 %tmp301, %tmp298
+
+ST_2: tmp305 (1316)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:54  %tmp305 = add i16 %tmp307, %tmp306
+
+ST_2: corHelperQNeg_V_3_7 (1321)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:351
+.preheader2933.0:59  %corHelperQNeg_V_3_7 = add i16 %tmp308, %tmp305
+
+ST_2: StgValue_970 (1322)  [1/1] 1.73ns
+.preheader2933.0:60  br label %.loopexit
+
+ST_2: tmp322 (1369)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:45  %tmp322 = add i16 %tmp324, %tmp323
+
+ST_2: corHelperINeg_V_2_7 (1374)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:338
+.preheader2935.0:50  %corHelperINeg_V_2_7 = add i16 %tmp325, %tmp322
+
+ST_2: tmp329 (1378)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:54  %tmp329 = add i16 %tmp331, %tmp330
+
+ST_2: corHelperQNeg_V_2_7 (1383)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:339
+.preheader2935.0:59  %corHelperQNeg_V_2_7 = add i16 %tmp332, %tmp329
+
+ST_2: StgValue_975 (1384)  [1/1] 1.73ns
+.preheader2935.0:60  br label %.loopexit
+
+ST_2: tmp346 (1431)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:45  %tmp346 = add i16 %tmp348, %tmp347
+
+ST_2: corHelperINeg_V_1_7 (1436)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:326
+.preheader2937.0:50  %corHelperINeg_V_1_7 = add i16 %tmp349, %tmp346
+
+ST_2: tmp353 (1440)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:54  %tmp353 = add i16 %tmp355, %tmp354
+
+ST_2: corHelperQNeg_V_1_7 (1445)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:327
+.preheader2937.0:59  %corHelperQNeg_V_1_7 = add i16 %tmp356, %tmp353
+
+ST_2: StgValue_980 (1446)  [1/1] 1.73ns
+.preheader2937.0:60  br label %.loopexit
+
+ST_2: tmp370 (1493)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:45  %tmp370 = add i16 %tmp372, %tmp371
+
+ST_2: corHelperINeg_V_7 (1498)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:313
+.preheader2939.0:50  %corHelperINeg_V_7 = add i16 %tmp373, %tmp370
+
+ST_2: tmp377 (1502)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:54  %tmp377 = add i16 %tmp379, %tmp378
+
+ST_2: corHelperQNeg_V_7 (1507)  [1/1] 1.27ns  loc: CorrelatorSynch/correlatorSynch.cpp:314
+.preheader2939.0:59  %corHelperQNeg_V_7 = add i16 %tmp380, %tmp377
+
+ST_2: StgValue_985 (1508)  [1/1] 1.73ns
+.preheader2939.0:60  br label %.loopexit
+
+
+ <State 3>: 3.36ns
+ST_3: p_01915_s (1510)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:495
+.loopexit:0  %p_01915_s = phi i16 [ 0, %0 ], [ %corHelperINeg_V_15_7, %.preheader.0 ], [ %corHelperINeg_V_14_7, %.preheader2911.0 ], [ %corHelperINeg_V_13_7, %.preheader2913.0 ], [ %corHelperINeg_V_12_7, %.preheader2915.0 ], [ %corHelperINeg_V_11_7, %.preheader2917.0 ], [ %corHelperINeg_V_10_7, %.preheader2919.0 ], [ %corHelperINeg_V_9_7, %.preheader2921.0 ], [ %corHelperINeg_V_8_7, %.preheader2923.0 ], [ %corHelperINeg_V_7_7, %.preheader2925.0 ], [ %corHelperINeg_V_6_7, %.preheader2927.0 ], [ %corHelperINeg_V_5_7, %.preheader2929.0 ], [ %corHelperINeg_V_4_7, %.preheader2931.0 ], [ %corHelperINeg_V_3_7, %.preheader2933.0 ], [ %corHelperINeg_V_2_7, %.preheader2935.0 ], [ %corHelperINeg_V_1_7, %.preheader2937.0 ], [ %corHelperINeg_V_7, %.preheader2939.0 ]
+
+ST_3: p_01909_s (1511)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:492
+.loopexit:1  %p_01909_s = phi i16 [ 0, %0 ], [ %corHelperIPos_V_15_s, %.preheader.0 ], [ %corHelperIPos_V_14_s, %.preheader2911.0 ], [ %corHelperIPos_V_13_s, %.preheader2913.0 ], [ %corHelperIPos_V_12_s, %.preheader2915.0 ], [ %corHelperIPos_V_11_s, %.preheader2917.0 ], [ %corHelperIPos_V_10_s, %.preheader2919.0 ], [ %corHelperIPos_V_9_s, %.preheader2921.0 ], [ %corHelperIPos_V_8_s, %.preheader2923.0 ], [ %corHelperIPos_V_7_s, %.preheader2925.0 ], [ %corHelperIPos_V_6_s, %.preheader2927.0 ], [ %corHelperIPos_V_5_s, %.preheader2929.0 ], [ %corHelperIPos_V_4_s, %.preheader2931.0 ], [ %corHelperIPos_V_3_s, %.preheader2933.0 ], [ %corHelperIPos_V_2_s, %.preheader2935.0 ], [ %corHelperIPos_V_1_s, %.preheader2937.0 ], [ %corHelperIPos_V_5, %.preheader2939.0 ]
+
+ST_3: p_01903_s (1512)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:496
+.loopexit:2  %p_01903_s = phi i16 [ 0, %0 ], [ %corHelperQNeg_V_15_7, %.preheader.0 ], [ %corHelperQNeg_V_14_7, %.preheader2911.0 ], [ %corHelperQNeg_V_13_7, %.preheader2913.0 ], [ %corHelperQNeg_V_12_7, %.preheader2915.0 ], [ %corHelperQNeg_V_11_7, %.preheader2917.0 ], [ %corHelperQNeg_V_10_7, %.preheader2919.0 ], [ %corHelperQNeg_V_9_7, %.preheader2921.0 ], [ %corHelperQNeg_V_8_7, %.preheader2923.0 ], [ %corHelperQNeg_V_7_7, %.preheader2925.0 ], [ %corHelperQNeg_V_6_7, %.preheader2927.0 ], [ %corHelperQNeg_V_5_7, %.preheader2929.0 ], [ %corHelperQNeg_V_4_7, %.preheader2931.0 ], [ %corHelperQNeg_V_3_7, %.preheader2933.0 ], [ %corHelperQNeg_V_2_7, %.preheader2935.0 ], [ %corHelperQNeg_V_1_7, %.preheader2937.0 ], [ %corHelperQNeg_V_7, %.preheader2939.0 ]
+
+ST_3: p_01925_s (1513)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:493
+.loopexit:3  %p_01925_s = phi i16 [ 0, %0 ], [ %corHelperQPos_V_15_s, %.preheader.0 ], [ %corHelperQPos_V_14_s, %.preheader2911.0 ], [ %corHelperQPos_V_13_s, %.preheader2913.0 ], [ %corHelperQPos_V_12_s, %.preheader2915.0 ], [ %corHelperQPos_V_11_s, %.preheader2917.0 ], [ %corHelperQPos_V_10_s, %.preheader2919.0 ], [ %corHelperQPos_V_9_s, %.preheader2921.0 ], [ %corHelperQPos_V_8_s, %.preheader2923.0 ], [ %corHelperQPos_V_7_s, %.preheader2925.0 ], [ %corHelperQPos_V_6_s, %.preheader2927.0 ], [ %corHelperQPos_V_5_s, %.preheader2929.0 ], [ %corHelperQPos_V_4_s, %.preheader2931.0 ], [ %corHelperQPos_V_3_s, %.preheader2933.0 ], [ %corHelperQPos_V_2_s, %.preheader2935.0 ], [ %corHelperQPos_V_1_s, %.preheader2937.0 ], [ %corHelperQPos_V_5, %.preheader2939.0 ]
+
+ST_3: tmp_s (1514)  [1/1] 1.96ns  loc: CorrelatorSynch/correlatorSynch.cpp:502
+.loopexit:4  %tmp_s = icmp sgt i16 %p_01909_s, %p_01915_s
+
+ST_3: resi_V (1515)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:503
+.loopexit:5  %resi_V = sub i16 %p_01909_s, %p_01915_s
+
+ST_3: resi_V_1 (1516)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:505
+.loopexit:6  %resi_V_1 = sub i16 %p_01915_s, %p_01909_s
+
+ST_3: resi_V_2 (1517)  [1/1] 1.40ns  loc: CorrelatorSynch/correlatorSynch.cpp:502
+.loopexit:7  %resi_V_2 = select i1 %tmp_s, i16 %resi_V, i16 %resi_V_1
+
+ST_3: resq_V (1518)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:509
+.loopexit:8  %resq_V = sub i16 %p_01925_s, %p_01903_s
+
+ST_3: resq_V_1 (1519)  [1/1] 1.68ns  loc: CorrelatorSynch/correlatorSynch.cpp:511
+.loopexit:9  %resq_V_1 = sub i16 %p_01903_s, %p_01925_s
+
+ST_3: resq_V_2 (1520)  [1/1] 1.40ns  loc: CorrelatorSynch/correlatorSynch.cpp:508
+.loopexit:10  %resq_V_2 = select i1 %tmp_s, i16 %resq_V, i16 %resq_V_1
+
+
+ <State 4>: 3.49ns
+ST_4: resi_V_3 (1521)  [3/3] 3.49ns  loc: CorrelatorSynch/correlatorSynch.cpp:514
+.loopexit:11  %resi_V_3 = mul i16 %resi_V_2, %resi_V_2
+
+ST_4: resq_V_3 (1522)  [3/3] 3.49ns  loc: CorrelatorSynch/correlatorSynch.cpp:515
+.loopexit:12  %resq_V_3 = mul i16 %resq_V_2, %resq_V_2
+
+
+ <State 5>: 3.49ns
+ST_5: resi_V_3 (1521)  [2/3] 3.49ns  loc: CorrelatorSynch/correlatorSynch.cpp:514
+.loopexit:11  %resi_V_3 = mul i16 %resi_V_2, %resi_V_2
+
+ST_5: resq_V_3 (1522)  [2/3] 3.49ns  loc: CorrelatorSynch/correlatorSynch.cpp:515
+.loopexit:12  %resq_V_3 = mul i16 %resq_V_2, %resq_V_2
+
+
+ <State 6>: 0.00ns
+ST_6: resi_V_3 (1521)  [1/3] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:514
+.loopexit:11  %resi_V_3 = mul i16 %resi_V_2, %resi_V_2
+
+ST_6: resq_V_3 (1522)  [1/3] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:515
+.loopexit:12  %resq_V_3 = mul i16 %resq_V_2, %resq_V_2
+
+ST_6: p_Result_s (1523)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:517
+.loopexit:13  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %resq_V_3, i16 %resi_V_3)
+
+ST_6: StgValue_1004 (1524)  [1/1] 0.00ns  loc: CorrelatorSynch/correlatorSynch.cpp:518
+.loopexit:14  ret i32 %p_Result_s
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 4.22ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15i_V_15', CorrelatorSynch/correlatorSynch.cpp:495) on static variable 'cor_phaseClass15i_V_14' [520]  (0 ns)
+	'add' operation ('tmp1', CorrelatorSynch/correlatorSynch.cpp:492) [543]  (1.68 ns)
+	'add' operation ('tmp', CorrelatorSynch/correlatorSynch.cpp:492) [544]  (1.27 ns)
+	'add' operation ('corHelperIPos_V_15_s', CorrelatorSynch/correlatorSynch.cpp:492) [548]  (1.27 ns)
+
+ <State 2>: 4.28ns
+The critical path consists of the following:
+	'add' operation ('tmp10', CorrelatorSynch/correlatorSynch.cpp:495) [563]  (1.27 ns)
+	'add' operation ('corHelperINeg_V_15_7', CorrelatorSynch/correlatorSynch.cpp:495) [568]  (1.27 ns)
+	multiplexor before 'phi' operation ('p_01915_s', CorrelatorSynch/correlatorSynch.cpp:495) with incoming values : ('corHelperINeg_V_15_7', CorrelatorSynch/correlatorSynch.cpp:495) ('corHelperINeg_V_14_7', CorrelatorSynch/correlatorSynch.cpp:483) ('corHelperINeg_V_13_7', CorrelatorSynch/correlatorSynch.cpp:471) ('corHelperINeg_V_12_7', CorrelatorSynch/correlatorSynch.cpp:459) ('corHelperINeg_V_11_7', CorrelatorSynch/correlatorSynch.cpp:447) ('corHelperINeg_V_10_7', CorrelatorSynch/correlatorSynch.cpp:435) ('corHelperINeg_V_9_7', CorrelatorSynch/correlatorSynch.cpp:423) ('corHelperINeg_V_8_7', CorrelatorSynch/correlatorSynch.cpp:411) ('corHelperINeg_V_7_7', CorrelatorSynch/correlatorSynch.cpp:399) ('corHelperINeg_V_6_7', CorrelatorSynch/correlatorSynch.cpp:387) ('corHelperINeg_V_5_7', CorrelatorSynch/correlatorSynch.cpp:375) ('corHelperINeg_V_4_7', CorrelatorSynch/correlatorSynch.cpp:362) ('corHelperINeg_V_3_7', CorrelatorSynch/correlatorSynch.cpp:350) ('corHelperINeg_V_2_7', CorrelatorSynch/correlatorSynch.cpp:338) ('corHelperINeg_V_1_7', CorrelatorSynch/correlatorSynch.cpp:326) ('corHelperINeg_V_7', CorrelatorSynch/correlatorSynch.cpp:313) [1510]  (1.73 ns)
+
+ <State 3>: 3.36ns
+The critical path consists of the following:
+	'phi' operation ('p_01915_s', CorrelatorSynch/correlatorSynch.cpp:495) with incoming values : ('corHelperINeg_V_15_7', CorrelatorSynch/correlatorSynch.cpp:495) ('corHelperINeg_V_14_7', CorrelatorSynch/correlatorSynch.cpp:483) ('corHelperINeg_V_13_7', CorrelatorSynch/correlatorSynch.cpp:471) ('corHelperINeg_V_12_7', CorrelatorSynch/correlatorSynch.cpp:459) ('corHelperINeg_V_11_7', CorrelatorSynch/correlatorSynch.cpp:447) ('corHelperINeg_V_10_7', CorrelatorSynch/correlatorSynch.cpp:435) ('corHelperINeg_V_9_7', CorrelatorSynch/correlatorSynch.cpp:423) ('corHelperINeg_V_8_7', CorrelatorSynch/correlatorSynch.cpp:411) ('corHelperINeg_V_7_7', CorrelatorSynch/correlatorSynch.cpp:399) ('corHelperINeg_V_6_7', CorrelatorSynch/correlatorSynch.cpp:387) ('corHelperINeg_V_5_7', CorrelatorSynch/correlatorSynch.cpp:375) ('corHelperINeg_V_4_7', CorrelatorSynch/correlatorSynch.cpp:362) ('corHelperINeg_V_3_7', CorrelatorSynch/correlatorSynch.cpp:350) ('corHelperINeg_V_2_7', CorrelatorSynch/correlatorSynch.cpp:338) ('corHelperINeg_V_1_7', CorrelatorSynch/correlatorSynch.cpp:326) ('corHelperINeg_V_7', CorrelatorSynch/correlatorSynch.cpp:313) [1510]  (0 ns)
+	'icmp' operation ('tmp_s', CorrelatorSynch/correlatorSynch.cpp:502) [1514]  (1.96 ns)
+	'select' operation ('resi.V', CorrelatorSynch/correlatorSynch.cpp:502) [1517]  (1.4 ns)
+
+ <State 4>: 3.49ns
+The critical path consists of the following:
+	'mul' operation ('resi.V', CorrelatorSynch/correlatorSynch.cpp:514) [1521]  (3.49 ns)
+
+ <State 5>: 3.49ns
+The critical path consists of the following:
+	'mul' operation ('resi.V', CorrelatorSynch/correlatorSynch.cpp:514) [1521]  (3.49 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

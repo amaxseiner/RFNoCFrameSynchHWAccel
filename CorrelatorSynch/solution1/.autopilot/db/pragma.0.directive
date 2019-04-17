@@ -1,0 +1,379 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="o_data"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="i_data"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0i"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass1i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass1q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass2i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass2q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass3i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass3q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass4i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass4q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass5i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass5q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass6i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass6q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass7i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass7q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass8i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass8q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass9i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass9q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass10i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass10q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass11i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass11q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass12i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass12q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass13i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass13q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass14i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass14q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass15i"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass15q"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="corrSeq"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newVali"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newValq"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="loadCount"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="phaseClass"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="currentState"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::shiftPhaseClassSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="correlate::correlatorSynch" label="">
+<pragma name="UNROLL"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>
