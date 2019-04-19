@@ -1,287 +1,1186 @@
-INFO: [HLS 200-0] Workspace D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1 opened at Sat Apr 06 15:22:56 -0400 2019
-INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [HLS 200-0] Workspace /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1 opened at Thu Apr 18 18:20:57 EDT 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
-INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     import_lib D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.lib 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.lib 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.006 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.005 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       get_default_platform 
-INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
-INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed medium 
-INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.03 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.034 sec.
-INFO: [HLS 200-100] Command     import_lib returned 0; 0.053 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7.gen 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.008 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.012 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.011 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.095 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.137 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.14 sec.
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.141 sec.
-INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
-INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     import_lib D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.005 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.025 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.03 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.031 sec.
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_hp.hlp 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Command     import_lib returned 0; 0.048 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     set_part xc7k160tfbg484-1 
-INFO: [HLS 200-100] Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
-INFO: [HLS 200-100] Execute         get_default_platform 
-INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         license_isbetapart xc7k160t 
-INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0.018 sec.
-INFO: [HLS 200-100] Execute         get_default_platform 
-INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
-INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
-INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
-INFO: [HLS 200-100] Command       add_library returned 0; 0.024 sec.
-INFO: [HLS 200-100] Execute       add_library xilinx/kintex7/kintex7_fpv6 
-INFO: [HLS 200-100] Execute         get_default_platform 
-INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Command       add_library returned 0; 0.002 sec.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.01 sec.
+Execute     source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.11 sec.
+Command     ap_source returned 0; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.02 sec.
+Execute     source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     set_part xc7k160tfbg484-1 
+Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xc7k160t 
+Command         license_isbetapart returned 1; 0 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed slow 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-INFO: [HLS 200-100] Execute       get_default_platform 
-INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Command     set_part returned 0; 0.071 sec.
-INFO: [HLS 200-100] Execute     get_default_platform 
-INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
-INFO: [HLS 200-100] Command     config_chip_info returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
-INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
-INFO: [HLS 200-100] Command   open_solution returned 0; 0.442 sec.
-INFO: [HLS 200-100] Execute   cosim_design -trace_level all -tool xsim 
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7.gen 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.004 sec.
-INFO: [HLS 200-100] Execute             source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0.008 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.012 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.012 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.009 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.004 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.097 sec.
-INFO: [HLS 200-100] Execute           source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0.142 sec.
-INFO: [HLS 200-100] Execute         source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.146 sec.
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.146 sec.
-INFO: [HLS 200-100] Execute     source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
-INFO: [HLS 200-100] Execute       source D:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_main.cpp 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_output.txt 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/tb_input.txt 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/results.csv 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     is_encrypted D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/IMLANCE.csv 
-INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.005 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.003 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.004 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-INFO: [HLS 200-0] Marker-Pragma convertor: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/./sim/autowrap/testbench/tb_main.cpp_pre.cpp D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/./sim/autowrap/testbench/tb_main.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.05 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed slow 
+Command     config_chip_info returned 0; 0 sec.
+Command   open_solution returned 0; 0.21 sec.
+Execute   set_part xc7k160tfbg484-1 -tool vivado 
+Execute     add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xc7k160t 
+Command       license_isbetapart returned 1; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed slow 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.01 sec.
+Execute     add_library xilinx/kintex7/kintex7_fpv6 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     add_library returned 0; 0.01 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.05 sec.
+Execute   create_clock -period 5 -name default 
+Command   create_clock returned 0; 0 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling matchedRee/matchFilter.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted matchedRee/matchFilter.cpp 
+Command       is_encrypted returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "matchedRee/matchFilter.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E matchedRee/matchFilter.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp
+Command       clang returned 0; 1 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp"  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/useless.bc
+Command       clang returned 0; 1.52 sec.
+INFO: [HLS 200-0] GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp.ap-line.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp.ap-line.cpp.CXX 1
 INFO: [HLS 200-0] Converting Markers to Pragmas...
-INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/tb_main.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/tb_main.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+Execute       cdt  "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp.ap-line.cpp"  -m "matchTop" -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive --source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp --error /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db --sd --scff /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/.systemc_flag --ad 
+INFO: [HLS 200-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+Command       cdt returned 0; 5.95 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pp.0.cpp.ap-cdt.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.0.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
-INFO: [HLS 200-0] Marker-Pragma convertor: D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/./sim/autowrap/testbench/matchFilter.cpp_pre.cpp D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/./sim/autowrap/testbench/matchFilter.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
-INFO: [HLS 200-0] Converting Markers to Pragmas...
-INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/matchFilter.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/matchFilter.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
-INFO: [HLS 200-0] Converting Pragmas to Markers...
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/./sim/autowrap/testbench/tb.status.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-INFO: [HLS 200-100] Execute     source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
-INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
-ERROR: [COSIM 212-317] C++ compile error.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-321] EXE file generate failed.
-ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
-ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
-INFO: [HLS 200-100] Command   cosim_design returned 2; 28.193 sec.
-INFO: [HLS 200-100] Command ap_source returned 1; 28.643 sec.
-command 'ap_source' returned error code
-    while executing
-"source D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/cosim.tcl"
-    invoked from within
-"hls::main D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/cosim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
-INFO: [HLS 200-100] Execute cleanup_all 
-INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.2.cpp
+Command       clang returned 0; 0.98 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.g.bc
+Command       clang returned 0; 1.6 sec.
+WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'IMLANCE.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:33 ; elapsed = 00:00:13 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110371 ; free virtual = 255311
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.bc -hls-opt -except-internalize matchTop -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.56 sec.
+Execute       disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o 
+Execute         is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0 sec.
+Command       disassemble returned 0; 0.53 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchFilter.g.bc -hls-opt -except-internalize matchTop -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.57 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110368 ; free virtual = 255311
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.pp.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0.05 sec.
+Execute         llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lfloatconversion -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.55 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matchTop -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.0.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform returned 0; 0.13 sec.
+Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1 /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1 
+Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.52 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 360.551 ; gain = 13.984 ; free physical = 110348 ; free virtual = 255296
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::shiftSampleIn' into 'matchTop' (matchedRee/matchFilter.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchTop' (matchedRee/matchFilter.cpp:40) automatically.
+Command         transform returned 0; 0.07 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform returned 0; 0.04 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110339 ; free virtual = 255288
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.g.1.bc to /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.1.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (matchedRee/matchFilter.cpp:55) in function 'matchFilter_ff::shiftSampleIn' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (matchedRee/matchFilter.cpp:73) in function 'matchFilter_ff::convol' completely.
+INFO: [XFORM 203-101] Partitioning array 'match.matchBufferQ.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'match.matchBufferI.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
+Command         transform returned 0; 1.53 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform returned 0; 0.98 sec.
+Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2 /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2 
+Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.58 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:19 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110296 ; free virtual = 255250
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'matchFilter_ff::shiftSampleIn' to 'shiftSampleIn' (matchedRee/matchFilter.cpp:57:1)
+WARNING: [XFORM 203-631] Renaming function 'matchFilter_ff::convol' to 'convol' (matchedRee/matchFilter.cpp:75:17)
+Command         transform returned 0; 1.57 sec.
+Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.3 /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.3 
+Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.5 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:21 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110250 ; free virtual = 255206
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 6.55 sec.
+Command     elaborate returned 0; 20.19 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'matchTop' ...
+Execute       ap_set_top_model matchTop 
+Command       ap_set_top_model returned 0; 0 sec.
+Execute       get_model_list matchTop -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model matchTop 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model convol 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model shiftSampleIn 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       get_model_list matchTop -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: shiftSampleIn convol matchTop
+INFO: [HLS 200-0] Configuring Module : shiftSampleIn ...
+Execute       set_default_model shiftSampleIn 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit shiftSampleIn 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : convol ...
+Execute       set_default_model convol 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit convol 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : matchTop ...
+Execute       set_default_model matchTop 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit matchTop 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: shiftSampleIn convol matchTop
+INFO: [HLS 200-0] Preprocessing Module: shiftSampleIn ...
+Execute       set_default_model shiftSampleIn 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model shiftSampleIn 
+Command       cdfg_preprocess returned 0; 0.1 sec.
+Execute       rtl_gen_preprocess shiftSampleIn 
+Command       rtl_gen_preprocess returned 0; 0.01 sec.
+INFO: [HLS 200-0] Preprocessing Module: convol ...
+Execute       set_default_model convol 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model convol 
+Command       cdfg_preprocess returned 0; 0.02 sec.
+Execute       rtl_gen_preprocess convol 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: matchTop ...
+Execute       set_default_model matchTop 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model matchTop 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess matchTop 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for synthesis: shiftSampleIn convol matchTop
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shiftSampleIn'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model shiftSampleIn 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model shiftSampleIn 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.08 sec.
+INFO: [HLS 200-111]  Elapsed time: 21.07 seconds; current allocated memory: 154.120 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.04 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.sched.adb -f 
+Command       db_write returned 0; 0.06 sec.
+INFO: [HLS 200-0] Finish scheduling shiftSampleIn.
+Execute       set_default_model shiftSampleIn 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model shiftSampleIn 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=shiftSampleIn
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.09 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 155.714 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.04 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.bind.adb -f 
+Command       db_write returned 0; 0.06 sec.
+INFO: [HLS 200-0] Finish binding shiftSampleIn.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convol'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model convol 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model convol 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 1.46 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.58 seconds; current allocated memory: 160.884 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.93 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.sched.adb -f 
+Command       db_write returned 0; 0.22 sec.
+INFO: [HLS 200-0] Finish scheduling convol.
+Execute       set_default_model convol 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model convol 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=convol
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.58 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.73 seconds; current allocated memory: 167.818 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 1.22 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.bind.adb -f 
+Command       db_write returned 0; 0.24 sec.
+INFO: [HLS 200-0] Finish binding convol.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matchTop'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matchTop 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model matchTop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.5 seconds; current allocated memory: 168.042 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.sched.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish scheduling matchTop.
+Execute       set_default_model matchTop 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model matchTop 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=matchTop
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 168.964 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.35 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.bind.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish binding matchTop.
+Execute       get_model_list matchTop -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess shiftSampleIn 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess convol 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess matchTop 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL generation: shiftSampleIn convol matchTop
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shiftSampleIn'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model shiftSampleIn -vendor xilinx -mg_file /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shiftSampleIn'.
+Command       create_rtl_model returned 0; 0.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 171.022 MB.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl shiftSampleIn -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/systemc/shiftSampleIn -synmodules shiftSampleIn convol matchTop 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_rtl shiftSampleIn -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/vhdl/shiftSampleIn 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl shiftSampleIn -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/verilog/shiftSampleIn 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_tb_info shiftSampleIn -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn -p /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.04 sec.
+Execute       report -model shiftSampleIn -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/shiftSampleIn_csynth.rpt -f 
+Command       report returned 0; 0.05 sec.
+Execute       report -model shiftSampleIn -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/shiftSampleIn_csynth.xml -f -x 
+Command       report returned 0; 0.05 sec.
+Execute       report -model shiftSampleIn -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.verbose.rpt -verbose -f 
+Command       report returned 0; 0.09 sec.
+Execute       db_write -model shiftSampleIn -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.adb -f 
+Command       db_write returned 0; 0.11 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convol'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model convol -vendor xilinx -mg_file /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_16s_7ns_23_3_1' to 'matchTop_mul_mul_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_23s_24_3_1' to 'matchTop_mac_mulacud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_24s_29_3_1' to 'matchTop_mac_muladEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_6ns_29ns_29_3_1' to 'matchTop_mac_mulaeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7s_29ns_29_3_1' to 'matchTop_mac_mulafYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_6s_29ns_29_3_1' to 'matchTop_mac_mulag8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_29ns_29_3_1' to 'matchTop_mac_mulahbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_8ns_29ns_29_3_1' to 'matchTop_mac_mulaibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_8s_29ns_29_3_1' to 'matchTop_mac_mulajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_9s_29ns_29_3_1' to 'matchTop_mac_mulakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_9ns_29ns_29_3_1' to 'matchTop_mac_mulalbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_10s_29ns_29_3_1' to 'matchTop_mac_mulamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_11s_29ns_29_3_1' to 'matchTop_mac_mulancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_10ns_29ns_29_3_1' to 'matchTop_mac_mulaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_12ns_29ns_29_3_1' to 'matchTop_mac_mulapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_13ns_29ns_29_3_1' to 'matchTop_mac_mulaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_14ns_29ns_29_3_1' to 'matchTop_mac_mularcU' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulacud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_muladEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaeOg': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulafYi': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulag8j': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulahbi': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaibs': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulajbC': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulakbM': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulalbW': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulamb6': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulancg': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaocq': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulapcA': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaqcK': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mularcU': 28 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convol'.
+Command       create_rtl_model returned 0; 1.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 190.988 MB.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl convol -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/systemc/convol -synmodules shiftSampleIn convol matchTop 
+Command       gen_rtl returned 0; 0.02 sec.
+Execute       gen_rtl convol -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/vhdl/convol 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl convol -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/verilog/convol 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info convol -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol -p /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.09 sec.
+Execute       report -model convol -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/convol_csynth.rpt -f 
+Command       report returned 0; 0.09 sec.
+Execute       report -model convol -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/convol_csynth.xml -f -x 
+Command       report returned 0; 0.09 sec.
+Execute       report -model convol -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.verbose.rpt -verbose -f 
+Command       report returned 0; 1.7 sec.
+Execute       db_write -model convol -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.adb -f 
+Command       db_write returned 0; 0.75 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matchTop'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model matchTop -vendor xilinx -mg_file /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchTop/i_data_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchTop/i_data_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchTop/o_data_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matchTop/o_data_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matchTop' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matchTop'.
+Command       create_rtl_model returned 0; 3.6 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.7 seconds; current allocated memory: 218.891 MB.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl matchTop -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/systemc/matchTop -synmodules shiftSampleIn convol matchTop 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl matchTop -istop -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/vhdl/matchTop 
+Command       gen_rtl returned 0; 0.05 sec.
+Execute       gen_rtl matchTop -istop -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/verilog/matchTop 
+Command       gen_rtl returned 0; 0.03 sec.
+Execute       export_constraint_db -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0 sec.
+Execute       report -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.design.xml -verbose -f -dv 
+Command       report returned 0; 0.29 sec.
+Execute       report -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0.07 sec.
+Execute       gen_tb_info matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop -p /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0 sec.
+Execute       report -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/matchTop_csynth.rpt -f 
+Command       report returned 0; 0.03 sec.
+Execute       report -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/syn/report/matchTop_csynth.xml -f -x 
+Command       report returned 0; 0.02 sec.
+Execute       report -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.verbose.rpt -verbose -f 
+Command       report returned 0; 0.41 sec.
+Execute       db_write -model matchTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.adb -f 
+Command       db_write returned 0; 0.27 sec.
+Execute       sc_get_clocks matchTop 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       sc_get_portdomain matchTop 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: shiftSampleIn convol matchTop
+INFO: [HLS 200-0] Handling components in module [shiftSampleIn] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [convol] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+INFO: [HLS 200-0] Found component matchTop_mul_mul_bkb.
+INFO: [HLS 200-0] Append model matchTop_mul_mul_bkb
+INFO: [HLS 200-0] Found component matchTop_mac_mulacud.
+INFO: [HLS 200-0] Append model matchTop_mac_mulacud
+INFO: [HLS 200-0] Found component matchTop_mac_muladEe.
+INFO: [HLS 200-0] Append model matchTop_mac_muladEe
+INFO: [HLS 200-0] Found component matchTop_mac_mulaeOg.
+INFO: [HLS 200-0] Append model matchTop_mac_mulaeOg
+INFO: [HLS 200-0] Found component matchTop_mac_mulafYi.
+INFO: [HLS 200-0] Append model matchTop_mac_mulafYi
+INFO: [HLS 200-0] Found component matchTop_mac_mulag8j.
+INFO: [HLS 200-0] Append model matchTop_mac_mulag8j
+INFO: [HLS 200-0] Found component matchTop_mac_mulahbi.
+INFO: [HLS 200-0] Append model matchTop_mac_mulahbi
+INFO: [HLS 200-0] Found component matchTop_mac_mulaibs.
+INFO: [HLS 200-0] Append model matchTop_mac_mulaibs
+INFO: [HLS 200-0] Found component matchTop_mac_mulajbC.
+INFO: [HLS 200-0] Append model matchTop_mac_mulajbC
+INFO: [HLS 200-0] Found component matchTop_mac_mulakbM.
+INFO: [HLS 200-0] Append model matchTop_mac_mulakbM
+INFO: [HLS 200-0] Found component matchTop_mac_mulalbW.
+INFO: [HLS 200-0] Append model matchTop_mac_mulalbW
+INFO: [HLS 200-0] Found component matchTop_mac_mulamb6.
+INFO: [HLS 200-0] Append model matchTop_mac_mulamb6
+INFO: [HLS 200-0] Found component matchTop_mac_mulancg.
+INFO: [HLS 200-0] Append model matchTop_mac_mulancg
+INFO: [HLS 200-0] Found component matchTop_mac_mulaocq.
+INFO: [HLS 200-0] Append model matchTop_mac_mulaocq
+INFO: [HLS 200-0] Found component matchTop_mac_mulapcA.
+INFO: [HLS 200-0] Append model matchTop_mac_mulapcA
+INFO: [HLS 200-0] Found component matchTop_mac_mulaqcK.
+INFO: [HLS 200-0] Append model matchTop_mac_mulaqcK
+INFO: [HLS 200-0] Found component matchTop_mac_mularcU.
+INFO: [HLS 200-0] Append model matchTop_mac_mularcU
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [matchTop] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Append model shiftSampleIn
+INFO: [HLS 200-0] Append model convol
+INFO: [HLS 200-0] Append model matchTop
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: matchTop_mul_mul_bkb matchTop_mac_mulacud matchTop_mac_muladEe matchTop_mac_mulaeOg matchTop_mac_mulafYi matchTop_mac_mulag8j matchTop_mac_mulahbi matchTop_mac_mulaibs matchTop_mac_mulajbC matchTop_mac_mulakbM matchTop_mac_mulalbW matchTop_mac_mulamb6 matchTop_mac_mulancg matchTop_mac_mulaocq matchTop_mac_mulapcA matchTop_mac_mulaqcK matchTop_mac_mularcU shiftSampleIn convol matchTop
+INFO: [HLS 200-0] To file: write model matchTop_mul_mul_bkb
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulacud
+INFO: [HLS 200-0] To file: write model matchTop_mac_muladEe
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulaeOg
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulafYi
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulag8j
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulahbi
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulaibs
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulajbC
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulakbM
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulalbW
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulamb6
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulancg
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulaocq
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulapcA
+INFO: [HLS 200-0] To file: write model matchTop_mac_mulaqcK
+INFO: [HLS 200-0] To file: write model matchTop_mac_mularcU
+INFO: [HLS 200-0] To file: write model shiftSampleIn
+INFO: [HLS 200-0] To file: write model convol
+INFO: [HLS 200-0] To file: write model matchTop
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.07 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.11 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Command       ap_source returned 0; 0.11 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+Command       ap_source returned 0; 0.15 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.08 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.11 sec.
+Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Command       ap_source returned 0; 0.11 sec.
+Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/shiftSampleIn.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/convol.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/matchTop.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       sc_get_clocks matchTop 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110106 ; free virtual = 255095
+INFO: [SYSC 207-301] Generating SystemC RTL for matchTop.
+INFO: [VHDL 208-304] Generating VHDL RTL for matchTop.
+INFO: [VLOG 209-307] Generating Verilog RTL for matchTop.
+Command     autosyn returned 0; 16.17 sec.
+Command   csynth_design returned 0; 36.36 sec.
+Command ap_source returned 0; 36.69 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0.08 sec.

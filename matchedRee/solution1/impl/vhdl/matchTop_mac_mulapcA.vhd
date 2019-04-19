@@ -9,19 +9,19 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity matchFilter_mac_meOg_DSP48_0 is
+entity matchTop_mac_mulapcA_DSP48_14 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
     ce:  in  std_logic;
     in0:  in  std_logic_vector(16 - 1 downto 0);
-    in1:  in  std_logic_vector(16 - 1 downto 0);
-    in2:  in  std_logic_vector(21 - 1 downto 0);
-    dout: out std_logic_vector(21 - 1 downto 0));
+    in1:  in  std_logic_vector(12 - 1 downto 0);
+    in2:  in  std_logic_vector(29 - 1 downto 0);
+    dout: out std_logic_vector(29 - 1 downto 0));
 
 end entity;
 
-architecture behav of matchFilter_mac_meOg_DSP48_0 is
+architecture behav of matchTop_mac_mulapcA_DSP48_14 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -32,7 +32,7 @@ architecture behav of matchFilter_mac_meOg_DSP48_0 is
     signal b_reg   : signed(18-1 downto 0);
 begin
 a  <= signed(resize(signed(in0), 25));
-b  <= signed(resize(signed(in1), 18));
+b  <= signed(resize(unsigned(in1), 18));
 c  <= signed(resize(unsigned(in2), 48));
 
 m  <= a_reg * b_reg;
@@ -48,14 +48,14 @@ process (clk) begin
     end if;
 end process;
 
-dout <= std_logic_vector(resize(unsigned(p), 21));
+dout <= std_logic_vector(resize(unsigned(p), 29));
 
 end architecture;
 
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity matchFilter_mac_meOg is
+entity matchTop_mac_mulapcA is
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -73,8 +73,8 @@ entity matchFilter_mac_meOg is
         dout : OUT STD_LOGIC_VECTOR(dout_WIDTH - 1 DOWNTO 0));
 end entity;
 
-architecture arch of matchFilter_mac_meOg is
-    component matchFilter_mac_meOg_DSP48_0 is
+architecture arch of matchTop_mac_mulapcA is
+    component matchTop_mac_mulapcA_DSP48_14 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -88,7 +88,7 @@ architecture arch of matchFilter_mac_meOg is
 
 
 begin
-    matchFilter_mac_meOg_DSP48_0_U :  component matchFilter_mac_meOg_DSP48_0
+    matchTop_mac_mulapcA_DSP48_14_U :  component matchTop_mac_mulapcA_DSP48_14
     port map (
         clk => clk,
         rst => reset,

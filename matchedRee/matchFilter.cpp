@@ -14,22 +14,28 @@ static matchFilter_ff match;
 #pragma HLS ARRAY_PARTITION variable=match.matchBufferI complete dim=1
 #pragma HLS ARRAY_PARTITION variable=preamble complete dim=1
 
-static ap_fixed<16,8> newVali;
+static fixedMatch newVali;
 #pragma HLS RESET variable=newVali
 
-static ap_fixed<16,8> newValq;
+static fixedMatch newValq;
 #pragma HLS RESET variable=newValq
 
 rfnoc_axis out_sample;
 rfnoc_axis tmp_data;
 static ap_int<32> out;
+ap_int<16> tmp_dataQ,tmp_dataI;
 
 //Read in data then correlate
 	i_data.read(tmp_data);
     //tmp_data = *i_data;
 	out_sample.last = tmp_data.last;
-	newVali.V = tmp_data.data.range(15,0);
-	newValq.V = tmp_data.data.range(31,16);
+	tmp_dataQ = tmp_data.data.range(15,0);
+	tmp_dataI = tmp_data.data.range(31,16);
+
+	newVali.V = tmp_dataQ;
+	newValq.V = tmp_dataI;
+	//newVali.V = tmp_data.data.range(15,0);
+	//newValq.V = tmp_data.data.range(31,16);
 	match.shiftSampleIn(newVali,newValq);
 	out = match.convol();
 	out_sample.data = out;
@@ -45,9 +51,9 @@ static ap_int<32> out;
 	//}
 
 }
-void matchFilter_ff::shiftSampleIn(ap_fixed<16,8> newVali, ap_fixed<16,8> newValq){
+void matchFilter_ff::shiftSampleIn(fixedMatch newVali, fixedMatch newValq){
 	for(int a=128-1;a>0;a--){
-		//#pragma HLS UNROLL
+		#pragma HLS UNROLL
 		matchBufferI[a]=matchBufferI[a-1];
 		matchBufferQ[a]=matchBufferQ[a-1];
 	}
@@ -59,7 +65,7 @@ void matchFilter_ff::shiftSampleIn(ap_fixed<16,8> newVali, ap_fixed<16,8> newVal
 ap_int<32> matchFilter_ff::convol(){
 	ap_int<32> res;
 	ap_fixed<32,16> tempQ,tempI;
-	ap_fixed<16,8> resI, resQ;
+	fixedMatch resI, resQ;
 	ap_int<16> resIint, resQint;
 	tempQ=0;
 	tempI =0;
@@ -71,7 +77,9 @@ ap_int<32> matchFilter_ff::convol(){
 	}
 	resI = tempI;
 	resQ = tempQ;
-	res.range(15,0) = resI.V;
-	res.range(31,16) = resQ.V;
+	resIint= resI.V;
+	resQint = resQ.V;
+	res.range(15,0) = resIint;
+	res.range(31,16) = resQint;
 	return res;
 }

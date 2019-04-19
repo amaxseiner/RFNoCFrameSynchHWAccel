@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.2</Version>
+<Version>2017.4</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -10,14 +10,14 @@
 <Part>xc7k160tfbg484-1</Part>
 <TopModelName>convol</TopModelName>
 <TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>0.63</ClockUncertainty>
+<ClockUncertainty>0.62</ClockUncertainty>
 </UserAssignments>
 
 <PerformanceEstimates>
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.35</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.37</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -32,8 +32,8 @@
 <AreaEstimates>
 <Resources>
 <DSP48E>194</DSP48E>
-<FF>13612</FF>
-<LUT>4255</LUT>
+<FF>6180</FF>
+<LUT>4327</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>

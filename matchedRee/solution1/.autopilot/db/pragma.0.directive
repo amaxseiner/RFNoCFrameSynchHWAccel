@@ -49,6 +49,9 @@
 <option name="variable" positionalBoolean="4" value="newValq"/>
 </pragma>
 </directive>
+<directive functionLabel="" functionName="matchFilter_ff::shiftSampleIn" label="">
+<pragma name="UNROLL"/>
+</directive>
 <directive functionLabel="" functionName="matchFilter_ff::convol" label="">
 <pragma name="UNROLL"/>
 </directive>

@@ -138,16 +138,16 @@
 			0.00536
 };
 
-//typedef ap_fixed<16,11> match16bit;
+typedef ap_fixed<16,8> fixedMatch;
 void matchFilter(hls::stream<rfnoc_axis> in, hls::stream<rfnoc_axis> out);
 //void matchTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 
 class matchFilter_ff{
 public:
-	void shiftSampleIn(ap_fixed<16,8> newVali, ap_fixed<16,8> newValq);
+	void shiftSampleIn(fixedMatch newVali, fixedMatch newValq);
 	ap_int<32> convol();
-	ap_fixed<16,8> matchBufferI[128];
-	ap_fixed<16,8> matchBufferQ[128];
+	fixedMatch matchBufferI[128];
+	fixedMatch matchBufferQ[128];
 
 };
 

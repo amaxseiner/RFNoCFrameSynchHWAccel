@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1554578523642">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1555626093000">
   <ports id="1" name="i_data_V_data_V" type="PortType" lineNumber="5" originalName="i_data.V.data.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="32">
-    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="i_data_V_last_V" type="PortType" lineNumber="5" originalName="i_data.V.last.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="1">
-    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="3" name="o_data_V_data_V" type="PortType" lineNumber="5" originalName="o_data.V.data.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="32" direction="DirOut">
-    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <ports id="4" name="o_data_V_last_V" type="PortType" lineNumber="5" originalName="o_data.V.last.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="1" direction="DirOut">
-    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="5" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="287" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
   <edges id="288" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="293" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="300" sink_obj="//@blocks.0/@node_objs.1"/>
   <edges id="302" sink_obj="//@blocks.0/@node_objs.2"/>
   <edges id="311" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.2"/>
   <edges id="312" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.3"/>
@@ -541,8 +541,8 @@
   <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
   <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
   <blocks id="284" name="matchTop" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="273" name="empty" lineNumber="28" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="33" opcode="read" nodeLatency="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="28" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="273" name="empty" lineNumber="29" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" bitwidth="33" opcode="read" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="29" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataInputObjs>i_data_V_data_V</dataInputObjs>
       <dataInputObjs>i_data_V_last_V</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -551,43 +551,43 @@
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="277" name="node_277" lineNumber="31" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="store" nodeLabel="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="31" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="278" name="node_278" lineNumber="35" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="store" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="35" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataInputObjs>read</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="279" name="node_279" lineNumber="32" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="store" nodeLabel="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="32" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="279" name="node_279" lineNumber="36" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="store" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="36" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataInputObjs>read</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="280" name="node_280" lineNumber="33" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." rtlName="grp_shiftSampleIn_fu_1095" contextFuncName="matchTop" opcode="call" nodeLabel="1" nodeLatency="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="33" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="280" name="node_280" lineNumber="39" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." rtlName="StgValue_14_shiftSampleIn_fu_1095" contextFuncName="matchTop" opcode="call" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="39" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <constName>shiftSampleIn</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="281" name="tmp_data_V" lineNumber="34" originalName="tmp.data.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." rtlName="grp_convol_fu_578" contextFuncName="matchTop" bitwidth="32" opcode="call" nodeLabel="3" nodeLatency="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="34" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="281" name="out_sample_data_V" lineNumber="40" originalName="out_sample.data.V" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." rtlName="grp_convol_fu_578" contextFuncName="matchTop" bitwidth="32" opcode="call" nodeLabel="2" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="40" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>convol</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="282" name="node_282" lineNumber="38" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="write" nodeLabel="4" nodeLatency="1" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="38" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="282" name="node_282" lineNumber="44" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="write" nodeLabel="3" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="44" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
       <dataInputObjs>call</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>o_data_V_data_V</dataOutputObjs>
       <dataOutputObjs>o_data_V_last_V</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="283" name="node_283" lineNumber="47" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="ret" nodeLabel="5" m_display="0">
-      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="47" fileDirectory="D:\SeniorProject\RFNoCFrameSynchHWAccel" functionName="matchTop"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="283" name="node_283" lineNumber="53" fileName="matchedRee/matchFilter.cpp" fileDirectory=".." contextFuncName="matchTop" opcode="ret" nodeLabel="4" m_display="0">
+      <inlineStackInfo fileName="matchedRee/matchFilter.cpp" linenumber="53" fileDirectory="/home/ece492fa18/RFNoCFrameSynchHWAccel" functionName="matchTop"/>
     </node_objs>
     <fileValidLineNumbers fileName="matchedRee/matchFilter.cpp">
-      <validLinenumbers>28</validLinenumbers>
-      <validLinenumbers>31</validLinenumbers>
-      <validLinenumbers>32</validLinenumbers>
-      <validLinenumbers>33</validLinenumbers>
-      <validLinenumbers>34</validLinenumbers>
-      <validLinenumbers>38</validLinenumbers>
-      <validLinenumbers>47</validLinenumbers>
+      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
+      <validLinenumbers>36</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>40</validLinenumbers>
+      <validLinenumbers>44</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -595,45 +595,38 @@
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
   <ScheduleInfo time="4"/>
-  <ScheduleInfo time="5"/>
-  <regnodes realName="tmp_reg_1654">
-    <nodeIds>276</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_data_V_reg_1664">
-    <nodeIds>281</nodeIds>
-  </regnodes>
   <regnodes realName="tmp_last_V_reg_1649">
     <nodeIds>275</nodeIds>
   </regnodes>
-  <regnodes realName="p_Result_1_reg_1659">
-    <nodeIds>278</nodeIds>
+  <regnodes realName="out_sample_data_V_reg_1654">
+    <nodeIds>281</nodeIds>
   </regnodes>
+  <expressionNodes realName="tmp_dataI_V_fu_1626">
+    <nodeIds>277</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="tmp_last_V_fu_1617">
     <nodeIds>275</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_fu_1621">
+  <expressionNodes realName="tmp_dataQ_V_fu_1621">
     <nodeIds>276</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="p_Result_1_fu_1632">
-    <nodeIds>278</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_data_V_1_fu_1613">
     <nodeIds>274</nodeIds>
   </expressionNodes>
+  <moduleNodes realName="StgValue_14_shiftSampleIn_fu_1095">
+    <nodeIds>280</nodeIds>
+  </moduleNodes>
   <moduleNodes realName="grp_convol_fu_578">
     <nodeIds>281</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_shiftSampleIn_fu_1095">
-    <nodeIds>280</nodeIds>
-  </moduleNodes>
-  <ioNodes realName="StgValue_12_store_fu_1626">
-    <nodeIds>277</nodeIds>
+  <ioNodes realName="StgValue_12_store_fu_1637">
+    <nodeIds>278</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_13_store_fu_1643">
+    <nodeIds>279</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_read_fu_560">
     <nodeIds>273</nodeIds>
-  </ioNodes>
-  <ioNodes realName="StgValue_14_store_fu_1643">
-    <nodeIds>279</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_write_fu_568">
     <nodeIds>282</nodeIds>
@@ -670,19 +663,16 @@
       <operations id="277" stage="1" latency="1"/>
       <operations id="278" stage="1" latency="1"/>
       <operations id="279" stage="1" latency="1"/>
-      <operations id="280" stage="2" latency="2"/>
+      <operations id="280" stage="1" latency="1"/>
     </states>
     <states id="3">
-      <operations id="280" stage="1" latency="2"/>
-    </states>
-    <states id="4">
       <operations id="281" stage="2" latency="2"/>
     </states>
-    <states id="5">
+    <states id="4">
       <operations id="281" stage="1" latency="2"/>
       <operations id="282" stage="2" latency="2"/>
     </states>
-    <states id="6">
+    <states id="5">
       <operations id="263" stage="1" latency="1"/>
       <operations id="264" stage="1" latency="1"/>
       <operations id="265" stage="1" latency="1"/>
@@ -697,23 +687,20 @@
       <operations id="283" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
-      <condition id="6"/>
+      <condition id="5"/>
     </transitions>
     <transitions inState="2" outState="3">
-      <condition id="7"/>
+      <condition id="6"/>
     </transitions>
     <transitions inState="3" outState="4">
-      <condition id="8"/>
+      <condition id="7"/>
     </transitions>
     <transitions inState="4" outState="5">
-      <condition id="9"/>
-    </transitions>
-    <transitions inState="5" outState="6">
-      <condition id="10"/>
+      <condition id="8"/>
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="matchTop" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="254" mMaxLatency="-1">
+    <cfgRegions mId="1" mTag="matchTop" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="125" mMaxLatency="-1">
       <basicBlocks>284</basicBlocks>
       <mDfPipe/>
     </cfgRegions>

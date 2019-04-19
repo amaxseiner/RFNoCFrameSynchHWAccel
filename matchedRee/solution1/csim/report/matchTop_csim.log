@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../tb_main.cpp in debug mode
+csim.mk:76: recipe for target 'obj/tb_main.o' failed
+../../../tb_main.cpp: In function ‘int main()’:
+../../../tb_main.cpp:31:25: error: ‘matchTop’ was not declared in this scope
+make: *** [obj/tb_main.o] Error 1
+CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************
