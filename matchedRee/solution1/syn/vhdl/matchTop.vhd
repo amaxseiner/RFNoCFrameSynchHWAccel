@@ -27,7 +27,7 @@ end;
 architecture behav of matchTop is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.374812,HLS_SYN_LAT=125,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=194,HLS_SYN_FF=10431,HLS_SYN_LUT=6864}";
+    "matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.534375,HLS_SYN_LAT=133,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=218,HLS_SYN_FF=18959,HLS_SYN_LUT=24922}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (4 downto 0) := "00001";
@@ -5355,8 +5355,8 @@ begin
                 ap_NS_fsm <= "XXXXX";
         end case;
     end process;
-    StgValue_14_shiftSampleIn_fu_1095_newVali_V <= i_data_V_data_V_0_data_out(16 - 1 downto 0);
-    StgValue_14_shiftSampleIn_fu_1095_newValq_V <= i_data_V_data_V_0_data_out(31 downto 16);
+    StgValue_14_shiftSampleIn_fu_1095_newVali_V <= i_data_V_data_V_0_data_out(31 downto 16);
+    StgValue_14_shiftSampleIn_fu_1095_newValq_V <= i_data_V_data_V_0_data_out(16 - 1 downto 0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
     ap_CS_fsm_state4 <= ap_CS_fsm(3);

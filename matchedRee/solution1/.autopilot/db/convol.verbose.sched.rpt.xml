@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'convol'" level="0">
-<item name = "Date">Thu Apr 18 18:21:19 2019
+<item name = "Date">Sat Apr 20 22:09:40 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">matchedRee</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.37, 0.62</column>
+<column name="ap_clk">5.00, 3.53, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">121, 121, 121, 121, none</column>
+<column name="">129, 129, 129, 129, none</column>
 </table>
 </item>
 <item name = "Detail">

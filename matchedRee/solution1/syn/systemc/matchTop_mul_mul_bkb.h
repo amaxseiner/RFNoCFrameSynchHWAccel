@@ -7,7 +7,7 @@
 
 #ifndef __matchTop_mul_mul_bkb__HH__
 #define __matchTop_mul_mul_bkb__HH__
-#include "ACMP_mul_su.h"
+#include "ACMP_mul_us.h"
 #include <systemc>
 
 template<
@@ -26,15 +26,15 @@ SC_MODULE(matchTop_mul_mul_bkb) {
 
 
 
-    ACMP_mul_su<ID, 3, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_mul_su_U;
+    ACMP_mul_us<ID, 3, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_mul_us_U;
 
-    SC_CTOR(matchTop_mul_mul_bkb):  ACMP_mul_su_U ("ACMP_mul_su_U") {
-        ACMP_mul_su_U.clk(clk);
-        ACMP_mul_su_U.reset(reset);
-        ACMP_mul_su_U.ce(ce);
-        ACMP_mul_su_U.din0(din0);
-        ACMP_mul_su_U.din1(din1);
-        ACMP_mul_su_U.dout(dout);
+    SC_CTOR(matchTop_mul_mul_bkb):  ACMP_mul_us_U ("ACMP_mul_us_U") {
+        ACMP_mul_us_U.clk(clk);
+        ACMP_mul_us_U.reset(reset);
+        ACMP_mul_us_U.ce(ce);
+        ACMP_mul_us_U.din0(din0);
+        ACMP_mul_us_U.din1(din1);
+        ACMP_mul_us_U.dout(dout);
 
     }
 

@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'correlateTopSynch'
 ================================================================
-* Date:           Wed Apr 17 15:34:47 2019
+* Date:           Sun Apr 21 11:28:24 2019
 
-* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        CorrelatorSynch
 * Solution:       solution1
 * Product family: kintex7
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |   5.00|      4.28|        0.62|
+    |ap_clk  |   5.00|      4.04|        0.62|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    1|   10|    2|   11|   none  |
+    |    1|   11|    1|   11|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -38,8 +38,8 @@
         |                                          |                      |  Latency  |  Interval | Pipeline|
         |                 Instance                 |        Module        | min | max | min | max |   Type  |
         +------------------------------------------+----------------------+-----+-----+-----+-----+---------+
-        |grp_correlatorSynch_fu_1103               |correlatorSynch       |    4|    5|    4|    5|   none  |
-        |StgValue_35_shiftPhaseClassSynch_fu_2132  |shiftPhaseClassSynch  |    0|    0|    0|    0|   none  |
+        |grp_correlatorSynch_fu_1107               |correlatorSynch       |    5|    6|    5|    6|   none  |
+        |StgValue_70_shiftPhaseClassSynch_fu_1624  |shiftPhaseClassSynch  |    0|    0|    0|    0|   none  |
         +------------------------------------------+----------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -55,18 +55,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
 +-----------------+---------+-------+--------+--------+
 |DSP              |        -|      -|       -|       -|
-|Expression       |        -|      -|     118|      92|
+|Expression       |        -|      -|       0|     206|
 |FIFO             |        -|      -|       -|       -|
-|Instance         |        -|      2|    9178|   12623|
+|Instance         |        -|      1|    2302|    8268|
 |Memory           |        -|      -|       -|       -|
 |Multiplexer      |        -|      -|       -|     185|
-|Register         |        -|      -|    8423|       -|
+|Register         |        -|      -|    4327|       -|
 +-----------------+---------+-------+--------+--------+
-|Total            |        0|      2|   17719|   12900|
+|Total            |        0|      1|    6629|    8659|
 +-----------------+---------+-------+--------+--------+
 |Available        |      650|    600|  202800|  101400|
 +-----------------+---------+-------+--------+--------+
-|Utilization (%)  |        0|   ~0  |       8|      12|
+|Utilization (%)  |        0|   ~0  |       3|       8|
 +-----------------+---------+-------+--------+--------+
 
 + Detail: 
@@ -74,10 +74,10 @@
     +------------------------------------------+----------------------+---------+-------+------+------+
     |                 Instance                 |        Module        | BRAM_18K| DSP48E|  FF  |  LUT |
     +------------------------------------------+----------------------+---------+-------+------+------+
-    |grp_correlatorSynch_fu_1103               |correlatorSynch       |        0|      2|  9178|  8303|
-    |StgValue_35_shiftPhaseClassSynch_fu_2132  |shiftPhaseClassSynch  |        0|      0|     0|  4320|
+    |grp_correlatorSynch_fu_1107               |correlatorSynch       |        0|      1|  2301|  6108|
+    |StgValue_70_shiftPhaseClassSynch_fu_1624  |shiftPhaseClassSynch  |        0|      0|     1|  2160|
     +------------------------------------------+----------------------+---------+-------+------+------+
-    |Total                                     |                      |        0|      2|  9178| 12623|
+    |Total                                     |                      |        0|      1|  2302|  8268|
     +------------------------------------------+----------------------+---------+-------+------+------+
 
     * DSP48: 
@@ -90,32 +90,32 @@
     N/A
 
     * Expression: 
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |           Variable Name          | Operation| DSP48E|  FF | LUT| Bitwidth P0| Bitwidth P1|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |tmp_2_fu_3234_p2                  |     +    |      0|  101|  37|           1|          32|
-    |tmp_4_fu_3219_p2                  |     +    |      0|   17|   9|           1|           4|
-    |ap_predicate_op47_write_state6    |    and   |      0|    0|   2|           1|           1|
-    |ap_predicate_op49_write_state6    |    and   |      0|    0|   2|           1|           1|
-    |i_data_V_data_V_0_load_A          |    and   |      0|    0|   2|           1|           1|
-    |i_data_V_data_V_0_load_B          |    and   |      0|    0|   2|           1|           1|
-    |i_data_V_last_V_0_load_A          |    and   |      0|    0|   2|           1|           1|
-    |i_data_V_last_V_0_load_B          |    and   |      0|    0|   2|           1|           1|
-    |o_data_V_data_V_1_load_A          |    and   |      0|    0|   2|           1|           1|
-    |o_data_V_data_V_1_load_B          |    and   |      0|    0|   2|           1|           1|
-    |o_data_V_last_V_1_load_A          |    and   |      0|    0|   2|           1|           1|
-    |o_data_V_last_V_1_load_B          |    and   |      0|    0|   2|           1|           1|
-    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|    0|   1|           2|           1|
-    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|    0|   1|           2|           1|
-    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|    0|   1|           2|           1|
-    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|    0|   1|           2|           1|
-    |tmp_5_fu_3246_p2                  |   icmp   |      0|    0|  16|          32|           1|
-    |ap_block_state5_io                |    or    |      0|    0|   2|           1|           1|
-    |ap_block_state6                   |    or    |      0|    0|   2|           1|           1|
-    |ap_block_state6_io                |    or    |      0|    0|   2|           1|           1|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
-    |Total                             |          |      0|  118|  92|          55|          54|
-    +----------------------------------+----------+-------+-----+----+------------+------------+
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |tmp_2_fu_2738_p2                  |     +    |      0|  0|  39|           1|          32|
+    |tmp_4_fu_2723_p2                  |     +    |      0|  0|  13|           1|           4|
+    |ap_predicate_op82_write_state6    |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op84_write_state6    |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_last_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_data_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_A          |    and   |      0|  0|   8|           1|           1|
+    |o_data_V_last_V_1_load_B          |    and   |      0|  0|   8|           1|           1|
+    |i_data_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |i_data_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_data_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |o_data_V_last_V_1_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |tmp_5_fu_2750_p2                  |   icmp   |      0|  0|  18|          32|           1|
+    |ap_block_state5_io                |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state6                   |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state6_io                |    or    |      0|  0|   8|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 206|          55|          54|
+    +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
     +----------------------------+----+-----------+-----+-----------+
@@ -144,7 +144,7 @@
     |                     Name                    | FF | LUT| Bits| Const Bits|
     +---------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                    |   6|   0|    6|          0|
-    |ap_reg_grp_correlatorSynch_fu_1103_ap_start  |   1|   0|    1|          0|
+    |ap_reg_grp_correlatorSynch_fu_1107_ap_start  |   1|   0|    1|          0|
     |cor_phaseClass0i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass0i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass0i_V_10                        |  16|   0|   16|          0|
@@ -161,22 +161,6 @@
     |cor_phaseClass0i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass0i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass0i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass0q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass10i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass10i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass10i_V_11                       |  16|   0|   16|          0|
@@ -193,22 +177,6 @@
     |cor_phaseClass10i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass10i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass10i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass10q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass11i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass11i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass11i_V_11                       |  16|   0|   16|          0|
@@ -225,22 +193,6 @@
     |cor_phaseClass11i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass11i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass11i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass11q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass12i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass12i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass12i_V_11                       |  16|   0|   16|          0|
@@ -257,22 +209,6 @@
     |cor_phaseClass12i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass12i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass12i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass12q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass13i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass13i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass13i_V_11                       |  16|   0|   16|          0|
@@ -289,22 +225,6 @@
     |cor_phaseClass13i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass13i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass13i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass13q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass14i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass14i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass14i_V_11                       |  16|   0|   16|          0|
@@ -321,22 +241,6 @@
     |cor_phaseClass14i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass14i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass14i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass14q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass15i_V_1                        |  16|   0|   16|          0|
     |cor_phaseClass15i_V_10                       |  16|   0|   16|          0|
     |cor_phaseClass15i_V_11                       |  16|   0|   16|          0|
@@ -353,22 +257,6 @@
     |cor_phaseClass15i_V_8                        |  16|   0|   16|          0|
     |cor_phaseClass15i_V_9                        |  16|   0|   16|          0|
     |cor_phaseClass15i_V_s                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_1                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_10                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_11                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_12                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_13                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_14                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_15                       |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_2                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_3                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_4                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_5                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_6                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_7                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_8                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_9                        |  16|   0|   16|          0|
-    |cor_phaseClass15q_V_s                        |  16|   0|   16|          0|
     |cor_phaseClass1i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass1i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass1i_V_10                        |  16|   0|   16|          0|
@@ -385,22 +273,6 @@
     |cor_phaseClass1i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass1i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass1i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass1q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass2i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass2i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass2i_V_10                        |  16|   0|   16|          0|
@@ -417,22 +289,6 @@
     |cor_phaseClass2i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass2i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass2i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass2q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass3i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass3i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass3i_V_10                        |  16|   0|   16|          0|
@@ -449,22 +305,6 @@
     |cor_phaseClass3i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass3i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass3i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass3q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass4i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass4i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass4i_V_10                        |  16|   0|   16|          0|
@@ -481,22 +321,6 @@
     |cor_phaseClass4i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass4i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass4i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass4q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass5i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass5i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass5i_V_10                        |  16|   0|   16|          0|
@@ -513,22 +337,6 @@
     |cor_phaseClass5i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass5i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass5i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass5q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass6i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass6i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass6i_V_10                        |  16|   0|   16|          0|
@@ -545,22 +353,6 @@
     |cor_phaseClass6i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass6i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass6i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass6q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass7i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass7i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass7i_V_10                        |  16|   0|   16|          0|
@@ -577,22 +369,6 @@
     |cor_phaseClass7i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass7i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass7i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass7q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass8i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass8i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass8i_V_10                        |  16|   0|   16|          0|
@@ -609,22 +385,6 @@
     |cor_phaseClass8i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass8i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass8i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass8q_V_9                         |  16|   0|   16|          0|
     |cor_phaseClass9i_V_0                         |  16|   0|   16|          0|
     |cor_phaseClass9i_V_1                         |  16|   0|   16|          0|
     |cor_phaseClass9i_V_10                        |  16|   0|   16|          0|
@@ -641,24 +401,8 @@
     |cor_phaseClass9i_V_7                         |  16|   0|   16|          0|
     |cor_phaseClass9i_V_8                         |  16|   0|   16|          0|
     |cor_phaseClass9i_V_9                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_0                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_1                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_10                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_11                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_12                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_13                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_14                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_15                        |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_2                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_3                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_4                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_5                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_6                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_7                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_8                         |  16|   0|   16|          0|
-    |cor_phaseClass9q_V_9                         |  16|   0|   16|          0|
     |currentState                                 |   1|   0|    1|          0|
-    |currentState_load_reg_3257                   |   1|   0|    1|          0|
+    |currentState_load_reg_2761                   |   1|   0|    1|          0|
     |i_data_V_data_V_0_payload_A                  |  32|   0|   32|          0|
     |i_data_V_data_V_0_payload_B                  |  32|   0|   32|          0|
     |i_data_V_data_V_0_sel_rd                     |   1|   0|    1|          0|
@@ -680,13 +424,13 @@
     |o_data_V_last_V_1_sel_rd                     |   1|   0|    1|          0|
     |o_data_V_last_V_1_sel_wr                     |   1|   0|    1|          0|
     |o_data_V_last_V_1_state                      |   2|   0|    2|          0|
+    |out_sample_data_V_reg_2777                   |  32|   0|   32|          0|
     |phaseClass_V                                 |   4|   0|    4|          0|
-    |phaseClass_V_load_reg_3261                   |   4|   0|    4|          0|
-    |tmp_5_reg_3279                               |   1|   0|    1|          0|
-    |tmp_data_V_reg_3273                          |  32|   0|   32|          0|
-    |tmp_last_V_reg_3268                          |   1|   0|    1|          0|
+    |phaseClass_V_load_reg_2765                   |   4|   0|    4|          0|
+    |tmp_5_reg_2783                               |   1|   0|    1|          0|
+    |tmp_last_V_reg_2772                          |   1|   0|    1|          0|
     +---------------------------------------------+----+----+-----+-----------+
-    |Total                                        |8423|   0| 8423|          0|
+    |Total                                        |4327|   0| 4327|          0|
     +---------------------------------------------+----+----+-----+-----------+
 
 

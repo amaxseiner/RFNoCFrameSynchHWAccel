@@ -1,20 +1,23 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 516
+set id 260
 set name correlateTopSynchbkb
 set corename simcore_mul
 set op mul
-set stage_num 3
+set stage_num 4
 set max_latency -1
 set registered_input 1
-set in0_width 16
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 20
 set in0_signed 1
-set in1_width 16
+set in1_width 20
 set in1_signed 1
-set out_width 16
-set exp i0*i1
-set arg_lists {i0 {16 1 +} i1 {16 1 +} p {16 1 +} acc {0} }
-set TrueReset 0
+set ce_width 1
+set ce_signed 0
+set out_width 40
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -24,17 +27,20 @@ eval "ap_gen_simcore_mul { \
     op ${op} \
     reset_level 1 \
     sync_rst true \
-    true_reset ${TrueReset} \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
 }"
 } else {
 puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
@@ -48,30 +54,33 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 set op mul
-set corename DSP48
+set corename MulnS
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul] == "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
     op ${op} \
     reset_level 1 \
     sync_rst true \
-    true_reset ${TrueReset} \
     stage_num ${stage_num} \
     max_latency ${max_latency} \
     registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
     in0_width ${in0_width} \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
     out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, check your platform lib"
 }
 }
 
@@ -86,7 +95,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 518 \
+    id 262 \
     name phaseClass_V \
     type other \
     dir I \
@@ -101,7 +110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 519 \
+    id 263 \
     name cor_phaseClass15i_V_15 \
     type other \
     dir I \
@@ -116,22 +125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 520 \
-    name cor_phaseClass15q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_15 \
-    op interface \
-    ports { cor_phaseClass15q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 521 \
+    id 264 \
     name cor_phaseClass15i_V_14 \
     type other \
     dir I \
@@ -146,22 +140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 522 \
-    name cor_phaseClass15q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_14 \
-    op interface \
-    ports { cor_phaseClass15q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 523 \
+    id 265 \
     name cor_phaseClass15i_V_13 \
     type other \
     dir I \
@@ -176,22 +155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 524 \
-    name cor_phaseClass15q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_13 \
-    op interface \
-    ports { cor_phaseClass15q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 525 \
+    id 266 \
     name cor_phaseClass15i_V_12 \
     type other \
     dir I \
@@ -206,22 +170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 526 \
-    name cor_phaseClass15q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_12 \
-    op interface \
-    ports { cor_phaseClass15q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 527 \
+    id 267 \
     name cor_phaseClass15i_V_11 \
     type other \
     dir I \
@@ -236,22 +185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 528 \
-    name cor_phaseClass15q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_11 \
-    op interface \
-    ports { cor_phaseClass15q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 529 \
+    id 268 \
     name cor_phaseClass15i_V_10 \
     type other \
     dir I \
@@ -266,22 +200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 530 \
-    name cor_phaseClass15q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_10 \
-    op interface \
-    ports { cor_phaseClass15q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 531 \
+    id 269 \
     name cor_phaseClass15i_V_9 \
     type other \
     dir I \
@@ -296,22 +215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 532 \
-    name cor_phaseClass15q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_9 \
-    op interface \
-    ports { cor_phaseClass15q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 533 \
+    id 270 \
     name cor_phaseClass15i_V_8 \
     type other \
     dir I \
@@ -326,22 +230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 534 \
-    name cor_phaseClass15q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_8 \
-    op interface \
-    ports { cor_phaseClass15q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 535 \
+    id 271 \
     name cor_phaseClass15i_V_7 \
     type other \
     dir I \
@@ -356,22 +245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 536 \
-    name cor_phaseClass15q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_7 \
-    op interface \
-    ports { cor_phaseClass15q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 537 \
+    id 272 \
     name cor_phaseClass15i_V_6 \
     type other \
     dir I \
@@ -386,22 +260,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 538 \
-    name cor_phaseClass15q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_6 \
-    op interface \
-    ports { cor_phaseClass15q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 539 \
+    id 273 \
     name cor_phaseClass15i_V_5 \
     type other \
     dir I \
@@ -416,22 +275,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 540 \
-    name cor_phaseClass15q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_5 \
-    op interface \
-    ports { cor_phaseClass15q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 541 \
+    id 274 \
     name cor_phaseClass15i_V_4 \
     type other \
     dir I \
@@ -446,22 +290,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 542 \
-    name cor_phaseClass15q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_4 \
-    op interface \
-    ports { cor_phaseClass15q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 543 \
+    id 275 \
     name cor_phaseClass15i_V_3 \
     type other \
     dir I \
@@ -476,22 +305,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 544 \
-    name cor_phaseClass15q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_3 \
-    op interface \
-    ports { cor_phaseClass15q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 545 \
+    id 276 \
     name cor_phaseClass15i_V_2 \
     type other \
     dir I \
@@ -506,22 +320,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 546 \
-    name cor_phaseClass15q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_2 \
-    op interface \
-    ports { cor_phaseClass15q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 547 \
+    id 277 \
     name cor_phaseClass15i_V_1 \
     type other \
     dir I \
@@ -536,22 +335,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 548 \
-    name cor_phaseClass15q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_1 \
-    op interface \
-    ports { cor_phaseClass15q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 549 \
+    id 278 \
     name cor_phaseClass15i_V_s \
     type other \
     dir I \
@@ -566,22 +350,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 550 \
-    name cor_phaseClass15q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass15q_V_s \
-    op interface \
-    ports { cor_phaseClass15q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 551 \
+    id 279 \
     name cor_phaseClass14i_V_15 \
     type other \
     dir I \
@@ -596,22 +365,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 552 \
-    name cor_phaseClass14q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_15 \
-    op interface \
-    ports { cor_phaseClass14q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 553 \
+    id 280 \
     name cor_phaseClass14i_V_14 \
     type other \
     dir I \
@@ -626,22 +380,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 554 \
-    name cor_phaseClass14q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_14 \
-    op interface \
-    ports { cor_phaseClass14q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 555 \
+    id 281 \
     name cor_phaseClass14i_V_13 \
     type other \
     dir I \
@@ -656,22 +395,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 556 \
-    name cor_phaseClass14q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_13 \
-    op interface \
-    ports { cor_phaseClass14q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 557 \
+    id 282 \
     name cor_phaseClass14i_V_12 \
     type other \
     dir I \
@@ -686,22 +410,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 558 \
-    name cor_phaseClass14q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_12 \
-    op interface \
-    ports { cor_phaseClass14q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 559 \
+    id 283 \
     name cor_phaseClass14i_V_11 \
     type other \
     dir I \
@@ -716,22 +425,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 560 \
-    name cor_phaseClass14q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_11 \
-    op interface \
-    ports { cor_phaseClass14q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 561 \
+    id 284 \
     name cor_phaseClass14i_V_10 \
     type other \
     dir I \
@@ -746,22 +440,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 562 \
-    name cor_phaseClass14q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_10 \
-    op interface \
-    ports { cor_phaseClass14q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 563 \
+    id 285 \
     name cor_phaseClass14i_V_9 \
     type other \
     dir I \
@@ -776,22 +455,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 564 \
-    name cor_phaseClass14q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_9 \
-    op interface \
-    ports { cor_phaseClass14q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 565 \
+    id 286 \
     name cor_phaseClass14i_V_8 \
     type other \
     dir I \
@@ -806,22 +470,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 566 \
-    name cor_phaseClass14q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_8 \
-    op interface \
-    ports { cor_phaseClass14q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 567 \
+    id 287 \
     name cor_phaseClass14i_V_7 \
     type other \
     dir I \
@@ -836,22 +485,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 568 \
-    name cor_phaseClass14q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_7 \
-    op interface \
-    ports { cor_phaseClass14q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 569 \
+    id 288 \
     name cor_phaseClass14i_V_6 \
     type other \
     dir I \
@@ -866,22 +500,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 570 \
-    name cor_phaseClass14q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_6 \
-    op interface \
-    ports { cor_phaseClass14q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 571 \
+    id 289 \
     name cor_phaseClass14i_V_5 \
     type other \
     dir I \
@@ -896,22 +515,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 572 \
-    name cor_phaseClass14q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_5 \
-    op interface \
-    ports { cor_phaseClass14q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 573 \
+    id 290 \
     name cor_phaseClass14i_V_4 \
     type other \
     dir I \
@@ -926,22 +530,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 574 \
-    name cor_phaseClass14q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_4 \
-    op interface \
-    ports { cor_phaseClass14q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 575 \
+    id 291 \
     name cor_phaseClass14i_V_3 \
     type other \
     dir I \
@@ -956,22 +545,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 576 \
-    name cor_phaseClass14q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_3 \
-    op interface \
-    ports { cor_phaseClass14q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 577 \
+    id 292 \
     name cor_phaseClass14i_V_2 \
     type other \
     dir I \
@@ -986,22 +560,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 578 \
-    name cor_phaseClass14q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_2 \
-    op interface \
-    ports { cor_phaseClass14q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 579 \
+    id 293 \
     name cor_phaseClass14i_V_1 \
     type other \
     dir I \
@@ -1016,22 +575,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 580 \
-    name cor_phaseClass14q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_1 \
-    op interface \
-    ports { cor_phaseClass14q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 581 \
+    id 294 \
     name cor_phaseClass14i_V_s \
     type other \
     dir I \
@@ -1046,22 +590,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 582 \
-    name cor_phaseClass14q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass14q_V_s \
-    op interface \
-    ports { cor_phaseClass14q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 583 \
+    id 295 \
     name cor_phaseClass13i_V_15 \
     type other \
     dir I \
@@ -1076,22 +605,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 584 \
-    name cor_phaseClass13q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_15 \
-    op interface \
-    ports { cor_phaseClass13q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 585 \
+    id 296 \
     name cor_phaseClass13i_V_14 \
     type other \
     dir I \
@@ -1106,22 +620,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 586 \
-    name cor_phaseClass13q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_14 \
-    op interface \
-    ports { cor_phaseClass13q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 587 \
+    id 297 \
     name cor_phaseClass13i_V_13 \
     type other \
     dir I \
@@ -1136,22 +635,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 588 \
-    name cor_phaseClass13q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_13 \
-    op interface \
-    ports { cor_phaseClass13q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 589 \
+    id 298 \
     name cor_phaseClass13i_V_12 \
     type other \
     dir I \
@@ -1166,22 +650,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 590 \
-    name cor_phaseClass13q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_12 \
-    op interface \
-    ports { cor_phaseClass13q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 591 \
+    id 299 \
     name cor_phaseClass13i_V_11 \
     type other \
     dir I \
@@ -1196,22 +665,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 592 \
-    name cor_phaseClass13q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_11 \
-    op interface \
-    ports { cor_phaseClass13q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 593 \
+    id 300 \
     name cor_phaseClass13i_V_10 \
     type other \
     dir I \
@@ -1226,22 +680,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 594 \
-    name cor_phaseClass13q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_10 \
-    op interface \
-    ports { cor_phaseClass13q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 595 \
+    id 301 \
     name cor_phaseClass13i_V_9 \
     type other \
     dir I \
@@ -1256,22 +695,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 596 \
-    name cor_phaseClass13q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_9 \
-    op interface \
-    ports { cor_phaseClass13q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 597 \
+    id 302 \
     name cor_phaseClass13i_V_8 \
     type other \
     dir I \
@@ -1286,22 +710,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 598 \
-    name cor_phaseClass13q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_8 \
-    op interface \
-    ports { cor_phaseClass13q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 599 \
+    id 303 \
     name cor_phaseClass13i_V_7 \
     type other \
     dir I \
@@ -1316,22 +725,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 600 \
-    name cor_phaseClass13q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_7 \
-    op interface \
-    ports { cor_phaseClass13q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 601 \
+    id 304 \
     name cor_phaseClass13i_V_6 \
     type other \
     dir I \
@@ -1346,22 +740,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 602 \
-    name cor_phaseClass13q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_6 \
-    op interface \
-    ports { cor_phaseClass13q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 603 \
+    id 305 \
     name cor_phaseClass13i_V_5 \
     type other \
     dir I \
@@ -1376,22 +755,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 604 \
-    name cor_phaseClass13q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_5 \
-    op interface \
-    ports { cor_phaseClass13q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 605 \
+    id 306 \
     name cor_phaseClass13i_V_4 \
     type other \
     dir I \
@@ -1406,22 +770,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 606 \
-    name cor_phaseClass13q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_4 \
-    op interface \
-    ports { cor_phaseClass13q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 607 \
+    id 307 \
     name cor_phaseClass13i_V_3 \
     type other \
     dir I \
@@ -1436,22 +785,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 608 \
-    name cor_phaseClass13q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_3 \
-    op interface \
-    ports { cor_phaseClass13q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 609 \
+    id 308 \
     name cor_phaseClass13i_V_2 \
     type other \
     dir I \
@@ -1466,22 +800,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 610 \
-    name cor_phaseClass13q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_2 \
-    op interface \
-    ports { cor_phaseClass13q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 611 \
+    id 309 \
     name cor_phaseClass13i_V_1 \
     type other \
     dir I \
@@ -1496,22 +815,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 612 \
-    name cor_phaseClass13q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_1 \
-    op interface \
-    ports { cor_phaseClass13q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 613 \
+    id 310 \
     name cor_phaseClass13i_V_s \
     type other \
     dir I \
@@ -1526,22 +830,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 614 \
-    name cor_phaseClass13q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass13q_V_s \
-    op interface \
-    ports { cor_phaseClass13q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 615 \
+    id 311 \
     name cor_phaseClass12i_V_15 \
     type other \
     dir I \
@@ -1556,22 +845,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 616 \
-    name cor_phaseClass12q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_15 \
-    op interface \
-    ports { cor_phaseClass12q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 617 \
+    id 312 \
     name cor_phaseClass12i_V_14 \
     type other \
     dir I \
@@ -1586,22 +860,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 618 \
-    name cor_phaseClass12q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_14 \
-    op interface \
-    ports { cor_phaseClass12q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 619 \
+    id 313 \
     name cor_phaseClass12i_V_13 \
     type other \
     dir I \
@@ -1616,22 +875,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 620 \
-    name cor_phaseClass12q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_13 \
-    op interface \
-    ports { cor_phaseClass12q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 621 \
+    id 314 \
     name cor_phaseClass12i_V_12 \
     type other \
     dir I \
@@ -1646,22 +890,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 622 \
-    name cor_phaseClass12q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_12 \
-    op interface \
-    ports { cor_phaseClass12q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 623 \
+    id 315 \
     name cor_phaseClass12i_V_11 \
     type other \
     dir I \
@@ -1676,22 +905,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 624 \
-    name cor_phaseClass12q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_11 \
-    op interface \
-    ports { cor_phaseClass12q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 625 \
+    id 316 \
     name cor_phaseClass12i_V_10 \
     type other \
     dir I \
@@ -1706,22 +920,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 626 \
-    name cor_phaseClass12q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_10 \
-    op interface \
-    ports { cor_phaseClass12q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 627 \
+    id 317 \
     name cor_phaseClass12i_V_9 \
     type other \
     dir I \
@@ -1736,22 +935,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 628 \
-    name cor_phaseClass12q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_9 \
-    op interface \
-    ports { cor_phaseClass12q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 629 \
+    id 318 \
     name cor_phaseClass12i_V_8 \
     type other \
     dir I \
@@ -1766,22 +950,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 630 \
-    name cor_phaseClass12q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_8 \
-    op interface \
-    ports { cor_phaseClass12q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 631 \
+    id 319 \
     name cor_phaseClass12i_V_7 \
     type other \
     dir I \
@@ -1796,22 +965,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 632 \
-    name cor_phaseClass12q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_7 \
-    op interface \
-    ports { cor_phaseClass12q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 633 \
+    id 320 \
     name cor_phaseClass12i_V_6 \
     type other \
     dir I \
@@ -1826,22 +980,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 634 \
-    name cor_phaseClass12q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_6 \
-    op interface \
-    ports { cor_phaseClass12q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 635 \
+    id 321 \
     name cor_phaseClass12i_V_5 \
     type other \
     dir I \
@@ -1856,22 +995,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 636 \
-    name cor_phaseClass12q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_5 \
-    op interface \
-    ports { cor_phaseClass12q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 637 \
+    id 322 \
     name cor_phaseClass12i_V_4 \
     type other \
     dir I \
@@ -1886,22 +1010,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 638 \
-    name cor_phaseClass12q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_4 \
-    op interface \
-    ports { cor_phaseClass12q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 639 \
+    id 323 \
     name cor_phaseClass12i_V_3 \
     type other \
     dir I \
@@ -1916,22 +1025,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 640 \
-    name cor_phaseClass12q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_3 \
-    op interface \
-    ports { cor_phaseClass12q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 641 \
+    id 324 \
     name cor_phaseClass12i_V_2 \
     type other \
     dir I \
@@ -1946,22 +1040,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 642 \
-    name cor_phaseClass12q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_2 \
-    op interface \
-    ports { cor_phaseClass12q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 643 \
+    id 325 \
     name cor_phaseClass12i_V_1 \
     type other \
     dir I \
@@ -1976,22 +1055,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 644 \
-    name cor_phaseClass12q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_1 \
-    op interface \
-    ports { cor_phaseClass12q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 645 \
+    id 326 \
     name cor_phaseClass12i_V_s \
     type other \
     dir I \
@@ -2006,22 +1070,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 646 \
-    name cor_phaseClass12q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass12q_V_s \
-    op interface \
-    ports { cor_phaseClass12q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 647 \
+    id 327 \
     name cor_phaseClass11i_V_15 \
     type other \
     dir I \
@@ -2036,22 +1085,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 648 \
-    name cor_phaseClass11q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_15 \
-    op interface \
-    ports { cor_phaseClass11q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 649 \
+    id 328 \
     name cor_phaseClass11i_V_14 \
     type other \
     dir I \
@@ -2066,22 +1100,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 650 \
-    name cor_phaseClass11q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_14 \
-    op interface \
-    ports { cor_phaseClass11q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 651 \
+    id 329 \
     name cor_phaseClass11i_V_13 \
     type other \
     dir I \
@@ -2096,22 +1115,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 652 \
-    name cor_phaseClass11q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_13 \
-    op interface \
-    ports { cor_phaseClass11q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 653 \
+    id 330 \
     name cor_phaseClass11i_V_12 \
     type other \
     dir I \
@@ -2126,22 +1130,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 654 \
-    name cor_phaseClass11q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_12 \
-    op interface \
-    ports { cor_phaseClass11q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 655 \
+    id 331 \
     name cor_phaseClass11i_V_11 \
     type other \
     dir I \
@@ -2156,22 +1145,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 656 \
-    name cor_phaseClass11q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_11 \
-    op interface \
-    ports { cor_phaseClass11q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 657 \
+    id 332 \
     name cor_phaseClass11i_V_10 \
     type other \
     dir I \
@@ -2186,22 +1160,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 658 \
-    name cor_phaseClass11q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_10 \
-    op interface \
-    ports { cor_phaseClass11q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 659 \
+    id 333 \
     name cor_phaseClass11i_V_9 \
     type other \
     dir I \
@@ -2216,22 +1175,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 660 \
-    name cor_phaseClass11q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_9 \
-    op interface \
-    ports { cor_phaseClass11q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 661 \
+    id 334 \
     name cor_phaseClass11i_V_8 \
     type other \
     dir I \
@@ -2246,22 +1190,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 662 \
-    name cor_phaseClass11q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_8 \
-    op interface \
-    ports { cor_phaseClass11q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 663 \
+    id 335 \
     name cor_phaseClass11i_V_7 \
     type other \
     dir I \
@@ -2276,22 +1205,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 664 \
-    name cor_phaseClass11q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_7 \
-    op interface \
-    ports { cor_phaseClass11q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 665 \
+    id 336 \
     name cor_phaseClass11i_V_6 \
     type other \
     dir I \
@@ -2306,22 +1220,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 666 \
-    name cor_phaseClass11q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_6 \
-    op interface \
-    ports { cor_phaseClass11q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 667 \
+    id 337 \
     name cor_phaseClass11i_V_5 \
     type other \
     dir I \
@@ -2336,22 +1235,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 668 \
-    name cor_phaseClass11q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_5 \
-    op interface \
-    ports { cor_phaseClass11q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 669 \
+    id 338 \
     name cor_phaseClass11i_V_4 \
     type other \
     dir I \
@@ -2366,22 +1250,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 670 \
-    name cor_phaseClass11q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_4 \
-    op interface \
-    ports { cor_phaseClass11q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 671 \
+    id 339 \
     name cor_phaseClass11i_V_3 \
     type other \
     dir I \
@@ -2396,22 +1265,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 672 \
-    name cor_phaseClass11q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_3 \
-    op interface \
-    ports { cor_phaseClass11q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 673 \
+    id 340 \
     name cor_phaseClass11i_V_2 \
     type other \
     dir I \
@@ -2426,22 +1280,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 674 \
-    name cor_phaseClass11q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_2 \
-    op interface \
-    ports { cor_phaseClass11q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 675 \
+    id 341 \
     name cor_phaseClass11i_V_1 \
     type other \
     dir I \
@@ -2456,22 +1295,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 676 \
-    name cor_phaseClass11q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_1 \
-    op interface \
-    ports { cor_phaseClass11q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 677 \
+    id 342 \
     name cor_phaseClass11i_V_s \
     type other \
     dir I \
@@ -2486,22 +1310,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 678 \
-    name cor_phaseClass11q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass11q_V_s \
-    op interface \
-    ports { cor_phaseClass11q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 679 \
+    id 343 \
     name cor_phaseClass10i_V_15 \
     type other \
     dir I \
@@ -2516,22 +1325,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 680 \
-    name cor_phaseClass10q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_15 \
-    op interface \
-    ports { cor_phaseClass10q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 681 \
+    id 344 \
     name cor_phaseClass10i_V_14 \
     type other \
     dir I \
@@ -2546,22 +1340,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 682 \
-    name cor_phaseClass10q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_14 \
-    op interface \
-    ports { cor_phaseClass10q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 683 \
+    id 345 \
     name cor_phaseClass10i_V_13 \
     type other \
     dir I \
@@ -2576,22 +1355,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 684 \
-    name cor_phaseClass10q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_13 \
-    op interface \
-    ports { cor_phaseClass10q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 685 \
+    id 346 \
     name cor_phaseClass10i_V_12 \
     type other \
     dir I \
@@ -2606,22 +1370,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 686 \
-    name cor_phaseClass10q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_12 \
-    op interface \
-    ports { cor_phaseClass10q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 687 \
+    id 347 \
     name cor_phaseClass10i_V_11 \
     type other \
     dir I \
@@ -2636,22 +1385,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 688 \
-    name cor_phaseClass10q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_11 \
-    op interface \
-    ports { cor_phaseClass10q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 689 \
+    id 348 \
     name cor_phaseClass10i_V_10 \
     type other \
     dir I \
@@ -2666,22 +1400,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 690 \
-    name cor_phaseClass10q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_10 \
-    op interface \
-    ports { cor_phaseClass10q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 691 \
+    id 349 \
     name cor_phaseClass10i_V_9 \
     type other \
     dir I \
@@ -2696,22 +1415,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 692 \
-    name cor_phaseClass10q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_9 \
-    op interface \
-    ports { cor_phaseClass10q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 693 \
+    id 350 \
     name cor_phaseClass10i_V_8 \
     type other \
     dir I \
@@ -2726,22 +1430,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 694 \
-    name cor_phaseClass10q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_8 \
-    op interface \
-    ports { cor_phaseClass10q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 695 \
+    id 351 \
     name cor_phaseClass10i_V_7 \
     type other \
     dir I \
@@ -2756,22 +1445,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 696 \
-    name cor_phaseClass10q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_7 \
-    op interface \
-    ports { cor_phaseClass10q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 697 \
+    id 352 \
     name cor_phaseClass10i_V_6 \
     type other \
     dir I \
@@ -2786,22 +1460,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 698 \
-    name cor_phaseClass10q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_6 \
-    op interface \
-    ports { cor_phaseClass10q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 699 \
+    id 353 \
     name cor_phaseClass10i_V_5 \
     type other \
     dir I \
@@ -2816,22 +1475,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 700 \
-    name cor_phaseClass10q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_5 \
-    op interface \
-    ports { cor_phaseClass10q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 701 \
+    id 354 \
     name cor_phaseClass10i_V_4 \
     type other \
     dir I \
@@ -2846,22 +1490,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 702 \
-    name cor_phaseClass10q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_4 \
-    op interface \
-    ports { cor_phaseClass10q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 703 \
+    id 355 \
     name cor_phaseClass10i_V_3 \
     type other \
     dir I \
@@ -2876,22 +1505,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 704 \
-    name cor_phaseClass10q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_3 \
-    op interface \
-    ports { cor_phaseClass10q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 705 \
+    id 356 \
     name cor_phaseClass10i_V_2 \
     type other \
     dir I \
@@ -2906,22 +1520,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 706 \
-    name cor_phaseClass10q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_2 \
-    op interface \
-    ports { cor_phaseClass10q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 707 \
+    id 357 \
     name cor_phaseClass10i_V_1 \
     type other \
     dir I \
@@ -2936,22 +1535,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 708 \
-    name cor_phaseClass10q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_1 \
-    op interface \
-    ports { cor_phaseClass10q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 709 \
+    id 358 \
     name cor_phaseClass10i_V_s \
     type other \
     dir I \
@@ -2966,22 +1550,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 710 \
-    name cor_phaseClass10q_V_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass10q_V_s \
-    op interface \
-    ports { cor_phaseClass10q_V_s { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 711 \
+    id 359 \
     name cor_phaseClass9i_V_15 \
     type other \
     dir I \
@@ -2996,22 +1565,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 712 \
-    name cor_phaseClass9q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_15 \
-    op interface \
-    ports { cor_phaseClass9q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 713 \
+    id 360 \
     name cor_phaseClass9i_V_14 \
     type other \
     dir I \
@@ -3026,22 +1580,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 714 \
-    name cor_phaseClass9q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_14 \
-    op interface \
-    ports { cor_phaseClass9q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 715 \
+    id 361 \
     name cor_phaseClass9i_V_13 \
     type other \
     dir I \
@@ -3056,22 +1595,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 716 \
-    name cor_phaseClass9q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_13 \
-    op interface \
-    ports { cor_phaseClass9q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 717 \
+    id 362 \
     name cor_phaseClass9i_V_12 \
     type other \
     dir I \
@@ -3086,22 +1610,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 718 \
-    name cor_phaseClass9q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_12 \
-    op interface \
-    ports { cor_phaseClass9q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 719 \
+    id 363 \
     name cor_phaseClass9i_V_11 \
     type other \
     dir I \
@@ -3116,22 +1625,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 720 \
-    name cor_phaseClass9q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_11 \
-    op interface \
-    ports { cor_phaseClass9q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 721 \
+    id 364 \
     name cor_phaseClass9i_V_10 \
     type other \
     dir I \
@@ -3146,22 +1640,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 722 \
-    name cor_phaseClass9q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_10 \
-    op interface \
-    ports { cor_phaseClass9q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 723 \
+    id 365 \
     name cor_phaseClass9i_V_9 \
     type other \
     dir I \
@@ -3176,22 +1655,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 724 \
-    name cor_phaseClass9q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_9 \
-    op interface \
-    ports { cor_phaseClass9q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 725 \
+    id 366 \
     name cor_phaseClass9i_V_8 \
     type other \
     dir I \
@@ -3206,22 +1670,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 726 \
-    name cor_phaseClass9q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_8 \
-    op interface \
-    ports { cor_phaseClass9q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 727 \
+    id 367 \
     name cor_phaseClass9i_V_7 \
     type other \
     dir I \
@@ -3236,22 +1685,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 728 \
-    name cor_phaseClass9q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_7 \
-    op interface \
-    ports { cor_phaseClass9q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 729 \
+    id 368 \
     name cor_phaseClass9i_V_6 \
     type other \
     dir I \
@@ -3266,22 +1700,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 730 \
-    name cor_phaseClass9q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_6 \
-    op interface \
-    ports { cor_phaseClass9q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 731 \
+    id 369 \
     name cor_phaseClass9i_V_5 \
     type other \
     dir I \
@@ -3296,22 +1715,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 732 \
-    name cor_phaseClass9q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_5 \
-    op interface \
-    ports { cor_phaseClass9q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 733 \
+    id 370 \
     name cor_phaseClass9i_V_4 \
     type other \
     dir I \
@@ -3326,22 +1730,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 734 \
-    name cor_phaseClass9q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_4 \
-    op interface \
-    ports { cor_phaseClass9q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 735 \
+    id 371 \
     name cor_phaseClass9i_V_3 \
     type other \
     dir I \
@@ -3356,22 +1745,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 736 \
-    name cor_phaseClass9q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_3 \
-    op interface \
-    ports { cor_phaseClass9q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 737 \
+    id 372 \
     name cor_phaseClass9i_V_2 \
     type other \
     dir I \
@@ -3386,22 +1760,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 738 \
-    name cor_phaseClass9q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_2 \
-    op interface \
-    ports { cor_phaseClass9q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 739 \
+    id 373 \
     name cor_phaseClass9i_V_1 \
     type other \
     dir I \
@@ -3416,22 +1775,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 740 \
-    name cor_phaseClass9q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_1 \
-    op interface \
-    ports { cor_phaseClass9q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 741 \
+    id 374 \
     name cor_phaseClass9i_V_0 \
     type other \
     dir I \
@@ -3446,22 +1790,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 742 \
-    name cor_phaseClass9q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass9q_V_0 \
-    op interface \
-    ports { cor_phaseClass9q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 743 \
+    id 375 \
     name cor_phaseClass8i_V_15 \
     type other \
     dir I \
@@ -3476,22 +1805,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 744 \
-    name cor_phaseClass8q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_15 \
-    op interface \
-    ports { cor_phaseClass8q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 745 \
+    id 376 \
     name cor_phaseClass8i_V_14 \
     type other \
     dir I \
@@ -3506,22 +1820,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 746 \
-    name cor_phaseClass8q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_14 \
-    op interface \
-    ports { cor_phaseClass8q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 747 \
+    id 377 \
     name cor_phaseClass8i_V_13 \
     type other \
     dir I \
@@ -3536,22 +1835,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 748 \
-    name cor_phaseClass8q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_13 \
-    op interface \
-    ports { cor_phaseClass8q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 749 \
+    id 378 \
     name cor_phaseClass8i_V_12 \
     type other \
     dir I \
@@ -3566,22 +1850,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 750 \
-    name cor_phaseClass8q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_12 \
-    op interface \
-    ports { cor_phaseClass8q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 751 \
+    id 379 \
     name cor_phaseClass8i_V_11 \
     type other \
     dir I \
@@ -3596,22 +1865,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 752 \
-    name cor_phaseClass8q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_11 \
-    op interface \
-    ports { cor_phaseClass8q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 753 \
+    id 380 \
     name cor_phaseClass8i_V_10 \
     type other \
     dir I \
@@ -3626,22 +1880,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 754 \
-    name cor_phaseClass8q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_10 \
-    op interface \
-    ports { cor_phaseClass8q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 755 \
+    id 381 \
     name cor_phaseClass8i_V_9 \
     type other \
     dir I \
@@ -3656,22 +1895,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 756 \
-    name cor_phaseClass8q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_9 \
-    op interface \
-    ports { cor_phaseClass8q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 757 \
+    id 382 \
     name cor_phaseClass8i_V_8 \
     type other \
     dir I \
@@ -3686,22 +1910,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 758 \
-    name cor_phaseClass8q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_8 \
-    op interface \
-    ports { cor_phaseClass8q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 759 \
+    id 383 \
     name cor_phaseClass8i_V_7 \
     type other \
     dir I \
@@ -3716,22 +1925,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 760 \
-    name cor_phaseClass8q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_7 \
-    op interface \
-    ports { cor_phaseClass8q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 761 \
+    id 384 \
     name cor_phaseClass8i_V_6 \
     type other \
     dir I \
@@ -3746,22 +1940,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 762 \
-    name cor_phaseClass8q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_6 \
-    op interface \
-    ports { cor_phaseClass8q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 763 \
+    id 385 \
     name cor_phaseClass8i_V_5 \
     type other \
     dir I \
@@ -3776,22 +1955,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 764 \
-    name cor_phaseClass8q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_5 \
-    op interface \
-    ports { cor_phaseClass8q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 765 \
+    id 386 \
     name cor_phaseClass8i_V_4 \
     type other \
     dir I \
@@ -3806,22 +1970,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 766 \
-    name cor_phaseClass8q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_4 \
-    op interface \
-    ports { cor_phaseClass8q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 767 \
+    id 387 \
     name cor_phaseClass8i_V_3 \
     type other \
     dir I \
@@ -3836,22 +1985,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 768 \
-    name cor_phaseClass8q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_3 \
-    op interface \
-    ports { cor_phaseClass8q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 769 \
+    id 388 \
     name cor_phaseClass8i_V_2 \
     type other \
     dir I \
@@ -3866,22 +2000,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 770 \
-    name cor_phaseClass8q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_2 \
-    op interface \
-    ports { cor_phaseClass8q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 771 \
+    id 389 \
     name cor_phaseClass8i_V_1 \
     type other \
     dir I \
@@ -3896,22 +2015,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 772 \
-    name cor_phaseClass8q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_1 \
-    op interface \
-    ports { cor_phaseClass8q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 773 \
+    id 390 \
     name cor_phaseClass8i_V_0 \
     type other \
     dir I \
@@ -3926,22 +2030,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 774 \
-    name cor_phaseClass8q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass8q_V_0 \
-    op interface \
-    ports { cor_phaseClass8q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 775 \
+    id 391 \
     name cor_phaseClass7i_V_15 \
     type other \
     dir I \
@@ -3956,22 +2045,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 776 \
-    name cor_phaseClass7q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_15 \
-    op interface \
-    ports { cor_phaseClass7q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 777 \
+    id 392 \
     name cor_phaseClass7i_V_14 \
     type other \
     dir I \
@@ -3986,22 +2060,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 778 \
-    name cor_phaseClass7q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_14 \
-    op interface \
-    ports { cor_phaseClass7q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 779 \
+    id 393 \
     name cor_phaseClass7i_V_13 \
     type other \
     dir I \
@@ -4016,22 +2075,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 780 \
-    name cor_phaseClass7q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_13 \
-    op interface \
-    ports { cor_phaseClass7q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 781 \
+    id 394 \
     name cor_phaseClass7i_V_12 \
     type other \
     dir I \
@@ -4046,22 +2090,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 782 \
-    name cor_phaseClass7q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_12 \
-    op interface \
-    ports { cor_phaseClass7q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 783 \
+    id 395 \
     name cor_phaseClass7i_V_11 \
     type other \
     dir I \
@@ -4076,22 +2105,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 784 \
-    name cor_phaseClass7q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_11 \
-    op interface \
-    ports { cor_phaseClass7q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 785 \
+    id 396 \
     name cor_phaseClass7i_V_10 \
     type other \
     dir I \
@@ -4106,22 +2120,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 786 \
-    name cor_phaseClass7q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_10 \
-    op interface \
-    ports { cor_phaseClass7q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 787 \
+    id 397 \
     name cor_phaseClass7i_V_9 \
     type other \
     dir I \
@@ -4136,22 +2135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 788 \
-    name cor_phaseClass7q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_9 \
-    op interface \
-    ports { cor_phaseClass7q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 789 \
+    id 398 \
     name cor_phaseClass7i_V_8 \
     type other \
     dir I \
@@ -4166,22 +2150,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 790 \
-    name cor_phaseClass7q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_8 \
-    op interface \
-    ports { cor_phaseClass7q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 791 \
+    id 399 \
     name cor_phaseClass7i_V_7 \
     type other \
     dir I \
@@ -4196,22 +2165,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 792 \
-    name cor_phaseClass7q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_7 \
-    op interface \
-    ports { cor_phaseClass7q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 793 \
+    id 400 \
     name cor_phaseClass7i_V_6 \
     type other \
     dir I \
@@ -4226,22 +2180,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 794 \
-    name cor_phaseClass7q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_6 \
-    op interface \
-    ports { cor_phaseClass7q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 795 \
+    id 401 \
     name cor_phaseClass7i_V_5 \
     type other \
     dir I \
@@ -4256,22 +2195,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 796 \
-    name cor_phaseClass7q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_5 \
-    op interface \
-    ports { cor_phaseClass7q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 797 \
+    id 402 \
     name cor_phaseClass7i_V_4 \
     type other \
     dir I \
@@ -4286,22 +2210,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 798 \
-    name cor_phaseClass7q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_4 \
-    op interface \
-    ports { cor_phaseClass7q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 799 \
+    id 403 \
     name cor_phaseClass7i_V_3 \
     type other \
     dir I \
@@ -4316,22 +2225,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 800 \
-    name cor_phaseClass7q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_3 \
-    op interface \
-    ports { cor_phaseClass7q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 801 \
+    id 404 \
     name cor_phaseClass7i_V_2 \
     type other \
     dir I \
@@ -4346,22 +2240,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 802 \
-    name cor_phaseClass7q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_2 \
-    op interface \
-    ports { cor_phaseClass7q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 803 \
+    id 405 \
     name cor_phaseClass7i_V_1 \
     type other \
     dir I \
@@ -4376,22 +2255,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 804 \
-    name cor_phaseClass7q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_1 \
-    op interface \
-    ports { cor_phaseClass7q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 805 \
+    id 406 \
     name cor_phaseClass7i_V_0 \
     type other \
     dir I \
@@ -4406,22 +2270,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 806 \
-    name cor_phaseClass7q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass7q_V_0 \
-    op interface \
-    ports { cor_phaseClass7q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 807 \
+    id 407 \
     name cor_phaseClass6i_V_15 \
     type other \
     dir I \
@@ -4436,22 +2285,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 808 \
-    name cor_phaseClass6q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_15 \
-    op interface \
-    ports { cor_phaseClass6q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 809 \
+    id 408 \
     name cor_phaseClass6i_V_14 \
     type other \
     dir I \
@@ -4466,22 +2300,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 810 \
-    name cor_phaseClass6q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_14 \
-    op interface \
-    ports { cor_phaseClass6q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 811 \
+    id 409 \
     name cor_phaseClass6i_V_13 \
     type other \
     dir I \
@@ -4496,22 +2315,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 812 \
-    name cor_phaseClass6q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_13 \
-    op interface \
-    ports { cor_phaseClass6q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 813 \
+    id 410 \
     name cor_phaseClass6i_V_12 \
     type other \
     dir I \
@@ -4526,22 +2330,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 814 \
-    name cor_phaseClass6q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_12 \
-    op interface \
-    ports { cor_phaseClass6q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 815 \
+    id 411 \
     name cor_phaseClass6i_V_11 \
     type other \
     dir I \
@@ -4556,22 +2345,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 816 \
-    name cor_phaseClass6q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_11 \
-    op interface \
-    ports { cor_phaseClass6q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 817 \
+    id 412 \
     name cor_phaseClass6i_V_10 \
     type other \
     dir I \
@@ -4586,22 +2360,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 818 \
-    name cor_phaseClass6q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_10 \
-    op interface \
-    ports { cor_phaseClass6q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 819 \
+    id 413 \
     name cor_phaseClass6i_V_9 \
     type other \
     dir I \
@@ -4616,22 +2375,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 820 \
-    name cor_phaseClass6q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_9 \
-    op interface \
-    ports { cor_phaseClass6q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 821 \
+    id 414 \
     name cor_phaseClass6i_V_8 \
     type other \
     dir I \
@@ -4646,22 +2390,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 822 \
-    name cor_phaseClass6q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_8 \
-    op interface \
-    ports { cor_phaseClass6q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 823 \
+    id 415 \
     name cor_phaseClass6i_V_7 \
     type other \
     dir I \
@@ -4676,22 +2405,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 824 \
-    name cor_phaseClass6q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_7 \
-    op interface \
-    ports { cor_phaseClass6q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 825 \
+    id 416 \
     name cor_phaseClass6i_V_6 \
     type other \
     dir I \
@@ -4706,22 +2420,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 826 \
-    name cor_phaseClass6q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_6 \
-    op interface \
-    ports { cor_phaseClass6q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 827 \
+    id 417 \
     name cor_phaseClass6i_V_5 \
     type other \
     dir I \
@@ -4736,22 +2435,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 828 \
-    name cor_phaseClass6q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_5 \
-    op interface \
-    ports { cor_phaseClass6q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 829 \
+    id 418 \
     name cor_phaseClass6i_V_4 \
     type other \
     dir I \
@@ -4766,22 +2450,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 830 \
-    name cor_phaseClass6q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_4 \
-    op interface \
-    ports { cor_phaseClass6q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 831 \
+    id 419 \
     name cor_phaseClass6i_V_3 \
     type other \
     dir I \
@@ -4796,22 +2465,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 832 \
-    name cor_phaseClass6q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_3 \
-    op interface \
-    ports { cor_phaseClass6q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 833 \
+    id 420 \
     name cor_phaseClass6i_V_2 \
     type other \
     dir I \
@@ -4826,22 +2480,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 834 \
-    name cor_phaseClass6q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_2 \
-    op interface \
-    ports { cor_phaseClass6q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 835 \
+    id 421 \
     name cor_phaseClass6i_V_1 \
     type other \
     dir I \
@@ -4856,22 +2495,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 836 \
-    name cor_phaseClass6q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_1 \
-    op interface \
-    ports { cor_phaseClass6q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 837 \
+    id 422 \
     name cor_phaseClass6i_V_0 \
     type other \
     dir I \
@@ -4886,22 +2510,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 838 \
-    name cor_phaseClass6q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass6q_V_0 \
-    op interface \
-    ports { cor_phaseClass6q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 839 \
+    id 423 \
     name cor_phaseClass5i_V_15 \
     type other \
     dir I \
@@ -4916,22 +2525,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 840 \
-    name cor_phaseClass5q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_15 \
-    op interface \
-    ports { cor_phaseClass5q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 841 \
+    id 424 \
     name cor_phaseClass5i_V_14 \
     type other \
     dir I \
@@ -4946,22 +2540,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 842 \
-    name cor_phaseClass5q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_14 \
-    op interface \
-    ports { cor_phaseClass5q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 843 \
+    id 425 \
     name cor_phaseClass5i_V_13 \
     type other \
     dir I \
@@ -4976,22 +2555,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 844 \
-    name cor_phaseClass5q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_13 \
-    op interface \
-    ports { cor_phaseClass5q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 845 \
+    id 426 \
     name cor_phaseClass5i_V_12 \
     type other \
     dir I \
@@ -5006,22 +2570,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 846 \
-    name cor_phaseClass5q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_12 \
-    op interface \
-    ports { cor_phaseClass5q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 847 \
+    id 427 \
     name cor_phaseClass5i_V_11 \
     type other \
     dir I \
@@ -5036,22 +2585,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 848 \
-    name cor_phaseClass5q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_11 \
-    op interface \
-    ports { cor_phaseClass5q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 849 \
+    id 428 \
     name cor_phaseClass5i_V_10 \
     type other \
     dir I \
@@ -5066,22 +2600,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 850 \
-    name cor_phaseClass5q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_10 \
-    op interface \
-    ports { cor_phaseClass5q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 851 \
+    id 429 \
     name cor_phaseClass5i_V_9 \
     type other \
     dir I \
@@ -5096,22 +2615,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 852 \
-    name cor_phaseClass5q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_9 \
-    op interface \
-    ports { cor_phaseClass5q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 853 \
+    id 430 \
     name cor_phaseClass5i_V_8 \
     type other \
     dir I \
@@ -5126,22 +2630,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 854 \
-    name cor_phaseClass5q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_8 \
-    op interface \
-    ports { cor_phaseClass5q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 855 \
+    id 431 \
     name cor_phaseClass5i_V_7 \
     type other \
     dir I \
@@ -5156,22 +2645,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 856 \
-    name cor_phaseClass5q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_7 \
-    op interface \
-    ports { cor_phaseClass5q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 857 \
+    id 432 \
     name cor_phaseClass5i_V_6 \
     type other \
     dir I \
@@ -5186,22 +2660,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 858 \
-    name cor_phaseClass5q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_6 \
-    op interface \
-    ports { cor_phaseClass5q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 859 \
+    id 433 \
     name cor_phaseClass5i_V_5 \
     type other \
     dir I \
@@ -5216,22 +2675,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 860 \
-    name cor_phaseClass5q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_5 \
-    op interface \
-    ports { cor_phaseClass5q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 861 \
+    id 434 \
     name cor_phaseClass5i_V_4 \
     type other \
     dir I \
@@ -5246,22 +2690,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 862 \
-    name cor_phaseClass5q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_4 \
-    op interface \
-    ports { cor_phaseClass5q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 863 \
+    id 435 \
     name cor_phaseClass5i_V_3 \
     type other \
     dir I \
@@ -5276,22 +2705,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 864 \
-    name cor_phaseClass5q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_3 \
-    op interface \
-    ports { cor_phaseClass5q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 865 \
+    id 436 \
     name cor_phaseClass5i_V_2 \
     type other \
     dir I \
@@ -5306,22 +2720,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 866 \
-    name cor_phaseClass5q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_2 \
-    op interface \
-    ports { cor_phaseClass5q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 867 \
+    id 437 \
     name cor_phaseClass5i_V_1 \
     type other \
     dir I \
@@ -5336,22 +2735,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 868 \
-    name cor_phaseClass5q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_1 \
-    op interface \
-    ports { cor_phaseClass5q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 869 \
+    id 438 \
     name cor_phaseClass5i_V_0 \
     type other \
     dir I \
@@ -5366,22 +2750,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 870 \
-    name cor_phaseClass5q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass5q_V_0 \
-    op interface \
-    ports { cor_phaseClass5q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 871 \
+    id 439 \
     name cor_phaseClass4i_V_15 \
     type other \
     dir I \
@@ -5396,22 +2765,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 872 \
-    name cor_phaseClass4q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_15 \
-    op interface \
-    ports { cor_phaseClass4q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 873 \
+    id 440 \
     name cor_phaseClass4i_V_14 \
     type other \
     dir I \
@@ -5426,22 +2780,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 874 \
-    name cor_phaseClass4q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_14 \
-    op interface \
-    ports { cor_phaseClass4q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 875 \
+    id 441 \
     name cor_phaseClass4i_V_13 \
     type other \
     dir I \
@@ -5456,22 +2795,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 876 \
-    name cor_phaseClass4q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_13 \
-    op interface \
-    ports { cor_phaseClass4q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 877 \
+    id 442 \
     name cor_phaseClass4i_V_12 \
     type other \
     dir I \
@@ -5486,22 +2810,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 878 \
-    name cor_phaseClass4q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_12 \
-    op interface \
-    ports { cor_phaseClass4q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 879 \
+    id 443 \
     name cor_phaseClass4i_V_11 \
     type other \
     dir I \
@@ -5516,22 +2825,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 880 \
-    name cor_phaseClass4q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_11 \
-    op interface \
-    ports { cor_phaseClass4q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 881 \
+    id 444 \
     name cor_phaseClass4i_V_10 \
     type other \
     dir I \
@@ -5546,22 +2840,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 882 \
-    name cor_phaseClass4q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_10 \
-    op interface \
-    ports { cor_phaseClass4q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 883 \
+    id 445 \
     name cor_phaseClass4i_V_9 \
     type other \
     dir I \
@@ -5576,22 +2855,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 884 \
-    name cor_phaseClass4q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_9 \
-    op interface \
-    ports { cor_phaseClass4q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 885 \
+    id 446 \
     name cor_phaseClass4i_V_8 \
     type other \
     dir I \
@@ -5606,22 +2870,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 886 \
-    name cor_phaseClass4q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_8 \
-    op interface \
-    ports { cor_phaseClass4q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 887 \
+    id 447 \
     name cor_phaseClass4i_V_7 \
     type other \
     dir I \
@@ -5636,22 +2885,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 888 \
-    name cor_phaseClass4q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_7 \
-    op interface \
-    ports { cor_phaseClass4q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 889 \
+    id 448 \
     name cor_phaseClass4i_V_6 \
     type other \
     dir I \
@@ -5666,22 +2900,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 890 \
-    name cor_phaseClass4q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_6 \
-    op interface \
-    ports { cor_phaseClass4q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 891 \
+    id 449 \
     name cor_phaseClass4i_V_5 \
     type other \
     dir I \
@@ -5696,22 +2915,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 892 \
-    name cor_phaseClass4q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_5 \
-    op interface \
-    ports { cor_phaseClass4q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 893 \
+    id 450 \
     name cor_phaseClass4i_V_4 \
     type other \
     dir I \
@@ -5726,22 +2930,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 894 \
-    name cor_phaseClass4q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_4 \
-    op interface \
-    ports { cor_phaseClass4q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 895 \
+    id 451 \
     name cor_phaseClass4i_V_3 \
     type other \
     dir I \
@@ -5756,22 +2945,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 896 \
-    name cor_phaseClass4q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_3 \
-    op interface \
-    ports { cor_phaseClass4q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 897 \
+    id 452 \
     name cor_phaseClass4i_V_2 \
     type other \
     dir I \
@@ -5786,22 +2960,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 898 \
-    name cor_phaseClass4q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_2 \
-    op interface \
-    ports { cor_phaseClass4q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 899 \
+    id 453 \
     name cor_phaseClass4i_V_1 \
     type other \
     dir I \
@@ -5816,22 +2975,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 900 \
-    name cor_phaseClass4q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_1 \
-    op interface \
-    ports { cor_phaseClass4q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 901 \
+    id 454 \
     name cor_phaseClass4i_V_0 \
     type other \
     dir I \
@@ -5846,22 +2990,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 902 \
-    name cor_phaseClass4q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass4q_V_0 \
-    op interface \
-    ports { cor_phaseClass4q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 903 \
+    id 455 \
     name cor_phaseClass3i_V_15 \
     type other \
     dir I \
@@ -5876,22 +3005,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 904 \
-    name cor_phaseClass3q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_15 \
-    op interface \
-    ports { cor_phaseClass3q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 905 \
+    id 456 \
     name cor_phaseClass3i_V_14 \
     type other \
     dir I \
@@ -5906,22 +3020,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 906 \
-    name cor_phaseClass3q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_14 \
-    op interface \
-    ports { cor_phaseClass3q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 907 \
+    id 457 \
     name cor_phaseClass3i_V_13 \
     type other \
     dir I \
@@ -5936,22 +3035,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 908 \
-    name cor_phaseClass3q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_13 \
-    op interface \
-    ports { cor_phaseClass3q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 909 \
+    id 458 \
     name cor_phaseClass3i_V_12 \
     type other \
     dir I \
@@ -5966,22 +3050,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 910 \
-    name cor_phaseClass3q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_12 \
-    op interface \
-    ports { cor_phaseClass3q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 911 \
+    id 459 \
     name cor_phaseClass3i_V_11 \
     type other \
     dir I \
@@ -5996,22 +3065,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 912 \
-    name cor_phaseClass3q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_11 \
-    op interface \
-    ports { cor_phaseClass3q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 913 \
+    id 460 \
     name cor_phaseClass3i_V_10 \
     type other \
     dir I \
@@ -6026,22 +3080,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 914 \
-    name cor_phaseClass3q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_10 \
-    op interface \
-    ports { cor_phaseClass3q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 915 \
+    id 461 \
     name cor_phaseClass3i_V_9 \
     type other \
     dir I \
@@ -6056,22 +3095,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 916 \
-    name cor_phaseClass3q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_9 \
-    op interface \
-    ports { cor_phaseClass3q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 917 \
+    id 462 \
     name cor_phaseClass3i_V_8 \
     type other \
     dir I \
@@ -6086,22 +3110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 918 \
-    name cor_phaseClass3q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_8 \
-    op interface \
-    ports { cor_phaseClass3q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 919 \
+    id 463 \
     name cor_phaseClass3i_V_7 \
     type other \
     dir I \
@@ -6116,22 +3125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 920 \
-    name cor_phaseClass3q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_7 \
-    op interface \
-    ports { cor_phaseClass3q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 921 \
+    id 464 \
     name cor_phaseClass3i_V_6 \
     type other \
     dir I \
@@ -6146,22 +3140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 922 \
-    name cor_phaseClass3q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_6 \
-    op interface \
-    ports { cor_phaseClass3q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 923 \
+    id 465 \
     name cor_phaseClass3i_V_5 \
     type other \
     dir I \
@@ -6176,22 +3155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 924 \
-    name cor_phaseClass3q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_5 \
-    op interface \
-    ports { cor_phaseClass3q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 925 \
+    id 466 \
     name cor_phaseClass3i_V_4 \
     type other \
     dir I \
@@ -6206,22 +3170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 926 \
-    name cor_phaseClass3q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_4 \
-    op interface \
-    ports { cor_phaseClass3q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 927 \
+    id 467 \
     name cor_phaseClass3i_V_3 \
     type other \
     dir I \
@@ -6236,22 +3185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 928 \
-    name cor_phaseClass3q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_3 \
-    op interface \
-    ports { cor_phaseClass3q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 929 \
+    id 468 \
     name cor_phaseClass3i_V_2 \
     type other \
     dir I \
@@ -6266,22 +3200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 930 \
-    name cor_phaseClass3q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_2 \
-    op interface \
-    ports { cor_phaseClass3q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 931 \
+    id 469 \
     name cor_phaseClass3i_V_1 \
     type other \
     dir I \
@@ -6296,22 +3215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 932 \
-    name cor_phaseClass3q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_1 \
-    op interface \
-    ports { cor_phaseClass3q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 933 \
+    id 470 \
     name cor_phaseClass3i_V_0 \
     type other \
     dir I \
@@ -6326,22 +3230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 934 \
-    name cor_phaseClass3q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass3q_V_0 \
-    op interface \
-    ports { cor_phaseClass3q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 935 \
+    id 471 \
     name cor_phaseClass2i_V_15 \
     type other \
     dir I \
@@ -6356,22 +3245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 936 \
-    name cor_phaseClass2q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_15 \
-    op interface \
-    ports { cor_phaseClass2q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 937 \
+    id 472 \
     name cor_phaseClass2i_V_14 \
     type other \
     dir I \
@@ -6386,22 +3260,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 938 \
-    name cor_phaseClass2q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_14 \
-    op interface \
-    ports { cor_phaseClass2q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 939 \
+    id 473 \
     name cor_phaseClass2i_V_13 \
     type other \
     dir I \
@@ -6416,22 +3275,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 940 \
-    name cor_phaseClass2q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_13 \
-    op interface \
-    ports { cor_phaseClass2q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 941 \
+    id 474 \
     name cor_phaseClass2i_V_12 \
     type other \
     dir I \
@@ -6446,22 +3290,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 942 \
-    name cor_phaseClass2q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_12 \
-    op interface \
-    ports { cor_phaseClass2q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 943 \
+    id 475 \
     name cor_phaseClass2i_V_11 \
     type other \
     dir I \
@@ -6476,22 +3305,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 944 \
-    name cor_phaseClass2q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_11 \
-    op interface \
-    ports { cor_phaseClass2q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 945 \
+    id 476 \
     name cor_phaseClass2i_V_10 \
     type other \
     dir I \
@@ -6506,22 +3320,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 946 \
-    name cor_phaseClass2q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_10 \
-    op interface \
-    ports { cor_phaseClass2q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 947 \
+    id 477 \
     name cor_phaseClass2i_V_9 \
     type other \
     dir I \
@@ -6536,22 +3335,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 948 \
-    name cor_phaseClass2q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_9 \
-    op interface \
-    ports { cor_phaseClass2q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 949 \
+    id 478 \
     name cor_phaseClass2i_V_8 \
     type other \
     dir I \
@@ -6566,22 +3350,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 950 \
-    name cor_phaseClass2q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_8 \
-    op interface \
-    ports { cor_phaseClass2q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 951 \
+    id 479 \
     name cor_phaseClass2i_V_7 \
     type other \
     dir I \
@@ -6596,22 +3365,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 952 \
-    name cor_phaseClass2q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_7 \
-    op interface \
-    ports { cor_phaseClass2q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 953 \
+    id 480 \
     name cor_phaseClass2i_V_6 \
     type other \
     dir I \
@@ -6626,22 +3380,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 954 \
-    name cor_phaseClass2q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_6 \
-    op interface \
-    ports { cor_phaseClass2q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 955 \
+    id 481 \
     name cor_phaseClass2i_V_5 \
     type other \
     dir I \
@@ -6656,22 +3395,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 956 \
-    name cor_phaseClass2q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_5 \
-    op interface \
-    ports { cor_phaseClass2q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 957 \
+    id 482 \
     name cor_phaseClass2i_V_4 \
     type other \
     dir I \
@@ -6686,22 +3410,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 958 \
-    name cor_phaseClass2q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_4 \
-    op interface \
-    ports { cor_phaseClass2q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 959 \
+    id 483 \
     name cor_phaseClass2i_V_3 \
     type other \
     dir I \
@@ -6716,22 +3425,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 960 \
-    name cor_phaseClass2q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_3 \
-    op interface \
-    ports { cor_phaseClass2q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 961 \
+    id 484 \
     name cor_phaseClass2i_V_2 \
     type other \
     dir I \
@@ -6746,22 +3440,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 962 \
-    name cor_phaseClass2q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_2 \
-    op interface \
-    ports { cor_phaseClass2q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 963 \
+    id 485 \
     name cor_phaseClass2i_V_1 \
     type other \
     dir I \
@@ -6776,22 +3455,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 964 \
-    name cor_phaseClass2q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_1 \
-    op interface \
-    ports { cor_phaseClass2q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 965 \
+    id 486 \
     name cor_phaseClass2i_V_0 \
     type other \
     dir I \
@@ -6806,22 +3470,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 966 \
-    name cor_phaseClass2q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass2q_V_0 \
-    op interface \
-    ports { cor_phaseClass2q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 967 \
+    id 487 \
     name cor_phaseClass1i_V_15 \
     type other \
     dir I \
@@ -6836,22 +3485,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 968 \
-    name cor_phaseClass1q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_15 \
-    op interface \
-    ports { cor_phaseClass1q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 969 \
+    id 488 \
     name cor_phaseClass1i_V_14 \
     type other \
     dir I \
@@ -6866,22 +3500,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 970 \
-    name cor_phaseClass1q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_14 \
-    op interface \
-    ports { cor_phaseClass1q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 971 \
+    id 489 \
     name cor_phaseClass1i_V_13 \
     type other \
     dir I \
@@ -6896,22 +3515,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 972 \
-    name cor_phaseClass1q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_13 \
-    op interface \
-    ports { cor_phaseClass1q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 973 \
+    id 490 \
     name cor_phaseClass1i_V_12 \
     type other \
     dir I \
@@ -6926,22 +3530,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 974 \
-    name cor_phaseClass1q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_12 \
-    op interface \
-    ports { cor_phaseClass1q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 975 \
+    id 491 \
     name cor_phaseClass1i_V_11 \
     type other \
     dir I \
@@ -6956,22 +3545,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 976 \
-    name cor_phaseClass1q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_11 \
-    op interface \
-    ports { cor_phaseClass1q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 977 \
+    id 492 \
     name cor_phaseClass1i_V_10 \
     type other \
     dir I \
@@ -6986,22 +3560,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 978 \
-    name cor_phaseClass1q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_10 \
-    op interface \
-    ports { cor_phaseClass1q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 979 \
+    id 493 \
     name cor_phaseClass1i_V_9 \
     type other \
     dir I \
@@ -7016,22 +3575,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 980 \
-    name cor_phaseClass1q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_9 \
-    op interface \
-    ports { cor_phaseClass1q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 981 \
+    id 494 \
     name cor_phaseClass1i_V_8 \
     type other \
     dir I \
@@ -7046,22 +3590,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 982 \
-    name cor_phaseClass1q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_8 \
-    op interface \
-    ports { cor_phaseClass1q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 983 \
+    id 495 \
     name cor_phaseClass1i_V_7 \
     type other \
     dir I \
@@ -7076,22 +3605,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 984 \
-    name cor_phaseClass1q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_7 \
-    op interface \
-    ports { cor_phaseClass1q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 985 \
+    id 496 \
     name cor_phaseClass1i_V_6 \
     type other \
     dir I \
@@ -7106,22 +3620,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 986 \
-    name cor_phaseClass1q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_6 \
-    op interface \
-    ports { cor_phaseClass1q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 987 \
+    id 497 \
     name cor_phaseClass1i_V_5 \
     type other \
     dir I \
@@ -7136,22 +3635,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 988 \
-    name cor_phaseClass1q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_5 \
-    op interface \
-    ports { cor_phaseClass1q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 989 \
+    id 498 \
     name cor_phaseClass1i_V_4 \
     type other \
     dir I \
@@ -7166,22 +3650,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 990 \
-    name cor_phaseClass1q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_4 \
-    op interface \
-    ports { cor_phaseClass1q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 991 \
+    id 499 \
     name cor_phaseClass1i_V_3 \
     type other \
     dir I \
@@ -7196,22 +3665,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 992 \
-    name cor_phaseClass1q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_3 \
-    op interface \
-    ports { cor_phaseClass1q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 993 \
+    id 500 \
     name cor_phaseClass1i_V_2 \
     type other \
     dir I \
@@ -7226,22 +3680,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 994 \
-    name cor_phaseClass1q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_2 \
-    op interface \
-    ports { cor_phaseClass1q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 995 \
+    id 501 \
     name cor_phaseClass1i_V_1 \
     type other \
     dir I \
@@ -7256,22 +3695,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 996 \
-    name cor_phaseClass1q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_1 \
-    op interface \
-    ports { cor_phaseClass1q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 997 \
+    id 502 \
     name cor_phaseClass1i_V_0 \
     type other \
     dir I \
@@ -7286,22 +3710,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 998 \
-    name cor_phaseClass1q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass1q_V_0 \
-    op interface \
-    ports { cor_phaseClass1q_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 999 \
+    id 503 \
     name cor_phaseClass0i_V_15 \
     type other \
     dir I \
@@ -7316,22 +3725,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1000 \
-    name cor_phaseClass0q_V_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_15 \
-    op interface \
-    ports { cor_phaseClass0q_V_15 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1001 \
+    id 504 \
     name cor_phaseClass0i_V_14 \
     type other \
     dir I \
@@ -7346,22 +3740,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1002 \
-    name cor_phaseClass0q_V_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_14 \
-    op interface \
-    ports { cor_phaseClass0q_V_14 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1003 \
+    id 505 \
     name cor_phaseClass0i_V_13 \
     type other \
     dir I \
@@ -7376,22 +3755,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1004 \
-    name cor_phaseClass0q_V_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_13 \
-    op interface \
-    ports { cor_phaseClass0q_V_13 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1005 \
+    id 506 \
     name cor_phaseClass0i_V_12 \
     type other \
     dir I \
@@ -7406,22 +3770,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1006 \
-    name cor_phaseClass0q_V_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_12 \
-    op interface \
-    ports { cor_phaseClass0q_V_12 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1007 \
+    id 507 \
     name cor_phaseClass0i_V_11 \
     type other \
     dir I \
@@ -7436,22 +3785,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1008 \
-    name cor_phaseClass0q_V_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_11 \
-    op interface \
-    ports { cor_phaseClass0q_V_11 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1009 \
+    id 508 \
     name cor_phaseClass0i_V_10 \
     type other \
     dir I \
@@ -7466,22 +3800,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1010 \
-    name cor_phaseClass0q_V_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_10 \
-    op interface \
-    ports { cor_phaseClass0q_V_10 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1011 \
+    id 509 \
     name cor_phaseClass0i_V_9 \
     type other \
     dir I \
@@ -7496,22 +3815,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1012 \
-    name cor_phaseClass0q_V_9 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_9 \
-    op interface \
-    ports { cor_phaseClass0q_V_9 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1013 \
+    id 510 \
     name cor_phaseClass0i_V_8 \
     type other \
     dir I \
@@ -7526,22 +3830,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1014 \
-    name cor_phaseClass0q_V_8 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_8 \
-    op interface \
-    ports { cor_phaseClass0q_V_8 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1015 \
+    id 511 \
     name cor_phaseClass0i_V_7 \
     type other \
     dir I \
@@ -7556,22 +3845,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1016 \
-    name cor_phaseClass0q_V_7 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_7 \
-    op interface \
-    ports { cor_phaseClass0q_V_7 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1017 \
+    id 512 \
     name cor_phaseClass0i_V_6 \
     type other \
     dir I \
@@ -7586,22 +3860,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1018 \
-    name cor_phaseClass0q_V_6 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_6 \
-    op interface \
-    ports { cor_phaseClass0q_V_6 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1019 \
+    id 513 \
     name cor_phaseClass0i_V_5 \
     type other \
     dir I \
@@ -7616,22 +3875,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1020 \
-    name cor_phaseClass0q_V_5 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_5 \
-    op interface \
-    ports { cor_phaseClass0q_V_5 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1021 \
+    id 514 \
     name cor_phaseClass0i_V_4 \
     type other \
     dir I \
@@ -7646,22 +3890,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1022 \
-    name cor_phaseClass0q_V_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_4 \
-    op interface \
-    ports { cor_phaseClass0q_V_4 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1023 \
+    id 515 \
     name cor_phaseClass0i_V_3 \
     type other \
     dir I \
@@ -7676,22 +3905,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1024 \
-    name cor_phaseClass0q_V_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_3 \
-    op interface \
-    ports { cor_phaseClass0q_V_3 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1025 \
+    id 516 \
     name cor_phaseClass0i_V_2 \
     type other \
     dir I \
@@ -7706,22 +3920,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1026 \
-    name cor_phaseClass0q_V_2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_2 \
-    op interface \
-    ports { cor_phaseClass0q_V_2 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1027 \
+    id 517 \
     name cor_phaseClass0i_V_1 \
     type other \
     dir I \
@@ -7736,22 +3935,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1028 \
-    name cor_phaseClass0q_V_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_1 \
-    op interface \
-    ports { cor_phaseClass0q_V_1 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1029 \
+    id 518 \
     name cor_phaseClass0i_V_0 \
     type other \
     dir I \
@@ -7760,21 +3944,6 @@ eval "cg_default_interface_gen_dc { \
     corename dc_cor_phaseClass0i_V_0 \
     op interface \
     ports { cor_phaseClass0i_V_0 { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1030 \
-    name cor_phaseClass0q_V_0 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_cor_phaseClass0q_V_0 \
-    op interface \
-    ports { cor_phaseClass0q_V_0 { I 16 vector } } \
 } "
 }
 

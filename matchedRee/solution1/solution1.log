@@ -7,30 +7,32 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
-WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
-INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ...
-WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 WARNING: [HLS 200-40] Skipped source file 'IMLANCE.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'inputCorrr.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'matchedRee/matchFilter.cpp' ...
+WARNING: [HLS 200-40] Skipped source file 'results.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'tb_output.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:33 ; elapsed = 00:00:13 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110371 ; free virtual = 255311
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110368 ; free virtual = 255311
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 104769 ; free virtual = 252066
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:15 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 104753 ; free virtual = 252054
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 360.551 ; gain = 13.984 ; free physical = 110348 ; free virtual = 255296
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0>::quantization_adjust' into 'ap_fixed_base<32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0>::ap_fixed_base<36, 7, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<16, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0>::quantization_adjust' into 'ap_fixed_base<16, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0>::ap_fixed_base<32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0>' ().
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 360.559 ; gain = 13.984 ; free physical = 104740 ; free virtual = 252044
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::shiftSampleIn' into 'matchTop' (matchedRee/matchFilter.cpp:39) automatically.
 INFO: [XFORM 203-602] Inlining function 'matchFilter_ff::convol' into 'matchTop' (matchedRee/matchFilter.cpp:40) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110339 ; free virtual = 255288
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 488.496 ; gain = 141.922 ; free physical = 104730 ; free virtual = 252036
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (matchedRee/matchFilter.cpp:55) in function 'matchFilter_ff::shiftSampleIn' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (matchedRee/matchFilter.cpp:73) in function 'matchFilter_ff::convol' completely.
 INFO: [XFORM 203-101] Partitioning array 'match.matchBufferQ.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'match.matchBufferI.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'preamble.V'  in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:19 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110296 ; free virtual = 255250
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 488.496 ; gain = 141.922 ; free physical = 104685 ; free virtual = 251996
 WARNING: [XFORM 203-631] Renaming function 'matchFilter_ff::shiftSampleIn' to 'shiftSampleIn' (matchedRee/matchFilter.cpp:57:1)
-WARNING: [XFORM 203-631] Renaming function 'matchFilter_ff::convol' to 'convol' (matchedRee/matchFilter.cpp:75:17)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:21 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110250 ; free virtual = 255206
+WARNING: [XFORM 203-631] Renaming function 'matchFilter_ff::convol' to 'convol' (matchedRee/matchFilter.cpp:75:18)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:25 . Memory (MB): peak = 551.945 ; gain = 205.371 ; free physical = 104637 ; free virtual = 251950
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'matchTop' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -38,81 +40,77 @@ INFO: [HLS 200-42] -- Implementing module 'shiftSampleIn'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 21.07 seconds; current allocated memory: 154.120 MB.
+INFO: [HLS 200-111]  Elapsed time: 24.88 seconds; current allocated memory: 160.623 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 155.714 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 162.218 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'convol'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.58 seconds; current allocated memory: 160.884 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.36 seconds; current allocated memory: 169.137 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.73 seconds; current allocated memory: 167.818 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.17 seconds; current allocated memory: 179.548 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matchTop'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.5 seconds; current allocated memory: 168.042 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.36 seconds; current allocated memory: 180.300 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 168.964 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 181.447 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'shiftSampleIn'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'shiftSampleIn'.
-INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 171.022 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 183.918 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convol'
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_16s_7ns_23_3_1' to 'matchTop_mul_mul_bkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_23s_24_3_1' to 'matchTop_mac_mulacud' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_24s_29_3_1' to 'matchTop_mac_muladEe' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_6ns_29ns_29_3_1' to 'matchTop_mac_mulaeOg' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7s_29ns_29_3_1' to 'matchTop_mac_mulafYi' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_6s_29ns_29_3_1' to 'matchTop_mac_mulag8j' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_7ns_29ns_29_3_1' to 'matchTop_mac_mulahbi' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_8ns_29ns_29_3_1' to 'matchTop_mac_mulaibs' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_8s_29ns_29_3_1' to 'matchTop_mac_mulajbC' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_9s_29ns_29_3_1' to 'matchTop_mac_mulakbM' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_9ns_29ns_29_3_1' to 'matchTop_mac_mulalbW' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_10s_29ns_29_3_1' to 'matchTop_mac_mulamb6' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_11s_29ns_29_3_1' to 'matchTop_mac_mulancg' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_10ns_29ns_29_3_1' to 'matchTop_mac_mulaocq' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_12ns_29ns_29_3_1' to 'matchTop_mac_mulapcA' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_13ns_29ns_29_3_1' to 'matchTop_mac_mulaqcK' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'matchTop_mac_muladd_16s_14ns_29ns_29_3_1' to 'matchTop_mac_mularcU' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulacud': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_muladEe': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaeOg': 12 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulafYi': 16 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulag8j': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulahbi': 16 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaibs': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulajbC': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulakbM': 20 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulalbW': 20 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulamb6': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulancg': 24 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaocq': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulapcA': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mulaqcK': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mac_mularcU': 28 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_bkb': 2 instance(s).
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_8ns_16s_24_3_1' to 'matchTop_mul_mul_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_7ns_16s_23_3_1' to 'matchTop_mul_mul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_6s_16s_22_3_1' to 'matchTop_mul_mul_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_8s_16s_24_3_1' to 'matchTop_mul_mul_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_7s_16s_23_3_1' to 'matchTop_mul_mul_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_9ns_16s_25_3_1' to 'matchTop_mul_mul_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_9s_16s_25_3_1' to 'matchTop_mul_mul_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_10s_16s_26_3_1' to 'matchTop_mul_mul_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_10ns_16s_26_3_1' to 'matchTop_mul_mul_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_11s_16s_27_3_1' to 'matchTop_mul_mul_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_12s_16s_28_3_1' to 'matchTop_mul_mul_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_11ns_16s_27_3_1' to 'matchTop_mul_mul_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_13ns_16s_29_3_1' to 'matchTop_mul_mul_ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_14ns_16s_30_3_1' to 'matchTop_mul_mul_ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matchTop_mul_mul_15ns_16s_31_3_1' to 'matchTop_mul_mul_pcA' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_bkb': 22 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_cud': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_eOg': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_fYi': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_g8j': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_hbi': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_ibs': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_jbC': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_kbM': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_lbW': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_ncg': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_ocq': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matchTop_mul_mul_pcA': 28 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convol'.
-INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 190.988 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.25 seconds; current allocated memory: 209.879 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matchTop'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -378,9 +376,9 @@ WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V_1' is power-on initializ
 WARNING: [RTGEN 206-101] Register 'match_matchBufferI_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'match_matchBufferQ_V' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matchTop'.
-INFO: [HLS 200-111]  Elapsed time: 6.7 seconds; current allocated memory: 218.891 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110106 ; free virtual = 255095
+INFO: [HLS 200-111]  Elapsed time: 10.04 seconds; current allocated memory: 250.799 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:03 ; elapsed = 00:00:50 . Memory (MB): peak = 679.945 ; gain = 333.371 ; free physical = 104268 ; free virtual = 251626
 INFO: [SYSC 207-301] Generating SystemC RTL for matchTop.
 INFO: [VHDL 208-304] Generating VHDL RTL for matchTop.
 INFO: [VLOG 209-307] Generating Verilog RTL for matchTop.
-INFO: [HLS 200-112] Total elapsed time: 37.02 seconds; peak allocated memory: 218.891 MB.
+INFO: [HLS 200-112] Total elapsed time: 50.02 seconds; peak allocated memory: 250.799 MB.

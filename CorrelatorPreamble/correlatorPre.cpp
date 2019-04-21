@@ -21,44 +21,81 @@ static correlate cor;
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass0i complete dim=1
 #pragma HLS RESET variable=cor.phaseClass0i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass0q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass0q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass1i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass1i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass1q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass1q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass2i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass2i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass2q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass2q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass3i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass3i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass3q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass3q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass4i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass4i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass4q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass4q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass5i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass5i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass5q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass5q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass6i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass6i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass6q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass6q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass7i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass7i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass7q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass7q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass8i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass8i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass8q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass8q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass9i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass9i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass9q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass9q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass10i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass10i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass10q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass10q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass11i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass11i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass11q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass11q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass12i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass12i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass12q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass12q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass13i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass13i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass13q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass13q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass14i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass14i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass14q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass14q
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass15i complete dim=1
+#pragma HLS RESET variable=cor.phaseClass15i
 #pragma HLS ARRAY_PARTITION variable=cor.phaseClass15q complete dim=1
+#pragma HLS RESET variable=cor.phaseClass15q
 
 #pragma HLS ARRAY_PARTITION variable=corrSeq complete dim=1
 
-static cor_t newVali;
+static corTransmit_t newVali;
 #pragma HLS RESET variable=newVali
 
-static cor_t newValq;
+static corTransmit_t newValq;
 #pragma HLS RESET variable=newValq
+
+static cor_t newValiDec;
+#pragma HLS RESET variable=newValiDec
+
+static cor_t newValqDec;
+#pragma HLS RESET variable=newValqDec
 
   rfnoc_axis classType;
 
@@ -96,12 +133,16 @@ switch(currentState) {
 		//o_data->last = i_data->last;
 		newVali = tmp_data.data.range(15,0); // RE
 		newValq = tmp_data.data.range(31,16);
+
+		newValiDec.V = newVali;
+		newValqDec.V = newValq;
+
 		/*if(phaseClass == 0){
 			*result << newVal;
 			*result << ",";
 			*result << endl;
 		}*/
-		cor.shiftPhaseClassPre(newVali,newValq,phaseClass);
+		cor.shiftPhaseClassPre(newValiDec,newValqDec,phaseClass);
 		out = cor.correlatorPre(phaseClass);
 		//corHelperI = 0;
 		//o_data->data = out.V;
@@ -287,9 +328,11 @@ void correlate::shiftPhaseClassPre(cor_t newValuei,cor_t newValueq,ap_uint<4> ph
 }
 
 ap_int<32> correlate::correlatorPre(ap_uint<4> phaseClass){
-	ap_int<32> res;
-	cor_t corHelperINeg,corHelperIPos,resi;
-	cor_t corHelperQNeg,corHelperQPos,resq;
+	ap_int<32> res,tempi;
+	//corTransmit_t tempi,tempq;
+	ap_fixed<32,22> corHelperINeg,corHelperIPos,resi;
+	ap_fixed<32,22> corHelperQNeg,corHelperQPos,resq;
+	resi=0;
 	corHelperINeg = 0;
 	corHelperIPos = 0;
 	corHelperQNeg = 0;
@@ -505,7 +548,7 @@ ap_int<32> correlate::correlatorPre(ap_uint<4> phaseClass){
 		resi = corHelperINeg - corHelperIPos;
 	}
 
-	if(corHelperIPos > corHelperINeg){
+	if(corHelperQPos > corHelperQNeg){
 		resq = corHelperQPos - corHelperQNeg;
 	} else {
 		resq = corHelperQNeg - corHelperQPos;
@@ -513,8 +556,10 @@ ap_int<32> correlate::correlatorPre(ap_uint<4> phaseClass){
 
 	resi = resi*resi;
 	resq = resq*resq;
-	res.range(15,0) = resi;
-	res.range(31,16) = resq;
+	tempi.range(31,0) = resi.V;
+	//tempq = resq.V;
+	res.range(31,0) = tempi;
+	//res.range(31,16) = tempq;
 	return res;
 }
 

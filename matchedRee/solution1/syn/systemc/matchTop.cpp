@@ -3405,11 +3405,11 @@ void matchTop::thread_ap_clk_no_reset_() {
 }
 
 void matchTop::thread_StgValue_14_shiftSampleIn_fu_1095_newVali_V() {
-    StgValue_14_shiftSampleIn_fu_1095_newVali_V = i_data_V_data_V_0_data_out.read().range(16-1, 0);
+    StgValue_14_shiftSampleIn_fu_1095_newVali_V = i_data_V_data_V_0_data_out.read().range(31, 16);
 }
 
 void matchTop::thread_StgValue_14_shiftSampleIn_fu_1095_newValq_V() {
-    StgValue_14_shiftSampleIn_fu_1095_newValq_V = i_data_V_data_V_0_data_out.read().range(31, 16);
+    StgValue_14_shiftSampleIn_fu_1095_newValq_V = i_data_V_data_V_0_data_out.read().range(16-1, 0);
 }
 
 void matchTop::thread_ap_CS_fsm_state2() {

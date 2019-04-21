@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTopSynch'" level="0">
-<item name = "Date">Wed Apr 17 15:34:41 2019
+<item name = "Date">Sun Apr 21 11:28:13 2019
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">CorrelatorSynch</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.28, 0.62</column>
+<column name="ap_clk">5.00, 4.04, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 10, 2, 11, none</column>
+<column name="">1, 11, 1, 11, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_correlatorSynch_fu_1103">correlatorSynch, 4, 5, 4, 5, none</column>
-<column name="StgValue_35_shiftPhaseClassSynch_fu_2132">shiftPhaseClassSynch, 0, 0, 0, 0, none</column>
+<column name="grp_correlatorSynch_fu_1107">correlatorSynch, 5, 6, 5, 6, none</column>
+<column name="StgValue_70_shiftPhaseClassSynch_fu_1624">shiftPhaseClassSynch, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -29,42 +29,37 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/.apc/.src</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/correlatorPre.h</name>
-			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/correlatorPre.h</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/.tcls</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/correlatorPre.cpp</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/correlatorPre.cpp</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/correlatorPre.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/solution1.directive</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/directives.tcl</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/script.tcl</location>
+			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorPreamble/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

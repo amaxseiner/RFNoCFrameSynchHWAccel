@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="correlateTopSynch" name="CorrelatorSynch">
+<project xmlns="com.autoesl.autopilot.project" name="CorrelatorSynch" top="correlateTopSynch">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

@@ -5,20 +5,20 @@
 input clk;
 input rst;
 input ce;
-input signed [16 - 1 : 0] a; // synthesis attribute keep a "true"
-input [7 - 1 : 0] b; // synthesis attribute keep b "true"
-output signed [23 - 1 : 0] p; // synthesis attribute keep p "true"
+input [8 - 1 : 0] a; // synthesis attribute keep a "true"
+input signed [16 - 1 : 0] b; // synthesis attribute keep b "true"
+output signed [24 - 1 : 0] p; // synthesis attribute keep p "true"
 
-reg signed [23 - 1 : 0] p_reg; 
+reg signed [24 - 1 : 0] p_reg; 
 
-reg signed [16 - 1 : 0] a_reg; 
-reg [7 - 1 : 0] b_reg; 
+reg [8 - 1 : 0] a_reg; 
+reg signed [16 - 1 : 0] b_reg; 
 
 always @ (posedge clk) begin
     if (ce) begin
         a_reg <= a;
         b_reg <= b;
-        p_reg <= $signed (a_reg) * $signed ({1'b0, b_reg});
+        p_reg <= $signed ({1'b0, a_reg}) * $signed (b_reg);
     end
 end
 

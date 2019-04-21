@@ -8,7 +8,7 @@
      ap_uint<1> last;
    };
 
-	static ap_fixed<16,3> preamble[128] = {0.00554,
+	static ap_fixed<16,2> preamble[128] = {0.00554,
 			0.00536,
 			0.00452,
 			0.00306,
@@ -72,7 +72,7 @@
 			0.898,
 			0.954,
 			0.988,
-			1,
+			1.0001,
 			0.988,
 			0.954,
 			0.898,
@@ -138,7 +138,7 @@
 			0.00536
 };
 
-typedef ap_fixed<16,8> fixedMatch;
+typedef ap_fixed<16,1, AP_RND> fixedMatch;
 void matchFilter(hls::stream<rfnoc_axis> in, hls::stream<rfnoc_axis> out);
 //void matchTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 
@@ -150,4 +150,3 @@ public:
 	fixedMatch matchBufferQ[128];
 
 };
-

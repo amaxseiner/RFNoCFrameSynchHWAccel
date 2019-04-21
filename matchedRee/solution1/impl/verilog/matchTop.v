@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.374812,HLS_SYN_LAT=125,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=194,HLS_SYN_FF=10431,HLS_SYN_LUT=6864}" *)
+(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.534375,HLS_SYN_LAT=133,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=218,HLS_SYN_FF=18959,HLS_SYN_LUT=24922}" *)
 
 module matchTop (
         ap_clk,
@@ -4065,9 +4065,9 @@ always @ (*) begin
     endcase
 end
 
-assign StgValue_14_shiftSampleIn_fu_1095_newVali_V = i_data_V_data_V_0_data_out[15:0];
+assign StgValue_14_shiftSampleIn_fu_1095_newVali_V = {{i_data_V_data_V_0_data_out[31:16]}};
 
-assign StgValue_14_shiftSampleIn_fu_1095_newValq_V = {{i_data_V_data_V_0_data_out[31:16]}};
+assign StgValue_14_shiftSampleIn_fu_1095_newValq_V = i_data_V_data_V_0_data_out[15:0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 

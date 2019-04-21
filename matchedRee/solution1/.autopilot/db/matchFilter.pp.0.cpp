@@ -29152,7 +29152,7 @@ class stream
      ap_uint<1> last;
    };
 
- static ap_fixed<16,3> preamble[128] = {0.00554,
+ static ap_fixed<16,2> preamble[128] = {0.00554,
    0.00536,
    0.00452,
    0.00306,
@@ -29216,7 +29216,7 @@ class stream
    0.898,
    0.954,
    0.988,
-   1,
+   1.0001,
    0.988,
    0.954,
    0.898,
@@ -29282,7 +29282,7 @@ class stream
    0.00536
 };
 
-typedef ap_fixed<16,8> fixedMatch;
+typedef ap_fixed<16,1, SC_RND> fixedMatch;
 void matchFilter(hls::stream<rfnoc_axis> in, hls::stream<rfnoc_axis> out);
 
 
@@ -29328,8 +29328,8 @@ ap_int<16> tmp_dataQ,tmp_dataI;
  tmp_dataQ = tmp_data.data.range(15,0);
  tmp_dataI = tmp_data.data.range(31,16);
 
- newVali.V = tmp_dataQ;
- newValq.V = tmp_dataI;
+ newVali.V = tmp_dataI;
+ newValq.V = tmp_dataQ;
 
 
  match.shiftSampleIn(newVali,newValq);
@@ -29353,8 +29353,8 @@ void matchFilter_ff::shiftSampleIn(fixedMatch newVali, fixedMatch newValq){
 
 ap_int<32> matchFilter_ff::convol(){
  ap_int<32> res;
- ap_fixed<32,16> tempQ,tempI;
- fixedMatch resI, resQ;
+ ap_fixed<32,6, SC_RND> tempQ,tempI;
+ ap_fixed<16,6, SC_RND> resI, resQ;
  ap_int<16> resIint, resQint;
  tempQ=0;
  tempI =0;

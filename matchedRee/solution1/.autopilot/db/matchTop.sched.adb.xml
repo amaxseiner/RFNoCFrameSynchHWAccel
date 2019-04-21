@@ -136,7 +136,7 @@ codeRepl:14  %tmp_dataI_V = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %t
 
 <Node id="278" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-codeRepl:15  store i16 %tmp_dataQ_V, i16* @newVali_V, align 2
+codeRepl:15  store i16 %tmp_dataI_V, i16* @newVali_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -151,7 +151,7 @@ codeRepl:15  store i16 %tmp_dataQ_V, i16* @newVali_V, align 2
 
 <Node id="279" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-codeRepl:16  store i16 %tmp_dataI_V, i16* @newValq_V, align 2
+codeRepl:16  store i16 %tmp_dataQ_V, i16* @newValq_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -166,7 +166,7 @@ codeRepl:16  store i16 %tmp_dataI_V, i16* @newValq_V, align 2
 
 <Node id="280" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-codeRepl:17  call fastcc void @shiftSampleIn(i16 %tmp_dataQ_V, i16 %tmp_dataI_V)
+codeRepl:17  call fastcc void @shiftSampleIn(i16 %tmp_dataI_V, i16 %tmp_dataQ_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -235,7 +235,7 @@ codeRepl:19  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_dat
 
 <Node id="263" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !109
+codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !114
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -250,7 +250,7 @@ codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map 
 
 <Node id="264" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !113
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !118
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -265,7 +265,7 @@ codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !
 
 <Node id="265" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !117
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !122
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -280,7 +280,7 @@ codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map 
 
 <Node id="266" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !121
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !126
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;tb_output.txt&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;tb_input.txt&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;results.csv&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;matchedRee/matchFilter.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;inputCorrr.dat&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
 	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;IMLANCE.csv&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;inputCorrr.dat&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;matchedRee/matchFilter.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;results.csv&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;tb_input.txt&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1850" content="Skipped source file &apos;tb_output.txt&apos;. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:33 ; elapsed = 00:00:13 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110371 ; free virtual = 255311" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 359.941 ; gain = 13.375 ; free physical = 110368 ; free virtual = 255311" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 104769 ; free virtual = 252066" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:15 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 104753 ; free virtual = 252054" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 360.551 ; gain = 13.984 ; free physical = 110348 ; free virtual = 255296" tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;ap_fixed_base&lt;32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0&gt;::quantization_adjust&apos; into &apos;ap_fixed_base&lt;32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0&gt;::ap_fixed_base&lt;36, 7, true, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&apos; ()." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;ap_fixed_base&lt;16, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0&gt;::quantization_adjust&apos; into &apos;ap_fixed_base&lt;16, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0&gt;::ap_fixed_base&lt;32, 6, true, (ap_q_mode)0, (ap_o_mode)3, 0&gt;&apos; ()." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 360.559 ; gain = 13.984 ; free physical = 104740 ; free virtual = 252044" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;matchFilter_ff::shiftSampleIn&apos; into &apos;matchTop&apos; (matchedRee/matchFilter.cpp:39) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;matchFilter_ff::convol&apos; into &apos;matchTop&apos; (matchedRee/matchFilter.cpp:40) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110339 ; free virtual = 255288" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 488.496 ; gain = 141.922 ; free physical = 104730 ; free virtual = 252036" tag=""/>
 	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (matchedRee/matchFilter.cpp:55) in function &apos;matchFilter_ff::shiftSampleIn&apos; completely." tag=""/>
 	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (matchedRee/matchFilter.cpp:73) in function &apos;matchFilter_ff::convol&apos; completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;match.matchBufferQ.V&apos;  in dimension 1 completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;match.matchBufferI.V&apos;  in dimension 1 completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;preamble.V&apos;  in dimension 1 completely." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:00:19 . Memory (MB): peak = 488.484 ; gain = 141.918 ; free physical = 110296 ; free virtual = 255250" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 488.496 ; gain = 141.922 ; free physical = 104685 ; free virtual = 251996" tag=""/>
 	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;matchFilter_ff::shiftSampleIn&apos; to &apos;shiftSampleIn&apos; (matchedRee/matchFilter.cpp:57:1)" tag=""/>
-	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;matchFilter_ff::convol&apos; to &apos;convol&apos; (matchedRee/matchFilter.cpp:75:17)" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:21 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110250 ; free virtual = 255206" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;matchFilter_ff::convol&apos; to &apos;convol&apos; (matchedRee/matchFilter.cpp:75:18)" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:25 . Memory (MB): peak = 551.945 ; gain = 205.371 ; free physical = 104637 ; free virtual = 251950" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;matchTop&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
@@ -31,81 +33,77 @@
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 21.07 seconds; current allocated memory: 154.120 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 24.88 seconds; current allocated memory: 160.623 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.19 seconds; current allocated memory: 155.714 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.22 seconds; current allocated memory: 162.218 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;convol&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.58 seconds; current allocated memory: 160.884 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.36 seconds; current allocated memory: 169.137 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.73 seconds; current allocated memory: 167.818 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 3.17 seconds; current allocated memory: 179.548 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;matchTop&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.5 seconds; current allocated memory: 168.042 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.36 seconds; current allocated memory: 180.300 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.27 seconds; current allocated memory: 168.964 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.65 seconds; current allocated memory: 181.447 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;shiftSampleIn&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;shiftSampleIn&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.53 seconds; current allocated memory: 171.022 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.1 seconds; current allocated memory: 183.918 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;convol&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_16s_7ns_23_3_1&apos; to &apos;matchTop_mul_mul_bkb&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_7ns_23s_24_3_1&apos; to &apos;matchTop_mac_mulacud&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_7ns_24s_29_3_1&apos; to &apos;matchTop_mac_muladEe&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_6ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulaeOg&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_7s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulafYi&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_6s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulag8j&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_7ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulahbi&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_8ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulaibs&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_8s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulajbC&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_9s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulakbM&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_9ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulalbW&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_10s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulamb6&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_11s_29ns_29_3_1&apos; to &apos;matchTop_mac_mulancg&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_10ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulaocq&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_12ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulapcA&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_13ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mulaqcK&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mac_muladd_16s_14ns_29ns_29_3_1&apos; to &apos;matchTop_mac_mularcU&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulacud&apos;: 2 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_muladEe&apos;: 2 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulaeOg&apos;: 12 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulafYi&apos;: 16 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulag8j&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulahbi&apos;: 16 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulaibs&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulajbC&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulakbM&apos;: 20 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulalbW&apos;: 20 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulamb6&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulancg&apos;: 24 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulaocq&apos;: 4 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulapcA&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mulaqcK&apos;: 8 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mac_mularcU&apos;: 28 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_bkb&apos;: 2 instance(s)." tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_8ns_16s_24_3_1&apos; to &apos;matchTop_mul_mul_bkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_7ns_16s_23_3_1&apos; to &apos;matchTop_mul_mul_cud&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_6s_16s_22_3_1&apos; to &apos;matchTop_mul_mul_dEe&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_8s_16s_24_3_1&apos; to &apos;matchTop_mul_mul_eOg&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_7s_16s_23_3_1&apos; to &apos;matchTop_mul_mul_fYi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_9ns_16s_25_3_1&apos; to &apos;matchTop_mul_mul_g8j&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_9s_16s_25_3_1&apos; to &apos;matchTop_mul_mul_hbi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_10s_16s_26_3_1&apos; to &apos;matchTop_mul_mul_ibs&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_10ns_16s_26_3_1&apos; to &apos;matchTop_mul_mul_jbC&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_11s_16s_27_3_1&apos; to &apos;matchTop_mul_mul_kbM&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_12s_16s_28_3_1&apos; to &apos;matchTop_mul_mul_lbW&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_11ns_16s_27_3_1&apos; to &apos;matchTop_mul_mul_mb6&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_13ns_16s_29_3_1&apos; to &apos;matchTop_mul_mul_ncg&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_14ns_16s_30_3_1&apos; to &apos;matchTop_mul_mul_ocq&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;matchTop_mul_mul_15ns_16s_31_3_1&apos; to &apos;matchTop_mul_mul_pcA&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_bkb&apos;: 22 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_cud&apos;: 12 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_dEe&apos;: 4 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_eOg&apos;: 24 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_fYi&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_g8j&apos;: 16 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_hbi&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_ibs&apos;: 24 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_jbC&apos;: 20 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_kbM&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_lbW&apos;: 24 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_mb6&apos;: 4 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_ncg&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_ocq&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;matchTop_mul_mul_pcA&apos;: 28 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;convol&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.51 seconds; current allocated memory: 190.988 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.25 seconds; current allocated memory: 209.879 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;matchTop&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -371,10 +369,10 @@
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;match_matchBufferI_V&apos; is power-on initialization." tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;match_matchBufferQ_V&apos; is power-on initialization." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;matchTop&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 6.7 seconds; current allocated memory: 218.891 MB." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:37 . Memory (MB): peak = 551.938 ; gain = 205.371 ; free physical = 110106 ; free virtual = 255095" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 10.04 seconds; current allocated memory: 250.799 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:01:03 ; elapsed = 00:00:50 . Memory (MB): peak = 679.945 ; gain = 333.371 ; free physical = 104268 ; free virtual = 251626" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for matchTop." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for matchTop." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for matchTop." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 37.02 seconds; peak allocated memory: 218.891 MB." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 50.02 seconds; peak allocated memory: 250.799 MB." tag=""/>
 </Messages>

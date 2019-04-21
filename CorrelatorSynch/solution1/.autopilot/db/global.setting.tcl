@@ -14,7 +14,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-1"
 set SourceFiles {sc {} c ../correlatorSynch.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/alex/Documents/RFNoCFrameSynchHWAccel/CorrelatorSynch/solution1/solution1.directive}
+set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorSynch/solution1/solution1.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

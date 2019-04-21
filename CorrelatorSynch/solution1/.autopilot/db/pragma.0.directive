@@ -38,10 +38,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass0q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass1i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass1i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -52,10 +62,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass1q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass2i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass2i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -66,10 +86,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass2q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass3i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass3i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -80,10 +110,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass3q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass4i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass4i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -94,10 +134,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass4q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass5i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass5i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -108,10 +158,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass5q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass6i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass6i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -122,10 +182,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass6q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass7i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass7i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -136,10 +206,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass7q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass8i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass8i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -150,10 +230,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass8q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass9i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass9i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -164,10 +254,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass9q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass10i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass10i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -178,10 +278,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass10q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass11i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass11i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -192,10 +302,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass11q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass12i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass12i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -206,10 +326,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass12q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass13i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass13i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -220,10 +350,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass13q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass14i"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass14i"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -234,6 +374,11 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass14q"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass15i"/>
 <option name="complete" positionalBoolean="type" value=""/>
@@ -241,10 +386,20 @@
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass15i"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="cor.phaseClass15q"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="cor.phaseClass15q"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">
@@ -262,6 +417,16 @@
 <directive functionLabel="" functionName="correlateTopSynch" label="">
 <pragma name="RESET">
 <option name="variable" positionalBoolean="4" value="newValq"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newValiDec"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="correlateTopSynch" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newValqDec"/>
 </pragma>
 </directive>
 <directive functionLabel="" functionName="correlateTopSynch" label="">

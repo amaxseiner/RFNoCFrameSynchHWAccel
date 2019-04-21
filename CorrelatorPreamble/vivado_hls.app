@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="correlateTopPreamble" name="CorrelatorPreamble">
+<project xmlns="com.autoesl.autopilot.project" name="CorrelatorPreamble" top="correlateTopPreamble">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

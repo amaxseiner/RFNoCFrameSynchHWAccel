@@ -5,32 +5,27 @@
 // 
 // ===========================================================
 
-`timescale 1 ns / 1 ps 
-
-(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.374812,HLS_SYN_LAT=125,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=194,HLS_SYN_FF=10431,HLS_SYN_LUT=6864}" *)
-
-
-`include "convol.v"
-`include "matchTop_mac_mulaeOg.v"
-`include "matchTop_mac_mulahbi.v"
-
-`include "matchTop_mac_mulakbM.v"
-`include "matchTop_mac_mulancg.v"
-`include "matchTop_mac_mulaqcK.v"
-`include "matchTop_mac_mulacud.v"
-
-`include "matchTop_mac_mulafYi.v"
-`include "matchTop_mac_mulaibs.v"
-`include "matchTop_mac_mulalbW.v"
-`include "matchTop_mac_mulaocq.v"
-`include "matchTop_mac_mularcU.v"
+`timescale 1 ns / 1 ps
+`include "convol.v"                
+`include "matchTop_mul_mul_dEe.v"  
+`include "matchTop_mul_mul_g8j.v"  
+`include "matchTop_mul_mul_jbC.v"  
+`include "matchTop_mul_mul_mb6.v"  
+`include "matchTop_mul_mul_pcA.v"
+`include "matchTop_mul_mul_bkb.v"  
+`include "matchTop_mul_mul_eOg.v"  
+`include "matchTop_mul_mul_hbi.v"  
+`include "matchTop_mul_mul_kbM.v"  
+`include "matchTop_mul_mul_ncg.v"  
+`include "matchTop_mul_mul_cud.v"  
+`include "matchTop_mul_mul_fYi.v"  
+`include "matchTop_mul_mul_ibs.v"  
+`include "matchTop_mul_mul_lbW.v"  
+`include "matchTop_mul_mul_ocq.v"  
 `include "shiftSampleIn.v"
-`include "matchTop_mac_muladEe.v"
-`include "matchTop_mac_mulag8j.v"
-`include "matchTop_mac_mulajbC.v"
-`include "matchTop_mac_mulamb6.v"
-`include "matchTop_mac_mulapcA.v"
-`include "matchTop_mul_mul_bkb.v"
+ 
+
+(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.534375,HLS_SYN_LAT=133,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=218,HLS_SYN_FF=18959,HLS_SYN_LUT=24922}" *)
 
 module matchTop (
         ap_clk,
@@ -4088,9 +4083,9 @@ always @ (*) begin
     endcase
 end
 
-assign StgValue_14_shiftSampleIn_fu_1095_newVali_V = i_data_V_data_V_0_data_out[15:0];
+assign StgValue_14_shiftSampleIn_fu_1095_newVali_V = {{i_data_V_data_V_0_data_out[31:16]}};
 
-assign StgValue_14_shiftSampleIn_fu_1095_newValq_V = {{i_data_V_data_V_0_data_out[31:16]}};
+assign StgValue_14_shiftSampleIn_fu_1095_newValq_V = i_data_V_data_V_0_data_out[15:0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 

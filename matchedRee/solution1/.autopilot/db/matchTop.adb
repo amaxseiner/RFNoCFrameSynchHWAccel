@@ -339,7 +339,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_dataQ.V</originalName>
-              <rtlName>StgValue_14_shiftSampleIn_fu_1095_newVali_V</rtlName>
+              <rtlName>StgValue_14_shiftSampleIn_fu_1095_newValq_V</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -381,7 +381,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>tmp_dataI.V</originalName>
-              <rtlName>StgValue_14_shiftSampleIn_fu_1095_newValq_V</rtlName>
+              <rtlName>StgValue_14_shiftSampleIn_fu_1095_newVali_V</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -1358,7 +1358,7 @@
         <item class_id_reference="20" object_id="_29">
           <id>299</id>
           <edge_type>1</edge_type>
-          <source_obj>276</source_obj>
+          <source_obj>277</source_obj>
           <sink_obj>278</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_30">
@@ -1370,7 +1370,7 @@
         <item class_id_reference="20" object_id="_31">
           <id>301</id>
           <edge_type>1</edge_type>
-          <source_obj>277</source_obj>
+          <source_obj>276</source_obj>
           <sink_obj>279</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_32">
@@ -1388,13 +1388,13 @@
         <item class_id_reference="20" object_id="_34">
           <id>305</id>
           <edge_type>1</edge_type>
-          <source_obj>276</source_obj>
+          <source_obj>277</source_obj>
           <sink_obj>280</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_35">
           <id>306</id>
           <edge_type>1</edge_type>
-          <source_obj>277</source_obj>
+          <source_obj>276</source_obj>
           <sink_obj>280</sink_obj>
         </item>
         <item class_id_reference="20" object_id="_36">
@@ -4533,7 +4533,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>125</mMinLatency>
+        <mMinLatency>133</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -4786,15 +4786,15 @@
             <item_version>0</item_version>
             <item>
               <first>DSP48E</first>
-              <second>194</second>
+              <second>218</second>
             </item>
             <item>
               <first>FF</first>
-              <second>6180</second>
+              <second>14708</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>4327</second>
+              <second>22385</second>
             </item>
           </second>
         </item>

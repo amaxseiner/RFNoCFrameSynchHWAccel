@@ -11,15 +11,15 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 7
-set in1_signed 0
+set in0_width 8
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 23
+set out_width 24
 set exp i0*i1
-set arg_lists {i0 {16 1 +} i1 {7 0 +} p {23 1 +} acc {0} }
+set arg_lists {i0 {8 0 +} i1 {16 1 +} p {24 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
@@ -94,210 +94,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 261
-set name matchTop_mac_mulacud
-set corename simcore_mac
-set op mac
-set stage_num 3
-set max_latency -1
-set registered_input 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 7
-set in1_signed 0
-set in2_width 23
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 24
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {7 0 +} m {23 1 +} i2 {23 1 +} p {24 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 263
-set name matchTop_mac_muladEe
-set corename simcore_mac
-set op mac
-set stage_num 3
-set max_latency -1
-set registered_input 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 7
-set in1_signed 0
-set in2_width 24
-set in2_signed 1
-set ce_width 1
-set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {7 0 +} m {23 1 +} i2 {24 1 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
 set id 265
-set name matchTop_mac_mulaeOg
-set corename simcore_mac
-set op mac
+set name matchTop_mul_mul_cud
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -305,21 +105,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 6
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
+set in0_width 7
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {6 0 +} m {22 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 23
+set exp i0*i1
+set arg_lists {i0 {7 0 +} i1 {16 1 +} p {23 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -338,8 +136,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -347,7 +143,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -357,7 +153,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -380,8 +176,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -395,9 +189,9 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 267
-set name matchTop_mac_mulafYi
-set corename simcore_mac
-set op mac
+set name matchTop_mul_mul_dEe
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -405,21 +199,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 6
 set in0_signed 1
-set in1_width 7
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {7 1 +} m {23 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 22
+set exp i0*i1
+set arg_lists {i0 {6 1 +} i1 {16 1 +} p {22 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -438,8 +230,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -447,7 +237,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -457,7 +247,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -480,8 +270,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -494,10 +282,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 275
-set name matchTop_mac_mulag8j
-set corename simcore_mac
-set op mac
+set id 269
+set name matchTop_mul_mul_eOg
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -505,21 +293,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 8
 set in0_signed 1
-set in1_width 6
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {6 1 +} m {22 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 24
+set exp i0*i1
+set arg_lists {i0 {8 1 +} i1 {16 1 +} p {24 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -538,8 +324,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -547,7 +331,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -557,7 +341,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -580,8 +364,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -594,10 +376,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 279
-set name matchTop_mac_mulahbi
-set corename simcore_mac
-set op mac
+set id 277
+set name matchTop_mul_mul_fYi
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -605,221 +387,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 7
 set in0_signed 1
-set in1_width 7
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {7 0 +} m {23 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 281
-set name matchTop_mac_mulaibs
-set corename simcore_mac
-set op mac
-set stage_num 3
-set max_latency -1
-set registered_input 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 8
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {8 0 +} m {24 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 291
-set name matchTop_mac_mulajbC
-set corename simcore_mac
-set op mac
-set stage_num 3
-set max_latency -1
-set registered_input 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 8
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {8 1 +} m {24 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 23
+set exp i0*i1
+set arg_lists {i0 {7 1 +} i1 {16 1 +} p {23 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -838,8 +418,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -847,7 +425,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -857,7 +435,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -880,8 +458,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -894,10 +470,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 293
-set name matchTop_mac_mulakbM
-set corename simcore_mac
-set op mac
+set id 283
+set name matchTop_mul_mul_g8j
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -905,21 +481,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 9
+set in0_width 9
+set in0_signed 0
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {9 1 +} m {25 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 25
+set exp i0*i1
+set arg_lists {i0 {9 0 +} i1 {16 1 +} p {25 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -938,8 +512,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -947,7 +519,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -957,7 +529,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -980,8 +552,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -994,10 +564,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 303
-set name matchTop_mac_mulalbW
-set corename simcore_mac
-set op mac
+set id 297
+set name matchTop_mul_mul_hbi
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1005,121 +575,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 9
 set in0_signed 1
-set in1_width 9
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {9 0 +} m {25 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 317
-set name matchTop_mac_mulamb6
-set corename simcore_mac
-set op mac
-set stage_num 3
-set max_latency -1
-set registered_input 1
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 10
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {10 1 +} m {26 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 25
+set exp i0*i1
+set arg_lists {i0 {9 1 +} i1 {16 1 +} p {25 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1138,8 +606,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1147,7 +613,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1157,7 +623,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1180,8 +646,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1194,10 +658,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 319
-set name matchTop_mac_mulancg
-set corename simcore_mac
-set op mac
+set id 299
+set name matchTop_mul_mul_ibs
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1205,21 +669,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 10
 set in0_signed 1
-set in1_width 11
+set in1_width 16
 set in1_signed 1
-set in2_width 29
-set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {11 1 +} m {27 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 26
+set exp i0*i1
+set arg_lists {i0 {10 1 +} i1 {16 1 +} p {26 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1238,8 +700,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1247,7 +707,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1257,7 +717,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1280,8 +740,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1294,10 +752,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 333
-set name matchTop_mac_mulaocq
-set corename simcore_mac
-set op mac
+set id 313
+set name matchTop_mul_mul_jbC
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1305,21 +763,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 10
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
+set in0_width 10
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {10 0 +} m {26 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 26
+set exp i0*i1
+set arg_lists {i0 {10 0 +} i1 {16 1 +} p {26 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1338,8 +794,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1347,7 +801,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1357,7 +811,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1380,8 +834,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1394,10 +846,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 335
-set name matchTop_mac_mulapcA
-set corename simcore_mac
-set op mac
+set id 329
+set name matchTop_mul_mul_kbM
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1405,21 +857,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 11
 set in0_signed 1
-set in1_width 12
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {12 0 +} m {28 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 27
+set exp i0*i1
+set arg_lists {i0 {11 1 +} i1 {16 1 +} p {27 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1438,8 +888,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1447,7 +895,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1457,7 +905,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1480,8 +928,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1494,10 +940,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 339
-set name matchTop_mac_mulaqcK
-set corename simcore_mac
-set op mac
+set id 331
+set name matchTop_mul_mul_lbW
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1505,21 +951,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
+set in0_width 12
 set in0_signed 1
-set in1_width 13
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {13 0 +} m {29 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 28
+set exp i0*i1
+set arg_lists {i0 {12 1 +} i1 {16 1 +} p {28 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1538,8 +982,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1547,7 +989,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1557,7 +999,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1580,8 +1022,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1594,10 +1034,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 343
-set name matchTop_mac_mularcU
-set corename simcore_mac
-set op mac
+set id 345
+set name matchTop_mul_mul_mb6
+set corename simcore_mul
+set op mul
 set stage_num 3
 set max_latency -1
 set registered_input 1
@@ -1605,21 +1045,19 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 16
-set in0_signed 1
-set in1_width 14
-set in1_signed 0
-set in2_width 29
-set in2_signed 0
+set in0_width 11
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 29
-set exp i0*i1+i2
-set arg_lists {i0 {16 1 +} i1 {14 0 +} m {29 1 +} i2 {29 0 +} p {29 1 +} c_reg {1} rnd {0} acc {0} }
+set out_width 27
+set exp i0*i1
+set arg_lists {i0 {11 0 +} i1 {16 1 +} p {27 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -1638,8 +1076,6 @@ eval "ap_gen_simcore_mac { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1647,7 +1083,7 @@ eval "ap_gen_simcore_mac { \
     arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
 }
 }
 
@@ -1657,7 +1093,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op mac
+set op mul
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -1680,8 +1116,288 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
+}
+
+
+set id 347
+set name matchTop_mul_mul_ncg
+set corename simcore_mul
+set op mul
+set stage_num 3
+set max_latency -1
+set registered_input 1
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 13
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
+set ce_width 1
+set ce_signed 0
+set out_width 29
+set exp i0*i1
+set arg_lists {i0 {13 0 +} i1 {16 1 +} p {29 1 +} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ${name}
+}
+
+
+set op mul
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
+}
+
+
+set id 351
+set name matchTop_mul_mul_ocq
+set corename simcore_mul
+set op mul
+set stage_num 3
+set max_latency -1
+set registered_input 1
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 14
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
+set ce_width 1
+set ce_signed 0
+set out_width 30
+set exp i0*i1
+set arg_lists {i0 {14 0 +} i1 {16 1 +} p {30 1 +} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ${name}
+}
+
+
+set op mul
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
+}
+
+
+set id 355
+set name matchTop_mul_mul_pcA
+set corename simcore_mul
+set op mul
+set stage_num 3
+set max_latency -1
+set registered_input 1
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 15
+set in0_signed 0
+set in1_width 16
+set in1_signed 1
+set ce_width 1
+set ce_signed 0
+set out_width 31
+set exp i0*i1
+set arg_lists {i0 {15 0 +} i1 {16 1 +} p {31 1 +} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
+eval "ap_gen_simcore_mul { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    exp ${exp} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ${name}
+}
+
+
+set op mul
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -1704,7 +1420,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 470 \
+    id 492 \
     name match_matchBufferQ_V \
     type other \
     dir I \
@@ -1719,7 +1435,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 471 \
+    id 493 \
     name match_matchBufferI_V \
     type other \
     dir I \
@@ -1734,7 +1450,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 472 \
+    id 494 \
     name match_matchBufferQ_V_1 \
     type other \
     dir I \
@@ -1749,7 +1465,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 473 \
+    id 495 \
     name match_matchBufferI_V_1 \
     type other \
     dir I \
@@ -1764,7 +1480,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 474 \
+    id 496 \
     name match_matchBufferQ_V_2 \
     type other \
     dir I \
@@ -1779,7 +1495,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 475 \
+    id 497 \
     name match_matchBufferI_V_2 \
     type other \
     dir I \
@@ -1794,7 +1510,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 476 \
+    id 498 \
     name match_matchBufferQ_V_3 \
     type other \
     dir I \
@@ -1809,7 +1525,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 477 \
+    id 499 \
     name match_matchBufferI_V_3 \
     type other \
     dir I \
@@ -1824,7 +1540,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 478 \
+    id 500 \
     name match_matchBufferQ_V_4 \
     type other \
     dir I \
@@ -1839,7 +1555,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 479 \
+    id 501 \
     name match_matchBufferI_V_4 \
     type other \
     dir I \
@@ -1854,7 +1570,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 480 \
+    id 502 \
     name match_matchBufferQ_V_5 \
     type other \
     dir I \
@@ -1869,7 +1585,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 481 \
+    id 503 \
     name match_matchBufferI_V_5 \
     type other \
     dir I \
@@ -1884,7 +1600,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 482 \
+    id 504 \
     name match_matchBufferQ_V_6 \
     type other \
     dir I \
@@ -1899,7 +1615,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 483 \
+    id 505 \
     name match_matchBufferI_V_6 \
     type other \
     dir I \
@@ -1914,7 +1630,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 484 \
+    id 506 \
     name match_matchBufferQ_V_7 \
     type other \
     dir I \
@@ -1929,7 +1645,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 485 \
+    id 507 \
     name match_matchBufferI_V_7 \
     type other \
     dir I \
@@ -1944,7 +1660,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 486 \
+    id 508 \
     name match_matchBufferQ_V_8 \
     type other \
     dir I \
@@ -1959,7 +1675,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 487 \
+    id 509 \
     name match_matchBufferI_V_8 \
     type other \
     dir I \
@@ -1974,7 +1690,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 488 \
+    id 510 \
     name match_matchBufferQ_V_9 \
     type other \
     dir I \
@@ -1989,7 +1705,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 489 \
+    id 511 \
     name match_matchBufferI_V_9 \
     type other \
     dir I \
@@ -2004,7 +1720,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 490 \
+    id 512 \
     name match_matchBufferQ_V_10 \
     type other \
     dir I \
@@ -2019,7 +1735,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 491 \
+    id 513 \
     name match_matchBufferI_V_10 \
     type other \
     dir I \
@@ -2034,7 +1750,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 492 \
+    id 514 \
     name match_matchBufferQ_V_11 \
     type other \
     dir I \
@@ -2049,7 +1765,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 493 \
+    id 515 \
     name match_matchBufferI_V_11 \
     type other \
     dir I \
@@ -2064,7 +1780,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 494 \
+    id 516 \
     name match_matchBufferQ_V_12 \
     type other \
     dir I \
@@ -2079,7 +1795,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 495 \
+    id 517 \
     name match_matchBufferI_V_12 \
     type other \
     dir I \
@@ -2094,7 +1810,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 496 \
+    id 518 \
     name match_matchBufferQ_V_13 \
     type other \
     dir I \
@@ -2109,7 +1825,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 497 \
+    id 519 \
     name match_matchBufferI_V_13 \
     type other \
     dir I \
@@ -2124,7 +1840,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 498 \
+    id 520 \
     name match_matchBufferQ_V_14 \
     type other \
     dir I \
@@ -2139,7 +1855,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 499 \
+    id 521 \
     name match_matchBufferI_V_14 \
     type other \
     dir I \
@@ -2154,7 +1870,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 500 \
+    id 522 \
     name match_matchBufferQ_V_15 \
     type other \
     dir I \
@@ -2169,7 +1885,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 501 \
+    id 523 \
     name match_matchBufferI_V_15 \
     type other \
     dir I \
@@ -2184,7 +1900,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 502 \
+    id 524 \
     name match_matchBufferQ_V_16 \
     type other \
     dir I \
@@ -2199,7 +1915,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 503 \
+    id 525 \
     name match_matchBufferI_V_16 \
     type other \
     dir I \
@@ -2214,7 +1930,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 504 \
+    id 526 \
     name match_matchBufferQ_V_17 \
     type other \
     dir I \
@@ -2229,7 +1945,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 505 \
+    id 527 \
     name match_matchBufferI_V_17 \
     type other \
     dir I \
@@ -2244,7 +1960,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 506 \
+    id 528 \
     name match_matchBufferQ_V_18 \
     type other \
     dir I \
@@ -2259,7 +1975,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 507 \
+    id 529 \
     name match_matchBufferI_V_18 \
     type other \
     dir I \
@@ -2274,7 +1990,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 508 \
+    id 530 \
     name match_matchBufferQ_V_19 \
     type other \
     dir I \
@@ -2289,7 +2005,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 509 \
+    id 531 \
     name match_matchBufferI_V_19 \
     type other \
     dir I \
@@ -2304,7 +2020,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 510 \
+    id 532 \
     name match_matchBufferQ_V_20 \
     type other \
     dir I \
@@ -2319,7 +2035,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 511 \
+    id 533 \
     name match_matchBufferI_V_20 \
     type other \
     dir I \
@@ -2334,7 +2050,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 512 \
+    id 534 \
     name match_matchBufferQ_V_21 \
     type other \
     dir I \
@@ -2349,7 +2065,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 513 \
+    id 535 \
     name match_matchBufferI_V_21 \
     type other \
     dir I \
@@ -2364,7 +2080,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 514 \
+    id 536 \
     name match_matchBufferQ_V_22 \
     type other \
     dir I \
@@ -2379,7 +2095,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 515 \
+    id 537 \
     name match_matchBufferI_V_22 \
     type other \
     dir I \
@@ -2394,7 +2110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 516 \
+    id 538 \
     name match_matchBufferQ_V_23 \
     type other \
     dir I \
@@ -2409,7 +2125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 517 \
+    id 539 \
     name match_matchBufferI_V_23 \
     type other \
     dir I \
@@ -2424,7 +2140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 518 \
+    id 540 \
     name match_matchBufferQ_V_24 \
     type other \
     dir I \
@@ -2439,7 +2155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 519 \
+    id 541 \
     name match_matchBufferI_V_24 \
     type other \
     dir I \
@@ -2454,7 +2170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 520 \
+    id 542 \
     name match_matchBufferQ_V_25 \
     type other \
     dir I \
@@ -2469,7 +2185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 521 \
+    id 543 \
     name match_matchBufferI_V_25 \
     type other \
     dir I \
@@ -2484,7 +2200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 522 \
+    id 544 \
     name match_matchBufferQ_V_26 \
     type other \
     dir I \
@@ -2499,7 +2215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 523 \
+    id 545 \
     name match_matchBufferI_V_26 \
     type other \
     dir I \
@@ -2514,7 +2230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 524 \
+    id 546 \
     name match_matchBufferQ_V_27 \
     type other \
     dir I \
@@ -2529,7 +2245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 525 \
+    id 547 \
     name match_matchBufferI_V_27 \
     type other \
     dir I \
@@ -2544,7 +2260,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 526 \
+    id 548 \
     name match_matchBufferQ_V_28 \
     type other \
     dir I \
@@ -2559,7 +2275,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 527 \
+    id 549 \
     name match_matchBufferI_V_28 \
     type other \
     dir I \
@@ -2574,7 +2290,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 528 \
+    id 550 \
     name match_matchBufferQ_V_29 \
     type other \
     dir I \
@@ -2589,7 +2305,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 529 \
+    id 551 \
     name match_matchBufferI_V_29 \
     type other \
     dir I \
@@ -2604,7 +2320,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 530 \
+    id 552 \
     name match_matchBufferQ_V_30 \
     type other \
     dir I \
@@ -2619,7 +2335,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 531 \
+    id 553 \
     name match_matchBufferI_V_30 \
     type other \
     dir I \
@@ -2634,7 +2350,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 532 \
+    id 554 \
     name match_matchBufferQ_V_31 \
     type other \
     dir I \
@@ -2649,7 +2365,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 533 \
+    id 555 \
     name match_matchBufferI_V_31 \
     type other \
     dir I \
@@ -2664,7 +2380,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 534 \
+    id 556 \
     name match_matchBufferQ_V_32 \
     type other \
     dir I \
@@ -2679,7 +2395,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 535 \
+    id 557 \
     name match_matchBufferI_V_32 \
     type other \
     dir I \
@@ -2694,7 +2410,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 536 \
+    id 558 \
     name match_matchBufferQ_V_33 \
     type other \
     dir I \
@@ -2709,7 +2425,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 537 \
+    id 559 \
     name match_matchBufferI_V_33 \
     type other \
     dir I \
@@ -2724,7 +2440,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 538 \
+    id 560 \
     name match_matchBufferQ_V_34 \
     type other \
     dir I \
@@ -2739,7 +2455,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 539 \
+    id 561 \
     name match_matchBufferI_V_34 \
     type other \
     dir I \
@@ -2754,7 +2470,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 540 \
+    id 562 \
     name match_matchBufferQ_V_35 \
     type other \
     dir I \
@@ -2769,7 +2485,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 541 \
+    id 563 \
     name match_matchBufferI_V_35 \
     type other \
     dir I \
@@ -2784,7 +2500,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 542 \
+    id 564 \
     name match_matchBufferQ_V_36 \
     type other \
     dir I \
@@ -2799,7 +2515,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 543 \
+    id 565 \
     name match_matchBufferI_V_36 \
     type other \
     dir I \
@@ -2814,7 +2530,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 544 \
+    id 566 \
     name match_matchBufferQ_V_37 \
     type other \
     dir I \
@@ -2829,7 +2545,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 545 \
+    id 567 \
     name match_matchBufferI_V_37 \
     type other \
     dir I \
@@ -2844,7 +2560,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 546 \
+    id 568 \
     name match_matchBufferQ_V_38 \
     type other \
     dir I \
@@ -2859,7 +2575,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 547 \
+    id 569 \
     name match_matchBufferI_V_38 \
     type other \
     dir I \
@@ -2874,7 +2590,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 548 \
+    id 570 \
     name match_matchBufferQ_V_39 \
     type other \
     dir I \
@@ -2889,7 +2605,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 549 \
+    id 571 \
     name match_matchBufferI_V_39 \
     type other \
     dir I \
@@ -2904,7 +2620,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 550 \
+    id 572 \
     name match_matchBufferQ_V_40 \
     type other \
     dir I \
@@ -2919,7 +2635,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 551 \
+    id 573 \
     name match_matchBufferI_V_40 \
     type other \
     dir I \
@@ -2934,7 +2650,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 552 \
+    id 574 \
     name match_matchBufferQ_V_41 \
     type other \
     dir I \
@@ -2949,7 +2665,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 553 \
+    id 575 \
     name match_matchBufferI_V_41 \
     type other \
     dir I \
@@ -2964,7 +2680,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 554 \
+    id 576 \
     name match_matchBufferQ_V_42 \
     type other \
     dir I \
@@ -2979,7 +2695,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 555 \
+    id 577 \
     name match_matchBufferI_V_42 \
     type other \
     dir I \
@@ -2994,7 +2710,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 556 \
+    id 578 \
     name match_matchBufferQ_V_43 \
     type other \
     dir I \
@@ -3009,7 +2725,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 557 \
+    id 579 \
     name match_matchBufferI_V_43 \
     type other \
     dir I \
@@ -3024,7 +2740,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 558 \
+    id 580 \
     name match_matchBufferQ_V_44 \
     type other \
     dir I \
@@ -3039,7 +2755,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 559 \
+    id 581 \
     name match_matchBufferI_V_44 \
     type other \
     dir I \
@@ -3054,7 +2770,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 560 \
+    id 582 \
     name match_matchBufferQ_V_45 \
     type other \
     dir I \
@@ -3069,7 +2785,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 561 \
+    id 583 \
     name match_matchBufferI_V_45 \
     type other \
     dir I \
@@ -3084,7 +2800,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 562 \
+    id 584 \
     name match_matchBufferQ_V_46 \
     type other \
     dir I \
@@ -3099,7 +2815,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 563 \
+    id 585 \
     name match_matchBufferI_V_46 \
     type other \
     dir I \
@@ -3114,7 +2830,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 564 \
+    id 586 \
     name match_matchBufferQ_V_47 \
     type other \
     dir I \
@@ -3129,7 +2845,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 565 \
+    id 587 \
     name match_matchBufferI_V_47 \
     type other \
     dir I \
@@ -3144,7 +2860,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 566 \
+    id 588 \
     name match_matchBufferQ_V_48 \
     type other \
     dir I \
@@ -3159,7 +2875,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 567 \
+    id 589 \
     name match_matchBufferI_V_48 \
     type other \
     dir I \
@@ -3174,7 +2890,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 568 \
+    id 590 \
     name match_matchBufferQ_V_49 \
     type other \
     dir I \
@@ -3189,7 +2905,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 569 \
+    id 591 \
     name match_matchBufferI_V_49 \
     type other \
     dir I \
@@ -3204,7 +2920,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 570 \
+    id 592 \
     name match_matchBufferQ_V_50 \
     type other \
     dir I \
@@ -3219,7 +2935,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 571 \
+    id 593 \
     name match_matchBufferI_V_50 \
     type other \
     dir I \
@@ -3234,7 +2950,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 572 \
+    id 594 \
     name match_matchBufferQ_V_51 \
     type other \
     dir I \
@@ -3249,7 +2965,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 573 \
+    id 595 \
     name match_matchBufferI_V_51 \
     type other \
     dir I \
@@ -3264,7 +2980,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 574 \
+    id 596 \
     name match_matchBufferQ_V_52 \
     type other \
     dir I \
@@ -3279,7 +2995,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 575 \
+    id 597 \
     name match_matchBufferI_V_52 \
     type other \
     dir I \
@@ -3294,7 +3010,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 576 \
+    id 598 \
     name match_matchBufferQ_V_53 \
     type other \
     dir I \
@@ -3309,7 +3025,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 577 \
+    id 599 \
     name match_matchBufferI_V_53 \
     type other \
     dir I \
@@ -3324,7 +3040,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 578 \
+    id 600 \
     name match_matchBufferQ_V_54 \
     type other \
     dir I \
@@ -3339,7 +3055,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 579 \
+    id 601 \
     name match_matchBufferI_V_54 \
     type other \
     dir I \
@@ -3354,7 +3070,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 580 \
+    id 602 \
     name match_matchBufferQ_V_55 \
     type other \
     dir I \
@@ -3369,7 +3085,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 581 \
+    id 603 \
     name match_matchBufferI_V_55 \
     type other \
     dir I \
@@ -3384,7 +3100,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 582 \
+    id 604 \
     name match_matchBufferQ_V_56 \
     type other \
     dir I \
@@ -3399,7 +3115,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 583 \
+    id 605 \
     name match_matchBufferI_V_56 \
     type other \
     dir I \
@@ -3414,7 +3130,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 584 \
+    id 606 \
     name match_matchBufferQ_V_57 \
     type other \
     dir I \
@@ -3429,7 +3145,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 585 \
+    id 607 \
     name match_matchBufferI_V_57 \
     type other \
     dir I \
@@ -3444,7 +3160,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 586 \
+    id 608 \
     name match_matchBufferQ_V_58 \
     type other \
     dir I \
@@ -3459,7 +3175,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 587 \
+    id 609 \
     name match_matchBufferI_V_58 \
     type other \
     dir I \
@@ -3474,7 +3190,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 588 \
+    id 610 \
     name match_matchBufferQ_V_59 \
     type other \
     dir I \
@@ -3489,7 +3205,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 589 \
+    id 611 \
     name match_matchBufferI_V_59 \
     type other \
     dir I \
@@ -3504,7 +3220,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 590 \
+    id 612 \
     name match_matchBufferQ_V_60 \
     type other \
     dir I \
@@ -3519,7 +3235,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 591 \
+    id 613 \
     name match_matchBufferI_V_60 \
     type other \
     dir I \
@@ -3534,7 +3250,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 592 \
+    id 614 \
     name match_matchBufferQ_V_61 \
     type other \
     dir I \
@@ -3549,7 +3265,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 593 \
+    id 615 \
     name match_matchBufferI_V_61 \
     type other \
     dir I \
@@ -3564,7 +3280,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 594 \
+    id 616 \
     name match_matchBufferQ_V_62 \
     type other \
     dir I \
@@ -3579,7 +3295,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 595 \
+    id 617 \
     name match_matchBufferI_V_62 \
     type other \
     dir I \
@@ -3594,7 +3310,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 596 \
+    id 618 \
     name match_matchBufferQ_V_63 \
     type other \
     dir I \
@@ -3609,7 +3325,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 597 \
+    id 619 \
     name match_matchBufferI_V_63 \
     type other \
     dir I \
@@ -3624,7 +3340,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 598 \
+    id 620 \
     name match_matchBufferQ_V_64 \
     type other \
     dir I \
@@ -3639,7 +3355,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 599 \
+    id 621 \
     name match_matchBufferI_V_64 \
     type other \
     dir I \
@@ -3654,7 +3370,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 600 \
+    id 622 \
     name match_matchBufferQ_V_65 \
     type other \
     dir I \
@@ -3669,7 +3385,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 601 \
+    id 623 \
     name match_matchBufferI_V_65 \
     type other \
     dir I \
@@ -3684,7 +3400,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 602 \
+    id 624 \
     name match_matchBufferQ_V_66 \
     type other \
     dir I \
@@ -3699,7 +3415,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 603 \
+    id 625 \
     name match_matchBufferI_V_66 \
     type other \
     dir I \
@@ -3714,7 +3430,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 604 \
+    id 626 \
     name match_matchBufferQ_V_67 \
     type other \
     dir I \
@@ -3729,7 +3445,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 605 \
+    id 627 \
     name match_matchBufferI_V_67 \
     type other \
     dir I \
@@ -3744,7 +3460,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 606 \
+    id 628 \
     name match_matchBufferQ_V_68 \
     type other \
     dir I \
@@ -3759,7 +3475,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 607 \
+    id 629 \
     name match_matchBufferI_V_68 \
     type other \
     dir I \
@@ -3774,7 +3490,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 608 \
+    id 630 \
     name match_matchBufferQ_V_69 \
     type other \
     dir I \
@@ -3789,7 +3505,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 609 \
+    id 631 \
     name match_matchBufferI_V_69 \
     type other \
     dir I \
@@ -3804,7 +3520,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 610 \
+    id 632 \
     name match_matchBufferQ_V_70 \
     type other \
     dir I \
@@ -3819,7 +3535,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 611 \
+    id 633 \
     name match_matchBufferI_V_70 \
     type other \
     dir I \
@@ -3834,7 +3550,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 612 \
+    id 634 \
     name match_matchBufferQ_V_71 \
     type other \
     dir I \
@@ -3849,7 +3565,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 613 \
+    id 635 \
     name match_matchBufferI_V_71 \
     type other \
     dir I \
@@ -3864,7 +3580,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 614 \
+    id 636 \
     name match_matchBufferQ_V_72 \
     type other \
     dir I \
@@ -3879,7 +3595,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 615 \
+    id 637 \
     name match_matchBufferI_V_72 \
     type other \
     dir I \
@@ -3894,7 +3610,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 616 \
+    id 638 \
     name match_matchBufferQ_V_73 \
     type other \
     dir I \
@@ -3909,7 +3625,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 617 \
+    id 639 \
     name match_matchBufferI_V_73 \
     type other \
     dir I \
@@ -3924,7 +3640,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 618 \
+    id 640 \
     name match_matchBufferQ_V_74 \
     type other \
     dir I \
@@ -3939,7 +3655,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 619 \
+    id 641 \
     name match_matchBufferI_V_74 \
     type other \
     dir I \
@@ -3954,7 +3670,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 620 \
+    id 642 \
     name match_matchBufferQ_V_75 \
     type other \
     dir I \
@@ -3969,7 +3685,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 621 \
+    id 643 \
     name match_matchBufferI_V_75 \
     type other \
     dir I \
@@ -3984,7 +3700,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 622 \
+    id 644 \
     name match_matchBufferQ_V_76 \
     type other \
     dir I \
@@ -3999,7 +3715,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 623 \
+    id 645 \
     name match_matchBufferI_V_76 \
     type other \
     dir I \
@@ -4014,7 +3730,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 624 \
+    id 646 \
     name match_matchBufferQ_V_77 \
     type other \
     dir I \
@@ -4029,7 +3745,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 625 \
+    id 647 \
     name match_matchBufferI_V_77 \
     type other \
     dir I \
@@ -4044,7 +3760,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 626 \
+    id 648 \
     name match_matchBufferQ_V_78 \
     type other \
     dir I \
@@ -4059,7 +3775,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 627 \
+    id 649 \
     name match_matchBufferI_V_78 \
     type other \
     dir I \
@@ -4074,7 +3790,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 628 \
+    id 650 \
     name match_matchBufferQ_V_79 \
     type other \
     dir I \
@@ -4089,7 +3805,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 629 \
+    id 651 \
     name match_matchBufferI_V_79 \
     type other \
     dir I \
@@ -4104,7 +3820,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 630 \
+    id 652 \
     name match_matchBufferQ_V_80 \
     type other \
     dir I \
@@ -4119,7 +3835,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 631 \
+    id 653 \
     name match_matchBufferI_V_80 \
     type other \
     dir I \
@@ -4134,7 +3850,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 632 \
+    id 654 \
     name match_matchBufferQ_V_81 \
     type other \
     dir I \
@@ -4149,7 +3865,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 633 \
+    id 655 \
     name match_matchBufferI_V_81 \
     type other \
     dir I \
@@ -4164,7 +3880,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 634 \
+    id 656 \
     name match_matchBufferQ_V_82 \
     type other \
     dir I \
@@ -4179,7 +3895,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 635 \
+    id 657 \
     name match_matchBufferI_V_82 \
     type other \
     dir I \
@@ -4194,7 +3910,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 636 \
+    id 658 \
     name match_matchBufferQ_V_83 \
     type other \
     dir I \
@@ -4209,7 +3925,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 637 \
+    id 659 \
     name match_matchBufferI_V_83 \
     type other \
     dir I \
@@ -4224,7 +3940,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 638 \
+    id 660 \
     name match_matchBufferQ_V_84 \
     type other \
     dir I \
@@ -4239,7 +3955,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 639 \
+    id 661 \
     name match_matchBufferI_V_84 \
     type other \
     dir I \
@@ -4254,7 +3970,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 640 \
+    id 662 \
     name match_matchBufferQ_V_85 \
     type other \
     dir I \
@@ -4269,7 +3985,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 641 \
+    id 663 \
     name match_matchBufferI_V_85 \
     type other \
     dir I \
@@ -4284,7 +4000,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 642 \
+    id 664 \
     name match_matchBufferQ_V_86 \
     type other \
     dir I \
@@ -4299,7 +4015,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 643 \
+    id 665 \
     name match_matchBufferI_V_86 \
     type other \
     dir I \
@@ -4314,7 +4030,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 644 \
+    id 666 \
     name match_matchBufferQ_V_87 \
     type other \
     dir I \
@@ -4329,7 +4045,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 645 \
+    id 667 \
     name match_matchBufferI_V_87 \
     type other \
     dir I \
@@ -4344,7 +4060,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 646 \
+    id 668 \
     name match_matchBufferQ_V_88 \
     type other \
     dir I \
@@ -4359,7 +4075,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 647 \
+    id 669 \
     name match_matchBufferI_V_88 \
     type other \
     dir I \
@@ -4374,7 +4090,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 648 \
+    id 670 \
     name match_matchBufferQ_V_89 \
     type other \
     dir I \
@@ -4389,7 +4105,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 649 \
+    id 671 \
     name match_matchBufferI_V_89 \
     type other \
     dir I \
@@ -4404,7 +4120,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 650 \
+    id 672 \
     name match_matchBufferQ_V_90 \
     type other \
     dir I \
@@ -4419,7 +4135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 651 \
+    id 673 \
     name match_matchBufferI_V_90 \
     type other \
     dir I \
@@ -4434,7 +4150,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 652 \
+    id 674 \
     name match_matchBufferQ_V_91 \
     type other \
     dir I \
@@ -4449,7 +4165,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 653 \
+    id 675 \
     name match_matchBufferI_V_91 \
     type other \
     dir I \
@@ -4464,7 +4180,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 654 \
+    id 676 \
     name match_matchBufferQ_V_92 \
     type other \
     dir I \
@@ -4479,7 +4195,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 655 \
+    id 677 \
     name match_matchBufferI_V_92 \
     type other \
     dir I \
@@ -4494,7 +4210,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 656 \
+    id 678 \
     name match_matchBufferQ_V_93 \
     type other \
     dir I \
@@ -4509,7 +4225,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 657 \
+    id 679 \
     name match_matchBufferI_V_93 \
     type other \
     dir I \
@@ -4524,7 +4240,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 658 \
+    id 680 \
     name match_matchBufferQ_V_94 \
     type other \
     dir I \
@@ -4539,7 +4255,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 659 \
+    id 681 \
     name match_matchBufferI_V_94 \
     type other \
     dir I \
@@ -4554,7 +4270,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 660 \
+    id 682 \
     name match_matchBufferQ_V_95 \
     type other \
     dir I \
@@ -4569,7 +4285,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 661 \
+    id 683 \
     name match_matchBufferI_V_95 \
     type other \
     dir I \
@@ -4584,7 +4300,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 662 \
+    id 684 \
     name match_matchBufferQ_V_96 \
     type other \
     dir I \
@@ -4599,7 +4315,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 663 \
+    id 685 \
     name match_matchBufferI_V_96 \
     type other \
     dir I \
@@ -4614,7 +4330,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 664 \
+    id 686 \
     name match_matchBufferQ_V_97 \
     type other \
     dir I \
@@ -4629,7 +4345,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 665 \
+    id 687 \
     name match_matchBufferI_V_97 \
     type other \
     dir I \
@@ -4644,7 +4360,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 666 \
+    id 688 \
     name match_matchBufferQ_V_98 \
     type other \
     dir I \
@@ -4659,7 +4375,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 667 \
+    id 689 \
     name match_matchBufferI_V_98 \
     type other \
     dir I \
@@ -4674,7 +4390,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 668 \
+    id 690 \
     name match_matchBufferQ_V_99 \
     type other \
     dir I \
@@ -4689,7 +4405,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 669 \
+    id 691 \
     name match_matchBufferI_V_99 \
     type other \
     dir I \
@@ -4704,7 +4420,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 670 \
+    id 692 \
     name match_matchBufferQ_V_100 \
     type other \
     dir I \
@@ -4719,7 +4435,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 671 \
+    id 693 \
     name match_matchBufferI_V_100 \
     type other \
     dir I \
@@ -4734,7 +4450,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 672 \
+    id 694 \
     name match_matchBufferQ_V_101 \
     type other \
     dir I \
@@ -4749,7 +4465,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 673 \
+    id 695 \
     name match_matchBufferI_V_101 \
     type other \
     dir I \
@@ -4764,7 +4480,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 674 \
+    id 696 \
     name match_matchBufferQ_V_102 \
     type other \
     dir I \
@@ -4779,7 +4495,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 675 \
+    id 697 \
     name match_matchBufferI_V_102 \
     type other \
     dir I \
@@ -4794,7 +4510,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 676 \
+    id 698 \
     name match_matchBufferQ_V_103 \
     type other \
     dir I \
@@ -4809,7 +4525,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 677 \
+    id 699 \
     name match_matchBufferI_V_103 \
     type other \
     dir I \
@@ -4824,7 +4540,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 678 \
+    id 700 \
     name match_matchBufferQ_V_104 \
     type other \
     dir I \
@@ -4839,7 +4555,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 679 \
+    id 701 \
     name match_matchBufferI_V_104 \
     type other \
     dir I \
@@ -4854,7 +4570,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 680 \
+    id 702 \
     name match_matchBufferQ_V_105 \
     type other \
     dir I \
@@ -4869,7 +4585,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 681 \
+    id 703 \
     name match_matchBufferI_V_105 \
     type other \
     dir I \
@@ -4884,7 +4600,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 682 \
+    id 704 \
     name match_matchBufferQ_V_106 \
     type other \
     dir I \
@@ -4899,7 +4615,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 683 \
+    id 705 \
     name match_matchBufferI_V_106 \
     type other \
     dir I \
@@ -4914,7 +4630,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 684 \
+    id 706 \
     name match_matchBufferQ_V_107 \
     type other \
     dir I \
@@ -4929,7 +4645,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 685 \
+    id 707 \
     name match_matchBufferI_V_107 \
     type other \
     dir I \
@@ -4944,7 +4660,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 686 \
+    id 708 \
     name match_matchBufferQ_V_108 \
     type other \
     dir I \
@@ -4959,7 +4675,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 687 \
+    id 709 \
     name match_matchBufferI_V_108 \
     type other \
     dir I \
@@ -4974,7 +4690,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 688 \
+    id 710 \
     name match_matchBufferQ_V_109 \
     type other \
     dir I \
@@ -4989,7 +4705,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 689 \
+    id 711 \
     name match_matchBufferI_V_109 \
     type other \
     dir I \
@@ -5004,7 +4720,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 690 \
+    id 712 \
     name match_matchBufferQ_V_110 \
     type other \
     dir I \
@@ -5019,7 +4735,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 691 \
+    id 713 \
     name match_matchBufferI_V_110 \
     type other \
     dir I \
@@ -5034,7 +4750,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 692 \
+    id 714 \
     name match_matchBufferQ_V_111 \
     type other \
     dir I \
@@ -5049,7 +4765,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 693 \
+    id 715 \
     name match_matchBufferI_V_111 \
     type other \
     dir I \
@@ -5064,7 +4780,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 694 \
+    id 716 \
     name match_matchBufferQ_V_112 \
     type other \
     dir I \
@@ -5079,7 +4795,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 695 \
+    id 717 \
     name match_matchBufferI_V_112 \
     type other \
     dir I \
@@ -5094,7 +4810,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 696 \
+    id 718 \
     name match_matchBufferQ_V_113 \
     type other \
     dir I \
@@ -5109,7 +4825,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 697 \
+    id 719 \
     name match_matchBufferI_V_113 \
     type other \
     dir I \
@@ -5124,7 +4840,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 698 \
+    id 720 \
     name match_matchBufferQ_V_114 \
     type other \
     dir I \
@@ -5139,7 +4855,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 699 \
+    id 721 \
     name match_matchBufferI_V_114 \
     type other \
     dir I \
@@ -5154,7 +4870,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 700 \
+    id 722 \
     name match_matchBufferQ_V_115 \
     type other \
     dir I \
@@ -5169,7 +4885,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 701 \
+    id 723 \
     name match_matchBufferI_V_115 \
     type other \
     dir I \
@@ -5184,7 +4900,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 702 \
+    id 724 \
     name match_matchBufferQ_V_116 \
     type other \
     dir I \
@@ -5199,7 +4915,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 703 \
+    id 725 \
     name match_matchBufferI_V_116 \
     type other \
     dir I \
@@ -5214,7 +4930,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 704 \
+    id 726 \
     name match_matchBufferQ_V_117 \
     type other \
     dir I \
@@ -5229,7 +4945,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 705 \
+    id 727 \
     name match_matchBufferI_V_117 \
     type other \
     dir I \
@@ -5244,7 +4960,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 706 \
+    id 728 \
     name match_matchBufferQ_V_118 \
     type other \
     dir I \
@@ -5259,7 +4975,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 707 \
+    id 729 \
     name match_matchBufferI_V_118 \
     type other \
     dir I \
@@ -5274,7 +4990,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 708 \
+    id 730 \
     name match_matchBufferQ_V_119 \
     type other \
     dir I \
@@ -5289,7 +5005,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 709 \
+    id 731 \
     name match_matchBufferI_V_119 \
     type other \
     dir I \
@@ -5304,7 +5020,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 710 \
+    id 732 \
     name match_matchBufferQ_V_120 \
     type other \
     dir I \
@@ -5319,7 +5035,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 711 \
+    id 733 \
     name match_matchBufferI_V_120 \
     type other \
     dir I \
@@ -5334,7 +5050,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 712 \
+    id 734 \
     name match_matchBufferQ_V_121 \
     type other \
     dir I \
@@ -5349,7 +5065,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 713 \
+    id 735 \
     name match_matchBufferI_V_121 \
     type other \
     dir I \
@@ -5364,7 +5080,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 714 \
+    id 736 \
     name match_matchBufferQ_V_122 \
     type other \
     dir I \
@@ -5379,7 +5095,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 715 \
+    id 737 \
     name match_matchBufferI_V_122 \
     type other \
     dir I \
@@ -5394,7 +5110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 716 \
+    id 738 \
     name match_matchBufferQ_V_123 \
     type other \
     dir I \
@@ -5409,7 +5125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 717 \
+    id 739 \
     name match_matchBufferI_V_123 \
     type other \
     dir I \
@@ -5424,7 +5140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 718 \
+    id 740 \
     name match_matchBufferQ_V_124 \
     type other \
     dir I \
@@ -5439,7 +5155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 719 \
+    id 741 \
     name match_matchBufferI_V_124 \
     type other \
     dir I \
@@ -5454,7 +5170,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 720 \
+    id 742 \
     name match_matchBufferQ_V_125 \
     type other \
     dir I \
@@ -5469,7 +5185,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 721 \
+    id 743 \
     name match_matchBufferI_V_125 \
     type other \
     dir I \
@@ -5484,7 +5200,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 722 \
+    id 744 \
     name match_matchBufferQ_V_126 \
     type other \
     dir I \
@@ -5499,7 +5215,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 723 \
+    id 745 \
     name match_matchBufferI_V_126 \
     type other \
     dir I \
@@ -5514,7 +5230,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 724 \
+    id 746 \
     name match_matchBufferQ_V_127 \
     type other \
     dir I \
@@ -5529,7 +5245,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 725 \
+    id 747 \
     name match_matchBufferI_V_127 \
     type other \
     dir I \

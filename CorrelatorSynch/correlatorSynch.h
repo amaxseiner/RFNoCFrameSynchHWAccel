@@ -24,8 +24,8 @@ static ap_int<2> corrSeq[windowSize] = {-1,-1,-1,1,-1,-1,1,1,1,1,-1,-1,-1,1,1,-1
 
 //{-1,1,-1,1,1,-1,1,-1,1,1,1,1,-1,-1,-1,-1};
 
-typedef ap_int<16> cor_t;
-typedef ap_fixed<16,11> corTransmit_t;
+typedef ap_fixed<16,6> cor_t;
+typedef ap_int<16> corTransmit_t;
 
 struct phase{
 	cor_t phaseWindow[windowSize];
