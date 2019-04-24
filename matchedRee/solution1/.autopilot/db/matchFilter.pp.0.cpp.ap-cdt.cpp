@@ -29363,6 +29363,7 @@ ap_int<16> tmp_dataQ,tmp_dataI;
 void matchFilter_ff::shiftSampleIn(fixedMatch newVali, fixedMatch newValq){
  for(int a=128-1;a>0;a--){
 #pragma HLS UNROLL
+#pragma empty_line
  matchBufferI[a]=matchBufferI[a-1];
   matchBufferQ[a]=matchBufferQ[a-1];
  }
@@ -29381,6 +29382,7 @@ ap_int<32> matchFilter_ff::convol(){
 #pragma empty_line
  for(int b=0;b<128;b++){
 #pragma HLS UNROLL
+#pragma empty_line
  tempQ = tempQ+(matchBufferQ[b] * preamble[b]);
   tempI = tempI+(matchBufferI[b] * preamble[b]);
  }

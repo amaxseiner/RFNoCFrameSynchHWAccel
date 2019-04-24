@@ -7304,7 +7304,7 @@
 						<name>match_matchBufferI_V</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7319,7 +7319,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7346,7 +7346,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7361,7 +7361,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7389,7 +7389,7 @@
 						<name>match_matchBufferQ_V</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7404,7 +7404,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7431,7 +7431,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7446,7 +7446,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7474,7 +7474,7 @@
 						<name>match_matchBufferI_V_1</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7489,7 +7489,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7516,7 +7516,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7531,7 +7531,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7560,7 +7560,7 @@
 						<name>match_matchBufferQ_V_1</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7575,7 +7575,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7602,7 +7602,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7617,7 +7617,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7646,7 +7646,7 @@
 						<name>match_matchBufferI_V_2</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7661,7 +7661,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7688,7 +7688,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7703,7 +7703,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7732,7 +7732,7 @@
 						<name>match_matchBufferQ_V_2</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7747,7 +7747,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7774,7 +7774,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7789,7 +7789,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7818,7 +7818,7 @@
 						<name>match_matchBufferI_V_3</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7833,7 +7833,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7860,7 +7860,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7875,7 +7875,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -7904,7 +7904,7 @@
 						<name>match_matchBufferQ_V_3</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7919,7 +7919,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7946,7 +7946,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7961,7 +7961,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -7990,7 +7990,7 @@
 						<name>match_matchBufferI_V_4</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8005,7 +8005,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8032,7 +8032,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8047,7 +8047,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8076,7 +8076,7 @@
 						<name>match_matchBufferQ_V_4</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8091,7 +8091,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8118,7 +8118,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8133,7 +8133,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8162,7 +8162,7 @@
 						<name>match_matchBufferI_V_5</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8177,7 +8177,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8204,7 +8204,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8219,7 +8219,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8248,7 +8248,7 @@
 						<name>match_matchBufferQ_V_5</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8263,7 +8263,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8290,7 +8290,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8305,7 +8305,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8334,7 +8334,7 @@
 						<name>match_matchBufferI_V_6</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8349,7 +8349,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8376,7 +8376,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8391,7 +8391,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8420,7 +8420,7 @@
 						<name>match_matchBufferQ_V_6</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8435,7 +8435,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8462,7 +8462,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8477,7 +8477,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8506,7 +8506,7 @@
 						<name>match_matchBufferI_V_7</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8521,7 +8521,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8548,7 +8548,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8563,7 +8563,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8592,7 +8592,7 @@
 						<name>match_matchBufferQ_V_7</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8607,7 +8607,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8634,7 +8634,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8649,7 +8649,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8678,7 +8678,7 @@
 						<name>match_matchBufferI_V_8</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8693,7 +8693,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8720,7 +8720,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8735,7 +8735,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8764,7 +8764,7 @@
 						<name>match_matchBufferQ_V_8</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8779,7 +8779,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8806,7 +8806,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8821,7 +8821,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8850,7 +8850,7 @@
 						<name>match_matchBufferI_V_9</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8865,7 +8865,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8892,7 +8892,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8907,7 +8907,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -8936,7 +8936,7 @@
 						<name>match_matchBufferQ_V_9</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8951,7 +8951,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -8978,7 +8978,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8993,7 +8993,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9022,7 +9022,7 @@
 						<name>match_matchBufferI_V_10</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9037,7 +9037,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9064,7 +9064,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9079,7 +9079,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9108,7 +9108,7 @@
 						<name>match_matchBufferQ_V_10</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9123,7 +9123,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9150,7 +9150,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9165,7 +9165,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9194,7 +9194,7 @@
 						<name>match_matchBufferI_V_11</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9209,7 +9209,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9236,7 +9236,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9251,7 +9251,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9280,7 +9280,7 @@
 						<name>match_matchBufferQ_V_11</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9295,7 +9295,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9322,7 +9322,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9337,7 +9337,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9366,7 +9366,7 @@
 						<name>match_matchBufferI_V_12</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9381,7 +9381,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9408,7 +9408,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9423,7 +9423,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9452,7 +9452,7 @@
 						<name>match_matchBufferQ_V_12</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9467,7 +9467,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9494,7 +9494,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9509,7 +9509,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9538,7 +9538,7 @@
 						<name>match_matchBufferI_V_13</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9553,7 +9553,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9580,7 +9580,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9595,7 +9595,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9624,7 +9624,7 @@
 						<name>match_matchBufferQ_V_13</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9639,7 +9639,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9666,7 +9666,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9681,7 +9681,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9710,7 +9710,7 @@
 						<name>match_matchBufferI_V_14</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9725,7 +9725,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9752,7 +9752,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9767,7 +9767,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9796,7 +9796,7 @@
 						<name>match_matchBufferQ_V_14</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9811,7 +9811,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9838,7 +9838,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9853,7 +9853,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -9882,7 +9882,7 @@
 						<name>match_matchBufferI_V_15</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9897,7 +9897,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9924,7 +9924,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9939,7 +9939,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -9968,7 +9968,7 @@
 						<name>match_matchBufferQ_V_15</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -9983,7 +9983,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10010,7 +10010,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10025,7 +10025,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10054,7 +10054,7 @@
 						<name>match_matchBufferI_V_16</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10069,7 +10069,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10096,7 +10096,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10111,7 +10111,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10140,7 +10140,7 @@
 						<name>match_matchBufferQ_V_16</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10155,7 +10155,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10182,7 +10182,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10197,7 +10197,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10226,7 +10226,7 @@
 						<name>match_matchBufferI_V_17</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10241,7 +10241,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10268,7 +10268,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10283,7 +10283,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10312,7 +10312,7 @@
 						<name>match_matchBufferQ_V_17</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10327,7 +10327,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10354,7 +10354,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10369,7 +10369,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10398,7 +10398,7 @@
 						<name>match_matchBufferI_V_18</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10413,7 +10413,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10440,7 +10440,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10455,7 +10455,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10484,7 +10484,7 @@
 						<name>match_matchBufferQ_V_18</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10499,7 +10499,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10526,7 +10526,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10541,7 +10541,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10570,7 +10570,7 @@
 						<name>match_matchBufferI_V_19</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10585,7 +10585,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10612,7 +10612,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10627,7 +10627,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10656,7 +10656,7 @@
 						<name>match_matchBufferQ_V_19</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10671,7 +10671,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10698,7 +10698,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10713,7 +10713,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10742,7 +10742,7 @@
 						<name>match_matchBufferI_V_20</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10757,7 +10757,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10784,7 +10784,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10799,7 +10799,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10828,7 +10828,7 @@
 						<name>match_matchBufferQ_V_20</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10843,7 +10843,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10870,7 +10870,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10885,7 +10885,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -10914,7 +10914,7 @@
 						<name>match_matchBufferI_V_21</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10929,7 +10929,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -10956,7 +10956,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -10971,7 +10971,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11000,7 +11000,7 @@
 						<name>match_matchBufferQ_V_21</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11015,7 +11015,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11042,7 +11042,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11057,7 +11057,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11086,7 +11086,7 @@
 						<name>match_matchBufferI_V_22</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11101,7 +11101,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11128,7 +11128,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11143,7 +11143,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11172,7 +11172,7 @@
 						<name>match_matchBufferQ_V_22</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11187,7 +11187,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11214,7 +11214,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11229,7 +11229,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11258,7 +11258,7 @@
 						<name>match_matchBufferI_V_23</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11273,7 +11273,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11300,7 +11300,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11315,7 +11315,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11344,7 +11344,7 @@
 						<name>match_matchBufferQ_V_23</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11359,7 +11359,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11386,7 +11386,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11401,7 +11401,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11430,7 +11430,7 @@
 						<name>match_matchBufferI_V_24</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11445,7 +11445,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11472,7 +11472,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11487,7 +11487,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11516,7 +11516,7 @@
 						<name>match_matchBufferQ_V_24</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11531,7 +11531,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11558,7 +11558,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11573,7 +11573,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11602,7 +11602,7 @@
 						<name>match_matchBufferI_V_25</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11617,7 +11617,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11644,7 +11644,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11659,7 +11659,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11688,7 +11688,7 @@
 						<name>match_matchBufferQ_V_25</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11703,7 +11703,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11730,7 +11730,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11745,7 +11745,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11774,7 +11774,7 @@
 						<name>match_matchBufferI_V_26</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11789,7 +11789,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11816,7 +11816,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11831,7 +11831,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11860,7 +11860,7 @@
 						<name>match_matchBufferQ_V_26</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11875,7 +11875,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11902,7 +11902,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11917,7 +11917,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -11946,7 +11946,7 @@
 						<name>match_matchBufferI_V_27</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -11961,7 +11961,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -11988,7 +11988,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12003,7 +12003,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12032,7 +12032,7 @@
 						<name>match_matchBufferQ_V_27</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12047,7 +12047,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12074,7 +12074,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12089,7 +12089,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12118,7 +12118,7 @@
 						<name>match_matchBufferI_V_28</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12133,7 +12133,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12160,7 +12160,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12175,7 +12175,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12204,7 +12204,7 @@
 						<name>match_matchBufferQ_V_28</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12219,7 +12219,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12246,7 +12246,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12261,7 +12261,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12290,7 +12290,7 @@
 						<name>match_matchBufferI_V_29</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12305,7 +12305,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12332,7 +12332,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12347,7 +12347,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12376,7 +12376,7 @@
 						<name>match_matchBufferQ_V_29</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12391,7 +12391,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12418,7 +12418,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12433,7 +12433,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12462,7 +12462,7 @@
 						<name>match_matchBufferI_V_30</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12477,7 +12477,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12504,7 +12504,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12519,7 +12519,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12548,7 +12548,7 @@
 						<name>match_matchBufferQ_V_30</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12563,7 +12563,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12590,7 +12590,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12605,7 +12605,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12634,7 +12634,7 @@
 						<name>match_matchBufferI_V_31</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12649,7 +12649,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12676,7 +12676,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12691,7 +12691,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12720,7 +12720,7 @@
 						<name>match_matchBufferQ_V_31</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12735,7 +12735,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12762,7 +12762,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12777,7 +12777,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12806,7 +12806,7 @@
 						<name>match_matchBufferI_V_32</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12821,7 +12821,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12848,7 +12848,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12863,7 +12863,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -12892,7 +12892,7 @@
 						<name>match_matchBufferQ_V_32</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12907,7 +12907,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12934,7 +12934,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12949,7 +12949,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -12978,7 +12978,7 @@
 						<name>match_matchBufferI_V_33</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -12993,7 +12993,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13020,7 +13020,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13035,7 +13035,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13064,7 +13064,7 @@
 						<name>match_matchBufferQ_V_33</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13079,7 +13079,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13106,7 +13106,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13121,7 +13121,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13150,7 +13150,7 @@
 						<name>match_matchBufferI_V_34</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13165,7 +13165,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13192,7 +13192,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13207,7 +13207,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13236,7 +13236,7 @@
 						<name>match_matchBufferQ_V_34</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13251,7 +13251,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13278,7 +13278,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13293,7 +13293,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13322,7 +13322,7 @@
 						<name>match_matchBufferI_V_35</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13337,7 +13337,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13364,7 +13364,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13379,7 +13379,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13408,7 +13408,7 @@
 						<name>match_matchBufferQ_V_35</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13423,7 +13423,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13450,7 +13450,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13465,7 +13465,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13494,7 +13494,7 @@
 						<name>match_matchBufferI_V_36</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13509,7 +13509,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13536,7 +13536,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13551,7 +13551,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13580,7 +13580,7 @@
 						<name>match_matchBufferQ_V_36</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13595,7 +13595,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13622,7 +13622,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13637,7 +13637,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13666,7 +13666,7 @@
 						<name>match_matchBufferI_V_37</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13681,7 +13681,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13708,7 +13708,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13723,7 +13723,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13752,7 +13752,7 @@
 						<name>match_matchBufferQ_V_37</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13767,7 +13767,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13794,7 +13794,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13809,7 +13809,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13838,7 +13838,7 @@
 						<name>match_matchBufferI_V_38</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13853,7 +13853,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13880,7 +13880,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13895,7 +13895,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -13924,7 +13924,7 @@
 						<name>match_matchBufferQ_V_38</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13939,7 +13939,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -13966,7 +13966,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -13981,7 +13981,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14010,7 +14010,7 @@
 						<name>match_matchBufferI_V_39</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14025,7 +14025,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14052,7 +14052,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14067,7 +14067,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14096,7 +14096,7 @@
 						<name>match_matchBufferQ_V_39</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14111,7 +14111,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14138,7 +14138,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14153,7 +14153,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14182,7 +14182,7 @@
 						<name>match_matchBufferI_V_40</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14197,7 +14197,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14224,7 +14224,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14239,7 +14239,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14268,7 +14268,7 @@
 						<name>match_matchBufferQ_V_40</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14283,7 +14283,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14310,7 +14310,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14325,7 +14325,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14354,7 +14354,7 @@
 						<name>match_matchBufferI_V_41</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14369,7 +14369,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14396,7 +14396,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14411,7 +14411,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14440,7 +14440,7 @@
 						<name>match_matchBufferQ_V_41</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14455,7 +14455,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14482,7 +14482,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14497,7 +14497,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14526,7 +14526,7 @@
 						<name>match_matchBufferI_V_42</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14541,7 +14541,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14568,7 +14568,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14583,7 +14583,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14612,7 +14612,7 @@
 						<name>match_matchBufferQ_V_42</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14627,7 +14627,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14654,7 +14654,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14669,7 +14669,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14698,7 +14698,7 @@
 						<name>match_matchBufferI_V_43</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14713,7 +14713,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14740,7 +14740,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14755,7 +14755,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14784,7 +14784,7 @@
 						<name>match_matchBufferQ_V_43</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14799,7 +14799,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14826,7 +14826,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14841,7 +14841,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14870,7 +14870,7 @@
 						<name>match_matchBufferI_V_44</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14885,7 +14885,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14912,7 +14912,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14927,7 +14927,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -14956,7 +14956,7 @@
 						<name>match_matchBufferQ_V_44</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -14971,7 +14971,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -14998,7 +14998,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15013,7 +15013,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15042,7 +15042,7 @@
 						<name>match_matchBufferI_V_45</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15057,7 +15057,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15084,7 +15084,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15099,7 +15099,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15128,7 +15128,7 @@
 						<name>match_matchBufferQ_V_45</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15143,7 +15143,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15170,7 +15170,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15185,7 +15185,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15214,7 +15214,7 @@
 						<name>match_matchBufferI_V_46</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15229,7 +15229,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15256,7 +15256,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15271,7 +15271,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15300,7 +15300,7 @@
 						<name>match_matchBufferQ_V_46</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15315,7 +15315,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15342,7 +15342,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15357,7 +15357,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15386,7 +15386,7 @@
 						<name>match_matchBufferI_V_47</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15401,7 +15401,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15428,7 +15428,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15443,7 +15443,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15472,7 +15472,7 @@
 						<name>match_matchBufferQ_V_47</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15487,7 +15487,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15514,7 +15514,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15529,7 +15529,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15558,7 +15558,7 @@
 						<name>match_matchBufferI_V_48</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15573,7 +15573,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15600,7 +15600,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15615,7 +15615,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15644,7 +15644,7 @@
 						<name>match_matchBufferQ_V_48</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15659,7 +15659,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15686,7 +15686,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15701,7 +15701,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15730,7 +15730,7 @@
 						<name>match_matchBufferI_V_49</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15745,7 +15745,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15772,7 +15772,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15787,7 +15787,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15816,7 +15816,7 @@
 						<name>match_matchBufferQ_V_49</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15831,7 +15831,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15858,7 +15858,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15873,7 +15873,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -15902,7 +15902,7 @@
 						<name>match_matchBufferI_V_50</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15917,7 +15917,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15944,7 +15944,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -15959,7 +15959,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -15988,7 +15988,7 @@
 						<name>match_matchBufferQ_V_50</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16003,7 +16003,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16030,7 +16030,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16045,7 +16045,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16074,7 +16074,7 @@
 						<name>match_matchBufferI_V_51</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16089,7 +16089,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16116,7 +16116,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16131,7 +16131,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16160,7 +16160,7 @@
 						<name>match_matchBufferQ_V_51</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16175,7 +16175,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16202,7 +16202,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16217,7 +16217,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16246,7 +16246,7 @@
 						<name>match_matchBufferI_V_52</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16261,7 +16261,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16288,7 +16288,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16303,7 +16303,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16332,7 +16332,7 @@
 						<name>match_matchBufferQ_V_52</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16347,7 +16347,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16374,7 +16374,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16389,7 +16389,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16418,7 +16418,7 @@
 						<name>match_matchBufferI_V_53</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16433,7 +16433,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16460,7 +16460,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16475,7 +16475,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16504,7 +16504,7 @@
 						<name>match_matchBufferQ_V_53</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16519,7 +16519,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16546,7 +16546,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16561,7 +16561,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16590,7 +16590,7 @@
 						<name>match_matchBufferI_V_54</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16605,7 +16605,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16632,7 +16632,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16647,7 +16647,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16676,7 +16676,7 @@
 						<name>match_matchBufferQ_V_54</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16691,7 +16691,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16718,7 +16718,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16733,7 +16733,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16762,7 +16762,7 @@
 						<name>match_matchBufferI_V_55</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16777,7 +16777,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16804,7 +16804,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16819,7 +16819,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16848,7 +16848,7 @@
 						<name>match_matchBufferQ_V_55</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16863,7 +16863,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16890,7 +16890,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16905,7 +16905,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -16934,7 +16934,7 @@
 						<name>match_matchBufferI_V_56</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16949,7 +16949,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -16976,7 +16976,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -16991,7 +16991,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17020,7 +17020,7 @@
 						<name>match_matchBufferQ_V_56</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17035,7 +17035,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17062,7 +17062,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17077,7 +17077,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17106,7 +17106,7 @@
 						<name>match_matchBufferI_V_57</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17121,7 +17121,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17148,7 +17148,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17163,7 +17163,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17192,7 +17192,7 @@
 						<name>match_matchBufferQ_V_57</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17207,7 +17207,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17234,7 +17234,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17249,7 +17249,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17278,7 +17278,7 @@
 						<name>match_matchBufferI_V_58</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17293,7 +17293,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17320,7 +17320,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17335,7 +17335,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17364,7 +17364,7 @@
 						<name>match_matchBufferQ_V_58</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17379,7 +17379,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17406,7 +17406,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17421,7 +17421,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17450,7 +17450,7 @@
 						<name>match_matchBufferI_V_59</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17465,7 +17465,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17492,7 +17492,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17507,7 +17507,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17536,7 +17536,7 @@
 						<name>match_matchBufferQ_V_59</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17551,7 +17551,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17578,7 +17578,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17593,7 +17593,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17622,7 +17622,7 @@
 						<name>match_matchBufferI_V_60</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17637,7 +17637,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17664,7 +17664,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17679,7 +17679,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17708,7 +17708,7 @@
 						<name>match_matchBufferQ_V_60</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17723,7 +17723,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17750,7 +17750,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17765,7 +17765,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17794,7 +17794,7 @@
 						<name>match_matchBufferI_V_61</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17809,7 +17809,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17836,7 +17836,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17851,7 +17851,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -17880,7 +17880,7 @@
 						<name>match_matchBufferQ_V_61</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17895,7 +17895,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17922,7 +17922,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17937,7 +17937,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -17966,7 +17966,7 @@
 						<name>match_matchBufferI_V_62</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -17981,7 +17981,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18008,7 +18008,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18023,7 +18023,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18052,7 +18052,7 @@
 						<name>match_matchBufferQ_V_62</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18067,7 +18067,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18094,7 +18094,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18109,7 +18109,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18138,7 +18138,7 @@
 						<name>match_matchBufferI_V_63</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18153,7 +18153,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18180,7 +18180,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18195,7 +18195,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18224,7 +18224,7 @@
 						<name>match_matchBufferQ_V_63</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18239,7 +18239,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18266,7 +18266,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18281,7 +18281,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18310,7 +18310,7 @@
 						<name>match_matchBufferI_V_64</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18325,7 +18325,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18352,7 +18352,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18367,7 +18367,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18396,7 +18396,7 @@
 						<name>match_matchBufferQ_V_64</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18411,7 +18411,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18438,7 +18438,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18453,7 +18453,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18482,7 +18482,7 @@
 						<name>match_matchBufferI_V_65</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18497,7 +18497,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18524,7 +18524,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18539,7 +18539,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18568,7 +18568,7 @@
 						<name>match_matchBufferQ_V_65</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18583,7 +18583,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18610,7 +18610,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18625,7 +18625,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18654,7 +18654,7 @@
 						<name>match_matchBufferI_V_66</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18669,7 +18669,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18696,7 +18696,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18711,7 +18711,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18740,7 +18740,7 @@
 						<name>match_matchBufferQ_V_66</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18755,7 +18755,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18782,7 +18782,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18797,7 +18797,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18826,7 +18826,7 @@
 						<name>match_matchBufferI_V_67</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18841,7 +18841,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18868,7 +18868,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18883,7 +18883,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -18912,7 +18912,7 @@
 						<name>match_matchBufferQ_V_67</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18927,7 +18927,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18954,7 +18954,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -18969,7 +18969,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -18998,7 +18998,7 @@
 						<name>match_matchBufferI_V_68</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19013,7 +19013,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19040,7 +19040,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19055,7 +19055,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19084,7 +19084,7 @@
 						<name>match_matchBufferQ_V_68</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19099,7 +19099,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19126,7 +19126,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19141,7 +19141,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19170,7 +19170,7 @@
 						<name>match_matchBufferI_V_69</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19185,7 +19185,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19212,7 +19212,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19227,7 +19227,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19256,7 +19256,7 @@
 						<name>match_matchBufferQ_V_69</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19271,7 +19271,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19298,7 +19298,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19313,7 +19313,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19342,7 +19342,7 @@
 						<name>match_matchBufferI_V_70</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19357,7 +19357,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19384,7 +19384,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19399,7 +19399,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19428,7 +19428,7 @@
 						<name>match_matchBufferQ_V_70</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19443,7 +19443,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19470,7 +19470,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19485,7 +19485,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19514,7 +19514,7 @@
 						<name>match_matchBufferI_V_71</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19529,7 +19529,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19556,7 +19556,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19571,7 +19571,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19600,7 +19600,7 @@
 						<name>match_matchBufferQ_V_71</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19615,7 +19615,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19642,7 +19642,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19657,7 +19657,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19686,7 +19686,7 @@
 						<name>match_matchBufferI_V_72</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19701,7 +19701,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19728,7 +19728,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19743,7 +19743,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19772,7 +19772,7 @@
 						<name>match_matchBufferQ_V_72</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19787,7 +19787,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19814,7 +19814,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19829,7 +19829,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19858,7 +19858,7 @@
 						<name>match_matchBufferI_V_73</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19873,7 +19873,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19900,7 +19900,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19915,7 +19915,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -19944,7 +19944,7 @@
 						<name>match_matchBufferQ_V_73</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -19959,7 +19959,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -19986,7 +19986,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20001,7 +20001,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20030,7 +20030,7 @@
 						<name>match_matchBufferI_V_74</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20045,7 +20045,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20072,7 +20072,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20087,7 +20087,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20116,7 +20116,7 @@
 						<name>match_matchBufferQ_V_74</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20131,7 +20131,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20158,7 +20158,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20173,7 +20173,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20202,7 +20202,7 @@
 						<name>match_matchBufferI_V_75</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20217,7 +20217,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20244,7 +20244,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20259,7 +20259,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20288,7 +20288,7 @@
 						<name>match_matchBufferQ_V_75</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20303,7 +20303,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20330,7 +20330,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20345,7 +20345,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20374,7 +20374,7 @@
 						<name>match_matchBufferI_V_76</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20389,7 +20389,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20416,7 +20416,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20431,7 +20431,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20460,7 +20460,7 @@
 						<name>match_matchBufferQ_V_76</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20475,7 +20475,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20502,7 +20502,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20517,7 +20517,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20546,7 +20546,7 @@
 						<name>match_matchBufferI_V_77</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20561,7 +20561,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20588,7 +20588,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20603,7 +20603,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20632,7 +20632,7 @@
 						<name>match_matchBufferQ_V_77</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20647,7 +20647,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20674,7 +20674,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20689,7 +20689,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20718,7 +20718,7 @@
 						<name>match_matchBufferI_V_78</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20733,7 +20733,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20760,7 +20760,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20775,7 +20775,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20804,7 +20804,7 @@
 						<name>match_matchBufferQ_V_78</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20819,7 +20819,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20846,7 +20846,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20861,7 +20861,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -20890,7 +20890,7 @@
 						<name>match_matchBufferI_V_79</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20905,7 +20905,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20932,7 +20932,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20947,7 +20947,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -20976,7 +20976,7 @@
 						<name>match_matchBufferQ_V_79</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -20991,7 +20991,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21018,7 +21018,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21033,7 +21033,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21062,7 +21062,7 @@
 						<name>match_matchBufferI_V_80</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21077,7 +21077,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21104,7 +21104,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21119,7 +21119,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21148,7 +21148,7 @@
 						<name>match_matchBufferQ_V_80</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21163,7 +21163,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21190,7 +21190,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21205,7 +21205,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21234,7 +21234,7 @@
 						<name>match_matchBufferI_V_81</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21249,7 +21249,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21276,7 +21276,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21291,7 +21291,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21320,7 +21320,7 @@
 						<name>match_matchBufferQ_V_81</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21335,7 +21335,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21362,7 +21362,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21377,7 +21377,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21406,7 +21406,7 @@
 						<name>match_matchBufferI_V_82</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21421,7 +21421,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21448,7 +21448,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21463,7 +21463,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21492,7 +21492,7 @@
 						<name>match_matchBufferQ_V_82</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21507,7 +21507,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21534,7 +21534,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21549,7 +21549,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21578,7 +21578,7 @@
 						<name>match_matchBufferI_V_83</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21593,7 +21593,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21620,7 +21620,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21635,7 +21635,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21664,7 +21664,7 @@
 						<name>match_matchBufferQ_V_83</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21679,7 +21679,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21706,7 +21706,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21721,7 +21721,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21750,7 +21750,7 @@
 						<name>match_matchBufferI_V_84</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21765,7 +21765,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21792,7 +21792,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21807,7 +21807,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21836,7 +21836,7 @@
 						<name>match_matchBufferQ_V_84</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21851,7 +21851,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21878,7 +21878,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21893,7 +21893,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -21922,7 +21922,7 @@
 						<name>match_matchBufferI_V_85</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21937,7 +21937,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -21964,7 +21964,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -21979,7 +21979,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22008,7 +22008,7 @@
 						<name>match_matchBufferQ_V_85</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22023,7 +22023,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22050,7 +22050,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22065,7 +22065,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22094,7 +22094,7 @@
 						<name>match_matchBufferI_V_86</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22109,7 +22109,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22136,7 +22136,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22151,7 +22151,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22180,7 +22180,7 @@
 						<name>match_matchBufferQ_V_86</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22195,7 +22195,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22222,7 +22222,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22237,7 +22237,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22266,7 +22266,7 @@
 						<name>match_matchBufferI_V_87</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22281,7 +22281,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22308,7 +22308,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22323,7 +22323,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22352,7 +22352,7 @@
 						<name>match_matchBufferQ_V_87</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22367,7 +22367,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22394,7 +22394,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22409,7 +22409,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22438,7 +22438,7 @@
 						<name>match_matchBufferI_V_88</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22453,7 +22453,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22480,7 +22480,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22495,7 +22495,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22524,7 +22524,7 @@
 						<name>match_matchBufferQ_V_88</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22539,7 +22539,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22566,7 +22566,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22581,7 +22581,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22610,7 +22610,7 @@
 						<name>match_matchBufferI_V_89</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22625,7 +22625,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22652,7 +22652,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22667,7 +22667,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22696,7 +22696,7 @@
 						<name>match_matchBufferQ_V_89</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22711,7 +22711,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22738,7 +22738,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22753,7 +22753,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22782,7 +22782,7 @@
 						<name>match_matchBufferI_V_90</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22797,7 +22797,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22824,7 +22824,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22839,7 +22839,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22868,7 +22868,7 @@
 						<name>match_matchBufferQ_V_90</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22883,7 +22883,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22910,7 +22910,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22925,7 +22925,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -22954,7 +22954,7 @@
 						<name>match_matchBufferI_V_91</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -22969,7 +22969,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -22996,7 +22996,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23011,7 +23011,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23040,7 +23040,7 @@
 						<name>match_matchBufferQ_V_91</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23055,7 +23055,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23082,7 +23082,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23097,7 +23097,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23126,7 +23126,7 @@
 						<name>match_matchBufferI_V_92</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23141,7 +23141,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23168,7 +23168,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23183,7 +23183,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23212,7 +23212,7 @@
 						<name>match_matchBufferQ_V_92</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23227,7 +23227,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23254,7 +23254,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23269,7 +23269,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23298,7 +23298,7 @@
 						<name>match_matchBufferI_V_93</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23313,7 +23313,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23340,7 +23340,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23355,7 +23355,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23384,7 +23384,7 @@
 						<name>match_matchBufferQ_V_93</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23399,7 +23399,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23426,7 +23426,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23441,7 +23441,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23470,7 +23470,7 @@
 						<name>match_matchBufferI_V_94</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23485,7 +23485,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23512,7 +23512,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23527,7 +23527,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23556,7 +23556,7 @@
 						<name>match_matchBufferQ_V_94</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23571,7 +23571,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23598,7 +23598,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23613,7 +23613,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23642,7 +23642,7 @@
 						<name>match_matchBufferI_V_95</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23657,7 +23657,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23684,7 +23684,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23699,7 +23699,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23728,7 +23728,7 @@
 						<name>match_matchBufferQ_V_95</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23743,7 +23743,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23770,7 +23770,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23785,7 +23785,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23814,7 +23814,7 @@
 						<name>match_matchBufferI_V_96</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23829,7 +23829,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23856,7 +23856,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23871,7 +23871,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -23900,7 +23900,7 @@
 						<name>match_matchBufferQ_V_96</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23915,7 +23915,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23942,7 +23942,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -23957,7 +23957,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -23986,7 +23986,7 @@
 						<name>match_matchBufferI_V_97</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24001,7 +24001,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24028,7 +24028,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24043,7 +24043,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24072,7 +24072,7 @@
 						<name>match_matchBufferQ_V_97</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24087,7 +24087,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24114,7 +24114,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24129,7 +24129,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24158,7 +24158,7 @@
 						<name>match_matchBufferI_V_98</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24173,7 +24173,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24200,7 +24200,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24215,7 +24215,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24244,7 +24244,7 @@
 						<name>match_matchBufferQ_V_98</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24259,7 +24259,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24286,7 +24286,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24301,7 +24301,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24330,7 +24330,7 @@
 						<name>match_matchBufferI_V_99</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24345,7 +24345,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24372,7 +24372,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24387,7 +24387,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24416,7 +24416,7 @@
 						<name>match_matchBufferQ_V_99</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24431,7 +24431,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24458,7 +24458,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24473,7 +24473,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24502,7 +24502,7 @@
 						<name>match_matchBufferI_V_100</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24517,7 +24517,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24544,7 +24544,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24559,7 +24559,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24588,7 +24588,7 @@
 						<name>match_matchBufferQ_V_100</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24603,7 +24603,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24630,7 +24630,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24645,7 +24645,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24674,7 +24674,7 @@
 						<name>match_matchBufferI_V_101</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24689,7 +24689,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24716,7 +24716,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24731,7 +24731,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24760,7 +24760,7 @@
 						<name>match_matchBufferQ_V_101</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24775,7 +24775,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24802,7 +24802,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24817,7 +24817,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24846,7 +24846,7 @@
 						<name>match_matchBufferI_V_102</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24861,7 +24861,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24888,7 +24888,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24903,7 +24903,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -24932,7 +24932,7 @@
 						<name>match_matchBufferQ_V_102</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24947,7 +24947,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -24974,7 +24974,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -24989,7 +24989,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25018,7 +25018,7 @@
 						<name>match_matchBufferI_V_103</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25033,7 +25033,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25060,7 +25060,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25075,7 +25075,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25104,7 +25104,7 @@
 						<name>match_matchBufferQ_V_103</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25119,7 +25119,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25146,7 +25146,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25161,7 +25161,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25190,7 +25190,7 @@
 						<name>match_matchBufferI_V_104</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25205,7 +25205,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25232,7 +25232,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25247,7 +25247,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25276,7 +25276,7 @@
 						<name>match_matchBufferQ_V_104</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25291,7 +25291,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25318,7 +25318,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25333,7 +25333,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25362,7 +25362,7 @@
 						<name>match_matchBufferI_V_105</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25377,7 +25377,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25404,7 +25404,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25419,7 +25419,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25448,7 +25448,7 @@
 						<name>match_matchBufferQ_V_105</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25463,7 +25463,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25490,7 +25490,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25505,7 +25505,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25534,7 +25534,7 @@
 						<name>match_matchBufferI_V_106</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25549,7 +25549,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25576,7 +25576,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25591,7 +25591,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25620,7 +25620,7 @@
 						<name>match_matchBufferQ_V_106</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25635,7 +25635,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25662,7 +25662,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25677,7 +25677,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25706,7 +25706,7 @@
 						<name>match_matchBufferI_V_107</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25721,7 +25721,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25748,7 +25748,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25763,7 +25763,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25792,7 +25792,7 @@
 						<name>match_matchBufferQ_V_107</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25807,7 +25807,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25834,7 +25834,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25849,7 +25849,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -25878,7 +25878,7 @@
 						<name>match_matchBufferI_V_108</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25893,7 +25893,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25920,7 +25920,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25935,7 +25935,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -25964,7 +25964,7 @@
 						<name>match_matchBufferQ_V_108</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -25979,7 +25979,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26006,7 +26006,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26021,7 +26021,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26050,7 +26050,7 @@
 						<name>match_matchBufferI_V_109</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26065,7 +26065,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26092,7 +26092,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26107,7 +26107,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26136,7 +26136,7 @@
 						<name>match_matchBufferQ_V_109</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26151,7 +26151,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26178,7 +26178,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26193,7 +26193,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26222,7 +26222,7 @@
 						<name>match_matchBufferI_V_110</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26237,7 +26237,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26264,7 +26264,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26279,7 +26279,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26308,7 +26308,7 @@
 						<name>match_matchBufferQ_V_110</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26323,7 +26323,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26350,7 +26350,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26365,7 +26365,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26394,7 +26394,7 @@
 						<name>match_matchBufferI_V_111</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26409,7 +26409,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26436,7 +26436,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26451,7 +26451,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26480,7 +26480,7 @@
 						<name>match_matchBufferQ_V_111</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26495,7 +26495,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26522,7 +26522,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26537,7 +26537,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26566,7 +26566,7 @@
 						<name>match_matchBufferI_V_112</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26581,7 +26581,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26608,7 +26608,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26623,7 +26623,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26652,7 +26652,7 @@
 						<name>match_matchBufferQ_V_112</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26667,7 +26667,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26694,7 +26694,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26709,7 +26709,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26738,7 +26738,7 @@
 						<name>match_matchBufferI_V_113</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26753,7 +26753,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26780,7 +26780,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26795,7 +26795,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26824,7 +26824,7 @@
 						<name>match_matchBufferQ_V_113</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26839,7 +26839,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26866,7 +26866,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26881,7 +26881,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -26910,7 +26910,7 @@
 						<name>match_matchBufferI_V_114</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26925,7 +26925,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26952,7 +26952,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -26967,7 +26967,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -26996,7 +26996,7 @@
 						<name>match_matchBufferQ_V_114</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27011,7 +27011,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27038,7 +27038,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27053,7 +27053,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27082,7 +27082,7 @@
 						<name>match_matchBufferI_V_115</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27097,7 +27097,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27124,7 +27124,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27139,7 +27139,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27168,7 +27168,7 @@
 						<name>match_matchBufferQ_V_115</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27183,7 +27183,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27210,7 +27210,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27225,7 +27225,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27254,7 +27254,7 @@
 						<name>match_matchBufferI_V_116</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27269,7 +27269,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27296,7 +27296,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27311,7 +27311,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27340,7 +27340,7 @@
 						<name>match_matchBufferQ_V_116</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27355,7 +27355,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27382,7 +27382,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27397,7 +27397,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27426,7 +27426,7 @@
 						<name>match_matchBufferI_V_117</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27441,7 +27441,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27468,7 +27468,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27483,7 +27483,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27512,7 +27512,7 @@
 						<name>match_matchBufferQ_V_117</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27527,7 +27527,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27554,7 +27554,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27569,7 +27569,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27598,7 +27598,7 @@
 						<name>match_matchBufferI_V_118</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27613,7 +27613,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27640,7 +27640,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27655,7 +27655,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27684,7 +27684,7 @@
 						<name>match_matchBufferQ_V_118</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27699,7 +27699,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27726,7 +27726,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27741,7 +27741,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27770,7 +27770,7 @@
 						<name>match_matchBufferI_V_119</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27785,7 +27785,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27812,7 +27812,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27827,7 +27827,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27856,7 +27856,7 @@
 						<name>match_matchBufferQ_V_119</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27871,7 +27871,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27898,7 +27898,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27913,7 +27913,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -27942,7 +27942,7 @@
 						<name>match_matchBufferI_V_120</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27957,7 +27957,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -27984,7 +27984,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -27999,7 +27999,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28028,7 +28028,7 @@
 						<name>match_matchBufferQ_V_120</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28043,7 +28043,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28070,7 +28070,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28085,7 +28085,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28114,7 +28114,7 @@
 						<name>match_matchBufferI_V_121</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28129,7 +28129,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28156,7 +28156,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28171,7 +28171,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28200,7 +28200,7 @@
 						<name>match_matchBufferQ_V_121</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28215,7 +28215,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28242,7 +28242,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28257,7 +28257,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28286,7 +28286,7 @@
 						<name>match_matchBufferI_V_122</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28301,7 +28301,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28328,7 +28328,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28343,7 +28343,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28372,7 +28372,7 @@
 						<name>match_matchBufferQ_V_122</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28387,7 +28387,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28414,7 +28414,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28429,7 +28429,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28458,7 +28458,7 @@
 						<name>match_matchBufferI_V_123</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28473,7 +28473,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28500,7 +28500,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28515,7 +28515,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28544,7 +28544,7 @@
 						<name>match_matchBufferQ_V_123</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28559,7 +28559,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28586,7 +28586,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28601,7 +28601,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28630,7 +28630,7 @@
 						<name>match_matchBufferI_V_124</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28645,7 +28645,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28672,7 +28672,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28687,7 +28687,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28716,7 +28716,7 @@
 						<name>match_matchBufferQ_V_124</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28731,7 +28731,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28758,7 +28758,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28773,7 +28773,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28802,7 +28802,7 @@
 						<name>match_matchBufferI_V_125</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28817,7 +28817,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28844,7 +28844,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28859,7 +28859,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -28888,7 +28888,7 @@
 						<name>match_matchBufferQ_V_125</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28903,7 +28903,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28930,7 +28930,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28945,7 +28945,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -28974,7 +28974,7 @@
 						<name>match_matchBufferI_V_126</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -28989,7 +28989,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -29016,7 +29016,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>57</lineNumber>
+						<lineNumber>58</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -29031,7 +29031,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>57</second>
+										<second>58</second>
 									</item>
 								</second>
 							</item>
@@ -29060,7 +29060,7 @@
 						<name>match_matchBufferQ_V_126</name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -29075,7 +29075,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -29102,7 +29102,7 @@
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>59</lineNumber>
 						<contextFuncName>shiftSampleIn</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -29117,7 +29117,7 @@
 											<first>matchedRee/matchFilter.cpp</first>
 											<second>shiftSampleIn</second>
 										</first>
-										<second>58</second>
+										<second>59</second>
 									</item>
 								</second>
 							</item>
@@ -29143,50 +29143,6 @@
 					<Obj>
 						<type>0</type>
 						<id>769</id>
-						<name></name>
-						<fileName>matchedRee/matchFilter.cpp</fileName>
-						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
-						<lineNumber>60</lineNumber>
-						<contextFuncName>shiftSampleIn</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>matchedRee/matchFilter.cpp</first>
-											<second>shiftSampleIn</second>
-										</first>
-										<second>60</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>1540</item>
-					<item>1541</item>
-					<item>1545</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_770">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>770</id>
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
@@ -29219,18 +29175,18 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>1542</item>
-					<item>1543</item>
-					<item>1544</item>
+					<item>1540</item>
+					<item>1541</item>
+					<item>1545</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_771">
+			<item class_id_reference="9" object_id="_770">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>771</id>
+						<id>770</id>
 						<name></name>
 						<fileName>matchedRee/matchFilter.cpp</fileName>
 						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
@@ -29250,6 +29206,50 @@
 											<second>shiftSampleIn</second>
 										</first>
 										<second>62</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>1542</item>
+					<item>1543</item>
+					<item>1544</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_771">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>771</id>
+						<name></name>
+						<fileName>matchedRee/matchFilter.cpp</fileName>
+						<fileDirectory>/home/ece492fa18/RFNoCFrameSynchHWAccel</fileDirectory>
+						<lineNumber>63</lineNumber>
+						<contextFuncName>shiftSampleIn</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ece492fa18/RFNoCFrameSynchHWAccel</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>matchedRee/matchFilter.cpp</first>
+											<second>shiftSampleIn</second>
+										</first>
+										<second>63</second>
 									</item>
 								</second>
 							</item>

@@ -42,34 +42,9 @@
 			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/IMLANCE.csv</name>
-			<type>1</type>
-			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/IMLANCE.csv</location>
-		</link>
-		<link>
-			<name>source/inputCorrr.dat</name>
-			<type>1</type>
-			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/inputCorrr.dat</location>
-		</link>
-		<link>
 			<name>source/matchFilter.cpp</name>
 			<type>1</type>
 			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/matchFilter.cpp</location>
-		</link>
-		<link>
-			<name>source/results.csv</name>
-			<type>1</type>
-			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/results.csv</location>
-		</link>
-		<link>
-			<name>source/tb_input.txt</name>
-			<type>1</type>
-			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/tb_input.txt</location>
-		</link>
-		<link>
-			<name>source/tb_output.txt</name>
-			<type>1</type>
-			<location>/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/tb_output.txt</location>
 		</link>
 		<link>
 			<name>testbench/tb_main.cpp</name>

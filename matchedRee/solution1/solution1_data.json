@@ -8,8 +8,8 @@
   "HostMachineBits": "64",
   "Target": {
     "Family": "kintex7",
-    "Device": "xc7k160t",
-    "Package": "fbg484",
+    "Device": "xc7k410t",
+    "Package": "ffg900",
     "Speed": "-1"
   },
   "HlsSolution": {
@@ -285,7 +285,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-04-20 22:10:02 EDT",
+    "Time": "2019-04-21 19:03:33 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

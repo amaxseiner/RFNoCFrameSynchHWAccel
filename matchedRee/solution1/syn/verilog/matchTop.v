@@ -5,16 +5,16 @@
 // 
 // ===========================================================
 
-`timescale 1 ns / 1 ps
-`include "convol.v"                
+`timescale 1 ns / 1 ps 
+`include "convol.v                
 `include "matchTop_mul_mul_dEe.v"  
 `include "matchTop_mul_mul_g8j.v"  
 `include "matchTop_mul_mul_jbC.v"  
 `include "matchTop_mul_mul_mb6.v"  
 `include "matchTop_mul_mul_pcA.v"
-`include "matchTop_mul_mul_bkb.v"  
+`include "matchTop_mul_mul_bkb.v" 
 `include "matchTop_mul_mul_eOg.v"  
-`include "matchTop_mul_mul_hbi.v"  
+`include "matchTop_mul_mul_hbi.v" 
 `include "matchTop_mul_mul_kbM.v"  
 `include "matchTop_mul_mul_ncg.v"  
 `include "matchTop_mul_mul_cud.v"  
@@ -23,9 +23,9 @@
 `include "matchTop_mul_mul_lbW.v"  
 `include "matchTop_mul_mul_ocq.v"  
 `include "shiftSampleIn.v"
- 
 
-(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.534375,HLS_SYN_LAT=133,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=218,HLS_SYN_FF=18959,HLS_SYN_LUT=24922}" *)
+
+(* CORE_GENERATION_INFO="matchTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.534375,HLS_SYN_LAT=133,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=218,HLS_SYN_FF=18959,HLS_SYN_LUT=24922}" *)
 
 module matchTop (
         ap_clk,

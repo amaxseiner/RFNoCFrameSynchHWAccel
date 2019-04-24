@@ -3,13 +3,13 @@
 ================================================================
 == Vivado HLS Report for 'matchTop'
 ================================================================
-* Date:           Sat Apr 20 22:09:45 2019
+* Date:           Sun Apr 21 19:03:17 2019
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        matchedRee
 * Solution:       solution1
 * Product family: kintex7
-* Target device:  xc7k160tfbg484-1
+* Target device:  xc7k410tffg900-1
 
 
 ================================================================

@@ -5,18 +5,13 @@
 ############################################################
 open_project matchedRee
 set_top matchTop
-add_files matchedRee/IMLANCE.csv
-add_files matchedRee/inputCorrr.dat
 add_files matchedRee/matchFilter.cpp
-add_files matchedRee/results.csv
-add_files matchedRee/tb_input.txt
-add_files matchedRee/tb_output.txt
 add_files -tb matchedRee/tb_main.cpp
 open_solution "solution1"
-set_part {xc7k160tfbg484-1} -tool vivado
+set_part {xc7k410tffg900-1}
 create_clock -period 5 -name default
 #source "./matchedRee/solution1/directives.tcl"
 csim_design -clean -compiler gcc -setup
 csynth_design
-cosim_design -trace_level all -tool xsim
+cosim_design -compiler gcc -trace_level all -tool xsim
 export_design -rtl verilog -format ip_catalog

@@ -7,7 +7,7 @@ void matchTop(hls::stream<rfnoc_axis> i_data, hls::stream<rfnoc_axis> o_data){
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port=o_data
 #pragma HLS INTERFACE axis port=i_data
-//#pragma HLS PIPELINE II=1
+//#pragma HLS PIPELINE II=2
 
 static matchFilter_ff match;
 #pragma HLS ARRAY_PARTITION variable=match.matchBufferQ complete dim=1
@@ -54,6 +54,7 @@ ap_int<16> tmp_dataQ,tmp_dataI;
 void matchFilter_ff::shiftSampleIn(fixedMatch newVali, fixedMatch newValq){
 	for(int a=128-1;a>0;a--){
 		#pragma HLS UNROLL
+		//#pragma HLS PIPELINE
 		matchBufferI[a]=matchBufferI[a-1];
 		matchBufferQ[a]=matchBufferQ[a-1];
 	}
@@ -72,6 +73,7 @@ ap_int<32> matchFilter_ff::convol(){
 
 	for(int b=0;b<128;b++){
 		#pragma HLS UNROLL
+		//#pragma HLS PIPELINE
 		tempQ = tempQ+(matchBufferQ[b] * preamble[b]);
 		tempI = tempI+(matchBufferI[b] * preamble[b]);
 	}

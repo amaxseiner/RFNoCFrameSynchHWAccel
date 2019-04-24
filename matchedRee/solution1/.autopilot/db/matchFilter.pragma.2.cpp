@@ -29498,6 +29498,7 @@ ap_int<16> tmp_dataQ,tmp_dataI;
 void matchFilter_ff::shiftSampleIn(fixedMatch newVali, fixedMatch newValq){
  for(int a=128-1;a>0;a--){
 _ssdm_Unroll(0,0,0, "");
+
  matchBufferI[a]=matchBufferI[a-1];
   matchBufferQ[a]=matchBufferQ[a-1];
  }
@@ -29516,6 +29517,7 @@ ap_int<32> matchFilter_ff::convol(){
 
  for(int b=0;b<128;b++){
 _ssdm_Unroll(0,0,0, "");
+
  tempQ = tempQ+(matchBufferQ[b] * preamble[b]);
   tempI = tempI+(matchBufferI[b] * preamble[b]);
  }
