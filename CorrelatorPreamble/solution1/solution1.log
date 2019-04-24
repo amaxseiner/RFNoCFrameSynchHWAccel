@@ -6,15 +6,15 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ==============================================================
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
+INFO: [HLS 200-10] Setting target device to 'xc7k410tffg900-1'
 INFO: [HLS 200-10] Analyzing design file 'CorrelatorPreamble/correlatorPre.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:39 ; elapsed = 00:00:17 . Memory (MB): peak = 359.945 ; gain = 13.375 ; free physical = 106371 ; free virtual = 253767
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:41 ; elapsed = 00:00:19 . Memory (MB): peak = 359.945 ; gain = 13.375 ; free physical = 106367 ; free virtual = 253766
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:39 ; elapsed = 00:00:16 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 106260 ; free virtual = 253937
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 106257 ; free virtual = 253938
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:20 . Memory (MB): peak = 360.488 ; gain = 13.918 ; free physical = 106346 ; free virtual = 253749
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:42 ; elapsed = 00:00:19 . Memory (MB): peak = 360.512 ; gain = 13.938 ; free physical = 106237 ; free virtual = 253922
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 488.473 ; gain = 141.902 ; free physical = 106338 ; free virtual = 253742
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:42 ; elapsed = 00:00:20 . Memory (MB): peak = 488.492 ; gain = 141.918 ; free physical = 106230 ; free virtual = 253915
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (CorrelatorPreamble/correlatorPre.cpp:175) in function 'correlate::shiftPhaseClassPre' completely.
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA1' (CorrelatorPreamble/correlatorPre.cpp:184) in function 'correlate::shiftPhaseClassPre' completely.
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA2' (CorrelatorPreamble/correlatorPre.cpp:193) in function 'correlate::shiftPhaseClassPre' completely.
@@ -31,22 +31,22 @@ INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA12' (CorrelatorPreamble/correlat
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA13' (CorrelatorPreamble/correlatorPre.cpp:295) in function 'correlate::shiftPhaseClassPre' completely.
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA14' (CorrelatorPreamble/correlatorPre.cpp:304) in function 'correlate::shiftPhaseClassPre' completely.
 INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA15' (CorrelatorPreamble/correlatorPre.cpp:313) in function 'correlate::shiftPhaseClassPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (CorrelatorPreamble/correlatorPre.cpp:350) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData1' (CorrelatorPreamble/correlatorPre.cpp:363) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData2' (CorrelatorPreamble/correlatorPre.cpp:375) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData3' (CorrelatorPreamble/correlatorPre.cpp:387) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData4' (CorrelatorPreamble/correlatorPre.cpp:399) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData5' (CorrelatorPreamble/correlatorPre.cpp:412) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData6' (CorrelatorPreamble/correlatorPre.cpp:424) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData7' (CorrelatorPreamble/correlatorPre.cpp:436) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData8' (CorrelatorPreamble/correlatorPre.cpp:448) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData9' (CorrelatorPreamble/correlatorPre.cpp:460) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData10' (CorrelatorPreamble/correlatorPre.cpp:472) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData11' (CorrelatorPreamble/correlatorPre.cpp:484) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData12' (CorrelatorPreamble/correlatorPre.cpp:496) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData13' (CorrelatorPreamble/correlatorPre.cpp:508) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData14' (CorrelatorPreamble/correlatorPre.cpp:520) in function 'correlate::correlatorPre' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData15' (CorrelatorPreamble/correlatorPre.cpp:532) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (CorrelatorPreamble/correlatorPre.cpp:348) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData1' (CorrelatorPreamble/correlatorPre.cpp:361) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData2' (CorrelatorPreamble/correlatorPre.cpp:373) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData3' (CorrelatorPreamble/correlatorPre.cpp:385) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData4' (CorrelatorPreamble/correlatorPre.cpp:397) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData5' (CorrelatorPreamble/correlatorPre.cpp:409) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData6' (CorrelatorPreamble/correlatorPre.cpp:421) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData7' (CorrelatorPreamble/correlatorPre.cpp:433) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData8' (CorrelatorPreamble/correlatorPre.cpp:445) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData9' (CorrelatorPreamble/correlatorPre.cpp:457) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData10' (CorrelatorPreamble/correlatorPre.cpp:469) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData11' (CorrelatorPreamble/correlatorPre.cpp:481) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData12' (CorrelatorPreamble/correlatorPre.cpp:493) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData13' (CorrelatorPreamble/correlatorPre.cpp:505) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData14' (CorrelatorPreamble/correlatorPre.cpp:517) in function 'correlate::correlatorPre' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData15' (CorrelatorPreamble/correlatorPre.cpp:529) in function 'correlate::correlatorPre' completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass0i.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass0q.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass1i.V'  in dimension 1 completely.
@@ -80,11 +80,11 @@ INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass14q.V'  in dimension 1 c
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass15i.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass15q.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
-INFO: [XFORM 203-11] Balancing expressions in function 'correlate::correlatorPre' (CorrelatorPreamble/correlatorPre.cpp:22:21)...224 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:23 . Memory (MB): peak = 488.473 ; gain = 141.902 ; free physical = 106301 ; free virtual = 253710
+INFO: [XFORM 203-11] Balancing expressions in function 'correlate::correlatorPre' (CorrelatorPreamble/correlatorPre.cpp:22:22)...64 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:23 . Memory (MB): peak = 488.492 ; gain = 141.918 ; free physical = 106191 ; free virtual = 253882
 WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClassPre' to 'shiftPhaseClassPre' (CorrelatorPreamble/correlatorPre.cpp:22:3)
-WARNING: [XFORM 203-631] Renaming function 'correlate::correlatorPre' to 'correlatorPre' (CorrelatorPreamble/correlatorPre.cpp:22:21)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:25 . Memory (MB): peak = 551.941 ; gain = 205.371 ; free physical = 106182 ; free virtual = 253593
+WARNING: [XFORM 203-631] Renaming function 'correlate::correlatorPre' to 'correlatorPre' (CorrelatorPreamble/correlatorPre.cpp:22:22)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:00:24 . Memory (MB): peak = 551.945 ; gain = 205.371 ; free physical = 106074 ; free virtual = 253767
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'correlateTopPreamble' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -92,37 +92,37 @@ INFO: [HLS 200-42] -- Implementing module 'shiftPhaseClassPre'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 25.59 seconds; current allocated memory: 223.519 MB.
+INFO: [HLS 200-111]  Elapsed time: 24.75 seconds; current allocated memory: 224.036 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 226.791 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 227.293 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'correlatorPre'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 229.334 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 229.777 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 232.188 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 232.436 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'correlateTopPreamble'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 232.707 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 232.819 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 234.487 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 234.497 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'shiftPhaseClassPre'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -367,14 +367,14 @@ WARNING: [RTGEN 206-101] Register 'cor_phaseClass15q_V_2' is power-on initializa
 WARNING: [RTGEN 206-101] Register 'cor_phaseClass15q_V_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'cor_phaseClass15q_V_s' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'shiftPhaseClassPre'.
-INFO: [HLS 200-111]  Elapsed time: 3.14 seconds; current allocated memory: 238.066 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.48 seconds; current allocated memory: 237.993 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlatorPre'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'correlateTopPreamble_mul_20s_20s_40_4_1' to 'correlateTopPreambkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'correlateTopPreambkb': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlatorPre'.
-INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 254.840 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.74 seconds; current allocated memory: 254.676 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlateTopPreamble'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -643,10 +643,10 @@ WARNING: [RTGEN 206-101] Register 'cor_phaseClass15i_V_2' is power-on initializa
 WARNING: [RTGEN 206-101] Register 'cor_phaseClass15i_V_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'cor_phaseClass15i_V_s' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlateTopPreamble'.
-INFO: [HLS 200-111]  Elapsed time: 5.71 seconds; current allocated memory: 273.404 MB.
+INFO: [HLS 200-111]  Elapsed time: 5.85 seconds; current allocated memory: 272.477 MB.
 INFO: [RTMG 210-282] Generating pipelined core: 'correlateTopPreambkb_MulnS_0'
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:56 ; elapsed = 00:00:39 . Memory (MB): peak = 679.941 ; gain = 333.371 ; free physical = 106087 ; free virtual = 253527
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 679.945 ; gain = 333.371 ; free physical = 106055 ; free virtual = 253778
 INFO: [SYSC 207-301] Generating SystemC RTL for correlateTopPreamble.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlateTopPreamble.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlateTopPreamble.
-INFO: [HLS 200-112] Total elapsed time: 39.64 seconds; peak allocated memory: 273.404 MB.
+INFO: [HLS 200-112] Total elapsed time: 39.28 seconds; peak allocated memory: 272.477 MB.

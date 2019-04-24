@@ -7,7 +7,7 @@
 <UserAssignments>
 <unit>ns</unit>
 <ProductFamily>kintex7</ProductFamily>
-<Part>xc7k160tfbg484-1</Part>
+<Part>xc7k410tffg900-1</Part>
 <TopModelName>correlatorSynch</TopModelName>
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>0.62</ClockUncertainty>
@@ -17,30 +17,30 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.04</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.24</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>5</Best-caseLatency>
-<Average-caseLatency>6</Average-caseLatency>
-<Worst-caseLatency>6</Worst-caseLatency>
-<Interval-min>5</Interval-min>
-<Interval-max>6</Interval-max>
+<Best-caseLatency>4</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<Interval-min>4</Interval-min>
+<Interval-max>8</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP48E>1</DSP48E>
-<FF>2301</FF>
-<LUT>6108</LUT>
+<FF>1752</FF>
+<LUT>5431</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
-<BRAM_18K>650</BRAM_18K>
-<DSP48E>600</DSP48E>
-<FF>202800</FF>
-<LUT>101400</LUT>
+<BRAM_18K>1590</BRAM_18K>
+<DSP48E>1540</DSP48E>
+<FF>508400</FF>
+<LUT>254200</LUT>
 </AvailableResources>
 </AreaEstimates>
 

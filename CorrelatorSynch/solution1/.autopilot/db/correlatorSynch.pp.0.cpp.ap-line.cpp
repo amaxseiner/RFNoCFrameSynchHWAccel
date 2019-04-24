@@ -29177,7 +29177,7 @@ void correlateTopSynch(rfnoc_axis *i_data,rfnoc_axis *o_data);
  class correlate{
  public:
   void shiftPhaseClassSynch(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
-  ap_int<32> correlatorSynch(ap_uint<4> phaseClass);
+  ap_fixed<32,22> correlatorSynch(ap_uint<4> phaseClass);
 #pragma empty_line
   cor_t phaseClass0i[16];
   cor_t phaseClass0q[16];
@@ -29370,8 +29370,8 @@ switch(currentState) {
    phaseClass = phaseClass + 1;
   }
 #pragma empty_line
-  if(out != 0){
-   out_sample.data = out;
+  if(out > 10000){
+   out_sample.data = tmp_data.data;
    o_data.write(out_sample);
 #pragma empty_line
   } else {
@@ -29379,6 +29379,7 @@ switch(currentState) {
    o_data.write(out_sample);
 #pragma empty_line
   }
+#pragma empty_line
 #pragma empty_line
   currentState = ST_LOAD;
  break;
@@ -29544,17 +29545,15 @@ void correlate::shiftPhaseClassSynch(cor_t newValuei,cor_t newValueq,ap_uint<4> 
 #pragma empty_line
 }
 #pragma empty_line
-ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
+ap_fixed<32,22> correlate::correlatorSynch(ap_uint<4> phaseClass){
  ap_int<32> res,tempi;
 #pragma empty_line
- ap_fixed<32,22> corHelperINeg,corHelperIPos,resi;
- ap_fixed<32,22> corHelperQNeg,corHelperQPos,resq;
+ ap_fixed<32,22> corHelperIPos,resi;
+ ap_fixed<32,22> corHelperQPos,resq;
  resi=0;
- corHelperINeg = 0;
  corHelperIPos = 0;
- corHelperQNeg = 0;
  corHelperQPos = 0;
-#pragma line 349 "CorrelatorSynch/correlatorSynch.cpp"
+#pragma line 348 "CorrelatorSynch/correlatorSynch.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -29563,10 +29562,10 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
     corHelperIPos = corHelperIPos + (phaseClass0i[a]);
     corHelperQPos = corHelperQPos + (phaseClass0q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass0i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass0q[a]);
-#pragma empty_line
+    corHelperIPos = corHelperIPos - (phaseClass0i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass0q[a]);
    }
+#pragma empty_line
   }
  break;
  case 1:
@@ -29576,8 +29575,8 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
     corHelperIPos = corHelperIPos + (phaseClass1i[a]);
     corHelperQPos = corHelperQPos + (phaseClass1q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass1i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass1q[a]);
+    corHelperIPos = corHelperIPos - (phaseClass1i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass1q[a]);
    }
   }
  break;
@@ -29588,8 +29587,8 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
     corHelperIPos = corHelperIPos + (phaseClass2i[a]);
     corHelperQPos = corHelperQPos + (phaseClass2q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass2i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass2q[a]);
+    corHelperIPos = corHelperIPos - (phaseClass2i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass2q[a]);
    }
   }
  break;
@@ -29599,9 +29598,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass3i[a]);
     corHelperQPos = corHelperQPos + (phaseClass3q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass3i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass3q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass3i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass3q[a]);
    }
   }
  break;
@@ -29611,10 +29610,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass4i[a]);
     corHelperQPos = corHelperQPos + (phaseClass4q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass4i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass4q[a]);
-#pragma empty_line
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass4i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass4q[a]);
    }
   }
  break;
@@ -29624,9 +29622,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass5i[a]);
     corHelperQPos = corHelperQPos + (phaseClass5q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass5i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass5q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass5i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass5q[a]);
    }
   }
  break;
@@ -29636,9 +29634,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass6i[a]);
     corHelperQPos = corHelperQPos + (phaseClass6q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass6i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass6q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass6i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass6q[a]);
    }
   }
  break;
@@ -29648,9 +29646,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass7i[a]);
     corHelperQPos = corHelperQPos + (phaseClass7q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass7i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass7q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass7i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass7q[a]);
    }
   }
  break;
@@ -29660,9 +29658,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass8i[a]);
     corHelperQPos = corHelperQPos + (phaseClass8q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass8i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass8q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass8i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass8q[a]);
    }
   }
  break;
@@ -29672,9 +29670,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass9i[a]);
     corHelperQPos = corHelperQPos + (phaseClass9q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass9i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass9q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass9i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass9q[a]);
    }
   }
  break;
@@ -29684,9 +29682,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass10i[a]);
     corHelperQPos = corHelperQPos + (phaseClass10q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass10i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass10q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass10i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass10q[a]);
    }
   }
  break;
@@ -29696,9 +29694,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass11i[a]);
     corHelperQPos = corHelperQPos + (phaseClass11q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass11i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass11q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass11i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass11q[a]);
    }
   }
  break;
@@ -29708,9 +29706,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass12i[a]);
     corHelperQPos = corHelperQPos + (phaseClass12q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass12i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass12q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass12i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass12q[a]);
    }
   }
  break;
@@ -29720,9 +29718,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass13i[a]);
     corHelperQPos = corHelperQPos + (phaseClass13q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass13i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass13q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass13i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass13q[a]);
    }
   }
  break;
@@ -29732,9 +29730,9 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass14i[a]);
     corHelperQPos = corHelperQPos + (phaseClass14q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass14i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass14q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass14i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass14q[a]);
    }
   }
  break;
@@ -29744,31 +29742,20 @@ ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass15i[a]);
     corHelperQPos = corHelperQPos + (phaseClass15q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass15i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass15q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass15i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass15q[a]);
    }
+#pragma empty_line
   }
  break;
  }
+#pragma line 557 "CorrelatorSynch/correlatorSynch.cpp"
+ resi = corHelperIPos*corHelperIPos;
+ resq = corHelperQPos*corHelperQPos;
 #pragma empty_line
- if(corHelperIPos > corHelperINeg){
-  resi = corHelperIPos - corHelperINeg;
- } else {
-  resi = corHelperINeg - corHelperIPos;
- }
 #pragma empty_line
- if(corHelperQPos > corHelperQNeg){
-  resq = corHelperQPos - corHelperQNeg;
- } else {
-  resq = corHelperQNeg - corHelperQPos;
- }
 #pragma empty_line
- resi = resi*resi;
- resq = resq*resq;
- tempi.range(31,0) = resi.V;
 #pragma empty_line
- res.range(31,0) = tempi;
-#pragma empty_line
- return res;
+ return resi;
 }

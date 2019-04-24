@@ -36,7 +36,7 @@ void correlateTopSynch(rfnoc_axis *i_data,rfnoc_axis *o_data);
  class correlate{
  public:
 	 void shiftPhaseClassSynch(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
-	 ap_int<32> correlatorSynch(ap_uint<4> phaseClass);
+	 ap_fixed<32,22> correlatorSynch(ap_uint<4> phaseClass);
 	 //phase phaseArray[16];
 	 cor_t phaseClass0i[windowSize];
 	 cor_t phaseClass0q[windowSize];

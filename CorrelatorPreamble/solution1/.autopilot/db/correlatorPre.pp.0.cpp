@@ -29177,7 +29177,7 @@ void correlateTopPreamble(rfnoc_axis *i_data,rfnoc_axis *o_data);
  class correlate{
  public:
   void shiftPhaseClassPre(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
-  ap_int<32> correlatorPre(ap_uint<4> phaseClass);
+  ap_fixed<32,22> correlatorPre(ap_uint<4> phaseClass);
 
   cor_t phaseClass0i[16];
   cor_t phaseClass0q[16];
@@ -29331,7 +29331,7 @@ static cor_t newValqDec;
   static loadState currentState;
 #pragma HLS RESET variable=currentState
 
-static ap_int<32> out;
+static ap_fixed<32,22> out;
 
 
 
@@ -29369,8 +29369,8 @@ switch(currentState) {
    phaseClass = phaseClass + 1;
   }
 
-  if(out != 0){
-   out_sample.data = out;
+  if(out > 10000){
+   out_sample.data = tmp_data.data;
    o_data.write(out_sample);
 
   } else {
@@ -29543,231 +29543,218 @@ void correlate::shiftPhaseClassPre(cor_t newValuei,cor_t newValueq,ap_uint<4> ph
 
 }
 
-ap_int<32> correlate::correlatorPre(ap_uint<4> phaseClass){
- ap_int<32> res,tempi;
+ap_fixed<32,22> correlate::correlatorPre(ap_uint<4> phaseClass){
+  ap_int<32> res,tempi;
 
- ap_fixed<32,22> corHelperINeg,corHelperIPos,resi;
- ap_fixed<32,22> corHelperQNeg,corHelperQPos,resq;
- resi=0;
- corHelperINeg = 0;
- corHelperIPos = 0;
- corHelperQNeg = 0;
- corHelperQPos = 0;
-# 348 "CorrelatorPreamble/correlatorPre.cpp"
- switch(phaseClass){
- case 0:
-  correlateData0: for(int a =16 -1;a>=0;a--){
+  ap_fixed<32,22> corHelperIPos,resi;
+  ap_fixed<32,22> corHelperQPos,resq;
+  resi=0;
+  corHelperIPos = 0;
+  corHelperQPos = 0;
+# 346 "CorrelatorPreamble/correlatorPre.cpp"
+  switch(phaseClass){
+  case 0:
+   correlateData0: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass0i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass0q[a]);
-   } else {
-    corHelperINeg = corHelperINeg + (phaseClass0i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass0q[a]);
-
-   }
-  }
- break;
- case 1:
-  correlateData1: for(int a =16 -1;a>=0;a--){
-#pragma HLS UNROLL
- if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass1i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass1q[a]);
-   } else {
-    corHelperINeg = corHelperINeg + (phaseClass1i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass1q[a]);
-   }
-  }
- break;
- case 2:
-  correlateData2: for(int a =16 -1;a>=0;a--){
-#pragma HLS UNROLL
- if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass2i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass2q[a]);
-   } else {
-    corHelperINeg = corHelperINeg + (phaseClass2i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass2q[a]);
-   }
-  }
- break;
- case 3:
-  correlateData3: for(int a =16 -1;a>=0;a--){
-#pragma HLS UNROLL
- if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass3i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass3q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass3i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass3q[a]);
-   }
-  }
- break;
- case 4:
-  correlateData4: for(int a =16 -1;a>=0;a--){
-#pragma HLS UNROLL
- if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass4i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass4q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass4i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass4q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass0i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass0q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass0i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass0q[a]);
+    }
 
    }
-  }
- break;
- case 5:
-  correlateData5: for(int a =16 -1;a>=0;a--){
+  break;
+  case 1:
+   correlateData1: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass5i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass5q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass5i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass5q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass1i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass1q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass1i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass1q[a]);
+    }
    }
-  }
- break;
- case 6:
-  correlateData6: for(int a =16 -1;a>=0;a--){
+  break;
+  case 2:
+   correlateData2: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass6i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass6q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass6i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass6q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass2i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass2q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass2i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass2q[a]);
+    }
    }
-  }
- break;
- case 7:
-  correlateData7: for(int a =16 -1;a>=0;a--){
+  break;
+  case 3:
+   correlateData3: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass7i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass7q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass7i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass7q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass3i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass3q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass3i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass3q[a]);
+    }
    }
-  }
- break;
- case 8:
-  correlateData8: for(int a =16 -1;a>=0;a--){
+  break;
+  case 4:
+   correlateData4: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass8i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass8q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass8i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass8q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass4i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass4q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass4i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass4q[a]);
+    }
    }
-  }
- break;
- case 9:
-  correlateData9: for(int a =16 -1;a>=0;a--){
+  break;
+  case 5:
+   correlateData5: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass9i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass9q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass9i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass9q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass5i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass5q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass5i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass5q[a]);
+    }
    }
-  }
- break;
- case 10:
-  correlateData10: for(int a =16 -1;a>=0;a--){
+  break;
+  case 6:
+   correlateData6: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass10i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass10q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass10i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass10q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass6i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass6q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass6i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass6q[a]);
+    }
    }
-  }
- break;
- case 11:
-  correlateData11: for(int a =16 -1;a>=0;a--){
+  break;
+  case 7:
+   correlateData7: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass11i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass11q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass11i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass11q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass7i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass7q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass7i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass7q[a]);
+    }
    }
-  }
- break;
- case 12:
-  correlateData12: for(int a =16 -1;a>=0;a--){
+  break;
+  case 8:
+   correlateData8: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass12i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass12q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass12i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass12q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass8i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass8q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass8i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass8q[a]);
+    }
    }
-  }
- break;
- case 13:
-  correlateData13: for(int a =16 -1;a>=0;a--){
+  break;
+  case 9:
+   correlateData9: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass13i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass13q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass13i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass13q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass9i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass9q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass9i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass9q[a]);
+    }
    }
-  }
- break;
- case 14:
-  correlateData14: for(int a =16 -1;a>=0;a--){
+  break;
+  case 10:
+   correlateData10: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass14i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass14q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass14i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass14q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass10i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass10q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass10i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass10q[a]);
+    }
    }
-  }
- break;
- case 15:
-  correlateData15: for(int a =16 -1;a>=0;a--){
+  break;
+  case 11:
+   correlateData11: for(int a =16 -1;a>=0;a--){
 #pragma HLS UNROLL
  if(corrSeq[a] == 1){
-    corHelperIPos = corHelperIPos + (phaseClass15i[a]);
-    corHelperQPos = corHelperQPos + (phaseClass15q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass15i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass15q[a]);
+     corHelperIPos = corHelperIPos + (phaseClass11i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass11q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass11i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass11q[a]);
+    }
    }
-  }
- break;
- }
+  break;
+  case 12:
+   correlateData12: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a] == 1){
+     corHelperIPos = corHelperIPos + (phaseClass12i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass12q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass12i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass12q[a]);
+    }
+   }
+  break;
+  case 13:
+   correlateData13: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a] == 1){
+     corHelperIPos = corHelperIPos + (phaseClass13i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass13q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass13i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass13q[a]);
+    }
+   }
+  break;
+  case 14:
+   correlateData14: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a] == 1){
+     corHelperIPos = corHelperIPos + (phaseClass14i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass14q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass14i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass14q[a]);
+    }
+   }
+  break;
+  case 15:
+   correlateData15: for(int a =16 -1;a>=0;a--){
+#pragma HLS UNROLL
+ if(corrSeq[a] == 1){
+     corHelperIPos = corHelperIPos + (phaseClass15i[a]);
+     corHelperQPos = corHelperQPos + (phaseClass15q[a]);
+    } else {
+     corHelperIPos = corHelperIPos - (phaseClass15i[a]);
+     corHelperQPos = corHelperQPos - (phaseClass15q[a]);
+    }
 
- if(corHelperIPos > corHelperINeg){
-  resi = corHelperIPos - corHelperINeg;
- } else {
-  resi = corHelperINeg - corHelperIPos;
- }
+   }
+  break;
+  }
+# 555 "CorrelatorPreamble/correlatorPre.cpp"
+  resi = corHelperIPos*corHelperIPos;
+  resq = corHelperQPos*corHelperQPos;
 
- if(corHelperQPos > corHelperQNeg){
-  resq = corHelperQPos - corHelperQNeg;
- } else {
-  resq = corHelperQNeg - corHelperQPos;
- }
 
- resi = resi*resi;
- resq = resq*resq;
- tempi.range(31,0) = resi.V;
 
- res.range(31,0) = tempi;
 
- return res;
+
+  return resi;
 }

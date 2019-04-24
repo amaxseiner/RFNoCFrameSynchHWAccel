@@ -8,8 +8,8 @@
   "HostMachineBits": "64",
   "Target": {
     "Family": "kintex7",
-    "Device": "xc7k160t",
-    "Package": "fbg484",
+    "Device": "xc7k410t",
+    "Package": "ffg900",
     "Speed": "-1"
   },
   "HlsSolution": {
@@ -181,11 +181,11 @@
       "Instances": [
         {
           "ModuleName": "correlatorSynch",
-          "InstanceName": "grp_correlatorSynch_fu_1107"
+          "InstanceName": "grp_correlatorSynch_fu_1119"
         },
         {
           "ModuleName": "shiftPhaseClassSynch",
-          "InstanceName": "StgValue_70_shiftPhaseClassSynch_fu_1624"
+          "InstanceName": "StgValue_70_shiftPhaseClassSynch_fu_1636"
         }
       ]
     },
@@ -213,47 +213,47 @@
       },
       "correlatorSynch": {
         "Latency": {
-          "LatencyBest": "5",
-          "LatencyAvg": "6",
-          "LatencyWorst": "6",
-          "PipelineIIMin": "5",
-          "PipelineIIMax": "6",
-          "PipelineII": "5 ~ 6",
+          "LatencyBest": "4",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineIIMin": "4",
+          "PipelineIIMax": "8",
+          "PipelineII": "4 ~ 8",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "4.04"
+          "Estimate": "4.24"
         },
         "Area": {
           "DSP48E": "1",
-          "FF": "2301",
-          "LUT": "6108",
+          "FF": "1752",
+          "LUT": "5431",
           "BRAM_18K": "0"
         }
       },
       "correlateTopSynch": {
         "Latency": {
           "LatencyBest": "1",
-          "LatencyAvg": "6",
-          "LatencyWorst": "11",
+          "LatencyAvg": "7",
+          "LatencyWorst": "13",
           "PipelineIIMin": "2",
-          "PipelineIIMax": "12",
-          "PipelineII": "2 ~ 12",
+          "PipelineIIMax": "14",
+          "PipelineII": "2 ~ 14",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "5.00",
           "Uncertainty": "0.62",
-          "Estimate": "4.04"
+          "Estimate": "4.24"
         },
         "Area": {
           "DSP48E": "1",
-          "FF": "6629",
-          "LUT": "8659",
+          "FF": "6144",
+          "LUT": "8068",
           "BRAM_18K": "0"
         }
       }
@@ -261,7 +261,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-04-21 11:28:25 EDT",
+    "Time": "2019-04-24 17:38:48 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

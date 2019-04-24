@@ -7,7 +7,7 @@ open_project CorrelatorSynch
 set_top correlateTopSynch
 add_files CorrelatorSynch/correlatorSynch.cpp
 open_solution "solution1"
-set_part {xc7k160tfbg484-1} -tool vivado
+set_part {xc7k410tffg900-1}
 create_clock -period 5 -name default
 #source "./CorrelatorSynch/solution1/directives.tcl"
 #csim_design

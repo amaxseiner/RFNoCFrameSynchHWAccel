@@ -27,7 +27,7 @@ end;
 architecture behav of correlateTopSynch is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "correlateTopSynch,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.035625,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=1,HLS_SYN_FF=6629,HLS_SYN_LUT=8659}";
+    "correlateTopSynch,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.235375,HLS_SYN_LAT=7,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=1,HLS_SYN_FF=6144,HLS_SYN_LUT=8068}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (5 downto 0) := "000001";
@@ -55,6 +55,10 @@ architecture behav of correlateTopSynch is
     constant ap_const_lv32_10 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010000";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
     constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
+    constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
+    constant ap_const_lv22_1 : STD_LOGIC_VECTOR (21 downto 0) := "0000000000000000000001";
+    constant ap_const_lv22_2710 : STD_LOGIC_VECTOR (21 downto 0) := "0000000010011100010000";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal i_data_V_data_V_0_data_out : STD_LOGIC_VECTOR (31 downto 0);
@@ -382,552 +386,561 @@ architecture behav of correlateTopSynch is
     signal o_data_TDATA_blk_n : STD_LOGIC;
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
-    signal tmp_5_fu_2750_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_s_fu_2807_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state6 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
-    signal currentState_load_reg_2761 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_5_reg_2783 : STD_LOGIC_VECTOR (0 downto 0);
-    signal currentState_load_load_fu_2655_p1 : STD_LOGIC_VECTOR (0 downto 0);
+    signal currentState_load_reg_2819 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_s_reg_2857 : STD_LOGIC_VECTOR (0 downto 0);
+    signal currentState_load_load_fu_2667_p1 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal phaseClass_V_load_reg_2765 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_last_V_reg_2772 : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_correlatorSynch_fu_1107_ap_return : STD_LOGIC_VECTOR (31 downto 0);
-    signal out_sample_data_V_reg_2777 : STD_LOGIC_VECTOR (31 downto 0);
+    signal phaseClass_V_load_reg_2823 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_data_V_reg_2830 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_last_V_reg_2835 : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_correlatorSynch_fu_1119_ap_return : STD_LOGIC_VECTOR (31 downto 0);
+    signal p_Val2_1_reg_2840 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal grp_correlatorSynch_fu_1107_ap_done : STD_LOGIC;
+    signal grp_correlatorSynch_fu_1119_ap_done : STD_LOGIC;
+    signal ret_V_reg_2845 : STD_LOGIC_VECTOR (21 downto 0);
+    signal tmp_50_fu_2756_p1 : STD_LOGIC_VECTOR (9 downto 0);
+    signal tmp_50_reg_2852 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_block_state5_io : BOOLEAN;
-    signal grp_correlatorSynch_fu_1107_ap_start : STD_LOGIC;
-    signal grp_correlatorSynch_fu_1107_ap_idle : STD_LOGIC;
-    signal grp_correlatorSynch_fu_1107_ap_ready : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_ap_start : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_ap_done : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_ap_idle : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_ap_ready : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_newValuei_V : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_newValueq_V : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o_ap_vld : STD_LOGIC;
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o_ap_vld : STD_LOGIC;
-    signal ap_reg_grp_correlatorSynch_fu_1107_ap_start : STD_LOGIC := '0';
+    signal grp_correlatorSynch_fu_1119_ap_start : STD_LOGIC;
+    signal grp_correlatorSynch_fu_1119_ap_idle : STD_LOGIC;
+    signal grp_correlatorSynch_fu_1119_ap_ready : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_ap_start : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_ap_done : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_ap_idle : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_ap_ready : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_newValuei_V : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_newValueq_V : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15 : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o_ap_vld : STD_LOGIC;
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o_ap_vld : STD_LOGIC;
+    signal ap_reg_grp_correlatorSynch_fu_1119_ap_start : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_block_state6 : BOOLEAN;
-    signal ap_predicate_op82_write_state6 : BOOLEAN;
-    signal ap_predicate_op84_write_state6 : BOOLEAN;
+    signal ap_predicate_op89_write_state6 : BOOLEAN;
+    signal ap_predicate_op91_write_state6 : BOOLEAN;
     signal ap_block_state6_io : BOOLEAN;
-    signal tmp_4_fu_2723_p2 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_2_fu_2738_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_9_fu_2735_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal tmp_7_fu_2795_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_5_fu_2767_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ret_V_1_fu_2772_p2 : STD_LOGIC_VECTOR (21 downto 0);
+    signal tmp_49_fu_2760_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal p_s_fu_2777_p3 : STD_LOGIC_VECTOR (21 downto 0);
+    signal p_3_fu_2784_p3 : STD_LOGIC_VECTOR (21 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (5 downto 0);
 
     component correlatorSynch IS
@@ -1967,15 +1980,15 @@ architecture behav of correlateTopSynch is
 
 
 begin
-    grp_correlatorSynch_fu_1107 : component correlatorSynch
+    grp_correlatorSynch_fu_1119 : component correlatorSynch
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_correlatorSynch_fu_1107_ap_start,
-        ap_done => grp_correlatorSynch_fu_1107_ap_done,
-        ap_idle => grp_correlatorSynch_fu_1107_ap_idle,
-        ap_ready => grp_correlatorSynch_fu_1107_ap_ready,
-        phaseClass_V => phaseClass_V_load_reg_2765,
+        ap_start => grp_correlatorSynch_fu_1119_ap_start,
+        ap_done => grp_correlatorSynch_fu_1119_ap_done,
+        ap_idle => grp_correlatorSynch_fu_1119_ap_idle,
+        ap_ready => grp_correlatorSynch_fu_1119_ap_ready,
+        phaseClass_V => phaseClass_V_load_reg_2823,
         cor_phaseClass15i_V_15 => cor_phaseClass15i_V_15,
         cor_phaseClass15i_V_14 => cor_phaseClass15i_V_14,
         cor_phaseClass15i_V_13 => cor_phaseClass15i_V_13,
@@ -2232,771 +2245,771 @@ begin
         cor_phaseClass0i_V_2 => cor_phaseClass0i_V_2,
         cor_phaseClass0i_V_1 => cor_phaseClass0i_V_1,
         cor_phaseClass0i_V_0 => cor_phaseClass0i_V_0,
-        ap_return => grp_correlatorSynch_fu_1107_ap_return);
+        ap_return => grp_correlatorSynch_fu_1119_ap_return);
 
-    StgValue_70_shiftPhaseClassSynch_fu_1624 : component shiftPhaseClassSynch
+    StgValue_70_shiftPhaseClassSynch_fu_1636 : component shiftPhaseClassSynch
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => StgValue_70_shiftPhaseClassSynch_fu_1624_ap_start,
-        ap_done => StgValue_70_shiftPhaseClassSynch_fu_1624_ap_done,
-        ap_idle => StgValue_70_shiftPhaseClassSynch_fu_1624_ap_idle,
-        ap_ready => StgValue_70_shiftPhaseClassSynch_fu_1624_ap_ready,
-        newValuei_V => StgValue_70_shiftPhaseClassSynch_fu_1624_newValuei_V,
-        newValueq_V => StgValue_70_shiftPhaseClassSynch_fu_1624_newValueq_V,
-        phaseClass_V => phaseClass_V_load_reg_2765,
+        ap_start => StgValue_70_shiftPhaseClassSynch_fu_1636_ap_start,
+        ap_done => StgValue_70_shiftPhaseClassSynch_fu_1636_ap_done,
+        ap_idle => StgValue_70_shiftPhaseClassSynch_fu_1636_ap_idle,
+        ap_ready => StgValue_70_shiftPhaseClassSynch_fu_1636_ap_ready,
+        newValuei_V => StgValue_70_shiftPhaseClassSynch_fu_1636_newValuei_V,
+        newValueq_V => StgValue_70_shiftPhaseClassSynch_fu_1636_newValueq_V,
+        phaseClass_V => phaseClass_V_load_reg_2823,
         cor_phaseClass0i_V_14_i => cor_phaseClass0i_V_14,
-        cor_phaseClass0i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o,
-        cor_phaseClass0i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o_ap_vld,
-        cor_phaseClass0i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15,
-        cor_phaseClass0i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15_ap_vld,
+        cor_phaseClass0i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o,
+        cor_phaseClass0i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o_ap_vld,
+        cor_phaseClass0i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15,
+        cor_phaseClass0i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15_ap_vld,
         cor_phaseClass0i_V_13_i => cor_phaseClass0i_V_13,
-        cor_phaseClass0i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o,
-        cor_phaseClass0i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o_ap_vld,
+        cor_phaseClass0i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o,
+        cor_phaseClass0i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o_ap_vld,
         cor_phaseClass0i_V_12_i => cor_phaseClass0i_V_12,
-        cor_phaseClass0i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o,
-        cor_phaseClass0i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o_ap_vld,
+        cor_phaseClass0i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o,
+        cor_phaseClass0i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o_ap_vld,
         cor_phaseClass0i_V_11_i => cor_phaseClass0i_V_11,
-        cor_phaseClass0i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o,
-        cor_phaseClass0i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o_ap_vld,
+        cor_phaseClass0i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o,
+        cor_phaseClass0i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o_ap_vld,
         cor_phaseClass0i_V_10_i => cor_phaseClass0i_V_10,
-        cor_phaseClass0i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o,
-        cor_phaseClass0i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o_ap_vld,
+        cor_phaseClass0i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o,
+        cor_phaseClass0i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o_ap_vld,
         cor_phaseClass0i_V_9_i => cor_phaseClass0i_V_9,
-        cor_phaseClass0i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o,
-        cor_phaseClass0i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o_ap_vld,
+        cor_phaseClass0i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o,
+        cor_phaseClass0i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o_ap_vld,
         cor_phaseClass0i_V_8_i => cor_phaseClass0i_V_8,
-        cor_phaseClass0i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o,
-        cor_phaseClass0i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o_ap_vld,
+        cor_phaseClass0i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o,
+        cor_phaseClass0i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o_ap_vld,
         cor_phaseClass0i_V_7_i => cor_phaseClass0i_V_7,
-        cor_phaseClass0i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o,
-        cor_phaseClass0i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o_ap_vld,
+        cor_phaseClass0i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o,
+        cor_phaseClass0i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o_ap_vld,
         cor_phaseClass0i_V_6_i => cor_phaseClass0i_V_6,
-        cor_phaseClass0i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o,
-        cor_phaseClass0i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o_ap_vld,
+        cor_phaseClass0i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o,
+        cor_phaseClass0i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o_ap_vld,
         cor_phaseClass0i_V_5_i => cor_phaseClass0i_V_5,
-        cor_phaseClass0i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o,
-        cor_phaseClass0i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o_ap_vld,
+        cor_phaseClass0i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o,
+        cor_phaseClass0i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o_ap_vld,
         cor_phaseClass0i_V_4_i => cor_phaseClass0i_V_4,
-        cor_phaseClass0i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o,
-        cor_phaseClass0i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o_ap_vld,
+        cor_phaseClass0i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o,
+        cor_phaseClass0i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o_ap_vld,
         cor_phaseClass0i_V_3_i => cor_phaseClass0i_V_3,
-        cor_phaseClass0i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o,
-        cor_phaseClass0i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o_ap_vld,
+        cor_phaseClass0i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o,
+        cor_phaseClass0i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o_ap_vld,
         cor_phaseClass0i_V_2_i => cor_phaseClass0i_V_2,
-        cor_phaseClass0i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o,
-        cor_phaseClass0i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o_ap_vld,
+        cor_phaseClass0i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o,
+        cor_phaseClass0i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o_ap_vld,
         cor_phaseClass0i_V_1_i => cor_phaseClass0i_V_1,
-        cor_phaseClass0i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o,
-        cor_phaseClass0i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o_ap_vld,
+        cor_phaseClass0i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o,
+        cor_phaseClass0i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o_ap_vld,
         cor_phaseClass0i_V_0_i => cor_phaseClass0i_V_0,
-        cor_phaseClass0i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o,
-        cor_phaseClass0i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o_ap_vld,
+        cor_phaseClass0i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o,
+        cor_phaseClass0i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o_ap_vld,
         cor_phaseClass1i_V_14_i => cor_phaseClass1i_V_14,
-        cor_phaseClass1i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o,
-        cor_phaseClass1i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o_ap_vld,
-        cor_phaseClass1i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15,
-        cor_phaseClass1i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15_ap_vld,
+        cor_phaseClass1i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o,
+        cor_phaseClass1i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o_ap_vld,
+        cor_phaseClass1i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15,
+        cor_phaseClass1i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15_ap_vld,
         cor_phaseClass1i_V_13_i => cor_phaseClass1i_V_13,
-        cor_phaseClass1i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o,
-        cor_phaseClass1i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o_ap_vld,
+        cor_phaseClass1i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o,
+        cor_phaseClass1i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o_ap_vld,
         cor_phaseClass1i_V_12_i => cor_phaseClass1i_V_12,
-        cor_phaseClass1i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o,
-        cor_phaseClass1i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o_ap_vld,
+        cor_phaseClass1i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o,
+        cor_phaseClass1i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o_ap_vld,
         cor_phaseClass1i_V_11_i => cor_phaseClass1i_V_11,
-        cor_phaseClass1i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o,
-        cor_phaseClass1i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o_ap_vld,
+        cor_phaseClass1i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o,
+        cor_phaseClass1i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o_ap_vld,
         cor_phaseClass1i_V_10_i => cor_phaseClass1i_V_10,
-        cor_phaseClass1i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o,
-        cor_phaseClass1i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o_ap_vld,
+        cor_phaseClass1i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o,
+        cor_phaseClass1i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o_ap_vld,
         cor_phaseClass1i_V_9_i => cor_phaseClass1i_V_9,
-        cor_phaseClass1i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o,
-        cor_phaseClass1i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o_ap_vld,
+        cor_phaseClass1i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o,
+        cor_phaseClass1i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o_ap_vld,
         cor_phaseClass1i_V_8_i => cor_phaseClass1i_V_8,
-        cor_phaseClass1i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o,
-        cor_phaseClass1i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o_ap_vld,
+        cor_phaseClass1i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o,
+        cor_phaseClass1i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o_ap_vld,
         cor_phaseClass1i_V_7_i => cor_phaseClass1i_V_7,
-        cor_phaseClass1i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o,
-        cor_phaseClass1i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o_ap_vld,
+        cor_phaseClass1i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o,
+        cor_phaseClass1i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o_ap_vld,
         cor_phaseClass1i_V_6_i => cor_phaseClass1i_V_6,
-        cor_phaseClass1i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o,
-        cor_phaseClass1i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o_ap_vld,
+        cor_phaseClass1i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o,
+        cor_phaseClass1i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o_ap_vld,
         cor_phaseClass1i_V_5_i => cor_phaseClass1i_V_5,
-        cor_phaseClass1i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o,
-        cor_phaseClass1i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o_ap_vld,
+        cor_phaseClass1i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o,
+        cor_phaseClass1i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o_ap_vld,
         cor_phaseClass1i_V_4_i => cor_phaseClass1i_V_4,
-        cor_phaseClass1i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o,
-        cor_phaseClass1i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o_ap_vld,
+        cor_phaseClass1i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o,
+        cor_phaseClass1i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o_ap_vld,
         cor_phaseClass1i_V_3_i => cor_phaseClass1i_V_3,
-        cor_phaseClass1i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o,
-        cor_phaseClass1i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o_ap_vld,
+        cor_phaseClass1i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o,
+        cor_phaseClass1i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o_ap_vld,
         cor_phaseClass1i_V_2_i => cor_phaseClass1i_V_2,
-        cor_phaseClass1i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o,
-        cor_phaseClass1i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o_ap_vld,
+        cor_phaseClass1i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o,
+        cor_phaseClass1i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o_ap_vld,
         cor_phaseClass1i_V_1_i => cor_phaseClass1i_V_1,
-        cor_phaseClass1i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o,
-        cor_phaseClass1i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o_ap_vld,
+        cor_phaseClass1i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o,
+        cor_phaseClass1i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o_ap_vld,
         cor_phaseClass1i_V_0_i => cor_phaseClass1i_V_0,
-        cor_phaseClass1i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o,
-        cor_phaseClass1i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o_ap_vld,
+        cor_phaseClass1i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o,
+        cor_phaseClass1i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o_ap_vld,
         cor_phaseClass2i_V_14_i => cor_phaseClass2i_V_14,
-        cor_phaseClass2i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o,
-        cor_phaseClass2i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o_ap_vld,
-        cor_phaseClass2i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15,
-        cor_phaseClass2i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15_ap_vld,
+        cor_phaseClass2i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o,
+        cor_phaseClass2i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o_ap_vld,
+        cor_phaseClass2i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15,
+        cor_phaseClass2i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15_ap_vld,
         cor_phaseClass2i_V_13_i => cor_phaseClass2i_V_13,
-        cor_phaseClass2i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o,
-        cor_phaseClass2i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o_ap_vld,
+        cor_phaseClass2i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o,
+        cor_phaseClass2i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o_ap_vld,
         cor_phaseClass2i_V_12_i => cor_phaseClass2i_V_12,
-        cor_phaseClass2i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o,
-        cor_phaseClass2i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o_ap_vld,
+        cor_phaseClass2i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o,
+        cor_phaseClass2i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o_ap_vld,
         cor_phaseClass2i_V_11_i => cor_phaseClass2i_V_11,
-        cor_phaseClass2i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o,
-        cor_phaseClass2i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o_ap_vld,
+        cor_phaseClass2i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o,
+        cor_phaseClass2i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o_ap_vld,
         cor_phaseClass2i_V_10_i => cor_phaseClass2i_V_10,
-        cor_phaseClass2i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o,
-        cor_phaseClass2i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o_ap_vld,
+        cor_phaseClass2i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o,
+        cor_phaseClass2i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o_ap_vld,
         cor_phaseClass2i_V_9_i => cor_phaseClass2i_V_9,
-        cor_phaseClass2i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o,
-        cor_phaseClass2i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o_ap_vld,
+        cor_phaseClass2i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o,
+        cor_phaseClass2i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o_ap_vld,
         cor_phaseClass2i_V_8_i => cor_phaseClass2i_V_8,
-        cor_phaseClass2i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o,
-        cor_phaseClass2i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o_ap_vld,
+        cor_phaseClass2i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o,
+        cor_phaseClass2i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o_ap_vld,
         cor_phaseClass2i_V_7_i => cor_phaseClass2i_V_7,
-        cor_phaseClass2i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o,
-        cor_phaseClass2i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o_ap_vld,
+        cor_phaseClass2i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o,
+        cor_phaseClass2i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o_ap_vld,
         cor_phaseClass2i_V_6_i => cor_phaseClass2i_V_6,
-        cor_phaseClass2i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o,
-        cor_phaseClass2i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o_ap_vld,
+        cor_phaseClass2i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o,
+        cor_phaseClass2i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o_ap_vld,
         cor_phaseClass2i_V_5_i => cor_phaseClass2i_V_5,
-        cor_phaseClass2i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o,
-        cor_phaseClass2i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o_ap_vld,
+        cor_phaseClass2i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o,
+        cor_phaseClass2i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o_ap_vld,
         cor_phaseClass2i_V_4_i => cor_phaseClass2i_V_4,
-        cor_phaseClass2i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o,
-        cor_phaseClass2i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o_ap_vld,
+        cor_phaseClass2i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o,
+        cor_phaseClass2i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o_ap_vld,
         cor_phaseClass2i_V_3_i => cor_phaseClass2i_V_3,
-        cor_phaseClass2i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o,
-        cor_phaseClass2i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o_ap_vld,
+        cor_phaseClass2i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o,
+        cor_phaseClass2i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o_ap_vld,
         cor_phaseClass2i_V_2_i => cor_phaseClass2i_V_2,
-        cor_phaseClass2i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o,
-        cor_phaseClass2i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o_ap_vld,
+        cor_phaseClass2i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o,
+        cor_phaseClass2i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o_ap_vld,
         cor_phaseClass2i_V_1_i => cor_phaseClass2i_V_1,
-        cor_phaseClass2i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o,
-        cor_phaseClass2i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o_ap_vld,
+        cor_phaseClass2i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o,
+        cor_phaseClass2i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o_ap_vld,
         cor_phaseClass2i_V_0_i => cor_phaseClass2i_V_0,
-        cor_phaseClass2i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o,
-        cor_phaseClass2i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o_ap_vld,
+        cor_phaseClass2i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o,
+        cor_phaseClass2i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o_ap_vld,
         cor_phaseClass3i_V_14_i => cor_phaseClass3i_V_14,
-        cor_phaseClass3i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o,
-        cor_phaseClass3i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o_ap_vld,
-        cor_phaseClass3i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15,
-        cor_phaseClass3i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15_ap_vld,
+        cor_phaseClass3i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o,
+        cor_phaseClass3i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o_ap_vld,
+        cor_phaseClass3i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15,
+        cor_phaseClass3i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15_ap_vld,
         cor_phaseClass3i_V_13_i => cor_phaseClass3i_V_13,
-        cor_phaseClass3i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o,
-        cor_phaseClass3i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o_ap_vld,
+        cor_phaseClass3i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o,
+        cor_phaseClass3i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o_ap_vld,
         cor_phaseClass3i_V_12_i => cor_phaseClass3i_V_12,
-        cor_phaseClass3i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o,
-        cor_phaseClass3i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o_ap_vld,
+        cor_phaseClass3i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o,
+        cor_phaseClass3i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o_ap_vld,
         cor_phaseClass3i_V_11_i => cor_phaseClass3i_V_11,
-        cor_phaseClass3i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o,
-        cor_phaseClass3i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o_ap_vld,
+        cor_phaseClass3i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o,
+        cor_phaseClass3i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o_ap_vld,
         cor_phaseClass3i_V_10_i => cor_phaseClass3i_V_10,
-        cor_phaseClass3i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o,
-        cor_phaseClass3i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o_ap_vld,
+        cor_phaseClass3i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o,
+        cor_phaseClass3i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o_ap_vld,
         cor_phaseClass3i_V_9_i => cor_phaseClass3i_V_9,
-        cor_phaseClass3i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o,
-        cor_phaseClass3i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o_ap_vld,
+        cor_phaseClass3i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o,
+        cor_phaseClass3i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o_ap_vld,
         cor_phaseClass3i_V_8_i => cor_phaseClass3i_V_8,
-        cor_phaseClass3i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o,
-        cor_phaseClass3i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o_ap_vld,
+        cor_phaseClass3i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o,
+        cor_phaseClass3i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o_ap_vld,
         cor_phaseClass3i_V_7_i => cor_phaseClass3i_V_7,
-        cor_phaseClass3i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o,
-        cor_phaseClass3i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o_ap_vld,
+        cor_phaseClass3i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o,
+        cor_phaseClass3i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o_ap_vld,
         cor_phaseClass3i_V_6_i => cor_phaseClass3i_V_6,
-        cor_phaseClass3i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o,
-        cor_phaseClass3i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o_ap_vld,
+        cor_phaseClass3i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o,
+        cor_phaseClass3i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o_ap_vld,
         cor_phaseClass3i_V_5_i => cor_phaseClass3i_V_5,
-        cor_phaseClass3i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o,
-        cor_phaseClass3i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o_ap_vld,
+        cor_phaseClass3i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o,
+        cor_phaseClass3i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o_ap_vld,
         cor_phaseClass3i_V_4_i => cor_phaseClass3i_V_4,
-        cor_phaseClass3i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o,
-        cor_phaseClass3i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o_ap_vld,
+        cor_phaseClass3i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o,
+        cor_phaseClass3i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o_ap_vld,
         cor_phaseClass3i_V_3_i => cor_phaseClass3i_V_3,
-        cor_phaseClass3i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o,
-        cor_phaseClass3i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o_ap_vld,
+        cor_phaseClass3i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o,
+        cor_phaseClass3i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o_ap_vld,
         cor_phaseClass3i_V_2_i => cor_phaseClass3i_V_2,
-        cor_phaseClass3i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o,
-        cor_phaseClass3i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o_ap_vld,
+        cor_phaseClass3i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o,
+        cor_phaseClass3i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o_ap_vld,
         cor_phaseClass3i_V_1_i => cor_phaseClass3i_V_1,
-        cor_phaseClass3i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o,
-        cor_phaseClass3i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o_ap_vld,
+        cor_phaseClass3i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o,
+        cor_phaseClass3i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o_ap_vld,
         cor_phaseClass3i_V_0_i => cor_phaseClass3i_V_0,
-        cor_phaseClass3i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o,
-        cor_phaseClass3i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o_ap_vld,
+        cor_phaseClass3i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o,
+        cor_phaseClass3i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o_ap_vld,
         cor_phaseClass4i_V_14_i => cor_phaseClass4i_V_14,
-        cor_phaseClass4i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o,
-        cor_phaseClass4i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o_ap_vld,
-        cor_phaseClass4i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15,
-        cor_phaseClass4i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15_ap_vld,
+        cor_phaseClass4i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o,
+        cor_phaseClass4i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o_ap_vld,
+        cor_phaseClass4i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15,
+        cor_phaseClass4i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15_ap_vld,
         cor_phaseClass4i_V_13_i => cor_phaseClass4i_V_13,
-        cor_phaseClass4i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o,
-        cor_phaseClass4i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o_ap_vld,
+        cor_phaseClass4i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o,
+        cor_phaseClass4i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o_ap_vld,
         cor_phaseClass4i_V_12_i => cor_phaseClass4i_V_12,
-        cor_phaseClass4i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o,
-        cor_phaseClass4i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o_ap_vld,
+        cor_phaseClass4i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o,
+        cor_phaseClass4i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o_ap_vld,
         cor_phaseClass4i_V_11_i => cor_phaseClass4i_V_11,
-        cor_phaseClass4i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o,
-        cor_phaseClass4i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o_ap_vld,
+        cor_phaseClass4i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o,
+        cor_phaseClass4i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o_ap_vld,
         cor_phaseClass4i_V_10_i => cor_phaseClass4i_V_10,
-        cor_phaseClass4i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o,
-        cor_phaseClass4i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o_ap_vld,
+        cor_phaseClass4i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o,
+        cor_phaseClass4i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o_ap_vld,
         cor_phaseClass4i_V_9_i => cor_phaseClass4i_V_9,
-        cor_phaseClass4i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o,
-        cor_phaseClass4i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o_ap_vld,
+        cor_phaseClass4i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o,
+        cor_phaseClass4i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o_ap_vld,
         cor_phaseClass4i_V_8_i => cor_phaseClass4i_V_8,
-        cor_phaseClass4i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o,
-        cor_phaseClass4i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o_ap_vld,
+        cor_phaseClass4i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o,
+        cor_phaseClass4i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o_ap_vld,
         cor_phaseClass4i_V_7_i => cor_phaseClass4i_V_7,
-        cor_phaseClass4i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o,
-        cor_phaseClass4i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o_ap_vld,
+        cor_phaseClass4i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o,
+        cor_phaseClass4i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o_ap_vld,
         cor_phaseClass4i_V_6_i => cor_phaseClass4i_V_6,
-        cor_phaseClass4i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o,
-        cor_phaseClass4i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o_ap_vld,
+        cor_phaseClass4i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o,
+        cor_phaseClass4i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o_ap_vld,
         cor_phaseClass4i_V_5_i => cor_phaseClass4i_V_5,
-        cor_phaseClass4i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o,
-        cor_phaseClass4i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o_ap_vld,
+        cor_phaseClass4i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o,
+        cor_phaseClass4i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o_ap_vld,
         cor_phaseClass4i_V_4_i => cor_phaseClass4i_V_4,
-        cor_phaseClass4i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o,
-        cor_phaseClass4i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o_ap_vld,
+        cor_phaseClass4i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o,
+        cor_phaseClass4i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o_ap_vld,
         cor_phaseClass4i_V_3_i => cor_phaseClass4i_V_3,
-        cor_phaseClass4i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o,
-        cor_phaseClass4i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o_ap_vld,
+        cor_phaseClass4i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o,
+        cor_phaseClass4i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o_ap_vld,
         cor_phaseClass4i_V_2_i => cor_phaseClass4i_V_2,
-        cor_phaseClass4i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o,
-        cor_phaseClass4i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o_ap_vld,
+        cor_phaseClass4i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o,
+        cor_phaseClass4i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o_ap_vld,
         cor_phaseClass4i_V_1_i => cor_phaseClass4i_V_1,
-        cor_phaseClass4i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o,
-        cor_phaseClass4i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o_ap_vld,
+        cor_phaseClass4i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o,
+        cor_phaseClass4i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o_ap_vld,
         cor_phaseClass4i_V_0_i => cor_phaseClass4i_V_0,
-        cor_phaseClass4i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o,
-        cor_phaseClass4i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o_ap_vld,
+        cor_phaseClass4i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o,
+        cor_phaseClass4i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o_ap_vld,
         cor_phaseClass5i_V_14_i => cor_phaseClass5i_V_14,
-        cor_phaseClass5i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o,
-        cor_phaseClass5i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o_ap_vld,
-        cor_phaseClass5i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15,
-        cor_phaseClass5i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15_ap_vld,
+        cor_phaseClass5i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o,
+        cor_phaseClass5i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o_ap_vld,
+        cor_phaseClass5i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15,
+        cor_phaseClass5i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15_ap_vld,
         cor_phaseClass5i_V_13_i => cor_phaseClass5i_V_13,
-        cor_phaseClass5i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o,
-        cor_phaseClass5i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o_ap_vld,
+        cor_phaseClass5i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o,
+        cor_phaseClass5i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o_ap_vld,
         cor_phaseClass5i_V_12_i => cor_phaseClass5i_V_12,
-        cor_phaseClass5i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o,
-        cor_phaseClass5i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o_ap_vld,
+        cor_phaseClass5i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o,
+        cor_phaseClass5i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o_ap_vld,
         cor_phaseClass5i_V_11_i => cor_phaseClass5i_V_11,
-        cor_phaseClass5i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o,
-        cor_phaseClass5i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o_ap_vld,
+        cor_phaseClass5i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o,
+        cor_phaseClass5i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o_ap_vld,
         cor_phaseClass5i_V_10_i => cor_phaseClass5i_V_10,
-        cor_phaseClass5i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o,
-        cor_phaseClass5i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o_ap_vld,
+        cor_phaseClass5i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o,
+        cor_phaseClass5i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o_ap_vld,
         cor_phaseClass5i_V_9_i => cor_phaseClass5i_V_9,
-        cor_phaseClass5i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o,
-        cor_phaseClass5i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o_ap_vld,
+        cor_phaseClass5i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o,
+        cor_phaseClass5i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o_ap_vld,
         cor_phaseClass5i_V_8_i => cor_phaseClass5i_V_8,
-        cor_phaseClass5i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o,
-        cor_phaseClass5i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o_ap_vld,
+        cor_phaseClass5i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o,
+        cor_phaseClass5i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o_ap_vld,
         cor_phaseClass5i_V_7_i => cor_phaseClass5i_V_7,
-        cor_phaseClass5i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o,
-        cor_phaseClass5i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o_ap_vld,
+        cor_phaseClass5i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o,
+        cor_phaseClass5i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o_ap_vld,
         cor_phaseClass5i_V_6_i => cor_phaseClass5i_V_6,
-        cor_phaseClass5i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o,
-        cor_phaseClass5i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o_ap_vld,
+        cor_phaseClass5i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o,
+        cor_phaseClass5i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o_ap_vld,
         cor_phaseClass5i_V_5_i => cor_phaseClass5i_V_5,
-        cor_phaseClass5i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o,
-        cor_phaseClass5i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o_ap_vld,
+        cor_phaseClass5i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o,
+        cor_phaseClass5i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o_ap_vld,
         cor_phaseClass5i_V_4_i => cor_phaseClass5i_V_4,
-        cor_phaseClass5i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o,
-        cor_phaseClass5i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o_ap_vld,
+        cor_phaseClass5i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o,
+        cor_phaseClass5i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o_ap_vld,
         cor_phaseClass5i_V_3_i => cor_phaseClass5i_V_3,
-        cor_phaseClass5i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o,
-        cor_phaseClass5i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o_ap_vld,
+        cor_phaseClass5i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o,
+        cor_phaseClass5i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o_ap_vld,
         cor_phaseClass5i_V_2_i => cor_phaseClass5i_V_2,
-        cor_phaseClass5i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o,
-        cor_phaseClass5i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o_ap_vld,
+        cor_phaseClass5i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o,
+        cor_phaseClass5i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o_ap_vld,
         cor_phaseClass5i_V_1_i => cor_phaseClass5i_V_1,
-        cor_phaseClass5i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o,
-        cor_phaseClass5i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o_ap_vld,
+        cor_phaseClass5i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o,
+        cor_phaseClass5i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o_ap_vld,
         cor_phaseClass5i_V_0_i => cor_phaseClass5i_V_0,
-        cor_phaseClass5i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o,
-        cor_phaseClass5i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o_ap_vld,
+        cor_phaseClass5i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o,
+        cor_phaseClass5i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o_ap_vld,
         cor_phaseClass6i_V_14_i => cor_phaseClass6i_V_14,
-        cor_phaseClass6i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o,
-        cor_phaseClass6i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o_ap_vld,
-        cor_phaseClass6i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15,
-        cor_phaseClass6i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15_ap_vld,
+        cor_phaseClass6i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o,
+        cor_phaseClass6i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o_ap_vld,
+        cor_phaseClass6i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15,
+        cor_phaseClass6i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15_ap_vld,
         cor_phaseClass6i_V_13_i => cor_phaseClass6i_V_13,
-        cor_phaseClass6i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o,
-        cor_phaseClass6i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o_ap_vld,
+        cor_phaseClass6i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o,
+        cor_phaseClass6i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o_ap_vld,
         cor_phaseClass6i_V_12_i => cor_phaseClass6i_V_12,
-        cor_phaseClass6i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o,
-        cor_phaseClass6i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o_ap_vld,
+        cor_phaseClass6i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o,
+        cor_phaseClass6i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o_ap_vld,
         cor_phaseClass6i_V_11_i => cor_phaseClass6i_V_11,
-        cor_phaseClass6i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o,
-        cor_phaseClass6i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o_ap_vld,
+        cor_phaseClass6i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o,
+        cor_phaseClass6i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o_ap_vld,
         cor_phaseClass6i_V_10_i => cor_phaseClass6i_V_10,
-        cor_phaseClass6i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o,
-        cor_phaseClass6i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o_ap_vld,
+        cor_phaseClass6i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o,
+        cor_phaseClass6i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o_ap_vld,
         cor_phaseClass6i_V_9_i => cor_phaseClass6i_V_9,
-        cor_phaseClass6i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o,
-        cor_phaseClass6i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o_ap_vld,
+        cor_phaseClass6i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o,
+        cor_phaseClass6i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o_ap_vld,
         cor_phaseClass6i_V_8_i => cor_phaseClass6i_V_8,
-        cor_phaseClass6i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o,
-        cor_phaseClass6i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o_ap_vld,
+        cor_phaseClass6i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o,
+        cor_phaseClass6i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o_ap_vld,
         cor_phaseClass6i_V_7_i => cor_phaseClass6i_V_7,
-        cor_phaseClass6i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o,
-        cor_phaseClass6i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o_ap_vld,
+        cor_phaseClass6i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o,
+        cor_phaseClass6i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o_ap_vld,
         cor_phaseClass6i_V_6_i => cor_phaseClass6i_V_6,
-        cor_phaseClass6i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o,
-        cor_phaseClass6i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o_ap_vld,
+        cor_phaseClass6i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o,
+        cor_phaseClass6i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o_ap_vld,
         cor_phaseClass6i_V_5_i => cor_phaseClass6i_V_5,
-        cor_phaseClass6i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o,
-        cor_phaseClass6i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o_ap_vld,
+        cor_phaseClass6i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o,
+        cor_phaseClass6i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o_ap_vld,
         cor_phaseClass6i_V_4_i => cor_phaseClass6i_V_4,
-        cor_phaseClass6i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o,
-        cor_phaseClass6i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o_ap_vld,
+        cor_phaseClass6i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o,
+        cor_phaseClass6i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o_ap_vld,
         cor_phaseClass6i_V_3_i => cor_phaseClass6i_V_3,
-        cor_phaseClass6i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o,
-        cor_phaseClass6i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o_ap_vld,
+        cor_phaseClass6i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o,
+        cor_phaseClass6i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o_ap_vld,
         cor_phaseClass6i_V_2_i => cor_phaseClass6i_V_2,
-        cor_phaseClass6i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o,
-        cor_phaseClass6i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o_ap_vld,
+        cor_phaseClass6i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o,
+        cor_phaseClass6i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o_ap_vld,
         cor_phaseClass6i_V_1_i => cor_phaseClass6i_V_1,
-        cor_phaseClass6i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o,
-        cor_phaseClass6i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o_ap_vld,
+        cor_phaseClass6i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o,
+        cor_phaseClass6i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o_ap_vld,
         cor_phaseClass6i_V_0_i => cor_phaseClass6i_V_0,
-        cor_phaseClass6i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o,
-        cor_phaseClass6i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o_ap_vld,
+        cor_phaseClass6i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o,
+        cor_phaseClass6i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o_ap_vld,
         cor_phaseClass7i_V_14_i => cor_phaseClass7i_V_14,
-        cor_phaseClass7i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o,
-        cor_phaseClass7i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o_ap_vld,
-        cor_phaseClass7i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15,
-        cor_phaseClass7i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15_ap_vld,
+        cor_phaseClass7i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o,
+        cor_phaseClass7i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o_ap_vld,
+        cor_phaseClass7i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15,
+        cor_phaseClass7i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15_ap_vld,
         cor_phaseClass7i_V_13_i => cor_phaseClass7i_V_13,
-        cor_phaseClass7i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o,
-        cor_phaseClass7i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o_ap_vld,
+        cor_phaseClass7i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o,
+        cor_phaseClass7i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o_ap_vld,
         cor_phaseClass7i_V_12_i => cor_phaseClass7i_V_12,
-        cor_phaseClass7i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o,
-        cor_phaseClass7i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o_ap_vld,
+        cor_phaseClass7i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o,
+        cor_phaseClass7i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o_ap_vld,
         cor_phaseClass7i_V_11_i => cor_phaseClass7i_V_11,
-        cor_phaseClass7i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o,
-        cor_phaseClass7i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o_ap_vld,
+        cor_phaseClass7i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o,
+        cor_phaseClass7i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o_ap_vld,
         cor_phaseClass7i_V_10_i => cor_phaseClass7i_V_10,
-        cor_phaseClass7i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o,
-        cor_phaseClass7i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o_ap_vld,
+        cor_phaseClass7i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o,
+        cor_phaseClass7i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o_ap_vld,
         cor_phaseClass7i_V_9_i => cor_phaseClass7i_V_9,
-        cor_phaseClass7i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o,
-        cor_phaseClass7i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o_ap_vld,
+        cor_phaseClass7i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o,
+        cor_phaseClass7i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o_ap_vld,
         cor_phaseClass7i_V_8_i => cor_phaseClass7i_V_8,
-        cor_phaseClass7i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o,
-        cor_phaseClass7i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o_ap_vld,
+        cor_phaseClass7i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o,
+        cor_phaseClass7i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o_ap_vld,
         cor_phaseClass7i_V_7_i => cor_phaseClass7i_V_7,
-        cor_phaseClass7i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o,
-        cor_phaseClass7i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o_ap_vld,
+        cor_phaseClass7i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o,
+        cor_phaseClass7i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o_ap_vld,
         cor_phaseClass7i_V_6_i => cor_phaseClass7i_V_6,
-        cor_phaseClass7i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o,
-        cor_phaseClass7i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o_ap_vld,
+        cor_phaseClass7i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o,
+        cor_phaseClass7i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o_ap_vld,
         cor_phaseClass7i_V_5_i => cor_phaseClass7i_V_5,
-        cor_phaseClass7i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o,
-        cor_phaseClass7i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o_ap_vld,
+        cor_phaseClass7i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o,
+        cor_phaseClass7i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o_ap_vld,
         cor_phaseClass7i_V_4_i => cor_phaseClass7i_V_4,
-        cor_phaseClass7i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o,
-        cor_phaseClass7i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o_ap_vld,
+        cor_phaseClass7i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o,
+        cor_phaseClass7i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o_ap_vld,
         cor_phaseClass7i_V_3_i => cor_phaseClass7i_V_3,
-        cor_phaseClass7i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o,
-        cor_phaseClass7i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o_ap_vld,
+        cor_phaseClass7i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o,
+        cor_phaseClass7i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o_ap_vld,
         cor_phaseClass7i_V_2_i => cor_phaseClass7i_V_2,
-        cor_phaseClass7i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o,
-        cor_phaseClass7i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o_ap_vld,
+        cor_phaseClass7i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o,
+        cor_phaseClass7i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o_ap_vld,
         cor_phaseClass7i_V_1_i => cor_phaseClass7i_V_1,
-        cor_phaseClass7i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o,
-        cor_phaseClass7i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o_ap_vld,
+        cor_phaseClass7i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o,
+        cor_phaseClass7i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o_ap_vld,
         cor_phaseClass7i_V_0_i => cor_phaseClass7i_V_0,
-        cor_phaseClass7i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o,
-        cor_phaseClass7i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o_ap_vld,
+        cor_phaseClass7i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o,
+        cor_phaseClass7i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o_ap_vld,
         cor_phaseClass8i_V_14_i => cor_phaseClass8i_V_14,
-        cor_phaseClass8i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o,
-        cor_phaseClass8i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o_ap_vld,
-        cor_phaseClass8i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15,
-        cor_phaseClass8i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15_ap_vld,
+        cor_phaseClass8i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o,
+        cor_phaseClass8i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o_ap_vld,
+        cor_phaseClass8i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15,
+        cor_phaseClass8i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15_ap_vld,
         cor_phaseClass8i_V_13_i => cor_phaseClass8i_V_13,
-        cor_phaseClass8i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o,
-        cor_phaseClass8i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o_ap_vld,
+        cor_phaseClass8i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o,
+        cor_phaseClass8i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o_ap_vld,
         cor_phaseClass8i_V_12_i => cor_phaseClass8i_V_12,
-        cor_phaseClass8i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o,
-        cor_phaseClass8i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o_ap_vld,
+        cor_phaseClass8i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o,
+        cor_phaseClass8i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o_ap_vld,
         cor_phaseClass8i_V_11_i => cor_phaseClass8i_V_11,
-        cor_phaseClass8i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o,
-        cor_phaseClass8i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o_ap_vld,
+        cor_phaseClass8i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o,
+        cor_phaseClass8i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o_ap_vld,
         cor_phaseClass8i_V_10_i => cor_phaseClass8i_V_10,
-        cor_phaseClass8i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o,
-        cor_phaseClass8i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o_ap_vld,
+        cor_phaseClass8i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o,
+        cor_phaseClass8i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o_ap_vld,
         cor_phaseClass8i_V_9_i => cor_phaseClass8i_V_9,
-        cor_phaseClass8i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o,
-        cor_phaseClass8i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o_ap_vld,
+        cor_phaseClass8i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o,
+        cor_phaseClass8i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o_ap_vld,
         cor_phaseClass8i_V_8_i => cor_phaseClass8i_V_8,
-        cor_phaseClass8i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o,
-        cor_phaseClass8i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o_ap_vld,
+        cor_phaseClass8i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o,
+        cor_phaseClass8i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o_ap_vld,
         cor_phaseClass8i_V_7_i => cor_phaseClass8i_V_7,
-        cor_phaseClass8i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o,
-        cor_phaseClass8i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o_ap_vld,
+        cor_phaseClass8i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o,
+        cor_phaseClass8i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o_ap_vld,
         cor_phaseClass8i_V_6_i => cor_phaseClass8i_V_6,
-        cor_phaseClass8i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o,
-        cor_phaseClass8i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o_ap_vld,
+        cor_phaseClass8i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o,
+        cor_phaseClass8i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o_ap_vld,
         cor_phaseClass8i_V_5_i => cor_phaseClass8i_V_5,
-        cor_phaseClass8i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o,
-        cor_phaseClass8i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o_ap_vld,
+        cor_phaseClass8i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o,
+        cor_phaseClass8i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o_ap_vld,
         cor_phaseClass8i_V_4_i => cor_phaseClass8i_V_4,
-        cor_phaseClass8i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o,
-        cor_phaseClass8i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o_ap_vld,
+        cor_phaseClass8i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o,
+        cor_phaseClass8i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o_ap_vld,
         cor_phaseClass8i_V_3_i => cor_phaseClass8i_V_3,
-        cor_phaseClass8i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o,
-        cor_phaseClass8i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o_ap_vld,
+        cor_phaseClass8i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o,
+        cor_phaseClass8i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o_ap_vld,
         cor_phaseClass8i_V_2_i => cor_phaseClass8i_V_2,
-        cor_phaseClass8i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o,
-        cor_phaseClass8i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o_ap_vld,
+        cor_phaseClass8i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o,
+        cor_phaseClass8i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o_ap_vld,
         cor_phaseClass8i_V_1_i => cor_phaseClass8i_V_1,
-        cor_phaseClass8i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o,
-        cor_phaseClass8i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o_ap_vld,
+        cor_phaseClass8i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o,
+        cor_phaseClass8i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o_ap_vld,
         cor_phaseClass8i_V_0_i => cor_phaseClass8i_V_0,
-        cor_phaseClass8i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o,
-        cor_phaseClass8i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o_ap_vld,
+        cor_phaseClass8i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o,
+        cor_phaseClass8i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o_ap_vld,
         cor_phaseClass9i_V_14_i => cor_phaseClass9i_V_14,
-        cor_phaseClass9i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o,
-        cor_phaseClass9i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o_ap_vld,
-        cor_phaseClass9i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15,
-        cor_phaseClass9i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15_ap_vld,
+        cor_phaseClass9i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o,
+        cor_phaseClass9i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o_ap_vld,
+        cor_phaseClass9i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15,
+        cor_phaseClass9i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15_ap_vld,
         cor_phaseClass9i_V_13_i => cor_phaseClass9i_V_13,
-        cor_phaseClass9i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o,
-        cor_phaseClass9i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o_ap_vld,
+        cor_phaseClass9i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o,
+        cor_phaseClass9i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o_ap_vld,
         cor_phaseClass9i_V_12_i => cor_phaseClass9i_V_12,
-        cor_phaseClass9i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o,
-        cor_phaseClass9i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o_ap_vld,
+        cor_phaseClass9i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o,
+        cor_phaseClass9i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o_ap_vld,
         cor_phaseClass9i_V_11_i => cor_phaseClass9i_V_11,
-        cor_phaseClass9i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o,
-        cor_phaseClass9i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o_ap_vld,
+        cor_phaseClass9i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o,
+        cor_phaseClass9i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o_ap_vld,
         cor_phaseClass9i_V_10_i => cor_phaseClass9i_V_10,
-        cor_phaseClass9i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o,
-        cor_phaseClass9i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o_ap_vld,
+        cor_phaseClass9i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o,
+        cor_phaseClass9i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o_ap_vld,
         cor_phaseClass9i_V_9_i => cor_phaseClass9i_V_9,
-        cor_phaseClass9i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o,
-        cor_phaseClass9i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o_ap_vld,
+        cor_phaseClass9i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o,
+        cor_phaseClass9i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o_ap_vld,
         cor_phaseClass9i_V_8_i => cor_phaseClass9i_V_8,
-        cor_phaseClass9i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o,
-        cor_phaseClass9i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o_ap_vld,
+        cor_phaseClass9i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o,
+        cor_phaseClass9i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o_ap_vld,
         cor_phaseClass9i_V_7_i => cor_phaseClass9i_V_7,
-        cor_phaseClass9i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o,
-        cor_phaseClass9i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o_ap_vld,
+        cor_phaseClass9i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o,
+        cor_phaseClass9i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o_ap_vld,
         cor_phaseClass9i_V_6_i => cor_phaseClass9i_V_6,
-        cor_phaseClass9i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o,
-        cor_phaseClass9i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o_ap_vld,
+        cor_phaseClass9i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o,
+        cor_phaseClass9i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o_ap_vld,
         cor_phaseClass9i_V_5_i => cor_phaseClass9i_V_5,
-        cor_phaseClass9i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o,
-        cor_phaseClass9i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o_ap_vld,
+        cor_phaseClass9i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o,
+        cor_phaseClass9i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o_ap_vld,
         cor_phaseClass9i_V_4_i => cor_phaseClass9i_V_4,
-        cor_phaseClass9i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o,
-        cor_phaseClass9i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o_ap_vld,
+        cor_phaseClass9i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o,
+        cor_phaseClass9i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o_ap_vld,
         cor_phaseClass9i_V_3_i => cor_phaseClass9i_V_3,
-        cor_phaseClass9i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o,
-        cor_phaseClass9i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o_ap_vld,
+        cor_phaseClass9i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o,
+        cor_phaseClass9i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o_ap_vld,
         cor_phaseClass9i_V_2_i => cor_phaseClass9i_V_2,
-        cor_phaseClass9i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o,
-        cor_phaseClass9i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o_ap_vld,
+        cor_phaseClass9i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o,
+        cor_phaseClass9i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o_ap_vld,
         cor_phaseClass9i_V_1_i => cor_phaseClass9i_V_1,
-        cor_phaseClass9i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o,
-        cor_phaseClass9i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o_ap_vld,
+        cor_phaseClass9i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o,
+        cor_phaseClass9i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o_ap_vld,
         cor_phaseClass9i_V_0_i => cor_phaseClass9i_V_0,
-        cor_phaseClass9i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o,
-        cor_phaseClass9i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o_ap_vld,
+        cor_phaseClass9i_V_0_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o,
+        cor_phaseClass9i_V_0_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o_ap_vld,
         cor_phaseClass10i_V_14_i => cor_phaseClass10i_V_14,
-        cor_phaseClass10i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o,
-        cor_phaseClass10i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o_ap_vld,
-        cor_phaseClass10i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15,
-        cor_phaseClass10i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15_ap_vld,
+        cor_phaseClass10i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o,
+        cor_phaseClass10i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o_ap_vld,
+        cor_phaseClass10i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15,
+        cor_phaseClass10i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15_ap_vld,
         cor_phaseClass10i_V_13_i => cor_phaseClass10i_V_13,
-        cor_phaseClass10i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o,
-        cor_phaseClass10i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o_ap_vld,
+        cor_phaseClass10i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o,
+        cor_phaseClass10i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o_ap_vld,
         cor_phaseClass10i_V_12_i => cor_phaseClass10i_V_12,
-        cor_phaseClass10i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o,
-        cor_phaseClass10i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o_ap_vld,
+        cor_phaseClass10i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o,
+        cor_phaseClass10i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o_ap_vld,
         cor_phaseClass10i_V_11_i => cor_phaseClass10i_V_11,
-        cor_phaseClass10i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o,
-        cor_phaseClass10i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o_ap_vld,
+        cor_phaseClass10i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o,
+        cor_phaseClass10i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o_ap_vld,
         cor_phaseClass10i_V_10_i => cor_phaseClass10i_V_10,
-        cor_phaseClass10i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o,
-        cor_phaseClass10i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o_ap_vld,
+        cor_phaseClass10i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o,
+        cor_phaseClass10i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o_ap_vld,
         cor_phaseClass10i_V_9_i => cor_phaseClass10i_V_9,
-        cor_phaseClass10i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o,
-        cor_phaseClass10i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o_ap_vld,
+        cor_phaseClass10i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o,
+        cor_phaseClass10i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o_ap_vld,
         cor_phaseClass10i_V_8_i => cor_phaseClass10i_V_8,
-        cor_phaseClass10i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o,
-        cor_phaseClass10i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o_ap_vld,
+        cor_phaseClass10i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o,
+        cor_phaseClass10i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o_ap_vld,
         cor_phaseClass10i_V_7_i => cor_phaseClass10i_V_7,
-        cor_phaseClass10i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o,
-        cor_phaseClass10i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o_ap_vld,
+        cor_phaseClass10i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o,
+        cor_phaseClass10i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o_ap_vld,
         cor_phaseClass10i_V_6_i => cor_phaseClass10i_V_6,
-        cor_phaseClass10i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o,
-        cor_phaseClass10i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o_ap_vld,
+        cor_phaseClass10i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o,
+        cor_phaseClass10i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o_ap_vld,
         cor_phaseClass10i_V_5_i => cor_phaseClass10i_V_5,
-        cor_phaseClass10i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o,
-        cor_phaseClass10i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o_ap_vld,
+        cor_phaseClass10i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o,
+        cor_phaseClass10i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o_ap_vld,
         cor_phaseClass10i_V_4_i => cor_phaseClass10i_V_4,
-        cor_phaseClass10i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o,
-        cor_phaseClass10i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o_ap_vld,
+        cor_phaseClass10i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o,
+        cor_phaseClass10i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o_ap_vld,
         cor_phaseClass10i_V_3_i => cor_phaseClass10i_V_3,
-        cor_phaseClass10i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o,
-        cor_phaseClass10i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o_ap_vld,
+        cor_phaseClass10i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o,
+        cor_phaseClass10i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o_ap_vld,
         cor_phaseClass10i_V_2_i => cor_phaseClass10i_V_2,
-        cor_phaseClass10i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o,
-        cor_phaseClass10i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o_ap_vld,
+        cor_phaseClass10i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o,
+        cor_phaseClass10i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o_ap_vld,
         cor_phaseClass10i_V_1_i => cor_phaseClass10i_V_1,
-        cor_phaseClass10i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o,
-        cor_phaseClass10i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o_ap_vld,
+        cor_phaseClass10i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o,
+        cor_phaseClass10i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o_ap_vld,
         cor_phaseClass10i_V_s_i => cor_phaseClass10i_V_s,
-        cor_phaseClass10i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o,
-        cor_phaseClass10i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o_ap_vld,
+        cor_phaseClass10i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o,
+        cor_phaseClass10i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o_ap_vld,
         cor_phaseClass11i_V_14_i => cor_phaseClass11i_V_14,
-        cor_phaseClass11i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o,
-        cor_phaseClass11i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o_ap_vld,
-        cor_phaseClass11i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15,
-        cor_phaseClass11i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15_ap_vld,
+        cor_phaseClass11i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o,
+        cor_phaseClass11i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o_ap_vld,
+        cor_phaseClass11i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15,
+        cor_phaseClass11i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15_ap_vld,
         cor_phaseClass11i_V_13_i => cor_phaseClass11i_V_13,
-        cor_phaseClass11i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o,
-        cor_phaseClass11i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o_ap_vld,
+        cor_phaseClass11i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o,
+        cor_phaseClass11i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o_ap_vld,
         cor_phaseClass11i_V_12_i => cor_phaseClass11i_V_12,
-        cor_phaseClass11i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o,
-        cor_phaseClass11i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o_ap_vld,
+        cor_phaseClass11i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o,
+        cor_phaseClass11i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o_ap_vld,
         cor_phaseClass11i_V_11_i => cor_phaseClass11i_V_11,
-        cor_phaseClass11i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o,
-        cor_phaseClass11i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o_ap_vld,
+        cor_phaseClass11i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o,
+        cor_phaseClass11i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o_ap_vld,
         cor_phaseClass11i_V_10_i => cor_phaseClass11i_V_10,
-        cor_phaseClass11i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o,
-        cor_phaseClass11i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o_ap_vld,
+        cor_phaseClass11i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o,
+        cor_phaseClass11i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o_ap_vld,
         cor_phaseClass11i_V_9_i => cor_phaseClass11i_V_9,
-        cor_phaseClass11i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o,
-        cor_phaseClass11i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o_ap_vld,
+        cor_phaseClass11i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o,
+        cor_phaseClass11i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o_ap_vld,
         cor_phaseClass11i_V_8_i => cor_phaseClass11i_V_8,
-        cor_phaseClass11i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o,
-        cor_phaseClass11i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o_ap_vld,
+        cor_phaseClass11i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o,
+        cor_phaseClass11i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o_ap_vld,
         cor_phaseClass11i_V_7_i => cor_phaseClass11i_V_7,
-        cor_phaseClass11i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o,
-        cor_phaseClass11i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o_ap_vld,
+        cor_phaseClass11i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o,
+        cor_phaseClass11i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o_ap_vld,
         cor_phaseClass11i_V_6_i => cor_phaseClass11i_V_6,
-        cor_phaseClass11i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o,
-        cor_phaseClass11i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o_ap_vld,
+        cor_phaseClass11i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o,
+        cor_phaseClass11i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o_ap_vld,
         cor_phaseClass11i_V_5_i => cor_phaseClass11i_V_5,
-        cor_phaseClass11i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o,
-        cor_phaseClass11i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o_ap_vld,
+        cor_phaseClass11i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o,
+        cor_phaseClass11i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o_ap_vld,
         cor_phaseClass11i_V_4_i => cor_phaseClass11i_V_4,
-        cor_phaseClass11i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o,
-        cor_phaseClass11i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o_ap_vld,
+        cor_phaseClass11i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o,
+        cor_phaseClass11i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o_ap_vld,
         cor_phaseClass11i_V_3_i => cor_phaseClass11i_V_3,
-        cor_phaseClass11i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o,
-        cor_phaseClass11i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o_ap_vld,
+        cor_phaseClass11i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o,
+        cor_phaseClass11i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o_ap_vld,
         cor_phaseClass11i_V_2_i => cor_phaseClass11i_V_2,
-        cor_phaseClass11i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o,
-        cor_phaseClass11i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o_ap_vld,
+        cor_phaseClass11i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o,
+        cor_phaseClass11i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o_ap_vld,
         cor_phaseClass11i_V_1_i => cor_phaseClass11i_V_1,
-        cor_phaseClass11i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o,
-        cor_phaseClass11i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o_ap_vld,
+        cor_phaseClass11i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o,
+        cor_phaseClass11i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o_ap_vld,
         cor_phaseClass11i_V_s_i => cor_phaseClass11i_V_s,
-        cor_phaseClass11i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o,
-        cor_phaseClass11i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o_ap_vld,
+        cor_phaseClass11i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o,
+        cor_phaseClass11i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o_ap_vld,
         cor_phaseClass12i_V_14_i => cor_phaseClass12i_V_14,
-        cor_phaseClass12i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o,
-        cor_phaseClass12i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o_ap_vld,
-        cor_phaseClass12i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15,
-        cor_phaseClass12i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15_ap_vld,
+        cor_phaseClass12i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o,
+        cor_phaseClass12i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o_ap_vld,
+        cor_phaseClass12i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15,
+        cor_phaseClass12i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15_ap_vld,
         cor_phaseClass12i_V_13_i => cor_phaseClass12i_V_13,
-        cor_phaseClass12i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o,
-        cor_phaseClass12i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o_ap_vld,
+        cor_phaseClass12i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o,
+        cor_phaseClass12i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o_ap_vld,
         cor_phaseClass12i_V_12_i => cor_phaseClass12i_V_12,
-        cor_phaseClass12i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o,
-        cor_phaseClass12i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o_ap_vld,
+        cor_phaseClass12i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o,
+        cor_phaseClass12i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o_ap_vld,
         cor_phaseClass12i_V_11_i => cor_phaseClass12i_V_11,
-        cor_phaseClass12i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o,
-        cor_phaseClass12i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o_ap_vld,
+        cor_phaseClass12i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o,
+        cor_phaseClass12i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o_ap_vld,
         cor_phaseClass12i_V_10_i => cor_phaseClass12i_V_10,
-        cor_phaseClass12i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o,
-        cor_phaseClass12i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o_ap_vld,
+        cor_phaseClass12i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o,
+        cor_phaseClass12i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o_ap_vld,
         cor_phaseClass12i_V_9_i => cor_phaseClass12i_V_9,
-        cor_phaseClass12i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o,
-        cor_phaseClass12i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o_ap_vld,
+        cor_phaseClass12i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o,
+        cor_phaseClass12i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o_ap_vld,
         cor_phaseClass12i_V_8_i => cor_phaseClass12i_V_8,
-        cor_phaseClass12i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o,
-        cor_phaseClass12i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o_ap_vld,
+        cor_phaseClass12i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o,
+        cor_phaseClass12i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o_ap_vld,
         cor_phaseClass12i_V_7_i => cor_phaseClass12i_V_7,
-        cor_phaseClass12i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o,
-        cor_phaseClass12i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o_ap_vld,
+        cor_phaseClass12i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o,
+        cor_phaseClass12i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o_ap_vld,
         cor_phaseClass12i_V_6_i => cor_phaseClass12i_V_6,
-        cor_phaseClass12i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o,
-        cor_phaseClass12i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o_ap_vld,
+        cor_phaseClass12i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o,
+        cor_phaseClass12i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o_ap_vld,
         cor_phaseClass12i_V_5_i => cor_phaseClass12i_V_5,
-        cor_phaseClass12i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o,
-        cor_phaseClass12i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o_ap_vld,
+        cor_phaseClass12i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o,
+        cor_phaseClass12i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o_ap_vld,
         cor_phaseClass12i_V_4_i => cor_phaseClass12i_V_4,
-        cor_phaseClass12i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o,
-        cor_phaseClass12i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o_ap_vld,
+        cor_phaseClass12i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o,
+        cor_phaseClass12i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o_ap_vld,
         cor_phaseClass12i_V_3_i => cor_phaseClass12i_V_3,
-        cor_phaseClass12i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o,
-        cor_phaseClass12i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o_ap_vld,
+        cor_phaseClass12i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o,
+        cor_phaseClass12i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o_ap_vld,
         cor_phaseClass12i_V_2_i => cor_phaseClass12i_V_2,
-        cor_phaseClass12i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o,
-        cor_phaseClass12i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o_ap_vld,
+        cor_phaseClass12i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o,
+        cor_phaseClass12i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o_ap_vld,
         cor_phaseClass12i_V_1_i => cor_phaseClass12i_V_1,
-        cor_phaseClass12i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o,
-        cor_phaseClass12i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o_ap_vld,
+        cor_phaseClass12i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o,
+        cor_phaseClass12i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o_ap_vld,
         cor_phaseClass12i_V_s_i => cor_phaseClass12i_V_s,
-        cor_phaseClass12i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o,
-        cor_phaseClass12i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o_ap_vld,
+        cor_phaseClass12i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o,
+        cor_phaseClass12i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o_ap_vld,
         cor_phaseClass13i_V_14_i => cor_phaseClass13i_V_14,
-        cor_phaseClass13i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o,
-        cor_phaseClass13i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o_ap_vld,
-        cor_phaseClass13i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15,
-        cor_phaseClass13i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15_ap_vld,
+        cor_phaseClass13i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o,
+        cor_phaseClass13i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o_ap_vld,
+        cor_phaseClass13i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15,
+        cor_phaseClass13i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15_ap_vld,
         cor_phaseClass13i_V_13_i => cor_phaseClass13i_V_13,
-        cor_phaseClass13i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o,
-        cor_phaseClass13i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o_ap_vld,
+        cor_phaseClass13i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o,
+        cor_phaseClass13i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o_ap_vld,
         cor_phaseClass13i_V_12_i => cor_phaseClass13i_V_12,
-        cor_phaseClass13i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o,
-        cor_phaseClass13i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o_ap_vld,
+        cor_phaseClass13i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o,
+        cor_phaseClass13i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o_ap_vld,
         cor_phaseClass13i_V_11_i => cor_phaseClass13i_V_11,
-        cor_phaseClass13i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o,
-        cor_phaseClass13i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o_ap_vld,
+        cor_phaseClass13i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o,
+        cor_phaseClass13i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o_ap_vld,
         cor_phaseClass13i_V_10_i => cor_phaseClass13i_V_10,
-        cor_phaseClass13i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o,
-        cor_phaseClass13i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o_ap_vld,
+        cor_phaseClass13i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o,
+        cor_phaseClass13i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o_ap_vld,
         cor_phaseClass13i_V_9_i => cor_phaseClass13i_V_9,
-        cor_phaseClass13i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o,
-        cor_phaseClass13i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o_ap_vld,
+        cor_phaseClass13i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o,
+        cor_phaseClass13i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o_ap_vld,
         cor_phaseClass13i_V_8_i => cor_phaseClass13i_V_8,
-        cor_phaseClass13i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o,
-        cor_phaseClass13i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o_ap_vld,
+        cor_phaseClass13i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o,
+        cor_phaseClass13i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o_ap_vld,
         cor_phaseClass13i_V_7_i => cor_phaseClass13i_V_7,
-        cor_phaseClass13i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o,
-        cor_phaseClass13i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o_ap_vld,
+        cor_phaseClass13i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o,
+        cor_phaseClass13i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o_ap_vld,
         cor_phaseClass13i_V_6_i => cor_phaseClass13i_V_6,
-        cor_phaseClass13i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o,
-        cor_phaseClass13i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o_ap_vld,
+        cor_phaseClass13i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o,
+        cor_phaseClass13i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o_ap_vld,
         cor_phaseClass13i_V_5_i => cor_phaseClass13i_V_5,
-        cor_phaseClass13i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o,
-        cor_phaseClass13i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o_ap_vld,
+        cor_phaseClass13i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o,
+        cor_phaseClass13i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o_ap_vld,
         cor_phaseClass13i_V_4_i => cor_phaseClass13i_V_4,
-        cor_phaseClass13i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o,
-        cor_phaseClass13i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o_ap_vld,
+        cor_phaseClass13i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o,
+        cor_phaseClass13i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o_ap_vld,
         cor_phaseClass13i_V_3_i => cor_phaseClass13i_V_3,
-        cor_phaseClass13i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o,
-        cor_phaseClass13i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o_ap_vld,
+        cor_phaseClass13i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o,
+        cor_phaseClass13i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o_ap_vld,
         cor_phaseClass13i_V_2_i => cor_phaseClass13i_V_2,
-        cor_phaseClass13i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o,
-        cor_phaseClass13i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o_ap_vld,
+        cor_phaseClass13i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o,
+        cor_phaseClass13i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o_ap_vld,
         cor_phaseClass13i_V_1_i => cor_phaseClass13i_V_1,
-        cor_phaseClass13i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o,
-        cor_phaseClass13i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o_ap_vld,
+        cor_phaseClass13i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o,
+        cor_phaseClass13i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o_ap_vld,
         cor_phaseClass13i_V_s_i => cor_phaseClass13i_V_s,
-        cor_phaseClass13i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o,
-        cor_phaseClass13i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o_ap_vld,
+        cor_phaseClass13i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o,
+        cor_phaseClass13i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o_ap_vld,
         cor_phaseClass14i_V_14_i => cor_phaseClass14i_V_14,
-        cor_phaseClass14i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o,
-        cor_phaseClass14i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o_ap_vld,
-        cor_phaseClass14i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15,
-        cor_phaseClass14i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15_ap_vld,
+        cor_phaseClass14i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o,
+        cor_phaseClass14i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o_ap_vld,
+        cor_phaseClass14i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15,
+        cor_phaseClass14i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15_ap_vld,
         cor_phaseClass14i_V_13_i => cor_phaseClass14i_V_13,
-        cor_phaseClass14i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o,
-        cor_phaseClass14i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o_ap_vld,
+        cor_phaseClass14i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o,
+        cor_phaseClass14i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o_ap_vld,
         cor_phaseClass14i_V_12_i => cor_phaseClass14i_V_12,
-        cor_phaseClass14i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o,
-        cor_phaseClass14i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o_ap_vld,
+        cor_phaseClass14i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o,
+        cor_phaseClass14i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o_ap_vld,
         cor_phaseClass14i_V_11_i => cor_phaseClass14i_V_11,
-        cor_phaseClass14i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o,
-        cor_phaseClass14i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o_ap_vld,
+        cor_phaseClass14i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o,
+        cor_phaseClass14i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o_ap_vld,
         cor_phaseClass14i_V_10_i => cor_phaseClass14i_V_10,
-        cor_phaseClass14i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o,
-        cor_phaseClass14i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o_ap_vld,
+        cor_phaseClass14i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o,
+        cor_phaseClass14i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o_ap_vld,
         cor_phaseClass14i_V_9_i => cor_phaseClass14i_V_9,
-        cor_phaseClass14i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o,
-        cor_phaseClass14i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o_ap_vld,
+        cor_phaseClass14i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o,
+        cor_phaseClass14i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o_ap_vld,
         cor_phaseClass14i_V_8_i => cor_phaseClass14i_V_8,
-        cor_phaseClass14i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o,
-        cor_phaseClass14i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o_ap_vld,
+        cor_phaseClass14i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o,
+        cor_phaseClass14i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o_ap_vld,
         cor_phaseClass14i_V_7_i => cor_phaseClass14i_V_7,
-        cor_phaseClass14i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o,
-        cor_phaseClass14i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o_ap_vld,
+        cor_phaseClass14i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o,
+        cor_phaseClass14i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o_ap_vld,
         cor_phaseClass14i_V_6_i => cor_phaseClass14i_V_6,
-        cor_phaseClass14i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o,
-        cor_phaseClass14i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o_ap_vld,
+        cor_phaseClass14i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o,
+        cor_phaseClass14i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o_ap_vld,
         cor_phaseClass14i_V_5_i => cor_phaseClass14i_V_5,
-        cor_phaseClass14i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o,
-        cor_phaseClass14i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o_ap_vld,
+        cor_phaseClass14i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o,
+        cor_phaseClass14i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o_ap_vld,
         cor_phaseClass14i_V_4_i => cor_phaseClass14i_V_4,
-        cor_phaseClass14i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o,
-        cor_phaseClass14i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o_ap_vld,
+        cor_phaseClass14i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o,
+        cor_phaseClass14i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o_ap_vld,
         cor_phaseClass14i_V_3_i => cor_phaseClass14i_V_3,
-        cor_phaseClass14i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o,
-        cor_phaseClass14i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o_ap_vld,
+        cor_phaseClass14i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o,
+        cor_phaseClass14i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o_ap_vld,
         cor_phaseClass14i_V_2_i => cor_phaseClass14i_V_2,
-        cor_phaseClass14i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o,
-        cor_phaseClass14i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o_ap_vld,
+        cor_phaseClass14i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o,
+        cor_phaseClass14i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o_ap_vld,
         cor_phaseClass14i_V_1_i => cor_phaseClass14i_V_1,
-        cor_phaseClass14i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o,
-        cor_phaseClass14i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o_ap_vld,
+        cor_phaseClass14i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o,
+        cor_phaseClass14i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o_ap_vld,
         cor_phaseClass14i_V_s_i => cor_phaseClass14i_V_s,
-        cor_phaseClass14i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o,
-        cor_phaseClass14i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o_ap_vld,
+        cor_phaseClass14i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o,
+        cor_phaseClass14i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o_ap_vld,
         cor_phaseClass15i_V_14_i => cor_phaseClass15i_V_14,
-        cor_phaseClass15i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o,
-        cor_phaseClass15i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o_ap_vld,
-        cor_phaseClass15i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15,
-        cor_phaseClass15i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15_ap_vld,
+        cor_phaseClass15i_V_14_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o,
+        cor_phaseClass15i_V_14_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o_ap_vld,
+        cor_phaseClass15i_V_15 => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15,
+        cor_phaseClass15i_V_15_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15_ap_vld,
         cor_phaseClass15i_V_13_i => cor_phaseClass15i_V_13,
-        cor_phaseClass15i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o,
-        cor_phaseClass15i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o_ap_vld,
+        cor_phaseClass15i_V_13_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o,
+        cor_phaseClass15i_V_13_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o_ap_vld,
         cor_phaseClass15i_V_12_i => cor_phaseClass15i_V_12,
-        cor_phaseClass15i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o,
-        cor_phaseClass15i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o_ap_vld,
+        cor_phaseClass15i_V_12_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o,
+        cor_phaseClass15i_V_12_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o_ap_vld,
         cor_phaseClass15i_V_11_i => cor_phaseClass15i_V_11,
-        cor_phaseClass15i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o,
-        cor_phaseClass15i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o_ap_vld,
+        cor_phaseClass15i_V_11_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o,
+        cor_phaseClass15i_V_11_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o_ap_vld,
         cor_phaseClass15i_V_10_i => cor_phaseClass15i_V_10,
-        cor_phaseClass15i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o,
-        cor_phaseClass15i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o_ap_vld,
+        cor_phaseClass15i_V_10_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o,
+        cor_phaseClass15i_V_10_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o_ap_vld,
         cor_phaseClass15i_V_9_i => cor_phaseClass15i_V_9,
-        cor_phaseClass15i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o,
-        cor_phaseClass15i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o_ap_vld,
+        cor_phaseClass15i_V_9_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o,
+        cor_phaseClass15i_V_9_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o_ap_vld,
         cor_phaseClass15i_V_8_i => cor_phaseClass15i_V_8,
-        cor_phaseClass15i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o,
-        cor_phaseClass15i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o_ap_vld,
+        cor_phaseClass15i_V_8_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o,
+        cor_phaseClass15i_V_8_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o_ap_vld,
         cor_phaseClass15i_V_7_i => cor_phaseClass15i_V_7,
-        cor_phaseClass15i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o,
-        cor_phaseClass15i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o_ap_vld,
+        cor_phaseClass15i_V_7_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o,
+        cor_phaseClass15i_V_7_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o_ap_vld,
         cor_phaseClass15i_V_6_i => cor_phaseClass15i_V_6,
-        cor_phaseClass15i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o,
-        cor_phaseClass15i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o_ap_vld,
+        cor_phaseClass15i_V_6_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o,
+        cor_phaseClass15i_V_6_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o_ap_vld,
         cor_phaseClass15i_V_5_i => cor_phaseClass15i_V_5,
-        cor_phaseClass15i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o,
-        cor_phaseClass15i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o_ap_vld,
+        cor_phaseClass15i_V_5_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o,
+        cor_phaseClass15i_V_5_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o_ap_vld,
         cor_phaseClass15i_V_4_i => cor_phaseClass15i_V_4,
-        cor_phaseClass15i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o,
-        cor_phaseClass15i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o_ap_vld,
+        cor_phaseClass15i_V_4_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o,
+        cor_phaseClass15i_V_4_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o_ap_vld,
         cor_phaseClass15i_V_3_i => cor_phaseClass15i_V_3,
-        cor_phaseClass15i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o,
-        cor_phaseClass15i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o_ap_vld,
+        cor_phaseClass15i_V_3_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o,
+        cor_phaseClass15i_V_3_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o_ap_vld,
         cor_phaseClass15i_V_2_i => cor_phaseClass15i_V_2,
-        cor_phaseClass15i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o,
-        cor_phaseClass15i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o_ap_vld,
+        cor_phaseClass15i_V_2_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o,
+        cor_phaseClass15i_V_2_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o_ap_vld,
         cor_phaseClass15i_V_1_i => cor_phaseClass15i_V_1,
-        cor_phaseClass15i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o,
-        cor_phaseClass15i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o_ap_vld,
+        cor_phaseClass15i_V_1_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o,
+        cor_phaseClass15i_V_1_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o_ap_vld,
         cor_phaseClass15i_V_s_i => cor_phaseClass15i_V_s,
-        cor_phaseClass15i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o,
-        cor_phaseClass15i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o_ap_vld);
+        cor_phaseClass15i_V_s_o => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o,
+        cor_phaseClass15i_V_s_o_ap_vld => StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o_ap_vld);
 
 
 
@@ -3014,16 +3027,16 @@ begin
     end process;
 
 
-    ap_reg_grp_correlatorSynch_fu_1107_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_correlatorSynch_fu_1119_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_correlatorSynch_fu_1107_ap_start <= ap_const_logic_0;
+                ap_reg_grp_correlatorSynch_fu_1119_ap_start <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-                    ap_reg_grp_correlatorSynch_fu_1107_ap_start <= ap_const_logic_1;
-                elsif ((grp_correlatorSynch_fu_1107_ap_ready = ap_const_logic_1)) then 
-                    ap_reg_grp_correlatorSynch_fu_1107_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_correlatorSynch_fu_1119_ap_start <= ap_const_logic_1;
+                elsif ((grp_correlatorSynch_fu_1119_ap_ready = ap_const_logic_1)) then 
+                    ap_reg_grp_correlatorSynch_fu_1119_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -3036,8 +3049,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_0_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -3050,8 +3063,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_1_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -3064,8 +3077,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_10_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -3078,8 +3091,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_11_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -3092,8 +3105,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_12_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -3106,8 +3119,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_13_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -3120,8 +3133,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_14_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -3134,8 +3147,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_15;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_15;
                 end if; 
             end if;
         end if;
@@ -3148,8 +3161,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_2_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -3162,8 +3175,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_3_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -3176,8 +3189,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_4_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -3190,8 +3203,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_5_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -3204,8 +3217,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_6_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -3218,8 +3231,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_7_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -3232,8 +3245,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_8_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -3246,8 +3259,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass0i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass0i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass0i_V_9_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass0i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass0i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -3260,8 +3273,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o_ap_vld))) then 
-                    cor_phaseClass10i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o_ap_vld))) then 
+                    cor_phaseClass10i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -3274,8 +3287,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o_ap_vld))) then 
-                    cor_phaseClass10i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o_ap_vld))) then 
+                    cor_phaseClass10i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -3288,8 +3301,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o_ap_vld))) then 
-                    cor_phaseClass10i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o_ap_vld))) then 
+                    cor_phaseClass10i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -3302,8 +3315,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o_ap_vld))) then 
-                    cor_phaseClass10i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o_ap_vld))) then 
+                    cor_phaseClass10i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -3316,8 +3329,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o_ap_vld))) then 
-                    cor_phaseClass10i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o_ap_vld))) then 
+                    cor_phaseClass10i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -3330,8 +3343,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o_ap_vld))) then 
-                    cor_phaseClass10i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o_ap_vld))) then 
+                    cor_phaseClass10i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -3344,8 +3357,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15_ap_vld))) then 
-                    cor_phaseClass10i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15_ap_vld))) then 
+                    cor_phaseClass10i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_15;
                 end if; 
             end if;
         end if;
@@ -3358,8 +3371,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o_ap_vld))) then 
-                    cor_phaseClass10i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o_ap_vld))) then 
+                    cor_phaseClass10i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -3372,8 +3385,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o_ap_vld))) then 
-                    cor_phaseClass10i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o_ap_vld))) then 
+                    cor_phaseClass10i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -3386,8 +3399,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o_ap_vld))) then 
-                    cor_phaseClass10i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o_ap_vld))) then 
+                    cor_phaseClass10i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -3400,8 +3413,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o_ap_vld))) then 
-                    cor_phaseClass10i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o_ap_vld))) then 
+                    cor_phaseClass10i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -3414,8 +3427,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o_ap_vld))) then 
-                    cor_phaseClass10i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o_ap_vld))) then 
+                    cor_phaseClass10i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -3428,8 +3441,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o_ap_vld))) then 
-                    cor_phaseClass10i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o_ap_vld))) then 
+                    cor_phaseClass10i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -3442,8 +3455,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o_ap_vld))) then 
-                    cor_phaseClass10i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o_ap_vld))) then 
+                    cor_phaseClass10i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -3456,8 +3469,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o_ap_vld))) then 
-                    cor_phaseClass10i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o_ap_vld))) then 
+                    cor_phaseClass10i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -3470,8 +3483,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass10i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o_ap_vld))) then 
-                    cor_phaseClass10i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass10i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o_ap_vld))) then 
+                    cor_phaseClass10i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass10i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -3484,8 +3497,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o_ap_vld))) then 
-                    cor_phaseClass11i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o_ap_vld))) then 
+                    cor_phaseClass11i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -3498,8 +3511,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o_ap_vld))) then 
-                    cor_phaseClass11i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o_ap_vld))) then 
+                    cor_phaseClass11i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -3512,8 +3525,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o_ap_vld))) then 
-                    cor_phaseClass11i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o_ap_vld))) then 
+                    cor_phaseClass11i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -3526,8 +3539,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o_ap_vld))) then 
-                    cor_phaseClass11i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o_ap_vld))) then 
+                    cor_phaseClass11i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -3540,8 +3553,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o_ap_vld))) then 
-                    cor_phaseClass11i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o_ap_vld))) then 
+                    cor_phaseClass11i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -3554,8 +3567,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o_ap_vld))) then 
-                    cor_phaseClass11i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o_ap_vld))) then 
+                    cor_phaseClass11i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -3568,8 +3581,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15_ap_vld))) then 
-                    cor_phaseClass11i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15_ap_vld))) then 
+                    cor_phaseClass11i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_15;
                 end if; 
             end if;
         end if;
@@ -3582,8 +3595,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o_ap_vld))) then 
-                    cor_phaseClass11i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o_ap_vld))) then 
+                    cor_phaseClass11i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -3596,8 +3609,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o_ap_vld))) then 
-                    cor_phaseClass11i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o_ap_vld))) then 
+                    cor_phaseClass11i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -3610,8 +3623,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o_ap_vld))) then 
-                    cor_phaseClass11i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o_ap_vld))) then 
+                    cor_phaseClass11i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -3624,8 +3637,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o_ap_vld))) then 
-                    cor_phaseClass11i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o_ap_vld))) then 
+                    cor_phaseClass11i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -3638,8 +3651,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o_ap_vld))) then 
-                    cor_phaseClass11i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o_ap_vld))) then 
+                    cor_phaseClass11i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -3652,8 +3665,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o_ap_vld))) then 
-                    cor_phaseClass11i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o_ap_vld))) then 
+                    cor_phaseClass11i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -3666,8 +3679,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o_ap_vld))) then 
-                    cor_phaseClass11i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o_ap_vld))) then 
+                    cor_phaseClass11i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -3680,8 +3693,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o_ap_vld))) then 
-                    cor_phaseClass11i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o_ap_vld))) then 
+                    cor_phaseClass11i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -3694,8 +3707,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass11i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o_ap_vld))) then 
-                    cor_phaseClass11i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass11i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o_ap_vld))) then 
+                    cor_phaseClass11i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass11i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -3708,8 +3721,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o_ap_vld))) then 
-                    cor_phaseClass12i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o_ap_vld))) then 
+                    cor_phaseClass12i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -3722,8 +3735,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o_ap_vld))) then 
-                    cor_phaseClass12i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o_ap_vld))) then 
+                    cor_phaseClass12i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -3736,8 +3749,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o_ap_vld))) then 
-                    cor_phaseClass12i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o_ap_vld))) then 
+                    cor_phaseClass12i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -3750,8 +3763,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o_ap_vld))) then 
-                    cor_phaseClass12i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o_ap_vld))) then 
+                    cor_phaseClass12i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -3764,8 +3777,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o_ap_vld))) then 
-                    cor_phaseClass12i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o_ap_vld))) then 
+                    cor_phaseClass12i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -3778,8 +3791,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o_ap_vld))) then 
-                    cor_phaseClass12i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o_ap_vld))) then 
+                    cor_phaseClass12i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -3792,8 +3805,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15_ap_vld))) then 
-                    cor_phaseClass12i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15_ap_vld))) then 
+                    cor_phaseClass12i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_15;
                 end if; 
             end if;
         end if;
@@ -3806,8 +3819,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o_ap_vld))) then 
-                    cor_phaseClass12i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o_ap_vld))) then 
+                    cor_phaseClass12i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -3820,8 +3833,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o_ap_vld))) then 
-                    cor_phaseClass12i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o_ap_vld))) then 
+                    cor_phaseClass12i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -3834,8 +3847,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o_ap_vld))) then 
-                    cor_phaseClass12i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o_ap_vld))) then 
+                    cor_phaseClass12i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -3848,8 +3861,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o_ap_vld))) then 
-                    cor_phaseClass12i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o_ap_vld))) then 
+                    cor_phaseClass12i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -3862,8 +3875,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o_ap_vld))) then 
-                    cor_phaseClass12i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o_ap_vld))) then 
+                    cor_phaseClass12i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -3876,8 +3889,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o_ap_vld))) then 
-                    cor_phaseClass12i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o_ap_vld))) then 
+                    cor_phaseClass12i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -3890,8 +3903,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o_ap_vld))) then 
-                    cor_phaseClass12i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o_ap_vld))) then 
+                    cor_phaseClass12i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -3904,8 +3917,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o_ap_vld))) then 
-                    cor_phaseClass12i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o_ap_vld))) then 
+                    cor_phaseClass12i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -3918,8 +3931,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass12i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o_ap_vld))) then 
-                    cor_phaseClass12i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass12i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o_ap_vld))) then 
+                    cor_phaseClass12i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass12i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -3932,8 +3945,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o_ap_vld))) then 
-                    cor_phaseClass13i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o_ap_vld))) then 
+                    cor_phaseClass13i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -3946,8 +3959,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o_ap_vld))) then 
-                    cor_phaseClass13i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o_ap_vld))) then 
+                    cor_phaseClass13i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -3960,8 +3973,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o_ap_vld))) then 
-                    cor_phaseClass13i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o_ap_vld))) then 
+                    cor_phaseClass13i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -3974,8 +3987,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o_ap_vld))) then 
-                    cor_phaseClass13i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o_ap_vld))) then 
+                    cor_phaseClass13i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -3988,8 +4001,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o_ap_vld))) then 
-                    cor_phaseClass13i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o_ap_vld))) then 
+                    cor_phaseClass13i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -4002,8 +4015,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o_ap_vld))) then 
-                    cor_phaseClass13i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o_ap_vld))) then 
+                    cor_phaseClass13i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -4016,8 +4029,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15_ap_vld))) then 
-                    cor_phaseClass13i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15_ap_vld))) then 
+                    cor_phaseClass13i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_15;
                 end if; 
             end if;
         end if;
@@ -4030,8 +4043,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o_ap_vld))) then 
-                    cor_phaseClass13i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o_ap_vld))) then 
+                    cor_phaseClass13i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -4044,8 +4057,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o_ap_vld))) then 
-                    cor_phaseClass13i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o_ap_vld))) then 
+                    cor_phaseClass13i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -4058,8 +4071,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o_ap_vld))) then 
-                    cor_phaseClass13i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o_ap_vld))) then 
+                    cor_phaseClass13i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -4072,8 +4085,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o_ap_vld))) then 
-                    cor_phaseClass13i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o_ap_vld))) then 
+                    cor_phaseClass13i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -4086,8 +4099,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o_ap_vld))) then 
-                    cor_phaseClass13i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o_ap_vld))) then 
+                    cor_phaseClass13i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -4100,8 +4113,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o_ap_vld))) then 
-                    cor_phaseClass13i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o_ap_vld))) then 
+                    cor_phaseClass13i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -4114,8 +4127,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o_ap_vld))) then 
-                    cor_phaseClass13i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o_ap_vld))) then 
+                    cor_phaseClass13i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -4128,8 +4141,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o_ap_vld))) then 
-                    cor_phaseClass13i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o_ap_vld))) then 
+                    cor_phaseClass13i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -4142,8 +4155,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass13i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o_ap_vld))) then 
-                    cor_phaseClass13i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass13i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o_ap_vld))) then 
+                    cor_phaseClass13i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass13i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -4156,8 +4169,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o_ap_vld))) then 
-                    cor_phaseClass14i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o_ap_vld))) then 
+                    cor_phaseClass14i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -4170,8 +4183,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o_ap_vld))) then 
-                    cor_phaseClass14i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o_ap_vld))) then 
+                    cor_phaseClass14i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -4184,8 +4197,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o_ap_vld))) then 
-                    cor_phaseClass14i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o_ap_vld))) then 
+                    cor_phaseClass14i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -4198,8 +4211,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o_ap_vld))) then 
-                    cor_phaseClass14i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o_ap_vld))) then 
+                    cor_phaseClass14i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -4212,8 +4225,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o_ap_vld))) then 
-                    cor_phaseClass14i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o_ap_vld))) then 
+                    cor_phaseClass14i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -4226,8 +4239,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o_ap_vld))) then 
-                    cor_phaseClass14i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o_ap_vld))) then 
+                    cor_phaseClass14i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -4240,8 +4253,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15_ap_vld))) then 
-                    cor_phaseClass14i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15_ap_vld))) then 
+                    cor_phaseClass14i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_15;
                 end if; 
             end if;
         end if;
@@ -4254,8 +4267,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o_ap_vld))) then 
-                    cor_phaseClass14i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o_ap_vld))) then 
+                    cor_phaseClass14i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -4268,8 +4281,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o_ap_vld))) then 
-                    cor_phaseClass14i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o_ap_vld))) then 
+                    cor_phaseClass14i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -4282,8 +4295,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o_ap_vld))) then 
-                    cor_phaseClass14i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o_ap_vld))) then 
+                    cor_phaseClass14i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -4296,8 +4309,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o_ap_vld))) then 
-                    cor_phaseClass14i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o_ap_vld))) then 
+                    cor_phaseClass14i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -4310,8 +4323,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o_ap_vld))) then 
-                    cor_phaseClass14i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o_ap_vld))) then 
+                    cor_phaseClass14i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -4324,8 +4337,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o_ap_vld))) then 
-                    cor_phaseClass14i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o_ap_vld))) then 
+                    cor_phaseClass14i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -4338,8 +4351,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o_ap_vld))) then 
-                    cor_phaseClass14i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o_ap_vld))) then 
+                    cor_phaseClass14i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -4352,8 +4365,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o_ap_vld))) then 
-                    cor_phaseClass14i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o_ap_vld))) then 
+                    cor_phaseClass14i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -4366,8 +4379,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass14i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o_ap_vld))) then 
-                    cor_phaseClass14i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass14i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o_ap_vld))) then 
+                    cor_phaseClass14i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass14i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -4380,8 +4393,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o_ap_vld))) then 
-                    cor_phaseClass15i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o_ap_vld))) then 
+                    cor_phaseClass15i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -4394,8 +4407,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o_ap_vld))) then 
-                    cor_phaseClass15i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o_ap_vld))) then 
+                    cor_phaseClass15i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -4408,8 +4421,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o_ap_vld))) then 
-                    cor_phaseClass15i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o_ap_vld))) then 
+                    cor_phaseClass15i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -4422,8 +4435,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o_ap_vld))) then 
-                    cor_phaseClass15i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o_ap_vld))) then 
+                    cor_phaseClass15i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -4436,8 +4449,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o_ap_vld))) then 
-                    cor_phaseClass15i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o_ap_vld))) then 
+                    cor_phaseClass15i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -4450,8 +4463,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o_ap_vld))) then 
-                    cor_phaseClass15i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o_ap_vld))) then 
+                    cor_phaseClass15i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -4464,8 +4477,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15_ap_vld))) then 
-                    cor_phaseClass15i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15_ap_vld))) then 
+                    cor_phaseClass15i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_15;
                 end if; 
             end if;
         end if;
@@ -4478,8 +4491,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o_ap_vld))) then 
-                    cor_phaseClass15i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o_ap_vld))) then 
+                    cor_phaseClass15i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -4492,8 +4505,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o_ap_vld))) then 
-                    cor_phaseClass15i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o_ap_vld))) then 
+                    cor_phaseClass15i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -4506,8 +4519,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o_ap_vld))) then 
-                    cor_phaseClass15i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o_ap_vld))) then 
+                    cor_phaseClass15i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -4520,8 +4533,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o_ap_vld))) then 
-                    cor_phaseClass15i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o_ap_vld))) then 
+                    cor_phaseClass15i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -4534,8 +4547,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o_ap_vld))) then 
-                    cor_phaseClass15i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o_ap_vld))) then 
+                    cor_phaseClass15i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -4548,8 +4561,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o_ap_vld))) then 
-                    cor_phaseClass15i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o_ap_vld))) then 
+                    cor_phaseClass15i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -4562,8 +4575,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o_ap_vld))) then 
-                    cor_phaseClass15i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o_ap_vld))) then 
+                    cor_phaseClass15i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -4576,8 +4589,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o_ap_vld))) then 
-                    cor_phaseClass15i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o_ap_vld))) then 
+                    cor_phaseClass15i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -4590,8 +4603,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass15i_V_s <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o_ap_vld))) then 
-                    cor_phaseClass15i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass15i_V_s_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o_ap_vld))) then 
+                    cor_phaseClass15i_V_s <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass15i_V_s_o;
                 end if; 
             end if;
         end if;
@@ -4604,8 +4617,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_0_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -4618,8 +4631,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_1_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -4632,8 +4645,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_10_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -4646,8 +4659,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_11_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -4660,8 +4673,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_12_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -4674,8 +4687,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_13_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -4688,8 +4701,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_14_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -4702,8 +4715,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_15;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_15;
                 end if; 
             end if;
         end if;
@@ -4716,8 +4729,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_2_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -4730,8 +4743,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_3_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -4744,8 +4757,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_4_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -4758,8 +4771,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_5_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -4772,8 +4785,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_6_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -4786,8 +4799,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_7_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -4800,8 +4813,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_8_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -4814,8 +4827,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass1i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass1i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass1i_V_9_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass1i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass1i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -4828,8 +4841,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o_ap_vld))) then 
+                    cor_phaseClass2i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -4842,8 +4855,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_1_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -4856,8 +4869,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_10_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -4870,8 +4883,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_11_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -4884,8 +4897,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_12_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -4898,8 +4911,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_13_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -4912,8 +4925,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_14_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -4926,8 +4939,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_15;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_15;
                 end if; 
             end if;
         end if;
@@ -4940,8 +4953,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_2_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -4954,8 +4967,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_3_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -4968,8 +4981,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_4_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -4982,8 +4995,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_5_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -4996,8 +5009,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_6_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -5010,8 +5023,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_7_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -5024,8 +5037,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_8_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -5038,8 +5051,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass2i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass2i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass2i_V_9_o;
+                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    cor_phaseClass2i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass2i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -5052,8 +5065,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o_ap_vld))) then 
-                    cor_phaseClass3i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o_ap_vld))) then 
+                    cor_phaseClass3i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -5066,8 +5079,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o_ap_vld))) then 
-                    cor_phaseClass3i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o_ap_vld))) then 
+                    cor_phaseClass3i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -5080,8 +5093,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o_ap_vld))) then 
-                    cor_phaseClass3i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o_ap_vld))) then 
+                    cor_phaseClass3i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -5094,8 +5107,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o_ap_vld))) then 
-                    cor_phaseClass3i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o_ap_vld))) then 
+                    cor_phaseClass3i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -5108,8 +5121,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o_ap_vld))) then 
-                    cor_phaseClass3i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o_ap_vld))) then 
+                    cor_phaseClass3i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -5122,8 +5135,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o_ap_vld))) then 
-                    cor_phaseClass3i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o_ap_vld))) then 
+                    cor_phaseClass3i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -5136,8 +5149,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass3i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o_ap_vld))) then 
+                    cor_phaseClass3i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -5150,8 +5163,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15_ap_vld) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    cor_phaseClass3i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15_ap_vld))) then 
+                    cor_phaseClass3i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_15;
                 end if; 
             end if;
         end if;
@@ -5164,8 +5177,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o_ap_vld))) then 
-                    cor_phaseClass3i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o_ap_vld))) then 
+                    cor_phaseClass3i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -5178,8 +5191,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o_ap_vld))) then 
-                    cor_phaseClass3i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o_ap_vld))) then 
+                    cor_phaseClass3i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -5192,8 +5205,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o_ap_vld))) then 
-                    cor_phaseClass3i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o_ap_vld))) then 
+                    cor_phaseClass3i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -5206,8 +5219,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o_ap_vld))) then 
-                    cor_phaseClass3i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o_ap_vld))) then 
+                    cor_phaseClass3i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -5220,8 +5233,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o_ap_vld))) then 
-                    cor_phaseClass3i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o_ap_vld))) then 
+                    cor_phaseClass3i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -5234,8 +5247,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o_ap_vld))) then 
-                    cor_phaseClass3i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o_ap_vld))) then 
+                    cor_phaseClass3i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -5248,8 +5261,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o_ap_vld))) then 
-                    cor_phaseClass3i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o_ap_vld))) then 
+                    cor_phaseClass3i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -5262,8 +5275,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass3i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o_ap_vld))) then 
-                    cor_phaseClass3i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass3i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o_ap_vld))) then 
+                    cor_phaseClass3i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass3i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -5276,8 +5289,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o_ap_vld))) then 
-                    cor_phaseClass4i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o_ap_vld))) then 
+                    cor_phaseClass4i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -5290,8 +5303,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o_ap_vld))) then 
-                    cor_phaseClass4i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o_ap_vld))) then 
+                    cor_phaseClass4i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -5304,8 +5317,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o_ap_vld))) then 
-                    cor_phaseClass4i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o_ap_vld))) then 
+                    cor_phaseClass4i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -5318,8 +5331,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o_ap_vld))) then 
-                    cor_phaseClass4i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o_ap_vld))) then 
+                    cor_phaseClass4i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -5332,8 +5345,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o_ap_vld))) then 
-                    cor_phaseClass4i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o_ap_vld))) then 
+                    cor_phaseClass4i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -5346,8 +5359,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o_ap_vld))) then 
-                    cor_phaseClass4i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o_ap_vld))) then 
+                    cor_phaseClass4i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -5360,8 +5373,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o_ap_vld))) then 
-                    cor_phaseClass4i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o_ap_vld))) then 
+                    cor_phaseClass4i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -5374,8 +5387,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15_ap_vld))) then 
-                    cor_phaseClass4i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15_ap_vld))) then 
+                    cor_phaseClass4i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_15;
                 end if; 
             end if;
         end if;
@@ -5388,8 +5401,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o_ap_vld))) then 
-                    cor_phaseClass4i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o_ap_vld))) then 
+                    cor_phaseClass4i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -5402,8 +5415,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o_ap_vld))) then 
-                    cor_phaseClass4i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o_ap_vld))) then 
+                    cor_phaseClass4i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -5416,8 +5429,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o_ap_vld))) then 
-                    cor_phaseClass4i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o_ap_vld))) then 
+                    cor_phaseClass4i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -5430,8 +5443,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o_ap_vld))) then 
-                    cor_phaseClass4i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o_ap_vld))) then 
+                    cor_phaseClass4i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -5444,8 +5457,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o_ap_vld))) then 
-                    cor_phaseClass4i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o_ap_vld))) then 
+                    cor_phaseClass4i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -5458,8 +5471,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o_ap_vld))) then 
-                    cor_phaseClass4i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o_ap_vld))) then 
+                    cor_phaseClass4i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -5472,8 +5485,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o_ap_vld))) then 
-                    cor_phaseClass4i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o_ap_vld))) then 
+                    cor_phaseClass4i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -5486,8 +5499,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass4i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o_ap_vld))) then 
-                    cor_phaseClass4i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass4i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o_ap_vld))) then 
+                    cor_phaseClass4i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass4i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -5500,8 +5513,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o_ap_vld))) then 
-                    cor_phaseClass5i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o_ap_vld))) then 
+                    cor_phaseClass5i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -5514,8 +5527,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o_ap_vld))) then 
-                    cor_phaseClass5i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o_ap_vld))) then 
+                    cor_phaseClass5i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -5528,8 +5541,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o_ap_vld))) then 
-                    cor_phaseClass5i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o_ap_vld))) then 
+                    cor_phaseClass5i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -5542,8 +5555,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o_ap_vld))) then 
-                    cor_phaseClass5i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o_ap_vld))) then 
+                    cor_phaseClass5i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -5556,8 +5569,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o_ap_vld))) then 
-                    cor_phaseClass5i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o_ap_vld))) then 
+                    cor_phaseClass5i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -5570,8 +5583,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o_ap_vld))) then 
-                    cor_phaseClass5i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o_ap_vld))) then 
+                    cor_phaseClass5i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -5584,8 +5597,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o_ap_vld))) then 
-                    cor_phaseClass5i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o_ap_vld))) then 
+                    cor_phaseClass5i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -5598,8 +5611,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15_ap_vld))) then 
-                    cor_phaseClass5i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15_ap_vld))) then 
+                    cor_phaseClass5i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_15;
                 end if; 
             end if;
         end if;
@@ -5612,8 +5625,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o_ap_vld))) then 
-                    cor_phaseClass5i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o_ap_vld))) then 
+                    cor_phaseClass5i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -5626,8 +5639,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o_ap_vld))) then 
-                    cor_phaseClass5i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o_ap_vld))) then 
+                    cor_phaseClass5i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -5640,8 +5653,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o_ap_vld))) then 
-                    cor_phaseClass5i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o_ap_vld))) then 
+                    cor_phaseClass5i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -5654,8 +5667,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o_ap_vld))) then 
-                    cor_phaseClass5i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o_ap_vld))) then 
+                    cor_phaseClass5i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -5668,8 +5681,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o_ap_vld))) then 
-                    cor_phaseClass5i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o_ap_vld))) then 
+                    cor_phaseClass5i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -5682,8 +5695,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o_ap_vld))) then 
-                    cor_phaseClass5i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o_ap_vld))) then 
+                    cor_phaseClass5i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -5696,8 +5709,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o_ap_vld))) then 
-                    cor_phaseClass5i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o_ap_vld))) then 
+                    cor_phaseClass5i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -5710,8 +5723,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass5i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o_ap_vld))) then 
-                    cor_phaseClass5i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass5i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o_ap_vld))) then 
+                    cor_phaseClass5i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass5i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -5724,8 +5737,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o_ap_vld))) then 
-                    cor_phaseClass6i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o_ap_vld))) then 
+                    cor_phaseClass6i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -5738,8 +5751,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o_ap_vld))) then 
-                    cor_phaseClass6i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o_ap_vld))) then 
+                    cor_phaseClass6i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -5752,8 +5765,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o_ap_vld))) then 
-                    cor_phaseClass6i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o_ap_vld))) then 
+                    cor_phaseClass6i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -5766,8 +5779,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o_ap_vld))) then 
-                    cor_phaseClass6i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o_ap_vld))) then 
+                    cor_phaseClass6i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -5780,8 +5793,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o_ap_vld))) then 
-                    cor_phaseClass6i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o_ap_vld))) then 
+                    cor_phaseClass6i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -5794,8 +5807,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o_ap_vld))) then 
-                    cor_phaseClass6i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o_ap_vld))) then 
+                    cor_phaseClass6i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -5808,8 +5821,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o_ap_vld))) then 
-                    cor_phaseClass6i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o_ap_vld))) then 
+                    cor_phaseClass6i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -5822,8 +5835,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15_ap_vld))) then 
-                    cor_phaseClass6i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15_ap_vld))) then 
+                    cor_phaseClass6i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_15;
                 end if; 
             end if;
         end if;
@@ -5836,8 +5849,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o_ap_vld))) then 
-                    cor_phaseClass6i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o_ap_vld))) then 
+                    cor_phaseClass6i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -5850,8 +5863,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o_ap_vld))) then 
-                    cor_phaseClass6i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o_ap_vld))) then 
+                    cor_phaseClass6i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -5864,8 +5877,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o_ap_vld))) then 
-                    cor_phaseClass6i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o_ap_vld))) then 
+                    cor_phaseClass6i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -5878,8 +5891,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o_ap_vld))) then 
-                    cor_phaseClass6i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o_ap_vld))) then 
+                    cor_phaseClass6i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -5892,8 +5905,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o_ap_vld))) then 
-                    cor_phaseClass6i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o_ap_vld))) then 
+                    cor_phaseClass6i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -5906,8 +5919,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o_ap_vld))) then 
-                    cor_phaseClass6i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o_ap_vld))) then 
+                    cor_phaseClass6i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -5920,8 +5933,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o_ap_vld))) then 
-                    cor_phaseClass6i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o_ap_vld))) then 
+                    cor_phaseClass6i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -5934,8 +5947,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass6i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o_ap_vld))) then 
-                    cor_phaseClass6i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass6i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o_ap_vld))) then 
+                    cor_phaseClass6i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass6i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -5948,8 +5961,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o_ap_vld))) then 
-                    cor_phaseClass7i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o_ap_vld))) then 
+                    cor_phaseClass7i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -5962,8 +5975,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o_ap_vld))) then 
-                    cor_phaseClass7i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o_ap_vld))) then 
+                    cor_phaseClass7i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -5976,8 +5989,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o_ap_vld))) then 
-                    cor_phaseClass7i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o_ap_vld))) then 
+                    cor_phaseClass7i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -5990,8 +6003,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o_ap_vld))) then 
-                    cor_phaseClass7i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o_ap_vld))) then 
+                    cor_phaseClass7i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -6004,8 +6017,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o_ap_vld))) then 
-                    cor_phaseClass7i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o_ap_vld))) then 
+                    cor_phaseClass7i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -6018,8 +6031,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o_ap_vld))) then 
-                    cor_phaseClass7i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o_ap_vld))) then 
+                    cor_phaseClass7i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -6032,8 +6045,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o_ap_vld))) then 
-                    cor_phaseClass7i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o_ap_vld))) then 
+                    cor_phaseClass7i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -6046,8 +6059,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15_ap_vld))) then 
-                    cor_phaseClass7i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15_ap_vld))) then 
+                    cor_phaseClass7i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_15;
                 end if; 
             end if;
         end if;
@@ -6060,8 +6073,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o_ap_vld))) then 
-                    cor_phaseClass7i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o_ap_vld))) then 
+                    cor_phaseClass7i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -6074,8 +6087,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o_ap_vld))) then 
-                    cor_phaseClass7i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o_ap_vld))) then 
+                    cor_phaseClass7i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -6088,8 +6101,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o_ap_vld))) then 
-                    cor_phaseClass7i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o_ap_vld))) then 
+                    cor_phaseClass7i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -6102,8 +6115,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o_ap_vld))) then 
-                    cor_phaseClass7i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o_ap_vld))) then 
+                    cor_phaseClass7i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -6116,8 +6129,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o_ap_vld))) then 
-                    cor_phaseClass7i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o_ap_vld))) then 
+                    cor_phaseClass7i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -6130,8 +6143,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o_ap_vld))) then 
-                    cor_phaseClass7i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o_ap_vld))) then 
+                    cor_phaseClass7i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -6144,8 +6157,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o_ap_vld))) then 
-                    cor_phaseClass7i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o_ap_vld))) then 
+                    cor_phaseClass7i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -6158,8 +6171,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass7i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o_ap_vld))) then 
-                    cor_phaseClass7i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass7i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o_ap_vld))) then 
+                    cor_phaseClass7i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass7i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -6172,8 +6185,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o_ap_vld))) then 
-                    cor_phaseClass8i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o_ap_vld))) then 
+                    cor_phaseClass8i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -6186,8 +6199,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o_ap_vld))) then 
-                    cor_phaseClass8i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o_ap_vld))) then 
+                    cor_phaseClass8i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -6200,8 +6213,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o_ap_vld))) then 
-                    cor_phaseClass8i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o_ap_vld))) then 
+                    cor_phaseClass8i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -6214,8 +6227,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o_ap_vld))) then 
-                    cor_phaseClass8i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o_ap_vld))) then 
+                    cor_phaseClass8i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -6228,8 +6241,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o_ap_vld))) then 
-                    cor_phaseClass8i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o_ap_vld))) then 
+                    cor_phaseClass8i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -6242,8 +6255,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o_ap_vld))) then 
-                    cor_phaseClass8i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o_ap_vld))) then 
+                    cor_phaseClass8i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -6256,8 +6269,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o_ap_vld))) then 
-                    cor_phaseClass8i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o_ap_vld))) then 
+                    cor_phaseClass8i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -6270,8 +6283,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15_ap_vld))) then 
-                    cor_phaseClass8i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15_ap_vld))) then 
+                    cor_phaseClass8i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_15;
                 end if; 
             end if;
         end if;
@@ -6284,8 +6297,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o_ap_vld))) then 
-                    cor_phaseClass8i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o_ap_vld))) then 
+                    cor_phaseClass8i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -6298,8 +6311,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o_ap_vld))) then 
-                    cor_phaseClass8i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o_ap_vld))) then 
+                    cor_phaseClass8i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -6312,8 +6325,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o_ap_vld))) then 
-                    cor_phaseClass8i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o_ap_vld))) then 
+                    cor_phaseClass8i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -6326,8 +6339,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o_ap_vld))) then 
-                    cor_phaseClass8i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o_ap_vld))) then 
+                    cor_phaseClass8i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -6340,8 +6353,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o_ap_vld))) then 
-                    cor_phaseClass8i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o_ap_vld))) then 
+                    cor_phaseClass8i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -6354,8 +6367,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o_ap_vld))) then 
-                    cor_phaseClass8i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o_ap_vld))) then 
+                    cor_phaseClass8i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -6368,8 +6381,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o_ap_vld))) then 
-                    cor_phaseClass8i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o_ap_vld))) then 
+                    cor_phaseClass8i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -6382,8 +6395,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass8i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o_ap_vld))) then 
-                    cor_phaseClass8i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass8i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o_ap_vld))) then 
+                    cor_phaseClass8i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass8i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -6396,8 +6409,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_0 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o_ap_vld))) then 
-                    cor_phaseClass9i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_0_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o_ap_vld))) then 
+                    cor_phaseClass9i_V_0 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_0_o;
                 end if; 
             end if;
         end if;
@@ -6410,8 +6423,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_1 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o_ap_vld))) then 
-                    cor_phaseClass9i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_1_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o_ap_vld))) then 
+                    cor_phaseClass9i_V_1 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_1_o;
                 end if; 
             end if;
         end if;
@@ -6424,8 +6437,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_10 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o_ap_vld))) then 
-                    cor_phaseClass9i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_10_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o_ap_vld))) then 
+                    cor_phaseClass9i_V_10 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_10_o;
                 end if; 
             end if;
         end if;
@@ -6438,8 +6451,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_11 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o_ap_vld))) then 
-                    cor_phaseClass9i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_11_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o_ap_vld))) then 
+                    cor_phaseClass9i_V_11 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_11_o;
                 end if; 
             end if;
         end if;
@@ -6452,8 +6465,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_12 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o_ap_vld))) then 
-                    cor_phaseClass9i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_12_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o_ap_vld))) then 
+                    cor_phaseClass9i_V_12 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_12_o;
                 end if; 
             end if;
         end if;
@@ -6466,8 +6479,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_13 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o_ap_vld))) then 
-                    cor_phaseClass9i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_13_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o_ap_vld))) then 
+                    cor_phaseClass9i_V_13 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_13_o;
                 end if; 
             end if;
         end if;
@@ -6480,8 +6493,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_14 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o_ap_vld))) then 
-                    cor_phaseClass9i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_14_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o_ap_vld))) then 
+                    cor_phaseClass9i_V_14 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_14_o;
                 end if; 
             end if;
         end if;
@@ -6494,8 +6507,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_15 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15_ap_vld))) then 
-                    cor_phaseClass9i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_15;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15_ap_vld))) then 
+                    cor_phaseClass9i_V_15 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_15;
                 end if; 
             end if;
         end if;
@@ -6508,8 +6521,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_2 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o_ap_vld))) then 
-                    cor_phaseClass9i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_2_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o_ap_vld))) then 
+                    cor_phaseClass9i_V_2 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_2_o;
                 end if; 
             end if;
         end if;
@@ -6522,8 +6535,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_3 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o_ap_vld))) then 
-                    cor_phaseClass9i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_3_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o_ap_vld))) then 
+                    cor_phaseClass9i_V_3 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_3_o;
                 end if; 
             end if;
         end if;
@@ -6536,8 +6549,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_4 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o_ap_vld))) then 
-                    cor_phaseClass9i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_4_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o_ap_vld))) then 
+                    cor_phaseClass9i_V_4 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_4_o;
                 end if; 
             end if;
         end if;
@@ -6550,8 +6563,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_5 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o_ap_vld))) then 
-                    cor_phaseClass9i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_5_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o_ap_vld))) then 
+                    cor_phaseClass9i_V_5 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_5_o;
                 end if; 
             end if;
         end if;
@@ -6564,8 +6577,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_6 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o_ap_vld))) then 
-                    cor_phaseClass9i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_6_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o_ap_vld))) then 
+                    cor_phaseClass9i_V_6 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_6_o;
                 end if; 
             end if;
         end if;
@@ -6578,8 +6591,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_7 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o_ap_vld))) then 
-                    cor_phaseClass9i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_7_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o_ap_vld))) then 
+                    cor_phaseClass9i_V_7 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_7_o;
                 end if; 
             end if;
         end if;
@@ -6592,8 +6605,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_8 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o_ap_vld))) then 
-                    cor_phaseClass9i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_8_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o_ap_vld))) then 
+                    cor_phaseClass9i_V_8 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_8_o;
                 end if; 
             end if;
         end if;
@@ -6606,8 +6619,8 @@ begin
             if (ap_rst_n_inv = '1') then
                 cor_phaseClass9i_V_9 <= ap_const_lv16_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o_ap_vld))) then 
-                    cor_phaseClass9i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1624_cor_phaseClass9i_V_9_o;
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (ap_const_logic_1 = StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o_ap_vld))) then 
+                    cor_phaseClass9i_V_9 <= StgValue_70_shiftPhaseClassSynch_fu_1636_cor_phaseClass9i_V_9_o;
                 end if; 
             end if;
         end if;
@@ -6731,8 +6744,8 @@ begin
                 loadCount_V <= ap_const_lv32_0;
             else
                 if (((ap_const_boolean_0 = ap_block_state5_io) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
-                    loadCount_V <= tmp_2_fu_2738_p2;
-                elsif (((currentState_load_load_fu_2655_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    loadCount_V <= tmp_7_fu_2795_p2;
+                elsif (((currentState_load_load_fu_2667_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                     loadCount_V <= ap_const_lv32_0;
                 end if; 
             end if;
@@ -6843,8 +6856,8 @@ begin
                 phaseClass_V <= ap_const_lv4_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-                    phaseClass_V <= tmp_4_fu_2723_p2;
-                elsif (((currentState_load_load_fu_2655_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    phaseClass_V <= tmp_9_fu_2735_p2;
+                elsif (((currentState_load_load_fu_2667_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                     phaseClass_V <= ap_const_lv4_0;
                 end if; 
             end if;
@@ -6855,8 +6868,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                currentState_load_reg_2761 <= currentState;
-                phaseClass_V_load_reg_2765 <= phaseClass_V;
+                currentState_load_reg_2819 <= currentState;
+                phaseClass_V_load_reg_2823 <= phaseClass_V;
             end if;
         end if;
     end process;
@@ -6912,7 +6925,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_V_last_V_1_load_A = ap_const_logic_1)) then
-                o_data_V_last_V_1_payload_A <= tmp_last_V_reg_2772;
+                o_data_V_last_V_1_payload_A <= tmp_last_V_reg_2835;
             end if;
         end if;
     end process;
@@ -6920,23 +6933,17 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((o_data_V_last_V_1_load_B = ap_const_logic_1)) then
-                o_data_V_last_V_1_payload_B <= tmp_last_V_reg_2772;
+                o_data_V_last_V_1_payload_B <= tmp_last_V_reg_2835;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_correlatorSynch_fu_1107_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then
-                out_sample_data_V_reg_2777 <= grp_correlatorSynch_fu_1107_ap_return;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_state5_io) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
-                tmp_5_reg_2783 <= tmp_5_fu_2750_p2;
+            if (((grp_correlatorSynch_fu_1119_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then
+                p_Val2_1_reg_2840 <= grp_correlatorSynch_fu_1119_ap_return;
+                ret_V_reg_2845 <= grp_correlatorSynch_fu_1119_ap_return(31 downto 10);
+                tmp_50_reg_2852 <= tmp_50_fu_2756_p1;
             end if;
         end if;
     end process;
@@ -6944,16 +6951,25 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((i_data_V_data_V_0_vld_out = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                tmp_last_V_reg_2772 <= i_data_V_last_V_0_data_out;
+                tmp_data_V_reg_2830 <= i_data_V_data_V_0_data_out;
+                tmp_last_V_reg_2835 <= i_data_V_last_V_0_data_out;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((ap_const_boolean_0 = ap_block_state5_io) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                tmp_s_reg_2857 <= tmp_s_fu_2807_p2;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (i_data_V_data_V_0_vld_out, o_data_V_data_V_1_ack_in, o_data_V_last_V_1_ack_in, ap_CS_fsm, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state6, currentState_load_load_fu_2655_p1, ap_CS_fsm_state1, ap_CS_fsm_state4, grp_correlatorSynch_fu_1107_ap_done, ap_block_state5_io, ap_block_state6_io)
+    ap_NS_fsm_assign_proc : process (i_data_V_data_V_0_vld_out, o_data_V_data_V_1_ack_in, o_data_V_last_V_1_ack_in, ap_CS_fsm, ap_CS_fsm_state2, ap_CS_fsm_state5, ap_CS_fsm_state6, currentState_load_load_fu_2667_p1, ap_CS_fsm_state1, ap_CS_fsm_state4, grp_correlatorSynch_fu_1119_ap_done, ap_block_state5_io, ap_block_state6_io)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if (((currentState_load_load_fu_2655_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                if (((currentState_load_load_fu_2667_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                     ap_NS_fsm <= ap_ST_fsm_state6;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -6967,7 +6983,7 @@ begin
             when ap_ST_fsm_state3 => 
                 ap_NS_fsm <= ap_ST_fsm_state4;
             when ap_ST_fsm_state4 => 
-                if (((grp_correlatorSynch_fu_1107_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then
+                if (((grp_correlatorSynch_fu_1119_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then
                     ap_NS_fsm <= ap_ST_fsm_state5;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state4;
@@ -6989,17 +7005,17 @@ begin
         end case;
     end process;
 
-    StgValue_70_shiftPhaseClassSynch_fu_1624_ap_start_assign_proc : process(i_data_V_data_V_0_vld_out, ap_CS_fsm_state2)
+    StgValue_70_shiftPhaseClassSynch_fu_1636_ap_start_assign_proc : process(i_data_V_data_V_0_vld_out, ap_CS_fsm_state2)
     begin
         if (((i_data_V_data_V_0_vld_out = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-            StgValue_70_shiftPhaseClassSynch_fu_1624_ap_start <= ap_const_logic_1;
+            StgValue_70_shiftPhaseClassSynch_fu_1636_ap_start <= ap_const_logic_1;
         else 
-            StgValue_70_shiftPhaseClassSynch_fu_1624_ap_start <= ap_const_logic_0;
+            StgValue_70_shiftPhaseClassSynch_fu_1636_ap_start <= ap_const_logic_0;
         end if; 
     end process;
 
-    StgValue_70_shiftPhaseClassSynch_fu_1624_newValuei_V <= i_data_V_data_V_0_data_out(16 - 1 downto 0);
-    StgValue_70_shiftPhaseClassSynch_fu_1624_newValueq_V <= i_data_V_data_V_0_data_out(31 downto 16);
+    StgValue_70_shiftPhaseClassSynch_fu_1636_newValuei_V <= i_data_V_data_V_0_data_out(16 - 1 downto 0);
+    StgValue_70_shiftPhaseClassSynch_fu_1636_newValueq_V <= i_data_V_data_V_0_data_out(31 downto 16);
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
@@ -7007,9 +7023,9 @@ begin
     ap_CS_fsm_state5 <= ap_CS_fsm(4);
     ap_CS_fsm_state6 <= ap_CS_fsm(5);
 
-    ap_block_state5_io_assign_proc : process(o_data_V_data_V_1_ack_in, tmp_5_fu_2750_p2)
+    ap_block_state5_io_assign_proc : process(o_data_V_data_V_1_ack_in, tmp_s_fu_2807_p2)
     begin
-                ap_block_state5_io <= (((tmp_5_fu_2750_p2 = ap_const_lv1_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)) or ((tmp_5_fu_2750_p2 = ap_const_lv1_0) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)));
+                ap_block_state5_io <= (((tmp_s_fu_2807_p2 = ap_const_lv1_0) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)) or ((tmp_s_fu_2807_p2 = ap_const_lv1_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)));
     end process;
 
 
@@ -7019,21 +7035,21 @@ begin
     end process;
 
 
-    ap_block_state6_io_assign_proc : process(o_data_V_data_V_1_ack_in, ap_predicate_op82_write_state6, ap_predicate_op84_write_state6)
+    ap_block_state6_io_assign_proc : process(o_data_V_data_V_1_ack_in, ap_predicate_op89_write_state6, ap_predicate_op91_write_state6)
     begin
-                ap_block_state6_io <= (((ap_predicate_op84_write_state6 = ap_const_boolean_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)) or ((ap_predicate_op82_write_state6 = ap_const_boolean_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)));
+                ap_block_state6_io <= (((ap_predicate_op91_write_state6 = ap_const_boolean_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)) or ((ap_predicate_op89_write_state6 = ap_const_boolean_1) and (o_data_V_data_V_1_ack_in = ap_const_logic_0)));
     end process;
 
 
-    ap_predicate_op82_write_state6_assign_proc : process(currentState_load_reg_2761, tmp_5_reg_2783)
+    ap_predicate_op89_write_state6_assign_proc : process(currentState_load_reg_2819, tmp_s_reg_2857)
     begin
-                ap_predicate_op82_write_state6 <= ((currentState_load_reg_2761 = ap_const_lv1_1) and (tmp_5_reg_2783 = ap_const_lv1_0));
+                ap_predicate_op89_write_state6 <= ((currentState_load_reg_2819 = ap_const_lv1_1) and (tmp_s_reg_2857 = ap_const_lv1_0));
     end process;
 
 
-    ap_predicate_op84_write_state6_assign_proc : process(currentState_load_reg_2761, tmp_5_reg_2783)
+    ap_predicate_op91_write_state6_assign_proc : process(currentState_load_reg_2819, tmp_s_reg_2857)
     begin
-                ap_predicate_op84_write_state6 <= ((tmp_5_reg_2783 = ap_const_lv1_1) and (currentState_load_reg_2761 = ap_const_lv1_1));
+                ap_predicate_op91_write_state6 <= ((tmp_s_reg_2857 = ap_const_lv1_1) and (currentState_load_reg_2819 = ap_const_lv1_1));
     end process;
 
 
@@ -7042,8 +7058,8 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    currentState_load_load_fu_2655_p1 <= currentState;
-    grp_correlatorSynch_fu_1107_ap_start <= ap_reg_grp_correlatorSynch_fu_1107_ap_start;
+    currentState_load_load_fu_2667_p1 <= currentState;
+    grp_correlatorSynch_fu_1119_ap_start <= ap_reg_grp_correlatorSynch_fu_1119_ap_start;
 
     i_data_TDATA_blk_n_assign_proc : process(i_data_V_data_V_0_state, ap_CS_fsm_state2)
     begin
@@ -7111,9 +7127,9 @@ begin
     i_data_V_last_V_0_vld_out <= i_data_V_last_V_0_state(0);
     o_data_TDATA <= o_data_V_data_V_1_data_out;
 
-    o_data_TDATA_blk_n_assign_proc : process(o_data_V_data_V_1_state, ap_CS_fsm_state5, tmp_5_fu_2750_p2, ap_CS_fsm_state6, currentState_load_reg_2761, tmp_5_reg_2783)
+    o_data_TDATA_blk_n_assign_proc : process(o_data_V_data_V_1_state, ap_CS_fsm_state5, tmp_s_fu_2807_p2, ap_CS_fsm_state6, currentState_load_reg_2819, tmp_s_reg_2857)
     begin
-        if ((((tmp_5_reg_2783 = ap_const_lv1_1) and (currentState_load_reg_2761 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state6)) or ((currentState_load_reg_2761 = ap_const_lv1_1) and (tmp_5_reg_2783 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state6)) or ((tmp_5_fu_2750_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((tmp_5_fu_2750_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
+        if ((((currentState_load_reg_2819 = ap_const_lv1_1) and (tmp_s_reg_2857 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state6)) or ((tmp_s_reg_2857 = ap_const_lv1_1) and (currentState_load_reg_2819 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state6)) or ((tmp_s_fu_2807_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((tmp_s_fu_2807_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
             o_data_TDATA_blk_n <= o_data_V_data_V_1_state(1);
         else 
             o_data_TDATA_blk_n <= ap_const_logic_1;
@@ -7125,13 +7141,13 @@ begin
     o_data_V_data_V_1_ack_in <= o_data_V_data_V_1_state(1);
     o_data_V_data_V_1_ack_out <= o_data_TREADY;
 
-    o_data_V_data_V_1_data_in_assign_proc : process(ap_CS_fsm_state5, tmp_5_fu_2750_p2, out_sample_data_V_reg_2777)
+    o_data_V_data_V_1_data_in_assign_proc : process(ap_CS_fsm_state5, tmp_s_fu_2807_p2, tmp_data_V_reg_2830)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state5)) then
-            if ((tmp_5_fu_2750_p2 = ap_const_lv1_1)) then 
+            if ((tmp_s_fu_2807_p2 = ap_const_lv1_1)) then 
+                o_data_V_data_V_1_data_in <= tmp_data_V_reg_2830;
+            elsif ((tmp_s_fu_2807_p2 = ap_const_lv1_0)) then 
                 o_data_V_data_V_1_data_in <= ap_const_lv32_0;
-            elsif ((tmp_5_fu_2750_p2 = ap_const_lv1_0)) then 
-                o_data_V_data_V_1_data_in <= out_sample_data_V_reg_2777;
             else 
                 o_data_V_data_V_1_data_in <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
             end if;
@@ -7155,9 +7171,9 @@ begin
     o_data_V_data_V_1_sel <= o_data_V_data_V_1_sel_rd;
     o_data_V_data_V_1_state_cmp_full <= '0' when (o_data_V_data_V_1_state = ap_const_lv2_1) else '1';
 
-    o_data_V_data_V_1_vld_in_assign_proc : process(ap_CS_fsm_state5, tmp_5_fu_2750_p2, ap_block_state5_io)
+    o_data_V_data_V_1_vld_in_assign_proc : process(ap_CS_fsm_state5, tmp_s_fu_2807_p2, ap_block_state5_io)
     begin
-        if ((((ap_const_boolean_0 = ap_block_state5_io) and (tmp_5_fu_2750_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((ap_const_boolean_0 = ap_block_state5_io) and (tmp_5_fu_2750_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
+        if ((((ap_const_boolean_0 = ap_block_state5_io) and (tmp_s_fu_2807_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((ap_const_boolean_0 = ap_block_state5_io) and (tmp_s_fu_2807_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
             o_data_V_data_V_1_vld_in <= ap_const_logic_1;
         else 
             o_data_V_data_V_1_vld_in <= ap_const_logic_0;
@@ -7182,9 +7198,9 @@ begin
     o_data_V_last_V_1_sel <= o_data_V_last_V_1_sel_rd;
     o_data_V_last_V_1_state_cmp_full <= '0' when (o_data_V_last_V_1_state = ap_const_lv2_1) else '1';
 
-    o_data_V_last_V_1_vld_in_assign_proc : process(ap_CS_fsm_state5, tmp_5_fu_2750_p2, ap_block_state5_io)
+    o_data_V_last_V_1_vld_in_assign_proc : process(ap_CS_fsm_state5, tmp_s_fu_2807_p2, ap_block_state5_io)
     begin
-        if ((((ap_const_boolean_0 = ap_block_state5_io) and (tmp_5_fu_2750_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((ap_const_boolean_0 = ap_block_state5_io) and (tmp_5_fu_2750_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
+        if ((((ap_const_boolean_0 = ap_block_state5_io) and (tmp_s_fu_2807_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5)) or ((ap_const_boolean_0 = ap_block_state5_io) and (tmp_s_fu_2807_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state5)))) then 
             o_data_V_last_V_1_vld_in <= ap_const_logic_1;
         else 
             o_data_V_last_V_1_vld_in <= ap_const_logic_0;
@@ -7192,7 +7208,17 @@ begin
     end process;
 
     o_data_V_last_V_1_vld_out <= o_data_V_last_V_1_state(0);
-    tmp_2_fu_2738_p2 <= std_logic_vector(unsigned(ap_const_lv32_1) + unsigned(loadCount_V));
-    tmp_4_fu_2723_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(phaseClass_V_load_reg_2765));
-    tmp_5_fu_2750_p2 <= "1" when (out_sample_data_V_reg_2777 = ap_const_lv32_0) else "0";
+    p_3_fu_2784_p3 <= 
+        p_s_fu_2777_p3 when (tmp_49_fu_2760_p3(0) = '1') else 
+        ret_V_reg_2845;
+    p_s_fu_2777_p3 <= 
+        ret_V_reg_2845 when (tmp_5_fu_2767_p2(0) = '1') else 
+        ret_V_1_fu_2772_p2;
+    ret_V_1_fu_2772_p2 <= std_logic_vector(unsigned(ap_const_lv22_1) + unsigned(ret_V_reg_2845));
+    tmp_49_fu_2760_p3 <= p_Val2_1_reg_2840(31 downto 31);
+    tmp_50_fu_2756_p1 <= grp_correlatorSynch_fu_1119_ap_return(10 - 1 downto 0);
+    tmp_5_fu_2767_p2 <= "1" when (tmp_50_reg_2852 = ap_const_lv10_0) else "0";
+    tmp_7_fu_2795_p2 <= std_logic_vector(unsigned(ap_const_lv32_1) + unsigned(loadCount_V));
+    tmp_9_fu_2735_p2 <= std_logic_vector(unsigned(ap_const_lv4_1) + unsigned(phaseClass_V_load_reg_2823));
+    tmp_s_fu_2807_p2 <= "1" when (signed(p_3_fu_2784_p3) > signed(ap_const_lv22_2710)) else "0";
 end behav;

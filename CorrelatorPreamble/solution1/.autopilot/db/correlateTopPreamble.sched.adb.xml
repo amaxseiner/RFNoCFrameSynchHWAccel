@@ -57,7 +57,7 @@
 
 <Node id="524" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !112
+codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !109
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -72,7 +72,7 @@ codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map 
 
 <Node id="525" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !116
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !113
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -87,7 +87,7 @@ codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !
 
 <Node id="526" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !120
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !117
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -102,7 +102,7 @@ codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map 
 
 <Node id="527" bw="0" op_0_bw="0" op_1_bw="1">
 <![CDATA[
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !124
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !121
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -792,7 +792,7 @@ codeRepl:48  %phaseClass_V_load = load i4* @phaseClass_V, align 1
 
 <Node id="573" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
+codeRepl:49  br i1 %currentState_load, label %._crit_edge196, label %0
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -840,7 +840,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="577" bw="0" op_0_bw="0">
 <![CDATA[
-:2  br label %._crit_edge196
+:2  br label %._crit_edge195
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -856,7 +856,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="579" bw="33" op_0_bw="33" op_1_bw="32" op_2_bw="1">
 <![CDATA[
-._crit_edge197:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+._crit_edge196:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -874,7 +874,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="579" bw="33" op_0_bw="33" op_1_bw="32" op_2_bw="1">
 <![CDATA[
-._crit_edge197:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+._crit_edge196:0  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -889,10 +889,10 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="580" bw="32" op_0_bw="33">
 <![CDATA[
-._crit_edge197:1  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
+._crit_edge196:1  %tmp_data_V = extractvalue { i32, i1 } %empty, 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_data_V_1"/></StgValue>
+<StgValue><ssdm name="tmp_data_V"/></StgValue>
 </operation>
 
 <operation id="63" st_id="2" stage="1" lat="1">
@@ -904,7 +904,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="581" bw="1" op_0_bw="33">
 <![CDATA[
-._crit_edge197:2  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
+._crit_edge196:2  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
 
 ]]></Node>
 <StgValue><ssdm name="tmp_last_V"/></StgValue>
@@ -919,7 +919,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="582" bw="16" op_0_bw="32">
 <![CDATA[
-._crit_edge197:3  %tmp = trunc i32 %tmp_data_V_1 to i16
+._crit_edge196:3  %tmp = trunc i32 %tmp_data_V to i16
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -934,7 +934,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="583" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-._crit_edge197:4  store i16 %tmp, i16* @newVali_V, align 2
+._crit_edge196:4  store i16 %tmp, i16* @newVali_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -949,7 +949,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="584" bw="16" op_0_bw="16" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge197:5  %p_Result_1 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp_data_V_1, i32 16, i32 31)
+._crit_edge196:5  %p_Result_1 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp_data_V, i32 16, i32 31)
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_1"/></StgValue>
@@ -964,7 +964,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="585" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-._crit_edge197:6  store i16 %p_Result_1, i16* @newValq_V, align 2
+._crit_edge196:6  store i16 %p_Result_1, i16* @newValq_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -979,7 +979,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="586" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-._crit_edge197:7  store i16 %tmp, i16* @newValiDec_V, align 2
+._crit_edge196:7  store i16 %tmp, i16* @newValiDec_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -994,7 +994,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="587" bw="0" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-._crit_edge197:8  store i16 %p_Result_1, i16* @newValqDec_V, align 2
+._crit_edge196:8  store i16 %p_Result_1, i16* @newValqDec_V, align 2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1009,7 +1009,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="588" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="4">
 <![CDATA[
-._crit_edge197:9  call fastcc void @shiftPhaseClassPre(i16 %tmp, i16 %p_Result_1, i4 %phaseClass_V_load)
+._crit_edge196:9  call fastcc void @shiftPhaseClassPre(i16 %tmp, i16 %p_Result_1, i4 %phaseClass_V_load)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1027,10 +1027,10 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="589" bw="32" op_0_bw="32" op_1_bw="4">
 <![CDATA[
-._crit_edge197:10  %out_sample_data_V = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
+._crit_edge196:10  %op_V_assign = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
 
 ]]></Node>
-<StgValue><ssdm name="out_sample_data_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 
 <operation id="72" st_id="3" stage="1" lat="1">
@@ -1042,7 +1042,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="593" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-._crit_edge197:14  %tmp_4 = add i4 1, %phaseClass_V_load
+._crit_edge196:14  %tmp_4 = add i4 1, %phaseClass_V_load
 
 ]]></Node>
 <StgValue><ssdm name="tmp_4"/></StgValue>
@@ -1057,7 +1057,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="594" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-._crit_edge197:15  store i4 %tmp_4, i4* @phaseClass_V, align 1
+._crit_edge196:15  store i4 %tmp_4, i4* @phaseClass_V, align 1
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1075,10 +1075,10 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="589" bw="32" op_0_bw="32" op_1_bw="4">
 <![CDATA[
-._crit_edge197:10  %out_sample_data_V = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
+._crit_edge196:10  %op_V_assign = call fastcc i32 @correlatorPre(i4 %phaseClass_V_load)
 
 ]]></Node>
-<StgValue><ssdm name="out_sample_data_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 </state>
 
@@ -1093,7 +1093,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="590" bw="32" op_0_bw="32">
 <![CDATA[
-._crit_edge197:11  %loadCount_V_load = load i32* @loadCount_V, align 4
+._crit_edge196:11  %loadCount_V_load = load i32* @loadCount_V, align 4
 
 ]]></Node>
 <StgValue><ssdm name="loadCount_V_load"/></StgValue>
@@ -1108,7 +1108,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="591" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge197:12  %tmp_2 = add i32 1, %loadCount_V_load
+._crit_edge196:12  %tmp_2 = add i32 1, %loadCount_V_load
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -1123,7 +1123,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="592" bw="0" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge197:13  store i32 %tmp_2, i32* @loadCount_V, align 4
+._crit_edge196:13  store i32 %tmp_2, i32* @loadCount_V, align 4
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1138,7 +1138,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="595" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-._crit_edge197:16  %tmp_5 = icmp eq i32 %out_sample_data_V, 0
+._crit_edge196:16  %tmp_5 = icmp sgt i32 %op_V_assign, 10240000
 
 ]]></Node>
 <StgValue><ssdm name="tmp_5"/></StgValue>
@@ -1153,7 +1153,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="596" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-._crit_edge197:17  br i1 %tmp_5, label %2, label %1
+._crit_edge196:17  br i1 %tmp_5, label %1, label %2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1169,7 +1169,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="598" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1185,7 +1185,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="601" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 %tmp_last_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1205,7 +1205,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="598" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1239,7 +1239,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="601" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="1" op_3_bw="32" op_4_bw="1">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 0, i1 %tmp_last_V)
+:0  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %tmp_data_V, i1 %tmp_last_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1272,7 +1272,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="604" bw="0" op_0_bw="0">
 <![CDATA[
-:0  br label %._crit_edge196
+:0  br label %._crit_edge195
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1287,7 +1287,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="606" bw="0" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-._crit_edge196:0  store i1 true, i1* @currentState, align 1
+._crit_edge195:0  store i1 true, i1* @currentState, align 1
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1302,7 +1302,7 @@ codeRepl:49  br i1 %currentState_load, label %._crit_edge197, label %0
 
 <Node id="607" bw="0">
 <![CDATA[
-._crit_edge196:1  ret void
+._crit_edge195:1  ret void
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

@@ -25,12 +25,13 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.554079595" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1600597682" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1500064478" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/ap_sysc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/etc"/>
+									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.798299278" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -43,12 +44,13 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.703370119" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.934622642" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1551332658" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/ap_sysc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/etc"/>
+									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1300347714" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -111,12 +113,13 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.23018393" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1281889984" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1109644459" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/ap_sysc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/etc"/>
+									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.814926623" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -124,12 +127,13 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.1224723526" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.1878723930" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.841792073" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/ece492fa18/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/ap_sysc"/>
-									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 									<listOptionValue builtIn="false" value="/home/ece492fa18/Vivado/2017.4/include/etc"/>
+									<listOptionValue builtIn="false" value="/home/alex/Documents/RFNoCFrameSynchHWAccel"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1409802096" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

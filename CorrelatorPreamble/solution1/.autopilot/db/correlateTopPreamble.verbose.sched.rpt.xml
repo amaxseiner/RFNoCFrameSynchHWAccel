@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'correlateTopPreamble'" level="0">
-<item name = "Date">Sun Apr 21 13:20:18 2019
+<item name = "Date">Tue Apr 23 16:31:05 2019
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">CorrelatorPreamble</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
-<item name = "Target device">xc7k160tfbg484-1</item>
+<item name = "Target device">xc7k410tffg900-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 3.37, 0.62</column>
+<column name="ap_clk">5.00, 4.24, 0.62</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 11, 1, 11, none</column>
+<column name="">1, 13, 1, 13, none</column>
 </table>
 </item>
 <item name = "Detail">

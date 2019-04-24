@@ -7,10 +7,10 @@ open_project CorrelatorPreamble
 set_top correlateTopPreamble
 add_files CorrelatorPreamble/correlatorPre.cpp
 open_solution "solution1"
-set_part {xc7k160tfbg484-1} -tool vivado
+set_part {xc7k410tffg900-1}
 create_clock -period 5 -name default
 #source "./CorrelatorPreamble/solution1/directives.tcl"
 #csim_design -compiler gcc
 csynth_design
 #cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog

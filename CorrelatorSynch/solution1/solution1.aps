@@ -1,11 +1,16 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <checksum>
+        <value string="false"/>
+    </checksum>
+    <downStreamTool>
+        <DownStreamTool name=""/>
+    </downStreamTool>
     <config>
         <schedule model="correlateTopSynch"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/kintex7/kintex7</Platform>
-            <Platform>xilinx/kintex7/kintex7_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -42,7 +47,7 @@
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -55,17 +60,14 @@
         <value string="CorrelatorSynch"/>
     </project>
     <targetInfo>
-        <TargetInfo value="xc7k160t:fbg484:-1"/>
+        <TargetInfo value="xc7k410t:ffg900:-1"/>
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/kintex7/kintex7"/>
-        <library name="DefaultPlatform" value="xilinx/kintex7/kintex7_fpv6"/>
+        <library value="xilinx/kintex7/kintex7_fpv6" name="DefaultPlatform"/>
     </libraryList>
-    <downStreamTool>
-        <DownStreamTool name="vivado"/>
-    </downStreamTool>
     <clockList>
-        <clock name="default" default="false" period="5"/>
+        <clock default="false" name="default" period="5"/>
     </clockList>
 </solution>
 

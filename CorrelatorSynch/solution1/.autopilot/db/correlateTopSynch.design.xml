@@ -5,14 +5,14 @@
 <ModuleName>correlateTopSynch</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_correlatorSynch_fu_1107</InstName>
+<InstName>grp_correlatorSynch_fu_1119</InstName>
 <ModuleName>correlatorSynch</ModuleName>
-<ID>1107</ID>
+<ID>1119</ID>
 </Instance>
 <Instance>
-<InstName>StgValue_70_shiftPhaseClassSynch_fu_1624</InstName>
+<InstName>StgValue_70_shiftPhaseClassSynch_fu_1636</InstName>
 <ModuleName>shiftPhaseClassSynch</ModuleName>
-<ID>1624</ID>
+<ID>1636</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -8423,21 +8423,21 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>0.62</ClockUncertainty>
-<EstimatedClockPeriod>4.04</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.24</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>5</Best-caseLatency>
-<Average-caseLatency>6</Average-caseLatency>
-<Worst-caseLatency>6</Worst-caseLatency>
-<PipelineInitiationInterval>5 ~ 6</PipelineInitiationInterval>
+<Best-caseLatency>4</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<PipelineInitiationInterval>4 ~ 8</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <DSP48E>1</DSP48E>
-<FF>2301</FF>
-<LUT>6108</LUT>
+<FF>1752</FF>
+<LUT>5431</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 </AreaEstimates>
@@ -11354,21 +11354,21 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>0.62</ClockUncertainty>
-<EstimatedClockPeriod>4.04</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.24</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>6</Average-caseLatency>
-<Worst-caseLatency>11</Worst-caseLatency>
-<PipelineInitiationInterval>2 ~ 12</PipelineInitiationInterval>
+<Average-caseLatency>7</Average-caseLatency>
+<Worst-caseLatency>13</Worst-caseLatency>
+<PipelineInitiationInterval>2 ~ 14</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <DSP48E>1</DSP48E>
-<FF>6629</FF>
-<LUT>8659</LUT>
+<FF>6144</FF>
+<LUT>8068</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 </AreaEstimates>

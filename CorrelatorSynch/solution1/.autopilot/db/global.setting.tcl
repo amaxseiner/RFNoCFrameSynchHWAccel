@@ -40,7 +40,7 @@ set ExportMCPathFlag "0"
 set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
-set TargetInfo "xc7k160t:fbg484:-1"
+set TargetInfo "xc7k410t:ffg900:-1"
 set SourceFiles {sc {} c ../correlatorSynch.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/CorrelatorSynch/solution1/solution1.directive}

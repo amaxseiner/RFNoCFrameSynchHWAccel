@@ -1336,266 +1336,266 @@ set ArgLastReadFirstWriteLatency {
 		phaseClass_V {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass15i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass15i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass15i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass15i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass15i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass15i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass15i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass15i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass15i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass15i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass15i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass14i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass14i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass14i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass14i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass14i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass14i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass14i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass14i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass14i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass14i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass14i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass13i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass13i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass13i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass13i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass13i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass13i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass13i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass13i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass13i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass13i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass13i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass12i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass12i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass12i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass12i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass12i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass12i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass12i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass12i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass12i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass12i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass12i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass11i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass11i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass11i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass11i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass11i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass11i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass11i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass11i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass11i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass11i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass11i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass10i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass10i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass10i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass10i_V_s {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass10i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass10i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass10i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass10i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass10i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass10i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass10i_V_s {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass9i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass9i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass9i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass9i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass9i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass9i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass9i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass9i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass9i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass9i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass9i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass8i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass8i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass8i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass8i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass8i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass8i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass8i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass8i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass8i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass8i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass8i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass7i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass7i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass7i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass7i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass7i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass7i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass7i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass7i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass7i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass7i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass7i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass6i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass6i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass6i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass6i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass6i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass6i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass6i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass6i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass6i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass6i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass6i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass5i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass5i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass5i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass5i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass5i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass5i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass5i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass5i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass5i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass5i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass5i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass4i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass4i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass4i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass4i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass4i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass4i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass4i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass4i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass4i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass4i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass4i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass3i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass3i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass3i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass3i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass3i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass3i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass3i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass3i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass3i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass3i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass3i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass2i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass2i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass2i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass2i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass2i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass2i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass2i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass2i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass2i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass2i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass2i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass1i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass1i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass1i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass1i_V_0 {Type I LastRead 0 FirstWrite -1}
+		cor_phaseClass1i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass1i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass1i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass1i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass1i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass1i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass1i_V_0 {Type I LastRead 4 FirstWrite -1}
 		cor_phaseClass0i_V_15 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass0i_V_14 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_13 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_13 {Type I LastRead 0 FirstWrite -1}
 		cor_phaseClass0i_V_12 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_11 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_10 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_9 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_8 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_7 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_6 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_5 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_4 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_3 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_2 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_1 {Type I LastRead 0 FirstWrite -1}
-		cor_phaseClass0i_V_0 {Type I LastRead 0 FirstWrite -1}}}
+		cor_phaseClass0i_V_11 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_10 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_9 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_8 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_7 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_6 {Type I LastRead 1 FirstWrite -1}
+		cor_phaseClass0i_V_5 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass0i_V_4 {Type I LastRead 2 FirstWrite -1}
+		cor_phaseClass0i_V_3 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass0i_V_2 {Type I LastRead 3 FirstWrite -1}
+		cor_phaseClass0i_V_1 {Type I LastRead 4 FirstWrite -1}
+		cor_phaseClass0i_V_0 {Type I LastRead 4 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "5", "Max" : "6"}
-	, {"Name" : "Interval", "Min" : "5", "Max" : "6"}
+	{"Name" : "Latency", "Min" : "4", "Max" : "8"}
+	, {"Name" : "Interval", "Min" : "4", "Max" : "8"}
 ]}
 
 set PipelineEnableSignalInfo {[

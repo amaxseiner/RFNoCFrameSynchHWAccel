@@ -29332,7 +29332,7 @@ void correlateTopSynch(rfnoc_axis *i_data,rfnoc_axis *o_data);
  class correlate{
  public:
   void shiftPhaseClassSynch(cor_t newVali,cor_t newValq, ap_uint<4> phaseClass);
-  ap_int<32> correlatorSynch(ap_uint<4> phaseClass);
+  ap_fixed<32,22> correlatorSynch(ap_uint<4> phaseClass);
 
   cor_t phaseClass0i[16];
   cor_t phaseClass0q[16];
@@ -29525,8 +29525,8 @@ switch(currentState) {
    phaseClass = phaseClass + 1;
   }
 
-  if(out != 0){
-   out_sample.data = out;
+  if(out > 10000){
+   out_sample.data = tmp_data.data;
    o_data.write(out_sample);
 
   } else {
@@ -29534,6 +29534,7 @@ switch(currentState) {
    o_data.write(out_sample);
 
   }
+
 
   currentState = ST_LOAD;
  break;
@@ -29699,17 +29700,15 @@ _ssdm_Unroll(0,0,0, "");
 
 }
 
-ap_int<32> correlate::correlatorSynch(ap_uint<4> phaseClass){
+ap_fixed<32,22> correlate::correlatorSynch(ap_uint<4> phaseClass){
  ap_int<32> res,tempi;
 
- ap_fixed<32,22> corHelperINeg,corHelperIPos,resi;
- ap_fixed<32,22> corHelperQNeg,corHelperQPos,resq;
+ ap_fixed<32,22> corHelperIPos,resi;
+ ap_fixed<32,22> corHelperQPos,resq;
  resi=0;
- corHelperINeg = 0;
  corHelperIPos = 0;
- corHelperQNeg = 0;
  corHelperQPos = 0;
-# 349 "CorrelatorSynch/correlatorSynch.cpp"
+# 348 "CorrelatorSynch/correlatorSynch.cpp"
  switch(phaseClass){
  case 0:
   correlateData0: for(int a =16 -1;a>=0;a--){
@@ -29718,10 +29717,10 @@ _ssdm_Unroll(0,0,0, "");
     corHelperIPos = corHelperIPos + (phaseClass0i[a]);
     corHelperQPos = corHelperQPos + (phaseClass0q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass0i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass0q[a]);
-
+    corHelperIPos = corHelperIPos - (phaseClass0i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass0q[a]);
    }
+
   }
  break;
  case 1:
@@ -29731,8 +29730,8 @@ _ssdm_Unroll(0,0,0, "");
     corHelperIPos = corHelperIPos + (phaseClass1i[a]);
     corHelperQPos = corHelperQPos + (phaseClass1q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass1i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass1q[a]);
+    corHelperIPos = corHelperIPos - (phaseClass1i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass1q[a]);
    }
   }
  break;
@@ -29743,8 +29742,8 @@ _ssdm_Unroll(0,0,0, "");
     corHelperIPos = corHelperIPos + (phaseClass2i[a]);
     corHelperQPos = corHelperQPos + (phaseClass2q[a]);
    } else {
-    corHelperINeg = corHelperINeg + (phaseClass2i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass2q[a]);
+    corHelperIPos = corHelperIPos - (phaseClass2i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass2q[a]);
    }
   }
  break;
@@ -29754,9 +29753,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass3i[a]);
     corHelperQPos = corHelperQPos + (phaseClass3q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass3i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass3q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass3i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass3q[a]);
    }
   }
  break;
@@ -29766,10 +29765,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass4i[a]);
     corHelperQPos = corHelperQPos + (phaseClass4q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass4i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass4q[a]);
-
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass4i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass4q[a]);
    }
   }
  break;
@@ -29779,9 +29777,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass5i[a]);
     corHelperQPos = corHelperQPos + (phaseClass5q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass5i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass5q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass5i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass5q[a]);
    }
   }
  break;
@@ -29791,9 +29789,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass6i[a]);
     corHelperQPos = corHelperQPos + (phaseClass6q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass6i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass6q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass6i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass6q[a]);
    }
   }
  break;
@@ -29803,9 +29801,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass7i[a]);
     corHelperQPos = corHelperQPos + (phaseClass7q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass7i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass7q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass7i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass7q[a]);
    }
   }
  break;
@@ -29815,9 +29813,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass8i[a]);
     corHelperQPos = corHelperQPos + (phaseClass8q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass8i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass8q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass8i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass8q[a]);
    }
   }
  break;
@@ -29827,9 +29825,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass9i[a]);
     corHelperQPos = corHelperQPos + (phaseClass9q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass9i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass9q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass9i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass9q[a]);
    }
   }
  break;
@@ -29839,9 +29837,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass10i[a]);
     corHelperQPos = corHelperQPos + (phaseClass10q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass10i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass10q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass10i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass10q[a]);
    }
   }
  break;
@@ -29851,9 +29849,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass11i[a]);
     corHelperQPos = corHelperQPos + (phaseClass11q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass11i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass11q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass11i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass11q[a]);
    }
   }
  break;
@@ -29863,9 +29861,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass12i[a]);
     corHelperQPos = corHelperQPos + (phaseClass12q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass12i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass12q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass12i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass12q[a]);
    }
   }
  break;
@@ -29875,9 +29873,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass13i[a]);
     corHelperQPos = corHelperQPos + (phaseClass13q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass13i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass13q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass13i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass13q[a]);
    }
   }
  break;
@@ -29887,9 +29885,9 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass14i[a]);
     corHelperQPos = corHelperQPos + (phaseClass14q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass14i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass14q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass14i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass14q[a]);
    }
   }
  break;
@@ -29899,31 +29897,20 @@ _ssdm_Unroll(0,0,0, "");
  if(corrSeq[a] == 1){
     corHelperIPos = corHelperIPos + (phaseClass15i[a]);
     corHelperQPos = corHelperQPos + (phaseClass15q[a]);
-   } else{
-    corHelperINeg = corHelperINeg + (phaseClass15i[a]);
-    corHelperQNeg = corHelperQNeg + (phaseClass15q[a]);
+   } else {
+    corHelperIPos = corHelperIPos - (phaseClass15i[a]);
+    corHelperQPos = corHelperQPos - (phaseClass15q[a]);
    }
+
   }
  break;
  }
+# 557 "CorrelatorSynch/correlatorSynch.cpp"
+ resi = corHelperIPos*corHelperIPos;
+ resq = corHelperQPos*corHelperQPos;
 
- if(corHelperIPos > corHelperINeg){
-  resi = corHelperIPos - corHelperINeg;
- } else {
-  resi = corHelperINeg - corHelperIPos;
- }
 
- if(corHelperQPos > corHelperQNeg){
-  resq = corHelperQPos - corHelperQNeg;
- } else {
-  resq = corHelperQNeg - corHelperQPos;
- }
 
- resi = resi*resi;
- resq = resq*resq;
- tempi.range(31,0) = resi.V;
 
- res.range(31,0) = tempi;
-
- return res;
+ return resi;
 }
