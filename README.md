@@ -1,8 +1,8 @@
 # RFNoCFrameSynchHWAccel
 
 
-Correlator Design by Alex Maxseiner(damaximum)
+Correlator Design by Alex Maxseiner (damaximum)
 
-Matched Filter Design by Lance Strain(QuidWalls)
+Matched Filter Design by Lance Strain (QuidWalls)
 
-Matlab Simulations and verification by Joe Coffin(jcoffin23)
+Matlab Simulations and verification by Joe Coffin (jcoffin23)
