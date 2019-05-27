@@ -1,0 +1,9 @@
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling apatb_matchTop.cpp
+@E [SIM-317] C++ compile error.
+@E [SIM-321] EXE file generate failed.
+@E [SIM-321] EXE file generate failed.
+@E [SIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***

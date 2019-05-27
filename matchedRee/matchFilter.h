@@ -3,12 +3,12 @@
 #include <hls_stream.h>
 
 #define SIZE = 128;
- struct axis_fixed{
+ struct rfnoc_axis{
      ap_int<32> data;
      ap_uint<1> last;
    };
 
-	static ap_int<16> preamble[128] = {0.00554,
+	static ap_fixed<16,2> preamble[128] = {0.00554,
 			0.00536,
 			0.00452,
 			0.00306,
@@ -72,7 +72,7 @@
 			0.898,
 			0.954,
 			0.988,
-			1,
+			1.0001,
 			0.988,
 			0.954,
 			0.898,
@@ -138,32 +138,15 @@
 			0.00536
 };
 
+typedef ap_fixed<16,1, AP_RND> fixedMatch;
+void matchFilter(hls::stream<rfnoc_axis> in, hls::stream<rfnoc_axis> out);
+//void matchTop(rfnoc_axis *i_data,rfnoc_axis *o_data);
 
-
-void matchFilter(hls::stream<axis_fixed> in, hls::stream<axis_fixed> out);
-
-class matchFilter_ff
-{
+class matchFilter_ff{
 public:
-	axis_fixed convol(axis_fixed in[128]){
-		axis_fixed out;
-		ap_int<16> tempI;
-		ap_int<16> tempQ;
-		out.last =in[0].last;
-		tempI = 0.0;
-		tempQ = 0.0;
-		ap_int<16> inI;
-		ap_int<16> inQ;
-		for(int b = 0; b<128; b++){
-			inI = (in[b].data.range(31,16));
-			inQ = (in[b].data.range(15,0));
-			//tempI = tempI + (inI*preamble[b]);
-			tempI = 0;
-			tempQ = tempQ + (inQ*preamble[b]);
-		}
-		out.data.range(31,16)=tempI;
-		out.data.range(15,0)=tempQ;
-		return out;
-	}
+	void shiftSampleIn(fixedMatch newVali, fixedMatch newValq);
+	ap_int<32> convol();
+	fixedMatch matchBufferI[128];
+	fixedMatch matchBufferQ[128];
 
 };

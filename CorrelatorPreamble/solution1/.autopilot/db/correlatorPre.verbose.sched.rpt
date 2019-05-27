@@ -1,0 +1,1115 @@
+
+
+================================================================
+== Vivado HLS Report for 'correlatorPre'
+================================================================
+* Date:           Tue Apr 23 16:31:04 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        CorrelatorPreamble
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k410tffg900-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.24|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|    8|    4|    8|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+	6  / false
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+ <State 1> : 4.06ns
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass0i_V_0, i16* @cor_phaseClass0i_V_1, i16* @cor_phaseClass0i_V_2, i16* @cor_phaseClass0i_V_3, i16* @cor_phaseClass0i_V_4, i16* @cor_phaseClass0i_V_5, i16* @cor_phaseClass0i_V_6, i16* @cor_phaseClass0i_V_7, i16* @cor_phaseClass0i_V_8, i16* @cor_phaseClass0i_V_9, i16* @cor_phaseClass0i_V_10, i16* @cor_phaseClass0i_V_11, i16* @cor_phaseClass0i_V_12, i16* @cor_phaseClass0i_V_13, i16* @cor_phaseClass0i_V_14, i16* @cor_phaseClass0i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:22]
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass10i_V_s, i16* @cor_phaseClass10i_V_1, i16* @cor_phaseClass10i_V_2, i16* @cor_phaseClass10i_V_3, i16* @cor_phaseClass10i_V_4, i16* @cor_phaseClass10i_V_5, i16* @cor_phaseClass10i_V_6, i16* @cor_phaseClass10i_V_7, i16* @cor_phaseClass10i_V_8, i16* @cor_phaseClass10i_V_9, i16* @cor_phaseClass10i_V_10, i16* @cor_phaseClass10i_V_11, i16* @cor_phaseClass10i_V_12, i16* @cor_phaseClass10i_V_13, i16* @cor_phaseClass10i_V_14, i16* @cor_phaseClass10i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:62]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass11i_V_s, i16* @cor_phaseClass11i_V_1, i16* @cor_phaseClass11i_V_2, i16* @cor_phaseClass11i_V_3, i16* @cor_phaseClass11i_V_4, i16* @cor_phaseClass11i_V_5, i16* @cor_phaseClass11i_V_6, i16* @cor_phaseClass11i_V_7, i16* @cor_phaseClass11i_V_8, i16* @cor_phaseClass11i_V_9, i16* @cor_phaseClass11i_V_10, i16* @cor_phaseClass11i_V_11, i16* @cor_phaseClass11i_V_12, i16* @cor_phaseClass11i_V_13, i16* @cor_phaseClass11i_V_14, i16* @cor_phaseClass11i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:66]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass12i_V_s, i16* @cor_phaseClass12i_V_1, i16* @cor_phaseClass12i_V_2, i16* @cor_phaseClass12i_V_3, i16* @cor_phaseClass12i_V_4, i16* @cor_phaseClass12i_V_5, i16* @cor_phaseClass12i_V_6, i16* @cor_phaseClass12i_V_7, i16* @cor_phaseClass12i_V_8, i16* @cor_phaseClass12i_V_9, i16* @cor_phaseClass12i_V_10, i16* @cor_phaseClass12i_V_11, i16* @cor_phaseClass12i_V_12, i16* @cor_phaseClass12i_V_13, i16* @cor_phaseClass12i_V_14, i16* @cor_phaseClass12i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:70]
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass13i_V_s, i16* @cor_phaseClass13i_V_1, i16* @cor_phaseClass13i_V_2, i16* @cor_phaseClass13i_V_3, i16* @cor_phaseClass13i_V_4, i16* @cor_phaseClass13i_V_5, i16* @cor_phaseClass13i_V_6, i16* @cor_phaseClass13i_V_7, i16* @cor_phaseClass13i_V_8, i16* @cor_phaseClass13i_V_9, i16* @cor_phaseClass13i_V_10, i16* @cor_phaseClass13i_V_11, i16* @cor_phaseClass13i_V_12, i16* @cor_phaseClass13i_V_13, i16* @cor_phaseClass13i_V_14, i16* @cor_phaseClass13i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:74]
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass14i_V_s, i16* @cor_phaseClass14i_V_1, i16* @cor_phaseClass14i_V_2, i16* @cor_phaseClass14i_V_3, i16* @cor_phaseClass14i_V_4, i16* @cor_phaseClass14i_V_5, i16* @cor_phaseClass14i_V_6, i16* @cor_phaseClass14i_V_7, i16* @cor_phaseClass14i_V_8, i16* @cor_phaseClass14i_V_9, i16* @cor_phaseClass14i_V_10, i16* @cor_phaseClass14i_V_11, i16* @cor_phaseClass14i_V_12, i16* @cor_phaseClass14i_V_13, i16* @cor_phaseClass14i_V_14, i16* @cor_phaseClass14i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:78]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass15i_V_s, i16* @cor_phaseClass15i_V_1, i16* @cor_phaseClass15i_V_2, i16* @cor_phaseClass15i_V_3, i16* @cor_phaseClass15i_V_4, i16* @cor_phaseClass15i_V_5, i16* @cor_phaseClass15i_V_6, i16* @cor_phaseClass15i_V_7, i16* @cor_phaseClass15i_V_8, i16* @cor_phaseClass15i_V_9, i16* @cor_phaseClass15i_V_10, i16* @cor_phaseClass15i_V_11, i16* @cor_phaseClass15i_V_12, i16* @cor_phaseClass15i_V_13, i16* @cor_phaseClass15i_V_14, i16* @cor_phaseClass15i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:82]
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass1i_V_0, i16* @cor_phaseClass1i_V_1, i16* @cor_phaseClass1i_V_2, i16* @cor_phaseClass1i_V_3, i16* @cor_phaseClass1i_V_4, i16* @cor_phaseClass1i_V_5, i16* @cor_phaseClass1i_V_6, i16* @cor_phaseClass1i_V_7, i16* @cor_phaseClass1i_V_8, i16* @cor_phaseClass1i_V_9, i16* @cor_phaseClass1i_V_10, i16* @cor_phaseClass1i_V_11, i16* @cor_phaseClass1i_V_12, i16* @cor_phaseClass1i_V_13, i16* @cor_phaseClass1i_V_14, i16* @cor_phaseClass1i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:26]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass2i_V_0, i16* @cor_phaseClass2i_V_1, i16* @cor_phaseClass2i_V_2, i16* @cor_phaseClass2i_V_3, i16* @cor_phaseClass2i_V_4, i16* @cor_phaseClass2i_V_5, i16* @cor_phaseClass2i_V_6, i16* @cor_phaseClass2i_V_7, i16* @cor_phaseClass2i_V_8, i16* @cor_phaseClass2i_V_9, i16* @cor_phaseClass2i_V_10, i16* @cor_phaseClass2i_V_11, i16* @cor_phaseClass2i_V_12, i16* @cor_phaseClass2i_V_13, i16* @cor_phaseClass2i_V_14, i16* @cor_phaseClass2i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:30]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass3i_V_0, i16* @cor_phaseClass3i_V_1, i16* @cor_phaseClass3i_V_2, i16* @cor_phaseClass3i_V_3, i16* @cor_phaseClass3i_V_4, i16* @cor_phaseClass3i_V_5, i16* @cor_phaseClass3i_V_6, i16* @cor_phaseClass3i_V_7, i16* @cor_phaseClass3i_V_8, i16* @cor_phaseClass3i_V_9, i16* @cor_phaseClass3i_V_10, i16* @cor_phaseClass3i_V_11, i16* @cor_phaseClass3i_V_12, i16* @cor_phaseClass3i_V_13, i16* @cor_phaseClass3i_V_14, i16* @cor_phaseClass3i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:34]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass4i_V_0, i16* @cor_phaseClass4i_V_1, i16* @cor_phaseClass4i_V_2, i16* @cor_phaseClass4i_V_3, i16* @cor_phaseClass4i_V_4, i16* @cor_phaseClass4i_V_5, i16* @cor_phaseClass4i_V_6, i16* @cor_phaseClass4i_V_7, i16* @cor_phaseClass4i_V_8, i16* @cor_phaseClass4i_V_9, i16* @cor_phaseClass4i_V_10, i16* @cor_phaseClass4i_V_11, i16* @cor_phaseClass4i_V_12, i16* @cor_phaseClass4i_V_13, i16* @cor_phaseClass4i_V_14, i16* @cor_phaseClass4i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:38]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass5i_V_0, i16* @cor_phaseClass5i_V_1, i16* @cor_phaseClass5i_V_2, i16* @cor_phaseClass5i_V_3, i16* @cor_phaseClass5i_V_4, i16* @cor_phaseClass5i_V_5, i16* @cor_phaseClass5i_V_6, i16* @cor_phaseClass5i_V_7, i16* @cor_phaseClass5i_V_8, i16* @cor_phaseClass5i_V_9, i16* @cor_phaseClass5i_V_10, i16* @cor_phaseClass5i_V_11, i16* @cor_phaseClass5i_V_12, i16* @cor_phaseClass5i_V_13, i16* @cor_phaseClass5i_V_14, i16* @cor_phaseClass5i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:42]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass6i_V_0, i16* @cor_phaseClass6i_V_1, i16* @cor_phaseClass6i_V_2, i16* @cor_phaseClass6i_V_3, i16* @cor_phaseClass6i_V_4, i16* @cor_phaseClass6i_V_5, i16* @cor_phaseClass6i_V_6, i16* @cor_phaseClass6i_V_7, i16* @cor_phaseClass6i_V_8, i16* @cor_phaseClass6i_V_9, i16* @cor_phaseClass6i_V_10, i16* @cor_phaseClass6i_V_11, i16* @cor_phaseClass6i_V_12, i16* @cor_phaseClass6i_V_13, i16* @cor_phaseClass6i_V_14, i16* @cor_phaseClass6i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:46]
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass7i_V_0, i16* @cor_phaseClass7i_V_1, i16* @cor_phaseClass7i_V_2, i16* @cor_phaseClass7i_V_3, i16* @cor_phaseClass7i_V_4, i16* @cor_phaseClass7i_V_5, i16* @cor_phaseClass7i_V_6, i16* @cor_phaseClass7i_V_7, i16* @cor_phaseClass7i_V_8, i16* @cor_phaseClass7i_V_9, i16* @cor_phaseClass7i_V_10, i16* @cor_phaseClass7i_V_11, i16* @cor_phaseClass7i_V_12, i16* @cor_phaseClass7i_V_13, i16* @cor_phaseClass7i_V_14, i16* @cor_phaseClass7i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:50]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass8i_V_0, i16* @cor_phaseClass8i_V_1, i16* @cor_phaseClass8i_V_2, i16* @cor_phaseClass8i_V_3, i16* @cor_phaseClass8i_V_4, i16* @cor_phaseClass8i_V_5, i16* @cor_phaseClass8i_V_6, i16* @cor_phaseClass8i_V_7, i16* @cor_phaseClass8i_V_8, i16* @cor_phaseClass8i_V_9, i16* @cor_phaseClass8i_V_10, i16* @cor_phaseClass8i_V_11, i16* @cor_phaseClass8i_V_12, i16* @cor_phaseClass8i_V_13, i16* @cor_phaseClass8i_V_14, i16* @cor_phaseClass8i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:54]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i16* @cor_phaseClass9i_V_0, i16* @cor_phaseClass9i_V_1, i16* @cor_phaseClass9i_V_2, i16* @cor_phaseClass9i_V_3, i16* @cor_phaseClass9i_V_4, i16* @cor_phaseClass9i_V_5, i16* @cor_phaseClass9i_V_6, i16* @cor_phaseClass9i_V_7, i16* @cor_phaseClass9i_V_8, i16* @cor_phaseClass9i_V_9, i16* @cor_phaseClass9i_V_10, i16* @cor_phaseClass9i_V_11, i16* @cor_phaseClass9i_V_12, i16* @cor_phaseClass9i_V_13, i16* @cor_phaseClass9i_V_14, i16* @cor_phaseClass9i_V_15, i32 1, [1 x i8]* @p_str2) nounwind" [CorrelatorPreamble/correlatorPre.cpp:58]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%phaseClass_V_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %phaseClass_V)"
+ST_1 : Operation 27 [1/1] (1.63ns)   --->   "switch i4 %phaseClass_V_read, label %.loopexit [
+    i4 0, label %.preheader1093.0
+    i4 1, label %.preheader1091.0
+    i4 2, label %.preheader1089.0
+    i4 3, label %.preheader1087.0
+    i4 4, label %.preheader1085.0
+    i4 5, label %.preheader1083.0
+    i4 6, label %.preheader1081.0
+    i4 7, label %.preheader1079.0
+    i4 -8, label %.preheader1077.0
+    i4 -7, label %.preheader1075.0
+    i4 -6, label %.preheader1073.0
+    i4 -5, label %.preheader1071.0
+    i4 -4, label %.preheader1069.0
+    i4 -3, label %.preheader1067.0
+    i4 -2, label %.preheader1065.0
+    i4 -1, label %.preheader.0
+  ]" [CorrelatorPreamble/correlatorPre.cpp:346]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_s = load i16* @cor_phaseClass15i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_17_cast = sext i16 %cor_phaseClass15i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 30 [1/1] (1.48ns)   --->   "%p_Val2_15 = sub i17 0, %tmp_17_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_Val2_15_cast = sext i17 %p_Val2_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_15 = load i16* @cor_phaseClass15i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_345_1_cast = sext i16 %cor_phaseClass15i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_154_1 = sub i18 %p_Val2_15_cast, %tmp_345_1_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_16 = load i16* @cor_phaseClass15i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_345_2_cast = sext i16 %cor_phaseClass15i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 37 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_154_2 = sub i18 %p_Val2_154_1, %tmp_345_2_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_20 = load i16* @cor_phaseClass15i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_345_6_cast = sext i16 %cor_phaseClass15i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_21 = load i16* @cor_phaseClass15i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_345_7_cast = sext i16 %cor_phaseClass15i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_1 : Operation 42 [1/1] (1.48ns)   --->   "%tmp2 = add i17 %tmp_345_6_cast, %tmp_345_7_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_s = load i16* @cor_phaseClass14i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_16_cast = sext i16 %cor_phaseClass14i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 45 [1/1] (1.48ns)   --->   "%p_Val2_14 = sub i17 0, %tmp_16_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_Val2_14_cast = sext i17 %p_Val2_14 to i18" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_15 = load i16* @cor_phaseClass14i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_333_1_cast = sext i16 %cor_phaseClass14i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 49 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_144_1 = sub i18 %p_Val2_14_cast, %tmp_333_1_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_16 = load i16* @cor_phaseClass14i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_333_2_cast = sext i16 %cor_phaseClass14i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 52 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_144_2 = sub i18 %p_Val2_144_1, %tmp_333_2_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_20 = load i16* @cor_phaseClass14i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_333_6_cast = sext i16 %cor_phaseClass14i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_21 = load i16* @cor_phaseClass14i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_333_7_cast = sext i16 %cor_phaseClass14i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_1 : Operation 57 [1/1] (1.48ns)   --->   "%tmp6 = add i17 %tmp_333_6_cast, %tmp_333_7_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_s = load i16* @cor_phaseClass13i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_15_cast = sext i16 %cor_phaseClass13i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 60 [1/1] (1.48ns)   --->   "%p_Val2_13 = sub i17 0, %tmp_15_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_Val2_13_cast = sext i17 %p_Val2_13 to i18" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_15 = load i16* @cor_phaseClass13i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_321_1_cast = sext i16 %cor_phaseClass13i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 64 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_134_1 = sub i18 %p_Val2_13_cast, %tmp_321_1_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_16 = load i16* @cor_phaseClass13i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_321_2_cast = sext i16 %cor_phaseClass13i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 67 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_134_2 = sub i18 %p_Val2_134_1, %tmp_321_2_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_20 = load i16* @cor_phaseClass13i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_321_6_cast = sext i16 %cor_phaseClass13i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_21 = load i16* @cor_phaseClass13i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_321_7_cast = sext i16 %cor_phaseClass13i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_1 : Operation 72 [1/1] (1.48ns)   --->   "%tmp10 = add i17 %tmp_321_6_cast, %tmp_321_7_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_s = load i16* @cor_phaseClass12i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_14_cast = sext i16 %cor_phaseClass12i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 75 [1/1] (1.48ns)   --->   "%p_Val2_12 = sub i17 0, %tmp_14_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_Val2_12_cast = sext i17 %p_Val2_12 to i18" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_15 = load i16* @cor_phaseClass12i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_309_1_cast = sext i16 %cor_phaseClass12i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 79 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_124_1 = sub i18 %p_Val2_12_cast, %tmp_309_1_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_16 = load i16* @cor_phaseClass12i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_309_2_cast = sext i16 %cor_phaseClass12i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 82 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_124_2 = sub i18 %p_Val2_124_1, %tmp_309_2_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_20 = load i16* @cor_phaseClass12i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_309_6_cast = sext i16 %cor_phaseClass12i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_21 = load i16* @cor_phaseClass12i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_309_7_cast = sext i16 %cor_phaseClass12i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_1 : Operation 87 [1/1] (1.48ns)   --->   "%tmp14 = add i17 %tmp_309_6_cast, %tmp_309_7_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_s = load i16* @cor_phaseClass11i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_13_cast = sext i16 %cor_phaseClass11i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 90 [1/1] (1.48ns)   --->   "%p_Val2_11 = sub i17 0, %tmp_13_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%p_Val2_11_cast = sext i17 %p_Val2_11 to i18" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_15 = load i16* @cor_phaseClass11i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_297_1_cast = sext i16 %cor_phaseClass11i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 94 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_114_1 = sub i18 %p_Val2_11_cast, %tmp_297_1_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_16 = load i16* @cor_phaseClass11i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_297_2_cast = sext i16 %cor_phaseClass11i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 97 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_114_2 = sub i18 %p_Val2_114_1, %tmp_297_2_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_20 = load i16* @cor_phaseClass11i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_297_6_cast = sext i16 %cor_phaseClass11i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_21 = load i16* @cor_phaseClass11i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_297_7_cast = sext i16 %cor_phaseClass11i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_1 : Operation 102 [1/1] (1.48ns)   --->   "%tmp18 = add i17 %tmp_297_6_cast, %tmp_297_7_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_s = load i16* @cor_phaseClass10i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_12_cast = sext i16 %cor_phaseClass10i_V_s to i17" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 105 [1/1] (1.48ns)   --->   "%p_Val2_10 = sub i17 0, %tmp_12_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%p_Val2_10_cast = sext i17 %p_Val2_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_15 = load i16* @cor_phaseClass10i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%tmp_285_1_cast = sext i16 %cor_phaseClass10i_V_15 to i18" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 109 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_104_1 = sub i18 %p_Val2_10_cast, %tmp_285_1_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_16 = load i16* @cor_phaseClass10i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_285_2_cast = sext i16 %cor_phaseClass10i_V_16 to i18" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 112 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_104_2 = sub i18 %p_Val2_104_1, %tmp_285_2_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_20 = load i16* @cor_phaseClass10i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_285_6_cast = sext i16 %cor_phaseClass10i_V_20 to i17" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_21 = load i16* @cor_phaseClass10i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_285_7_cast = sext i16 %cor_phaseClass10i_V_21 to i17" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_1 : Operation 117 [1/1] (1.48ns)   --->   "%tmp22 = add i17 %tmp_285_6_cast, %tmp_285_7_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1 = load i16* @cor_phaseClass9i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_11_cast = sext i16 %cor_phaseClass9i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 120 [1/1] (1.48ns)   --->   "%p_Val2_9 = sub i17 0, %tmp_11_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_Val2_9_cast = sext i17 %p_Val2_9 to i18" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_6 = load i16* @cor_phaseClass9i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_273_1_cast = sext i16 %cor_phaseClass9i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 124 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_94_1 = sub i18 %p_Val2_9_cast, %tmp_273_1_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_7 = load i16* @cor_phaseClass9i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_273_2_cast = sext i16 %cor_phaseClass9i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 127 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_94_2 = sub i18 %p_Val2_94_1, %tmp_273_2_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_9 = load i16* @cor_phaseClass9i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_273_6_cast = sext i16 %cor_phaseClass9i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_8 = load i16* @cor_phaseClass9i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_273_7_cast = sext i16 %cor_phaseClass9i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_1 : Operation 132 [1/1] (1.48ns)   --->   "%tmp26 = add i17 %tmp_273_6_cast, %tmp_273_7_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1 = load i16* @cor_phaseClass8i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_10_cast = sext i16 %cor_phaseClass8i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 135 [1/1] (1.48ns)   --->   "%p_Val2_8 = sub i17 0, %tmp_10_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%p_Val2_8_cast = sext i17 %p_Val2_8 to i18" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_6 = load i16* @cor_phaseClass8i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_261_1_cast = sext i16 %cor_phaseClass8i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 139 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_84_1 = sub i18 %p_Val2_8_cast, %tmp_261_1_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_7 = load i16* @cor_phaseClass8i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_261_2_cast = sext i16 %cor_phaseClass8i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 142 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_84_2 = sub i18 %p_Val2_84_1, %tmp_261_2_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_9 = load i16* @cor_phaseClass8i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_261_6_cast = sext i16 %cor_phaseClass8i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_8 = load i16* @cor_phaseClass8i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%tmp_261_7_cast = sext i16 %cor_phaseClass8i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_1 : Operation 147 [1/1] (1.48ns)   --->   "%tmp30 = add i17 %tmp_261_6_cast, %tmp_261_7_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1 = load i16* @cor_phaseClass7i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_9_cast = sext i16 %cor_phaseClass7i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 150 [1/1] (1.48ns)   --->   "%p_Val2_7 = sub i17 0, %tmp_9_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%p_Val2_7_cast = sext i17 %p_Val2_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_6 = load i16* @cor_phaseClass7i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%tmp_249_1_cast = sext i16 %cor_phaseClass7i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 154 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_74_1 = sub i18 %p_Val2_7_cast, %tmp_249_1_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_7 = load i16* @cor_phaseClass7i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%tmp_249_2_cast = sext i16 %cor_phaseClass7i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 157 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_74_2 = sub i18 %p_Val2_74_1, %tmp_249_2_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_9 = load i16* @cor_phaseClass7i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_249_6_cast = sext i16 %cor_phaseClass7i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_8 = load i16* @cor_phaseClass7i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%tmp_249_7_cast = sext i16 %cor_phaseClass7i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_1 : Operation 162 [1/1] (1.48ns)   --->   "%tmp34 = add i17 %tmp_249_6_cast, %tmp_249_7_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1 = load i16* @cor_phaseClass6i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_8_cast = sext i16 %cor_phaseClass6i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 165 [1/1] (1.48ns)   --->   "%p_Val2_6 = sub i17 0, %tmp_8_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%p_Val2_6_cast = sext i17 %p_Val2_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_6 = load i16* @cor_phaseClass6i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_237_1_cast = sext i16 %cor_phaseClass6i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 169 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_64_1 = sub i18 %p_Val2_6_cast, %tmp_237_1_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_7 = load i16* @cor_phaseClass6i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_237_2_cast = sext i16 %cor_phaseClass6i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 172 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_64_2 = sub i18 %p_Val2_64_1, %tmp_237_2_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_9 = load i16* @cor_phaseClass6i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_237_6_cast = sext i16 %cor_phaseClass6i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_8 = load i16* @cor_phaseClass6i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_237_7_cast = sext i16 %cor_phaseClass6i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_1 : Operation 177 [1/1] (1.48ns)   --->   "%tmp38 = add i17 %tmp_237_6_cast, %tmp_237_7_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1 = load i16* @cor_phaseClass5i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_7_cast = sext i16 %cor_phaseClass5i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 180 [1/1] (1.48ns)   --->   "%p_Val2_5 = sub i17 0, %tmp_7_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%p_Val2_5_cast = sext i17 %p_Val2_5 to i18" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_6 = load i16* @cor_phaseClass5i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_225_1_cast = sext i16 %cor_phaseClass5i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 184 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_54_1 = sub i18 %p_Val2_5_cast, %tmp_225_1_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_7 = load i16* @cor_phaseClass5i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%tmp_225_2_cast = sext i16 %cor_phaseClass5i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 187 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_54_2 = sub i18 %p_Val2_54_1, %tmp_225_2_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_9 = load i16* @cor_phaseClass5i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_225_6_cast = sext i16 %cor_phaseClass5i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_8 = load i16* @cor_phaseClass5i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_225_7_cast = sext i16 %cor_phaseClass5i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_1 : Operation 192 [1/1] (1.48ns)   --->   "%tmp42 = add i17 %tmp_225_6_cast, %tmp_225_7_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1 = load i16* @cor_phaseClass4i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%tmp_6_cast = sext i16 %cor_phaseClass4i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 195 [1/1] (1.48ns)   --->   "%p_Val2_4 = sub i17 0, %tmp_6_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%p_Val2_4_cast = sext i17 %p_Val2_4 to i18" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_6 = load i16* @cor_phaseClass4i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%tmp_213_1_cast = sext i16 %cor_phaseClass4i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 199 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_44_1 = sub i18 %p_Val2_4_cast, %tmp_213_1_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_7 = load i16* @cor_phaseClass4i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%tmp_213_2_cast = sext i16 %cor_phaseClass4i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 202 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_44_2 = sub i18 %p_Val2_44_1, %tmp_213_2_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_9 = load i16* @cor_phaseClass4i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%tmp_213_6_cast = sext i16 %cor_phaseClass4i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_8 = load i16* @cor_phaseClass4i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%tmp_213_7_cast = sext i16 %cor_phaseClass4i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_1 : Operation 207 [1/1] (1.48ns)   --->   "%tmp46 = add i17 %tmp_213_6_cast, %tmp_213_7_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1 = load i16* @cor_phaseClass3i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%tmp_5_cast = sext i16 %cor_phaseClass3i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 210 [1/1] (1.48ns)   --->   "%p_Val2_3 = sub i17 0, %tmp_5_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%p_Val2_3_cast = sext i17 %p_Val2_3 to i18" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_6 = load i16* @cor_phaseClass3i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_201_1_cast = sext i16 %cor_phaseClass3i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 214 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_34_1 = sub i18 %p_Val2_3_cast, %tmp_201_1_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_7 = load i16* @cor_phaseClass3i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_201_2_cast = sext i16 %cor_phaseClass3i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 217 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_34_2 = sub i18 %p_Val2_34_1, %tmp_201_2_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_9 = load i16* @cor_phaseClass3i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_201_6_cast = sext i16 %cor_phaseClass3i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_8 = load i16* @cor_phaseClass3i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_201_7_cast = sext i16 %cor_phaseClass3i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_1 : Operation 222 [1/1] (1.48ns)   --->   "%tmp50 = add i17 %tmp_201_6_cast, %tmp_201_7_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1 = load i16* @cor_phaseClass2i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%tmp_4_cast = sext i16 %cor_phaseClass2i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 225 [1/1] (1.48ns)   --->   "%p_Val2_1 = sub i17 0, %tmp_4_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%p_Val2_1_cast = sext i17 %p_Val2_1 to i18" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_6 = load i16* @cor_phaseClass2i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_189_1_cast = sext i16 %cor_phaseClass2i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 229 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_24_1 = sub i18 %p_Val2_1_cast, %tmp_189_1_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_7 = load i16* @cor_phaseClass2i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%tmp_189_2_cast = sext i16 %cor_phaseClass2i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 232 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_24_2 = sub i18 %p_Val2_24_1, %tmp_189_2_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_9 = load i16* @cor_phaseClass2i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%tmp_189_6_cast = sext i16 %cor_phaseClass2i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_8 = load i16* @cor_phaseClass2i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_189_7_cast = sext i16 %cor_phaseClass2i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_1 : Operation 237 [1/1] (1.48ns)   --->   "%tmp54 = add i17 %tmp_189_6_cast, %tmp_189_7_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1 = load i16* @cor_phaseClass1i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_3_cast = sext i16 %cor_phaseClass1i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 240 [1/1] (1.48ns)   --->   "%p_Val2_s = sub i17 0, %tmp_3_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%p_Val2_cast = sext i17 %p_Val2_s to i18" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_6 = load i16* @cor_phaseClass1i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_177_1_cast = sext i16 %cor_phaseClass1i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 244 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_14_1 = sub i18 %p_Val2_cast, %tmp_177_1_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_7 = load i16* @cor_phaseClass1i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_177_2_cast = sext i16 %cor_phaseClass1i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 247 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_14_2 = sub i18 %p_Val2_14_1, %tmp_177_2_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_9 = load i16* @cor_phaseClass1i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%tmp_177_6_cast = sext i16 %cor_phaseClass1i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_8 = load i16* @cor_phaseClass1i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%tmp_177_7_cast = sext i16 %cor_phaseClass1i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_1 : Operation 252 [1/1] (1.48ns)   --->   "%tmp58 = add i17 %tmp_177_6_cast, %tmp_177_7_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1 = load i16* @cor_phaseClass0i_V_15, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%tmp_2_cast = sext i16 %cor_phaseClass0i_V_1 to i17" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 255 [1/1] (1.48ns)   --->   "%p_Val2_2 = sub i17 0, %tmp_2_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "%p_Val2_2_cast = sext i17 %p_Val2_2 to i18" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_6 = load i16* @cor_phaseClass0i_V_14, align 4" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "%tmp_160_1_cast = sext i16 %cor_phaseClass0i_V_1_6 to i18" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 259 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_2_1 = sub i18 %p_Val2_2_cast, %tmp_160_1_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_7 = load i16* @cor_phaseClass0i_V_13, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%tmp_160_2_cast = sext i16 %cor_phaseClass0i_V_1_7 to i18" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 262 [1/1] (2.57ns) (root node of TernaryAdder)   --->   "%p_Val2_2_2 = sub i18 %p_Val2_2_1, %tmp_160_2_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_9 = load i16* @cor_phaseClass0i_V_9, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%tmp_160_6_cast = sext i16 %cor_phaseClass0i_V_9 to i17" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_8 = load i16* @cor_phaseClass0i_V_8, align 16" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%tmp_160_7_cast = sext i16 %cor_phaseClass0i_V_8 to i17" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_1 : Operation 267 [1/1] (1.48ns)   --->   "%tmp62 = add i17 %tmp_160_6_cast, %tmp_160_7_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 2> : 4.11ns
+ST_2 : Operation 268 [1/1] (0.00ns)   --->   "%p_Val2_154_2_cast = sext i18 %p_Val2_154_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 269 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_17 = load i16* @cor_phaseClass15i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 270 [1/1] (0.00ns)   --->   "%tmp_345_3_cast = sext i16 %cor_phaseClass15i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 271 [1/1] (1.52ns)   --->   "%p_Val2_154_3 = sub i19 %p_Val2_154_2_cast, %tmp_345_3_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 272 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_18 = load i16* @cor_phaseClass15i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 273 [1/1] (0.00ns)   --->   "%tmp_345_4_cast = sext i16 %cor_phaseClass15i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 274 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_19 = load i16* @cor_phaseClass15i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_345_5_cast = sext i16 %cor_phaseClass15i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_2 : Operation 276 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i19 %p_Val2_154_3, %tmp_345_4_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 277 [1/1] (0.00ns)   --->   "%tmp2_cast = sext i17 %tmp2 to i18" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_2 : Operation 278 [1/1] (1.50ns)   --->   "%tmp1 = add i18 %tmp2_cast, %tmp_345_5_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 279 [1/1] (0.00ns)   --->   "%tmp1_cast = sext i18 %tmp1 to i19" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_2 : Operation 280 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_159_7 = add i19 %tmp1_cast, %tmp" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 281 [1/1] (0.00ns)   --->   "%p_Val2_144_2_cast = sext i18 %p_Val2_144_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 282 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_17 = load i16* @cor_phaseClass14i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 283 [1/1] (0.00ns)   --->   "%tmp_333_3_cast = sext i16 %cor_phaseClass14i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 284 [1/1] (1.52ns)   --->   "%p_Val2_144_3 = sub i19 %p_Val2_144_2_cast, %tmp_333_3_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 285 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_18 = load i16* @cor_phaseClass14i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 286 [1/1] (0.00ns)   --->   "%tmp_333_4_cast = sext i16 %cor_phaseClass14i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 287 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_19 = load i16* @cor_phaseClass14i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_333_5_cast = sext i16 %cor_phaseClass14i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_2 : Operation 289 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i19 %p_Val2_144_3, %tmp_333_4_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 290 [1/1] (0.00ns)   --->   "%tmp6_cast = sext i17 %tmp6 to i18" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_2 : Operation 291 [1/1] (1.50ns)   --->   "%tmp5 = add i18 %tmp6_cast, %tmp_333_5_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 292 [1/1] (0.00ns)   --->   "%tmp5_cast = sext i18 %tmp5 to i19" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_2 : Operation 293 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_149_7 = add i19 %tmp5_cast, %tmp4" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 294 [1/1] (0.00ns)   --->   "%p_Val2_134_2_cast = sext i18 %p_Val2_134_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 295 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_17 = load i16* @cor_phaseClass13i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 296 [1/1] (0.00ns)   --->   "%tmp_321_3_cast = sext i16 %cor_phaseClass13i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 297 [1/1] (1.52ns)   --->   "%p_Val2_134_3 = sub i19 %p_Val2_134_2_cast, %tmp_321_3_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 298 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_18 = load i16* @cor_phaseClass13i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 299 [1/1] (0.00ns)   --->   "%tmp_321_4_cast = sext i16 %cor_phaseClass13i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 300 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_19 = load i16* @cor_phaseClass13i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 301 [1/1] (0.00ns)   --->   "%tmp_321_5_cast = sext i16 %cor_phaseClass13i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_2 : Operation 302 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp8 = add i19 %p_Val2_134_3, %tmp_321_4_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 303 [1/1] (0.00ns)   --->   "%tmp10_cast = sext i17 %tmp10 to i18" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_2 : Operation 304 [1/1] (1.50ns)   --->   "%tmp9 = add i18 %tmp10_cast, %tmp_321_5_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 305 [1/1] (0.00ns)   --->   "%tmp9_cast = sext i18 %tmp9 to i19" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_2 : Operation 306 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_139_7 = add i19 %tmp9_cast, %tmp8" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 307 [1/1] (0.00ns)   --->   "%p_Val2_124_2_cast = sext i18 %p_Val2_124_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 308 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_17 = load i16* @cor_phaseClass12i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 309 [1/1] (0.00ns)   --->   "%tmp_309_3_cast = sext i16 %cor_phaseClass12i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 310 [1/1] (1.52ns)   --->   "%p_Val2_124_3 = sub i19 %p_Val2_124_2_cast, %tmp_309_3_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 311 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_18 = load i16* @cor_phaseClass12i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 312 [1/1] (0.00ns)   --->   "%tmp_309_4_cast = sext i16 %cor_phaseClass12i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 313 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_19 = load i16* @cor_phaseClass12i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 314 [1/1] (0.00ns)   --->   "%tmp_309_5_cast = sext i16 %cor_phaseClass12i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_2 : Operation 315 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp12 = add i19 %p_Val2_124_3, %tmp_309_4_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 316 [1/1] (0.00ns)   --->   "%tmp14_cast = sext i17 %tmp14 to i18" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_2 : Operation 317 [1/1] (1.50ns)   --->   "%tmp13 = add i18 %tmp14_cast, %tmp_309_5_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 318 [1/1] (0.00ns)   --->   "%tmp13_cast = sext i18 %tmp13 to i19" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_2 : Operation 319 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_129_7 = add i19 %tmp13_cast, %tmp12" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 320 [1/1] (0.00ns)   --->   "%p_Val2_114_2_cast = sext i18 %p_Val2_114_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 321 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_17 = load i16* @cor_phaseClass11i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 322 [1/1] (0.00ns)   --->   "%tmp_297_3_cast = sext i16 %cor_phaseClass11i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 323 [1/1] (1.52ns)   --->   "%p_Val2_114_3 = sub i19 %p_Val2_114_2_cast, %tmp_297_3_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 324 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_18 = load i16* @cor_phaseClass11i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_297_4_cast = sext i16 %cor_phaseClass11i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 326 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_19 = load i16* @cor_phaseClass11i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 327 [1/1] (0.00ns)   --->   "%tmp_297_5_cast = sext i16 %cor_phaseClass11i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_2 : Operation 328 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp16 = add i19 %p_Val2_114_3, %tmp_297_4_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 329 [1/1] (0.00ns)   --->   "%tmp18_cast = sext i17 %tmp18 to i18" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_2 : Operation 330 [1/1] (1.50ns)   --->   "%tmp17 = add i18 %tmp18_cast, %tmp_297_5_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 331 [1/1] (0.00ns)   --->   "%tmp17_cast = sext i18 %tmp17 to i19" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_2 : Operation 332 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_119_7 = add i19 %tmp17_cast, %tmp16" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 333 [1/1] (0.00ns)   --->   "%p_Val2_104_2_cast = sext i18 %p_Val2_104_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 334 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_17 = load i16* @cor_phaseClass10i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 335 [1/1] (0.00ns)   --->   "%tmp_285_3_cast = sext i16 %cor_phaseClass10i_V_17 to i19" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 336 [1/1] (1.52ns)   --->   "%p_Val2_104_3 = sub i19 %p_Val2_104_2_cast, %tmp_285_3_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 337 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_18 = load i16* @cor_phaseClass10i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 338 [1/1] (0.00ns)   --->   "%tmp_285_4_cast = sext i16 %cor_phaseClass10i_V_18 to i19" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 339 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_19 = load i16* @cor_phaseClass10i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 340 [1/1] (0.00ns)   --->   "%tmp_285_5_cast = sext i16 %cor_phaseClass10i_V_19 to i18" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_2 : Operation 341 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp20 = add i19 %p_Val2_104_3, %tmp_285_4_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 342 [1/1] (0.00ns)   --->   "%tmp22_cast = sext i17 %tmp22 to i18" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_2 : Operation 343 [1/1] (1.50ns)   --->   "%tmp21 = add i18 %tmp22_cast, %tmp_285_5_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 344 [1/1] (0.00ns)   --->   "%tmp21_cast = sext i18 %tmp21 to i19" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_2 : Operation 345 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_109_7 = add i19 %tmp21_cast, %tmp20" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 346 [1/1] (0.00ns)   --->   "%p_Val2_94_2_cast = sext i18 %p_Val2_94_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 347 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_8 = load i16* @cor_phaseClass9i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_273_3_cast = sext i16 %cor_phaseClass9i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 349 [1/1] (1.52ns)   --->   "%p_Val2_94_3 = sub i19 %p_Val2_94_2_cast, %tmp_273_3_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 350 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_9 = load i16* @cor_phaseClass9i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 351 [1/1] (0.00ns)   --->   "%tmp_273_4_cast = sext i16 %cor_phaseClass9i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 352 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_10 = load i16* @cor_phaseClass9i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 353 [1/1] (0.00ns)   --->   "%tmp_273_5_cast = sext i16 %cor_phaseClass9i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_2 : Operation 354 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp24 = add i19 %p_Val2_94_3, %tmp_273_4_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 355 [1/1] (0.00ns)   --->   "%tmp26_cast = sext i17 %tmp26 to i18" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_2 : Operation 356 [1/1] (1.50ns)   --->   "%tmp25 = add i18 %tmp26_cast, %tmp_273_5_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 357 [1/1] (0.00ns)   --->   "%tmp25_cast = sext i18 %tmp25 to i19" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_2 : Operation 358 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_99_7 = add i19 %tmp25_cast, %tmp24" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 359 [1/1] (0.00ns)   --->   "%p_Val2_84_2_cast = sext i18 %p_Val2_84_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 360 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_8 = load i16* @cor_phaseClass8i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 361 [1/1] (0.00ns)   --->   "%tmp_261_3_cast = sext i16 %cor_phaseClass8i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 362 [1/1] (1.52ns)   --->   "%p_Val2_84_3 = sub i19 %p_Val2_84_2_cast, %tmp_261_3_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 363 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_9 = load i16* @cor_phaseClass8i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 364 [1/1] (0.00ns)   --->   "%tmp_261_4_cast = sext i16 %cor_phaseClass8i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 365 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_10 = load i16* @cor_phaseClass8i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 366 [1/1] (0.00ns)   --->   "%tmp_261_5_cast = sext i16 %cor_phaseClass8i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_2 : Operation 367 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp28 = add i19 %p_Val2_84_3, %tmp_261_4_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 368 [1/1] (0.00ns)   --->   "%tmp30_cast = sext i17 %tmp30 to i18" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_2 : Operation 369 [1/1] (1.50ns)   --->   "%tmp29 = add i18 %tmp30_cast, %tmp_261_5_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 370 [1/1] (0.00ns)   --->   "%tmp29_cast = sext i18 %tmp29 to i19" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_2 : Operation 371 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_89_7 = add i19 %tmp29_cast, %tmp28" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 372 [1/1] (0.00ns)   --->   "%p_Val2_74_2_cast = sext i18 %p_Val2_74_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 373 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_8 = load i16* @cor_phaseClass7i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 374 [1/1] (0.00ns)   --->   "%tmp_249_3_cast = sext i16 %cor_phaseClass7i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 375 [1/1] (1.52ns)   --->   "%p_Val2_74_3 = sub i19 %p_Val2_74_2_cast, %tmp_249_3_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 376 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_9 = load i16* @cor_phaseClass7i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 377 [1/1] (0.00ns)   --->   "%tmp_249_4_cast = sext i16 %cor_phaseClass7i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 378 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_10 = load i16* @cor_phaseClass7i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 379 [1/1] (0.00ns)   --->   "%tmp_249_5_cast = sext i16 %cor_phaseClass7i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_2 : Operation 380 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp32 = add i19 %p_Val2_74_3, %tmp_249_4_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 381 [1/1] (0.00ns)   --->   "%tmp34_cast = sext i17 %tmp34 to i18" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_2 : Operation 382 [1/1] (1.50ns)   --->   "%tmp33 = add i18 %tmp34_cast, %tmp_249_5_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 383 [1/1] (0.00ns)   --->   "%tmp33_cast = sext i18 %tmp33 to i19" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_2 : Operation 384 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_79_7 = add i19 %tmp33_cast, %tmp32" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 385 [1/1] (0.00ns)   --->   "%p_Val2_64_2_cast = sext i18 %p_Val2_64_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 386 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_8 = load i16* @cor_phaseClass6i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 387 [1/1] (0.00ns)   --->   "%tmp_237_3_cast = sext i16 %cor_phaseClass6i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 388 [1/1] (1.52ns)   --->   "%p_Val2_64_3 = sub i19 %p_Val2_64_2_cast, %tmp_237_3_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 389 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_9 = load i16* @cor_phaseClass6i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 390 [1/1] (0.00ns)   --->   "%tmp_237_4_cast = sext i16 %cor_phaseClass6i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 391 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_10 = load i16* @cor_phaseClass6i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 392 [1/1] (0.00ns)   --->   "%tmp_237_5_cast = sext i16 %cor_phaseClass6i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_2 : Operation 393 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp36 = add i19 %p_Val2_64_3, %tmp_237_4_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 394 [1/1] (0.00ns)   --->   "%tmp38_cast = sext i17 %tmp38 to i18" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_2 : Operation 395 [1/1] (1.50ns)   --->   "%tmp37 = add i18 %tmp38_cast, %tmp_237_5_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 396 [1/1] (0.00ns)   --->   "%tmp37_cast = sext i18 %tmp37 to i19" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_2 : Operation 397 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_69_7 = add i19 %tmp37_cast, %tmp36" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 398 [1/1] (0.00ns)   --->   "%p_Val2_54_2_cast = sext i18 %p_Val2_54_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 399 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_8 = load i16* @cor_phaseClass5i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 400 [1/1] (0.00ns)   --->   "%tmp_225_3_cast = sext i16 %cor_phaseClass5i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 401 [1/1] (1.52ns)   --->   "%p_Val2_54_3 = sub i19 %p_Val2_54_2_cast, %tmp_225_3_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 402 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_9 = load i16* @cor_phaseClass5i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 403 [1/1] (0.00ns)   --->   "%tmp_225_4_cast = sext i16 %cor_phaseClass5i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 404 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_10 = load i16* @cor_phaseClass5i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 405 [1/1] (0.00ns)   --->   "%tmp_225_5_cast = sext i16 %cor_phaseClass5i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_2 : Operation 406 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp40 = add i19 %p_Val2_54_3, %tmp_225_4_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 407 [1/1] (0.00ns)   --->   "%tmp42_cast = sext i17 %tmp42 to i18" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_2 : Operation 408 [1/1] (1.50ns)   --->   "%tmp41 = add i18 %tmp42_cast, %tmp_225_5_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 409 [1/1] (0.00ns)   --->   "%tmp41_cast = sext i18 %tmp41 to i19" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_2 : Operation 410 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_59_7 = add i19 %tmp41_cast, %tmp40" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 411 [1/1] (0.00ns)   --->   "%p_Val2_44_2_cast = sext i18 %p_Val2_44_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 412 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_8 = load i16* @cor_phaseClass4i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 413 [1/1] (0.00ns)   --->   "%tmp_213_3_cast = sext i16 %cor_phaseClass4i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 414 [1/1] (1.52ns)   --->   "%p_Val2_44_3 = sub i19 %p_Val2_44_2_cast, %tmp_213_3_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 415 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_9 = load i16* @cor_phaseClass4i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 416 [1/1] (0.00ns)   --->   "%tmp_213_4_cast = sext i16 %cor_phaseClass4i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 417 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_10 = load i16* @cor_phaseClass4i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 418 [1/1] (0.00ns)   --->   "%tmp_213_5_cast = sext i16 %cor_phaseClass4i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_2 : Operation 419 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp44 = add i19 %p_Val2_44_3, %tmp_213_4_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 420 [1/1] (0.00ns)   --->   "%tmp46_cast = sext i17 %tmp46 to i18" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_2 : Operation 421 [1/1] (1.50ns)   --->   "%tmp45 = add i18 %tmp46_cast, %tmp_213_5_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 422 [1/1] (0.00ns)   --->   "%tmp45_cast = sext i18 %tmp45 to i19" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_2 : Operation 423 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_49_7 = add i19 %tmp45_cast, %tmp44" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 424 [1/1] (0.00ns)   --->   "%p_Val2_34_2_cast = sext i18 %p_Val2_34_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 425 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_8 = load i16* @cor_phaseClass3i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 426 [1/1] (0.00ns)   --->   "%tmp_201_3_cast = sext i16 %cor_phaseClass3i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 427 [1/1] (1.52ns)   --->   "%p_Val2_34_3 = sub i19 %p_Val2_34_2_cast, %tmp_201_3_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 428 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_9 = load i16* @cor_phaseClass3i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 429 [1/1] (0.00ns)   --->   "%tmp_201_4_cast = sext i16 %cor_phaseClass3i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 430 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_10 = load i16* @cor_phaseClass3i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 431 [1/1] (0.00ns)   --->   "%tmp_201_5_cast = sext i16 %cor_phaseClass3i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_2 : Operation 432 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp48 = add i19 %p_Val2_34_3, %tmp_201_4_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 433 [1/1] (0.00ns)   --->   "%tmp50_cast = sext i17 %tmp50 to i18" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_2 : Operation 434 [1/1] (1.50ns)   --->   "%tmp49 = add i18 %tmp50_cast, %tmp_201_5_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 435 [1/1] (0.00ns)   --->   "%tmp49_cast = sext i18 %tmp49 to i19" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_2 : Operation 436 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_39_7 = add i19 %tmp49_cast, %tmp48" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 437 [1/1] (0.00ns)   --->   "%p_Val2_24_2_cast = sext i18 %p_Val2_24_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 438 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_8 = load i16* @cor_phaseClass2i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 439 [1/1] (0.00ns)   --->   "%tmp_189_3_cast = sext i16 %cor_phaseClass2i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 440 [1/1] (1.52ns)   --->   "%p_Val2_24_3 = sub i19 %p_Val2_24_2_cast, %tmp_189_3_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 441 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_9 = load i16* @cor_phaseClass2i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 442 [1/1] (0.00ns)   --->   "%tmp_189_4_cast = sext i16 %cor_phaseClass2i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 443 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_10 = load i16* @cor_phaseClass2i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 444 [1/1] (0.00ns)   --->   "%tmp_189_5_cast = sext i16 %cor_phaseClass2i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_2 : Operation 445 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp52 = add i19 %p_Val2_24_3, %tmp_189_4_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 446 [1/1] (0.00ns)   --->   "%tmp54_cast = sext i17 %tmp54 to i18" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_2 : Operation 447 [1/1] (1.50ns)   --->   "%tmp53 = add i18 %tmp54_cast, %tmp_189_5_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 448 [1/1] (0.00ns)   --->   "%tmp53_cast = sext i18 %tmp53 to i19" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_2 : Operation 449 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_29_7 = add i19 %tmp53_cast, %tmp52" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 450 [1/1] (0.00ns)   --->   "%p_Val2_14_2_cast = sext i18 %p_Val2_14_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 451 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_8 = load i16* @cor_phaseClass1i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 452 [1/1] (0.00ns)   --->   "%tmp_177_3_cast = sext i16 %cor_phaseClass1i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 453 [1/1] (1.52ns)   --->   "%p_Val2_14_3 = sub i19 %p_Val2_14_2_cast, %tmp_177_3_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 454 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_9 = load i16* @cor_phaseClass1i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 455 [1/1] (0.00ns)   --->   "%tmp_177_4_cast = sext i16 %cor_phaseClass1i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 456 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_10 = load i16* @cor_phaseClass1i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 457 [1/1] (0.00ns)   --->   "%tmp_177_5_cast = sext i16 %cor_phaseClass1i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_2 : Operation 458 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp56 = add i19 %p_Val2_14_3, %tmp_177_4_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 459 [1/1] (0.00ns)   --->   "%tmp58_cast = sext i17 %tmp58 to i18" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_2 : Operation 460 [1/1] (1.50ns)   --->   "%tmp57 = add i18 %tmp58_cast, %tmp_177_5_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 461 [1/1] (0.00ns)   --->   "%tmp57_cast = sext i18 %tmp57 to i19" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_2 : Operation 462 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_19_7 = add i19 %tmp57_cast, %tmp56" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 463 [1/1] (0.00ns)   --->   "%p_Val2_2_2_cast = sext i18 %p_Val2_2_2 to i19" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 464 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_8 = load i16* @cor_phaseClass0i_V_12, align 8" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 465 [1/1] (0.00ns)   --->   "%tmp_160_3_cast = sext i16 %cor_phaseClass0i_V_1_8 to i19" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 466 [1/1] (1.52ns)   --->   "%p_Val2_2_3 = sub i19 %p_Val2_2_2_cast, %tmp_160_3_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 467 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_9 = load i16* @cor_phaseClass0i_V_11, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 468 [1/1] (0.00ns)   --->   "%tmp_160_4_cast = sext i16 %cor_phaseClass0i_V_1_9 to i19" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 469 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_10 = load i16* @cor_phaseClass0i_V_10, align 4" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 470 [1/1] (0.00ns)   --->   "%tmp_160_5_cast = sext i16 %cor_phaseClass0i_V_1_10 to i18" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_2 : Operation 471 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp60 = add i19 %p_Val2_2_3, %tmp_160_4_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 472 [1/1] (0.00ns)   --->   "%tmp62_cast = sext i17 %tmp62 to i18" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_2 : Operation 473 [1/1] (1.50ns)   --->   "%tmp61 = add i18 %tmp62_cast, %tmp_160_5_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 474 [1/1] (0.00ns)   --->   "%tmp61_cast = sext i18 %tmp61 to i19" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_2 : Operation 475 [1/1] (2.58ns) (root node of TernaryAdder)   --->   "%p_Val2_7_7 = add i19 %tmp61_cast, %tmp60" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 3> : 4.15ns
+ST_3 : Operation 476 [1/1] (0.00ns)   --->   "%p_Val2_159_7_cast = sext i19 %p_Val2_159_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_3 : Operation 477 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_22 = load i16* @cor_phaseClass15i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_3 : Operation 478 [1/1] (0.00ns)   --->   "%tmp_345_8_cast = sext i16 %cor_phaseClass15i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_3 : Operation 479 [1/1] (1.54ns)   --->   "%p_Val2_154_8 = sub i20 %p_Val2_159_7_cast, %tmp_345_8_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 480 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_23 = load i16* @cor_phaseClass15i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_3 : Operation 481 [1/1] (0.00ns)   --->   "%tmp_345_9_cast = sext i16 %cor_phaseClass15i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_3 : Operation 482 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_159_9 = add i20 %p_Val2_154_8, %tmp_345_9_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 483 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_24 = load i16* @cor_phaseClass15i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_3 : Operation 484 [1/1] (0.00ns)   --->   "%tmp_345_cast = sext i16 %cor_phaseClass15i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_3 : Operation 485 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_154_s = sub i20 %p_Val2_159_9, %tmp_345_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 486 [1/1] (0.00ns)   --->   "%p_Val2_149_7_cast = sext i19 %p_Val2_149_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_3 : Operation 487 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_22 = load i16* @cor_phaseClass14i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_3 : Operation 488 [1/1] (0.00ns)   --->   "%tmp_333_8_cast = sext i16 %cor_phaseClass14i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_3 : Operation 489 [1/1] (1.54ns)   --->   "%p_Val2_144_8 = sub i20 %p_Val2_149_7_cast, %tmp_333_8_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 490 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_23 = load i16* @cor_phaseClass14i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_3 : Operation 491 [1/1] (0.00ns)   --->   "%tmp_333_9_cast = sext i16 %cor_phaseClass14i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_3 : Operation 492 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_149_9 = add i20 %p_Val2_144_8, %tmp_333_9_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 493 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_24 = load i16* @cor_phaseClass14i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_3 : Operation 494 [1/1] (0.00ns)   --->   "%tmp_333_cast = sext i16 %cor_phaseClass14i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_3 : Operation 495 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_144_s = sub i20 %p_Val2_149_9, %tmp_333_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 496 [1/1] (0.00ns)   --->   "%p_Val2_139_7_cast = sext i19 %p_Val2_139_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_3 : Operation 497 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_22 = load i16* @cor_phaseClass13i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_3 : Operation 498 [1/1] (0.00ns)   --->   "%tmp_321_8_cast = sext i16 %cor_phaseClass13i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_3 : Operation 499 [1/1] (1.54ns)   --->   "%p_Val2_134_8 = sub i20 %p_Val2_139_7_cast, %tmp_321_8_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 500 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_23 = load i16* @cor_phaseClass13i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_3 : Operation 501 [1/1] (0.00ns)   --->   "%tmp_321_9_cast = sext i16 %cor_phaseClass13i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_3 : Operation 502 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_139_9 = add i20 %p_Val2_134_8, %tmp_321_9_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 503 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_24 = load i16* @cor_phaseClass13i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_3 : Operation 504 [1/1] (0.00ns)   --->   "%tmp_321_cast = sext i16 %cor_phaseClass13i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_3 : Operation 505 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_134_s = sub i20 %p_Val2_139_9, %tmp_321_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 506 [1/1] (0.00ns)   --->   "%p_Val2_129_7_cast = sext i19 %p_Val2_129_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_3 : Operation 507 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_22 = load i16* @cor_phaseClass12i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_3 : Operation 508 [1/1] (0.00ns)   --->   "%tmp_309_8_cast = sext i16 %cor_phaseClass12i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_3 : Operation 509 [1/1] (1.54ns)   --->   "%p_Val2_124_8 = sub i20 %p_Val2_129_7_cast, %tmp_309_8_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 510 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_23 = load i16* @cor_phaseClass12i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_3 : Operation 511 [1/1] (0.00ns)   --->   "%tmp_309_9_cast = sext i16 %cor_phaseClass12i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_3 : Operation 512 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_129_9 = add i20 %p_Val2_124_8, %tmp_309_9_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 513 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_24 = load i16* @cor_phaseClass12i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_3 : Operation 514 [1/1] (0.00ns)   --->   "%tmp_309_cast = sext i16 %cor_phaseClass12i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_3 : Operation 515 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_124_s = sub i20 %p_Val2_129_9, %tmp_309_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 516 [1/1] (0.00ns)   --->   "%p_Val2_119_7_cast = sext i19 %p_Val2_119_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_3 : Operation 517 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_22 = load i16* @cor_phaseClass11i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_3 : Operation 518 [1/1] (0.00ns)   --->   "%tmp_297_8_cast = sext i16 %cor_phaseClass11i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_3 : Operation 519 [1/1] (1.54ns)   --->   "%p_Val2_114_8 = sub i20 %p_Val2_119_7_cast, %tmp_297_8_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 520 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_23 = load i16* @cor_phaseClass11i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_3 : Operation 521 [1/1] (0.00ns)   --->   "%tmp_297_9_cast = sext i16 %cor_phaseClass11i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_3 : Operation 522 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_119_9 = add i20 %p_Val2_114_8, %tmp_297_9_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 523 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_24 = load i16* @cor_phaseClass11i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_3 : Operation 524 [1/1] (0.00ns)   --->   "%tmp_297_cast = sext i16 %cor_phaseClass11i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_3 : Operation 525 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_114_s = sub i20 %p_Val2_119_9, %tmp_297_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 526 [1/1] (0.00ns)   --->   "%p_Val2_109_7_cast = sext i19 %p_Val2_109_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_3 : Operation 527 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_22 = load i16* @cor_phaseClass10i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_3 : Operation 528 [1/1] (0.00ns)   --->   "%tmp_285_8_cast = sext i16 %cor_phaseClass10i_V_22 to i20" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_3 : Operation 529 [1/1] (1.54ns)   --->   "%p_Val2_104_8 = sub i20 %p_Val2_109_7_cast, %tmp_285_8_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 530 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_23 = load i16* @cor_phaseClass10i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_3 : Operation 531 [1/1] (0.00ns)   --->   "%tmp_285_9_cast = sext i16 %cor_phaseClass10i_V_23 to i20" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_3 : Operation 532 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_109_9 = add i20 %p_Val2_104_8, %tmp_285_9_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 533 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_24 = load i16* @cor_phaseClass10i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_3 : Operation 534 [1/1] (0.00ns)   --->   "%tmp_285_cast = sext i16 %cor_phaseClass10i_V_24 to i20" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_3 : Operation 535 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_104_s = sub i20 %p_Val2_109_9, %tmp_285_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 536 [1/1] (0.00ns)   --->   "%p_Val2_99_7_cast = sext i19 %p_Val2_99_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_3 : Operation 537 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_7 = load i16* @cor_phaseClass9i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_3 : Operation 538 [1/1] (0.00ns)   --->   "%tmp_273_8_cast = sext i16 %cor_phaseClass9i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_3 : Operation 539 [1/1] (1.54ns)   --->   "%p_Val2_94_8 = sub i20 %p_Val2_99_7_cast, %tmp_273_8_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 540 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_6 = load i16* @cor_phaseClass9i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_3 : Operation 541 [1/1] (0.00ns)   --->   "%tmp_273_9_cast = sext i16 %cor_phaseClass9i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_3 : Operation 542 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_99_9 = add i20 %p_Val2_94_8, %tmp_273_9_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 543 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_5 = load i16* @cor_phaseClass9i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_3 : Operation 544 [1/1] (0.00ns)   --->   "%tmp_273_cast = sext i16 %cor_phaseClass9i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_3 : Operation 545 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_94_s = sub i20 %p_Val2_99_9, %tmp_273_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 546 [1/1] (0.00ns)   --->   "%p_Val2_89_7_cast = sext i19 %p_Val2_89_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_3 : Operation 547 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_7 = load i16* @cor_phaseClass8i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_3 : Operation 548 [1/1] (0.00ns)   --->   "%tmp_261_8_cast = sext i16 %cor_phaseClass8i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_3 : Operation 549 [1/1] (1.54ns)   --->   "%p_Val2_84_8 = sub i20 %p_Val2_89_7_cast, %tmp_261_8_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 550 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_6 = load i16* @cor_phaseClass8i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_3 : Operation 551 [1/1] (0.00ns)   --->   "%tmp_261_9_cast = sext i16 %cor_phaseClass8i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_3 : Operation 552 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_89_9 = add i20 %p_Val2_84_8, %tmp_261_9_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 553 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_5 = load i16* @cor_phaseClass8i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_3 : Operation 554 [1/1] (0.00ns)   --->   "%tmp_261_cast = sext i16 %cor_phaseClass8i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_3 : Operation 555 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_84_s = sub i20 %p_Val2_89_9, %tmp_261_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 556 [1/1] (0.00ns)   --->   "%p_Val2_79_7_cast = sext i19 %p_Val2_79_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_3 : Operation 557 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_7 = load i16* @cor_phaseClass7i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_3 : Operation 558 [1/1] (0.00ns)   --->   "%tmp_249_8_cast = sext i16 %cor_phaseClass7i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_3 : Operation 559 [1/1] (1.54ns)   --->   "%p_Val2_74_8 = sub i20 %p_Val2_79_7_cast, %tmp_249_8_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 560 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_6 = load i16* @cor_phaseClass7i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_3 : Operation 561 [1/1] (0.00ns)   --->   "%tmp_249_9_cast = sext i16 %cor_phaseClass7i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_3 : Operation 562 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_79_9 = add i20 %p_Val2_74_8, %tmp_249_9_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 563 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_5 = load i16* @cor_phaseClass7i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_3 : Operation 564 [1/1] (0.00ns)   --->   "%tmp_249_cast = sext i16 %cor_phaseClass7i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_3 : Operation 565 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_74_s = sub i20 %p_Val2_79_9, %tmp_249_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 566 [1/1] (0.00ns)   --->   "%p_Val2_69_7_cast = sext i19 %p_Val2_69_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_3 : Operation 567 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_7 = load i16* @cor_phaseClass6i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_3 : Operation 568 [1/1] (0.00ns)   --->   "%tmp_237_8_cast = sext i16 %cor_phaseClass6i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_3 : Operation 569 [1/1] (1.54ns)   --->   "%p_Val2_64_8 = sub i20 %p_Val2_69_7_cast, %tmp_237_8_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 570 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_6 = load i16* @cor_phaseClass6i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_3 : Operation 571 [1/1] (0.00ns)   --->   "%tmp_237_9_cast = sext i16 %cor_phaseClass6i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_3 : Operation 572 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_69_9 = add i20 %p_Val2_64_8, %tmp_237_9_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 573 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_5 = load i16* @cor_phaseClass6i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_3 : Operation 574 [1/1] (0.00ns)   --->   "%tmp_237_cast = sext i16 %cor_phaseClass6i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_3 : Operation 575 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_64_s = sub i20 %p_Val2_69_9, %tmp_237_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 576 [1/1] (0.00ns)   --->   "%p_Val2_59_7_cast = sext i19 %p_Val2_59_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_3 : Operation 577 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_7 = load i16* @cor_phaseClass5i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_3 : Operation 578 [1/1] (0.00ns)   --->   "%tmp_225_8_cast = sext i16 %cor_phaseClass5i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_3 : Operation 579 [1/1] (1.54ns)   --->   "%p_Val2_54_8 = sub i20 %p_Val2_59_7_cast, %tmp_225_8_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 580 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_6 = load i16* @cor_phaseClass5i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_3 : Operation 581 [1/1] (0.00ns)   --->   "%tmp_225_9_cast = sext i16 %cor_phaseClass5i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_3 : Operation 582 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_59_9 = add i20 %p_Val2_54_8, %tmp_225_9_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 583 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_5 = load i16* @cor_phaseClass5i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_3 : Operation 584 [1/1] (0.00ns)   --->   "%tmp_225_cast = sext i16 %cor_phaseClass5i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_3 : Operation 585 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_54_s = sub i20 %p_Val2_59_9, %tmp_225_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 586 [1/1] (0.00ns)   --->   "%p_Val2_49_7_cast = sext i19 %p_Val2_49_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_3 : Operation 587 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_7 = load i16* @cor_phaseClass4i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_3 : Operation 588 [1/1] (0.00ns)   --->   "%tmp_213_8_cast = sext i16 %cor_phaseClass4i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_3 : Operation 589 [1/1] (1.54ns)   --->   "%p_Val2_44_8 = sub i20 %p_Val2_49_7_cast, %tmp_213_8_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 590 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_6 = load i16* @cor_phaseClass4i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_3 : Operation 591 [1/1] (0.00ns)   --->   "%tmp_213_9_cast = sext i16 %cor_phaseClass4i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_3 : Operation 592 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_49_9 = add i20 %p_Val2_44_8, %tmp_213_9_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 593 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_5 = load i16* @cor_phaseClass4i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_3 : Operation 594 [1/1] (0.00ns)   --->   "%tmp_213_cast = sext i16 %cor_phaseClass4i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_3 : Operation 595 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_44_s = sub i20 %p_Val2_49_9, %tmp_213_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 596 [1/1] (0.00ns)   --->   "%p_Val2_39_7_cast = sext i19 %p_Val2_39_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_3 : Operation 597 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_7 = load i16* @cor_phaseClass3i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_3 : Operation 598 [1/1] (0.00ns)   --->   "%tmp_201_8_cast = sext i16 %cor_phaseClass3i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_3 : Operation 599 [1/1] (1.54ns)   --->   "%p_Val2_34_8 = sub i20 %p_Val2_39_7_cast, %tmp_201_8_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 600 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_6 = load i16* @cor_phaseClass3i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_3 : Operation 601 [1/1] (0.00ns)   --->   "%tmp_201_9_cast = sext i16 %cor_phaseClass3i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_3 : Operation 602 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_39_9 = add i20 %p_Val2_34_8, %tmp_201_9_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 603 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_5 = load i16* @cor_phaseClass3i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_3 : Operation 604 [1/1] (0.00ns)   --->   "%tmp_201_cast = sext i16 %cor_phaseClass3i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_3 : Operation 605 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_34_s = sub i20 %p_Val2_39_9, %tmp_201_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 606 [1/1] (0.00ns)   --->   "%p_Val2_29_7_cast = sext i19 %p_Val2_29_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_3 : Operation 607 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_7 = load i16* @cor_phaseClass2i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_3 : Operation 608 [1/1] (0.00ns)   --->   "%tmp_189_8_cast = sext i16 %cor_phaseClass2i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_3 : Operation 609 [1/1] (1.54ns)   --->   "%p_Val2_24_8 = sub i20 %p_Val2_29_7_cast, %tmp_189_8_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 610 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_6 = load i16* @cor_phaseClass2i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_3 : Operation 611 [1/1] (0.00ns)   --->   "%tmp_189_9_cast = sext i16 %cor_phaseClass2i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_3 : Operation 612 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_29_9 = add i20 %p_Val2_24_8, %tmp_189_9_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 613 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_5 = load i16* @cor_phaseClass2i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_3 : Operation 614 [1/1] (0.00ns)   --->   "%tmp_189_cast = sext i16 %cor_phaseClass2i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_3 : Operation 615 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_24_s = sub i20 %p_Val2_29_9, %tmp_189_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 616 [1/1] (0.00ns)   --->   "%p_Val2_19_7_cast = sext i19 %p_Val2_19_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_3 : Operation 617 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_7 = load i16* @cor_phaseClass1i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_3 : Operation 618 [1/1] (0.00ns)   --->   "%tmp_177_8_cast = sext i16 %cor_phaseClass1i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_3 : Operation 619 [1/1] (1.54ns)   --->   "%p_Val2_14_8 = sub i20 %p_Val2_19_7_cast, %tmp_177_8_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 620 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_6 = load i16* @cor_phaseClass1i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_3 : Operation 621 [1/1] (0.00ns)   --->   "%tmp_177_9_cast = sext i16 %cor_phaseClass1i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_3 : Operation 622 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_19_9 = add i20 %p_Val2_14_8, %tmp_177_9_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 623 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_5 = load i16* @cor_phaseClass1i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_3 : Operation 624 [1/1] (0.00ns)   --->   "%tmp_177_cast = sext i16 %cor_phaseClass1i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_3 : Operation 625 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_14_s = sub i20 %p_Val2_19_9, %tmp_177_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 626 [1/1] (0.00ns)   --->   "%p_Val2_7_7_cast = sext i19 %p_Val2_7_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_3 : Operation 627 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_7 = load i16* @cor_phaseClass0i_V_7, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_3 : Operation 628 [1/1] (0.00ns)   --->   "%tmp_160_8_cast = sext i16 %cor_phaseClass0i_V_7 to i20" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_3 : Operation 629 [1/1] (1.54ns)   --->   "%p_Val2_2_8 = sub i20 %p_Val2_7_7_cast, %tmp_160_8_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 630 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_6 = load i16* @cor_phaseClass0i_V_6, align 4" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_3 : Operation 631 [1/1] (0.00ns)   --->   "%tmp_160_9_cast = sext i16 %cor_phaseClass0i_V_6 to i20" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_3 : Operation 632 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_7_9 = add i20 %p_Val2_2_8, %tmp_160_9_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 633 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_5 = load i16* @cor_phaseClass0i_V_5, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_3 : Operation 634 [1/1] (0.00ns)   --->   "%tmp_160_cast = sext i16 %cor_phaseClass0i_V_5 to i20" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_3 : Operation 635 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_2_s = sub i20 %p_Val2_7_9, %tmp_160_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 4> : 4.09ns
+ST_4 : Operation 636 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_25 = load i16* @cor_phaseClass15i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_4 : Operation 637 [1/1] (0.00ns)   --->   "%tmp_345_10_cast = sext i16 %cor_phaseClass15i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_4 : Operation 638 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_26 = load i16* @cor_phaseClass15i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_4 : Operation 639 [1/1] (0.00ns)   --->   "%tmp_345_11_cast = sext i16 %cor_phaseClass15i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_4 : Operation 640 [1/1] (1.48ns)   --->   "%tmp3 = add i17 %tmp_345_10_cast, %tmp_345_11_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 641 [1/1] (0.00ns)   --->   "%tmp3_cast = sext i17 %tmp3 to i20" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_4 : Operation 642 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_159_1 = add i20 %tmp3_cast, %p_Val2_154_s" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 643 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_27 = load i16* @cor_phaseClass15i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_4 : Operation 644 [1/1] (0.00ns)   --->   "%tmp_345_12_cast = sext i16 %cor_phaseClass15i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_4 : Operation 645 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_154_4 = sub i20 %p_Val2_159_1, %tmp_345_12_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 646 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_25 = load i16* @cor_phaseClass14i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_4 : Operation 647 [1/1] (0.00ns)   --->   "%tmp_333_10_cast = sext i16 %cor_phaseClass14i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_4 : Operation 648 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_26 = load i16* @cor_phaseClass14i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_4 : Operation 649 [1/1] (0.00ns)   --->   "%tmp_333_11_cast = sext i16 %cor_phaseClass14i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_4 : Operation 650 [1/1] (1.48ns)   --->   "%tmp7 = add i17 %tmp_333_10_cast, %tmp_333_11_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 651 [1/1] (0.00ns)   --->   "%tmp7_cast = sext i17 %tmp7 to i20" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_4 : Operation 652 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_149_1 = add i20 %tmp7_cast, %p_Val2_144_s" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 653 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_27 = load i16* @cor_phaseClass14i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_4 : Operation 654 [1/1] (0.00ns)   --->   "%tmp_333_12_cast = sext i16 %cor_phaseClass14i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_4 : Operation 655 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_144_4 = sub i20 %p_Val2_149_1, %tmp_333_12_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 656 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_25 = load i16* @cor_phaseClass13i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_4 : Operation 657 [1/1] (0.00ns)   --->   "%tmp_321_10_cast = sext i16 %cor_phaseClass13i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_4 : Operation 658 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_26 = load i16* @cor_phaseClass13i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_4 : Operation 659 [1/1] (0.00ns)   --->   "%tmp_321_11_cast = sext i16 %cor_phaseClass13i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_4 : Operation 660 [1/1] (1.48ns)   --->   "%tmp11 = add i17 %tmp_321_10_cast, %tmp_321_11_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 661 [1/1] (0.00ns)   --->   "%tmp11_cast = sext i17 %tmp11 to i20" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_4 : Operation 662 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_139_1 = add i20 %tmp11_cast, %p_Val2_134_s" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 663 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_27 = load i16* @cor_phaseClass13i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_4 : Operation 664 [1/1] (0.00ns)   --->   "%tmp_321_12_cast = sext i16 %cor_phaseClass13i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_4 : Operation 665 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_134_4 = sub i20 %p_Val2_139_1, %tmp_321_12_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 666 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_25 = load i16* @cor_phaseClass12i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_4 : Operation 667 [1/1] (0.00ns)   --->   "%tmp_309_10_cast = sext i16 %cor_phaseClass12i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_4 : Operation 668 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_26 = load i16* @cor_phaseClass12i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_4 : Operation 669 [1/1] (0.00ns)   --->   "%tmp_309_11_cast = sext i16 %cor_phaseClass12i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_4 : Operation 670 [1/1] (1.48ns)   --->   "%tmp15 = add i17 %tmp_309_10_cast, %tmp_309_11_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 671 [1/1] (0.00ns)   --->   "%tmp15_cast = sext i17 %tmp15 to i20" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_4 : Operation 672 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_129_1 = add i20 %tmp15_cast, %p_Val2_124_s" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 673 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_27 = load i16* @cor_phaseClass12i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_4 : Operation 674 [1/1] (0.00ns)   --->   "%tmp_309_12_cast = sext i16 %cor_phaseClass12i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_4 : Operation 675 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_124_4 = sub i20 %p_Val2_129_1, %tmp_309_12_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 676 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_25 = load i16* @cor_phaseClass11i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_4 : Operation 677 [1/1] (0.00ns)   --->   "%tmp_297_10_cast = sext i16 %cor_phaseClass11i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_4 : Operation 678 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_26 = load i16* @cor_phaseClass11i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_4 : Operation 679 [1/1] (0.00ns)   --->   "%tmp_297_11_cast = sext i16 %cor_phaseClass11i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_4 : Operation 680 [1/1] (1.48ns)   --->   "%tmp19 = add i17 %tmp_297_10_cast, %tmp_297_11_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 681 [1/1] (0.00ns)   --->   "%tmp19_cast = sext i17 %tmp19 to i20" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_4 : Operation 682 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_119_1 = add i20 %tmp19_cast, %p_Val2_114_s" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 683 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_27 = load i16* @cor_phaseClass11i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_4 : Operation 684 [1/1] (0.00ns)   --->   "%tmp_297_12_cast = sext i16 %cor_phaseClass11i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_4 : Operation 685 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_114_4 = sub i20 %p_Val2_119_1, %tmp_297_12_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 686 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_25 = load i16* @cor_phaseClass10i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_4 : Operation 687 [1/1] (0.00ns)   --->   "%tmp_285_10_cast = sext i16 %cor_phaseClass10i_V_25 to i17" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_4 : Operation 688 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_26 = load i16* @cor_phaseClass10i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_4 : Operation 689 [1/1] (0.00ns)   --->   "%tmp_285_11_cast = sext i16 %cor_phaseClass10i_V_26 to i17" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_4 : Operation 690 [1/1] (1.48ns)   --->   "%tmp23 = add i17 %tmp_285_10_cast, %tmp_285_11_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 691 [1/1] (0.00ns)   --->   "%tmp23_cast = sext i17 %tmp23 to i20" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_4 : Operation 692 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_109_1 = add i20 %tmp23_cast, %p_Val2_104_s" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 693 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_27 = load i16* @cor_phaseClass10i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_4 : Operation 694 [1/1] (0.00ns)   --->   "%tmp_285_12_cast = sext i16 %cor_phaseClass10i_V_27 to i20" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_4 : Operation 695 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_104_4 = sub i20 %p_Val2_109_1, %tmp_285_12_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 696 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_4 = load i16* @cor_phaseClass9i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_4 : Operation 697 [1/1] (0.00ns)   --->   "%tmp_273_10_cast = sext i16 %cor_phaseClass9i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_4 : Operation 698 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_3 = load i16* @cor_phaseClass9i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_4 : Operation 699 [1/1] (0.00ns)   --->   "%tmp_273_11_cast = sext i16 %cor_phaseClass9i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_4 : Operation 700 [1/1] (1.48ns)   --->   "%tmp27 = add i17 %tmp_273_10_cast, %tmp_273_11_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 701 [1/1] (0.00ns)   --->   "%tmp27_cast = sext i17 %tmp27 to i20" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_4 : Operation 702 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_99_1 = add i20 %tmp27_cast, %p_Val2_94_s" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 703 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_2 = load i16* @cor_phaseClass9i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_4 : Operation 704 [1/1] (0.00ns)   --->   "%tmp_273_12_cast = sext i16 %cor_phaseClass9i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_4 : Operation 705 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_94_4 = sub i20 %p_Val2_99_1, %tmp_273_12_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 706 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_4 = load i16* @cor_phaseClass8i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_4 : Operation 707 [1/1] (0.00ns)   --->   "%tmp_261_10_cast = sext i16 %cor_phaseClass8i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_4 : Operation 708 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_3 = load i16* @cor_phaseClass8i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_4 : Operation 709 [1/1] (0.00ns)   --->   "%tmp_261_11_cast = sext i16 %cor_phaseClass8i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_4 : Operation 710 [1/1] (1.48ns)   --->   "%tmp31 = add i17 %tmp_261_10_cast, %tmp_261_11_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 711 [1/1] (0.00ns)   --->   "%tmp31_cast = sext i17 %tmp31 to i20" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_4 : Operation 712 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_89_1 = add i20 %tmp31_cast, %p_Val2_84_s" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 713 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_2 = load i16* @cor_phaseClass8i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_4 : Operation 714 [1/1] (0.00ns)   --->   "%tmp_261_12_cast = sext i16 %cor_phaseClass8i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_4 : Operation 715 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_84_4 = sub i20 %p_Val2_89_1, %tmp_261_12_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 716 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_4 = load i16* @cor_phaseClass7i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_4 : Operation 717 [1/1] (0.00ns)   --->   "%tmp_249_10_cast = sext i16 %cor_phaseClass7i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_4 : Operation 718 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_3 = load i16* @cor_phaseClass7i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_4 : Operation 719 [1/1] (0.00ns)   --->   "%tmp_249_11_cast = sext i16 %cor_phaseClass7i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_4 : Operation 720 [1/1] (1.48ns)   --->   "%tmp35 = add i17 %tmp_249_10_cast, %tmp_249_11_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 721 [1/1] (0.00ns)   --->   "%tmp35_cast = sext i17 %tmp35 to i20" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_4 : Operation 722 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_79_1 = add i20 %tmp35_cast, %p_Val2_74_s" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 723 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_2 = load i16* @cor_phaseClass7i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_4 : Operation 724 [1/1] (0.00ns)   --->   "%tmp_249_12_cast = sext i16 %cor_phaseClass7i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_4 : Operation 725 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_74_4 = sub i20 %p_Val2_79_1, %tmp_249_12_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 726 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_4 = load i16* @cor_phaseClass6i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_4 : Operation 727 [1/1] (0.00ns)   --->   "%tmp_237_10_cast = sext i16 %cor_phaseClass6i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_4 : Operation 728 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_3 = load i16* @cor_phaseClass6i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_4 : Operation 729 [1/1] (0.00ns)   --->   "%tmp_237_11_cast = sext i16 %cor_phaseClass6i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_4 : Operation 730 [1/1] (1.48ns)   --->   "%tmp39 = add i17 %tmp_237_10_cast, %tmp_237_11_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 731 [1/1] (0.00ns)   --->   "%tmp39_cast = sext i17 %tmp39 to i20" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_4 : Operation 732 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_69_1 = add i20 %tmp39_cast, %p_Val2_64_s" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 733 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_2 = load i16* @cor_phaseClass6i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_4 : Operation 734 [1/1] (0.00ns)   --->   "%tmp_237_12_cast = sext i16 %cor_phaseClass6i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_4 : Operation 735 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_64_4 = sub i20 %p_Val2_69_1, %tmp_237_12_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 736 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_4 = load i16* @cor_phaseClass5i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_4 : Operation 737 [1/1] (0.00ns)   --->   "%tmp_225_10_cast = sext i16 %cor_phaseClass5i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_4 : Operation 738 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_3 = load i16* @cor_phaseClass5i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_4 : Operation 739 [1/1] (0.00ns)   --->   "%tmp_225_11_cast = sext i16 %cor_phaseClass5i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_4 : Operation 740 [1/1] (1.48ns)   --->   "%tmp43 = add i17 %tmp_225_10_cast, %tmp_225_11_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 741 [1/1] (0.00ns)   --->   "%tmp43_cast = sext i17 %tmp43 to i20" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_4 : Operation 742 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_59_1 = add i20 %tmp43_cast, %p_Val2_54_s" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 743 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_2 = load i16* @cor_phaseClass5i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_4 : Operation 744 [1/1] (0.00ns)   --->   "%tmp_225_12_cast = sext i16 %cor_phaseClass5i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_4 : Operation 745 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_54_4 = sub i20 %p_Val2_59_1, %tmp_225_12_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 746 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_4 = load i16* @cor_phaseClass4i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_4 : Operation 747 [1/1] (0.00ns)   --->   "%tmp_213_10_cast = sext i16 %cor_phaseClass4i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_4 : Operation 748 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_3 = load i16* @cor_phaseClass4i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_4 : Operation 749 [1/1] (0.00ns)   --->   "%tmp_213_11_cast = sext i16 %cor_phaseClass4i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_4 : Operation 750 [1/1] (1.48ns)   --->   "%tmp47 = add i17 %tmp_213_10_cast, %tmp_213_11_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 751 [1/1] (0.00ns)   --->   "%tmp47_cast = sext i17 %tmp47 to i20" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_4 : Operation 752 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_49_1 = add i20 %tmp47_cast, %p_Val2_44_s" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 753 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_2 = load i16* @cor_phaseClass4i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_4 : Operation 754 [1/1] (0.00ns)   --->   "%tmp_213_12_cast = sext i16 %cor_phaseClass4i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_4 : Operation 755 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_44_4 = sub i20 %p_Val2_49_1, %tmp_213_12_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 756 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_4 = load i16* @cor_phaseClass3i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_4 : Operation 757 [1/1] (0.00ns)   --->   "%tmp_201_10_cast = sext i16 %cor_phaseClass3i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_4 : Operation 758 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_3 = load i16* @cor_phaseClass3i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_4 : Operation 759 [1/1] (0.00ns)   --->   "%tmp_201_11_cast = sext i16 %cor_phaseClass3i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_4 : Operation 760 [1/1] (1.48ns)   --->   "%tmp51 = add i17 %tmp_201_10_cast, %tmp_201_11_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 761 [1/1] (0.00ns)   --->   "%tmp51_cast = sext i17 %tmp51 to i20" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_4 : Operation 762 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_39_1 = add i20 %tmp51_cast, %p_Val2_34_s" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 763 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_2 = load i16* @cor_phaseClass3i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_4 : Operation 764 [1/1] (0.00ns)   --->   "%tmp_201_12_cast = sext i16 %cor_phaseClass3i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_4 : Operation 765 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_34_4 = sub i20 %p_Val2_39_1, %tmp_201_12_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 766 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_4 = load i16* @cor_phaseClass2i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_4 : Operation 767 [1/1] (0.00ns)   --->   "%tmp_189_10_cast = sext i16 %cor_phaseClass2i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_4 : Operation 768 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_3 = load i16* @cor_phaseClass2i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_4 : Operation 769 [1/1] (0.00ns)   --->   "%tmp_189_11_cast = sext i16 %cor_phaseClass2i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_4 : Operation 770 [1/1] (1.48ns)   --->   "%tmp55 = add i17 %tmp_189_10_cast, %tmp_189_11_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 771 [1/1] (0.00ns)   --->   "%tmp55_cast = sext i17 %tmp55 to i20" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_4 : Operation 772 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_29_1 = add i20 %tmp55_cast, %p_Val2_24_s" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 773 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_2 = load i16* @cor_phaseClass2i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_4 : Operation 774 [1/1] (0.00ns)   --->   "%tmp_189_12_cast = sext i16 %cor_phaseClass2i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_4 : Operation 775 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_24_4 = sub i20 %p_Val2_29_1, %tmp_189_12_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 776 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_4 = load i16* @cor_phaseClass1i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_4 : Operation 777 [1/1] (0.00ns)   --->   "%tmp_177_10_cast = sext i16 %cor_phaseClass1i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_4 : Operation 778 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_3 = load i16* @cor_phaseClass1i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_4 : Operation 779 [1/1] (0.00ns)   --->   "%tmp_177_11_cast = sext i16 %cor_phaseClass1i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_4 : Operation 780 [1/1] (1.48ns)   --->   "%tmp59 = add i17 %tmp_177_10_cast, %tmp_177_11_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 781 [1/1] (0.00ns)   --->   "%tmp59_cast = sext i17 %tmp59 to i20" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_4 : Operation 782 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_19_1 = add i20 %tmp59_cast, %p_Val2_14_s" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 783 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_2 = load i16* @cor_phaseClass1i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_4 : Operation 784 [1/1] (0.00ns)   --->   "%tmp_177_12_cast = sext i16 %cor_phaseClass1i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_4 : Operation 785 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_14_4 = sub i20 %p_Val2_19_1, %tmp_177_12_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 786 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_4 = load i16* @cor_phaseClass0i_V_4, align 8" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_4 : Operation 787 [1/1] (0.00ns)   --->   "%tmp_160_10_cast = sext i16 %cor_phaseClass0i_V_4 to i17" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_4 : Operation 788 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_3 = load i16* @cor_phaseClass0i_V_3, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_4 : Operation 789 [1/1] (0.00ns)   --->   "%tmp_160_11_cast = sext i16 %cor_phaseClass0i_V_3 to i17" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_4 : Operation 790 [1/1] (1.48ns)   --->   "%tmp63 = add i17 %tmp_160_10_cast, %tmp_160_11_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 791 [1/1] (0.00ns)   --->   "%tmp63_cast = sext i17 %tmp63 to i20" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_4 : Operation 792 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_7_1 = add i20 %tmp63_cast, %p_Val2_2_s" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 793 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_2 = load i16* @cor_phaseClass0i_V_2, align 4" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_4 : Operation 794 [1/1] (0.00ns)   --->   "%tmp_160_12_cast = sext i16 %cor_phaseClass0i_V_2 to i20" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_4 : Operation 795 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_2_4 = sub i20 %p_Val2_7_1, %tmp_160_12_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 5> : 4.24ns
+ST_5 : Operation 796 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_28 = load i16* @cor_phaseClass15i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_5 : Operation 797 [1/1] (0.00ns)   --->   "%tmp_345_13_cast = sext i16 %cor_phaseClass15i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:532]
+ST_5 : Operation 798 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_159_2 = add i20 %p_Val2_154_4, %tmp_345_13_cast" [CorrelatorPreamble/correlatorPre.cpp:532]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 799 [1/1] (0.00ns)   --->   "%cor_phaseClass15i_V_29 = load i16* @cor_phaseClass15i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_5 : Operation 800 [1/1] (0.00ns)   --->   "%tmp_345_14_cast = sext i16 %cor_phaseClass15i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_5 : Operation 801 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_154_5 = sub i20 %p_Val2_159_2, %tmp_345_14_cast" [CorrelatorPreamble/correlatorPre.cpp:535]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 802 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 803 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_28 = load i16* @cor_phaseClass14i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_5 : Operation 804 [1/1] (0.00ns)   --->   "%tmp_333_13_cast = sext i16 %cor_phaseClass14i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:520]
+ST_5 : Operation 805 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_149_2 = add i20 %p_Val2_144_4, %tmp_333_13_cast" [CorrelatorPreamble/correlatorPre.cpp:520]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 806 [1/1] (0.00ns)   --->   "%cor_phaseClass14i_V_29 = load i16* @cor_phaseClass14i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_5 : Operation 807 [1/1] (0.00ns)   --->   "%tmp_333_14_cast = sext i16 %cor_phaseClass14i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:523]
+ST_5 : Operation 808 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_144_5 = sub i20 %p_Val2_149_2, %tmp_333_14_cast" [CorrelatorPreamble/correlatorPre.cpp:523]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 809 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 810 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_28 = load i16* @cor_phaseClass13i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_5 : Operation 811 [1/1] (0.00ns)   --->   "%tmp_321_13_cast = sext i16 %cor_phaseClass13i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:508]
+ST_5 : Operation 812 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_139_2 = add i20 %p_Val2_134_4, %tmp_321_13_cast" [CorrelatorPreamble/correlatorPre.cpp:508]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 813 [1/1] (0.00ns)   --->   "%cor_phaseClass13i_V_29 = load i16* @cor_phaseClass13i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_5 : Operation 814 [1/1] (0.00ns)   --->   "%tmp_321_14_cast = sext i16 %cor_phaseClass13i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:511]
+ST_5 : Operation 815 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_134_5 = sub i20 %p_Val2_139_2, %tmp_321_14_cast" [CorrelatorPreamble/correlatorPre.cpp:511]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 816 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 817 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_28 = load i16* @cor_phaseClass12i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_5 : Operation 818 [1/1] (0.00ns)   --->   "%tmp_309_13_cast = sext i16 %cor_phaseClass12i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:496]
+ST_5 : Operation 819 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_129_2 = add i20 %p_Val2_124_4, %tmp_309_13_cast" [CorrelatorPreamble/correlatorPre.cpp:496]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 820 [1/1] (0.00ns)   --->   "%cor_phaseClass12i_V_29 = load i16* @cor_phaseClass12i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_5 : Operation 821 [1/1] (0.00ns)   --->   "%tmp_309_14_cast = sext i16 %cor_phaseClass12i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:499]
+ST_5 : Operation 822 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_124_5 = sub i20 %p_Val2_129_2, %tmp_309_14_cast" [CorrelatorPreamble/correlatorPre.cpp:499]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 823 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 824 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_28 = load i16* @cor_phaseClass11i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_5 : Operation 825 [1/1] (0.00ns)   --->   "%tmp_297_13_cast = sext i16 %cor_phaseClass11i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:484]
+ST_5 : Operation 826 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_119_2 = add i20 %p_Val2_114_4, %tmp_297_13_cast" [CorrelatorPreamble/correlatorPre.cpp:484]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 827 [1/1] (0.00ns)   --->   "%cor_phaseClass11i_V_29 = load i16* @cor_phaseClass11i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_5 : Operation 828 [1/1] (0.00ns)   --->   "%tmp_297_14_cast = sext i16 %cor_phaseClass11i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:487]
+ST_5 : Operation 829 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_114_5 = sub i20 %p_Val2_119_2, %tmp_297_14_cast" [CorrelatorPreamble/correlatorPre.cpp:487]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 830 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 831 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_28 = load i16* @cor_phaseClass10i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_5 : Operation 832 [1/1] (0.00ns)   --->   "%tmp_285_13_cast = sext i16 %cor_phaseClass10i_V_28 to i20" [CorrelatorPreamble/correlatorPre.cpp:472]
+ST_5 : Operation 833 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_109_2 = add i20 %p_Val2_104_4, %tmp_285_13_cast" [CorrelatorPreamble/correlatorPre.cpp:472]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 834 [1/1] (0.00ns)   --->   "%cor_phaseClass10i_V_29 = load i16* @cor_phaseClass10i_V_s, align 16" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_5 : Operation 835 [1/1] (0.00ns)   --->   "%tmp_285_14_cast = sext i16 %cor_phaseClass10i_V_29 to i20" [CorrelatorPreamble/correlatorPre.cpp:475]
+ST_5 : Operation 836 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_104_5 = sub i20 %p_Val2_109_2, %tmp_285_14_cast" [CorrelatorPreamble/correlatorPre.cpp:475]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 837 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 838 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_1_11 = load i16* @cor_phaseClass9i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_5 : Operation 839 [1/1] (0.00ns)   --->   "%tmp_273_13_cast = sext i16 %cor_phaseClass9i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:460]
+ST_5 : Operation 840 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_99_2 = add i20 %p_Val2_94_4, %tmp_273_13_cast" [CorrelatorPreamble/correlatorPre.cpp:460]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 841 [1/1] (0.00ns)   --->   "%cor_phaseClass9i_V_0 = load i16* @cor_phaseClass9i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_5 : Operation 842 [1/1] (0.00ns)   --->   "%tmp_273_14_cast = sext i16 %cor_phaseClass9i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:463]
+ST_5 : Operation 843 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_94_5 = sub i20 %p_Val2_99_2, %tmp_273_14_cast" [CorrelatorPreamble/correlatorPre.cpp:463]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 844 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 845 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_1_11 = load i16* @cor_phaseClass8i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_5 : Operation 846 [1/1] (0.00ns)   --->   "%tmp_261_13_cast = sext i16 %cor_phaseClass8i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:448]
+ST_5 : Operation 847 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_89_2 = add i20 %p_Val2_84_4, %tmp_261_13_cast" [CorrelatorPreamble/correlatorPre.cpp:448]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 848 [1/1] (0.00ns)   --->   "%cor_phaseClass8i_V_0 = load i16* @cor_phaseClass8i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_5 : Operation 849 [1/1] (0.00ns)   --->   "%tmp_261_14_cast = sext i16 %cor_phaseClass8i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:451]
+ST_5 : Operation 850 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_84_5 = sub i20 %p_Val2_89_2, %tmp_261_14_cast" [CorrelatorPreamble/correlatorPre.cpp:451]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 851 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 852 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_1_11 = load i16* @cor_phaseClass7i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_5 : Operation 853 [1/1] (0.00ns)   --->   "%tmp_249_13_cast = sext i16 %cor_phaseClass7i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:436]
+ST_5 : Operation 854 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_79_2 = add i20 %p_Val2_74_4, %tmp_249_13_cast" [CorrelatorPreamble/correlatorPre.cpp:436]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 855 [1/1] (0.00ns)   --->   "%cor_phaseClass7i_V_0 = load i16* @cor_phaseClass7i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_5 : Operation 856 [1/1] (0.00ns)   --->   "%tmp_249_14_cast = sext i16 %cor_phaseClass7i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:439]
+ST_5 : Operation 857 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_74_5 = sub i20 %p_Val2_79_2, %tmp_249_14_cast" [CorrelatorPreamble/correlatorPre.cpp:439]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 858 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 859 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_1_11 = load i16* @cor_phaseClass6i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_5 : Operation 860 [1/1] (0.00ns)   --->   "%tmp_237_13_cast = sext i16 %cor_phaseClass6i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:424]
+ST_5 : Operation 861 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_69_2 = add i20 %p_Val2_64_4, %tmp_237_13_cast" [CorrelatorPreamble/correlatorPre.cpp:424]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 862 [1/1] (0.00ns)   --->   "%cor_phaseClass6i_V_0 = load i16* @cor_phaseClass6i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_5 : Operation 863 [1/1] (0.00ns)   --->   "%tmp_237_14_cast = sext i16 %cor_phaseClass6i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:427]
+ST_5 : Operation 864 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_64_5 = sub i20 %p_Val2_69_2, %tmp_237_14_cast" [CorrelatorPreamble/correlatorPre.cpp:427]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 865 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 866 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_1_11 = load i16* @cor_phaseClass5i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_5 : Operation 867 [1/1] (0.00ns)   --->   "%tmp_225_13_cast = sext i16 %cor_phaseClass5i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:412]
+ST_5 : Operation 868 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_59_2 = add i20 %p_Val2_54_4, %tmp_225_13_cast" [CorrelatorPreamble/correlatorPre.cpp:412]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 869 [1/1] (0.00ns)   --->   "%cor_phaseClass5i_V_0 = load i16* @cor_phaseClass5i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_5 : Operation 870 [1/1] (0.00ns)   --->   "%tmp_225_14_cast = sext i16 %cor_phaseClass5i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:415]
+ST_5 : Operation 871 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_54_5 = sub i20 %p_Val2_59_2, %tmp_225_14_cast" [CorrelatorPreamble/correlatorPre.cpp:415]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 872 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 873 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_1_11 = load i16* @cor_phaseClass4i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_5 : Operation 874 [1/1] (0.00ns)   --->   "%tmp_213_13_cast = sext i16 %cor_phaseClass4i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:400]
+ST_5 : Operation 875 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_49_2 = add i20 %p_Val2_44_4, %tmp_213_13_cast" [CorrelatorPreamble/correlatorPre.cpp:400]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 876 [1/1] (0.00ns)   --->   "%cor_phaseClass4i_V_0 = load i16* @cor_phaseClass4i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_5 : Operation 877 [1/1] (0.00ns)   --->   "%tmp_213_14_cast = sext i16 %cor_phaseClass4i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:403]
+ST_5 : Operation 878 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_44_5 = sub i20 %p_Val2_49_2, %tmp_213_14_cast" [CorrelatorPreamble/correlatorPre.cpp:403]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 879 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 880 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_1_11 = load i16* @cor_phaseClass3i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_5 : Operation 881 [1/1] (0.00ns)   --->   "%tmp_201_13_cast = sext i16 %cor_phaseClass3i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:388]
+ST_5 : Operation 882 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_39_2 = add i20 %p_Val2_34_4, %tmp_201_13_cast" [CorrelatorPreamble/correlatorPre.cpp:388]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 883 [1/1] (0.00ns)   --->   "%cor_phaseClass3i_V_0 = load i16* @cor_phaseClass3i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_5 : Operation 884 [1/1] (0.00ns)   --->   "%tmp_201_14_cast = sext i16 %cor_phaseClass3i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:391]
+ST_5 : Operation 885 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_34_5 = sub i20 %p_Val2_39_2, %tmp_201_14_cast" [CorrelatorPreamble/correlatorPre.cpp:391]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 886 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 887 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_1_11 = load i16* @cor_phaseClass2i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_5 : Operation 888 [1/1] (0.00ns)   --->   "%tmp_189_13_cast = sext i16 %cor_phaseClass2i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:376]
+ST_5 : Operation 889 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_29_2 = add i20 %p_Val2_24_4, %tmp_189_13_cast" [CorrelatorPreamble/correlatorPre.cpp:376]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 890 [1/1] (0.00ns)   --->   "%cor_phaseClass2i_V_0 = load i16* @cor_phaseClass2i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_5 : Operation 891 [1/1] (0.00ns)   --->   "%tmp_189_14_cast = sext i16 %cor_phaseClass2i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:379]
+ST_5 : Operation 892 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_24_5 = sub i20 %p_Val2_29_2, %tmp_189_14_cast" [CorrelatorPreamble/correlatorPre.cpp:379]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 893 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 894 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_1_11 = load i16* @cor_phaseClass1i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_5 : Operation 895 [1/1] (0.00ns)   --->   "%tmp_177_13_cast = sext i16 %cor_phaseClass1i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:364]
+ST_5 : Operation 896 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_19_2 = add i20 %p_Val2_14_4, %tmp_177_13_cast" [CorrelatorPreamble/correlatorPre.cpp:364]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 897 [1/1] (0.00ns)   --->   "%cor_phaseClass1i_V_0 = load i16* @cor_phaseClass1i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_5 : Operation 898 [1/1] (0.00ns)   --->   "%tmp_177_14_cast = sext i16 %cor_phaseClass1i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:367]
+ST_5 : Operation 899 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_14_5 = sub i20 %p_Val2_19_2, %tmp_177_14_cast" [CorrelatorPreamble/correlatorPre.cpp:367]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 900 [1/1] (1.63ns)   --->   "br label %.loopexit"
+ST_5 : Operation 901 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_1_11 = load i16* @cor_phaseClass0i_V_1, align 2" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_5 : Operation 902 [1/1] (0.00ns)   --->   "%tmp_160_13_cast = sext i16 %cor_phaseClass0i_V_1_11 to i20" [CorrelatorPreamble/correlatorPre.cpp:351]
+ST_5 : Operation 903 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%p_Val2_7_2 = add i20 %p_Val2_2_4, %tmp_160_13_cast" [CorrelatorPreamble/correlatorPre.cpp:351]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 904 [1/1] (0.00ns)   --->   "%cor_phaseClass0i_V_0 = load i16* @cor_phaseClass0i_V_0, align 16" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_5 : Operation 905 [1/1] (0.00ns)   --->   "%tmp_160_14_cast = sext i16 %cor_phaseClass0i_V_0 to i20" [CorrelatorPreamble/correlatorPre.cpp:354]
+ST_5 : Operation 906 [1/1] (2.60ns) (root node of TernaryAdder)   --->   "%p_Val2_2_5 = sub i20 %p_Val2_7_2, %tmp_160_14_cast" [CorrelatorPreamble/correlatorPre.cpp:354]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 907 [1/1] (1.63ns)   --->   "br label %.loopexit"
+
+ <State 6> : 3.37ns
+ST_6 : Operation 908 [1/1] (0.00ns)   --->   "%tmp_s = phi i20 [ 0, %0 ], [ %p_Val2_154_5, %.preheader.0 ], [ %p_Val2_144_5, %.preheader1065.0 ], [ %p_Val2_134_5, %.preheader1067.0 ], [ %p_Val2_124_5, %.preheader1069.0 ], [ %p_Val2_114_5, %.preheader1071.0 ], [ %p_Val2_104_5, %.preheader1073.0 ], [ %p_Val2_94_5, %.preheader1075.0 ], [ %p_Val2_84_5, %.preheader1077.0 ], [ %p_Val2_74_5, %.preheader1079.0 ], [ %p_Val2_64_5, %.preheader1081.0 ], [ %p_Val2_54_5, %.preheader1083.0 ], [ %p_Val2_44_5, %.preheader1085.0 ], [ %p_Val2_34_5, %.preheader1087.0 ], [ %p_Val2_24_5, %.preheader1089.0 ], [ %p_Val2_14_5, %.preheader1091.0 ], [ %p_Val2_2_5, %.preheader1093.0 ]" [CorrelatorPreamble/correlatorPre.cpp:535]
+ST_6 : Operation 909 [1/1] (0.00ns)   --->   "%OP1_V_cast_cast = sext i20 %tmp_s to i40" [CorrelatorPreamble/correlatorPre.cpp:555]
+ST_6 : Operation 910 [4/4] (3.37ns)   --->   "%p_Val2_s_7 = mul i40 %OP1_V_cast_cast, %OP1_V_cast_cast" [CorrelatorPreamble/correlatorPre.cpp:555]   --->   Core 17 'MulnS' <Latency = 3> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 3.37ns
+ST_7 : Operation 911 [3/4] (3.37ns)   --->   "%p_Val2_s_7 = mul i40 %OP1_V_cast_cast, %OP1_V_cast_cast" [CorrelatorPreamble/correlatorPre.cpp:555]   --->   Core 17 'MulnS' <Latency = 3> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 3.37ns
+ST_8 : Operation 912 [2/4] (3.37ns)   --->   "%p_Val2_s_7 = mul i40 %OP1_V_cast_cast, %OP1_V_cast_cast" [CorrelatorPreamble/correlatorPre.cpp:555]   --->   Core 17 'MulnS' <Latency = 3> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 9> : 3.37ns
+ST_9 : Operation 913 [1/4] (3.37ns)   --->   "%p_Val2_s_7 = mul i40 %OP1_V_cast_cast, %OP1_V_cast_cast" [CorrelatorPreamble/correlatorPre.cpp:555]   --->   Core 17 'MulnS' <Latency = 3> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 914 [1/1] (0.00ns)   --->   "%tmp_64 = call i30 @_ssdm_op_PartSelect.i30.i40.i32.i32(i40 %p_Val2_s_7, i32 10, i32 39)" [CorrelatorPreamble/correlatorPre.cpp:555]
+ST_9 : Operation 915 [1/1] (0.00ns)   --->   "%resi_V = sext i30 %tmp_64 to i32" [CorrelatorPreamble/correlatorPre.cpp:555]
+ST_9 : Operation 916 [1/1] (0.00ns)   --->   "ret i32 %resi_V" [CorrelatorPreamble/correlatorPre.cpp:562]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 4.06ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15i_V_s', CorrelatorPreamble/correlatorPre.cpp:535) on static variable 'cor_phaseClass15i_V_15' [277]  (0 ns)
+	'sub' operation ('p_Val2_15', CorrelatorPreamble/correlatorPre.cpp:535) [279]  (1.49 ns)
+	'sub' operation ('p_Val2_154_1', CorrelatorPreamble/correlatorPre.cpp:535) [283]  (0 ns)
+	'sub' operation ('p_Val2_154_2', CorrelatorPreamble/correlatorPre.cpp:535) [286]  (2.57 ns)
+
+ <State 2>: 4.11ns
+The critical path consists of the following:
+	'sub' operation ('p_Val2_154_3', CorrelatorPreamble/correlatorPre.cpp:535) [290]  (1.53 ns)
+	'add' operation ('tmp', CorrelatorPreamble/correlatorPre.cpp:532) [299]  (0 ns)
+	'add' operation ('p_Val2_159_7', CorrelatorPreamble/correlatorPre.cpp:532) [304]  (2.59 ns)
+
+ <State 3>: 4.15ns
+The critical path consists of the following:
+	'sub' operation ('p_Val2_154_8', CorrelatorPreamble/correlatorPre.cpp:535) [308]  (1.54 ns)
+	'add' operation ('p_Val2_159_9', CorrelatorPreamble/correlatorPre.cpp:532) [311]  (0 ns)
+	'sub' operation ('p_Val2_154_s', CorrelatorPreamble/correlatorPre.cpp:535) [314]  (2.6 ns)
+
+ <State 4>: 4.09ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15i_V_25', CorrelatorPreamble/correlatorPre.cpp:535) on static variable 'cor_phaseClass15i_V_4' [315]  (0 ns)
+	'add' operation ('tmp3', CorrelatorPreamble/correlatorPre.cpp:532) [319]  (1.49 ns)
+	'add' operation ('p_Val2_159_1', CorrelatorPreamble/correlatorPre.cpp:532) [321]  (0 ns)
+	'sub' operation ('p_Val2_154_4', CorrelatorPreamble/correlatorPre.cpp:535) [324]  (2.6 ns)
+
+ <State 5>: 4.24ns
+The critical path consists of the following:
+	'load' operation ('cor_phaseClass15i_V_28', CorrelatorPreamble/correlatorPre.cpp:535) on static variable 'cor_phaseClass15i_V_1' [325]  (0 ns)
+	'add' operation ('p_Val2_159_2', CorrelatorPreamble/correlatorPre.cpp:532) [327]  (0 ns)
+	'sub' operation ('p_Val2_154_5', CorrelatorPreamble/correlatorPre.cpp:535) [330]  (2.6 ns)
+	multiplexor before 'phi' operation ('tmp_s', CorrelatorPreamble/correlatorPre.cpp:535) with incoming values : ('p_Val2_154_5', CorrelatorPreamble/correlatorPre.cpp:535) ('p_Val2_144_5', CorrelatorPreamble/correlatorPre.cpp:523) ('p_Val2_134_5', CorrelatorPreamble/correlatorPre.cpp:511) ('p_Val2_124_5', CorrelatorPreamble/correlatorPre.cpp:499) ('p_Val2_114_5', CorrelatorPreamble/correlatorPre.cpp:487) ('p_Val2_104_5', CorrelatorPreamble/correlatorPre.cpp:475) ('p_Val2_94_5', CorrelatorPreamble/correlatorPre.cpp:463) ('p_Val2_84_5', CorrelatorPreamble/correlatorPre.cpp:451) ('p_Val2_74_5', CorrelatorPreamble/correlatorPre.cpp:439) ('p_Val2_64_5', CorrelatorPreamble/correlatorPre.cpp:427) ('p_Val2_54_5', CorrelatorPreamble/correlatorPre.cpp:415) ('p_Val2_44_5', CorrelatorPreamble/correlatorPre.cpp:403) ('p_Val2_34_5', CorrelatorPreamble/correlatorPre.cpp:391) ('p_Val2_24_5', CorrelatorPreamble/correlatorPre.cpp:379) ('p_Val2_14_5', CorrelatorPreamble/correlatorPre.cpp:367) ('p_Val2_2_5', CorrelatorPreamble/correlatorPre.cpp:354) [1173]  (1.63 ns)
+
+ <State 6>: 3.37ns
+The critical path consists of the following:
+	'phi' operation ('tmp_s', CorrelatorPreamble/correlatorPre.cpp:535) with incoming values : ('p_Val2_154_5', CorrelatorPreamble/correlatorPre.cpp:535) ('p_Val2_144_5', CorrelatorPreamble/correlatorPre.cpp:523) ('p_Val2_134_5', CorrelatorPreamble/correlatorPre.cpp:511) ('p_Val2_124_5', CorrelatorPreamble/correlatorPre.cpp:499) ('p_Val2_114_5', CorrelatorPreamble/correlatorPre.cpp:487) ('p_Val2_104_5', CorrelatorPreamble/correlatorPre.cpp:475) ('p_Val2_94_5', CorrelatorPreamble/correlatorPre.cpp:463) ('p_Val2_84_5', CorrelatorPreamble/correlatorPre.cpp:451) ('p_Val2_74_5', CorrelatorPreamble/correlatorPre.cpp:439) ('p_Val2_64_5', CorrelatorPreamble/correlatorPre.cpp:427) ('p_Val2_54_5', CorrelatorPreamble/correlatorPre.cpp:415) ('p_Val2_44_5', CorrelatorPreamble/correlatorPre.cpp:403) ('p_Val2_34_5', CorrelatorPreamble/correlatorPre.cpp:391) ('p_Val2_24_5', CorrelatorPreamble/correlatorPre.cpp:379) ('p_Val2_14_5', CorrelatorPreamble/correlatorPre.cpp:367) ('p_Val2_2_5', CorrelatorPreamble/correlatorPre.cpp:354) [1173]  (0 ns)
+	'mul' operation ('__Val2__', CorrelatorPreamble/correlatorPre.cpp:555) [1175]  (3.37 ns)
+
+ <State 7>: 3.37ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', CorrelatorPreamble/correlatorPre.cpp:555) [1175]  (3.37 ns)
+
+ <State 8>: 3.37ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', CorrelatorPreamble/correlatorPre.cpp:555) [1175]  (3.37 ns)
+
+ <State 9>: 3.37ns
+The critical path consists of the following:
+	'mul' operation ('__Val2__', CorrelatorPreamble/correlatorPre.cpp:555) [1175]  (3.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

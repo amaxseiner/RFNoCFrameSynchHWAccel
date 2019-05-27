@@ -1,5 +1,5 @@
 
-set TopModule "matchFilter"
+set TopModule "matchTop"
 set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
@@ -19,7 +19,7 @@ set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
-set ResetVariableFlag 0
+set ResetVariableFlag 1
 set fsmEncStyle "onehot"
 set maxFanout "0"
 set RtlPrefix ""
@@ -40,10 +40,10 @@ set ExportMCPathFlag "0"
 set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
-set TargetInfo "xc7k160t:fbg484:-1"
+set TargetInfo "xc7k410t:ffg900:-1"
 set SourceFiles {sc {} c ../matchFilter.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive}
+set DirectiveFile {/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/solution1.directive}
 set TBFiles {verilog ../tb_main.cpp bc ../tb_main.cpp vhdl ../tb_main.cpp sc ../tb_main.cpp cas ../tb_main.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

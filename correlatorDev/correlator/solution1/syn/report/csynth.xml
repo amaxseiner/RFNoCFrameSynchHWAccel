@@ -11,33 +11,30 @@
 <TopModelName>correlateTop</TopModelName>
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>0.62</ClockUncertainty>
-<TargetInitiationInterval>1</TargetInitiationInterval>
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>function</PipelineType>
+<PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.03</EstimatedClockPeriod>
+<EstimatedClockPeriod>4.18</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>10</Best-caseLatency>
-<Average-caseLatency>10</Average-caseLatency>
+<Best-caseLatency>1</Best-caseLatency>
+<Average-caseLatency>6</Average-caseLatency>
 <Worst-caseLatency>10</Worst-caseLatency>
-<PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>11</PipelineDepth>
-<Interval-min>1</Interval-min>
-<Interval-max>1</Interval-max>
+<Interval-min>2</Interval-min>
+<Interval-max>11</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>0</BRAM_18K>
 <DSP48E>2</DSP48E>
-<FF>1418</FF>
-<LUT>1195</LUT>
+<FF>11629</FF>
+<LUT>13747</LUT>
+<BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
 <BRAM_18K>650</BRAM_18K>

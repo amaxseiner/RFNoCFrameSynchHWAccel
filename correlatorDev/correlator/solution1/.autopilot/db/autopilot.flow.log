@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Thu Mar 28 14:56:04 EDT 2019
+INFO: [HLS 200-0] Workspace /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1 opened at Wed Apr 17 14:28:55 EDT 2019
 Execute     config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 Command     config_clock returned 0; 0 sec.
@@ -41,9 +41,9 @@ Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx
 Command           ap_source returned 0; 0 sec.
 Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.01 sec.
-Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0 sec.
+Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.01 sec.
 Command       ap_source returned 0; 0.01 sec.
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
 Command       ap_source returned 0; 0 sec.
@@ -121,11 +121,11 @@ Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
 Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.02 sec.
+Command     import_lib returned 0; 0.01 sec.
 Execute     source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
 Execute     set_part xc7k160tfbg484-1 
 Execute       add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute         get_default_platform 
@@ -142,11 +142,11 @@ Command       add_library returned 0; 0.02 sec.
 Execute       add_library xilinx/kintex7/kintex7_fpv6 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
-Command       add_library returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-1'
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
-Command     set_part returned 0; 0.05 sec.
+Command     set_part returned 0; 0.06 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
 Execute     config_chip_info -quiet -resource  {SLICE 25350} {LUT 101400}    {FF 202800} {DSP48E 600}    {BRAM 650}  
@@ -157,7 +157,7 @@ Execute     config_rtl -encoding=onehot -reset=state -reset_async=0 -reset_level
 Command     config_rtl returned 0; 0 sec.
 Execute     config_interface -clock_enable=0 -expose_global=0 -m_axi_addr64=0 -m_axi_offset=off -register_io=off -trim_dangling_port=0 
 Command     config_interface returned 0; 0.02 sec.
-Command   open_solution returned 0; 0.25 sec.
+Command   open_solution returned 0; 0.26 sec.
 Execute   set_part xc7k160tfbg484-1 
 Execute     add_library xilinx/kintex7/kintex7:xc7k160t:fbg484:-1 
 Execute       get_default_platform 
@@ -177,16 +177,16 @@ Command       get_default_platform returned 0; 0 sec.
 Command     add_library returned 0; 0.01 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
-Command   set_part returned 0; 0.05 sec.
+Command   set_part returned 0; 0.04 sec.
 Execute   create_clock -period 5 -name default 
-Command   create_clock returned 0; 0 sec.
+Command   create_clock returned 0; 0.01 sec.
 Execute   config_rtl -encoding onehot -reset state -reset_level high 
 Command   config_rtl returned 0; 0 sec.
 Execute   config_interface -m_axi_offset off -register_io off 
 Command   config_interface returned 0; 0.01 sec.
 Execute   csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
-WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 INFO: [HLS 200-10] Analyzing design file 'correlator.cpp' ...
 INFO: [HLS 200-0] Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -201,11 +201,11 @@ Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "correlator.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E correlator.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp
-Command       clang returned 0; 1 sec.
+Command       clang returned 0; 1.01 sec.
 INFO: [HLS 200-0] Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp"  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/useless.bc"  
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/useless.bc
-Command       clang returned 0; 1.46 sec.
+Command       clang returned 0; 1.5 sec.
 INFO: [HLS 200-0] GCC PP time: 2 seconds per iteration
 Execute       list_core -type functional_unit 
 Command       list_core returned 0; 0 sec.
@@ -221,7 +221,7 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __tmp;
-Command       cdt returned 0; 6.26 sec.
+Command       cdt returned 0; 8.26 sec.
 INFO: [HLS 200-0] Marker-Pragma convertor: /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pp.0.cpp.ap-cdt.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
@@ -230,23 +230,23 @@ INFO: [HLS 200-0] Pragma Handling...
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp
-Command       clang returned 0; 0.97 sec.
+Command       clang returned 0; 0.98 sec.
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Processing labels
 Execute       clang  -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot" -I "/home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /home/ece492fa18/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot -I /home/ece492fa18/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc
-Command       clang returned 0; 1.51 sec.
-WARNING: [HLS 200-40] Skipped source file 'joeIsAnIdiot.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+Command       clang returned 0; 1.55 sec.
+WARNING: [HLS 200-40] Skipped source file 'alexisdumb.csv'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/ve_warning.tcl 
 Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-10] Validating synthesis directives ...
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/pragma.status.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 111487 ; free virtual = 255620
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:38 ; elapsed = 00:00:15 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 110785 ; free virtual = 255367
 INFO: [HLS 200-0] Linking Release ...
 Execute       llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bc -hls-opt -except-internalize correlateTop -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
-Command       llvm-ld returned 0; 0.54 sec.
+Command       llvm-ld returned 0; 0.55 sec.
 Execute       disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o 
 Execute         is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.bc 
 Command         is_encrypted returned 0; 0 sec.
@@ -254,9 +254,9 @@ Command       disassemble returned 0; 0.51 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
 INFO: [HLS 200-0] Linking Debug ...
 Execute       llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.g.bc -hls-opt -except-internalize correlateTop -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g 
-Command       llvm-ld returned 0; 0.53 sec.
+Command       llvm-ld returned 0; 0.54 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 111483 ; free virtual = 255620
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:39 ; elapsed = 00:00:16 . Memory (MB): peak = 359.949 ; gain = 13.375 ; free physical = 110783 ; free virtual = 255367
 Execute       ::config_rtl 
 Command       config_rtl returned 0; 0 sec.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
@@ -266,77 +266,162 @@ INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -f 
 Command         transform returned 0; 0.03 sec.
 Execute         llvm-ld /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/home/ece492fa18/Vivado/2017.4/lnx64/lib -lfloatconversion -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld returned 0; 0.52 sec.
+Command         llvm-ld returned 0; 0.53 sec.
 INFO: [HLS 200-0] Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top correlateTop -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.0.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform returned 0; 0.09 sec.
+Command         transform returned 0; 0.25 sec.
 Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1 /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1 
 Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.5 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 360.324 ; gain = 13.750 ; free physical = 111470 ; free virtual = 255609
+Command         disassemble returned 0; 0.51 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:41 ; elapsed = 00:00:18 . Memory (MB): peak = 360.352 ; gain = 13.777 ; free physical = 110765 ; free virtual = 255352
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-0] Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:89) automatically.
-Command         transform returned 0; 0.06 sec.
+Command         transform returned 0; 0.21 sec.
 INFO: [HLS 200-0] Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 Command         transform returned 0; 0.03 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:36 ; elapsed = 00:00:16 . Memory (MB): peak = 360.324 ; gain = 13.750 ; free physical = 111465 ; free virtual = 255605
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:41 ; elapsed = 00:00:18 . Memory (MB): peak = 488.312 ; gain = 141.738 ; free physical = 110761 ; free virtual = 255348
 INFO: [HLS 200-0] Compiler optimizing ...
 INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.g.1.bc to /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.bc
 INFO: [HLS 200-0] Presyn 1...
 Execute         transform -hls -tmp /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::shiftPhaseClass' (correlator.cpp:119:3).
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'correlate::correlator' (correlator.cpp:259:41).
-INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (correlator.cpp:121) in function 'correlate::shiftPhaseClass' completely.
-INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:261) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA0' (correlator.cpp:134) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA1' (correlator.cpp:143) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA2' (correlator.cpp:152) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA3' (correlator.cpp:163) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA4' (correlator.cpp:172) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA5' (correlator.cpp:182) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA6' (correlator.cpp:191) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA7' (correlator.cpp:200) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA8' (correlator.cpp:209) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA9' (correlator.cpp:218) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA10' (correlator.cpp:227) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA11' (correlator.cpp:236) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA12' (correlator.cpp:245) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA13' (correlator.cpp:254) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA14' (correlator.cpp:263) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT_DATA15' (correlator.cpp:272) in function 'correlate::shiftPhaseClass' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData0' (correlator.cpp:307) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData1' (correlator.cpp:320) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData2' (correlator.cpp:332) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData3' (correlator.cpp:344) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData4' (correlator.cpp:356) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData5' (correlator.cpp:369) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData6' (correlator.cpp:381) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData7' (correlator.cpp:393) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData8' (correlator.cpp:405) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData9' (correlator.cpp:417) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData10' (correlator.cpp:429) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData11' (correlator.cpp:441) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData12' (correlator.cpp:453) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData13' (correlator.cpp:465) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData14' (correlator.cpp:477) in function 'correlate::correlator' completely.
+INFO: [XFORM 203-501] Unrolling loop 'correlateData15' (correlator.cpp:489) in function 'correlate::correlator' completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass0i.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass0q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass1i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass1q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass2i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass2q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass3i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass3q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass4i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass4q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass5i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass5q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass6i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass6q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass7i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass7q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass8i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass8q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass9i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass9q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass10i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass10q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass11i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass11q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass12i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass12q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass13i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass13q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass14i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass14q.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass15i.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cor.phaseClass15q.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'corrSeq.V'  in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'correlate::shiftPhaseClass' into 'correlateTop' (correlator.cpp:89) automatically.
-INFO: [XFORM 203-602] Inlining function 'correlate::correlator' into 'correlateTop' (correlator.cpp:90) automatically.
-Command         transform returned 0; 0.21 sec.
+Command         transform returned 0; 1.5 sec.
 INFO: [HLS 200-0] Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'correlateTop' (correlator.cpp:9)...28 expression(s) balanced.
-Command         transform returned 0; 0.07 sec.
+INFO: [XFORM 203-11] Balancing expressions in function 'correlate::correlator' (correlator.cpp:22:21)...448 expression(s) balanced.
+Command         transform returned 0; 0.38 sec.
 Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2 /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2 
 Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.5 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:16 . Memory (MB): peak = 487.945 ; gain = 141.371 ; free physical = 111437 ; free virtual = 255580
+Command         disassemble returned 0; 0.51 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:20 . Memory (MB): peak = 488.312 ; gain = 141.738 ; free physical = 110726 ; free virtual = 255318
 INFO: [HLS 200-0] Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.2.bc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform returned 0; 0.1 sec.
+WARNING: [XFORM 203-631] Renaming function 'correlate::shiftPhaseClass' to 'shiftPhaseClass' (correlator.cpp:22:3)
+WARNING: [XFORM 203-631] Renaming function 'correlate::correlator' to 'correlator' (correlator.cpp:22:21)
+Command         transform returned 0; 1.05 sec.
 Execute         disassemble /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3 
 Execute           is_encrypted /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/a.o.3.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.5 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:17 . Memory (MB): peak = 487.945 ; gain = 141.371 ; free physical = 111434 ; free virtual = 255578
+Command         disassemble returned 0; 0.51 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 551.945 ; gain = 205.371 ; free physical = 110608 ; free virtual = 255202
 INFO: [HLS 200-0] Finish building internal data model.
-Command       opt_and_import_c returned 0; 2.66 sec.
-Command     elaborate returned 0; 16.35 sec.
+Command       opt_and_import_c returned 0; 5.58 sec.
+Command     elaborate returned 0; 21.42 sec.
 Execute     autosyn 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-0] Synthesizing C/C++ design ...
 INFO: [HLS 200-10] Synthesizing 'correlateTop' ...
 Execute       ap_set_top_model correlateTop 
-Command       ap_set_top_model returned 0; 0 sec.
+Command       ap_set_top_model returned 0; 0.01 sec.
 Execute       get_model_list correlateTop -filter all-wo-channel -topdown 
 Command       get_model_list returned 0; 0 sec.
 Execute       preproc_iomode -model correlateTop 
 Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model correlator 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model shiftPhaseClass 
+Command       preproc_iomode returned 0; 0 sec.
 Execute       get_model_list correlateTop -filter all-wo-channel 
 Command       get_model_list returned 0; 0 sec.
-INFO: [HLS 200-0] Model list for configure: correlateTop
+INFO: [HLS 200-0] Model list for configure: shiftPhaseClass correlator correlateTop
+INFO: [HLS 200-0] Configuring Module : shiftPhaseClass ...
+Execute       set_default_model shiftPhaseClass 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit shiftPhaseClass 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : correlator ...
+Execute       set_default_model correlator 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit correlator 
+Command       apply_spec_resource_limit returned 0; 0 sec.
 INFO: [HLS 200-0] Configuring Module : correlateTop ...
 Execute       set_default_model correlateTop 
 Command       set_default_model returned 0; 0 sec.
 Execute       apply_spec_resource_limit correlateTop 
 Command       apply_spec_resource_limit returned 0; 0 sec.
-INFO: [HLS 200-0] Model list for preprocess: correlateTop
+INFO: [HLS 200-0] Model list for preprocess: shiftPhaseClass correlator correlateTop
+INFO: [HLS 200-0] Preprocessing Module: shiftPhaseClass ...
+Execute       set_default_model shiftPhaseClass 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model shiftPhaseClass 
+Command       cdfg_preprocess returned 0; 0.03 sec.
+Execute       rtl_gen_preprocess shiftPhaseClass 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: correlator ...
+Execute       set_default_model correlator 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model correlator 
+Command       cdfg_preprocess returned 0; 0.01 sec.
+Execute       rtl_gen_preprocess correlator 
+Command       rtl_gen_preprocess returned 0; 0 sec.
 INFO: [HLS 200-0] Preprocessing Module: correlateTop ...
 Execute       set_default_model correlateTop 
 Command       set_default_model returned 0; 0 sec.
@@ -344,7 +429,123 @@ Execute       cdfg_preprocess -model correlateTop
 Command       cdfg_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess correlateTop 
 Command       rtl_gen_preprocess returned 0; 0 sec.
-INFO: [HLS 200-0] Model list for synthesis: correlateTop
+INFO: [HLS 200-0] Model list for synthesis: shiftPhaseClass correlator correlateTop
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shiftPhaseClass'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model shiftPhaseClass 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model shiftPhaseClass 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 22.27 seconds; current allocated memory: 216.685 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.07 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.sched.adb -f 
+Command       db_write returned 0; 0.09 sec.
+INFO: [HLS 200-0] Finish scheduling shiftPhaseClass.
+Execute       set_default_model shiftPhaseClass 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model shiftPhaseClass 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=shiftPhaseClass
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 219.787 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.06 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.bind.adb -f 
+Command       db_write returned 0; 0.11 sec.
+INFO: [HLS 200-0] Finish binding shiftPhaseClass.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'correlator'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model correlator 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model correlator 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.49 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 222.504 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.16 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.sched.adb -f 
+Command       db_write returned 0; 0.1 sec.
+INFO: [HLS 200-0] Finish scheduling correlator.
+Execute       set_default_model correlator 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model correlator 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=correlator
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.56 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 226.031 MB.
+Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.59 sec.
+Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.bind.adb -f 
+Command       db_write returned 0; 0.11 sec.
+INFO: [HLS 200-0] Finish binding correlator.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'correlateTop'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -352,13 +553,11 @@ Execute       set_default_model correlateTop
 Command       set_default_model returned 0; 0 sec.
 Execute       schedule -model correlateTop 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'correlateTop'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule returned 0; 0.08 sec.
-INFO: [HLS 200-111]  Elapsed time: 17.1 seconds; current allocated memory: 82.159 MB.
+Command       schedule returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.74 seconds; current allocated memory: 226.537 MB.
 Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.verbose.sched.rpt -verbose -f 
-Command       report returned 0; 0.03 sec.
+Command       report returned 0; 0.01 sec.
 Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.sched.adb -f 
 Command       db_write returned 0; 0.01 sec.
 INFO: [HLS 200-0] Finish scheduling correlateTop.
@@ -398,19 +597,75 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind returned 0; 0.05 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 82.722 MB.
+Command       bind returned 0; 0.31 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 228.363 MB.
 Execute       report -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.verbose.bind.rpt -verbose -f 
-Command       report returned 0; 0.06 sec.
+Command       report returned 0; 0.45 sec.
 Execute       db_write -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.bind.adb -f 
-Command       db_write returned 0; 0 sec.
+Command       db_write returned 0; 0.01 sec.
 INFO: [HLS 200-0] Finish binding correlateTop.
 Execute       get_model_list correlateTop -filter all-wo-channel 
 Command       get_model_list returned 0; 0 sec.
 INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess shiftPhaseClass 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess correlator 
+Command       rtl_gen_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess correlateTop 
-Command       rtl_gen_preprocess returned 0; 0.01 sec.
-INFO: [HLS 200-0] Model list for RTL generation: correlateTop
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL generation: shiftPhaseClass correlator correlateTop
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shiftPhaseClass'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model shiftPhaseClass -vendor xilinx -mg_file /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shiftPhaseClass'.
+Command       create_rtl_model returned 0; 0.6 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 232.208 MB.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl shiftPhaseClass -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/shiftPhaseClass -synmodules shiftPhaseClass correlator correlateTop 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl shiftPhaseClass -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/vhdl/shiftPhaseClass 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_rtl shiftPhaseClass -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/shiftPhaseClass 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info shiftPhaseClass -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass -p /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.08 sec.
+Execute       report -model shiftPhaseClass -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/shiftPhaseClass_csynth.rpt -f 
+Command       report returned 0; 0.1 sec.
+Execute       report -model shiftPhaseClass -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/shiftPhaseClass_csynth.xml -f -x 
+Command       report returned 0; 0.08 sec.
+Execute       report -model shiftPhaseClass -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.verbose.rpt -verbose -f 
+Command       report returned 0; 0.16 sec.
+Execute       db_write -model shiftPhaseClass -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.adb -f 
+Command       db_write returned 0; 0.19 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'correlator'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model correlator -vendor xilinx -mg_file /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'correlateTop_mul_mul_16s_16s_16_3_1' to 'correlateTop_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'correlateTop_mul_bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'correlator'.
+Command       create_rtl_model returned 0; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.99 seconds; current allocated memory: 251.946 MB.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl correlator -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/correlator -synmodules shiftPhaseClass correlator correlateTop 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl correlator -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/vhdl/correlator 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_rtl correlator -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlator 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_tb_info correlator -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator -p /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.16 sec.
+Execute       report -model correlator -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.rpt -f 
+Command       report returned 0; 0.17 sec.
+Execute       report -model correlator -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlator_csynth.xml -f -x 
+Command       report returned 0; 0.15 sec.
+Execute       report -model correlator -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.verbose.rpt -verbose -f 
+Command       report returned 0; 0.78 sec.
+Execute       db_write -model correlator -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.adb -f 
+Command       db_write returned 0; 0.42 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'correlateTop'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -421,49 +676,58 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/i_data_V_last
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/o_data_V_data_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'correlateTop/o_data_V_last_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'correlateTop' to 'ap_ctrl_none'.
-INFO: [SYN 201-210] Renamed object name 'correlateTop_mul_mul_16s_16s_16_3_1' to 'correlateTop_mul_bkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'correlateTop_mul_bkb': 2 instance(s).
+INFO: [RTGEN 206-104] Estimated max fanout for 'correlateTop' is 8252 from HDL expression: ap_rst_n_inv
 INFO: [RTGEN 206-100] Finished creating RTL model for 'correlateTop'.
-Command       create_rtl_model returned 0; 0.08 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 83.953 MB.
+Command       create_rtl_model returned 0; 2.09 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.01 seconds; current allocated memory: 277.398 MB.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0 sec.
-Execute       gen_rtl correlateTop -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/correlateTop -synmodules correlateTop 
-Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl correlateTop -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/systemc/correlateTop -synmodules shiftPhaseClass correlator correlateTop 
+Command       gen_rtl returned 0; 0.01 sec.
 Execute       gen_rtl correlateTop -istop -style xilinx -f -lang vhdl -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/vhdl/correlateTop 
-Command       gen_rtl returned 0; 0.06 sec.
+Command       gen_rtl returned 0; 0.09 sec.
 Execute       gen_rtl correlateTop -istop -style xilinx -f -lang vlog -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/verilog/correlateTop 
 Command       gen_rtl returned 0; 0.04 sec.
 Execute       export_constraint_db -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.constraint.tcl -f -tool general 
 Command       export_constraint_db returned 0; 0 sec.
 Execute       report -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.design.xml -verbose -f -dv 
-Command       report returned 0; 0.06 sec.
+Command       report returned 0; 0.56 sec.
 Execute       report -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.sdaccel.xml -verbose -f -sdaccel 
-Command       report returned 0; 0.1 sec.
+Command       report returned 0; 0.11 sec.
 Execute       gen_tb_info correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop -p /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db 
-Command       gen_tb_info returned 0; 0 sec.
+Command       gen_tb_info returned 0; 0.01 sec.
 Execute       report -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlateTop_csynth.rpt -f 
-Command       report returned 0; 0.03 sec.
+Command       report returned 0; 0.04 sec.
 Execute       report -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/syn/report/correlateTop_csynth.xml -f -x 
-Command       report returned 0; 0.03 sec.
+Command       report returned 0; 0.04 sec.
 Execute       report -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.verbose.rpt -verbose -f 
-Command       report returned 0; 0.1 sec.
+Command       report returned 0; 0.5 sec.
 Execute       db_write -model correlateTop -o /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.adb -f 
-Command       db_write returned 0; 0.06 sec.
+Command       db_write returned 0; 0.13 sec.
 Execute       sc_get_clocks correlateTop 
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       sc_get_portdomain correlateTop 
 Command       sc_get_portdomain returned 0; 0 sec.
-INFO: [HLS 200-0] Model list for RTL component generation: correlateTop
-INFO: [HLS 200-0] Handling components in module [correlateTop] ... 
-Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
+INFO: [HLS 200-0] Model list for RTL component generation: shiftPhaseClass correlator correlateTop
+INFO: [HLS 200-0] Handling components in module [shiftPhaseClass] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [correlator] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
 INFO: [HLS 200-0] Found component correlateTop_mul_bkb.
 INFO: [HLS 200-0] Append model correlateTop_mul_bkb
 Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [correlateTop] ... 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Append model shiftPhaseClass
+INFO: [HLS 200-0] Append model correlator
 INFO: [HLS 200-0] Append model correlateTop
 INFO: [HLS 200-0] Generating RTL model list ...
-INFO: [HLS 200-0] All models in this session: correlateTop_mul_bkb correlateTop
+INFO: [HLS 200-0] All models in this session: correlateTop_mul_bkb shiftPhaseClass correlator correlateTop
 INFO: [HLS 200-0] To file: write model correlateTop_mul_bkb
+INFO: [HLS 200-0] To file: write model shiftPhaseClass
+INFO: [HLS 200-0] To file: write model correlator
 INFO: [HLS 200-0] To file: write model correlateTop
 INFO: [HLS 200-0] Finished generating RTL model list.
 
@@ -498,39 +762,43 @@ Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xili
 Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command               ap_source returned 0; 0.01 sec.
-Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
 Command               ap_source returned 0; 0 sec.
+Execute               source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.07 sec.
+Command             ap_source returned 0; 0.09 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.11 sec.
+Command           ap_source returned 0; 0.12 sec.
 Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Command       ap_source returned 0; 0.11 sec.
+Command         ap_source returned 0; 0.12 sec.
+Command       ap_source returned 0; 0.12 sec.
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
-Command       ap_source returned 0; 0.02 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
@@ -565,18 +833,18 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.07 sec.
+Command             ap_source returned 0; 0.08 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.1 sec.
+Command           ap_source returned 0; 0.11 sec.
 Execute           source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.11 sec.
-Command       ap_source returned 0; 0.11 sec.
+Command         ap_source returned 0; 0.12 sec.
+Command       ap_source returned 0; 0.12 sec.
 Execute       source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
 Execute         source /home/ece492fa18/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
@@ -593,13 +861,25 @@ Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/corre
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
-Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
 Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/shiftPhaseClass.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlator.compgen.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/correlateTop.compgen.tcl 
 Command       ap_source returned 0; 0 sec.
@@ -627,12 +907,12 @@ Execute       sc_get_clocks correlateTop
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       source /home/ece492fa18/RFNoCFrameSynchHWAccel/correlatorDev/correlator/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 487.945 ; gain = 141.371 ; free physical = 111428 ; free virtual = 255574
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:54 ; elapsed = 00:00:34 . Memory (MB): peak = 679.945 ; gain = 333.371 ; free physical = 110498 ; free virtual = 255126
 INFO: [SYSC 207-301] Generating SystemC RTL for correlateTop.
 INFO: [VHDL 208-304] Generating VHDL RTL for correlateTop.
 INFO: [VLOG 209-307] Generating Verilog RTL for correlateTop.
-Command     autosyn returned 0; 1.31 sec.
-Command   csynth_design returned 0; 17.66 sec.
-Command ap_source returned 0; 18.02 sec.
+Command     autosyn returned 0; 11.5 sec.
+Command   csynth_design returned 0; 32.92 sec.
+Command ap_source returned 0; 33.3 sec.
 Execute cleanup_all 
-Command cleanup_all returned 0; 0.02 sec.
+Command cleanup_all returned 0; 0.13 sec.

@@ -1,31 +1,59 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
 <sourceFile name="">
-<directive functionLabel="" functionName="matchFilter" label="">
-<pragma name="INTERFACE">
-<option name="axis" positionalBoolean="mode" value=""/>
-<option name="depth" value="1"/>
-<option name="port" positionalBoolean="4" value="in"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="matchFilter" label="">
-<pragma name="INTERFACE">
-<option name="axis" positionalBoolean="mode" value=""/>
-<option name="depth" value="1"/>
-<option name="port" positionalBoolean="4" value="out"/>
-</pragma>
-</directive>
-<directive functionLabel="" functionName="matchFilter" label="">
+<directive functionLabel="" functionName="matchTop" label="">
 <pragma name="INTERFACE">
 <option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="return"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="matchFilter" label="">
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="o_data"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="i_data"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="match.matchBufferQ"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="match.matchBufferI"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
 <pragma name="ARRAY_PARTITION">
 <option name="variable" positionalBoolean="4" value="preamble"/>
 <option name="complete" positionalBoolean="type" value=""/>
 <option name="dim" value="1"/>
 </pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newVali"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchTop" label="">
+<pragma name="RESET">
+<option name="variable" positionalBoolean="4" value="newValq"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="matchFilter_ff::shiftSampleIn" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="matchFilter_ff::convol" label="">
+<pragma name="UNROLL"/>
 </directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

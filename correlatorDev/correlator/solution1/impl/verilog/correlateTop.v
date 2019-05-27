@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=pipeline,HLS_SYN_CLOCK=4.032000,HLS_SYN_LAT=10,HLS_SYN_TPT=1,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=1418,HLS_SYN_LUT=1195}" *)
+(* CORE_GENERATION_INFO="correlateTop,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k160tfbg484-1,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.177375,HLS_SYN_LAT=6,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=2,HLS_SYN_FF=11629,HLS_SYN_LUT=13747}" *)
 
 module correlateTop (
         ap_clk,
@@ -22,7 +22,12 @@ module correlateTop (
         o_data_TLAST
 );
 
-parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
+parameter    ap_ST_fsm_state1 = 6'd1;
+parameter    ap_ST_fsm_state2 = 6'd2;
+parameter    ap_ST_fsm_state3 = 6'd4;
+parameter    ap_ST_fsm_state4 = 6'd8;
+parameter    ap_ST_fsm_state5 = 6'd16;
+parameter    ap_ST_fsm_state6 = 6'd32;
 
 input   ap_clk;
 input   ap_rst_n;
@@ -97,7 +102,9 @@ reg   [0:0] currentState;
 reg   [3:0] phaseClass_V;
 reg   [31:0] loadCount_V;
 reg   [15:0] cor_phaseClass0i_V_14;
+reg   [15:0] cor_phaseClass0i_V_15;
 reg   [15:0] cor_phaseClass0q_V_14;
+reg   [15:0] cor_phaseClass0q_V_15;
 reg   [15:0] cor_phaseClass0i_V_13;
 reg   [15:0] cor_phaseClass0q_V_13;
 reg   [15:0] cor_phaseClass0i_V_12;
@@ -126,155 +133,1543 @@ reg   [15:0] cor_phaseClass0i_V_1;
 reg   [15:0] cor_phaseClass0q_V_1;
 reg   [15:0] cor_phaseClass0i_V_0;
 reg   [15:0] cor_phaseClass0q_V_0;
+reg   [15:0] cor_phaseClass1i_V_14;
+reg   [15:0] cor_phaseClass1i_V_15;
+reg   [15:0] cor_phaseClass1q_V_14;
+reg   [15:0] cor_phaseClass1q_V_15;
+reg   [15:0] cor_phaseClass1i_V_13;
+reg   [15:0] cor_phaseClass1q_V_13;
+reg   [15:0] cor_phaseClass1i_V_12;
+reg   [15:0] cor_phaseClass1q_V_12;
+reg   [15:0] cor_phaseClass1i_V_11;
+reg   [15:0] cor_phaseClass1q_V_11;
+reg   [15:0] cor_phaseClass1i_V_10;
+reg   [15:0] cor_phaseClass1q_V_10;
+reg   [15:0] cor_phaseClass1i_V_9;
+reg   [15:0] cor_phaseClass1q_V_9;
+reg   [15:0] cor_phaseClass1i_V_8;
+reg   [15:0] cor_phaseClass1q_V_8;
+reg   [15:0] cor_phaseClass1i_V_7;
+reg   [15:0] cor_phaseClass1q_V_7;
+reg   [15:0] cor_phaseClass1i_V_6;
+reg   [15:0] cor_phaseClass1q_V_6;
+reg   [15:0] cor_phaseClass1i_V_5;
+reg   [15:0] cor_phaseClass1q_V_5;
+reg   [15:0] cor_phaseClass1i_V_4;
+reg   [15:0] cor_phaseClass1q_V_4;
+reg   [15:0] cor_phaseClass1i_V_3;
+reg   [15:0] cor_phaseClass1q_V_3;
+reg   [15:0] cor_phaseClass1i_V_2;
+reg   [15:0] cor_phaseClass1q_V_2;
+reg   [15:0] cor_phaseClass1i_V_1;
+reg   [15:0] cor_phaseClass1q_V_1;
+reg   [15:0] cor_phaseClass1i_V_0;
+reg   [15:0] cor_phaseClass1q_V_0;
+reg   [15:0] cor_phaseClass2i_V_14;
+reg   [15:0] cor_phaseClass2i_V_15;
+reg   [15:0] cor_phaseClass2q_V_14;
+reg   [15:0] cor_phaseClass2q_V_15;
+reg   [15:0] cor_phaseClass2i_V_13;
+reg   [15:0] cor_phaseClass2q_V_13;
+reg   [15:0] cor_phaseClass2i_V_12;
+reg   [15:0] cor_phaseClass2q_V_12;
+reg   [15:0] cor_phaseClass2i_V_11;
+reg   [15:0] cor_phaseClass2q_V_11;
+reg   [15:0] cor_phaseClass2i_V_10;
+reg   [15:0] cor_phaseClass2q_V_10;
+reg   [15:0] cor_phaseClass2i_V_9;
+reg   [15:0] cor_phaseClass2q_V_9;
+reg   [15:0] cor_phaseClass2i_V_8;
+reg   [15:0] cor_phaseClass2q_V_8;
+reg   [15:0] cor_phaseClass2i_V_7;
+reg   [15:0] cor_phaseClass2q_V_7;
+reg   [15:0] cor_phaseClass2i_V_6;
+reg   [15:0] cor_phaseClass2q_V_6;
+reg   [15:0] cor_phaseClass2i_V_5;
+reg   [15:0] cor_phaseClass2q_V_5;
+reg   [15:0] cor_phaseClass2i_V_4;
+reg   [15:0] cor_phaseClass2q_V_4;
+reg   [15:0] cor_phaseClass2i_V_3;
+reg   [15:0] cor_phaseClass2q_V_3;
+reg   [15:0] cor_phaseClass2i_V_2;
+reg   [15:0] cor_phaseClass2q_V_2;
+reg   [15:0] cor_phaseClass2i_V_1;
+reg   [15:0] cor_phaseClass2q_V_1;
+reg   [15:0] cor_phaseClass2i_V_0;
+reg   [15:0] cor_phaseClass2q_V_0;
+reg   [15:0] cor_phaseClass3i_V_14;
+reg   [15:0] cor_phaseClass3i_V_15;
+reg   [15:0] cor_phaseClass3q_V_14;
+reg   [15:0] cor_phaseClass3q_V_15;
+reg   [15:0] cor_phaseClass3i_V_13;
+reg   [15:0] cor_phaseClass3q_V_13;
+reg   [15:0] cor_phaseClass3i_V_12;
+reg   [15:0] cor_phaseClass3q_V_12;
+reg   [15:0] cor_phaseClass3i_V_11;
+reg   [15:0] cor_phaseClass3q_V_11;
+reg   [15:0] cor_phaseClass3i_V_10;
+reg   [15:0] cor_phaseClass3q_V_10;
+reg   [15:0] cor_phaseClass3i_V_9;
+reg   [15:0] cor_phaseClass3q_V_9;
+reg   [15:0] cor_phaseClass3i_V_8;
+reg   [15:0] cor_phaseClass3q_V_8;
+reg   [15:0] cor_phaseClass3i_V_7;
+reg   [15:0] cor_phaseClass3q_V_7;
+reg   [15:0] cor_phaseClass3i_V_6;
+reg   [15:0] cor_phaseClass3q_V_6;
+reg   [15:0] cor_phaseClass3i_V_5;
+reg   [15:0] cor_phaseClass3q_V_5;
+reg   [15:0] cor_phaseClass3i_V_4;
+reg   [15:0] cor_phaseClass3q_V_4;
+reg   [15:0] cor_phaseClass3i_V_3;
+reg   [15:0] cor_phaseClass3q_V_3;
+reg   [15:0] cor_phaseClass3i_V_2;
+reg   [15:0] cor_phaseClass3q_V_2;
+reg   [15:0] cor_phaseClass3i_V_1;
+reg   [15:0] cor_phaseClass3q_V_1;
+reg   [15:0] cor_phaseClass3i_V_0;
+reg   [15:0] cor_phaseClass3q_V_0;
+reg   [15:0] cor_phaseClass4i_V_14;
+reg   [15:0] cor_phaseClass4i_V_15;
+reg   [15:0] cor_phaseClass4q_V_14;
+reg   [15:0] cor_phaseClass4q_V_15;
+reg   [15:0] cor_phaseClass4i_V_13;
+reg   [15:0] cor_phaseClass4q_V_13;
+reg   [15:0] cor_phaseClass4i_V_12;
+reg   [15:0] cor_phaseClass4q_V_12;
+reg   [15:0] cor_phaseClass4i_V_11;
+reg   [15:0] cor_phaseClass4q_V_11;
+reg   [15:0] cor_phaseClass4i_V_10;
+reg   [15:0] cor_phaseClass4q_V_10;
+reg   [15:0] cor_phaseClass4i_V_9;
+reg   [15:0] cor_phaseClass4q_V_9;
+reg   [15:0] cor_phaseClass4i_V_8;
+reg   [15:0] cor_phaseClass4q_V_8;
+reg   [15:0] cor_phaseClass4i_V_7;
+reg   [15:0] cor_phaseClass4q_V_7;
+reg   [15:0] cor_phaseClass4i_V_6;
+reg   [15:0] cor_phaseClass4q_V_6;
+reg   [15:0] cor_phaseClass4i_V_5;
+reg   [15:0] cor_phaseClass4q_V_5;
+reg   [15:0] cor_phaseClass4i_V_4;
+reg   [15:0] cor_phaseClass4q_V_4;
+reg   [15:0] cor_phaseClass4i_V_3;
+reg   [15:0] cor_phaseClass4q_V_3;
+reg   [15:0] cor_phaseClass4i_V_2;
+reg   [15:0] cor_phaseClass4q_V_2;
+reg   [15:0] cor_phaseClass4i_V_1;
+reg   [15:0] cor_phaseClass4q_V_1;
+reg   [15:0] cor_phaseClass4i_V_0;
+reg   [15:0] cor_phaseClass4q_V_0;
+reg   [15:0] cor_phaseClass5i_V_14;
+reg   [15:0] cor_phaseClass5i_V_15;
+reg   [15:0] cor_phaseClass5q_V_14;
+reg   [15:0] cor_phaseClass5q_V_15;
+reg   [15:0] cor_phaseClass5i_V_13;
+reg   [15:0] cor_phaseClass5q_V_13;
+reg   [15:0] cor_phaseClass5i_V_12;
+reg   [15:0] cor_phaseClass5q_V_12;
+reg   [15:0] cor_phaseClass5i_V_11;
+reg   [15:0] cor_phaseClass5q_V_11;
+reg   [15:0] cor_phaseClass5i_V_10;
+reg   [15:0] cor_phaseClass5q_V_10;
+reg   [15:0] cor_phaseClass5i_V_9;
+reg   [15:0] cor_phaseClass5q_V_9;
+reg   [15:0] cor_phaseClass5i_V_8;
+reg   [15:0] cor_phaseClass5q_V_8;
+reg   [15:0] cor_phaseClass5i_V_7;
+reg   [15:0] cor_phaseClass5q_V_7;
+reg   [15:0] cor_phaseClass5i_V_6;
+reg   [15:0] cor_phaseClass5q_V_6;
+reg   [15:0] cor_phaseClass5i_V_5;
+reg   [15:0] cor_phaseClass5q_V_5;
+reg   [15:0] cor_phaseClass5i_V_4;
+reg   [15:0] cor_phaseClass5q_V_4;
+reg   [15:0] cor_phaseClass5i_V_3;
+reg   [15:0] cor_phaseClass5q_V_3;
+reg   [15:0] cor_phaseClass5i_V_2;
+reg   [15:0] cor_phaseClass5q_V_2;
+reg   [15:0] cor_phaseClass5i_V_1;
+reg   [15:0] cor_phaseClass5q_V_1;
+reg   [15:0] cor_phaseClass5i_V_0;
+reg   [15:0] cor_phaseClass5q_V_0;
+reg   [15:0] cor_phaseClass6i_V_14;
+reg   [15:0] cor_phaseClass6i_V_15;
+reg   [15:0] cor_phaseClass6q_V_14;
+reg   [15:0] cor_phaseClass6q_V_15;
+reg   [15:0] cor_phaseClass6i_V_13;
+reg   [15:0] cor_phaseClass6q_V_13;
+reg   [15:0] cor_phaseClass6i_V_12;
+reg   [15:0] cor_phaseClass6q_V_12;
+reg   [15:0] cor_phaseClass6i_V_11;
+reg   [15:0] cor_phaseClass6q_V_11;
+reg   [15:0] cor_phaseClass6i_V_10;
+reg   [15:0] cor_phaseClass6q_V_10;
+reg   [15:0] cor_phaseClass6i_V_9;
+reg   [15:0] cor_phaseClass6q_V_9;
+reg   [15:0] cor_phaseClass6i_V_8;
+reg   [15:0] cor_phaseClass6q_V_8;
+reg   [15:0] cor_phaseClass6i_V_7;
+reg   [15:0] cor_phaseClass6q_V_7;
+reg   [15:0] cor_phaseClass6i_V_6;
+reg   [15:0] cor_phaseClass6q_V_6;
+reg   [15:0] cor_phaseClass6i_V_5;
+reg   [15:0] cor_phaseClass6q_V_5;
+reg   [15:0] cor_phaseClass6i_V_4;
+reg   [15:0] cor_phaseClass6q_V_4;
+reg   [15:0] cor_phaseClass6i_V_3;
+reg   [15:0] cor_phaseClass6q_V_3;
+reg   [15:0] cor_phaseClass6i_V_2;
+reg   [15:0] cor_phaseClass6q_V_2;
+reg   [15:0] cor_phaseClass6i_V_1;
+reg   [15:0] cor_phaseClass6q_V_1;
+reg   [15:0] cor_phaseClass6i_V_0;
+reg   [15:0] cor_phaseClass6q_V_0;
+reg   [15:0] cor_phaseClass7i_V_14;
+reg   [15:0] cor_phaseClass7i_V_15;
+reg   [15:0] cor_phaseClass7q_V_14;
+reg   [15:0] cor_phaseClass7q_V_15;
+reg   [15:0] cor_phaseClass7i_V_13;
+reg   [15:0] cor_phaseClass7q_V_13;
+reg   [15:0] cor_phaseClass7i_V_12;
+reg   [15:0] cor_phaseClass7q_V_12;
+reg   [15:0] cor_phaseClass7i_V_11;
+reg   [15:0] cor_phaseClass7q_V_11;
+reg   [15:0] cor_phaseClass7i_V_10;
+reg   [15:0] cor_phaseClass7q_V_10;
+reg   [15:0] cor_phaseClass7i_V_9;
+reg   [15:0] cor_phaseClass7q_V_9;
+reg   [15:0] cor_phaseClass7i_V_8;
+reg   [15:0] cor_phaseClass7q_V_8;
+reg   [15:0] cor_phaseClass7i_V_7;
+reg   [15:0] cor_phaseClass7q_V_7;
+reg   [15:0] cor_phaseClass7i_V_6;
+reg   [15:0] cor_phaseClass7q_V_6;
+reg   [15:0] cor_phaseClass7i_V_5;
+reg   [15:0] cor_phaseClass7q_V_5;
+reg   [15:0] cor_phaseClass7i_V_4;
+reg   [15:0] cor_phaseClass7q_V_4;
+reg   [15:0] cor_phaseClass7i_V_3;
+reg   [15:0] cor_phaseClass7q_V_3;
+reg   [15:0] cor_phaseClass7i_V_2;
+reg   [15:0] cor_phaseClass7q_V_2;
+reg   [15:0] cor_phaseClass7i_V_1;
+reg   [15:0] cor_phaseClass7q_V_1;
+reg   [15:0] cor_phaseClass7i_V_0;
+reg   [15:0] cor_phaseClass7q_V_0;
+reg   [15:0] cor_phaseClass8i_V_14;
+reg   [15:0] cor_phaseClass8i_V_15;
+reg   [15:0] cor_phaseClass8q_V_14;
+reg   [15:0] cor_phaseClass8q_V_15;
+reg   [15:0] cor_phaseClass8i_V_13;
+reg   [15:0] cor_phaseClass8q_V_13;
+reg   [15:0] cor_phaseClass8i_V_12;
+reg   [15:0] cor_phaseClass8q_V_12;
+reg   [15:0] cor_phaseClass8i_V_11;
+reg   [15:0] cor_phaseClass8q_V_11;
+reg   [15:0] cor_phaseClass8i_V_10;
+reg   [15:0] cor_phaseClass8q_V_10;
+reg   [15:0] cor_phaseClass8i_V_9;
+reg   [15:0] cor_phaseClass8q_V_9;
+reg   [15:0] cor_phaseClass8i_V_8;
+reg   [15:0] cor_phaseClass8q_V_8;
+reg   [15:0] cor_phaseClass8i_V_7;
+reg   [15:0] cor_phaseClass8q_V_7;
+reg   [15:0] cor_phaseClass8i_V_6;
+reg   [15:0] cor_phaseClass8q_V_6;
+reg   [15:0] cor_phaseClass8i_V_5;
+reg   [15:0] cor_phaseClass8q_V_5;
+reg   [15:0] cor_phaseClass8i_V_4;
+reg   [15:0] cor_phaseClass8q_V_4;
+reg   [15:0] cor_phaseClass8i_V_3;
+reg   [15:0] cor_phaseClass8q_V_3;
+reg   [15:0] cor_phaseClass8i_V_2;
+reg   [15:0] cor_phaseClass8q_V_2;
+reg   [15:0] cor_phaseClass8i_V_1;
+reg   [15:0] cor_phaseClass8q_V_1;
+reg   [15:0] cor_phaseClass8i_V_0;
+reg   [15:0] cor_phaseClass8q_V_0;
+reg   [15:0] cor_phaseClass9i_V_14;
+reg   [15:0] cor_phaseClass9i_V_15;
+reg   [15:0] cor_phaseClass9q_V_14;
+reg   [15:0] cor_phaseClass9q_V_15;
+reg   [15:0] cor_phaseClass9i_V_13;
+reg   [15:0] cor_phaseClass9q_V_13;
+reg   [15:0] cor_phaseClass9i_V_12;
+reg   [15:0] cor_phaseClass9q_V_12;
+reg   [15:0] cor_phaseClass9i_V_11;
+reg   [15:0] cor_phaseClass9q_V_11;
+reg   [15:0] cor_phaseClass9i_V_10;
+reg   [15:0] cor_phaseClass9q_V_10;
+reg   [15:0] cor_phaseClass9i_V_9;
+reg   [15:0] cor_phaseClass9q_V_9;
+reg   [15:0] cor_phaseClass9i_V_8;
+reg   [15:0] cor_phaseClass9q_V_8;
+reg   [15:0] cor_phaseClass9i_V_7;
+reg   [15:0] cor_phaseClass9q_V_7;
+reg   [15:0] cor_phaseClass9i_V_6;
+reg   [15:0] cor_phaseClass9q_V_6;
+reg   [15:0] cor_phaseClass9i_V_5;
+reg   [15:0] cor_phaseClass9q_V_5;
+reg   [15:0] cor_phaseClass9i_V_4;
+reg   [15:0] cor_phaseClass9q_V_4;
+reg   [15:0] cor_phaseClass9i_V_3;
+reg   [15:0] cor_phaseClass9q_V_3;
+reg   [15:0] cor_phaseClass9i_V_2;
+reg   [15:0] cor_phaseClass9q_V_2;
+reg   [15:0] cor_phaseClass9i_V_1;
+reg   [15:0] cor_phaseClass9q_V_1;
+reg   [15:0] cor_phaseClass9i_V_0;
+reg   [15:0] cor_phaseClass9q_V_0;
+reg   [15:0] cor_phaseClass10i_V_14;
+reg   [15:0] cor_phaseClass10i_V_15;
+reg   [15:0] cor_phaseClass10q_V_14;
+reg   [15:0] cor_phaseClass10q_V_15;
+reg   [15:0] cor_phaseClass10i_V_13;
+reg   [15:0] cor_phaseClass10q_V_13;
+reg   [15:0] cor_phaseClass10i_V_12;
+reg   [15:0] cor_phaseClass10q_V_12;
+reg   [15:0] cor_phaseClass10i_V_11;
+reg   [15:0] cor_phaseClass10q_V_11;
+reg   [15:0] cor_phaseClass10i_V_10;
+reg   [15:0] cor_phaseClass10q_V_10;
+reg   [15:0] cor_phaseClass10i_V_9;
+reg   [15:0] cor_phaseClass10q_V_9;
+reg   [15:0] cor_phaseClass10i_V_8;
+reg   [15:0] cor_phaseClass10q_V_8;
+reg   [15:0] cor_phaseClass10i_V_7;
+reg   [15:0] cor_phaseClass10q_V_7;
+reg   [15:0] cor_phaseClass10i_V_6;
+reg   [15:0] cor_phaseClass10q_V_6;
+reg   [15:0] cor_phaseClass10i_V_5;
+reg   [15:0] cor_phaseClass10q_V_5;
+reg   [15:0] cor_phaseClass10i_V_4;
+reg   [15:0] cor_phaseClass10q_V_4;
+reg   [15:0] cor_phaseClass10i_V_3;
+reg   [15:0] cor_phaseClass10q_V_3;
+reg   [15:0] cor_phaseClass10i_V_2;
+reg   [15:0] cor_phaseClass10q_V_2;
+reg   [15:0] cor_phaseClass10i_V_1;
+reg   [15:0] cor_phaseClass10q_V_1;
+reg   [15:0] cor_phaseClass10i_V_s;
+reg   [15:0] cor_phaseClass10q_V_s;
+reg   [15:0] cor_phaseClass11i_V_14;
+reg   [15:0] cor_phaseClass11i_V_15;
+reg   [15:0] cor_phaseClass11q_V_14;
+reg   [15:0] cor_phaseClass11q_V_15;
+reg   [15:0] cor_phaseClass11i_V_13;
+reg   [15:0] cor_phaseClass11q_V_13;
+reg   [15:0] cor_phaseClass11i_V_12;
+reg   [15:0] cor_phaseClass11q_V_12;
+reg   [15:0] cor_phaseClass11i_V_11;
+reg   [15:0] cor_phaseClass11q_V_11;
+reg   [15:0] cor_phaseClass11i_V_10;
+reg   [15:0] cor_phaseClass11q_V_10;
+reg   [15:0] cor_phaseClass11i_V_9;
+reg   [15:0] cor_phaseClass11q_V_9;
+reg   [15:0] cor_phaseClass11i_V_8;
+reg   [15:0] cor_phaseClass11q_V_8;
+reg   [15:0] cor_phaseClass11i_V_7;
+reg   [15:0] cor_phaseClass11q_V_7;
+reg   [15:0] cor_phaseClass11i_V_6;
+reg   [15:0] cor_phaseClass11q_V_6;
+reg   [15:0] cor_phaseClass11i_V_5;
+reg   [15:0] cor_phaseClass11q_V_5;
+reg   [15:0] cor_phaseClass11i_V_4;
+reg   [15:0] cor_phaseClass11q_V_4;
+reg   [15:0] cor_phaseClass11i_V_3;
+reg   [15:0] cor_phaseClass11q_V_3;
+reg   [15:0] cor_phaseClass11i_V_2;
+reg   [15:0] cor_phaseClass11q_V_2;
+reg   [15:0] cor_phaseClass11i_V_1;
+reg   [15:0] cor_phaseClass11q_V_1;
+reg   [15:0] cor_phaseClass11i_V_s;
+reg   [15:0] cor_phaseClass11q_V_s;
+reg   [15:0] cor_phaseClass12i_V_14;
+reg   [15:0] cor_phaseClass12i_V_15;
+reg   [15:0] cor_phaseClass12q_V_14;
+reg   [15:0] cor_phaseClass12q_V_15;
+reg   [15:0] cor_phaseClass12i_V_13;
+reg   [15:0] cor_phaseClass12q_V_13;
+reg   [15:0] cor_phaseClass12i_V_12;
+reg   [15:0] cor_phaseClass12q_V_12;
+reg   [15:0] cor_phaseClass12i_V_11;
+reg   [15:0] cor_phaseClass12q_V_11;
+reg   [15:0] cor_phaseClass12i_V_10;
+reg   [15:0] cor_phaseClass12q_V_10;
+reg   [15:0] cor_phaseClass12i_V_9;
+reg   [15:0] cor_phaseClass12q_V_9;
+reg   [15:0] cor_phaseClass12i_V_8;
+reg   [15:0] cor_phaseClass12q_V_8;
+reg   [15:0] cor_phaseClass12i_V_7;
+reg   [15:0] cor_phaseClass12q_V_7;
+reg   [15:0] cor_phaseClass12i_V_6;
+reg   [15:0] cor_phaseClass12q_V_6;
+reg   [15:0] cor_phaseClass12i_V_5;
+reg   [15:0] cor_phaseClass12q_V_5;
+reg   [15:0] cor_phaseClass12i_V_4;
+reg   [15:0] cor_phaseClass12q_V_4;
+reg   [15:0] cor_phaseClass12i_V_3;
+reg   [15:0] cor_phaseClass12q_V_3;
+reg   [15:0] cor_phaseClass12i_V_2;
+reg   [15:0] cor_phaseClass12q_V_2;
+reg   [15:0] cor_phaseClass12i_V_1;
+reg   [15:0] cor_phaseClass12q_V_1;
+reg   [15:0] cor_phaseClass12i_V_s;
+reg   [15:0] cor_phaseClass12q_V_s;
+reg   [15:0] cor_phaseClass13i_V_14;
+reg   [15:0] cor_phaseClass13i_V_15;
+reg   [15:0] cor_phaseClass13q_V_14;
+reg   [15:0] cor_phaseClass13q_V_15;
+reg   [15:0] cor_phaseClass13i_V_13;
+reg   [15:0] cor_phaseClass13q_V_13;
+reg   [15:0] cor_phaseClass13i_V_12;
+reg   [15:0] cor_phaseClass13q_V_12;
+reg   [15:0] cor_phaseClass13i_V_11;
+reg   [15:0] cor_phaseClass13q_V_11;
+reg   [15:0] cor_phaseClass13i_V_10;
+reg   [15:0] cor_phaseClass13q_V_10;
+reg   [15:0] cor_phaseClass13i_V_9;
+reg   [15:0] cor_phaseClass13q_V_9;
+reg   [15:0] cor_phaseClass13i_V_8;
+reg   [15:0] cor_phaseClass13q_V_8;
+reg   [15:0] cor_phaseClass13i_V_7;
+reg   [15:0] cor_phaseClass13q_V_7;
+reg   [15:0] cor_phaseClass13i_V_6;
+reg   [15:0] cor_phaseClass13q_V_6;
+reg   [15:0] cor_phaseClass13i_V_5;
+reg   [15:0] cor_phaseClass13q_V_5;
+reg   [15:0] cor_phaseClass13i_V_4;
+reg   [15:0] cor_phaseClass13q_V_4;
+reg   [15:0] cor_phaseClass13i_V_3;
+reg   [15:0] cor_phaseClass13q_V_3;
+reg   [15:0] cor_phaseClass13i_V_2;
+reg   [15:0] cor_phaseClass13q_V_2;
+reg   [15:0] cor_phaseClass13i_V_1;
+reg   [15:0] cor_phaseClass13q_V_1;
+reg   [15:0] cor_phaseClass13i_V_s;
+reg   [15:0] cor_phaseClass13q_V_s;
+reg   [15:0] cor_phaseClass14i_V_14;
+reg   [15:0] cor_phaseClass14i_V_15;
+reg   [15:0] cor_phaseClass14q_V_14;
+reg   [15:0] cor_phaseClass14q_V_15;
+reg   [15:0] cor_phaseClass14i_V_13;
+reg   [15:0] cor_phaseClass14q_V_13;
+reg   [15:0] cor_phaseClass14i_V_12;
+reg   [15:0] cor_phaseClass14q_V_12;
+reg   [15:0] cor_phaseClass14i_V_11;
+reg   [15:0] cor_phaseClass14q_V_11;
+reg   [15:0] cor_phaseClass14i_V_10;
+reg   [15:0] cor_phaseClass14q_V_10;
+reg   [15:0] cor_phaseClass14i_V_9;
+reg   [15:0] cor_phaseClass14q_V_9;
+reg   [15:0] cor_phaseClass14i_V_8;
+reg   [15:0] cor_phaseClass14q_V_8;
+reg   [15:0] cor_phaseClass14i_V_7;
+reg   [15:0] cor_phaseClass14q_V_7;
+reg   [15:0] cor_phaseClass14i_V_6;
+reg   [15:0] cor_phaseClass14q_V_6;
+reg   [15:0] cor_phaseClass14i_V_5;
+reg   [15:0] cor_phaseClass14q_V_5;
+reg   [15:0] cor_phaseClass14i_V_4;
+reg   [15:0] cor_phaseClass14q_V_4;
+reg   [15:0] cor_phaseClass14i_V_3;
+reg   [15:0] cor_phaseClass14q_V_3;
+reg   [15:0] cor_phaseClass14i_V_2;
+reg   [15:0] cor_phaseClass14q_V_2;
+reg   [15:0] cor_phaseClass14i_V_1;
+reg   [15:0] cor_phaseClass14q_V_1;
+reg   [15:0] cor_phaseClass14i_V_s;
+reg   [15:0] cor_phaseClass14q_V_s;
+reg   [15:0] cor_phaseClass15i_V_14;
+reg   [15:0] cor_phaseClass15i_V_15;
+reg   [15:0] cor_phaseClass15q_V_14;
+reg   [15:0] cor_phaseClass15q_V_15;
+reg   [15:0] cor_phaseClass15i_V_13;
+reg   [15:0] cor_phaseClass15q_V_13;
+reg   [15:0] cor_phaseClass15i_V_12;
+reg   [15:0] cor_phaseClass15q_V_12;
+reg   [15:0] cor_phaseClass15i_V_11;
+reg   [15:0] cor_phaseClass15q_V_11;
+reg   [15:0] cor_phaseClass15i_V_10;
+reg   [15:0] cor_phaseClass15q_V_10;
+reg   [15:0] cor_phaseClass15i_V_9;
+reg   [15:0] cor_phaseClass15q_V_9;
+reg   [15:0] cor_phaseClass15i_V_8;
+reg   [15:0] cor_phaseClass15q_V_8;
+reg   [15:0] cor_phaseClass15i_V_7;
+reg   [15:0] cor_phaseClass15q_V_7;
+reg   [15:0] cor_phaseClass15i_V_6;
+reg   [15:0] cor_phaseClass15q_V_6;
+reg   [15:0] cor_phaseClass15i_V_5;
+reg   [15:0] cor_phaseClass15q_V_5;
+reg   [15:0] cor_phaseClass15i_V_4;
+reg   [15:0] cor_phaseClass15q_V_4;
+reg   [15:0] cor_phaseClass15i_V_3;
+reg   [15:0] cor_phaseClass15q_V_3;
+reg   [15:0] cor_phaseClass15i_V_2;
+reg   [15:0] cor_phaseClass15q_V_2;
+reg   [15:0] cor_phaseClass15i_V_1;
+reg   [15:0] cor_phaseClass15q_V_1;
+reg   [15:0] cor_phaseClass15i_V_s;
+reg   [15:0] cor_phaseClass15q_V_s;
 reg    i_data_TDATA_blk_n;
-(* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
-wire    ap_CS_fsm_pp0_stage0;
-reg    ap_enable_reg_pp0_iter1;
-wire    ap_block_pp0_stage0;
-reg   [0:0] currentState_load_reg_797;
+(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
+wire    ap_CS_fsm_state2;
 reg    o_data_TDATA_blk_n;
-reg    ap_enable_reg_pp0_iter9;
-reg   [0:0] ap_reg_pp0_iter8_currentState_load_reg_797;
-reg   [0:0] tmp_5_reg_937;
-reg    ap_enable_reg_pp0_iter10;
-reg   [0:0] ap_reg_pp0_iter9_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter9_tmp_5_reg_937;
-wire    ap_block_state1_pp0_stage0_iter0;
-reg    ap_block_state2_pp0_stage0_iter1;
-wire    ap_block_state3_pp0_stage0_iter2;
-wire    ap_block_state4_pp0_stage0_iter3;
-wire    ap_block_state5_pp0_stage0_iter4;
-wire    ap_block_state6_pp0_stage0_iter5;
-wire    ap_block_state7_pp0_stage0_iter6;
-wire    ap_block_state8_pp0_stage0_iter7;
-wire    ap_block_state9_pp0_stage0_iter8;
-wire    ap_block_state10_pp0_stage0_iter9;
-reg    ap_predicate_op138_write_state10;
-reg    ap_predicate_op139_write_state10;
-reg    ap_block_state10_io;
-reg    ap_block_state11_pp0_stage0_iter10;
-reg    ap_predicate_op159_write_state11;
-reg    ap_predicate_op161_write_state11;
-reg    ap_block_state11_io;
-reg    ap_block_pp0_stage0_11001;
-reg   [0:0] ap_reg_pp0_iter1_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter2_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter3_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter4_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter5_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter6_currentState_load_reg_797;
-reg   [0:0] ap_reg_pp0_iter7_currentState_load_reg_797;
-reg   [0:0] tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter2_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter3_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter4_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter5_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter6_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter7_tmp_last_V_reg_801;
-reg   [0:0] ap_reg_pp0_iter8_tmp_last_V_reg_801;
-wire   [0:0] cond_i_fu_239_p2;
-reg   [0:0] cond_i_reg_806;
-reg   [0:0] ap_reg_pp0_iter2_cond_i_reg_806;
-reg   [15:0] cor_phaseClass0i_V_1_5_reg_810;
-reg   [15:0] cor_phaseClass0q_V_1_5_reg_815;
-wire   [15:0] tmp15_fu_291_p2;
-reg   [15:0] tmp15_reg_820;
-wire   [15:0] tmp22_fu_303_p2;
-reg   [15:0] tmp22_reg_825;
-reg   [15:0] cor_phaseClass0i_V_1_2_reg_830;
-reg   [15:0] cor_phaseClass0q_V_1_2_reg_835;
-wire   [15:0] tmp1_fu_579_p2;
-reg   [15:0] tmp1_reg_840;
-wire   [15:0] tmp2_fu_597_p2;
-reg   [15:0] tmp2_reg_845;
-wire   [15:0] tmp6_fu_603_p2;
-reg   [15:0] tmp6_reg_850;
-wire   [15:0] tmp7_fu_621_p2;
-reg   [15:0] tmp7_reg_855;
-wire   [15:0] tmp11_fu_627_p2;
-reg   [15:0] tmp11_reg_860;
-wire   [15:0] tmp12_fu_633_p2;
-reg   [15:0] tmp12_reg_865;
-wire   [15:0] tmp13_fu_645_p2;
-reg   [15:0] tmp13_reg_870;
-wire   [15:0] tmp18_fu_650_p2;
-reg   [15:0] tmp18_reg_875;
-wire   [15:0] tmp19_fu_656_p2;
-reg   [15:0] tmp19_reg_880;
-wire   [15:0] tmp20_fu_668_p2;
-reg   [15:0] tmp20_reg_885;
-wire   [15:0] corHelperIPos_V_i_fu_677_p2;
-wire   [15:0] corHelperQPos_V_i_fu_686_p2;
-wire   [15:0] corHelperINeg_V_7_i_fu_695_p2;
-wire   [15:0] corHelperQNeg_V_7_i_fu_704_p2;
-wire  signed [15:0] resi_V_2_fu_727_p3;
-reg  signed [15:0] resi_V_2_reg_910;
-wire  signed [15:0] resq_V_2_fu_747_p3;
-reg  signed [15:0] resq_V_2_reg_916;
-wire  signed [15:0] grp_fu_789_p2;
-reg  signed [15:0] resi_V_3_reg_922;
-wire  signed [15:0] grp_fu_793_p2;
-reg  signed [15:0] resq_V_3_reg_927;
-wire   [31:0] p_Result_s_fu_755_p3;
-reg   [31:0] p_Result_s_reg_932;
-wire   [0:0] tmp_5_fu_761_p2;
-reg    ap_block_pp0_stage0_subdone;
-reg    ap_enable_reg_pp0_iter2;
-reg    ap_enable_reg_pp0_iter3;
-reg    ap_enable_reg_pp0_iter4;
-reg    ap_enable_reg_pp0_iter5;
-reg    ap_enable_reg_pp0_iter6;
-reg    ap_enable_reg_pp0_iter7;
-reg    ap_enable_reg_pp0_iter8;
-wire   [15:0] ap_phi_reg_pp0_iter0_p_0336_2_i_reg_141;
-reg   [15:0] ap_phi_reg_pp0_iter1_p_0336_2_i_reg_141;
-reg   [15:0] ap_phi_reg_pp0_iter2_p_0336_2_i_reg_141;
-reg   [15:0] ap_phi_reg_pp0_iter3_p_0336_2_i_reg_141;
-reg   [15:0] ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141;
-wire   [15:0] ap_phi_reg_pp0_iter0_p_0332_2_i_reg_152;
-reg   [15:0] ap_phi_reg_pp0_iter1_p_0332_2_i_reg_152;
-reg   [15:0] ap_phi_reg_pp0_iter2_p_0332_2_i_reg_152;
-reg   [15:0] ap_phi_reg_pp0_iter3_p_0332_2_i_reg_152;
-reg   [15:0] ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152;
-wire   [15:0] ap_phi_reg_pp0_iter0_p_0324_2_i_reg_163;
-reg   [15:0] ap_phi_reg_pp0_iter1_p_0324_2_i_reg_163;
-reg   [15:0] ap_phi_reg_pp0_iter2_p_0324_2_i_reg_163;
-reg   [15:0] ap_phi_reg_pp0_iter3_p_0324_2_i_reg_163;
-reg   [15:0] ap_phi_reg_pp0_iter4_p_0324_2_i_reg_163;
-wire   [15:0] ap_phi_reg_pp0_iter0_p_0320_2_i_reg_174;
-reg   [15:0] ap_phi_reg_pp0_iter1_p_0320_2_i_reg_174;
-reg   [15:0] ap_phi_reg_pp0_iter2_p_0320_2_i_reg_174;
-reg   [15:0] ap_phi_reg_pp0_iter3_p_0320_2_i_reg_174;
-reg   [15:0] ap_phi_reg_pp0_iter4_p_0320_2_i_reg_174;
-wire   [3:0] tmp_4_fu_309_p2;
-wire   [31:0] tmp_2_fu_777_p2;
-wire   [15:0] tmp_1_fu_213_p1;
-wire   [15:0] op2_V_read_assign_1_fu_223_p4;
-reg    ap_block_pp0_stage0_01001;
-wire   [15:0] tmp16_fu_285_p2;
-wire   [15:0] tmp23_fu_297_p2;
-wire   [15:0] tmp4_fu_591_p2;
-wire   [15:0] tmp3_fu_585_p2;
-wire   [15:0] tmp9_fu_615_p2;
-wire   [15:0] tmp8_fu_609_p2;
-wire   [15:0] tmp14_fu_639_p2;
-wire   [15:0] tmp21_fu_662_p2;
-wire   [15:0] tmp_fu_673_p2;
-wire   [15:0] tmp5_fu_682_p2;
-wire   [15:0] tmp10_fu_691_p2;
-wire   [15:0] tmp17_fu_700_p2;
-wire   [0:0] tmp_4_i_fu_709_p2;
-wire   [15:0] resi_V_fu_715_p2;
-wire   [15:0] resi_V_1_fu_721_p2;
-wire   [15:0] resq_V_fu_735_p2;
-wire   [15:0] resq_V_1_fu_741_p2;
-reg    grp_fu_789_ce;
-reg    grp_fu_793_ce;
-reg   [0:0] ap_NS_fsm;
-wire    ap_reset_idle_pp0;
-reg    ap_idle_pp0;
-wire    ap_enable_pp0;
-reg    ap_condition_502;
+wire    ap_CS_fsm_state5;
+wire   [0:0] tmp_5_fu_3246_p2;
+wire    ap_CS_fsm_state6;
+reg   [0:0] currentState_load_reg_3257;
+reg   [0:0] tmp_5_reg_3279;
+wire   [0:0] currentState_load_load_fu_3163_p1;
+wire    ap_CS_fsm_state1;
+reg   [3:0] phaseClass_V_load_reg_3261;
+reg   [0:0] tmp_last_V_reg_3268;
+wire   [31:0] grp_correlator_fu_1103_ap_return;
+reg   [31:0] out_sample_data_V_reg_3273;
+wire    ap_CS_fsm_state4;
+wire    grp_correlator_fu_1103_ap_done;
+reg    ap_block_state5_io;
+wire    grp_correlator_fu_1103_ap_start;
+wire    grp_correlator_fu_1103_ap_idle;
+wire    grp_correlator_fu_1103_ap_ready;
+wire    StgValue_35_shiftPhaseClass_fu_2132_ap_ready;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_newValuei_V;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_newValueq_V;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o_ap_vld;
+wire   [15:0] StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o;
+wire    StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o_ap_vld;
+reg    ap_reg_grp_correlator_fu_1103_ap_start;
+wire    ap_CS_fsm_state3;
+reg    ap_block_state6;
+reg    ap_predicate_op47_write_state6;
+reg    ap_predicate_op49_write_state6;
+reg    ap_block_state6_io;
+wire   [3:0] tmp_4_fu_3219_p2;
+wire   [31:0] tmp_2_fu_3234_p2;
+reg   [5:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
@@ -294,7 +1689,9 @@ initial begin
 #0 phaseClass_V = 4'd0;
 #0 loadCount_V = 32'd0;
 #0 cor_phaseClass0i_V_14 = 16'd0;
+#0 cor_phaseClass0i_V_15 = 16'd0;
 #0 cor_phaseClass0q_V_14 = 16'd0;
+#0 cor_phaseClass0q_V_15 = 16'd0;
 #0 cor_phaseClass0i_V_13 = 16'd0;
 #0 cor_phaseClass0q_V_13 = 16'd0;
 #0 cor_phaseClass0i_V_12 = 16'd0;
@@ -323,52 +1720,2527 @@ initial begin
 #0 cor_phaseClass0q_V_1 = 16'd0;
 #0 cor_phaseClass0i_V_0 = 16'd0;
 #0 cor_phaseClass0q_V_0 = 16'd0;
-#0 ap_CS_fsm = 1'd1;
-#0 ap_enable_reg_pp0_iter1 = 1'b0;
-#0 ap_enable_reg_pp0_iter9 = 1'b0;
-#0 ap_enable_reg_pp0_iter10 = 1'b0;
-#0 ap_enable_reg_pp0_iter2 = 1'b0;
-#0 ap_enable_reg_pp0_iter3 = 1'b0;
-#0 ap_enable_reg_pp0_iter4 = 1'b0;
-#0 ap_enable_reg_pp0_iter5 = 1'b0;
-#0 ap_enable_reg_pp0_iter6 = 1'b0;
-#0 ap_enable_reg_pp0_iter7 = 1'b0;
-#0 ap_enable_reg_pp0_iter8 = 1'b0;
+#0 cor_phaseClass1i_V_14 = 16'd0;
+#0 cor_phaseClass1i_V_15 = 16'd0;
+#0 cor_phaseClass1q_V_14 = 16'd0;
+#0 cor_phaseClass1q_V_15 = 16'd0;
+#0 cor_phaseClass1i_V_13 = 16'd0;
+#0 cor_phaseClass1q_V_13 = 16'd0;
+#0 cor_phaseClass1i_V_12 = 16'd0;
+#0 cor_phaseClass1q_V_12 = 16'd0;
+#0 cor_phaseClass1i_V_11 = 16'd0;
+#0 cor_phaseClass1q_V_11 = 16'd0;
+#0 cor_phaseClass1i_V_10 = 16'd0;
+#0 cor_phaseClass1q_V_10 = 16'd0;
+#0 cor_phaseClass1i_V_9 = 16'd0;
+#0 cor_phaseClass1q_V_9 = 16'd0;
+#0 cor_phaseClass1i_V_8 = 16'd0;
+#0 cor_phaseClass1q_V_8 = 16'd0;
+#0 cor_phaseClass1i_V_7 = 16'd0;
+#0 cor_phaseClass1q_V_7 = 16'd0;
+#0 cor_phaseClass1i_V_6 = 16'd0;
+#0 cor_phaseClass1q_V_6 = 16'd0;
+#0 cor_phaseClass1i_V_5 = 16'd0;
+#0 cor_phaseClass1q_V_5 = 16'd0;
+#0 cor_phaseClass1i_V_4 = 16'd0;
+#0 cor_phaseClass1q_V_4 = 16'd0;
+#0 cor_phaseClass1i_V_3 = 16'd0;
+#0 cor_phaseClass1q_V_3 = 16'd0;
+#0 cor_phaseClass1i_V_2 = 16'd0;
+#0 cor_phaseClass1q_V_2 = 16'd0;
+#0 cor_phaseClass1i_V_1 = 16'd0;
+#0 cor_phaseClass1q_V_1 = 16'd0;
+#0 cor_phaseClass1i_V_0 = 16'd0;
+#0 cor_phaseClass1q_V_0 = 16'd0;
+#0 cor_phaseClass2i_V_14 = 16'd0;
+#0 cor_phaseClass2i_V_15 = 16'd0;
+#0 cor_phaseClass2q_V_14 = 16'd0;
+#0 cor_phaseClass2q_V_15 = 16'd0;
+#0 cor_phaseClass2i_V_13 = 16'd0;
+#0 cor_phaseClass2q_V_13 = 16'd0;
+#0 cor_phaseClass2i_V_12 = 16'd0;
+#0 cor_phaseClass2q_V_12 = 16'd0;
+#0 cor_phaseClass2i_V_11 = 16'd0;
+#0 cor_phaseClass2q_V_11 = 16'd0;
+#0 cor_phaseClass2i_V_10 = 16'd0;
+#0 cor_phaseClass2q_V_10 = 16'd0;
+#0 cor_phaseClass2i_V_9 = 16'd0;
+#0 cor_phaseClass2q_V_9 = 16'd0;
+#0 cor_phaseClass2i_V_8 = 16'd0;
+#0 cor_phaseClass2q_V_8 = 16'd0;
+#0 cor_phaseClass2i_V_7 = 16'd0;
+#0 cor_phaseClass2q_V_7 = 16'd0;
+#0 cor_phaseClass2i_V_6 = 16'd0;
+#0 cor_phaseClass2q_V_6 = 16'd0;
+#0 cor_phaseClass2i_V_5 = 16'd0;
+#0 cor_phaseClass2q_V_5 = 16'd0;
+#0 cor_phaseClass2i_V_4 = 16'd0;
+#0 cor_phaseClass2q_V_4 = 16'd0;
+#0 cor_phaseClass2i_V_3 = 16'd0;
+#0 cor_phaseClass2q_V_3 = 16'd0;
+#0 cor_phaseClass2i_V_2 = 16'd0;
+#0 cor_phaseClass2q_V_2 = 16'd0;
+#0 cor_phaseClass2i_V_1 = 16'd0;
+#0 cor_phaseClass2q_V_1 = 16'd0;
+#0 cor_phaseClass2i_V_0 = 16'd0;
+#0 cor_phaseClass2q_V_0 = 16'd0;
+#0 cor_phaseClass3i_V_14 = 16'd0;
+#0 cor_phaseClass3i_V_15 = 16'd0;
+#0 cor_phaseClass3q_V_14 = 16'd0;
+#0 cor_phaseClass3q_V_15 = 16'd0;
+#0 cor_phaseClass3i_V_13 = 16'd0;
+#0 cor_phaseClass3q_V_13 = 16'd0;
+#0 cor_phaseClass3i_V_12 = 16'd0;
+#0 cor_phaseClass3q_V_12 = 16'd0;
+#0 cor_phaseClass3i_V_11 = 16'd0;
+#0 cor_phaseClass3q_V_11 = 16'd0;
+#0 cor_phaseClass3i_V_10 = 16'd0;
+#0 cor_phaseClass3q_V_10 = 16'd0;
+#0 cor_phaseClass3i_V_9 = 16'd0;
+#0 cor_phaseClass3q_V_9 = 16'd0;
+#0 cor_phaseClass3i_V_8 = 16'd0;
+#0 cor_phaseClass3q_V_8 = 16'd0;
+#0 cor_phaseClass3i_V_7 = 16'd0;
+#0 cor_phaseClass3q_V_7 = 16'd0;
+#0 cor_phaseClass3i_V_6 = 16'd0;
+#0 cor_phaseClass3q_V_6 = 16'd0;
+#0 cor_phaseClass3i_V_5 = 16'd0;
+#0 cor_phaseClass3q_V_5 = 16'd0;
+#0 cor_phaseClass3i_V_4 = 16'd0;
+#0 cor_phaseClass3q_V_4 = 16'd0;
+#0 cor_phaseClass3i_V_3 = 16'd0;
+#0 cor_phaseClass3q_V_3 = 16'd0;
+#0 cor_phaseClass3i_V_2 = 16'd0;
+#0 cor_phaseClass3q_V_2 = 16'd0;
+#0 cor_phaseClass3i_V_1 = 16'd0;
+#0 cor_phaseClass3q_V_1 = 16'd0;
+#0 cor_phaseClass3i_V_0 = 16'd0;
+#0 cor_phaseClass3q_V_0 = 16'd0;
+#0 cor_phaseClass4i_V_14 = 16'd0;
+#0 cor_phaseClass4i_V_15 = 16'd0;
+#0 cor_phaseClass4q_V_14 = 16'd0;
+#0 cor_phaseClass4q_V_15 = 16'd0;
+#0 cor_phaseClass4i_V_13 = 16'd0;
+#0 cor_phaseClass4q_V_13 = 16'd0;
+#0 cor_phaseClass4i_V_12 = 16'd0;
+#0 cor_phaseClass4q_V_12 = 16'd0;
+#0 cor_phaseClass4i_V_11 = 16'd0;
+#0 cor_phaseClass4q_V_11 = 16'd0;
+#0 cor_phaseClass4i_V_10 = 16'd0;
+#0 cor_phaseClass4q_V_10 = 16'd0;
+#0 cor_phaseClass4i_V_9 = 16'd0;
+#0 cor_phaseClass4q_V_9 = 16'd0;
+#0 cor_phaseClass4i_V_8 = 16'd0;
+#0 cor_phaseClass4q_V_8 = 16'd0;
+#0 cor_phaseClass4i_V_7 = 16'd0;
+#0 cor_phaseClass4q_V_7 = 16'd0;
+#0 cor_phaseClass4i_V_6 = 16'd0;
+#0 cor_phaseClass4q_V_6 = 16'd0;
+#0 cor_phaseClass4i_V_5 = 16'd0;
+#0 cor_phaseClass4q_V_5 = 16'd0;
+#0 cor_phaseClass4i_V_4 = 16'd0;
+#0 cor_phaseClass4q_V_4 = 16'd0;
+#0 cor_phaseClass4i_V_3 = 16'd0;
+#0 cor_phaseClass4q_V_3 = 16'd0;
+#0 cor_phaseClass4i_V_2 = 16'd0;
+#0 cor_phaseClass4q_V_2 = 16'd0;
+#0 cor_phaseClass4i_V_1 = 16'd0;
+#0 cor_phaseClass4q_V_1 = 16'd0;
+#0 cor_phaseClass4i_V_0 = 16'd0;
+#0 cor_phaseClass4q_V_0 = 16'd0;
+#0 cor_phaseClass5i_V_14 = 16'd0;
+#0 cor_phaseClass5i_V_15 = 16'd0;
+#0 cor_phaseClass5q_V_14 = 16'd0;
+#0 cor_phaseClass5q_V_15 = 16'd0;
+#0 cor_phaseClass5i_V_13 = 16'd0;
+#0 cor_phaseClass5q_V_13 = 16'd0;
+#0 cor_phaseClass5i_V_12 = 16'd0;
+#0 cor_phaseClass5q_V_12 = 16'd0;
+#0 cor_phaseClass5i_V_11 = 16'd0;
+#0 cor_phaseClass5q_V_11 = 16'd0;
+#0 cor_phaseClass5i_V_10 = 16'd0;
+#0 cor_phaseClass5q_V_10 = 16'd0;
+#0 cor_phaseClass5i_V_9 = 16'd0;
+#0 cor_phaseClass5q_V_9 = 16'd0;
+#0 cor_phaseClass5i_V_8 = 16'd0;
+#0 cor_phaseClass5q_V_8 = 16'd0;
+#0 cor_phaseClass5i_V_7 = 16'd0;
+#0 cor_phaseClass5q_V_7 = 16'd0;
+#0 cor_phaseClass5i_V_6 = 16'd0;
+#0 cor_phaseClass5q_V_6 = 16'd0;
+#0 cor_phaseClass5i_V_5 = 16'd0;
+#0 cor_phaseClass5q_V_5 = 16'd0;
+#0 cor_phaseClass5i_V_4 = 16'd0;
+#0 cor_phaseClass5q_V_4 = 16'd0;
+#0 cor_phaseClass5i_V_3 = 16'd0;
+#0 cor_phaseClass5q_V_3 = 16'd0;
+#0 cor_phaseClass5i_V_2 = 16'd0;
+#0 cor_phaseClass5q_V_2 = 16'd0;
+#0 cor_phaseClass5i_V_1 = 16'd0;
+#0 cor_phaseClass5q_V_1 = 16'd0;
+#0 cor_phaseClass5i_V_0 = 16'd0;
+#0 cor_phaseClass5q_V_0 = 16'd0;
+#0 cor_phaseClass6i_V_14 = 16'd0;
+#0 cor_phaseClass6i_V_15 = 16'd0;
+#0 cor_phaseClass6q_V_14 = 16'd0;
+#0 cor_phaseClass6q_V_15 = 16'd0;
+#0 cor_phaseClass6i_V_13 = 16'd0;
+#0 cor_phaseClass6q_V_13 = 16'd0;
+#0 cor_phaseClass6i_V_12 = 16'd0;
+#0 cor_phaseClass6q_V_12 = 16'd0;
+#0 cor_phaseClass6i_V_11 = 16'd0;
+#0 cor_phaseClass6q_V_11 = 16'd0;
+#0 cor_phaseClass6i_V_10 = 16'd0;
+#0 cor_phaseClass6q_V_10 = 16'd0;
+#0 cor_phaseClass6i_V_9 = 16'd0;
+#0 cor_phaseClass6q_V_9 = 16'd0;
+#0 cor_phaseClass6i_V_8 = 16'd0;
+#0 cor_phaseClass6q_V_8 = 16'd0;
+#0 cor_phaseClass6i_V_7 = 16'd0;
+#0 cor_phaseClass6q_V_7 = 16'd0;
+#0 cor_phaseClass6i_V_6 = 16'd0;
+#0 cor_phaseClass6q_V_6 = 16'd0;
+#0 cor_phaseClass6i_V_5 = 16'd0;
+#0 cor_phaseClass6q_V_5 = 16'd0;
+#0 cor_phaseClass6i_V_4 = 16'd0;
+#0 cor_phaseClass6q_V_4 = 16'd0;
+#0 cor_phaseClass6i_V_3 = 16'd0;
+#0 cor_phaseClass6q_V_3 = 16'd0;
+#0 cor_phaseClass6i_V_2 = 16'd0;
+#0 cor_phaseClass6q_V_2 = 16'd0;
+#0 cor_phaseClass6i_V_1 = 16'd0;
+#0 cor_phaseClass6q_V_1 = 16'd0;
+#0 cor_phaseClass6i_V_0 = 16'd0;
+#0 cor_phaseClass6q_V_0 = 16'd0;
+#0 cor_phaseClass7i_V_14 = 16'd0;
+#0 cor_phaseClass7i_V_15 = 16'd0;
+#0 cor_phaseClass7q_V_14 = 16'd0;
+#0 cor_phaseClass7q_V_15 = 16'd0;
+#0 cor_phaseClass7i_V_13 = 16'd0;
+#0 cor_phaseClass7q_V_13 = 16'd0;
+#0 cor_phaseClass7i_V_12 = 16'd0;
+#0 cor_phaseClass7q_V_12 = 16'd0;
+#0 cor_phaseClass7i_V_11 = 16'd0;
+#0 cor_phaseClass7q_V_11 = 16'd0;
+#0 cor_phaseClass7i_V_10 = 16'd0;
+#0 cor_phaseClass7q_V_10 = 16'd0;
+#0 cor_phaseClass7i_V_9 = 16'd0;
+#0 cor_phaseClass7q_V_9 = 16'd0;
+#0 cor_phaseClass7i_V_8 = 16'd0;
+#0 cor_phaseClass7q_V_8 = 16'd0;
+#0 cor_phaseClass7i_V_7 = 16'd0;
+#0 cor_phaseClass7q_V_7 = 16'd0;
+#0 cor_phaseClass7i_V_6 = 16'd0;
+#0 cor_phaseClass7q_V_6 = 16'd0;
+#0 cor_phaseClass7i_V_5 = 16'd0;
+#0 cor_phaseClass7q_V_5 = 16'd0;
+#0 cor_phaseClass7i_V_4 = 16'd0;
+#0 cor_phaseClass7q_V_4 = 16'd0;
+#0 cor_phaseClass7i_V_3 = 16'd0;
+#0 cor_phaseClass7q_V_3 = 16'd0;
+#0 cor_phaseClass7i_V_2 = 16'd0;
+#0 cor_phaseClass7q_V_2 = 16'd0;
+#0 cor_phaseClass7i_V_1 = 16'd0;
+#0 cor_phaseClass7q_V_1 = 16'd0;
+#0 cor_phaseClass7i_V_0 = 16'd0;
+#0 cor_phaseClass7q_V_0 = 16'd0;
+#0 cor_phaseClass8i_V_14 = 16'd0;
+#0 cor_phaseClass8i_V_15 = 16'd0;
+#0 cor_phaseClass8q_V_14 = 16'd0;
+#0 cor_phaseClass8q_V_15 = 16'd0;
+#0 cor_phaseClass8i_V_13 = 16'd0;
+#0 cor_phaseClass8q_V_13 = 16'd0;
+#0 cor_phaseClass8i_V_12 = 16'd0;
+#0 cor_phaseClass8q_V_12 = 16'd0;
+#0 cor_phaseClass8i_V_11 = 16'd0;
+#0 cor_phaseClass8q_V_11 = 16'd0;
+#0 cor_phaseClass8i_V_10 = 16'd0;
+#0 cor_phaseClass8q_V_10 = 16'd0;
+#0 cor_phaseClass8i_V_9 = 16'd0;
+#0 cor_phaseClass8q_V_9 = 16'd0;
+#0 cor_phaseClass8i_V_8 = 16'd0;
+#0 cor_phaseClass8q_V_8 = 16'd0;
+#0 cor_phaseClass8i_V_7 = 16'd0;
+#0 cor_phaseClass8q_V_7 = 16'd0;
+#0 cor_phaseClass8i_V_6 = 16'd0;
+#0 cor_phaseClass8q_V_6 = 16'd0;
+#0 cor_phaseClass8i_V_5 = 16'd0;
+#0 cor_phaseClass8q_V_5 = 16'd0;
+#0 cor_phaseClass8i_V_4 = 16'd0;
+#0 cor_phaseClass8q_V_4 = 16'd0;
+#0 cor_phaseClass8i_V_3 = 16'd0;
+#0 cor_phaseClass8q_V_3 = 16'd0;
+#0 cor_phaseClass8i_V_2 = 16'd0;
+#0 cor_phaseClass8q_V_2 = 16'd0;
+#0 cor_phaseClass8i_V_1 = 16'd0;
+#0 cor_phaseClass8q_V_1 = 16'd0;
+#0 cor_phaseClass8i_V_0 = 16'd0;
+#0 cor_phaseClass8q_V_0 = 16'd0;
+#0 cor_phaseClass9i_V_14 = 16'd0;
+#0 cor_phaseClass9i_V_15 = 16'd0;
+#0 cor_phaseClass9q_V_14 = 16'd0;
+#0 cor_phaseClass9q_V_15 = 16'd0;
+#0 cor_phaseClass9i_V_13 = 16'd0;
+#0 cor_phaseClass9q_V_13 = 16'd0;
+#0 cor_phaseClass9i_V_12 = 16'd0;
+#0 cor_phaseClass9q_V_12 = 16'd0;
+#0 cor_phaseClass9i_V_11 = 16'd0;
+#0 cor_phaseClass9q_V_11 = 16'd0;
+#0 cor_phaseClass9i_V_10 = 16'd0;
+#0 cor_phaseClass9q_V_10 = 16'd0;
+#0 cor_phaseClass9i_V_9 = 16'd0;
+#0 cor_phaseClass9q_V_9 = 16'd0;
+#0 cor_phaseClass9i_V_8 = 16'd0;
+#0 cor_phaseClass9q_V_8 = 16'd0;
+#0 cor_phaseClass9i_V_7 = 16'd0;
+#0 cor_phaseClass9q_V_7 = 16'd0;
+#0 cor_phaseClass9i_V_6 = 16'd0;
+#0 cor_phaseClass9q_V_6 = 16'd0;
+#0 cor_phaseClass9i_V_5 = 16'd0;
+#0 cor_phaseClass9q_V_5 = 16'd0;
+#0 cor_phaseClass9i_V_4 = 16'd0;
+#0 cor_phaseClass9q_V_4 = 16'd0;
+#0 cor_phaseClass9i_V_3 = 16'd0;
+#0 cor_phaseClass9q_V_3 = 16'd0;
+#0 cor_phaseClass9i_V_2 = 16'd0;
+#0 cor_phaseClass9q_V_2 = 16'd0;
+#0 cor_phaseClass9i_V_1 = 16'd0;
+#0 cor_phaseClass9q_V_1 = 16'd0;
+#0 cor_phaseClass9i_V_0 = 16'd0;
+#0 cor_phaseClass9q_V_0 = 16'd0;
+#0 cor_phaseClass10i_V_14 = 16'd0;
+#0 cor_phaseClass10i_V_15 = 16'd0;
+#0 cor_phaseClass10q_V_14 = 16'd0;
+#0 cor_phaseClass10q_V_15 = 16'd0;
+#0 cor_phaseClass10i_V_13 = 16'd0;
+#0 cor_phaseClass10q_V_13 = 16'd0;
+#0 cor_phaseClass10i_V_12 = 16'd0;
+#0 cor_phaseClass10q_V_12 = 16'd0;
+#0 cor_phaseClass10i_V_11 = 16'd0;
+#0 cor_phaseClass10q_V_11 = 16'd0;
+#0 cor_phaseClass10i_V_10 = 16'd0;
+#0 cor_phaseClass10q_V_10 = 16'd0;
+#0 cor_phaseClass10i_V_9 = 16'd0;
+#0 cor_phaseClass10q_V_9 = 16'd0;
+#0 cor_phaseClass10i_V_8 = 16'd0;
+#0 cor_phaseClass10q_V_8 = 16'd0;
+#0 cor_phaseClass10i_V_7 = 16'd0;
+#0 cor_phaseClass10q_V_7 = 16'd0;
+#0 cor_phaseClass10i_V_6 = 16'd0;
+#0 cor_phaseClass10q_V_6 = 16'd0;
+#0 cor_phaseClass10i_V_5 = 16'd0;
+#0 cor_phaseClass10q_V_5 = 16'd0;
+#0 cor_phaseClass10i_V_4 = 16'd0;
+#0 cor_phaseClass10q_V_4 = 16'd0;
+#0 cor_phaseClass10i_V_3 = 16'd0;
+#0 cor_phaseClass10q_V_3 = 16'd0;
+#0 cor_phaseClass10i_V_2 = 16'd0;
+#0 cor_phaseClass10q_V_2 = 16'd0;
+#0 cor_phaseClass10i_V_1 = 16'd0;
+#0 cor_phaseClass10q_V_1 = 16'd0;
+#0 cor_phaseClass10i_V_s = 16'd0;
+#0 cor_phaseClass10q_V_s = 16'd0;
+#0 cor_phaseClass11i_V_14 = 16'd0;
+#0 cor_phaseClass11i_V_15 = 16'd0;
+#0 cor_phaseClass11q_V_14 = 16'd0;
+#0 cor_phaseClass11q_V_15 = 16'd0;
+#0 cor_phaseClass11i_V_13 = 16'd0;
+#0 cor_phaseClass11q_V_13 = 16'd0;
+#0 cor_phaseClass11i_V_12 = 16'd0;
+#0 cor_phaseClass11q_V_12 = 16'd0;
+#0 cor_phaseClass11i_V_11 = 16'd0;
+#0 cor_phaseClass11q_V_11 = 16'd0;
+#0 cor_phaseClass11i_V_10 = 16'd0;
+#0 cor_phaseClass11q_V_10 = 16'd0;
+#0 cor_phaseClass11i_V_9 = 16'd0;
+#0 cor_phaseClass11q_V_9 = 16'd0;
+#0 cor_phaseClass11i_V_8 = 16'd0;
+#0 cor_phaseClass11q_V_8 = 16'd0;
+#0 cor_phaseClass11i_V_7 = 16'd0;
+#0 cor_phaseClass11q_V_7 = 16'd0;
+#0 cor_phaseClass11i_V_6 = 16'd0;
+#0 cor_phaseClass11q_V_6 = 16'd0;
+#0 cor_phaseClass11i_V_5 = 16'd0;
+#0 cor_phaseClass11q_V_5 = 16'd0;
+#0 cor_phaseClass11i_V_4 = 16'd0;
+#0 cor_phaseClass11q_V_4 = 16'd0;
+#0 cor_phaseClass11i_V_3 = 16'd0;
+#0 cor_phaseClass11q_V_3 = 16'd0;
+#0 cor_phaseClass11i_V_2 = 16'd0;
+#0 cor_phaseClass11q_V_2 = 16'd0;
+#0 cor_phaseClass11i_V_1 = 16'd0;
+#0 cor_phaseClass11q_V_1 = 16'd0;
+#0 cor_phaseClass11i_V_s = 16'd0;
+#0 cor_phaseClass11q_V_s = 16'd0;
+#0 cor_phaseClass12i_V_14 = 16'd0;
+#0 cor_phaseClass12i_V_15 = 16'd0;
+#0 cor_phaseClass12q_V_14 = 16'd0;
+#0 cor_phaseClass12q_V_15 = 16'd0;
+#0 cor_phaseClass12i_V_13 = 16'd0;
+#0 cor_phaseClass12q_V_13 = 16'd0;
+#0 cor_phaseClass12i_V_12 = 16'd0;
+#0 cor_phaseClass12q_V_12 = 16'd0;
+#0 cor_phaseClass12i_V_11 = 16'd0;
+#0 cor_phaseClass12q_V_11 = 16'd0;
+#0 cor_phaseClass12i_V_10 = 16'd0;
+#0 cor_phaseClass12q_V_10 = 16'd0;
+#0 cor_phaseClass12i_V_9 = 16'd0;
+#0 cor_phaseClass12q_V_9 = 16'd0;
+#0 cor_phaseClass12i_V_8 = 16'd0;
+#0 cor_phaseClass12q_V_8 = 16'd0;
+#0 cor_phaseClass12i_V_7 = 16'd0;
+#0 cor_phaseClass12q_V_7 = 16'd0;
+#0 cor_phaseClass12i_V_6 = 16'd0;
+#0 cor_phaseClass12q_V_6 = 16'd0;
+#0 cor_phaseClass12i_V_5 = 16'd0;
+#0 cor_phaseClass12q_V_5 = 16'd0;
+#0 cor_phaseClass12i_V_4 = 16'd0;
+#0 cor_phaseClass12q_V_4 = 16'd0;
+#0 cor_phaseClass12i_V_3 = 16'd0;
+#0 cor_phaseClass12q_V_3 = 16'd0;
+#0 cor_phaseClass12i_V_2 = 16'd0;
+#0 cor_phaseClass12q_V_2 = 16'd0;
+#0 cor_phaseClass12i_V_1 = 16'd0;
+#0 cor_phaseClass12q_V_1 = 16'd0;
+#0 cor_phaseClass12i_V_s = 16'd0;
+#0 cor_phaseClass12q_V_s = 16'd0;
+#0 cor_phaseClass13i_V_14 = 16'd0;
+#0 cor_phaseClass13i_V_15 = 16'd0;
+#0 cor_phaseClass13q_V_14 = 16'd0;
+#0 cor_phaseClass13q_V_15 = 16'd0;
+#0 cor_phaseClass13i_V_13 = 16'd0;
+#0 cor_phaseClass13q_V_13 = 16'd0;
+#0 cor_phaseClass13i_V_12 = 16'd0;
+#0 cor_phaseClass13q_V_12 = 16'd0;
+#0 cor_phaseClass13i_V_11 = 16'd0;
+#0 cor_phaseClass13q_V_11 = 16'd0;
+#0 cor_phaseClass13i_V_10 = 16'd0;
+#0 cor_phaseClass13q_V_10 = 16'd0;
+#0 cor_phaseClass13i_V_9 = 16'd0;
+#0 cor_phaseClass13q_V_9 = 16'd0;
+#0 cor_phaseClass13i_V_8 = 16'd0;
+#0 cor_phaseClass13q_V_8 = 16'd0;
+#0 cor_phaseClass13i_V_7 = 16'd0;
+#0 cor_phaseClass13q_V_7 = 16'd0;
+#0 cor_phaseClass13i_V_6 = 16'd0;
+#0 cor_phaseClass13q_V_6 = 16'd0;
+#0 cor_phaseClass13i_V_5 = 16'd0;
+#0 cor_phaseClass13q_V_5 = 16'd0;
+#0 cor_phaseClass13i_V_4 = 16'd0;
+#0 cor_phaseClass13q_V_4 = 16'd0;
+#0 cor_phaseClass13i_V_3 = 16'd0;
+#0 cor_phaseClass13q_V_3 = 16'd0;
+#0 cor_phaseClass13i_V_2 = 16'd0;
+#0 cor_phaseClass13q_V_2 = 16'd0;
+#0 cor_phaseClass13i_V_1 = 16'd0;
+#0 cor_phaseClass13q_V_1 = 16'd0;
+#0 cor_phaseClass13i_V_s = 16'd0;
+#0 cor_phaseClass13q_V_s = 16'd0;
+#0 cor_phaseClass14i_V_14 = 16'd0;
+#0 cor_phaseClass14i_V_15 = 16'd0;
+#0 cor_phaseClass14q_V_14 = 16'd0;
+#0 cor_phaseClass14q_V_15 = 16'd0;
+#0 cor_phaseClass14i_V_13 = 16'd0;
+#0 cor_phaseClass14q_V_13 = 16'd0;
+#0 cor_phaseClass14i_V_12 = 16'd0;
+#0 cor_phaseClass14q_V_12 = 16'd0;
+#0 cor_phaseClass14i_V_11 = 16'd0;
+#0 cor_phaseClass14q_V_11 = 16'd0;
+#0 cor_phaseClass14i_V_10 = 16'd0;
+#0 cor_phaseClass14q_V_10 = 16'd0;
+#0 cor_phaseClass14i_V_9 = 16'd0;
+#0 cor_phaseClass14q_V_9 = 16'd0;
+#0 cor_phaseClass14i_V_8 = 16'd0;
+#0 cor_phaseClass14q_V_8 = 16'd0;
+#0 cor_phaseClass14i_V_7 = 16'd0;
+#0 cor_phaseClass14q_V_7 = 16'd0;
+#0 cor_phaseClass14i_V_6 = 16'd0;
+#0 cor_phaseClass14q_V_6 = 16'd0;
+#0 cor_phaseClass14i_V_5 = 16'd0;
+#0 cor_phaseClass14q_V_5 = 16'd0;
+#0 cor_phaseClass14i_V_4 = 16'd0;
+#0 cor_phaseClass14q_V_4 = 16'd0;
+#0 cor_phaseClass14i_V_3 = 16'd0;
+#0 cor_phaseClass14q_V_3 = 16'd0;
+#0 cor_phaseClass14i_V_2 = 16'd0;
+#0 cor_phaseClass14q_V_2 = 16'd0;
+#0 cor_phaseClass14i_V_1 = 16'd0;
+#0 cor_phaseClass14q_V_1 = 16'd0;
+#0 cor_phaseClass14i_V_s = 16'd0;
+#0 cor_phaseClass14q_V_s = 16'd0;
+#0 cor_phaseClass15i_V_14 = 16'd0;
+#0 cor_phaseClass15i_V_15 = 16'd0;
+#0 cor_phaseClass15q_V_14 = 16'd0;
+#0 cor_phaseClass15q_V_15 = 16'd0;
+#0 cor_phaseClass15i_V_13 = 16'd0;
+#0 cor_phaseClass15q_V_13 = 16'd0;
+#0 cor_phaseClass15i_V_12 = 16'd0;
+#0 cor_phaseClass15q_V_12 = 16'd0;
+#0 cor_phaseClass15i_V_11 = 16'd0;
+#0 cor_phaseClass15q_V_11 = 16'd0;
+#0 cor_phaseClass15i_V_10 = 16'd0;
+#0 cor_phaseClass15q_V_10 = 16'd0;
+#0 cor_phaseClass15i_V_9 = 16'd0;
+#0 cor_phaseClass15q_V_9 = 16'd0;
+#0 cor_phaseClass15i_V_8 = 16'd0;
+#0 cor_phaseClass15q_V_8 = 16'd0;
+#0 cor_phaseClass15i_V_7 = 16'd0;
+#0 cor_phaseClass15q_V_7 = 16'd0;
+#0 cor_phaseClass15i_V_6 = 16'd0;
+#0 cor_phaseClass15q_V_6 = 16'd0;
+#0 cor_phaseClass15i_V_5 = 16'd0;
+#0 cor_phaseClass15q_V_5 = 16'd0;
+#0 cor_phaseClass15i_V_4 = 16'd0;
+#0 cor_phaseClass15q_V_4 = 16'd0;
+#0 cor_phaseClass15i_V_3 = 16'd0;
+#0 cor_phaseClass15q_V_3 = 16'd0;
+#0 cor_phaseClass15i_V_2 = 16'd0;
+#0 cor_phaseClass15q_V_2 = 16'd0;
+#0 cor_phaseClass15i_V_1 = 16'd0;
+#0 cor_phaseClass15q_V_1 = 16'd0;
+#0 cor_phaseClass15i_V_s = 16'd0;
+#0 cor_phaseClass15q_V_s = 16'd0;
+#0 ap_CS_fsm = 6'd1;
+#0 ap_reg_grp_correlator_fu_1103_ap_start = 1'b0;
 end
 
-correlateTop_mul_bkb #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 16 ),
-    .din1_WIDTH( 16 ),
-    .dout_WIDTH( 16 ))
-correlateTop_mul_bkb_U1(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(resi_V_2_reg_910),
-    .din1(resi_V_2_reg_910),
-    .ce(grp_fu_789_ce),
-    .dout(grp_fu_789_p2)
+correlator grp_correlator_fu_1103(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_correlator_fu_1103_ap_start),
+    .ap_done(grp_correlator_fu_1103_ap_done),
+    .ap_idle(grp_correlator_fu_1103_ap_idle),
+    .ap_ready(grp_correlator_fu_1103_ap_ready),
+    .phaseClass_V(phaseClass_V_load_reg_3261),
+    .cor_phaseClass15i_V_15(cor_phaseClass15i_V_15),
+    .cor_phaseClass15q_V_15(cor_phaseClass15q_V_15),
+    .cor_phaseClass15i_V_14(cor_phaseClass15i_V_14),
+    .cor_phaseClass15q_V_14(cor_phaseClass15q_V_14),
+    .cor_phaseClass15i_V_13(cor_phaseClass15i_V_13),
+    .cor_phaseClass15q_V_13(cor_phaseClass15q_V_13),
+    .cor_phaseClass15i_V_12(cor_phaseClass15i_V_12),
+    .cor_phaseClass15q_V_12(cor_phaseClass15q_V_12),
+    .cor_phaseClass15i_V_11(cor_phaseClass15i_V_11),
+    .cor_phaseClass15q_V_11(cor_phaseClass15q_V_11),
+    .cor_phaseClass15i_V_10(cor_phaseClass15i_V_10),
+    .cor_phaseClass15q_V_10(cor_phaseClass15q_V_10),
+    .cor_phaseClass15i_V_9(cor_phaseClass15i_V_9),
+    .cor_phaseClass15q_V_9(cor_phaseClass15q_V_9),
+    .cor_phaseClass15i_V_8(cor_phaseClass15i_V_8),
+    .cor_phaseClass15q_V_8(cor_phaseClass15q_V_8),
+    .cor_phaseClass15i_V_7(cor_phaseClass15i_V_7),
+    .cor_phaseClass15q_V_7(cor_phaseClass15q_V_7),
+    .cor_phaseClass15i_V_6(cor_phaseClass15i_V_6),
+    .cor_phaseClass15q_V_6(cor_phaseClass15q_V_6),
+    .cor_phaseClass15i_V_5(cor_phaseClass15i_V_5),
+    .cor_phaseClass15q_V_5(cor_phaseClass15q_V_5),
+    .cor_phaseClass15i_V_4(cor_phaseClass15i_V_4),
+    .cor_phaseClass15q_V_4(cor_phaseClass15q_V_4),
+    .cor_phaseClass15i_V_3(cor_phaseClass15i_V_3),
+    .cor_phaseClass15q_V_3(cor_phaseClass15q_V_3),
+    .cor_phaseClass15i_V_2(cor_phaseClass15i_V_2),
+    .cor_phaseClass15q_V_2(cor_phaseClass15q_V_2),
+    .cor_phaseClass15i_V_1(cor_phaseClass15i_V_1),
+    .cor_phaseClass15q_V_1(cor_phaseClass15q_V_1),
+    .cor_phaseClass15i_V_s(cor_phaseClass15i_V_s),
+    .cor_phaseClass15q_V_s(cor_phaseClass15q_V_s),
+    .cor_phaseClass14i_V_15(cor_phaseClass14i_V_15),
+    .cor_phaseClass14q_V_15(cor_phaseClass14q_V_15),
+    .cor_phaseClass14i_V_14(cor_phaseClass14i_V_14),
+    .cor_phaseClass14q_V_14(cor_phaseClass14q_V_14),
+    .cor_phaseClass14i_V_13(cor_phaseClass14i_V_13),
+    .cor_phaseClass14q_V_13(cor_phaseClass14q_V_13),
+    .cor_phaseClass14i_V_12(cor_phaseClass14i_V_12),
+    .cor_phaseClass14q_V_12(cor_phaseClass14q_V_12),
+    .cor_phaseClass14i_V_11(cor_phaseClass14i_V_11),
+    .cor_phaseClass14q_V_11(cor_phaseClass14q_V_11),
+    .cor_phaseClass14i_V_10(cor_phaseClass14i_V_10),
+    .cor_phaseClass14q_V_10(cor_phaseClass14q_V_10),
+    .cor_phaseClass14i_V_9(cor_phaseClass14i_V_9),
+    .cor_phaseClass14q_V_9(cor_phaseClass14q_V_9),
+    .cor_phaseClass14i_V_8(cor_phaseClass14i_V_8),
+    .cor_phaseClass14q_V_8(cor_phaseClass14q_V_8),
+    .cor_phaseClass14i_V_7(cor_phaseClass14i_V_7),
+    .cor_phaseClass14q_V_7(cor_phaseClass14q_V_7),
+    .cor_phaseClass14i_V_6(cor_phaseClass14i_V_6),
+    .cor_phaseClass14q_V_6(cor_phaseClass14q_V_6),
+    .cor_phaseClass14i_V_5(cor_phaseClass14i_V_5),
+    .cor_phaseClass14q_V_5(cor_phaseClass14q_V_5),
+    .cor_phaseClass14i_V_4(cor_phaseClass14i_V_4),
+    .cor_phaseClass14q_V_4(cor_phaseClass14q_V_4),
+    .cor_phaseClass14i_V_3(cor_phaseClass14i_V_3),
+    .cor_phaseClass14q_V_3(cor_phaseClass14q_V_3),
+    .cor_phaseClass14i_V_2(cor_phaseClass14i_V_2),
+    .cor_phaseClass14q_V_2(cor_phaseClass14q_V_2),
+    .cor_phaseClass14i_V_1(cor_phaseClass14i_V_1),
+    .cor_phaseClass14q_V_1(cor_phaseClass14q_V_1),
+    .cor_phaseClass14i_V_s(cor_phaseClass14i_V_s),
+    .cor_phaseClass14q_V_s(cor_phaseClass14q_V_s),
+    .cor_phaseClass13i_V_15(cor_phaseClass13i_V_15),
+    .cor_phaseClass13q_V_15(cor_phaseClass13q_V_15),
+    .cor_phaseClass13i_V_14(cor_phaseClass13i_V_14),
+    .cor_phaseClass13q_V_14(cor_phaseClass13q_V_14),
+    .cor_phaseClass13i_V_13(cor_phaseClass13i_V_13),
+    .cor_phaseClass13q_V_13(cor_phaseClass13q_V_13),
+    .cor_phaseClass13i_V_12(cor_phaseClass13i_V_12),
+    .cor_phaseClass13q_V_12(cor_phaseClass13q_V_12),
+    .cor_phaseClass13i_V_11(cor_phaseClass13i_V_11),
+    .cor_phaseClass13q_V_11(cor_phaseClass13q_V_11),
+    .cor_phaseClass13i_V_10(cor_phaseClass13i_V_10),
+    .cor_phaseClass13q_V_10(cor_phaseClass13q_V_10),
+    .cor_phaseClass13i_V_9(cor_phaseClass13i_V_9),
+    .cor_phaseClass13q_V_9(cor_phaseClass13q_V_9),
+    .cor_phaseClass13i_V_8(cor_phaseClass13i_V_8),
+    .cor_phaseClass13q_V_8(cor_phaseClass13q_V_8),
+    .cor_phaseClass13i_V_7(cor_phaseClass13i_V_7),
+    .cor_phaseClass13q_V_7(cor_phaseClass13q_V_7),
+    .cor_phaseClass13i_V_6(cor_phaseClass13i_V_6),
+    .cor_phaseClass13q_V_6(cor_phaseClass13q_V_6),
+    .cor_phaseClass13i_V_5(cor_phaseClass13i_V_5),
+    .cor_phaseClass13q_V_5(cor_phaseClass13q_V_5),
+    .cor_phaseClass13i_V_4(cor_phaseClass13i_V_4),
+    .cor_phaseClass13q_V_4(cor_phaseClass13q_V_4),
+    .cor_phaseClass13i_V_3(cor_phaseClass13i_V_3),
+    .cor_phaseClass13q_V_3(cor_phaseClass13q_V_3),
+    .cor_phaseClass13i_V_2(cor_phaseClass13i_V_2),
+    .cor_phaseClass13q_V_2(cor_phaseClass13q_V_2),
+    .cor_phaseClass13i_V_1(cor_phaseClass13i_V_1),
+    .cor_phaseClass13q_V_1(cor_phaseClass13q_V_1),
+    .cor_phaseClass13i_V_s(cor_phaseClass13i_V_s),
+    .cor_phaseClass13q_V_s(cor_phaseClass13q_V_s),
+    .cor_phaseClass12i_V_15(cor_phaseClass12i_V_15),
+    .cor_phaseClass12q_V_15(cor_phaseClass12q_V_15),
+    .cor_phaseClass12i_V_14(cor_phaseClass12i_V_14),
+    .cor_phaseClass12q_V_14(cor_phaseClass12q_V_14),
+    .cor_phaseClass12i_V_13(cor_phaseClass12i_V_13),
+    .cor_phaseClass12q_V_13(cor_phaseClass12q_V_13),
+    .cor_phaseClass12i_V_12(cor_phaseClass12i_V_12),
+    .cor_phaseClass12q_V_12(cor_phaseClass12q_V_12),
+    .cor_phaseClass12i_V_11(cor_phaseClass12i_V_11),
+    .cor_phaseClass12q_V_11(cor_phaseClass12q_V_11),
+    .cor_phaseClass12i_V_10(cor_phaseClass12i_V_10),
+    .cor_phaseClass12q_V_10(cor_phaseClass12q_V_10),
+    .cor_phaseClass12i_V_9(cor_phaseClass12i_V_9),
+    .cor_phaseClass12q_V_9(cor_phaseClass12q_V_9),
+    .cor_phaseClass12i_V_8(cor_phaseClass12i_V_8),
+    .cor_phaseClass12q_V_8(cor_phaseClass12q_V_8),
+    .cor_phaseClass12i_V_7(cor_phaseClass12i_V_7),
+    .cor_phaseClass12q_V_7(cor_phaseClass12q_V_7),
+    .cor_phaseClass12i_V_6(cor_phaseClass12i_V_6),
+    .cor_phaseClass12q_V_6(cor_phaseClass12q_V_6),
+    .cor_phaseClass12i_V_5(cor_phaseClass12i_V_5),
+    .cor_phaseClass12q_V_5(cor_phaseClass12q_V_5),
+    .cor_phaseClass12i_V_4(cor_phaseClass12i_V_4),
+    .cor_phaseClass12q_V_4(cor_phaseClass12q_V_4),
+    .cor_phaseClass12i_V_3(cor_phaseClass12i_V_3),
+    .cor_phaseClass12q_V_3(cor_phaseClass12q_V_3),
+    .cor_phaseClass12i_V_2(cor_phaseClass12i_V_2),
+    .cor_phaseClass12q_V_2(cor_phaseClass12q_V_2),
+    .cor_phaseClass12i_V_1(cor_phaseClass12i_V_1),
+    .cor_phaseClass12q_V_1(cor_phaseClass12q_V_1),
+    .cor_phaseClass12i_V_s(cor_phaseClass12i_V_s),
+    .cor_phaseClass12q_V_s(cor_phaseClass12q_V_s),
+    .cor_phaseClass11i_V_15(cor_phaseClass11i_V_15),
+    .cor_phaseClass11q_V_15(cor_phaseClass11q_V_15),
+    .cor_phaseClass11i_V_14(cor_phaseClass11i_V_14),
+    .cor_phaseClass11q_V_14(cor_phaseClass11q_V_14),
+    .cor_phaseClass11i_V_13(cor_phaseClass11i_V_13),
+    .cor_phaseClass11q_V_13(cor_phaseClass11q_V_13),
+    .cor_phaseClass11i_V_12(cor_phaseClass11i_V_12),
+    .cor_phaseClass11q_V_12(cor_phaseClass11q_V_12),
+    .cor_phaseClass11i_V_11(cor_phaseClass11i_V_11),
+    .cor_phaseClass11q_V_11(cor_phaseClass11q_V_11),
+    .cor_phaseClass11i_V_10(cor_phaseClass11i_V_10),
+    .cor_phaseClass11q_V_10(cor_phaseClass11q_V_10),
+    .cor_phaseClass11i_V_9(cor_phaseClass11i_V_9),
+    .cor_phaseClass11q_V_9(cor_phaseClass11q_V_9),
+    .cor_phaseClass11i_V_8(cor_phaseClass11i_V_8),
+    .cor_phaseClass11q_V_8(cor_phaseClass11q_V_8),
+    .cor_phaseClass11i_V_7(cor_phaseClass11i_V_7),
+    .cor_phaseClass11q_V_7(cor_phaseClass11q_V_7),
+    .cor_phaseClass11i_V_6(cor_phaseClass11i_V_6),
+    .cor_phaseClass11q_V_6(cor_phaseClass11q_V_6),
+    .cor_phaseClass11i_V_5(cor_phaseClass11i_V_5),
+    .cor_phaseClass11q_V_5(cor_phaseClass11q_V_5),
+    .cor_phaseClass11i_V_4(cor_phaseClass11i_V_4),
+    .cor_phaseClass11q_V_4(cor_phaseClass11q_V_4),
+    .cor_phaseClass11i_V_3(cor_phaseClass11i_V_3),
+    .cor_phaseClass11q_V_3(cor_phaseClass11q_V_3),
+    .cor_phaseClass11i_V_2(cor_phaseClass11i_V_2),
+    .cor_phaseClass11q_V_2(cor_phaseClass11q_V_2),
+    .cor_phaseClass11i_V_1(cor_phaseClass11i_V_1),
+    .cor_phaseClass11q_V_1(cor_phaseClass11q_V_1),
+    .cor_phaseClass11i_V_s(cor_phaseClass11i_V_s),
+    .cor_phaseClass11q_V_s(cor_phaseClass11q_V_s),
+    .cor_phaseClass10i_V_15(cor_phaseClass10i_V_15),
+    .cor_phaseClass10q_V_15(cor_phaseClass10q_V_15),
+    .cor_phaseClass10i_V_14(cor_phaseClass10i_V_14),
+    .cor_phaseClass10q_V_14(cor_phaseClass10q_V_14),
+    .cor_phaseClass10i_V_13(cor_phaseClass10i_V_13),
+    .cor_phaseClass10q_V_13(cor_phaseClass10q_V_13),
+    .cor_phaseClass10i_V_12(cor_phaseClass10i_V_12),
+    .cor_phaseClass10q_V_12(cor_phaseClass10q_V_12),
+    .cor_phaseClass10i_V_11(cor_phaseClass10i_V_11),
+    .cor_phaseClass10q_V_11(cor_phaseClass10q_V_11),
+    .cor_phaseClass10i_V_10(cor_phaseClass10i_V_10),
+    .cor_phaseClass10q_V_10(cor_phaseClass10q_V_10),
+    .cor_phaseClass10i_V_9(cor_phaseClass10i_V_9),
+    .cor_phaseClass10q_V_9(cor_phaseClass10q_V_9),
+    .cor_phaseClass10i_V_8(cor_phaseClass10i_V_8),
+    .cor_phaseClass10q_V_8(cor_phaseClass10q_V_8),
+    .cor_phaseClass10i_V_7(cor_phaseClass10i_V_7),
+    .cor_phaseClass10q_V_7(cor_phaseClass10q_V_7),
+    .cor_phaseClass10i_V_6(cor_phaseClass10i_V_6),
+    .cor_phaseClass10q_V_6(cor_phaseClass10q_V_6),
+    .cor_phaseClass10i_V_5(cor_phaseClass10i_V_5),
+    .cor_phaseClass10q_V_5(cor_phaseClass10q_V_5),
+    .cor_phaseClass10i_V_4(cor_phaseClass10i_V_4),
+    .cor_phaseClass10q_V_4(cor_phaseClass10q_V_4),
+    .cor_phaseClass10i_V_3(cor_phaseClass10i_V_3),
+    .cor_phaseClass10q_V_3(cor_phaseClass10q_V_3),
+    .cor_phaseClass10i_V_2(cor_phaseClass10i_V_2),
+    .cor_phaseClass10q_V_2(cor_phaseClass10q_V_2),
+    .cor_phaseClass10i_V_1(cor_phaseClass10i_V_1),
+    .cor_phaseClass10q_V_1(cor_phaseClass10q_V_1),
+    .cor_phaseClass10i_V_s(cor_phaseClass10i_V_s),
+    .cor_phaseClass10q_V_s(cor_phaseClass10q_V_s),
+    .cor_phaseClass9i_V_15(cor_phaseClass9i_V_15),
+    .cor_phaseClass9q_V_15(cor_phaseClass9q_V_15),
+    .cor_phaseClass9i_V_14(cor_phaseClass9i_V_14),
+    .cor_phaseClass9q_V_14(cor_phaseClass9q_V_14),
+    .cor_phaseClass9i_V_13(cor_phaseClass9i_V_13),
+    .cor_phaseClass9q_V_13(cor_phaseClass9q_V_13),
+    .cor_phaseClass9i_V_12(cor_phaseClass9i_V_12),
+    .cor_phaseClass9q_V_12(cor_phaseClass9q_V_12),
+    .cor_phaseClass9i_V_11(cor_phaseClass9i_V_11),
+    .cor_phaseClass9q_V_11(cor_phaseClass9q_V_11),
+    .cor_phaseClass9i_V_10(cor_phaseClass9i_V_10),
+    .cor_phaseClass9q_V_10(cor_phaseClass9q_V_10),
+    .cor_phaseClass9i_V_9(cor_phaseClass9i_V_9),
+    .cor_phaseClass9q_V_9(cor_phaseClass9q_V_9),
+    .cor_phaseClass9i_V_8(cor_phaseClass9i_V_8),
+    .cor_phaseClass9q_V_8(cor_phaseClass9q_V_8),
+    .cor_phaseClass9i_V_7(cor_phaseClass9i_V_7),
+    .cor_phaseClass9q_V_7(cor_phaseClass9q_V_7),
+    .cor_phaseClass9i_V_6(cor_phaseClass9i_V_6),
+    .cor_phaseClass9q_V_6(cor_phaseClass9q_V_6),
+    .cor_phaseClass9i_V_5(cor_phaseClass9i_V_5),
+    .cor_phaseClass9q_V_5(cor_phaseClass9q_V_5),
+    .cor_phaseClass9i_V_4(cor_phaseClass9i_V_4),
+    .cor_phaseClass9q_V_4(cor_phaseClass9q_V_4),
+    .cor_phaseClass9i_V_3(cor_phaseClass9i_V_3),
+    .cor_phaseClass9q_V_3(cor_phaseClass9q_V_3),
+    .cor_phaseClass9i_V_2(cor_phaseClass9i_V_2),
+    .cor_phaseClass9q_V_2(cor_phaseClass9q_V_2),
+    .cor_phaseClass9i_V_1(cor_phaseClass9i_V_1),
+    .cor_phaseClass9q_V_1(cor_phaseClass9q_V_1),
+    .cor_phaseClass9i_V_0(cor_phaseClass9i_V_0),
+    .cor_phaseClass9q_V_0(cor_phaseClass9q_V_0),
+    .cor_phaseClass8i_V_15(cor_phaseClass8i_V_15),
+    .cor_phaseClass8q_V_15(cor_phaseClass8q_V_15),
+    .cor_phaseClass8i_V_14(cor_phaseClass8i_V_14),
+    .cor_phaseClass8q_V_14(cor_phaseClass8q_V_14),
+    .cor_phaseClass8i_V_13(cor_phaseClass8i_V_13),
+    .cor_phaseClass8q_V_13(cor_phaseClass8q_V_13),
+    .cor_phaseClass8i_V_12(cor_phaseClass8i_V_12),
+    .cor_phaseClass8q_V_12(cor_phaseClass8q_V_12),
+    .cor_phaseClass8i_V_11(cor_phaseClass8i_V_11),
+    .cor_phaseClass8q_V_11(cor_phaseClass8q_V_11),
+    .cor_phaseClass8i_V_10(cor_phaseClass8i_V_10),
+    .cor_phaseClass8q_V_10(cor_phaseClass8q_V_10),
+    .cor_phaseClass8i_V_9(cor_phaseClass8i_V_9),
+    .cor_phaseClass8q_V_9(cor_phaseClass8q_V_9),
+    .cor_phaseClass8i_V_8(cor_phaseClass8i_V_8),
+    .cor_phaseClass8q_V_8(cor_phaseClass8q_V_8),
+    .cor_phaseClass8i_V_7(cor_phaseClass8i_V_7),
+    .cor_phaseClass8q_V_7(cor_phaseClass8q_V_7),
+    .cor_phaseClass8i_V_6(cor_phaseClass8i_V_6),
+    .cor_phaseClass8q_V_6(cor_phaseClass8q_V_6),
+    .cor_phaseClass8i_V_5(cor_phaseClass8i_V_5),
+    .cor_phaseClass8q_V_5(cor_phaseClass8q_V_5),
+    .cor_phaseClass8i_V_4(cor_phaseClass8i_V_4),
+    .cor_phaseClass8q_V_4(cor_phaseClass8q_V_4),
+    .cor_phaseClass8i_V_3(cor_phaseClass8i_V_3),
+    .cor_phaseClass8q_V_3(cor_phaseClass8q_V_3),
+    .cor_phaseClass8i_V_2(cor_phaseClass8i_V_2),
+    .cor_phaseClass8q_V_2(cor_phaseClass8q_V_2),
+    .cor_phaseClass8i_V_1(cor_phaseClass8i_V_1),
+    .cor_phaseClass8q_V_1(cor_phaseClass8q_V_1),
+    .cor_phaseClass8i_V_0(cor_phaseClass8i_V_0),
+    .cor_phaseClass8q_V_0(cor_phaseClass8q_V_0),
+    .cor_phaseClass7i_V_15(cor_phaseClass7i_V_15),
+    .cor_phaseClass7q_V_15(cor_phaseClass7q_V_15),
+    .cor_phaseClass7i_V_14(cor_phaseClass7i_V_14),
+    .cor_phaseClass7q_V_14(cor_phaseClass7q_V_14),
+    .cor_phaseClass7i_V_13(cor_phaseClass7i_V_13),
+    .cor_phaseClass7q_V_13(cor_phaseClass7q_V_13),
+    .cor_phaseClass7i_V_12(cor_phaseClass7i_V_12),
+    .cor_phaseClass7q_V_12(cor_phaseClass7q_V_12),
+    .cor_phaseClass7i_V_11(cor_phaseClass7i_V_11),
+    .cor_phaseClass7q_V_11(cor_phaseClass7q_V_11),
+    .cor_phaseClass7i_V_10(cor_phaseClass7i_V_10),
+    .cor_phaseClass7q_V_10(cor_phaseClass7q_V_10),
+    .cor_phaseClass7i_V_9(cor_phaseClass7i_V_9),
+    .cor_phaseClass7q_V_9(cor_phaseClass7q_V_9),
+    .cor_phaseClass7i_V_8(cor_phaseClass7i_V_8),
+    .cor_phaseClass7q_V_8(cor_phaseClass7q_V_8),
+    .cor_phaseClass7i_V_7(cor_phaseClass7i_V_7),
+    .cor_phaseClass7q_V_7(cor_phaseClass7q_V_7),
+    .cor_phaseClass7i_V_6(cor_phaseClass7i_V_6),
+    .cor_phaseClass7q_V_6(cor_phaseClass7q_V_6),
+    .cor_phaseClass7i_V_5(cor_phaseClass7i_V_5),
+    .cor_phaseClass7q_V_5(cor_phaseClass7q_V_5),
+    .cor_phaseClass7i_V_4(cor_phaseClass7i_V_4),
+    .cor_phaseClass7q_V_4(cor_phaseClass7q_V_4),
+    .cor_phaseClass7i_V_3(cor_phaseClass7i_V_3),
+    .cor_phaseClass7q_V_3(cor_phaseClass7q_V_3),
+    .cor_phaseClass7i_V_2(cor_phaseClass7i_V_2),
+    .cor_phaseClass7q_V_2(cor_phaseClass7q_V_2),
+    .cor_phaseClass7i_V_1(cor_phaseClass7i_V_1),
+    .cor_phaseClass7q_V_1(cor_phaseClass7q_V_1),
+    .cor_phaseClass7i_V_0(cor_phaseClass7i_V_0),
+    .cor_phaseClass7q_V_0(cor_phaseClass7q_V_0),
+    .cor_phaseClass6i_V_15(cor_phaseClass6i_V_15),
+    .cor_phaseClass6q_V_15(cor_phaseClass6q_V_15),
+    .cor_phaseClass6i_V_14(cor_phaseClass6i_V_14),
+    .cor_phaseClass6q_V_14(cor_phaseClass6q_V_14),
+    .cor_phaseClass6i_V_13(cor_phaseClass6i_V_13),
+    .cor_phaseClass6q_V_13(cor_phaseClass6q_V_13),
+    .cor_phaseClass6i_V_12(cor_phaseClass6i_V_12),
+    .cor_phaseClass6q_V_12(cor_phaseClass6q_V_12),
+    .cor_phaseClass6i_V_11(cor_phaseClass6i_V_11),
+    .cor_phaseClass6q_V_11(cor_phaseClass6q_V_11),
+    .cor_phaseClass6i_V_10(cor_phaseClass6i_V_10),
+    .cor_phaseClass6q_V_10(cor_phaseClass6q_V_10),
+    .cor_phaseClass6i_V_9(cor_phaseClass6i_V_9),
+    .cor_phaseClass6q_V_9(cor_phaseClass6q_V_9),
+    .cor_phaseClass6i_V_8(cor_phaseClass6i_V_8),
+    .cor_phaseClass6q_V_8(cor_phaseClass6q_V_8),
+    .cor_phaseClass6i_V_7(cor_phaseClass6i_V_7),
+    .cor_phaseClass6q_V_7(cor_phaseClass6q_V_7),
+    .cor_phaseClass6i_V_6(cor_phaseClass6i_V_6),
+    .cor_phaseClass6q_V_6(cor_phaseClass6q_V_6),
+    .cor_phaseClass6i_V_5(cor_phaseClass6i_V_5),
+    .cor_phaseClass6q_V_5(cor_phaseClass6q_V_5),
+    .cor_phaseClass6i_V_4(cor_phaseClass6i_V_4),
+    .cor_phaseClass6q_V_4(cor_phaseClass6q_V_4),
+    .cor_phaseClass6i_V_3(cor_phaseClass6i_V_3),
+    .cor_phaseClass6q_V_3(cor_phaseClass6q_V_3),
+    .cor_phaseClass6i_V_2(cor_phaseClass6i_V_2),
+    .cor_phaseClass6q_V_2(cor_phaseClass6q_V_2),
+    .cor_phaseClass6i_V_1(cor_phaseClass6i_V_1),
+    .cor_phaseClass6q_V_1(cor_phaseClass6q_V_1),
+    .cor_phaseClass6i_V_0(cor_phaseClass6i_V_0),
+    .cor_phaseClass6q_V_0(cor_phaseClass6q_V_0),
+    .cor_phaseClass5i_V_15(cor_phaseClass5i_V_15),
+    .cor_phaseClass5q_V_15(cor_phaseClass5q_V_15),
+    .cor_phaseClass5i_V_14(cor_phaseClass5i_V_14),
+    .cor_phaseClass5q_V_14(cor_phaseClass5q_V_14),
+    .cor_phaseClass5i_V_13(cor_phaseClass5i_V_13),
+    .cor_phaseClass5q_V_13(cor_phaseClass5q_V_13),
+    .cor_phaseClass5i_V_12(cor_phaseClass5i_V_12),
+    .cor_phaseClass5q_V_12(cor_phaseClass5q_V_12),
+    .cor_phaseClass5i_V_11(cor_phaseClass5i_V_11),
+    .cor_phaseClass5q_V_11(cor_phaseClass5q_V_11),
+    .cor_phaseClass5i_V_10(cor_phaseClass5i_V_10),
+    .cor_phaseClass5q_V_10(cor_phaseClass5q_V_10),
+    .cor_phaseClass5i_V_9(cor_phaseClass5i_V_9),
+    .cor_phaseClass5q_V_9(cor_phaseClass5q_V_9),
+    .cor_phaseClass5i_V_8(cor_phaseClass5i_V_8),
+    .cor_phaseClass5q_V_8(cor_phaseClass5q_V_8),
+    .cor_phaseClass5i_V_7(cor_phaseClass5i_V_7),
+    .cor_phaseClass5q_V_7(cor_phaseClass5q_V_7),
+    .cor_phaseClass5i_V_6(cor_phaseClass5i_V_6),
+    .cor_phaseClass5q_V_6(cor_phaseClass5q_V_6),
+    .cor_phaseClass5i_V_5(cor_phaseClass5i_V_5),
+    .cor_phaseClass5q_V_5(cor_phaseClass5q_V_5),
+    .cor_phaseClass5i_V_4(cor_phaseClass5i_V_4),
+    .cor_phaseClass5q_V_4(cor_phaseClass5q_V_4),
+    .cor_phaseClass5i_V_3(cor_phaseClass5i_V_3),
+    .cor_phaseClass5q_V_3(cor_phaseClass5q_V_3),
+    .cor_phaseClass5i_V_2(cor_phaseClass5i_V_2),
+    .cor_phaseClass5q_V_2(cor_phaseClass5q_V_2),
+    .cor_phaseClass5i_V_1(cor_phaseClass5i_V_1),
+    .cor_phaseClass5q_V_1(cor_phaseClass5q_V_1),
+    .cor_phaseClass5i_V_0(cor_phaseClass5i_V_0),
+    .cor_phaseClass5q_V_0(cor_phaseClass5q_V_0),
+    .cor_phaseClass4i_V_15(cor_phaseClass4i_V_15),
+    .cor_phaseClass4q_V_15(cor_phaseClass4q_V_15),
+    .cor_phaseClass4i_V_14(cor_phaseClass4i_V_14),
+    .cor_phaseClass4q_V_14(cor_phaseClass4q_V_14),
+    .cor_phaseClass4i_V_13(cor_phaseClass4i_V_13),
+    .cor_phaseClass4q_V_13(cor_phaseClass4q_V_13),
+    .cor_phaseClass4i_V_12(cor_phaseClass4i_V_12),
+    .cor_phaseClass4q_V_12(cor_phaseClass4q_V_12),
+    .cor_phaseClass4i_V_11(cor_phaseClass4i_V_11),
+    .cor_phaseClass4q_V_11(cor_phaseClass4q_V_11),
+    .cor_phaseClass4i_V_10(cor_phaseClass4i_V_10),
+    .cor_phaseClass4q_V_10(cor_phaseClass4q_V_10),
+    .cor_phaseClass4i_V_9(cor_phaseClass4i_V_9),
+    .cor_phaseClass4q_V_9(cor_phaseClass4q_V_9),
+    .cor_phaseClass4i_V_8(cor_phaseClass4i_V_8),
+    .cor_phaseClass4q_V_8(cor_phaseClass4q_V_8),
+    .cor_phaseClass4i_V_7(cor_phaseClass4i_V_7),
+    .cor_phaseClass4q_V_7(cor_phaseClass4q_V_7),
+    .cor_phaseClass4i_V_6(cor_phaseClass4i_V_6),
+    .cor_phaseClass4q_V_6(cor_phaseClass4q_V_6),
+    .cor_phaseClass4i_V_5(cor_phaseClass4i_V_5),
+    .cor_phaseClass4q_V_5(cor_phaseClass4q_V_5),
+    .cor_phaseClass4i_V_4(cor_phaseClass4i_V_4),
+    .cor_phaseClass4q_V_4(cor_phaseClass4q_V_4),
+    .cor_phaseClass4i_V_3(cor_phaseClass4i_V_3),
+    .cor_phaseClass4q_V_3(cor_phaseClass4q_V_3),
+    .cor_phaseClass4i_V_2(cor_phaseClass4i_V_2),
+    .cor_phaseClass4q_V_2(cor_phaseClass4q_V_2),
+    .cor_phaseClass4i_V_1(cor_phaseClass4i_V_1),
+    .cor_phaseClass4q_V_1(cor_phaseClass4q_V_1),
+    .cor_phaseClass4i_V_0(cor_phaseClass4i_V_0),
+    .cor_phaseClass4q_V_0(cor_phaseClass4q_V_0),
+    .cor_phaseClass3i_V_15(cor_phaseClass3i_V_15),
+    .cor_phaseClass3q_V_15(cor_phaseClass3q_V_15),
+    .cor_phaseClass3i_V_14(cor_phaseClass3i_V_14),
+    .cor_phaseClass3q_V_14(cor_phaseClass3q_V_14),
+    .cor_phaseClass3i_V_13(cor_phaseClass3i_V_13),
+    .cor_phaseClass3q_V_13(cor_phaseClass3q_V_13),
+    .cor_phaseClass3i_V_12(cor_phaseClass3i_V_12),
+    .cor_phaseClass3q_V_12(cor_phaseClass3q_V_12),
+    .cor_phaseClass3i_V_11(cor_phaseClass3i_V_11),
+    .cor_phaseClass3q_V_11(cor_phaseClass3q_V_11),
+    .cor_phaseClass3i_V_10(cor_phaseClass3i_V_10),
+    .cor_phaseClass3q_V_10(cor_phaseClass3q_V_10),
+    .cor_phaseClass3i_V_9(cor_phaseClass3i_V_9),
+    .cor_phaseClass3q_V_9(cor_phaseClass3q_V_9),
+    .cor_phaseClass3i_V_8(cor_phaseClass3i_V_8),
+    .cor_phaseClass3q_V_8(cor_phaseClass3q_V_8),
+    .cor_phaseClass3i_V_7(cor_phaseClass3i_V_7),
+    .cor_phaseClass3q_V_7(cor_phaseClass3q_V_7),
+    .cor_phaseClass3i_V_6(cor_phaseClass3i_V_6),
+    .cor_phaseClass3q_V_6(cor_phaseClass3q_V_6),
+    .cor_phaseClass3i_V_5(cor_phaseClass3i_V_5),
+    .cor_phaseClass3q_V_5(cor_phaseClass3q_V_5),
+    .cor_phaseClass3i_V_4(cor_phaseClass3i_V_4),
+    .cor_phaseClass3q_V_4(cor_phaseClass3q_V_4),
+    .cor_phaseClass3i_V_3(cor_phaseClass3i_V_3),
+    .cor_phaseClass3q_V_3(cor_phaseClass3q_V_3),
+    .cor_phaseClass3i_V_2(cor_phaseClass3i_V_2),
+    .cor_phaseClass3q_V_2(cor_phaseClass3q_V_2),
+    .cor_phaseClass3i_V_1(cor_phaseClass3i_V_1),
+    .cor_phaseClass3q_V_1(cor_phaseClass3q_V_1),
+    .cor_phaseClass3i_V_0(cor_phaseClass3i_V_0),
+    .cor_phaseClass3q_V_0(cor_phaseClass3q_V_0),
+    .cor_phaseClass2i_V_15(cor_phaseClass2i_V_15),
+    .cor_phaseClass2q_V_15(cor_phaseClass2q_V_15),
+    .cor_phaseClass2i_V_14(cor_phaseClass2i_V_14),
+    .cor_phaseClass2q_V_14(cor_phaseClass2q_V_14),
+    .cor_phaseClass2i_V_13(cor_phaseClass2i_V_13),
+    .cor_phaseClass2q_V_13(cor_phaseClass2q_V_13),
+    .cor_phaseClass2i_V_12(cor_phaseClass2i_V_12),
+    .cor_phaseClass2q_V_12(cor_phaseClass2q_V_12),
+    .cor_phaseClass2i_V_11(cor_phaseClass2i_V_11),
+    .cor_phaseClass2q_V_11(cor_phaseClass2q_V_11),
+    .cor_phaseClass2i_V_10(cor_phaseClass2i_V_10),
+    .cor_phaseClass2q_V_10(cor_phaseClass2q_V_10),
+    .cor_phaseClass2i_V_9(cor_phaseClass2i_V_9),
+    .cor_phaseClass2q_V_9(cor_phaseClass2q_V_9),
+    .cor_phaseClass2i_V_8(cor_phaseClass2i_V_8),
+    .cor_phaseClass2q_V_8(cor_phaseClass2q_V_8),
+    .cor_phaseClass2i_V_7(cor_phaseClass2i_V_7),
+    .cor_phaseClass2q_V_7(cor_phaseClass2q_V_7),
+    .cor_phaseClass2i_V_6(cor_phaseClass2i_V_6),
+    .cor_phaseClass2q_V_6(cor_phaseClass2q_V_6),
+    .cor_phaseClass2i_V_5(cor_phaseClass2i_V_5),
+    .cor_phaseClass2q_V_5(cor_phaseClass2q_V_5),
+    .cor_phaseClass2i_V_4(cor_phaseClass2i_V_4),
+    .cor_phaseClass2q_V_4(cor_phaseClass2q_V_4),
+    .cor_phaseClass2i_V_3(cor_phaseClass2i_V_3),
+    .cor_phaseClass2q_V_3(cor_phaseClass2q_V_3),
+    .cor_phaseClass2i_V_2(cor_phaseClass2i_V_2),
+    .cor_phaseClass2q_V_2(cor_phaseClass2q_V_2),
+    .cor_phaseClass2i_V_1(cor_phaseClass2i_V_1),
+    .cor_phaseClass2q_V_1(cor_phaseClass2q_V_1),
+    .cor_phaseClass2i_V_0(cor_phaseClass2i_V_0),
+    .cor_phaseClass2q_V_0(cor_phaseClass2q_V_0),
+    .cor_phaseClass1i_V_15(cor_phaseClass1i_V_15),
+    .cor_phaseClass1q_V_15(cor_phaseClass1q_V_15),
+    .cor_phaseClass1i_V_14(cor_phaseClass1i_V_14),
+    .cor_phaseClass1q_V_14(cor_phaseClass1q_V_14),
+    .cor_phaseClass1i_V_13(cor_phaseClass1i_V_13),
+    .cor_phaseClass1q_V_13(cor_phaseClass1q_V_13),
+    .cor_phaseClass1i_V_12(cor_phaseClass1i_V_12),
+    .cor_phaseClass1q_V_12(cor_phaseClass1q_V_12),
+    .cor_phaseClass1i_V_11(cor_phaseClass1i_V_11),
+    .cor_phaseClass1q_V_11(cor_phaseClass1q_V_11),
+    .cor_phaseClass1i_V_10(cor_phaseClass1i_V_10),
+    .cor_phaseClass1q_V_10(cor_phaseClass1q_V_10),
+    .cor_phaseClass1i_V_9(cor_phaseClass1i_V_9),
+    .cor_phaseClass1q_V_9(cor_phaseClass1q_V_9),
+    .cor_phaseClass1i_V_8(cor_phaseClass1i_V_8),
+    .cor_phaseClass1q_V_8(cor_phaseClass1q_V_8),
+    .cor_phaseClass1i_V_7(cor_phaseClass1i_V_7),
+    .cor_phaseClass1q_V_7(cor_phaseClass1q_V_7),
+    .cor_phaseClass1i_V_6(cor_phaseClass1i_V_6),
+    .cor_phaseClass1q_V_6(cor_phaseClass1q_V_6),
+    .cor_phaseClass1i_V_5(cor_phaseClass1i_V_5),
+    .cor_phaseClass1q_V_5(cor_phaseClass1q_V_5),
+    .cor_phaseClass1i_V_4(cor_phaseClass1i_V_4),
+    .cor_phaseClass1q_V_4(cor_phaseClass1q_V_4),
+    .cor_phaseClass1i_V_3(cor_phaseClass1i_V_3),
+    .cor_phaseClass1q_V_3(cor_phaseClass1q_V_3),
+    .cor_phaseClass1i_V_2(cor_phaseClass1i_V_2),
+    .cor_phaseClass1q_V_2(cor_phaseClass1q_V_2),
+    .cor_phaseClass1i_V_1(cor_phaseClass1i_V_1),
+    .cor_phaseClass1q_V_1(cor_phaseClass1q_V_1),
+    .cor_phaseClass1i_V_0(cor_phaseClass1i_V_0),
+    .cor_phaseClass1q_V_0(cor_phaseClass1q_V_0),
+    .cor_phaseClass0i_V_15(cor_phaseClass0i_V_15),
+    .cor_phaseClass0q_V_15(cor_phaseClass0q_V_15),
+    .cor_phaseClass0i_V_14(cor_phaseClass0i_V_14),
+    .cor_phaseClass0q_V_14(cor_phaseClass0q_V_14),
+    .cor_phaseClass0i_V_13(cor_phaseClass0i_V_13),
+    .cor_phaseClass0q_V_13(cor_phaseClass0q_V_13),
+    .cor_phaseClass0i_V_12(cor_phaseClass0i_V_12),
+    .cor_phaseClass0q_V_12(cor_phaseClass0q_V_12),
+    .cor_phaseClass0i_V_11(cor_phaseClass0i_V_11),
+    .cor_phaseClass0q_V_11(cor_phaseClass0q_V_11),
+    .cor_phaseClass0i_V_10(cor_phaseClass0i_V_10),
+    .cor_phaseClass0q_V_10(cor_phaseClass0q_V_10),
+    .cor_phaseClass0i_V_9(cor_phaseClass0i_V_9),
+    .cor_phaseClass0q_V_9(cor_phaseClass0q_V_9),
+    .cor_phaseClass0i_V_8(cor_phaseClass0i_V_8),
+    .cor_phaseClass0q_V_8(cor_phaseClass0q_V_8),
+    .cor_phaseClass0i_V_7(cor_phaseClass0i_V_7),
+    .cor_phaseClass0q_V_7(cor_phaseClass0q_V_7),
+    .cor_phaseClass0i_V_6(cor_phaseClass0i_V_6),
+    .cor_phaseClass0q_V_6(cor_phaseClass0q_V_6),
+    .cor_phaseClass0i_V_5(cor_phaseClass0i_V_5),
+    .cor_phaseClass0q_V_5(cor_phaseClass0q_V_5),
+    .cor_phaseClass0i_V_4(cor_phaseClass0i_V_4),
+    .cor_phaseClass0q_V_4(cor_phaseClass0q_V_4),
+    .cor_phaseClass0i_V_3(cor_phaseClass0i_V_3),
+    .cor_phaseClass0q_V_3(cor_phaseClass0q_V_3),
+    .cor_phaseClass0i_V_2(cor_phaseClass0i_V_2),
+    .cor_phaseClass0q_V_2(cor_phaseClass0q_V_2),
+    .cor_phaseClass0i_V_1(cor_phaseClass0i_V_1),
+    .cor_phaseClass0q_V_1(cor_phaseClass0q_V_1),
+    .cor_phaseClass0i_V_0(cor_phaseClass0i_V_0),
+    .cor_phaseClass0q_V_0(cor_phaseClass0q_V_0),
+    .ap_return(grp_correlator_fu_1103_ap_return)
 );
 
-correlateTop_mul_bkb #(
-    .ID( 1 ),
-    .NUM_STAGE( 3 ),
-    .din0_WIDTH( 16 ),
-    .din1_WIDTH( 16 ),
-    .dout_WIDTH( 16 ))
-correlateTop_mul_bkb_U2(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .din0(resq_V_2_reg_916),
-    .din1(resq_V_2_reg_916),
-    .ce(grp_fu_793_ce),
-    .dout(grp_fu_793_p2)
+shiftPhaseClass StgValue_35_shiftPhaseClass_fu_2132(
+    .ap_ready(StgValue_35_shiftPhaseClass_fu_2132_ap_ready),
+    .newValuei_V(StgValue_35_shiftPhaseClass_fu_2132_newValuei_V),
+    .newValueq_V(StgValue_35_shiftPhaseClass_fu_2132_newValueq_V),
+    .phaseClass_V(phaseClass_V_load_reg_3261),
+    .cor_phaseClass0i_V_14_i(cor_phaseClass0i_V_14),
+    .cor_phaseClass0i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o),
+    .cor_phaseClass0i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o_ap_vld),
+    .cor_phaseClass0i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15),
+    .cor_phaseClass0i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15_ap_vld),
+    .cor_phaseClass0q_V_14_i(cor_phaseClass0q_V_14),
+    .cor_phaseClass0q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o),
+    .cor_phaseClass0q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o_ap_vld),
+    .cor_phaseClass0q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15),
+    .cor_phaseClass0q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15_ap_vld),
+    .cor_phaseClass0i_V_13_i(cor_phaseClass0i_V_13),
+    .cor_phaseClass0i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o),
+    .cor_phaseClass0i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o_ap_vld),
+    .cor_phaseClass0q_V_13_i(cor_phaseClass0q_V_13),
+    .cor_phaseClass0q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o),
+    .cor_phaseClass0q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o_ap_vld),
+    .cor_phaseClass0i_V_12_i(cor_phaseClass0i_V_12),
+    .cor_phaseClass0i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o),
+    .cor_phaseClass0i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o_ap_vld),
+    .cor_phaseClass0q_V_12_i(cor_phaseClass0q_V_12),
+    .cor_phaseClass0q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o),
+    .cor_phaseClass0q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o_ap_vld),
+    .cor_phaseClass0i_V_11_i(cor_phaseClass0i_V_11),
+    .cor_phaseClass0i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o),
+    .cor_phaseClass0i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o_ap_vld),
+    .cor_phaseClass0q_V_11_i(cor_phaseClass0q_V_11),
+    .cor_phaseClass0q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o),
+    .cor_phaseClass0q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o_ap_vld),
+    .cor_phaseClass0i_V_10_i(cor_phaseClass0i_V_10),
+    .cor_phaseClass0i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o),
+    .cor_phaseClass0i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o_ap_vld),
+    .cor_phaseClass0q_V_10_i(cor_phaseClass0q_V_10),
+    .cor_phaseClass0q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o),
+    .cor_phaseClass0q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o_ap_vld),
+    .cor_phaseClass0i_V_9_i(cor_phaseClass0i_V_9),
+    .cor_phaseClass0i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o),
+    .cor_phaseClass0i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o_ap_vld),
+    .cor_phaseClass0q_V_9_i(cor_phaseClass0q_V_9),
+    .cor_phaseClass0q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o),
+    .cor_phaseClass0q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o_ap_vld),
+    .cor_phaseClass0i_V_8_i(cor_phaseClass0i_V_8),
+    .cor_phaseClass0i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o),
+    .cor_phaseClass0i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o_ap_vld),
+    .cor_phaseClass0q_V_8_i(cor_phaseClass0q_V_8),
+    .cor_phaseClass0q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o),
+    .cor_phaseClass0q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o_ap_vld),
+    .cor_phaseClass0i_V_7_i(cor_phaseClass0i_V_7),
+    .cor_phaseClass0i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o),
+    .cor_phaseClass0i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o_ap_vld),
+    .cor_phaseClass0q_V_7_i(cor_phaseClass0q_V_7),
+    .cor_phaseClass0q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o),
+    .cor_phaseClass0q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o_ap_vld),
+    .cor_phaseClass0i_V_6_i(cor_phaseClass0i_V_6),
+    .cor_phaseClass0i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o),
+    .cor_phaseClass0i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o_ap_vld),
+    .cor_phaseClass0q_V_6_i(cor_phaseClass0q_V_6),
+    .cor_phaseClass0q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o),
+    .cor_phaseClass0q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o_ap_vld),
+    .cor_phaseClass0i_V_5_i(cor_phaseClass0i_V_5),
+    .cor_phaseClass0i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o),
+    .cor_phaseClass0i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o_ap_vld),
+    .cor_phaseClass0q_V_5_i(cor_phaseClass0q_V_5),
+    .cor_phaseClass0q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o),
+    .cor_phaseClass0q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o_ap_vld),
+    .cor_phaseClass0i_V_4_i(cor_phaseClass0i_V_4),
+    .cor_phaseClass0i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o),
+    .cor_phaseClass0i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o_ap_vld),
+    .cor_phaseClass0q_V_4_i(cor_phaseClass0q_V_4),
+    .cor_phaseClass0q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o),
+    .cor_phaseClass0q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o_ap_vld),
+    .cor_phaseClass0i_V_3_i(cor_phaseClass0i_V_3),
+    .cor_phaseClass0i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o),
+    .cor_phaseClass0i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o_ap_vld),
+    .cor_phaseClass0q_V_3_i(cor_phaseClass0q_V_3),
+    .cor_phaseClass0q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o),
+    .cor_phaseClass0q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o_ap_vld),
+    .cor_phaseClass0i_V_2_i(cor_phaseClass0i_V_2),
+    .cor_phaseClass0i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o),
+    .cor_phaseClass0i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o_ap_vld),
+    .cor_phaseClass0q_V_2_i(cor_phaseClass0q_V_2),
+    .cor_phaseClass0q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o),
+    .cor_phaseClass0q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o_ap_vld),
+    .cor_phaseClass0i_V_1_i(cor_phaseClass0i_V_1),
+    .cor_phaseClass0i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o),
+    .cor_phaseClass0i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o_ap_vld),
+    .cor_phaseClass0q_V_1_i(cor_phaseClass0q_V_1),
+    .cor_phaseClass0q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o),
+    .cor_phaseClass0q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o_ap_vld),
+    .cor_phaseClass0i_V_0_i(cor_phaseClass0i_V_0),
+    .cor_phaseClass0i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o),
+    .cor_phaseClass0i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o_ap_vld),
+    .cor_phaseClass0q_V_0_i(cor_phaseClass0q_V_0),
+    .cor_phaseClass0q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o),
+    .cor_phaseClass0q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o_ap_vld),
+    .cor_phaseClass1i_V_14_i(cor_phaseClass1i_V_14),
+    .cor_phaseClass1i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o),
+    .cor_phaseClass1i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o_ap_vld),
+    .cor_phaseClass1i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15),
+    .cor_phaseClass1i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15_ap_vld),
+    .cor_phaseClass1q_V_14_i(cor_phaseClass1q_V_14),
+    .cor_phaseClass1q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o),
+    .cor_phaseClass1q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o_ap_vld),
+    .cor_phaseClass1q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15),
+    .cor_phaseClass1q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15_ap_vld),
+    .cor_phaseClass1i_V_13_i(cor_phaseClass1i_V_13),
+    .cor_phaseClass1i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o),
+    .cor_phaseClass1i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o_ap_vld),
+    .cor_phaseClass1q_V_13_i(cor_phaseClass1q_V_13),
+    .cor_phaseClass1q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o),
+    .cor_phaseClass1q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o_ap_vld),
+    .cor_phaseClass1i_V_12_i(cor_phaseClass1i_V_12),
+    .cor_phaseClass1i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o),
+    .cor_phaseClass1i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o_ap_vld),
+    .cor_phaseClass1q_V_12_i(cor_phaseClass1q_V_12),
+    .cor_phaseClass1q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o),
+    .cor_phaseClass1q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o_ap_vld),
+    .cor_phaseClass1i_V_11_i(cor_phaseClass1i_V_11),
+    .cor_phaseClass1i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o),
+    .cor_phaseClass1i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o_ap_vld),
+    .cor_phaseClass1q_V_11_i(cor_phaseClass1q_V_11),
+    .cor_phaseClass1q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o),
+    .cor_phaseClass1q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o_ap_vld),
+    .cor_phaseClass1i_V_10_i(cor_phaseClass1i_V_10),
+    .cor_phaseClass1i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o),
+    .cor_phaseClass1i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o_ap_vld),
+    .cor_phaseClass1q_V_10_i(cor_phaseClass1q_V_10),
+    .cor_phaseClass1q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o),
+    .cor_phaseClass1q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o_ap_vld),
+    .cor_phaseClass1i_V_9_i(cor_phaseClass1i_V_9),
+    .cor_phaseClass1i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o),
+    .cor_phaseClass1i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o_ap_vld),
+    .cor_phaseClass1q_V_9_i(cor_phaseClass1q_V_9),
+    .cor_phaseClass1q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o),
+    .cor_phaseClass1q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o_ap_vld),
+    .cor_phaseClass1i_V_8_i(cor_phaseClass1i_V_8),
+    .cor_phaseClass1i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o),
+    .cor_phaseClass1i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o_ap_vld),
+    .cor_phaseClass1q_V_8_i(cor_phaseClass1q_V_8),
+    .cor_phaseClass1q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o),
+    .cor_phaseClass1q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o_ap_vld),
+    .cor_phaseClass1i_V_7_i(cor_phaseClass1i_V_7),
+    .cor_phaseClass1i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o),
+    .cor_phaseClass1i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o_ap_vld),
+    .cor_phaseClass1q_V_7_i(cor_phaseClass1q_V_7),
+    .cor_phaseClass1q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o),
+    .cor_phaseClass1q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o_ap_vld),
+    .cor_phaseClass1i_V_6_i(cor_phaseClass1i_V_6),
+    .cor_phaseClass1i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o),
+    .cor_phaseClass1i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o_ap_vld),
+    .cor_phaseClass1q_V_6_i(cor_phaseClass1q_V_6),
+    .cor_phaseClass1q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o),
+    .cor_phaseClass1q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o_ap_vld),
+    .cor_phaseClass1i_V_5_i(cor_phaseClass1i_V_5),
+    .cor_phaseClass1i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o),
+    .cor_phaseClass1i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o_ap_vld),
+    .cor_phaseClass1q_V_5_i(cor_phaseClass1q_V_5),
+    .cor_phaseClass1q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o),
+    .cor_phaseClass1q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o_ap_vld),
+    .cor_phaseClass1i_V_4_i(cor_phaseClass1i_V_4),
+    .cor_phaseClass1i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o),
+    .cor_phaseClass1i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o_ap_vld),
+    .cor_phaseClass1q_V_4_i(cor_phaseClass1q_V_4),
+    .cor_phaseClass1q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o),
+    .cor_phaseClass1q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o_ap_vld),
+    .cor_phaseClass1i_V_3_i(cor_phaseClass1i_V_3),
+    .cor_phaseClass1i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o),
+    .cor_phaseClass1i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o_ap_vld),
+    .cor_phaseClass1q_V_3_i(cor_phaseClass1q_V_3),
+    .cor_phaseClass1q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o),
+    .cor_phaseClass1q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o_ap_vld),
+    .cor_phaseClass1i_V_2_i(cor_phaseClass1i_V_2),
+    .cor_phaseClass1i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o),
+    .cor_phaseClass1i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o_ap_vld),
+    .cor_phaseClass1q_V_2_i(cor_phaseClass1q_V_2),
+    .cor_phaseClass1q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o),
+    .cor_phaseClass1q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o_ap_vld),
+    .cor_phaseClass1i_V_1_i(cor_phaseClass1i_V_1),
+    .cor_phaseClass1i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o),
+    .cor_phaseClass1i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o_ap_vld),
+    .cor_phaseClass1q_V_1_i(cor_phaseClass1q_V_1),
+    .cor_phaseClass1q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o),
+    .cor_phaseClass1q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o_ap_vld),
+    .cor_phaseClass1i_V_0_i(cor_phaseClass1i_V_0),
+    .cor_phaseClass1i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o),
+    .cor_phaseClass1i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o_ap_vld),
+    .cor_phaseClass1q_V_0_i(cor_phaseClass1q_V_0),
+    .cor_phaseClass1q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o),
+    .cor_phaseClass1q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o_ap_vld),
+    .cor_phaseClass2i_V_14_i(cor_phaseClass2i_V_14),
+    .cor_phaseClass2i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o),
+    .cor_phaseClass2i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o_ap_vld),
+    .cor_phaseClass2i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15),
+    .cor_phaseClass2i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15_ap_vld),
+    .cor_phaseClass2q_V_14_i(cor_phaseClass2q_V_14),
+    .cor_phaseClass2q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o),
+    .cor_phaseClass2q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o_ap_vld),
+    .cor_phaseClass2q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15),
+    .cor_phaseClass2q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15_ap_vld),
+    .cor_phaseClass2i_V_13_i(cor_phaseClass2i_V_13),
+    .cor_phaseClass2i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o),
+    .cor_phaseClass2i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o_ap_vld),
+    .cor_phaseClass2q_V_13_i(cor_phaseClass2q_V_13),
+    .cor_phaseClass2q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o),
+    .cor_phaseClass2q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o_ap_vld),
+    .cor_phaseClass2i_V_12_i(cor_phaseClass2i_V_12),
+    .cor_phaseClass2i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o),
+    .cor_phaseClass2i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o_ap_vld),
+    .cor_phaseClass2q_V_12_i(cor_phaseClass2q_V_12),
+    .cor_phaseClass2q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o),
+    .cor_phaseClass2q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o_ap_vld),
+    .cor_phaseClass2i_V_11_i(cor_phaseClass2i_V_11),
+    .cor_phaseClass2i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o),
+    .cor_phaseClass2i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o_ap_vld),
+    .cor_phaseClass2q_V_11_i(cor_phaseClass2q_V_11),
+    .cor_phaseClass2q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o),
+    .cor_phaseClass2q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o_ap_vld),
+    .cor_phaseClass2i_V_10_i(cor_phaseClass2i_V_10),
+    .cor_phaseClass2i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o),
+    .cor_phaseClass2i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o_ap_vld),
+    .cor_phaseClass2q_V_10_i(cor_phaseClass2q_V_10),
+    .cor_phaseClass2q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o),
+    .cor_phaseClass2q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o_ap_vld),
+    .cor_phaseClass2i_V_9_i(cor_phaseClass2i_V_9),
+    .cor_phaseClass2i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o),
+    .cor_phaseClass2i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o_ap_vld),
+    .cor_phaseClass2q_V_9_i(cor_phaseClass2q_V_9),
+    .cor_phaseClass2q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o),
+    .cor_phaseClass2q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o_ap_vld),
+    .cor_phaseClass2i_V_8_i(cor_phaseClass2i_V_8),
+    .cor_phaseClass2i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o),
+    .cor_phaseClass2i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o_ap_vld),
+    .cor_phaseClass2q_V_8_i(cor_phaseClass2q_V_8),
+    .cor_phaseClass2q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o),
+    .cor_phaseClass2q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o_ap_vld),
+    .cor_phaseClass2i_V_7_i(cor_phaseClass2i_V_7),
+    .cor_phaseClass2i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o),
+    .cor_phaseClass2i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o_ap_vld),
+    .cor_phaseClass2q_V_7_i(cor_phaseClass2q_V_7),
+    .cor_phaseClass2q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o),
+    .cor_phaseClass2q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o_ap_vld),
+    .cor_phaseClass2i_V_6_i(cor_phaseClass2i_V_6),
+    .cor_phaseClass2i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o),
+    .cor_phaseClass2i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o_ap_vld),
+    .cor_phaseClass2q_V_6_i(cor_phaseClass2q_V_6),
+    .cor_phaseClass2q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o),
+    .cor_phaseClass2q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o_ap_vld),
+    .cor_phaseClass2i_V_5_i(cor_phaseClass2i_V_5),
+    .cor_phaseClass2i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o),
+    .cor_phaseClass2i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o_ap_vld),
+    .cor_phaseClass2q_V_5_i(cor_phaseClass2q_V_5),
+    .cor_phaseClass2q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o),
+    .cor_phaseClass2q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o_ap_vld),
+    .cor_phaseClass2i_V_4_i(cor_phaseClass2i_V_4),
+    .cor_phaseClass2i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o),
+    .cor_phaseClass2i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o_ap_vld),
+    .cor_phaseClass2q_V_4_i(cor_phaseClass2q_V_4),
+    .cor_phaseClass2q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o),
+    .cor_phaseClass2q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o_ap_vld),
+    .cor_phaseClass2i_V_3_i(cor_phaseClass2i_V_3),
+    .cor_phaseClass2i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o),
+    .cor_phaseClass2i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o_ap_vld),
+    .cor_phaseClass2q_V_3_i(cor_phaseClass2q_V_3),
+    .cor_phaseClass2q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o),
+    .cor_phaseClass2q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o_ap_vld),
+    .cor_phaseClass2i_V_2_i(cor_phaseClass2i_V_2),
+    .cor_phaseClass2i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o),
+    .cor_phaseClass2i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o_ap_vld),
+    .cor_phaseClass2q_V_2_i(cor_phaseClass2q_V_2),
+    .cor_phaseClass2q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o),
+    .cor_phaseClass2q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o_ap_vld),
+    .cor_phaseClass2i_V_1_i(cor_phaseClass2i_V_1),
+    .cor_phaseClass2i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o),
+    .cor_phaseClass2i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o_ap_vld),
+    .cor_phaseClass2q_V_1_i(cor_phaseClass2q_V_1),
+    .cor_phaseClass2q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o),
+    .cor_phaseClass2q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o_ap_vld),
+    .cor_phaseClass2i_V_0_i(cor_phaseClass2i_V_0),
+    .cor_phaseClass2i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o),
+    .cor_phaseClass2i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o_ap_vld),
+    .cor_phaseClass2q_V_0_i(cor_phaseClass2q_V_0),
+    .cor_phaseClass2q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o),
+    .cor_phaseClass2q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o_ap_vld),
+    .cor_phaseClass3i_V_14_i(cor_phaseClass3i_V_14),
+    .cor_phaseClass3i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o),
+    .cor_phaseClass3i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o_ap_vld),
+    .cor_phaseClass3i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15),
+    .cor_phaseClass3i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15_ap_vld),
+    .cor_phaseClass3q_V_14_i(cor_phaseClass3q_V_14),
+    .cor_phaseClass3q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o),
+    .cor_phaseClass3q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o_ap_vld),
+    .cor_phaseClass3q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15),
+    .cor_phaseClass3q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15_ap_vld),
+    .cor_phaseClass3i_V_13_i(cor_phaseClass3i_V_13),
+    .cor_phaseClass3i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o),
+    .cor_phaseClass3i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o_ap_vld),
+    .cor_phaseClass3q_V_13_i(cor_phaseClass3q_V_13),
+    .cor_phaseClass3q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o),
+    .cor_phaseClass3q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o_ap_vld),
+    .cor_phaseClass3i_V_12_i(cor_phaseClass3i_V_12),
+    .cor_phaseClass3i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o),
+    .cor_phaseClass3i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o_ap_vld),
+    .cor_phaseClass3q_V_12_i(cor_phaseClass3q_V_12),
+    .cor_phaseClass3q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o),
+    .cor_phaseClass3q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o_ap_vld),
+    .cor_phaseClass3i_V_11_i(cor_phaseClass3i_V_11),
+    .cor_phaseClass3i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o),
+    .cor_phaseClass3i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o_ap_vld),
+    .cor_phaseClass3q_V_11_i(cor_phaseClass3q_V_11),
+    .cor_phaseClass3q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o),
+    .cor_phaseClass3q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o_ap_vld),
+    .cor_phaseClass3i_V_10_i(cor_phaseClass3i_V_10),
+    .cor_phaseClass3i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o),
+    .cor_phaseClass3i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o_ap_vld),
+    .cor_phaseClass3q_V_10_i(cor_phaseClass3q_V_10),
+    .cor_phaseClass3q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o),
+    .cor_phaseClass3q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o_ap_vld),
+    .cor_phaseClass3i_V_9_i(cor_phaseClass3i_V_9),
+    .cor_phaseClass3i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o),
+    .cor_phaseClass3i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o_ap_vld),
+    .cor_phaseClass3q_V_9_i(cor_phaseClass3q_V_9),
+    .cor_phaseClass3q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o),
+    .cor_phaseClass3q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o_ap_vld),
+    .cor_phaseClass3i_V_8_i(cor_phaseClass3i_V_8),
+    .cor_phaseClass3i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o),
+    .cor_phaseClass3i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o_ap_vld),
+    .cor_phaseClass3q_V_8_i(cor_phaseClass3q_V_8),
+    .cor_phaseClass3q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o),
+    .cor_phaseClass3q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o_ap_vld),
+    .cor_phaseClass3i_V_7_i(cor_phaseClass3i_V_7),
+    .cor_phaseClass3i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o),
+    .cor_phaseClass3i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o_ap_vld),
+    .cor_phaseClass3q_V_7_i(cor_phaseClass3q_V_7),
+    .cor_phaseClass3q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o),
+    .cor_phaseClass3q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o_ap_vld),
+    .cor_phaseClass3i_V_6_i(cor_phaseClass3i_V_6),
+    .cor_phaseClass3i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o),
+    .cor_phaseClass3i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o_ap_vld),
+    .cor_phaseClass3q_V_6_i(cor_phaseClass3q_V_6),
+    .cor_phaseClass3q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o),
+    .cor_phaseClass3q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o_ap_vld),
+    .cor_phaseClass3i_V_5_i(cor_phaseClass3i_V_5),
+    .cor_phaseClass3i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o),
+    .cor_phaseClass3i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o_ap_vld),
+    .cor_phaseClass3q_V_5_i(cor_phaseClass3q_V_5),
+    .cor_phaseClass3q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o),
+    .cor_phaseClass3q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o_ap_vld),
+    .cor_phaseClass3i_V_4_i(cor_phaseClass3i_V_4),
+    .cor_phaseClass3i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o),
+    .cor_phaseClass3i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o_ap_vld),
+    .cor_phaseClass3q_V_4_i(cor_phaseClass3q_V_4),
+    .cor_phaseClass3q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o),
+    .cor_phaseClass3q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o_ap_vld),
+    .cor_phaseClass3i_V_3_i(cor_phaseClass3i_V_3),
+    .cor_phaseClass3i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o),
+    .cor_phaseClass3i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o_ap_vld),
+    .cor_phaseClass3q_V_3_i(cor_phaseClass3q_V_3),
+    .cor_phaseClass3q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o),
+    .cor_phaseClass3q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o_ap_vld),
+    .cor_phaseClass3i_V_2_i(cor_phaseClass3i_V_2),
+    .cor_phaseClass3i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o),
+    .cor_phaseClass3i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o_ap_vld),
+    .cor_phaseClass3q_V_2_i(cor_phaseClass3q_V_2),
+    .cor_phaseClass3q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o),
+    .cor_phaseClass3q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o_ap_vld),
+    .cor_phaseClass3i_V_1_i(cor_phaseClass3i_V_1),
+    .cor_phaseClass3i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o),
+    .cor_phaseClass3i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o_ap_vld),
+    .cor_phaseClass3q_V_1_i(cor_phaseClass3q_V_1),
+    .cor_phaseClass3q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o),
+    .cor_phaseClass3q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o_ap_vld),
+    .cor_phaseClass3i_V_0_i(cor_phaseClass3i_V_0),
+    .cor_phaseClass3i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o),
+    .cor_phaseClass3i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o_ap_vld),
+    .cor_phaseClass3q_V_0_i(cor_phaseClass3q_V_0),
+    .cor_phaseClass3q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o),
+    .cor_phaseClass3q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o_ap_vld),
+    .cor_phaseClass4i_V_14_i(cor_phaseClass4i_V_14),
+    .cor_phaseClass4i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o),
+    .cor_phaseClass4i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o_ap_vld),
+    .cor_phaseClass4i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15),
+    .cor_phaseClass4i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15_ap_vld),
+    .cor_phaseClass4q_V_14_i(cor_phaseClass4q_V_14),
+    .cor_phaseClass4q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o),
+    .cor_phaseClass4q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o_ap_vld),
+    .cor_phaseClass4q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15),
+    .cor_phaseClass4q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15_ap_vld),
+    .cor_phaseClass4i_V_13_i(cor_phaseClass4i_V_13),
+    .cor_phaseClass4i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o),
+    .cor_phaseClass4i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o_ap_vld),
+    .cor_phaseClass4q_V_13_i(cor_phaseClass4q_V_13),
+    .cor_phaseClass4q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o),
+    .cor_phaseClass4q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o_ap_vld),
+    .cor_phaseClass4i_V_12_i(cor_phaseClass4i_V_12),
+    .cor_phaseClass4i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o),
+    .cor_phaseClass4i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o_ap_vld),
+    .cor_phaseClass4q_V_12_i(cor_phaseClass4q_V_12),
+    .cor_phaseClass4q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o),
+    .cor_phaseClass4q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o_ap_vld),
+    .cor_phaseClass4i_V_11_i(cor_phaseClass4i_V_11),
+    .cor_phaseClass4i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o),
+    .cor_phaseClass4i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o_ap_vld),
+    .cor_phaseClass4q_V_11_i(cor_phaseClass4q_V_11),
+    .cor_phaseClass4q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o),
+    .cor_phaseClass4q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o_ap_vld),
+    .cor_phaseClass4i_V_10_i(cor_phaseClass4i_V_10),
+    .cor_phaseClass4i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o),
+    .cor_phaseClass4i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o_ap_vld),
+    .cor_phaseClass4q_V_10_i(cor_phaseClass4q_V_10),
+    .cor_phaseClass4q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o),
+    .cor_phaseClass4q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o_ap_vld),
+    .cor_phaseClass4i_V_9_i(cor_phaseClass4i_V_9),
+    .cor_phaseClass4i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o),
+    .cor_phaseClass4i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o_ap_vld),
+    .cor_phaseClass4q_V_9_i(cor_phaseClass4q_V_9),
+    .cor_phaseClass4q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o),
+    .cor_phaseClass4q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o_ap_vld),
+    .cor_phaseClass4i_V_8_i(cor_phaseClass4i_V_8),
+    .cor_phaseClass4i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o),
+    .cor_phaseClass4i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o_ap_vld),
+    .cor_phaseClass4q_V_8_i(cor_phaseClass4q_V_8),
+    .cor_phaseClass4q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o),
+    .cor_phaseClass4q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o_ap_vld),
+    .cor_phaseClass4i_V_7_i(cor_phaseClass4i_V_7),
+    .cor_phaseClass4i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o),
+    .cor_phaseClass4i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o_ap_vld),
+    .cor_phaseClass4q_V_7_i(cor_phaseClass4q_V_7),
+    .cor_phaseClass4q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o),
+    .cor_phaseClass4q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o_ap_vld),
+    .cor_phaseClass4i_V_6_i(cor_phaseClass4i_V_6),
+    .cor_phaseClass4i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o),
+    .cor_phaseClass4i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o_ap_vld),
+    .cor_phaseClass4q_V_6_i(cor_phaseClass4q_V_6),
+    .cor_phaseClass4q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o),
+    .cor_phaseClass4q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o_ap_vld),
+    .cor_phaseClass4i_V_5_i(cor_phaseClass4i_V_5),
+    .cor_phaseClass4i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o),
+    .cor_phaseClass4i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o_ap_vld),
+    .cor_phaseClass4q_V_5_i(cor_phaseClass4q_V_5),
+    .cor_phaseClass4q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o),
+    .cor_phaseClass4q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o_ap_vld),
+    .cor_phaseClass4i_V_4_i(cor_phaseClass4i_V_4),
+    .cor_phaseClass4i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o),
+    .cor_phaseClass4i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o_ap_vld),
+    .cor_phaseClass4q_V_4_i(cor_phaseClass4q_V_4),
+    .cor_phaseClass4q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o),
+    .cor_phaseClass4q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o_ap_vld),
+    .cor_phaseClass4i_V_3_i(cor_phaseClass4i_V_3),
+    .cor_phaseClass4i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o),
+    .cor_phaseClass4i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o_ap_vld),
+    .cor_phaseClass4q_V_3_i(cor_phaseClass4q_V_3),
+    .cor_phaseClass4q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o),
+    .cor_phaseClass4q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o_ap_vld),
+    .cor_phaseClass4i_V_2_i(cor_phaseClass4i_V_2),
+    .cor_phaseClass4i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o),
+    .cor_phaseClass4i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o_ap_vld),
+    .cor_phaseClass4q_V_2_i(cor_phaseClass4q_V_2),
+    .cor_phaseClass4q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o),
+    .cor_phaseClass4q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o_ap_vld),
+    .cor_phaseClass4i_V_1_i(cor_phaseClass4i_V_1),
+    .cor_phaseClass4i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o),
+    .cor_phaseClass4i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o_ap_vld),
+    .cor_phaseClass4q_V_1_i(cor_phaseClass4q_V_1),
+    .cor_phaseClass4q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o),
+    .cor_phaseClass4q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o_ap_vld),
+    .cor_phaseClass4i_V_0_i(cor_phaseClass4i_V_0),
+    .cor_phaseClass4i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o),
+    .cor_phaseClass4i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o_ap_vld),
+    .cor_phaseClass4q_V_0_i(cor_phaseClass4q_V_0),
+    .cor_phaseClass4q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o),
+    .cor_phaseClass4q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o_ap_vld),
+    .cor_phaseClass5i_V_14_i(cor_phaseClass5i_V_14),
+    .cor_phaseClass5i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o),
+    .cor_phaseClass5i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o_ap_vld),
+    .cor_phaseClass5i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15),
+    .cor_phaseClass5i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15_ap_vld),
+    .cor_phaseClass5q_V_14_i(cor_phaseClass5q_V_14),
+    .cor_phaseClass5q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o),
+    .cor_phaseClass5q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o_ap_vld),
+    .cor_phaseClass5q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15),
+    .cor_phaseClass5q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15_ap_vld),
+    .cor_phaseClass5i_V_13_i(cor_phaseClass5i_V_13),
+    .cor_phaseClass5i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o),
+    .cor_phaseClass5i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o_ap_vld),
+    .cor_phaseClass5q_V_13_i(cor_phaseClass5q_V_13),
+    .cor_phaseClass5q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o),
+    .cor_phaseClass5q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o_ap_vld),
+    .cor_phaseClass5i_V_12_i(cor_phaseClass5i_V_12),
+    .cor_phaseClass5i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o),
+    .cor_phaseClass5i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o_ap_vld),
+    .cor_phaseClass5q_V_12_i(cor_phaseClass5q_V_12),
+    .cor_phaseClass5q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o),
+    .cor_phaseClass5q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o_ap_vld),
+    .cor_phaseClass5i_V_11_i(cor_phaseClass5i_V_11),
+    .cor_phaseClass5i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o),
+    .cor_phaseClass5i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o_ap_vld),
+    .cor_phaseClass5q_V_11_i(cor_phaseClass5q_V_11),
+    .cor_phaseClass5q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o),
+    .cor_phaseClass5q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o_ap_vld),
+    .cor_phaseClass5i_V_10_i(cor_phaseClass5i_V_10),
+    .cor_phaseClass5i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o),
+    .cor_phaseClass5i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o_ap_vld),
+    .cor_phaseClass5q_V_10_i(cor_phaseClass5q_V_10),
+    .cor_phaseClass5q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o),
+    .cor_phaseClass5q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o_ap_vld),
+    .cor_phaseClass5i_V_9_i(cor_phaseClass5i_V_9),
+    .cor_phaseClass5i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o),
+    .cor_phaseClass5i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o_ap_vld),
+    .cor_phaseClass5q_V_9_i(cor_phaseClass5q_V_9),
+    .cor_phaseClass5q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o),
+    .cor_phaseClass5q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o_ap_vld),
+    .cor_phaseClass5i_V_8_i(cor_phaseClass5i_V_8),
+    .cor_phaseClass5i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o),
+    .cor_phaseClass5i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o_ap_vld),
+    .cor_phaseClass5q_V_8_i(cor_phaseClass5q_V_8),
+    .cor_phaseClass5q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o),
+    .cor_phaseClass5q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o_ap_vld),
+    .cor_phaseClass5i_V_7_i(cor_phaseClass5i_V_7),
+    .cor_phaseClass5i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o),
+    .cor_phaseClass5i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o_ap_vld),
+    .cor_phaseClass5q_V_7_i(cor_phaseClass5q_V_7),
+    .cor_phaseClass5q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o),
+    .cor_phaseClass5q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o_ap_vld),
+    .cor_phaseClass5i_V_6_i(cor_phaseClass5i_V_6),
+    .cor_phaseClass5i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o),
+    .cor_phaseClass5i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o_ap_vld),
+    .cor_phaseClass5q_V_6_i(cor_phaseClass5q_V_6),
+    .cor_phaseClass5q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o),
+    .cor_phaseClass5q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o_ap_vld),
+    .cor_phaseClass5i_V_5_i(cor_phaseClass5i_V_5),
+    .cor_phaseClass5i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o),
+    .cor_phaseClass5i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o_ap_vld),
+    .cor_phaseClass5q_V_5_i(cor_phaseClass5q_V_5),
+    .cor_phaseClass5q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o),
+    .cor_phaseClass5q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o_ap_vld),
+    .cor_phaseClass5i_V_4_i(cor_phaseClass5i_V_4),
+    .cor_phaseClass5i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o),
+    .cor_phaseClass5i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o_ap_vld),
+    .cor_phaseClass5q_V_4_i(cor_phaseClass5q_V_4),
+    .cor_phaseClass5q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o),
+    .cor_phaseClass5q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o_ap_vld),
+    .cor_phaseClass5i_V_3_i(cor_phaseClass5i_V_3),
+    .cor_phaseClass5i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o),
+    .cor_phaseClass5i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o_ap_vld),
+    .cor_phaseClass5q_V_3_i(cor_phaseClass5q_V_3),
+    .cor_phaseClass5q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o),
+    .cor_phaseClass5q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o_ap_vld),
+    .cor_phaseClass5i_V_2_i(cor_phaseClass5i_V_2),
+    .cor_phaseClass5i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o),
+    .cor_phaseClass5i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o_ap_vld),
+    .cor_phaseClass5q_V_2_i(cor_phaseClass5q_V_2),
+    .cor_phaseClass5q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o),
+    .cor_phaseClass5q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o_ap_vld),
+    .cor_phaseClass5i_V_1_i(cor_phaseClass5i_V_1),
+    .cor_phaseClass5i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o),
+    .cor_phaseClass5i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o_ap_vld),
+    .cor_phaseClass5q_V_1_i(cor_phaseClass5q_V_1),
+    .cor_phaseClass5q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o),
+    .cor_phaseClass5q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o_ap_vld),
+    .cor_phaseClass5i_V_0_i(cor_phaseClass5i_V_0),
+    .cor_phaseClass5i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o),
+    .cor_phaseClass5i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o_ap_vld),
+    .cor_phaseClass5q_V_0_i(cor_phaseClass5q_V_0),
+    .cor_phaseClass5q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o),
+    .cor_phaseClass5q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o_ap_vld),
+    .cor_phaseClass6i_V_14_i(cor_phaseClass6i_V_14),
+    .cor_phaseClass6i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o),
+    .cor_phaseClass6i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o_ap_vld),
+    .cor_phaseClass6i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15),
+    .cor_phaseClass6i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15_ap_vld),
+    .cor_phaseClass6q_V_14_i(cor_phaseClass6q_V_14),
+    .cor_phaseClass6q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o),
+    .cor_phaseClass6q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o_ap_vld),
+    .cor_phaseClass6q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15),
+    .cor_phaseClass6q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15_ap_vld),
+    .cor_phaseClass6i_V_13_i(cor_phaseClass6i_V_13),
+    .cor_phaseClass6i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o),
+    .cor_phaseClass6i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o_ap_vld),
+    .cor_phaseClass6q_V_13_i(cor_phaseClass6q_V_13),
+    .cor_phaseClass6q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o),
+    .cor_phaseClass6q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o_ap_vld),
+    .cor_phaseClass6i_V_12_i(cor_phaseClass6i_V_12),
+    .cor_phaseClass6i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o),
+    .cor_phaseClass6i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o_ap_vld),
+    .cor_phaseClass6q_V_12_i(cor_phaseClass6q_V_12),
+    .cor_phaseClass6q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o),
+    .cor_phaseClass6q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o_ap_vld),
+    .cor_phaseClass6i_V_11_i(cor_phaseClass6i_V_11),
+    .cor_phaseClass6i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o),
+    .cor_phaseClass6i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o_ap_vld),
+    .cor_phaseClass6q_V_11_i(cor_phaseClass6q_V_11),
+    .cor_phaseClass6q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o),
+    .cor_phaseClass6q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o_ap_vld),
+    .cor_phaseClass6i_V_10_i(cor_phaseClass6i_V_10),
+    .cor_phaseClass6i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o),
+    .cor_phaseClass6i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o_ap_vld),
+    .cor_phaseClass6q_V_10_i(cor_phaseClass6q_V_10),
+    .cor_phaseClass6q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o),
+    .cor_phaseClass6q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o_ap_vld),
+    .cor_phaseClass6i_V_9_i(cor_phaseClass6i_V_9),
+    .cor_phaseClass6i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o),
+    .cor_phaseClass6i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o_ap_vld),
+    .cor_phaseClass6q_V_9_i(cor_phaseClass6q_V_9),
+    .cor_phaseClass6q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o),
+    .cor_phaseClass6q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o_ap_vld),
+    .cor_phaseClass6i_V_8_i(cor_phaseClass6i_V_8),
+    .cor_phaseClass6i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o),
+    .cor_phaseClass6i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o_ap_vld),
+    .cor_phaseClass6q_V_8_i(cor_phaseClass6q_V_8),
+    .cor_phaseClass6q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o),
+    .cor_phaseClass6q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o_ap_vld),
+    .cor_phaseClass6i_V_7_i(cor_phaseClass6i_V_7),
+    .cor_phaseClass6i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o),
+    .cor_phaseClass6i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o_ap_vld),
+    .cor_phaseClass6q_V_7_i(cor_phaseClass6q_V_7),
+    .cor_phaseClass6q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o),
+    .cor_phaseClass6q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o_ap_vld),
+    .cor_phaseClass6i_V_6_i(cor_phaseClass6i_V_6),
+    .cor_phaseClass6i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o),
+    .cor_phaseClass6i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o_ap_vld),
+    .cor_phaseClass6q_V_6_i(cor_phaseClass6q_V_6),
+    .cor_phaseClass6q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o),
+    .cor_phaseClass6q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o_ap_vld),
+    .cor_phaseClass6i_V_5_i(cor_phaseClass6i_V_5),
+    .cor_phaseClass6i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o),
+    .cor_phaseClass6i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o_ap_vld),
+    .cor_phaseClass6q_V_5_i(cor_phaseClass6q_V_5),
+    .cor_phaseClass6q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o),
+    .cor_phaseClass6q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o_ap_vld),
+    .cor_phaseClass6i_V_4_i(cor_phaseClass6i_V_4),
+    .cor_phaseClass6i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o),
+    .cor_phaseClass6i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o_ap_vld),
+    .cor_phaseClass6q_V_4_i(cor_phaseClass6q_V_4),
+    .cor_phaseClass6q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o),
+    .cor_phaseClass6q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o_ap_vld),
+    .cor_phaseClass6i_V_3_i(cor_phaseClass6i_V_3),
+    .cor_phaseClass6i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o),
+    .cor_phaseClass6i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o_ap_vld),
+    .cor_phaseClass6q_V_3_i(cor_phaseClass6q_V_3),
+    .cor_phaseClass6q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o),
+    .cor_phaseClass6q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o_ap_vld),
+    .cor_phaseClass6i_V_2_i(cor_phaseClass6i_V_2),
+    .cor_phaseClass6i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o),
+    .cor_phaseClass6i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o_ap_vld),
+    .cor_phaseClass6q_V_2_i(cor_phaseClass6q_V_2),
+    .cor_phaseClass6q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o),
+    .cor_phaseClass6q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o_ap_vld),
+    .cor_phaseClass6i_V_1_i(cor_phaseClass6i_V_1),
+    .cor_phaseClass6i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o),
+    .cor_phaseClass6i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o_ap_vld),
+    .cor_phaseClass6q_V_1_i(cor_phaseClass6q_V_1),
+    .cor_phaseClass6q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o),
+    .cor_phaseClass6q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o_ap_vld),
+    .cor_phaseClass6i_V_0_i(cor_phaseClass6i_V_0),
+    .cor_phaseClass6i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o),
+    .cor_phaseClass6i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o_ap_vld),
+    .cor_phaseClass6q_V_0_i(cor_phaseClass6q_V_0),
+    .cor_phaseClass6q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o),
+    .cor_phaseClass6q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o_ap_vld),
+    .cor_phaseClass7i_V_14_i(cor_phaseClass7i_V_14),
+    .cor_phaseClass7i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o),
+    .cor_phaseClass7i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o_ap_vld),
+    .cor_phaseClass7i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15),
+    .cor_phaseClass7i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15_ap_vld),
+    .cor_phaseClass7q_V_14_i(cor_phaseClass7q_V_14),
+    .cor_phaseClass7q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o),
+    .cor_phaseClass7q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o_ap_vld),
+    .cor_phaseClass7q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15),
+    .cor_phaseClass7q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15_ap_vld),
+    .cor_phaseClass7i_V_13_i(cor_phaseClass7i_V_13),
+    .cor_phaseClass7i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o),
+    .cor_phaseClass7i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o_ap_vld),
+    .cor_phaseClass7q_V_13_i(cor_phaseClass7q_V_13),
+    .cor_phaseClass7q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o),
+    .cor_phaseClass7q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o_ap_vld),
+    .cor_phaseClass7i_V_12_i(cor_phaseClass7i_V_12),
+    .cor_phaseClass7i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o),
+    .cor_phaseClass7i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o_ap_vld),
+    .cor_phaseClass7q_V_12_i(cor_phaseClass7q_V_12),
+    .cor_phaseClass7q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o),
+    .cor_phaseClass7q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o_ap_vld),
+    .cor_phaseClass7i_V_11_i(cor_phaseClass7i_V_11),
+    .cor_phaseClass7i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o),
+    .cor_phaseClass7i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o_ap_vld),
+    .cor_phaseClass7q_V_11_i(cor_phaseClass7q_V_11),
+    .cor_phaseClass7q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o),
+    .cor_phaseClass7q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o_ap_vld),
+    .cor_phaseClass7i_V_10_i(cor_phaseClass7i_V_10),
+    .cor_phaseClass7i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o),
+    .cor_phaseClass7i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o_ap_vld),
+    .cor_phaseClass7q_V_10_i(cor_phaseClass7q_V_10),
+    .cor_phaseClass7q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o),
+    .cor_phaseClass7q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o_ap_vld),
+    .cor_phaseClass7i_V_9_i(cor_phaseClass7i_V_9),
+    .cor_phaseClass7i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o),
+    .cor_phaseClass7i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o_ap_vld),
+    .cor_phaseClass7q_V_9_i(cor_phaseClass7q_V_9),
+    .cor_phaseClass7q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o),
+    .cor_phaseClass7q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o_ap_vld),
+    .cor_phaseClass7i_V_8_i(cor_phaseClass7i_V_8),
+    .cor_phaseClass7i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o),
+    .cor_phaseClass7i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o_ap_vld),
+    .cor_phaseClass7q_V_8_i(cor_phaseClass7q_V_8),
+    .cor_phaseClass7q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o),
+    .cor_phaseClass7q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o_ap_vld),
+    .cor_phaseClass7i_V_7_i(cor_phaseClass7i_V_7),
+    .cor_phaseClass7i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o),
+    .cor_phaseClass7i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o_ap_vld),
+    .cor_phaseClass7q_V_7_i(cor_phaseClass7q_V_7),
+    .cor_phaseClass7q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o),
+    .cor_phaseClass7q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o_ap_vld),
+    .cor_phaseClass7i_V_6_i(cor_phaseClass7i_V_6),
+    .cor_phaseClass7i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o),
+    .cor_phaseClass7i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o_ap_vld),
+    .cor_phaseClass7q_V_6_i(cor_phaseClass7q_V_6),
+    .cor_phaseClass7q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o),
+    .cor_phaseClass7q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o_ap_vld),
+    .cor_phaseClass7i_V_5_i(cor_phaseClass7i_V_5),
+    .cor_phaseClass7i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o),
+    .cor_phaseClass7i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o_ap_vld),
+    .cor_phaseClass7q_V_5_i(cor_phaseClass7q_V_5),
+    .cor_phaseClass7q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o),
+    .cor_phaseClass7q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o_ap_vld),
+    .cor_phaseClass7i_V_4_i(cor_phaseClass7i_V_4),
+    .cor_phaseClass7i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o),
+    .cor_phaseClass7i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o_ap_vld),
+    .cor_phaseClass7q_V_4_i(cor_phaseClass7q_V_4),
+    .cor_phaseClass7q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o),
+    .cor_phaseClass7q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o_ap_vld),
+    .cor_phaseClass7i_V_3_i(cor_phaseClass7i_V_3),
+    .cor_phaseClass7i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o),
+    .cor_phaseClass7i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o_ap_vld),
+    .cor_phaseClass7q_V_3_i(cor_phaseClass7q_V_3),
+    .cor_phaseClass7q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o),
+    .cor_phaseClass7q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o_ap_vld),
+    .cor_phaseClass7i_V_2_i(cor_phaseClass7i_V_2),
+    .cor_phaseClass7i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o),
+    .cor_phaseClass7i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o_ap_vld),
+    .cor_phaseClass7q_V_2_i(cor_phaseClass7q_V_2),
+    .cor_phaseClass7q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o),
+    .cor_phaseClass7q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o_ap_vld),
+    .cor_phaseClass7i_V_1_i(cor_phaseClass7i_V_1),
+    .cor_phaseClass7i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o),
+    .cor_phaseClass7i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o_ap_vld),
+    .cor_phaseClass7q_V_1_i(cor_phaseClass7q_V_1),
+    .cor_phaseClass7q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o),
+    .cor_phaseClass7q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o_ap_vld),
+    .cor_phaseClass7i_V_0_i(cor_phaseClass7i_V_0),
+    .cor_phaseClass7i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o),
+    .cor_phaseClass7i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o_ap_vld),
+    .cor_phaseClass7q_V_0_i(cor_phaseClass7q_V_0),
+    .cor_phaseClass7q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o),
+    .cor_phaseClass7q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o_ap_vld),
+    .cor_phaseClass8i_V_14_i(cor_phaseClass8i_V_14),
+    .cor_phaseClass8i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o),
+    .cor_phaseClass8i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o_ap_vld),
+    .cor_phaseClass8i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15),
+    .cor_phaseClass8i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15_ap_vld),
+    .cor_phaseClass8q_V_14_i(cor_phaseClass8q_V_14),
+    .cor_phaseClass8q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o),
+    .cor_phaseClass8q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o_ap_vld),
+    .cor_phaseClass8q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15),
+    .cor_phaseClass8q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15_ap_vld),
+    .cor_phaseClass8i_V_13_i(cor_phaseClass8i_V_13),
+    .cor_phaseClass8i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o),
+    .cor_phaseClass8i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o_ap_vld),
+    .cor_phaseClass8q_V_13_i(cor_phaseClass8q_V_13),
+    .cor_phaseClass8q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o),
+    .cor_phaseClass8q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o_ap_vld),
+    .cor_phaseClass8i_V_12_i(cor_phaseClass8i_V_12),
+    .cor_phaseClass8i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o),
+    .cor_phaseClass8i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o_ap_vld),
+    .cor_phaseClass8q_V_12_i(cor_phaseClass8q_V_12),
+    .cor_phaseClass8q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o),
+    .cor_phaseClass8q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o_ap_vld),
+    .cor_phaseClass8i_V_11_i(cor_phaseClass8i_V_11),
+    .cor_phaseClass8i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o),
+    .cor_phaseClass8i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o_ap_vld),
+    .cor_phaseClass8q_V_11_i(cor_phaseClass8q_V_11),
+    .cor_phaseClass8q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o),
+    .cor_phaseClass8q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o_ap_vld),
+    .cor_phaseClass8i_V_10_i(cor_phaseClass8i_V_10),
+    .cor_phaseClass8i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o),
+    .cor_phaseClass8i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o_ap_vld),
+    .cor_phaseClass8q_V_10_i(cor_phaseClass8q_V_10),
+    .cor_phaseClass8q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o),
+    .cor_phaseClass8q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o_ap_vld),
+    .cor_phaseClass8i_V_9_i(cor_phaseClass8i_V_9),
+    .cor_phaseClass8i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o),
+    .cor_phaseClass8i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o_ap_vld),
+    .cor_phaseClass8q_V_9_i(cor_phaseClass8q_V_9),
+    .cor_phaseClass8q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o),
+    .cor_phaseClass8q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o_ap_vld),
+    .cor_phaseClass8i_V_8_i(cor_phaseClass8i_V_8),
+    .cor_phaseClass8i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o),
+    .cor_phaseClass8i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o_ap_vld),
+    .cor_phaseClass8q_V_8_i(cor_phaseClass8q_V_8),
+    .cor_phaseClass8q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o),
+    .cor_phaseClass8q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o_ap_vld),
+    .cor_phaseClass8i_V_7_i(cor_phaseClass8i_V_7),
+    .cor_phaseClass8i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o),
+    .cor_phaseClass8i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o_ap_vld),
+    .cor_phaseClass8q_V_7_i(cor_phaseClass8q_V_7),
+    .cor_phaseClass8q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o),
+    .cor_phaseClass8q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o_ap_vld),
+    .cor_phaseClass8i_V_6_i(cor_phaseClass8i_V_6),
+    .cor_phaseClass8i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o),
+    .cor_phaseClass8i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o_ap_vld),
+    .cor_phaseClass8q_V_6_i(cor_phaseClass8q_V_6),
+    .cor_phaseClass8q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o),
+    .cor_phaseClass8q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o_ap_vld),
+    .cor_phaseClass8i_V_5_i(cor_phaseClass8i_V_5),
+    .cor_phaseClass8i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o),
+    .cor_phaseClass8i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o_ap_vld),
+    .cor_phaseClass8q_V_5_i(cor_phaseClass8q_V_5),
+    .cor_phaseClass8q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o),
+    .cor_phaseClass8q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o_ap_vld),
+    .cor_phaseClass8i_V_4_i(cor_phaseClass8i_V_4),
+    .cor_phaseClass8i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o),
+    .cor_phaseClass8i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o_ap_vld),
+    .cor_phaseClass8q_V_4_i(cor_phaseClass8q_V_4),
+    .cor_phaseClass8q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o),
+    .cor_phaseClass8q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o_ap_vld),
+    .cor_phaseClass8i_V_3_i(cor_phaseClass8i_V_3),
+    .cor_phaseClass8i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o),
+    .cor_phaseClass8i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o_ap_vld),
+    .cor_phaseClass8q_V_3_i(cor_phaseClass8q_V_3),
+    .cor_phaseClass8q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o),
+    .cor_phaseClass8q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o_ap_vld),
+    .cor_phaseClass8i_V_2_i(cor_phaseClass8i_V_2),
+    .cor_phaseClass8i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o),
+    .cor_phaseClass8i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o_ap_vld),
+    .cor_phaseClass8q_V_2_i(cor_phaseClass8q_V_2),
+    .cor_phaseClass8q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o),
+    .cor_phaseClass8q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o_ap_vld),
+    .cor_phaseClass8i_V_1_i(cor_phaseClass8i_V_1),
+    .cor_phaseClass8i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o),
+    .cor_phaseClass8i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o_ap_vld),
+    .cor_phaseClass8q_V_1_i(cor_phaseClass8q_V_1),
+    .cor_phaseClass8q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o),
+    .cor_phaseClass8q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o_ap_vld),
+    .cor_phaseClass8i_V_0_i(cor_phaseClass8i_V_0),
+    .cor_phaseClass8i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o),
+    .cor_phaseClass8i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o_ap_vld),
+    .cor_phaseClass8q_V_0_i(cor_phaseClass8q_V_0),
+    .cor_phaseClass8q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o),
+    .cor_phaseClass8q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o_ap_vld),
+    .cor_phaseClass9i_V_14_i(cor_phaseClass9i_V_14),
+    .cor_phaseClass9i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o),
+    .cor_phaseClass9i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o_ap_vld),
+    .cor_phaseClass9i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15),
+    .cor_phaseClass9i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15_ap_vld),
+    .cor_phaseClass9q_V_14_i(cor_phaseClass9q_V_14),
+    .cor_phaseClass9q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o),
+    .cor_phaseClass9q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o_ap_vld),
+    .cor_phaseClass9q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15),
+    .cor_phaseClass9q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15_ap_vld),
+    .cor_phaseClass9i_V_13_i(cor_phaseClass9i_V_13),
+    .cor_phaseClass9i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o),
+    .cor_phaseClass9i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o_ap_vld),
+    .cor_phaseClass9q_V_13_i(cor_phaseClass9q_V_13),
+    .cor_phaseClass9q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o),
+    .cor_phaseClass9q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o_ap_vld),
+    .cor_phaseClass9i_V_12_i(cor_phaseClass9i_V_12),
+    .cor_phaseClass9i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o),
+    .cor_phaseClass9i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o_ap_vld),
+    .cor_phaseClass9q_V_12_i(cor_phaseClass9q_V_12),
+    .cor_phaseClass9q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o),
+    .cor_phaseClass9q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o_ap_vld),
+    .cor_phaseClass9i_V_11_i(cor_phaseClass9i_V_11),
+    .cor_phaseClass9i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o),
+    .cor_phaseClass9i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o_ap_vld),
+    .cor_phaseClass9q_V_11_i(cor_phaseClass9q_V_11),
+    .cor_phaseClass9q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o),
+    .cor_phaseClass9q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o_ap_vld),
+    .cor_phaseClass9i_V_10_i(cor_phaseClass9i_V_10),
+    .cor_phaseClass9i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o),
+    .cor_phaseClass9i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o_ap_vld),
+    .cor_phaseClass9q_V_10_i(cor_phaseClass9q_V_10),
+    .cor_phaseClass9q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o),
+    .cor_phaseClass9q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o_ap_vld),
+    .cor_phaseClass9i_V_9_i(cor_phaseClass9i_V_9),
+    .cor_phaseClass9i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o),
+    .cor_phaseClass9i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o_ap_vld),
+    .cor_phaseClass9q_V_9_i(cor_phaseClass9q_V_9),
+    .cor_phaseClass9q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o),
+    .cor_phaseClass9q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o_ap_vld),
+    .cor_phaseClass9i_V_8_i(cor_phaseClass9i_V_8),
+    .cor_phaseClass9i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o),
+    .cor_phaseClass9i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o_ap_vld),
+    .cor_phaseClass9q_V_8_i(cor_phaseClass9q_V_8),
+    .cor_phaseClass9q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o),
+    .cor_phaseClass9q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o_ap_vld),
+    .cor_phaseClass9i_V_7_i(cor_phaseClass9i_V_7),
+    .cor_phaseClass9i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o),
+    .cor_phaseClass9i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o_ap_vld),
+    .cor_phaseClass9q_V_7_i(cor_phaseClass9q_V_7),
+    .cor_phaseClass9q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o),
+    .cor_phaseClass9q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o_ap_vld),
+    .cor_phaseClass9i_V_6_i(cor_phaseClass9i_V_6),
+    .cor_phaseClass9i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o),
+    .cor_phaseClass9i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o_ap_vld),
+    .cor_phaseClass9q_V_6_i(cor_phaseClass9q_V_6),
+    .cor_phaseClass9q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o),
+    .cor_phaseClass9q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o_ap_vld),
+    .cor_phaseClass9i_V_5_i(cor_phaseClass9i_V_5),
+    .cor_phaseClass9i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o),
+    .cor_phaseClass9i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o_ap_vld),
+    .cor_phaseClass9q_V_5_i(cor_phaseClass9q_V_5),
+    .cor_phaseClass9q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o),
+    .cor_phaseClass9q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o_ap_vld),
+    .cor_phaseClass9i_V_4_i(cor_phaseClass9i_V_4),
+    .cor_phaseClass9i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o),
+    .cor_phaseClass9i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o_ap_vld),
+    .cor_phaseClass9q_V_4_i(cor_phaseClass9q_V_4),
+    .cor_phaseClass9q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o),
+    .cor_phaseClass9q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o_ap_vld),
+    .cor_phaseClass9i_V_3_i(cor_phaseClass9i_V_3),
+    .cor_phaseClass9i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o),
+    .cor_phaseClass9i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o_ap_vld),
+    .cor_phaseClass9q_V_3_i(cor_phaseClass9q_V_3),
+    .cor_phaseClass9q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o),
+    .cor_phaseClass9q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o_ap_vld),
+    .cor_phaseClass9i_V_2_i(cor_phaseClass9i_V_2),
+    .cor_phaseClass9i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o),
+    .cor_phaseClass9i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o_ap_vld),
+    .cor_phaseClass9q_V_2_i(cor_phaseClass9q_V_2),
+    .cor_phaseClass9q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o),
+    .cor_phaseClass9q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o_ap_vld),
+    .cor_phaseClass9i_V_1_i(cor_phaseClass9i_V_1),
+    .cor_phaseClass9i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o),
+    .cor_phaseClass9i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o_ap_vld),
+    .cor_phaseClass9q_V_1_i(cor_phaseClass9q_V_1),
+    .cor_phaseClass9q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o),
+    .cor_phaseClass9q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o_ap_vld),
+    .cor_phaseClass9i_V_0_i(cor_phaseClass9i_V_0),
+    .cor_phaseClass9i_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o),
+    .cor_phaseClass9i_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o_ap_vld),
+    .cor_phaseClass9q_V_0_i(cor_phaseClass9q_V_0),
+    .cor_phaseClass9q_V_0_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o),
+    .cor_phaseClass9q_V_0_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o_ap_vld),
+    .cor_phaseClass10i_V_14_i(cor_phaseClass10i_V_14),
+    .cor_phaseClass10i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o),
+    .cor_phaseClass10i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o_ap_vld),
+    .cor_phaseClass10i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15),
+    .cor_phaseClass10i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15_ap_vld),
+    .cor_phaseClass10q_V_14_i(cor_phaseClass10q_V_14),
+    .cor_phaseClass10q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o),
+    .cor_phaseClass10q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o_ap_vld),
+    .cor_phaseClass10q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15),
+    .cor_phaseClass10q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15_ap_vld),
+    .cor_phaseClass10i_V_13_i(cor_phaseClass10i_V_13),
+    .cor_phaseClass10i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o),
+    .cor_phaseClass10i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o_ap_vld),
+    .cor_phaseClass10q_V_13_i(cor_phaseClass10q_V_13),
+    .cor_phaseClass10q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o),
+    .cor_phaseClass10q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o_ap_vld),
+    .cor_phaseClass10i_V_12_i(cor_phaseClass10i_V_12),
+    .cor_phaseClass10i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o),
+    .cor_phaseClass10i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o_ap_vld),
+    .cor_phaseClass10q_V_12_i(cor_phaseClass10q_V_12),
+    .cor_phaseClass10q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o),
+    .cor_phaseClass10q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o_ap_vld),
+    .cor_phaseClass10i_V_11_i(cor_phaseClass10i_V_11),
+    .cor_phaseClass10i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o),
+    .cor_phaseClass10i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o_ap_vld),
+    .cor_phaseClass10q_V_11_i(cor_phaseClass10q_V_11),
+    .cor_phaseClass10q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o),
+    .cor_phaseClass10q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o_ap_vld),
+    .cor_phaseClass10i_V_10_i(cor_phaseClass10i_V_10),
+    .cor_phaseClass10i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o),
+    .cor_phaseClass10i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o_ap_vld),
+    .cor_phaseClass10q_V_10_i(cor_phaseClass10q_V_10),
+    .cor_phaseClass10q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o),
+    .cor_phaseClass10q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o_ap_vld),
+    .cor_phaseClass10i_V_9_i(cor_phaseClass10i_V_9),
+    .cor_phaseClass10i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o),
+    .cor_phaseClass10i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o_ap_vld),
+    .cor_phaseClass10q_V_9_i(cor_phaseClass10q_V_9),
+    .cor_phaseClass10q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o),
+    .cor_phaseClass10q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o_ap_vld),
+    .cor_phaseClass10i_V_8_i(cor_phaseClass10i_V_8),
+    .cor_phaseClass10i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o),
+    .cor_phaseClass10i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o_ap_vld),
+    .cor_phaseClass10q_V_8_i(cor_phaseClass10q_V_8),
+    .cor_phaseClass10q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o),
+    .cor_phaseClass10q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o_ap_vld),
+    .cor_phaseClass10i_V_7_i(cor_phaseClass10i_V_7),
+    .cor_phaseClass10i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o),
+    .cor_phaseClass10i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o_ap_vld),
+    .cor_phaseClass10q_V_7_i(cor_phaseClass10q_V_7),
+    .cor_phaseClass10q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o),
+    .cor_phaseClass10q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o_ap_vld),
+    .cor_phaseClass10i_V_6_i(cor_phaseClass10i_V_6),
+    .cor_phaseClass10i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o),
+    .cor_phaseClass10i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o_ap_vld),
+    .cor_phaseClass10q_V_6_i(cor_phaseClass10q_V_6),
+    .cor_phaseClass10q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o),
+    .cor_phaseClass10q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o_ap_vld),
+    .cor_phaseClass10i_V_5_i(cor_phaseClass10i_V_5),
+    .cor_phaseClass10i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o),
+    .cor_phaseClass10i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o_ap_vld),
+    .cor_phaseClass10q_V_5_i(cor_phaseClass10q_V_5),
+    .cor_phaseClass10q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o),
+    .cor_phaseClass10q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o_ap_vld),
+    .cor_phaseClass10i_V_4_i(cor_phaseClass10i_V_4),
+    .cor_phaseClass10i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o),
+    .cor_phaseClass10i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o_ap_vld),
+    .cor_phaseClass10q_V_4_i(cor_phaseClass10q_V_4),
+    .cor_phaseClass10q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o),
+    .cor_phaseClass10q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o_ap_vld),
+    .cor_phaseClass10i_V_3_i(cor_phaseClass10i_V_3),
+    .cor_phaseClass10i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o),
+    .cor_phaseClass10i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o_ap_vld),
+    .cor_phaseClass10q_V_3_i(cor_phaseClass10q_V_3),
+    .cor_phaseClass10q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o),
+    .cor_phaseClass10q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o_ap_vld),
+    .cor_phaseClass10i_V_2_i(cor_phaseClass10i_V_2),
+    .cor_phaseClass10i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o),
+    .cor_phaseClass10i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o_ap_vld),
+    .cor_phaseClass10q_V_2_i(cor_phaseClass10q_V_2),
+    .cor_phaseClass10q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o),
+    .cor_phaseClass10q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o_ap_vld),
+    .cor_phaseClass10i_V_1_i(cor_phaseClass10i_V_1),
+    .cor_phaseClass10i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o),
+    .cor_phaseClass10i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o_ap_vld),
+    .cor_phaseClass10q_V_1_i(cor_phaseClass10q_V_1),
+    .cor_phaseClass10q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o),
+    .cor_phaseClass10q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o_ap_vld),
+    .cor_phaseClass10i_V_s_i(cor_phaseClass10i_V_s),
+    .cor_phaseClass10i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o),
+    .cor_phaseClass10i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o_ap_vld),
+    .cor_phaseClass10q_V_s_i(cor_phaseClass10q_V_s),
+    .cor_phaseClass10q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o),
+    .cor_phaseClass10q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o_ap_vld),
+    .cor_phaseClass11i_V_14_i(cor_phaseClass11i_V_14),
+    .cor_phaseClass11i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o),
+    .cor_phaseClass11i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o_ap_vld),
+    .cor_phaseClass11i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15),
+    .cor_phaseClass11i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15_ap_vld),
+    .cor_phaseClass11q_V_14_i(cor_phaseClass11q_V_14),
+    .cor_phaseClass11q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o),
+    .cor_phaseClass11q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o_ap_vld),
+    .cor_phaseClass11q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15),
+    .cor_phaseClass11q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15_ap_vld),
+    .cor_phaseClass11i_V_13_i(cor_phaseClass11i_V_13),
+    .cor_phaseClass11i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o),
+    .cor_phaseClass11i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o_ap_vld),
+    .cor_phaseClass11q_V_13_i(cor_phaseClass11q_V_13),
+    .cor_phaseClass11q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o),
+    .cor_phaseClass11q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o_ap_vld),
+    .cor_phaseClass11i_V_12_i(cor_phaseClass11i_V_12),
+    .cor_phaseClass11i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o),
+    .cor_phaseClass11i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o_ap_vld),
+    .cor_phaseClass11q_V_12_i(cor_phaseClass11q_V_12),
+    .cor_phaseClass11q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o),
+    .cor_phaseClass11q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o_ap_vld),
+    .cor_phaseClass11i_V_11_i(cor_phaseClass11i_V_11),
+    .cor_phaseClass11i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o),
+    .cor_phaseClass11i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o_ap_vld),
+    .cor_phaseClass11q_V_11_i(cor_phaseClass11q_V_11),
+    .cor_phaseClass11q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o),
+    .cor_phaseClass11q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o_ap_vld),
+    .cor_phaseClass11i_V_10_i(cor_phaseClass11i_V_10),
+    .cor_phaseClass11i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o),
+    .cor_phaseClass11i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o_ap_vld),
+    .cor_phaseClass11q_V_10_i(cor_phaseClass11q_V_10),
+    .cor_phaseClass11q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o),
+    .cor_phaseClass11q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o_ap_vld),
+    .cor_phaseClass11i_V_9_i(cor_phaseClass11i_V_9),
+    .cor_phaseClass11i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o),
+    .cor_phaseClass11i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o_ap_vld),
+    .cor_phaseClass11q_V_9_i(cor_phaseClass11q_V_9),
+    .cor_phaseClass11q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o),
+    .cor_phaseClass11q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o_ap_vld),
+    .cor_phaseClass11i_V_8_i(cor_phaseClass11i_V_8),
+    .cor_phaseClass11i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o),
+    .cor_phaseClass11i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o_ap_vld),
+    .cor_phaseClass11q_V_8_i(cor_phaseClass11q_V_8),
+    .cor_phaseClass11q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o),
+    .cor_phaseClass11q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o_ap_vld),
+    .cor_phaseClass11i_V_7_i(cor_phaseClass11i_V_7),
+    .cor_phaseClass11i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o),
+    .cor_phaseClass11i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o_ap_vld),
+    .cor_phaseClass11q_V_7_i(cor_phaseClass11q_V_7),
+    .cor_phaseClass11q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o),
+    .cor_phaseClass11q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o_ap_vld),
+    .cor_phaseClass11i_V_6_i(cor_phaseClass11i_V_6),
+    .cor_phaseClass11i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o),
+    .cor_phaseClass11i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o_ap_vld),
+    .cor_phaseClass11q_V_6_i(cor_phaseClass11q_V_6),
+    .cor_phaseClass11q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o),
+    .cor_phaseClass11q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o_ap_vld),
+    .cor_phaseClass11i_V_5_i(cor_phaseClass11i_V_5),
+    .cor_phaseClass11i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o),
+    .cor_phaseClass11i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o_ap_vld),
+    .cor_phaseClass11q_V_5_i(cor_phaseClass11q_V_5),
+    .cor_phaseClass11q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o),
+    .cor_phaseClass11q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o_ap_vld),
+    .cor_phaseClass11i_V_4_i(cor_phaseClass11i_V_4),
+    .cor_phaseClass11i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o),
+    .cor_phaseClass11i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o_ap_vld),
+    .cor_phaseClass11q_V_4_i(cor_phaseClass11q_V_4),
+    .cor_phaseClass11q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o),
+    .cor_phaseClass11q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o_ap_vld),
+    .cor_phaseClass11i_V_3_i(cor_phaseClass11i_V_3),
+    .cor_phaseClass11i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o),
+    .cor_phaseClass11i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o_ap_vld),
+    .cor_phaseClass11q_V_3_i(cor_phaseClass11q_V_3),
+    .cor_phaseClass11q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o),
+    .cor_phaseClass11q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o_ap_vld),
+    .cor_phaseClass11i_V_2_i(cor_phaseClass11i_V_2),
+    .cor_phaseClass11i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o),
+    .cor_phaseClass11i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o_ap_vld),
+    .cor_phaseClass11q_V_2_i(cor_phaseClass11q_V_2),
+    .cor_phaseClass11q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o),
+    .cor_phaseClass11q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o_ap_vld),
+    .cor_phaseClass11i_V_1_i(cor_phaseClass11i_V_1),
+    .cor_phaseClass11i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o),
+    .cor_phaseClass11i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o_ap_vld),
+    .cor_phaseClass11q_V_1_i(cor_phaseClass11q_V_1),
+    .cor_phaseClass11q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o),
+    .cor_phaseClass11q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o_ap_vld),
+    .cor_phaseClass11i_V_s_i(cor_phaseClass11i_V_s),
+    .cor_phaseClass11i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o),
+    .cor_phaseClass11i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o_ap_vld),
+    .cor_phaseClass11q_V_s_i(cor_phaseClass11q_V_s),
+    .cor_phaseClass11q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o),
+    .cor_phaseClass11q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o_ap_vld),
+    .cor_phaseClass12i_V_14_i(cor_phaseClass12i_V_14),
+    .cor_phaseClass12i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o),
+    .cor_phaseClass12i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o_ap_vld),
+    .cor_phaseClass12i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15),
+    .cor_phaseClass12i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15_ap_vld),
+    .cor_phaseClass12q_V_14_i(cor_phaseClass12q_V_14),
+    .cor_phaseClass12q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o),
+    .cor_phaseClass12q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o_ap_vld),
+    .cor_phaseClass12q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15),
+    .cor_phaseClass12q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15_ap_vld),
+    .cor_phaseClass12i_V_13_i(cor_phaseClass12i_V_13),
+    .cor_phaseClass12i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o),
+    .cor_phaseClass12i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o_ap_vld),
+    .cor_phaseClass12q_V_13_i(cor_phaseClass12q_V_13),
+    .cor_phaseClass12q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o),
+    .cor_phaseClass12q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o_ap_vld),
+    .cor_phaseClass12i_V_12_i(cor_phaseClass12i_V_12),
+    .cor_phaseClass12i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o),
+    .cor_phaseClass12i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o_ap_vld),
+    .cor_phaseClass12q_V_12_i(cor_phaseClass12q_V_12),
+    .cor_phaseClass12q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o),
+    .cor_phaseClass12q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o_ap_vld),
+    .cor_phaseClass12i_V_11_i(cor_phaseClass12i_V_11),
+    .cor_phaseClass12i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o),
+    .cor_phaseClass12i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o_ap_vld),
+    .cor_phaseClass12q_V_11_i(cor_phaseClass12q_V_11),
+    .cor_phaseClass12q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o),
+    .cor_phaseClass12q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o_ap_vld),
+    .cor_phaseClass12i_V_10_i(cor_phaseClass12i_V_10),
+    .cor_phaseClass12i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o),
+    .cor_phaseClass12i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o_ap_vld),
+    .cor_phaseClass12q_V_10_i(cor_phaseClass12q_V_10),
+    .cor_phaseClass12q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o),
+    .cor_phaseClass12q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o_ap_vld),
+    .cor_phaseClass12i_V_9_i(cor_phaseClass12i_V_9),
+    .cor_phaseClass12i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o),
+    .cor_phaseClass12i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o_ap_vld),
+    .cor_phaseClass12q_V_9_i(cor_phaseClass12q_V_9),
+    .cor_phaseClass12q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o),
+    .cor_phaseClass12q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o_ap_vld),
+    .cor_phaseClass12i_V_8_i(cor_phaseClass12i_V_8),
+    .cor_phaseClass12i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o),
+    .cor_phaseClass12i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o_ap_vld),
+    .cor_phaseClass12q_V_8_i(cor_phaseClass12q_V_8),
+    .cor_phaseClass12q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o),
+    .cor_phaseClass12q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o_ap_vld),
+    .cor_phaseClass12i_V_7_i(cor_phaseClass12i_V_7),
+    .cor_phaseClass12i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o),
+    .cor_phaseClass12i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o_ap_vld),
+    .cor_phaseClass12q_V_7_i(cor_phaseClass12q_V_7),
+    .cor_phaseClass12q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o),
+    .cor_phaseClass12q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o_ap_vld),
+    .cor_phaseClass12i_V_6_i(cor_phaseClass12i_V_6),
+    .cor_phaseClass12i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o),
+    .cor_phaseClass12i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o_ap_vld),
+    .cor_phaseClass12q_V_6_i(cor_phaseClass12q_V_6),
+    .cor_phaseClass12q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o),
+    .cor_phaseClass12q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o_ap_vld),
+    .cor_phaseClass12i_V_5_i(cor_phaseClass12i_V_5),
+    .cor_phaseClass12i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o),
+    .cor_phaseClass12i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o_ap_vld),
+    .cor_phaseClass12q_V_5_i(cor_phaseClass12q_V_5),
+    .cor_phaseClass12q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o),
+    .cor_phaseClass12q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o_ap_vld),
+    .cor_phaseClass12i_V_4_i(cor_phaseClass12i_V_4),
+    .cor_phaseClass12i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o),
+    .cor_phaseClass12i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o_ap_vld),
+    .cor_phaseClass12q_V_4_i(cor_phaseClass12q_V_4),
+    .cor_phaseClass12q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o),
+    .cor_phaseClass12q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o_ap_vld),
+    .cor_phaseClass12i_V_3_i(cor_phaseClass12i_V_3),
+    .cor_phaseClass12i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o),
+    .cor_phaseClass12i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o_ap_vld),
+    .cor_phaseClass12q_V_3_i(cor_phaseClass12q_V_3),
+    .cor_phaseClass12q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o),
+    .cor_phaseClass12q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o_ap_vld),
+    .cor_phaseClass12i_V_2_i(cor_phaseClass12i_V_2),
+    .cor_phaseClass12i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o),
+    .cor_phaseClass12i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o_ap_vld),
+    .cor_phaseClass12q_V_2_i(cor_phaseClass12q_V_2),
+    .cor_phaseClass12q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o),
+    .cor_phaseClass12q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o_ap_vld),
+    .cor_phaseClass12i_V_1_i(cor_phaseClass12i_V_1),
+    .cor_phaseClass12i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o),
+    .cor_phaseClass12i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o_ap_vld),
+    .cor_phaseClass12q_V_1_i(cor_phaseClass12q_V_1),
+    .cor_phaseClass12q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o),
+    .cor_phaseClass12q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o_ap_vld),
+    .cor_phaseClass12i_V_s_i(cor_phaseClass12i_V_s),
+    .cor_phaseClass12i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o),
+    .cor_phaseClass12i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o_ap_vld),
+    .cor_phaseClass12q_V_s_i(cor_phaseClass12q_V_s),
+    .cor_phaseClass12q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o),
+    .cor_phaseClass12q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o_ap_vld),
+    .cor_phaseClass13i_V_14_i(cor_phaseClass13i_V_14),
+    .cor_phaseClass13i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o),
+    .cor_phaseClass13i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o_ap_vld),
+    .cor_phaseClass13i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15),
+    .cor_phaseClass13i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15_ap_vld),
+    .cor_phaseClass13q_V_14_i(cor_phaseClass13q_V_14),
+    .cor_phaseClass13q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o),
+    .cor_phaseClass13q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o_ap_vld),
+    .cor_phaseClass13q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15),
+    .cor_phaseClass13q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15_ap_vld),
+    .cor_phaseClass13i_V_13_i(cor_phaseClass13i_V_13),
+    .cor_phaseClass13i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o),
+    .cor_phaseClass13i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o_ap_vld),
+    .cor_phaseClass13q_V_13_i(cor_phaseClass13q_V_13),
+    .cor_phaseClass13q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o),
+    .cor_phaseClass13q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o_ap_vld),
+    .cor_phaseClass13i_V_12_i(cor_phaseClass13i_V_12),
+    .cor_phaseClass13i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o),
+    .cor_phaseClass13i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o_ap_vld),
+    .cor_phaseClass13q_V_12_i(cor_phaseClass13q_V_12),
+    .cor_phaseClass13q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o),
+    .cor_phaseClass13q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o_ap_vld),
+    .cor_phaseClass13i_V_11_i(cor_phaseClass13i_V_11),
+    .cor_phaseClass13i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o),
+    .cor_phaseClass13i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o_ap_vld),
+    .cor_phaseClass13q_V_11_i(cor_phaseClass13q_V_11),
+    .cor_phaseClass13q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o),
+    .cor_phaseClass13q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o_ap_vld),
+    .cor_phaseClass13i_V_10_i(cor_phaseClass13i_V_10),
+    .cor_phaseClass13i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o),
+    .cor_phaseClass13i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o_ap_vld),
+    .cor_phaseClass13q_V_10_i(cor_phaseClass13q_V_10),
+    .cor_phaseClass13q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o),
+    .cor_phaseClass13q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o_ap_vld),
+    .cor_phaseClass13i_V_9_i(cor_phaseClass13i_V_9),
+    .cor_phaseClass13i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o),
+    .cor_phaseClass13i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o_ap_vld),
+    .cor_phaseClass13q_V_9_i(cor_phaseClass13q_V_9),
+    .cor_phaseClass13q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o),
+    .cor_phaseClass13q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o_ap_vld),
+    .cor_phaseClass13i_V_8_i(cor_phaseClass13i_V_8),
+    .cor_phaseClass13i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o),
+    .cor_phaseClass13i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o_ap_vld),
+    .cor_phaseClass13q_V_8_i(cor_phaseClass13q_V_8),
+    .cor_phaseClass13q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o),
+    .cor_phaseClass13q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o_ap_vld),
+    .cor_phaseClass13i_V_7_i(cor_phaseClass13i_V_7),
+    .cor_phaseClass13i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o),
+    .cor_phaseClass13i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o_ap_vld),
+    .cor_phaseClass13q_V_7_i(cor_phaseClass13q_V_7),
+    .cor_phaseClass13q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o),
+    .cor_phaseClass13q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o_ap_vld),
+    .cor_phaseClass13i_V_6_i(cor_phaseClass13i_V_6),
+    .cor_phaseClass13i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o),
+    .cor_phaseClass13i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o_ap_vld),
+    .cor_phaseClass13q_V_6_i(cor_phaseClass13q_V_6),
+    .cor_phaseClass13q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o),
+    .cor_phaseClass13q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o_ap_vld),
+    .cor_phaseClass13i_V_5_i(cor_phaseClass13i_V_5),
+    .cor_phaseClass13i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o),
+    .cor_phaseClass13i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o_ap_vld),
+    .cor_phaseClass13q_V_5_i(cor_phaseClass13q_V_5),
+    .cor_phaseClass13q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o),
+    .cor_phaseClass13q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o_ap_vld),
+    .cor_phaseClass13i_V_4_i(cor_phaseClass13i_V_4),
+    .cor_phaseClass13i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o),
+    .cor_phaseClass13i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o_ap_vld),
+    .cor_phaseClass13q_V_4_i(cor_phaseClass13q_V_4),
+    .cor_phaseClass13q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o),
+    .cor_phaseClass13q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o_ap_vld),
+    .cor_phaseClass13i_V_3_i(cor_phaseClass13i_V_3),
+    .cor_phaseClass13i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o),
+    .cor_phaseClass13i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o_ap_vld),
+    .cor_phaseClass13q_V_3_i(cor_phaseClass13q_V_3),
+    .cor_phaseClass13q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o),
+    .cor_phaseClass13q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o_ap_vld),
+    .cor_phaseClass13i_V_2_i(cor_phaseClass13i_V_2),
+    .cor_phaseClass13i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o),
+    .cor_phaseClass13i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o_ap_vld),
+    .cor_phaseClass13q_V_2_i(cor_phaseClass13q_V_2),
+    .cor_phaseClass13q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o),
+    .cor_phaseClass13q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o_ap_vld),
+    .cor_phaseClass13i_V_1_i(cor_phaseClass13i_V_1),
+    .cor_phaseClass13i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o),
+    .cor_phaseClass13i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o_ap_vld),
+    .cor_phaseClass13q_V_1_i(cor_phaseClass13q_V_1),
+    .cor_phaseClass13q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o),
+    .cor_phaseClass13q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o_ap_vld),
+    .cor_phaseClass13i_V_s_i(cor_phaseClass13i_V_s),
+    .cor_phaseClass13i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o),
+    .cor_phaseClass13i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o_ap_vld),
+    .cor_phaseClass13q_V_s_i(cor_phaseClass13q_V_s),
+    .cor_phaseClass13q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o),
+    .cor_phaseClass13q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o_ap_vld),
+    .cor_phaseClass14i_V_14_i(cor_phaseClass14i_V_14),
+    .cor_phaseClass14i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o),
+    .cor_phaseClass14i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o_ap_vld),
+    .cor_phaseClass14i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15),
+    .cor_phaseClass14i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15_ap_vld),
+    .cor_phaseClass14q_V_14_i(cor_phaseClass14q_V_14),
+    .cor_phaseClass14q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o),
+    .cor_phaseClass14q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o_ap_vld),
+    .cor_phaseClass14q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15),
+    .cor_phaseClass14q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15_ap_vld),
+    .cor_phaseClass14i_V_13_i(cor_phaseClass14i_V_13),
+    .cor_phaseClass14i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o),
+    .cor_phaseClass14i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o_ap_vld),
+    .cor_phaseClass14q_V_13_i(cor_phaseClass14q_V_13),
+    .cor_phaseClass14q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o),
+    .cor_phaseClass14q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o_ap_vld),
+    .cor_phaseClass14i_V_12_i(cor_phaseClass14i_V_12),
+    .cor_phaseClass14i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o),
+    .cor_phaseClass14i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o_ap_vld),
+    .cor_phaseClass14q_V_12_i(cor_phaseClass14q_V_12),
+    .cor_phaseClass14q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o),
+    .cor_phaseClass14q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o_ap_vld),
+    .cor_phaseClass14i_V_11_i(cor_phaseClass14i_V_11),
+    .cor_phaseClass14i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o),
+    .cor_phaseClass14i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o_ap_vld),
+    .cor_phaseClass14q_V_11_i(cor_phaseClass14q_V_11),
+    .cor_phaseClass14q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o),
+    .cor_phaseClass14q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o_ap_vld),
+    .cor_phaseClass14i_V_10_i(cor_phaseClass14i_V_10),
+    .cor_phaseClass14i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o),
+    .cor_phaseClass14i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o_ap_vld),
+    .cor_phaseClass14q_V_10_i(cor_phaseClass14q_V_10),
+    .cor_phaseClass14q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o),
+    .cor_phaseClass14q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o_ap_vld),
+    .cor_phaseClass14i_V_9_i(cor_phaseClass14i_V_9),
+    .cor_phaseClass14i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o),
+    .cor_phaseClass14i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o_ap_vld),
+    .cor_phaseClass14q_V_9_i(cor_phaseClass14q_V_9),
+    .cor_phaseClass14q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o),
+    .cor_phaseClass14q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o_ap_vld),
+    .cor_phaseClass14i_V_8_i(cor_phaseClass14i_V_8),
+    .cor_phaseClass14i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o),
+    .cor_phaseClass14i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o_ap_vld),
+    .cor_phaseClass14q_V_8_i(cor_phaseClass14q_V_8),
+    .cor_phaseClass14q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o),
+    .cor_phaseClass14q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o_ap_vld),
+    .cor_phaseClass14i_V_7_i(cor_phaseClass14i_V_7),
+    .cor_phaseClass14i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o),
+    .cor_phaseClass14i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o_ap_vld),
+    .cor_phaseClass14q_V_7_i(cor_phaseClass14q_V_7),
+    .cor_phaseClass14q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o),
+    .cor_phaseClass14q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o_ap_vld),
+    .cor_phaseClass14i_V_6_i(cor_phaseClass14i_V_6),
+    .cor_phaseClass14i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o),
+    .cor_phaseClass14i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o_ap_vld),
+    .cor_phaseClass14q_V_6_i(cor_phaseClass14q_V_6),
+    .cor_phaseClass14q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o),
+    .cor_phaseClass14q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o_ap_vld),
+    .cor_phaseClass14i_V_5_i(cor_phaseClass14i_V_5),
+    .cor_phaseClass14i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o),
+    .cor_phaseClass14i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o_ap_vld),
+    .cor_phaseClass14q_V_5_i(cor_phaseClass14q_V_5),
+    .cor_phaseClass14q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o),
+    .cor_phaseClass14q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o_ap_vld),
+    .cor_phaseClass14i_V_4_i(cor_phaseClass14i_V_4),
+    .cor_phaseClass14i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o),
+    .cor_phaseClass14i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o_ap_vld),
+    .cor_phaseClass14q_V_4_i(cor_phaseClass14q_V_4),
+    .cor_phaseClass14q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o),
+    .cor_phaseClass14q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o_ap_vld),
+    .cor_phaseClass14i_V_3_i(cor_phaseClass14i_V_3),
+    .cor_phaseClass14i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o),
+    .cor_phaseClass14i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o_ap_vld),
+    .cor_phaseClass14q_V_3_i(cor_phaseClass14q_V_3),
+    .cor_phaseClass14q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o),
+    .cor_phaseClass14q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o_ap_vld),
+    .cor_phaseClass14i_V_2_i(cor_phaseClass14i_V_2),
+    .cor_phaseClass14i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o),
+    .cor_phaseClass14i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o_ap_vld),
+    .cor_phaseClass14q_V_2_i(cor_phaseClass14q_V_2),
+    .cor_phaseClass14q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o),
+    .cor_phaseClass14q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o_ap_vld),
+    .cor_phaseClass14i_V_1_i(cor_phaseClass14i_V_1),
+    .cor_phaseClass14i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o),
+    .cor_phaseClass14i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o_ap_vld),
+    .cor_phaseClass14q_V_1_i(cor_phaseClass14q_V_1),
+    .cor_phaseClass14q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o),
+    .cor_phaseClass14q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o_ap_vld),
+    .cor_phaseClass14i_V_s_i(cor_phaseClass14i_V_s),
+    .cor_phaseClass14i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o),
+    .cor_phaseClass14i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o_ap_vld),
+    .cor_phaseClass14q_V_s_i(cor_phaseClass14q_V_s),
+    .cor_phaseClass14q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o),
+    .cor_phaseClass14q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o_ap_vld),
+    .cor_phaseClass15i_V_14_i(cor_phaseClass15i_V_14),
+    .cor_phaseClass15i_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o),
+    .cor_phaseClass15i_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o_ap_vld),
+    .cor_phaseClass15i_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15),
+    .cor_phaseClass15i_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15_ap_vld),
+    .cor_phaseClass15q_V_14_i(cor_phaseClass15q_V_14),
+    .cor_phaseClass15q_V_14_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o),
+    .cor_phaseClass15q_V_14_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o_ap_vld),
+    .cor_phaseClass15q_V_15(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15),
+    .cor_phaseClass15q_V_15_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15_ap_vld),
+    .cor_phaseClass15i_V_13_i(cor_phaseClass15i_V_13),
+    .cor_phaseClass15i_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o),
+    .cor_phaseClass15i_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o_ap_vld),
+    .cor_phaseClass15q_V_13_i(cor_phaseClass15q_V_13),
+    .cor_phaseClass15q_V_13_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o),
+    .cor_phaseClass15q_V_13_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o_ap_vld),
+    .cor_phaseClass15i_V_12_i(cor_phaseClass15i_V_12),
+    .cor_phaseClass15i_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o),
+    .cor_phaseClass15i_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o_ap_vld),
+    .cor_phaseClass15q_V_12_i(cor_phaseClass15q_V_12),
+    .cor_phaseClass15q_V_12_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o),
+    .cor_phaseClass15q_V_12_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o_ap_vld),
+    .cor_phaseClass15i_V_11_i(cor_phaseClass15i_V_11),
+    .cor_phaseClass15i_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o),
+    .cor_phaseClass15i_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o_ap_vld),
+    .cor_phaseClass15q_V_11_i(cor_phaseClass15q_V_11),
+    .cor_phaseClass15q_V_11_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o),
+    .cor_phaseClass15q_V_11_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o_ap_vld),
+    .cor_phaseClass15i_V_10_i(cor_phaseClass15i_V_10),
+    .cor_phaseClass15i_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o),
+    .cor_phaseClass15i_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o_ap_vld),
+    .cor_phaseClass15q_V_10_i(cor_phaseClass15q_V_10),
+    .cor_phaseClass15q_V_10_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o),
+    .cor_phaseClass15q_V_10_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o_ap_vld),
+    .cor_phaseClass15i_V_9_i(cor_phaseClass15i_V_9),
+    .cor_phaseClass15i_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o),
+    .cor_phaseClass15i_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o_ap_vld),
+    .cor_phaseClass15q_V_9_i(cor_phaseClass15q_V_9),
+    .cor_phaseClass15q_V_9_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o),
+    .cor_phaseClass15q_V_9_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o_ap_vld),
+    .cor_phaseClass15i_V_8_i(cor_phaseClass15i_V_8),
+    .cor_phaseClass15i_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o),
+    .cor_phaseClass15i_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o_ap_vld),
+    .cor_phaseClass15q_V_8_i(cor_phaseClass15q_V_8),
+    .cor_phaseClass15q_V_8_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o),
+    .cor_phaseClass15q_V_8_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o_ap_vld),
+    .cor_phaseClass15i_V_7_i(cor_phaseClass15i_V_7),
+    .cor_phaseClass15i_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o),
+    .cor_phaseClass15i_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o_ap_vld),
+    .cor_phaseClass15q_V_7_i(cor_phaseClass15q_V_7),
+    .cor_phaseClass15q_V_7_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o),
+    .cor_phaseClass15q_V_7_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o_ap_vld),
+    .cor_phaseClass15i_V_6_i(cor_phaseClass15i_V_6),
+    .cor_phaseClass15i_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o),
+    .cor_phaseClass15i_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o_ap_vld),
+    .cor_phaseClass15q_V_6_i(cor_phaseClass15q_V_6),
+    .cor_phaseClass15q_V_6_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o),
+    .cor_phaseClass15q_V_6_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o_ap_vld),
+    .cor_phaseClass15i_V_5_i(cor_phaseClass15i_V_5),
+    .cor_phaseClass15i_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o),
+    .cor_phaseClass15i_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o_ap_vld),
+    .cor_phaseClass15q_V_5_i(cor_phaseClass15q_V_5),
+    .cor_phaseClass15q_V_5_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o),
+    .cor_phaseClass15q_V_5_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o_ap_vld),
+    .cor_phaseClass15i_V_4_i(cor_phaseClass15i_V_4),
+    .cor_phaseClass15i_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o),
+    .cor_phaseClass15i_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o_ap_vld),
+    .cor_phaseClass15q_V_4_i(cor_phaseClass15q_V_4),
+    .cor_phaseClass15q_V_4_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o),
+    .cor_phaseClass15q_V_4_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o_ap_vld),
+    .cor_phaseClass15i_V_3_i(cor_phaseClass15i_V_3),
+    .cor_phaseClass15i_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o),
+    .cor_phaseClass15i_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o_ap_vld),
+    .cor_phaseClass15q_V_3_i(cor_phaseClass15q_V_3),
+    .cor_phaseClass15q_V_3_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o),
+    .cor_phaseClass15q_V_3_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o_ap_vld),
+    .cor_phaseClass15i_V_2_i(cor_phaseClass15i_V_2),
+    .cor_phaseClass15i_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o),
+    .cor_phaseClass15i_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o_ap_vld),
+    .cor_phaseClass15q_V_2_i(cor_phaseClass15q_V_2),
+    .cor_phaseClass15q_V_2_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o),
+    .cor_phaseClass15q_V_2_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o_ap_vld),
+    .cor_phaseClass15i_V_1_i(cor_phaseClass15i_V_1),
+    .cor_phaseClass15i_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o),
+    .cor_phaseClass15i_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o_ap_vld),
+    .cor_phaseClass15q_V_1_i(cor_phaseClass15q_V_1),
+    .cor_phaseClass15q_V_1_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o),
+    .cor_phaseClass15q_V_1_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o_ap_vld),
+    .cor_phaseClass15i_V_s_i(cor_phaseClass15i_V_s),
+    .cor_phaseClass15i_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o),
+    .cor_phaseClass15i_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o_ap_vld),
+    .cor_phaseClass15q_V_s_i(cor_phaseClass15q_V_s),
+    .cor_phaseClass15q_V_s_o(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o),
+    .cor_phaseClass15q_V_s_o_ap_vld(StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_CS_fsm <= ap_ST_fsm_pp0_stage0;
+        ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
         ap_CS_fsm <= ap_NS_fsm;
     end
@@ -376,100 +4248,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter1 <= 1'b0;
+        ap_reg_grp_correlator_fu_1103_ap_start <= 1'b0;
     end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter1 <= 1'b1;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter10 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter10 <= ap_enable_reg_pp0_iter9;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter2 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter3 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter4 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter4 <= ap_enable_reg_pp0_iter3;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter5 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter5 <= ap_enable_reg_pp0_iter4;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter6 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter6 <= ap_enable_reg_pp0_iter5;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter7 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter7 <= ap_enable_reg_pp0_iter6;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter8 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter8 <= ap_enable_reg_pp0_iter7;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter9 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter9 <= ap_enable_reg_pp0_iter8;
+        if ((1'b1 == ap_CS_fsm_state3)) begin
+            ap_reg_grp_correlator_fu_1103_ap_start <= 1'b1;
+        end else if ((grp_correlator_fu_1103_ap_ready == 1'b1)) begin
+            ap_reg_grp_correlator_fu_1103_ap_start <= 1'b0;
         end
     end
 end
@@ -478,8 +4262,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_0 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_fu_239_p2 == 1'd1) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            cor_phaseClass0i_V_0 <= tmp_1_fu_213_p1;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o_ap_vld))) begin
+            cor_phaseClass0i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_0_o;
         end
     end
 end
@@ -488,8 +4272,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_1 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_fu_239_p2 == 1'd1) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            cor_phaseClass0i_V_1 <= cor_phaseClass0i_V_0;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o_ap_vld))) begin
+            cor_phaseClass0i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_1_o;
         end
     end
 end
@@ -498,8 +4282,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_10 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_10 <= cor_phaseClass0i_V_9;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o_ap_vld))) begin
+            cor_phaseClass0i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_10_o;
         end
     end
 end
@@ -508,8 +4292,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_11 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_11 <= cor_phaseClass0i_V_10;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o_ap_vld))) begin
+            cor_phaseClass0i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_11_o;
         end
     end
 end
@@ -518,8 +4302,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_12 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_12 <= cor_phaseClass0i_V_11;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o_ap_vld))) begin
+            cor_phaseClass0i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_12_o;
         end
     end
 end
@@ -528,8 +4312,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_13 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_13 <= cor_phaseClass0i_V_12;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o_ap_vld))) begin
+            cor_phaseClass0i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_13_o;
         end
     end
 end
@@ -538,8 +4322,18 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_14 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_14 <= cor_phaseClass0i_V_13;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o_ap_vld))) begin
+            cor_phaseClass0i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass0i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15_ap_vld))) begin
+            cor_phaseClass0i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_15;
         end
     end
 end
@@ -548,8 +4342,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_2 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_2 <= cor_phaseClass0i_V_1_5_reg_810;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o_ap_vld))) begin
+            cor_phaseClass0i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_2_o;
         end
     end
 end
@@ -558,8 +4352,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_3 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_3 <= cor_phaseClass0i_V_2;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o_ap_vld))) begin
+            cor_phaseClass0i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_3_o;
         end
     end
 end
@@ -568,8 +4362,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_4 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_4 <= cor_phaseClass0i_V_3;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o_ap_vld))) begin
+            cor_phaseClass0i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_4_o;
         end
     end
 end
@@ -578,8 +4372,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_5 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_5 <= cor_phaseClass0i_V_4;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o_ap_vld))) begin
+            cor_phaseClass0i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_5_o;
         end
     end
 end
@@ -588,8 +4382,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_6 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_6 <= cor_phaseClass0i_V_5;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o_ap_vld))) begin
+            cor_phaseClass0i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_6_o;
         end
     end
 end
@@ -598,8 +4392,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_7 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_7 <= cor_phaseClass0i_V_6;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o_ap_vld))) begin
+            cor_phaseClass0i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_7_o;
         end
     end
 end
@@ -608,8 +4402,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_8 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_8 <= cor_phaseClass0i_V_7;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o_ap_vld))) begin
+            cor_phaseClass0i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_8_o;
         end
     end
 end
@@ -618,8 +4412,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0i_V_9 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0i_V_9 <= cor_phaseClass0i_V_8;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o_ap_vld))) begin
+            cor_phaseClass0i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0i_V_9_o;
         end
     end
 end
@@ -628,8 +4422,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_0 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_fu_239_p2 == 1'd1) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            cor_phaseClass0q_V_0 <= {{i_data_V_data_V_0_data_out[31:16]}};
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o_ap_vld))) begin
+            cor_phaseClass0q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_0_o;
         end
     end
 end
@@ -638,8 +4432,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_1 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_fu_239_p2 == 1'd1) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            cor_phaseClass0q_V_1 <= cor_phaseClass0q_V_0;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o_ap_vld))) begin
+            cor_phaseClass0q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_1_o;
         end
     end
 end
@@ -648,8 +4442,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_10 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_10 <= cor_phaseClass0q_V_9;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o_ap_vld))) begin
+            cor_phaseClass0q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_10_o;
         end
     end
 end
@@ -658,8 +4452,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_11 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_11 <= cor_phaseClass0q_V_10;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o_ap_vld))) begin
+            cor_phaseClass0q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_11_o;
         end
     end
 end
@@ -668,8 +4462,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_12 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_12 <= cor_phaseClass0q_V_11;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o_ap_vld))) begin
+            cor_phaseClass0q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_12_o;
         end
     end
 end
@@ -678,8 +4472,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_13 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_13 <= cor_phaseClass0q_V_12;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o_ap_vld))) begin
+            cor_phaseClass0q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_13_o;
         end
     end
 end
@@ -688,8 +4482,18 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_14 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_14 <= cor_phaseClass0q_V_13;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o_ap_vld))) begin
+            cor_phaseClass0q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass0q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15_ap_vld))) begin
+            cor_phaseClass0q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_15;
         end
     end
 end
@@ -698,8 +4502,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_2 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_2 <= cor_phaseClass0q_V_1_5_reg_815;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o_ap_vld))) begin
+            cor_phaseClass0q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_2_o;
         end
     end
 end
@@ -708,8 +4512,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_3 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_3 <= cor_phaseClass0q_V_2;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o_ap_vld))) begin
+            cor_phaseClass0q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_3_o;
         end
     end
 end
@@ -718,8 +4522,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_4 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_4 <= cor_phaseClass0q_V_3;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o_ap_vld))) begin
+            cor_phaseClass0q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_4_o;
         end
     end
 end
@@ -728,8 +4532,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_5 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_5 <= cor_phaseClass0q_V_4;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o_ap_vld))) begin
+            cor_phaseClass0q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_5_o;
         end
     end
 end
@@ -738,8 +4542,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_6 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_6 <= cor_phaseClass0q_V_5;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o_ap_vld))) begin
+            cor_phaseClass0q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_6_o;
         end
     end
 end
@@ -748,8 +4552,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_7 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_7 <= cor_phaseClass0q_V_6;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o_ap_vld))) begin
+            cor_phaseClass0q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_7_o;
         end
     end
 end
@@ -758,8 +4562,8 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_8 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_8 <= cor_phaseClass0q_V_7;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o_ap_vld))) begin
+            cor_phaseClass0q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_8_o;
         end
     end
 end
@@ -768,8 +4572,4808 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         cor_phaseClass0q_V_9 <= 16'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-            cor_phaseClass0q_V_9 <= cor_phaseClass0q_V_8;
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o_ap_vld))) begin
+            cor_phaseClass0q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass0q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o_ap_vld))) begin
+            cor_phaseClass10i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o_ap_vld))) begin
+            cor_phaseClass10i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o_ap_vld))) begin
+            cor_phaseClass10i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o_ap_vld))) begin
+            cor_phaseClass10i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o_ap_vld))) begin
+            cor_phaseClass10i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o_ap_vld))) begin
+            cor_phaseClass10i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15_ap_vld))) begin
+            cor_phaseClass10i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o_ap_vld))) begin
+            cor_phaseClass10i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o_ap_vld))) begin
+            cor_phaseClass10i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o_ap_vld))) begin
+            cor_phaseClass10i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o_ap_vld))) begin
+            cor_phaseClass10i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o_ap_vld))) begin
+            cor_phaseClass10i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o_ap_vld))) begin
+            cor_phaseClass10i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o_ap_vld))) begin
+            cor_phaseClass10i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o_ap_vld))) begin
+            cor_phaseClass10i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o_ap_vld))) begin
+            cor_phaseClass10i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o_ap_vld))) begin
+            cor_phaseClass10q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o_ap_vld))) begin
+            cor_phaseClass10q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o_ap_vld))) begin
+            cor_phaseClass10q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o_ap_vld))) begin
+            cor_phaseClass10q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o_ap_vld))) begin
+            cor_phaseClass10q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o_ap_vld))) begin
+            cor_phaseClass10q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15_ap_vld))) begin
+            cor_phaseClass10q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o_ap_vld))) begin
+            cor_phaseClass10q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o_ap_vld))) begin
+            cor_phaseClass10q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o_ap_vld))) begin
+            cor_phaseClass10q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o_ap_vld))) begin
+            cor_phaseClass10q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o_ap_vld))) begin
+            cor_phaseClass10q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o_ap_vld))) begin
+            cor_phaseClass10q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o_ap_vld))) begin
+            cor_phaseClass10q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o_ap_vld))) begin
+            cor_phaseClass10q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass10q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o_ap_vld))) begin
+            cor_phaseClass10q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass10q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o_ap_vld))) begin
+            cor_phaseClass11i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o_ap_vld))) begin
+            cor_phaseClass11i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o_ap_vld))) begin
+            cor_phaseClass11i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o_ap_vld))) begin
+            cor_phaseClass11i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o_ap_vld))) begin
+            cor_phaseClass11i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o_ap_vld))) begin
+            cor_phaseClass11i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15_ap_vld))) begin
+            cor_phaseClass11i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o_ap_vld))) begin
+            cor_phaseClass11i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o_ap_vld))) begin
+            cor_phaseClass11i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o_ap_vld))) begin
+            cor_phaseClass11i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o_ap_vld))) begin
+            cor_phaseClass11i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o_ap_vld))) begin
+            cor_phaseClass11i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o_ap_vld))) begin
+            cor_phaseClass11i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o_ap_vld))) begin
+            cor_phaseClass11i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o_ap_vld))) begin
+            cor_phaseClass11i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o_ap_vld))) begin
+            cor_phaseClass11i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o_ap_vld))) begin
+            cor_phaseClass11q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o_ap_vld))) begin
+            cor_phaseClass11q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o_ap_vld))) begin
+            cor_phaseClass11q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o_ap_vld))) begin
+            cor_phaseClass11q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o_ap_vld))) begin
+            cor_phaseClass11q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o_ap_vld))) begin
+            cor_phaseClass11q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15_ap_vld))) begin
+            cor_phaseClass11q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o_ap_vld))) begin
+            cor_phaseClass11q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o_ap_vld))) begin
+            cor_phaseClass11q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o_ap_vld))) begin
+            cor_phaseClass11q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o_ap_vld))) begin
+            cor_phaseClass11q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o_ap_vld))) begin
+            cor_phaseClass11q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o_ap_vld))) begin
+            cor_phaseClass11q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o_ap_vld))) begin
+            cor_phaseClass11q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o_ap_vld))) begin
+            cor_phaseClass11q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass11q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o_ap_vld))) begin
+            cor_phaseClass11q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass11q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o_ap_vld))) begin
+            cor_phaseClass12i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o_ap_vld))) begin
+            cor_phaseClass12i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o_ap_vld))) begin
+            cor_phaseClass12i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o_ap_vld))) begin
+            cor_phaseClass12i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o_ap_vld))) begin
+            cor_phaseClass12i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o_ap_vld))) begin
+            cor_phaseClass12i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15_ap_vld))) begin
+            cor_phaseClass12i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o_ap_vld))) begin
+            cor_phaseClass12i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o_ap_vld))) begin
+            cor_phaseClass12i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o_ap_vld))) begin
+            cor_phaseClass12i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o_ap_vld))) begin
+            cor_phaseClass12i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o_ap_vld))) begin
+            cor_phaseClass12i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o_ap_vld))) begin
+            cor_phaseClass12i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o_ap_vld))) begin
+            cor_phaseClass12i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o_ap_vld))) begin
+            cor_phaseClass12i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o_ap_vld))) begin
+            cor_phaseClass12i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o_ap_vld))) begin
+            cor_phaseClass12q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o_ap_vld))) begin
+            cor_phaseClass12q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o_ap_vld))) begin
+            cor_phaseClass12q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o_ap_vld))) begin
+            cor_phaseClass12q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o_ap_vld))) begin
+            cor_phaseClass12q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o_ap_vld))) begin
+            cor_phaseClass12q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15_ap_vld))) begin
+            cor_phaseClass12q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o_ap_vld))) begin
+            cor_phaseClass12q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o_ap_vld))) begin
+            cor_phaseClass12q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o_ap_vld))) begin
+            cor_phaseClass12q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o_ap_vld))) begin
+            cor_phaseClass12q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o_ap_vld))) begin
+            cor_phaseClass12q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o_ap_vld))) begin
+            cor_phaseClass12q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o_ap_vld))) begin
+            cor_phaseClass12q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o_ap_vld))) begin
+            cor_phaseClass12q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass12q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o_ap_vld))) begin
+            cor_phaseClass12q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass12q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o_ap_vld))) begin
+            cor_phaseClass13i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o_ap_vld))) begin
+            cor_phaseClass13i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o_ap_vld))) begin
+            cor_phaseClass13i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o_ap_vld))) begin
+            cor_phaseClass13i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o_ap_vld))) begin
+            cor_phaseClass13i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o_ap_vld))) begin
+            cor_phaseClass13i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15_ap_vld))) begin
+            cor_phaseClass13i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o_ap_vld))) begin
+            cor_phaseClass13i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o_ap_vld))) begin
+            cor_phaseClass13i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o_ap_vld))) begin
+            cor_phaseClass13i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o_ap_vld))) begin
+            cor_phaseClass13i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o_ap_vld))) begin
+            cor_phaseClass13i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o_ap_vld))) begin
+            cor_phaseClass13i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o_ap_vld))) begin
+            cor_phaseClass13i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o_ap_vld))) begin
+            cor_phaseClass13i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o_ap_vld))) begin
+            cor_phaseClass13i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o_ap_vld))) begin
+            cor_phaseClass13q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o_ap_vld))) begin
+            cor_phaseClass13q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o_ap_vld))) begin
+            cor_phaseClass13q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o_ap_vld))) begin
+            cor_phaseClass13q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o_ap_vld))) begin
+            cor_phaseClass13q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o_ap_vld))) begin
+            cor_phaseClass13q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15_ap_vld))) begin
+            cor_phaseClass13q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o_ap_vld))) begin
+            cor_phaseClass13q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o_ap_vld))) begin
+            cor_phaseClass13q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o_ap_vld))) begin
+            cor_phaseClass13q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o_ap_vld))) begin
+            cor_phaseClass13q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o_ap_vld))) begin
+            cor_phaseClass13q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o_ap_vld))) begin
+            cor_phaseClass13q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o_ap_vld))) begin
+            cor_phaseClass13q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o_ap_vld))) begin
+            cor_phaseClass13q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass13q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o_ap_vld))) begin
+            cor_phaseClass13q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass13q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o_ap_vld))) begin
+            cor_phaseClass14i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o_ap_vld))) begin
+            cor_phaseClass14i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o_ap_vld))) begin
+            cor_phaseClass14i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o_ap_vld))) begin
+            cor_phaseClass14i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o_ap_vld))) begin
+            cor_phaseClass14i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o_ap_vld))) begin
+            cor_phaseClass14i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15_ap_vld))) begin
+            cor_phaseClass14i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o_ap_vld))) begin
+            cor_phaseClass14i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o_ap_vld))) begin
+            cor_phaseClass14i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o_ap_vld))) begin
+            cor_phaseClass14i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o_ap_vld))) begin
+            cor_phaseClass14i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o_ap_vld))) begin
+            cor_phaseClass14i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o_ap_vld))) begin
+            cor_phaseClass14i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o_ap_vld))) begin
+            cor_phaseClass14i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o_ap_vld))) begin
+            cor_phaseClass14i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o_ap_vld))) begin
+            cor_phaseClass14i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o_ap_vld))) begin
+            cor_phaseClass14q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o_ap_vld))) begin
+            cor_phaseClass14q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o_ap_vld))) begin
+            cor_phaseClass14q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o_ap_vld))) begin
+            cor_phaseClass14q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o_ap_vld))) begin
+            cor_phaseClass14q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o_ap_vld))) begin
+            cor_phaseClass14q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15_ap_vld))) begin
+            cor_phaseClass14q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o_ap_vld))) begin
+            cor_phaseClass14q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o_ap_vld))) begin
+            cor_phaseClass14q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o_ap_vld))) begin
+            cor_phaseClass14q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o_ap_vld))) begin
+            cor_phaseClass14q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o_ap_vld))) begin
+            cor_phaseClass14q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o_ap_vld))) begin
+            cor_phaseClass14q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o_ap_vld))) begin
+            cor_phaseClass14q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o_ap_vld))) begin
+            cor_phaseClass14q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass14q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o_ap_vld))) begin
+            cor_phaseClass14q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass14q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o_ap_vld))) begin
+            cor_phaseClass15i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o_ap_vld))) begin
+            cor_phaseClass15i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o_ap_vld))) begin
+            cor_phaseClass15i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o_ap_vld))) begin
+            cor_phaseClass15i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o_ap_vld))) begin
+            cor_phaseClass15i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o_ap_vld))) begin
+            cor_phaseClass15i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15_ap_vld))) begin
+            cor_phaseClass15i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o_ap_vld))) begin
+            cor_phaseClass15i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o_ap_vld))) begin
+            cor_phaseClass15i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o_ap_vld))) begin
+            cor_phaseClass15i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o_ap_vld))) begin
+            cor_phaseClass15i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o_ap_vld))) begin
+            cor_phaseClass15i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o_ap_vld))) begin
+            cor_phaseClass15i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o_ap_vld))) begin
+            cor_phaseClass15i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o_ap_vld))) begin
+            cor_phaseClass15i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15i_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o_ap_vld))) begin
+            cor_phaseClass15i_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15i_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o_ap_vld))) begin
+            cor_phaseClass15q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o_ap_vld))) begin
+            cor_phaseClass15q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o_ap_vld))) begin
+            cor_phaseClass15q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o_ap_vld))) begin
+            cor_phaseClass15q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o_ap_vld))) begin
+            cor_phaseClass15q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o_ap_vld))) begin
+            cor_phaseClass15q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15_ap_vld))) begin
+            cor_phaseClass15q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o_ap_vld))) begin
+            cor_phaseClass15q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o_ap_vld))) begin
+            cor_phaseClass15q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o_ap_vld))) begin
+            cor_phaseClass15q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o_ap_vld))) begin
+            cor_phaseClass15q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o_ap_vld))) begin
+            cor_phaseClass15q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o_ap_vld))) begin
+            cor_phaseClass15q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o_ap_vld))) begin
+            cor_phaseClass15q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o_ap_vld))) begin
+            cor_phaseClass15q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass15q_V_s <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o_ap_vld))) begin
+            cor_phaseClass15q_V_s <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass15q_V_s_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o_ap_vld))) begin
+            cor_phaseClass1i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o_ap_vld))) begin
+            cor_phaseClass1i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o_ap_vld))) begin
+            cor_phaseClass1i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o_ap_vld))) begin
+            cor_phaseClass1i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o_ap_vld))) begin
+            cor_phaseClass1i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o_ap_vld))) begin
+            cor_phaseClass1i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o_ap_vld))) begin
+            cor_phaseClass1i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15_ap_vld))) begin
+            cor_phaseClass1i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o_ap_vld))) begin
+            cor_phaseClass1i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o_ap_vld))) begin
+            cor_phaseClass1i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o_ap_vld))) begin
+            cor_phaseClass1i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o_ap_vld))) begin
+            cor_phaseClass1i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o_ap_vld))) begin
+            cor_phaseClass1i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o_ap_vld))) begin
+            cor_phaseClass1i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o_ap_vld))) begin
+            cor_phaseClass1i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o_ap_vld))) begin
+            cor_phaseClass1i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o_ap_vld))) begin
+            cor_phaseClass1q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o_ap_vld))) begin
+            cor_phaseClass1q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o_ap_vld))) begin
+            cor_phaseClass1q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o_ap_vld))) begin
+            cor_phaseClass1q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o_ap_vld))) begin
+            cor_phaseClass1q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o_ap_vld))) begin
+            cor_phaseClass1q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o_ap_vld))) begin
+            cor_phaseClass1q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15_ap_vld))) begin
+            cor_phaseClass1q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o_ap_vld))) begin
+            cor_phaseClass1q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o_ap_vld))) begin
+            cor_phaseClass1q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o_ap_vld))) begin
+            cor_phaseClass1q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o_ap_vld))) begin
+            cor_phaseClass1q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o_ap_vld))) begin
+            cor_phaseClass1q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o_ap_vld))) begin
+            cor_phaseClass1q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o_ap_vld))) begin
+            cor_phaseClass1q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass1q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o_ap_vld))) begin
+            cor_phaseClass1q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass1q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o_ap_vld))) begin
+            cor_phaseClass2i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o_ap_vld))) begin
+            cor_phaseClass2i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o_ap_vld))) begin
+            cor_phaseClass2i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o_ap_vld))) begin
+            cor_phaseClass2i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o_ap_vld))) begin
+            cor_phaseClass2i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o_ap_vld))) begin
+            cor_phaseClass2i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o_ap_vld))) begin
+            cor_phaseClass2i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15_ap_vld))) begin
+            cor_phaseClass2i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o_ap_vld))) begin
+            cor_phaseClass2i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o_ap_vld))) begin
+            cor_phaseClass2i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o_ap_vld))) begin
+            cor_phaseClass2i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o_ap_vld))) begin
+            cor_phaseClass2i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o_ap_vld))) begin
+            cor_phaseClass2i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o_ap_vld))) begin
+            cor_phaseClass2i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o_ap_vld))) begin
+            cor_phaseClass2i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o_ap_vld))) begin
+            cor_phaseClass2i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o_ap_vld))) begin
+            cor_phaseClass2q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o_ap_vld))) begin
+            cor_phaseClass2q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o_ap_vld))) begin
+            cor_phaseClass2q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o_ap_vld))) begin
+            cor_phaseClass2q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o_ap_vld))) begin
+            cor_phaseClass2q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o_ap_vld))) begin
+            cor_phaseClass2q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o_ap_vld))) begin
+            cor_phaseClass2q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15_ap_vld))) begin
+            cor_phaseClass2q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o_ap_vld))) begin
+            cor_phaseClass2q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o_ap_vld))) begin
+            cor_phaseClass2q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o_ap_vld))) begin
+            cor_phaseClass2q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o_ap_vld))) begin
+            cor_phaseClass2q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o_ap_vld))) begin
+            cor_phaseClass2q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o_ap_vld))) begin
+            cor_phaseClass2q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o_ap_vld))) begin
+            cor_phaseClass2q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass2q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o_ap_vld))) begin
+            cor_phaseClass2q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass2q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o_ap_vld))) begin
+            cor_phaseClass3i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o_ap_vld))) begin
+            cor_phaseClass3i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o_ap_vld))) begin
+            cor_phaseClass3i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o_ap_vld))) begin
+            cor_phaseClass3i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o_ap_vld))) begin
+            cor_phaseClass3i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o_ap_vld))) begin
+            cor_phaseClass3i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o_ap_vld))) begin
+            cor_phaseClass3i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15_ap_vld))) begin
+            cor_phaseClass3i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o_ap_vld))) begin
+            cor_phaseClass3i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o_ap_vld))) begin
+            cor_phaseClass3i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o_ap_vld))) begin
+            cor_phaseClass3i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o_ap_vld))) begin
+            cor_phaseClass3i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o_ap_vld))) begin
+            cor_phaseClass3i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o_ap_vld))) begin
+            cor_phaseClass3i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o_ap_vld))) begin
+            cor_phaseClass3i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o_ap_vld))) begin
+            cor_phaseClass3i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o_ap_vld))) begin
+            cor_phaseClass3q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o_ap_vld))) begin
+            cor_phaseClass3q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o_ap_vld))) begin
+            cor_phaseClass3q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o_ap_vld))) begin
+            cor_phaseClass3q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o_ap_vld))) begin
+            cor_phaseClass3q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o_ap_vld))) begin
+            cor_phaseClass3q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o_ap_vld))) begin
+            cor_phaseClass3q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15_ap_vld))) begin
+            cor_phaseClass3q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o_ap_vld))) begin
+            cor_phaseClass3q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o_ap_vld))) begin
+            cor_phaseClass3q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o_ap_vld))) begin
+            cor_phaseClass3q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o_ap_vld))) begin
+            cor_phaseClass3q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o_ap_vld))) begin
+            cor_phaseClass3q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o_ap_vld))) begin
+            cor_phaseClass3q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o_ap_vld))) begin
+            cor_phaseClass3q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass3q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o_ap_vld))) begin
+            cor_phaseClass3q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass3q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o_ap_vld))) begin
+            cor_phaseClass4i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o_ap_vld))) begin
+            cor_phaseClass4i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o_ap_vld))) begin
+            cor_phaseClass4i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o_ap_vld))) begin
+            cor_phaseClass4i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o_ap_vld))) begin
+            cor_phaseClass4i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o_ap_vld))) begin
+            cor_phaseClass4i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o_ap_vld))) begin
+            cor_phaseClass4i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15_ap_vld))) begin
+            cor_phaseClass4i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o_ap_vld))) begin
+            cor_phaseClass4i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o_ap_vld))) begin
+            cor_phaseClass4i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o_ap_vld))) begin
+            cor_phaseClass4i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o_ap_vld))) begin
+            cor_phaseClass4i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o_ap_vld))) begin
+            cor_phaseClass4i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o_ap_vld))) begin
+            cor_phaseClass4i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o_ap_vld))) begin
+            cor_phaseClass4i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o_ap_vld))) begin
+            cor_phaseClass4i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o_ap_vld))) begin
+            cor_phaseClass4q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o_ap_vld))) begin
+            cor_phaseClass4q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o_ap_vld))) begin
+            cor_phaseClass4q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o_ap_vld))) begin
+            cor_phaseClass4q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o_ap_vld))) begin
+            cor_phaseClass4q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o_ap_vld))) begin
+            cor_phaseClass4q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o_ap_vld))) begin
+            cor_phaseClass4q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15_ap_vld))) begin
+            cor_phaseClass4q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o_ap_vld))) begin
+            cor_phaseClass4q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o_ap_vld))) begin
+            cor_phaseClass4q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o_ap_vld))) begin
+            cor_phaseClass4q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o_ap_vld))) begin
+            cor_phaseClass4q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o_ap_vld))) begin
+            cor_phaseClass4q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o_ap_vld))) begin
+            cor_phaseClass4q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o_ap_vld))) begin
+            cor_phaseClass4q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass4q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o_ap_vld))) begin
+            cor_phaseClass4q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass4q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o_ap_vld))) begin
+            cor_phaseClass5i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o_ap_vld))) begin
+            cor_phaseClass5i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o_ap_vld))) begin
+            cor_phaseClass5i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o_ap_vld))) begin
+            cor_phaseClass5i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o_ap_vld))) begin
+            cor_phaseClass5i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o_ap_vld))) begin
+            cor_phaseClass5i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o_ap_vld))) begin
+            cor_phaseClass5i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15_ap_vld))) begin
+            cor_phaseClass5i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o_ap_vld))) begin
+            cor_phaseClass5i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o_ap_vld))) begin
+            cor_phaseClass5i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o_ap_vld))) begin
+            cor_phaseClass5i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o_ap_vld))) begin
+            cor_phaseClass5i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o_ap_vld))) begin
+            cor_phaseClass5i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o_ap_vld))) begin
+            cor_phaseClass5i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o_ap_vld))) begin
+            cor_phaseClass5i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o_ap_vld))) begin
+            cor_phaseClass5i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o_ap_vld))) begin
+            cor_phaseClass5q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o_ap_vld))) begin
+            cor_phaseClass5q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o_ap_vld))) begin
+            cor_phaseClass5q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o_ap_vld))) begin
+            cor_phaseClass5q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o_ap_vld))) begin
+            cor_phaseClass5q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o_ap_vld))) begin
+            cor_phaseClass5q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o_ap_vld))) begin
+            cor_phaseClass5q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15_ap_vld))) begin
+            cor_phaseClass5q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o_ap_vld))) begin
+            cor_phaseClass5q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o_ap_vld))) begin
+            cor_phaseClass5q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o_ap_vld))) begin
+            cor_phaseClass5q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o_ap_vld))) begin
+            cor_phaseClass5q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o_ap_vld))) begin
+            cor_phaseClass5q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o_ap_vld))) begin
+            cor_phaseClass5q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o_ap_vld))) begin
+            cor_phaseClass5q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass5q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o_ap_vld))) begin
+            cor_phaseClass5q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass5q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o_ap_vld))) begin
+            cor_phaseClass6i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o_ap_vld))) begin
+            cor_phaseClass6i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o_ap_vld))) begin
+            cor_phaseClass6i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o_ap_vld))) begin
+            cor_phaseClass6i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o_ap_vld))) begin
+            cor_phaseClass6i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o_ap_vld))) begin
+            cor_phaseClass6i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o_ap_vld))) begin
+            cor_phaseClass6i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15_ap_vld))) begin
+            cor_phaseClass6i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o_ap_vld))) begin
+            cor_phaseClass6i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o_ap_vld))) begin
+            cor_phaseClass6i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o_ap_vld))) begin
+            cor_phaseClass6i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o_ap_vld))) begin
+            cor_phaseClass6i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o_ap_vld))) begin
+            cor_phaseClass6i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o_ap_vld))) begin
+            cor_phaseClass6i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o_ap_vld))) begin
+            cor_phaseClass6i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o_ap_vld))) begin
+            cor_phaseClass6i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o_ap_vld))) begin
+            cor_phaseClass6q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o_ap_vld))) begin
+            cor_phaseClass6q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o_ap_vld))) begin
+            cor_phaseClass6q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o_ap_vld))) begin
+            cor_phaseClass6q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o_ap_vld))) begin
+            cor_phaseClass6q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o_ap_vld))) begin
+            cor_phaseClass6q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o_ap_vld))) begin
+            cor_phaseClass6q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15_ap_vld))) begin
+            cor_phaseClass6q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o_ap_vld))) begin
+            cor_phaseClass6q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o_ap_vld))) begin
+            cor_phaseClass6q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o_ap_vld))) begin
+            cor_phaseClass6q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o_ap_vld))) begin
+            cor_phaseClass6q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o_ap_vld))) begin
+            cor_phaseClass6q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o_ap_vld))) begin
+            cor_phaseClass6q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o_ap_vld))) begin
+            cor_phaseClass6q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass6q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o_ap_vld))) begin
+            cor_phaseClass6q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass6q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o_ap_vld))) begin
+            cor_phaseClass7i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o_ap_vld))) begin
+            cor_phaseClass7i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o_ap_vld))) begin
+            cor_phaseClass7i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o_ap_vld))) begin
+            cor_phaseClass7i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o_ap_vld))) begin
+            cor_phaseClass7i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o_ap_vld))) begin
+            cor_phaseClass7i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o_ap_vld))) begin
+            cor_phaseClass7i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15_ap_vld))) begin
+            cor_phaseClass7i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o_ap_vld))) begin
+            cor_phaseClass7i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o_ap_vld))) begin
+            cor_phaseClass7i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o_ap_vld))) begin
+            cor_phaseClass7i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o_ap_vld))) begin
+            cor_phaseClass7i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o_ap_vld))) begin
+            cor_phaseClass7i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o_ap_vld))) begin
+            cor_phaseClass7i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o_ap_vld))) begin
+            cor_phaseClass7i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o_ap_vld))) begin
+            cor_phaseClass7i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o_ap_vld))) begin
+            cor_phaseClass7q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o_ap_vld))) begin
+            cor_phaseClass7q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o_ap_vld))) begin
+            cor_phaseClass7q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o_ap_vld))) begin
+            cor_phaseClass7q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o_ap_vld))) begin
+            cor_phaseClass7q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o_ap_vld))) begin
+            cor_phaseClass7q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o_ap_vld))) begin
+            cor_phaseClass7q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15_ap_vld))) begin
+            cor_phaseClass7q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o_ap_vld))) begin
+            cor_phaseClass7q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o_ap_vld))) begin
+            cor_phaseClass7q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o_ap_vld))) begin
+            cor_phaseClass7q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o_ap_vld))) begin
+            cor_phaseClass7q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o_ap_vld))) begin
+            cor_phaseClass7q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o_ap_vld))) begin
+            cor_phaseClass7q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o_ap_vld))) begin
+            cor_phaseClass7q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass7q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o_ap_vld))) begin
+            cor_phaseClass7q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass7q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o_ap_vld))) begin
+            cor_phaseClass8i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o_ap_vld))) begin
+            cor_phaseClass8i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o_ap_vld))) begin
+            cor_phaseClass8i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o_ap_vld))) begin
+            cor_phaseClass8i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o_ap_vld))) begin
+            cor_phaseClass8i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o_ap_vld))) begin
+            cor_phaseClass8i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o_ap_vld))) begin
+            cor_phaseClass8i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15_ap_vld))) begin
+            cor_phaseClass8i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o_ap_vld))) begin
+            cor_phaseClass8i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o_ap_vld))) begin
+            cor_phaseClass8i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o_ap_vld))) begin
+            cor_phaseClass8i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o_ap_vld))) begin
+            cor_phaseClass8i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o_ap_vld))) begin
+            cor_phaseClass8i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o_ap_vld))) begin
+            cor_phaseClass8i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o_ap_vld))) begin
+            cor_phaseClass8i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o_ap_vld))) begin
+            cor_phaseClass8i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o_ap_vld))) begin
+            cor_phaseClass8q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o_ap_vld))) begin
+            cor_phaseClass8q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o_ap_vld))) begin
+            cor_phaseClass8q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o_ap_vld))) begin
+            cor_phaseClass8q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o_ap_vld))) begin
+            cor_phaseClass8q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o_ap_vld))) begin
+            cor_phaseClass8q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o_ap_vld))) begin
+            cor_phaseClass8q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15_ap_vld))) begin
+            cor_phaseClass8q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o_ap_vld))) begin
+            cor_phaseClass8q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o_ap_vld))) begin
+            cor_phaseClass8q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o_ap_vld))) begin
+            cor_phaseClass8q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o_ap_vld))) begin
+            cor_phaseClass8q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o_ap_vld))) begin
+            cor_phaseClass8q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o_ap_vld))) begin
+            cor_phaseClass8q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o_ap_vld))) begin
+            cor_phaseClass8q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass8q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o_ap_vld))) begin
+            cor_phaseClass8q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass8q_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o_ap_vld))) begin
+            cor_phaseClass9i_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o_ap_vld))) begin
+            cor_phaseClass9i_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o_ap_vld))) begin
+            cor_phaseClass9i_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o_ap_vld))) begin
+            cor_phaseClass9i_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o_ap_vld))) begin
+            cor_phaseClass9i_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o_ap_vld))) begin
+            cor_phaseClass9i_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o_ap_vld))) begin
+            cor_phaseClass9i_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15_ap_vld))) begin
+            cor_phaseClass9i_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o_ap_vld))) begin
+            cor_phaseClass9i_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o_ap_vld))) begin
+            cor_phaseClass9i_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o_ap_vld))) begin
+            cor_phaseClass9i_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o_ap_vld))) begin
+            cor_phaseClass9i_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o_ap_vld))) begin
+            cor_phaseClass9i_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o_ap_vld))) begin
+            cor_phaseClass9i_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o_ap_vld))) begin
+            cor_phaseClass9i_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9i_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o_ap_vld))) begin
+            cor_phaseClass9i_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9i_V_9_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_0 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o_ap_vld))) begin
+            cor_phaseClass9q_V_0 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_0_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_1 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o_ap_vld))) begin
+            cor_phaseClass9q_V_1 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_1_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_10 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o_ap_vld))) begin
+            cor_phaseClass9q_V_10 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_10_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_11 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o_ap_vld))) begin
+            cor_phaseClass9q_V_11 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_11_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_12 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o_ap_vld))) begin
+            cor_phaseClass9q_V_12 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_12_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_13 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o_ap_vld))) begin
+            cor_phaseClass9q_V_13 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_13_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_14 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o_ap_vld))) begin
+            cor_phaseClass9q_V_14 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_14_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_15 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15_ap_vld))) begin
+            cor_phaseClass9q_V_15 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_15;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_2 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o_ap_vld))) begin
+            cor_phaseClass9q_V_2 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_2_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_3 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o_ap_vld))) begin
+            cor_phaseClass9q_V_3 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_3_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_4 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o_ap_vld))) begin
+            cor_phaseClass9q_V_4 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_4_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_5 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o_ap_vld))) begin
+            cor_phaseClass9q_V_5 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_5_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_6 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o_ap_vld))) begin
+            cor_phaseClass9q_V_6 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_6_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_7 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o_ap_vld))) begin
+            cor_phaseClass9q_V_7 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_7_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_8 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o_ap_vld))) begin
+            cor_phaseClass9q_V_8 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_8_o;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst_n_inv == 1'b1) begin
+        cor_phaseClass9q_V_9 <= 16'd0;
+    end else begin
+        if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2) & (1'b1 == StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o_ap_vld))) begin
+            cor_phaseClass9q_V_9 <= StgValue_35_shiftPhaseClass_fu_2132_cor_phaseClass9q_V_9_o;
         end
     end
 end
@@ -778,7 +9382,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         currentState <= 1'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        if ((~((1'b1 == ap_block_state6_io) | (o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0)) & (1'b1 == ap_CS_fsm_state6))) begin
             currentState <= 1'd1;
         end
     end
@@ -808,9 +9412,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         i_data_V_data_V_0_state <= 2'd0;
     end else begin
-        if ((((i_data_V_data_V_0_vld_in == 1'b0) & (i_data_V_data_V_0_state == 2'd2)) | ((i_data_V_data_V_0_vld_in == 1'b0) & (i_data_V_data_V_0_state == 2'd3) & (i_data_V_data_V_0_ack_out == 1'b1)))) begin
+        if ((((i_data_V_data_V_0_state == 2'd2) & (i_data_V_data_V_0_vld_in == 1'b0)) | ((i_data_V_data_V_0_state == 2'd3) & (i_data_V_data_V_0_vld_in == 1'b0) & (i_data_V_data_V_0_ack_out == 1'b1)))) begin
             i_data_V_data_V_0_state <= 2'd2;
-        end else if ((((i_data_V_data_V_0_ack_out == 1'b0) & (i_data_V_data_V_0_state == 2'd1)) | ((i_data_V_data_V_0_ack_out == 1'b0) & (i_data_V_data_V_0_state == 2'd3) & (i_data_V_data_V_0_vld_in == 1'b1)))) begin
+        end else if ((((i_data_V_data_V_0_state == 2'd1) & (i_data_V_data_V_0_ack_out == 1'b0)) | ((i_data_V_data_V_0_state == 2'd3) & (i_data_V_data_V_0_ack_out == 1'b0) & (i_data_V_data_V_0_vld_in == 1'b1)))) begin
             i_data_V_data_V_0_state <= 2'd1;
         end else if (((~((i_data_V_data_V_0_vld_in == 1'b0) & (i_data_V_data_V_0_ack_out == 1'b1)) & ~((i_data_V_data_V_0_ack_out == 1'b0) & (i_data_V_data_V_0_vld_in == 1'b1)) & (i_data_V_data_V_0_state == 2'd3)) | ((i_data_V_data_V_0_state == 2'd1) & (i_data_V_data_V_0_ack_out == 1'b1)) | ((i_data_V_data_V_0_state == 2'd2) & (i_data_V_data_V_0_vld_in == 1'b1)))) begin
             i_data_V_data_V_0_state <= 2'd3;
@@ -844,11 +9448,11 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         i_data_V_last_V_0_state <= 2'd0;
     end else begin
-        if ((((i_data_V_last_V_0_state == 2'd3) & (i_data_V_last_V_0_vld_in == 1'b0) & (i_data_V_last_V_0_ack_out == 1'b1)) | ((i_data_V_last_V_0_state == 2'd2) & (i_data_V_last_V_0_vld_in == 1'b0)))) begin
+        if ((((i_data_V_last_V_0_state == 2'd2) & (i_data_V_last_V_0_vld_in == 1'b0)) | ((i_data_V_last_V_0_state == 2'd3) & (i_data_V_last_V_0_vld_in == 1'b0) & (i_data_V_last_V_0_ack_out == 1'b1)))) begin
             i_data_V_last_V_0_state <= 2'd2;
         end else if ((((i_data_V_last_V_0_state == 2'd1) & (i_data_V_last_V_0_ack_out == 1'b0)) | ((i_data_V_last_V_0_state == 2'd3) & (i_data_V_last_V_0_ack_out == 1'b0) & (i_data_V_last_V_0_vld_in == 1'b1)))) begin
             i_data_V_last_V_0_state <= 2'd1;
-        end else if ((((i_data_V_last_V_0_state == 2'd1) & (i_data_V_last_V_0_ack_out == 1'b1)) | ((i_data_V_last_V_0_state == 2'd2) & (i_data_V_last_V_0_vld_in == 1'b1)) | (~((i_data_V_last_V_0_vld_in == 1'b0) & (i_data_V_last_V_0_ack_out == 1'b1)) & ~((i_data_V_last_V_0_ack_out == 1'b0) & (i_data_V_last_V_0_vld_in == 1'b1)) & (i_data_V_last_V_0_state == 2'd3)))) begin
+        end else if (((~((i_data_V_last_V_0_vld_in == 1'b0) & (i_data_V_last_V_0_ack_out == 1'b1)) & ~((i_data_V_last_V_0_ack_out == 1'b0) & (i_data_V_last_V_0_vld_in == 1'b1)) & (i_data_V_last_V_0_state == 2'd3)) | ((i_data_V_last_V_0_state == 2'd1) & (i_data_V_last_V_0_ack_out == 1'b1)) | ((i_data_V_last_V_0_state == 2'd2) & (i_data_V_last_V_0_vld_in == 1'b1)))) begin
             i_data_V_last_V_0_state <= 2'd3;
         end else begin
             i_data_V_last_V_0_state <= 2'd2;
@@ -860,12 +9464,10 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         loadCount_V <= 32'd0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter10 == 1'b1))) begin
-            if ((ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd1)) begin
-                loadCount_V <= tmp_2_fu_777_p2;
-            end else if ((ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd0)) begin
-                loadCount_V <= 32'd0;
-            end
+        if (((1'b0 == ap_block_state5_io) & (1'b1 == ap_CS_fsm_state5))) begin
+            loadCount_V <= tmp_2_fu_3234_p2;
+        end else if (((currentState_load_load_fu_3163_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+            loadCount_V <= 32'd0;
         end
     end
 end
@@ -946,173 +9548,18 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         phaseClass_V <= 4'd0;
     end else begin
-        if ((1'b1 == ap_condition_502)) begin
-            if ((currentState_load_reg_797 == 1'd1)) begin
-                phaseClass_V <= tmp_4_fu_309_p2;
-            end else if ((currentState_load_reg_797 == 1'd0)) begin
-                phaseClass_V <= 4'd0;
-            end
+        if ((1'b1 == ap_CS_fsm_state3)) begin
+            phaseClass_V <= tmp_4_fu_3219_p2;
+        end else if (((currentState_load_load_fu_3163_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+            phaseClass_V <= 4'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_502)) begin
-        if (((currentState_load_reg_797 == 1'd1) & (cond_i_fu_239_p2 == 1'd0))) begin
-            ap_phi_reg_pp0_iter2_p_0320_2_i_reg_174 <= 16'd0;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter2_p_0320_2_i_reg_174 <= ap_phi_reg_pp0_iter1_p_0320_2_i_reg_174;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_502)) begin
-        if (((currentState_load_reg_797 == 1'd1) & (cond_i_fu_239_p2 == 1'd0))) begin
-            ap_phi_reg_pp0_iter2_p_0324_2_i_reg_163 <= 16'd0;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter2_p_0324_2_i_reg_163 <= ap_phi_reg_pp0_iter1_p_0324_2_i_reg_163;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_502)) begin
-        if (((currentState_load_reg_797 == 1'd1) & (cond_i_fu_239_p2 == 1'd0))) begin
-            ap_phi_reg_pp0_iter2_p_0332_2_i_reg_152 <= 16'd0;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter2_p_0332_2_i_reg_152 <= ap_phi_reg_pp0_iter1_p_0332_2_i_reg_152;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_502)) begin
-        if (((currentState_load_reg_797 == 1'd1) & (cond_i_fu_239_p2 == 1'd0))) begin
-            ap_phi_reg_pp0_iter2_p_0336_2_i_reg_141 <= 16'd0;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter2_p_0336_2_i_reg_141 <= ap_phi_reg_pp0_iter1_p_0336_2_i_reg_141;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1))) begin
-        if (((ap_reg_pp0_iter2_cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter2_currentState_load_reg_797 == 1'd1))) begin
-            ap_phi_reg_pp0_iter4_p_0320_2_i_reg_174 <= corHelperQPos_V_i_fu_686_p2;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter4_p_0320_2_i_reg_174 <= ap_phi_reg_pp0_iter3_p_0320_2_i_reg_174;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1))) begin
-        if (((ap_reg_pp0_iter2_cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter2_currentState_load_reg_797 == 1'd1))) begin
-            ap_phi_reg_pp0_iter4_p_0324_2_i_reg_163 <= corHelperQNeg_V_7_i_fu_704_p2;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter4_p_0324_2_i_reg_163 <= ap_phi_reg_pp0_iter3_p_0324_2_i_reg_163;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1))) begin
-        if (((ap_reg_pp0_iter2_cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter2_currentState_load_reg_797 == 1'd1))) begin
-            ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152 <= corHelperIPos_V_i_fu_677_p2;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152 <= ap_phi_reg_pp0_iter3_p_0332_2_i_reg_152;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1))) begin
-        if (((ap_reg_pp0_iter2_cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter2_currentState_load_reg_797 == 1'd1))) begin
-            ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141 <= corHelperINeg_V_7_i_fu_695_p2;
-        end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141 <= ap_phi_reg_pp0_iter3_p_0336_2_i_reg_141;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_phi_reg_pp0_iter1_p_0320_2_i_reg_174 <= ap_phi_reg_pp0_iter0_p_0320_2_i_reg_174;
-        ap_phi_reg_pp0_iter1_p_0324_2_i_reg_163 <= ap_phi_reg_pp0_iter0_p_0324_2_i_reg_163;
-        ap_phi_reg_pp0_iter1_p_0332_2_i_reg_152 <= ap_phi_reg_pp0_iter0_p_0332_2_i_reg_152;
-        ap_phi_reg_pp0_iter1_p_0336_2_i_reg_141 <= ap_phi_reg_pp0_iter0_p_0336_2_i_reg_141;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        ap_phi_reg_pp0_iter3_p_0320_2_i_reg_174 <= ap_phi_reg_pp0_iter2_p_0320_2_i_reg_174;
-        ap_phi_reg_pp0_iter3_p_0324_2_i_reg_163 <= ap_phi_reg_pp0_iter2_p_0324_2_i_reg_163;
-        ap_phi_reg_pp0_iter3_p_0332_2_i_reg_152 <= ap_phi_reg_pp0_iter2_p_0332_2_i_reg_152;
-        ap_phi_reg_pp0_iter3_p_0336_2_i_reg_141 <= ap_phi_reg_pp0_iter2_p_0336_2_i_reg_141;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_reg_pp0_iter1_currentState_load_reg_797 <= currentState_load_reg_797;
-        currentState_load_reg_797 <= currentState;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b0 == ap_block_pp0_stage0_11001)) begin
-        ap_reg_pp0_iter2_cond_i_reg_806 <= cond_i_reg_806;
-        ap_reg_pp0_iter2_currentState_load_reg_797 <= ap_reg_pp0_iter1_currentState_load_reg_797;
-        ap_reg_pp0_iter2_tmp_last_V_reg_801 <= tmp_last_V_reg_801;
-        ap_reg_pp0_iter3_currentState_load_reg_797 <= ap_reg_pp0_iter2_currentState_load_reg_797;
-        ap_reg_pp0_iter3_tmp_last_V_reg_801 <= ap_reg_pp0_iter2_tmp_last_V_reg_801;
-        ap_reg_pp0_iter4_currentState_load_reg_797 <= ap_reg_pp0_iter3_currentState_load_reg_797;
-        ap_reg_pp0_iter4_tmp_last_V_reg_801 <= ap_reg_pp0_iter3_tmp_last_V_reg_801;
-        ap_reg_pp0_iter5_currentState_load_reg_797 <= ap_reg_pp0_iter4_currentState_load_reg_797;
-        ap_reg_pp0_iter5_tmp_last_V_reg_801 <= ap_reg_pp0_iter4_tmp_last_V_reg_801;
-        ap_reg_pp0_iter6_currentState_load_reg_797 <= ap_reg_pp0_iter5_currentState_load_reg_797;
-        ap_reg_pp0_iter6_tmp_last_V_reg_801 <= ap_reg_pp0_iter5_tmp_last_V_reg_801;
-        ap_reg_pp0_iter7_currentState_load_reg_797 <= ap_reg_pp0_iter6_currentState_load_reg_797;
-        ap_reg_pp0_iter7_tmp_last_V_reg_801 <= ap_reg_pp0_iter6_tmp_last_V_reg_801;
-        ap_reg_pp0_iter8_currentState_load_reg_797 <= ap_reg_pp0_iter7_currentState_load_reg_797;
-        ap_reg_pp0_iter8_tmp_last_V_reg_801 <= ap_reg_pp0_iter7_tmp_last_V_reg_801;
-        ap_reg_pp0_iter9_currentState_load_reg_797 <= ap_reg_pp0_iter8_currentState_load_reg_797;
-        ap_reg_pp0_iter9_tmp_5_reg_937 <= tmp_5_reg_937;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (currentState_load_reg_797 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        cond_i_reg_806 <= cond_i_fu_239_p2;
-        tmp_last_V_reg_801 <= i_data_V_last_V_0_data_out;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_reg_806 == 1'd1) & (ap_reg_pp0_iter1_currentState_load_reg_797 == 1'd1))) begin
-        cor_phaseClass0i_V_1_2_reg_830 <= cor_phaseClass0i_V_12;
-        cor_phaseClass0q_V_1_2_reg_835 <= cor_phaseClass0q_V_12;
-        tmp11_reg_860 <= tmp11_fu_627_p2;
-        tmp12_reg_865 <= tmp12_fu_633_p2;
-        tmp13_reg_870 <= tmp13_fu_645_p2;
-        tmp18_reg_875 <= tmp18_fu_650_p2;
-        tmp19_reg_880 <= tmp19_fu_656_p2;
-        tmp1_reg_840 <= tmp1_fu_579_p2;
-        tmp20_reg_885 <= tmp20_fu_668_p2;
-        tmp2_reg_845 <= tmp2_fu_597_p2;
-        tmp6_reg_850 <= tmp6_fu_603_p2;
-        tmp7_reg_855 <= tmp7_fu_621_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (cond_i_fu_239_p2 == 1'd1) & (currentState_load_reg_797 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        cor_phaseClass0i_V_1_5_reg_810 <= cor_phaseClass0i_V_1;
-        cor_phaseClass0q_V_1_5_reg_815 <= cor_phaseClass0q_V_1;
-        tmp15_reg_820 <= tmp15_fu_291_p2;
-        tmp22_reg_825 <= tmp22_fu_303_p2;
+    if ((1'b1 == ap_CS_fsm_state1)) begin
+        currentState_load_reg_3257 <= currentState;
+        phaseClass_V_load_reg_3261 <= phaseClass_V;
     end
 end
 
@@ -1154,65 +9601,36 @@ end
 
 always @ (posedge ap_clk) begin
     if ((o_data_V_last_V_1_load_A == 1'b1)) begin
-        o_data_V_last_V_1_payload_A <= ap_reg_pp0_iter8_tmp_last_V_reg_801;
+        o_data_V_last_V_1_payload_A <= tmp_last_V_reg_3268;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((o_data_V_last_V_1_load_B == 1'b1)) begin
-        o_data_V_last_V_1_payload_B <= ap_reg_pp0_iter8_tmp_last_V_reg_801;
+        o_data_V_last_V_1_payload_B <= tmp_last_V_reg_3268;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_reg_pp0_iter7_currentState_load_reg_797 == 1'd1))) begin
-        p_Result_s_reg_932 <= p_Result_s_fu_755_p3;
-        tmp_5_reg_937 <= tmp_5_fu_761_p2;
+    if (((grp_correlator_fu_1103_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+        out_sample_data_V_reg_3273 <= grp_correlator_fu_1103_ap_return;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_reg_pp0_iter3_currentState_load_reg_797 == 1'd1))) begin
-        resi_V_2_reg_910 <= resi_V_2_fu_727_p3;
-        resq_V_2_reg_916 <= resq_V_2_fu_747_p3;
+    if (((1'b0 == ap_block_state5_io) & (1'b1 == ap_CS_fsm_state5))) begin
+        tmp_5_reg_3279 <= tmp_5_fu_3246_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_reg_pp0_iter6_currentState_load_reg_797 == 1'd1))) begin
-        resi_V_3_reg_922 <= grp_fu_789_p2;
-        resq_V_3_reg_927 <= grp_fu_793_p2;
+    if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        tmp_last_V_reg_3268 <= i_data_V_last_V_0_data_out;
     end
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter8 == 1'b0) & (ap_enable_reg_pp0_iter7 == 1'b0) & (ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (1'b1 == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0))) begin
-        ap_idle_pp0 = 1'b1;
-    end else begin
-        ap_idle_pp0 = 1'b0;
-    end
-end
-
-assign ap_reset_idle_pp0 = 1'b0;
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        grp_fu_789_ce = 1'b1;
-    end else begin
-        grp_fu_789_ce = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        grp_fu_793_ce = 1'b1;
-    end else begin
-        grp_fu_793_ce = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((currentState_load_reg_797 == 1'd1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
         i_data_TDATA_blk_n = i_data_V_data_V_0_state[1'd0];
     end else begin
         i_data_TDATA_blk_n = 1'b1;
@@ -1220,7 +9638,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         i_data_V_data_V_0_ack_out = 1'b1;
     end else begin
         i_data_V_data_V_0_ack_out = 1'b0;
@@ -1236,7 +9654,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (currentState_load_reg_797 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
         i_data_V_last_V_0_ack_out = 1'b1;
     end else begin
         i_data_V_last_V_0_ack_out = 1'b0;
@@ -1252,7 +9670,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((ap_reg_pp0_iter9_tmp_5_reg_937 == 1'd1) & (ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd1) & (ap_reg_pp0_iter9_tmp_5_reg_937 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((tmp_5_reg_937 == 1'd1) & (ap_reg_pp0_iter8_currentState_load_reg_797 == 1'd1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_reg_pp0_iter8_currentState_load_reg_797 == 1'd1) & (tmp_5_reg_937 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter9 == 1'b1)))) begin
+    if ((((tmp_5_reg_3279 == 1'd1) & (currentState_load_reg_3257 == 1'd1) & (1'b1 == ap_CS_fsm_state6)) | ((currentState_load_reg_3257 == 1'd1) & (tmp_5_reg_3279 == 1'd0) & (1'b1 == ap_CS_fsm_state6)) | ((tmp_5_fu_3246_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((tmp_5_fu_3246_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5)))) begin
         o_data_TDATA_blk_n = o_data_V_data_V_1_state[1'd1];
     end else begin
         o_data_TDATA_blk_n = 1'b1;
@@ -1260,11 +9678,11 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_01001) & (ap_enable_reg_pp0_iter9 == 1'b1))) begin
-        if ((ap_predicate_op139_write_state10 == 1'b1)) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        if ((tmp_5_fu_3246_p2 == 1'd1)) begin
             o_data_V_data_V_1_data_in = 32'd0;
-        end else if ((ap_predicate_op138_write_state10 == 1'b1)) begin
-            o_data_V_data_V_1_data_in = p_Result_s_reg_932;
+        end else if ((tmp_5_fu_3246_p2 == 1'd0)) begin
+            o_data_V_data_V_1_data_in = out_sample_data_V_reg_3273;
         end else begin
             o_data_V_data_V_1_data_in = 'bx;
         end
@@ -1282,7 +9700,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op139_write_state10 == 1'b1) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op138_write_state10 == 1'b1) & (ap_enable_reg_pp0_iter9 == 1'b1)))) begin
+    if ((((1'b0 == ap_block_state5_io) & (tmp_5_fu_3246_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((1'b0 == ap_block_state5_io) & (tmp_5_fu_3246_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5)))) begin
         o_data_V_data_V_1_vld_in = 1'b1;
     end else begin
         o_data_V_data_V_1_vld_in = 1'b0;
@@ -1298,7 +9716,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op139_write_state10 == 1'b1) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op138_write_state10 == 1'b1) & (ap_enable_reg_pp0_iter9 == 1'b1)))) begin
+    if ((((1'b0 == ap_block_state5_io) & (tmp_5_fu_3246_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((1'b0 == ap_block_state5_io) & (tmp_5_fu_3246_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5)))) begin
         o_data_V_last_V_1_vld_in = 1'b1;
     end else begin
         o_data_V_last_V_1_vld_in = 1'b0;
@@ -1307,8 +9725,43 @@ end
 
 always @ (*) begin
     case (ap_CS_fsm)
-        ap_ST_fsm_pp0_stage0 : begin
-            ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+        ap_ST_fsm_state1 : begin
+            if (((currentState_load_load_fu_3163_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        ap_ST_fsm_state2 : begin
+            if (((i_data_V_data_V_0_vld_out == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            if (((grp_correlator_fu_1103_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end
+        end
+        ap_ST_fsm_state5 : begin
+            if (((1'b0 == ap_block_state5_io) & (1'b1 == ap_CS_fsm_state5))) begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end
+        end
+        ap_ST_fsm_state6 : begin
+            if ((~((1'b1 == ap_block_state6_io) | (o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0)) & (1'b1 == ap_CS_fsm_state6))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -1316,99 +9769,49 @@ always @ (*) begin
     endcase
 end
 
-assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
+assign StgValue_35_shiftPhaseClass_fu_2132_newValuei_V = i_data_V_data_V_0_data_out[15:0];
 
-assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
+assign StgValue_35_shiftPhaseClass_fu_2132_newValueq_V = {{i_data_V_data_V_0_data_out[31:16]}};
+
+assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
+
+assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+
+assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
+
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
+
+assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = (((ap_enable_reg_pp0_iter10 == 1'b1) & ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0))) | ((currentState_load_reg_797 == 1'd1) & (i_data_V_data_V_0_vld_out == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_state5_io = (((tmp_5_fu_3246_p2 == 1'd1) & (o_data_V_data_V_1_ack_in == 1'b0)) | ((tmp_5_fu_3246_p2 == 1'd0) & (o_data_V_data_V_1_ack_in == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = (((ap_enable_reg_pp0_iter10 == 1'b1) & ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0) | (1'b1 == ap_block_state11_io))) | ((1'b1 == ap_block_state10_io) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((currentState_load_reg_797 == 1'd1) & (i_data_V_data_V_0_vld_out == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_state6 = ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = (((ap_enable_reg_pp0_iter10 == 1'b1) & ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0) | (1'b1 == ap_block_state11_io))) | ((1'b1 == ap_block_state10_io) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((currentState_load_reg_797 == 1'd1) & (i_data_V_data_V_0_vld_out == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_state6_io = (((ap_predicate_op49_write_state6 == 1'b1) & (o_data_V_data_V_1_ack_in == 1'b0)) | ((ap_predicate_op47_write_state6 == 1'b1) & (o_data_V_data_V_1_ack_in == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state10_io = (((o_data_V_data_V_1_ack_in == 1'b0) & (ap_predicate_op139_write_state10 == 1'b1)) | ((o_data_V_data_V_1_ack_in == 1'b0) & (ap_predicate_op138_write_state10 == 1'b1)));
-end
-
-assign ap_block_state10_pp0_stage0_iter9 = ~(1'b1 == 1'b1);
-
-always @ (*) begin
-    ap_block_state11_io = (((o_data_V_data_V_1_ack_in == 1'b0) & (ap_predicate_op161_write_state11 == 1'b1)) | ((o_data_V_data_V_1_ack_in == 1'b0) & (ap_predicate_op159_write_state11 == 1'b1)));
+    ap_predicate_op47_write_state6 = ((currentState_load_reg_3257 == 1'd1) & (tmp_5_reg_3279 == 1'd0));
 end
 
 always @ (*) begin
-    ap_block_state11_pp0_stage0_iter10 = ((o_data_V_last_V_1_ack_in == 1'b0) | (o_data_V_data_V_1_ack_in == 1'b0));
-end
-
-assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
-
-always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1 = ((currentState_load_reg_797 == 1'd1) & (i_data_V_data_V_0_vld_out == 1'b0));
-end
-
-assign ap_block_state3_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
-
-assign ap_block_state4_pp0_stage0_iter3 = ~(1'b1 == 1'b1);
-
-assign ap_block_state5_pp0_stage0_iter4 = ~(1'b1 == 1'b1);
-
-assign ap_block_state6_pp0_stage0_iter5 = ~(1'b1 == 1'b1);
-
-assign ap_block_state7_pp0_stage0_iter6 = ~(1'b1 == 1'b1);
-
-assign ap_block_state8_pp0_stage0_iter7 = ~(1'b1 == 1'b1);
-
-assign ap_block_state9_pp0_stage0_iter8 = ~(1'b1 == 1'b1);
-
-always @ (*) begin
-    ap_condition_502 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
-end
-
-assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
-
-assign ap_phi_reg_pp0_iter0_p_0320_2_i_reg_174 = 'bx;
-
-assign ap_phi_reg_pp0_iter0_p_0324_2_i_reg_163 = 'bx;
-
-assign ap_phi_reg_pp0_iter0_p_0332_2_i_reg_152 = 'bx;
-
-assign ap_phi_reg_pp0_iter0_p_0336_2_i_reg_141 = 'bx;
-
-always @ (*) begin
-    ap_predicate_op138_write_state10 = ((ap_reg_pp0_iter8_currentState_load_reg_797 == 1'd1) & (tmp_5_reg_937 == 1'd0));
-end
-
-always @ (*) begin
-    ap_predicate_op139_write_state10 = ((tmp_5_reg_937 == 1'd1) & (ap_reg_pp0_iter8_currentState_load_reg_797 == 1'd1));
-end
-
-always @ (*) begin
-    ap_predicate_op159_write_state11 = ((ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd1) & (ap_reg_pp0_iter9_tmp_5_reg_937 == 1'd0));
-end
-
-always @ (*) begin
-    ap_predicate_op161_write_state11 = ((ap_reg_pp0_iter9_tmp_5_reg_937 == 1'd1) & (ap_reg_pp0_iter9_currentState_load_reg_797 == 1'd1));
+    ap_predicate_op49_write_state6 = ((tmp_5_reg_3279 == 1'd1) & (currentState_load_reg_3257 == 1'd1));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign cond_i_fu_239_p2 = ((phaseClass_V == 4'd0) ? 1'b1 : 1'b0);
+assign currentState_load_load_fu_3163_p1 = currentState;
 
-assign corHelperINeg_V_7_i_fu_695_p2 = (tmp13_reg_870 + tmp10_fu_691_p2);
-
-assign corHelperIPos_V_i_fu_677_p2 = (tmp2_reg_845 + tmp_fu_673_p2);
-
-assign corHelperQNeg_V_7_i_fu_704_p2 = (tmp20_reg_885 + tmp17_fu_700_p2);
-
-assign corHelperQPos_V_i_fu_686_p2 = (tmp7_reg_855 + tmp5_fu_682_p2);
+assign grp_correlator_fu_1103_ap_start = ap_reg_grp_correlator_fu_1103_ap_start;
 
 assign i_data_TREADY = i_data_V_last_V_0_state[1'd1];
 
@@ -1474,78 +9877,10 @@ assign o_data_V_last_V_1_state_cmp_full = ((o_data_V_last_V_1_state != 2'd1) ? 1
 
 assign o_data_V_last_V_1_vld_out = o_data_V_last_V_1_state[1'd0];
 
-assign op2_V_read_assign_1_fu_223_p4 = {{i_data_V_data_V_0_data_out[31:16]}};
+assign tmp_2_fu_3234_p2 = (32'd1 + loadCount_V);
 
-assign p_Result_s_fu_755_p3 = {{resq_V_3_reg_927}, {resi_V_3_reg_922}};
+assign tmp_4_fu_3219_p2 = (4'd1 + phaseClass_V_load_reg_3261);
 
-assign resi_V_1_fu_721_p2 = (ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141 - ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152);
-
-assign resi_V_2_fu_727_p3 = ((tmp_4_i_fu_709_p2[0:0] === 1'b1) ? resi_V_fu_715_p2 : resi_V_1_fu_721_p2);
-
-assign resi_V_fu_715_p2 = (ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152 - ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141);
-
-assign resq_V_1_fu_741_p2 = (ap_phi_reg_pp0_iter4_p_0324_2_i_reg_163 - ap_phi_reg_pp0_iter4_p_0320_2_i_reg_174);
-
-assign resq_V_2_fu_747_p3 = ((tmp_4_i_fu_709_p2[0:0] === 1'b1) ? resq_V_fu_735_p2 : resq_V_1_fu_741_p2);
-
-assign resq_V_fu_735_p2 = (ap_phi_reg_pp0_iter4_p_0320_2_i_reg_174 - ap_phi_reg_pp0_iter4_p_0324_2_i_reg_163);
-
-assign tmp10_fu_691_p2 = (tmp12_reg_865 + tmp11_reg_860);
-
-assign tmp11_fu_627_p2 = (cor_phaseClass0i_V_11 + cor_phaseClass0i_V_14);
-
-assign tmp12_fu_633_p2 = (cor_phaseClass0i_V_10 + cor_phaseClass0i_V_9);
-
-assign tmp13_fu_645_p2 = (tmp15_reg_820 + tmp14_fu_639_p2);
-
-assign tmp14_fu_639_p2 = (cor_phaseClass0i_V_4 + cor_phaseClass0i_V_3);
-
-assign tmp15_fu_291_p2 = (tmp16_fu_285_p2 + cor_phaseClass0i_V_1);
-
-assign tmp16_fu_285_p2 = (cor_phaseClass0i_V_0 + tmp_1_fu_213_p1);
-
-assign tmp17_fu_700_p2 = (tmp19_reg_880 + tmp18_reg_875);
-
-assign tmp18_fu_650_p2 = (cor_phaseClass0q_V_11 + cor_phaseClass0q_V_14);
-
-assign tmp19_fu_656_p2 = (cor_phaseClass0q_V_10 + cor_phaseClass0q_V_9);
-
-assign tmp1_fu_579_p2 = (cor_phaseClass0i_V_13 + cor_phaseClass0i_V_8);
-
-assign tmp20_fu_668_p2 = (tmp22_reg_825 + tmp21_fu_662_p2);
-
-assign tmp21_fu_662_p2 = (cor_phaseClass0q_V_4 + cor_phaseClass0q_V_3);
-
-assign tmp22_fu_303_p2 = (tmp23_fu_297_p2 + cor_phaseClass0q_V_1);
-
-assign tmp23_fu_297_p2 = (cor_phaseClass0q_V_0 + op2_V_read_assign_1_fu_223_p4);
-
-assign tmp2_fu_597_p2 = (tmp4_fu_591_p2 + tmp3_fu_585_p2);
-
-assign tmp3_fu_585_p2 = (cor_phaseClass0i_V_7 + cor_phaseClass0i_V_6);
-
-assign tmp4_fu_591_p2 = (cor_phaseClass0i_V_5 + cor_phaseClass0i_V_2);
-
-assign tmp5_fu_682_p2 = (tmp6_reg_850 + cor_phaseClass0q_V_1_2_reg_835);
-
-assign tmp6_fu_603_p2 = (cor_phaseClass0q_V_13 + cor_phaseClass0q_V_8);
-
-assign tmp7_fu_621_p2 = (tmp9_fu_615_p2 + tmp8_fu_609_p2);
-
-assign tmp8_fu_609_p2 = (cor_phaseClass0q_V_7 + cor_phaseClass0q_V_6);
-
-assign tmp9_fu_615_p2 = (cor_phaseClass0q_V_5 + cor_phaseClass0q_V_2);
-
-assign tmp_1_fu_213_p1 = i_data_V_data_V_0_data_out[15:0];
-
-assign tmp_2_fu_777_p2 = (loadCount_V + 32'd1);
-
-assign tmp_4_fu_309_p2 = (phaseClass_V + 4'd1);
-
-assign tmp_4_i_fu_709_p2 = (($signed(ap_phi_reg_pp0_iter4_p_0332_2_i_reg_152) > $signed(ap_phi_reg_pp0_iter4_p_0336_2_i_reg_141)) ? 1'b1 : 1'b0);
-
-assign tmp_5_fu_761_p2 = ((p_Result_s_fu_755_p3 == 32'd0) ? 1'b1 : 1'b0);
-
-assign tmp_fu_673_p2 = (tmp1_reg_840 + cor_phaseClass0i_V_1_2_reg_830);
+assign tmp_5_fu_3246_p2 = ((out_sample_data_V_reg_3273 == 32'd0) ? 1'b1 : 1'b0);
 
 endmodule //correlateTop

@@ -1,86 +1,3477 @@
-; ModuleID = 'D:/SeniorProject/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2.bc'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
-target triple = "i686-pc-mingw32"
+; ModuleID = '/home/ece492fa18/RFNoCFrameSynchHWAccel/matchedRee/solution1/.autopilot/db/a.o.2.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
 
-@matchFilter_str = internal unnamed_addr constant [12 x i8] c"matchFilter\00"
-@llvm_global_ctors_1 = appending global [2 x void ()*] [void ()* @_GLOBAL__I_a, void ()* @_GLOBAL__I_a25]
-@llvm_global_ctors_0 = appending global [2 x i32] [i32 65535, i32 65535]
-@p_str4 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
-@p_str3 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
-@p_str2 = private unnamed_addr constant [5 x i8] c"both\00", align 1
-@p_str = private unnamed_addr constant [5 x i8] c"axis\00", align 1
+@newValq_V = internal global i16 0
+@newVali_V = internal global i16 0
+@matchTop_str = internal unnamed_addr constant [9 x i8] c"matchTop\00"
+@match_matchBufferQ_V_99 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_98 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_97 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_96 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_95 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_94 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_93 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_92 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_91 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_90 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_9 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_89 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_88 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_87 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_86 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_85 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_84 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_83 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_82 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_81 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_80 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_8 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_79 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_78 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_77 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_76 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_75 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_74 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_73 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_72 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_71 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_70 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_7 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_69 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_68 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_67 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_66 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_65 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_64 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_63 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_62 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_61 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_60 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_6 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_59 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_58 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_57 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_56 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_55 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_54 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_53 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_52 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_51 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_50 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_5 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_49 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_48 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_47 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_46 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_45 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_44 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_43 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_42 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_41 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_40 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_4 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_39 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_38 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_37 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_36 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_35 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_34 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_33 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_32 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_31 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_30 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_3 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_29 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_28 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_27 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_26 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_25 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_24 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_23 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_22 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_21 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_20 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_2 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_19 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_18 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_17 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_16 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_15 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_14 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_13 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_127 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_126 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_125 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_124 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_123 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_122 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_121 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_120 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_12 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_119 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_118 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_117 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_116 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_115 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_114 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_113 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_112 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_111 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_110 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_11 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_109 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_108 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_107 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_106 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_105 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_104 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_103 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_102 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_101 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_100 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_10 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V_1 = internal unnamed_addr global i16 0
+@match_matchBufferQ_V = internal unnamed_addr global i16 0
+@match_matchBufferI_V_99 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_98 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_97 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_96 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_95 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_94 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_93 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_92 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_91 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_90 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_9 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_89 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_88 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_87 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_86 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_85 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_84 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_83 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_82 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_81 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_80 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_8 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_79 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_78 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_77 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_76 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_75 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_74 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_73 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_72 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_71 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_70 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_7 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_69 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_68 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_67 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_66 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_65 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_64 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_63 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_62 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_61 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_60 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_6 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_59 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_58 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_57 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_56 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_55 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_54 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_53 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_52 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_51 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_50 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_5 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_49 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_48 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_47 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_46 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_45 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_44 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_43 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_42 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_41 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_40 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_4 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_39 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_38 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_37 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_36 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_35 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_34 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_33 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_32 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_31 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_30 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_3 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_29 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_28 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_27 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_26 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_25 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_24 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_23 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_22 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_21 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_20 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_2 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_19 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_18 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_17 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_16 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_15 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_14 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_13 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_127 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_126 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_125 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_124 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_123 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_122 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_121 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_120 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_12 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_119 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_118 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_117 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_116 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_115 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_114 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_113 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_112 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_111 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_110 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_11 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_109 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_108 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_107 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_106 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_105 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_104 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_103 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_102 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_101 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_100 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_10 = internal unnamed_addr global i16 0
+@match_matchBufferI_V_1 = internal unnamed_addr global i16 0
+@match_matchBufferI_V = internal unnamed_addr global i16 0
+@llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a]
+@llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
+@p_str4 = private unnamed_addr constant [5 x i8] c"both\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
+@p_str2 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
+@p_str = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
 
-define void @matchFilter(i32* %in_V_data_V, i1* %in_V_last_V, i32* %out_V_data_V, i1* %out_V_last_V) {
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_V_data_V), !map !489
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_last_V), !map !495
-  call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_V_data_V), !map !499
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_last_V), !map !503
-  call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @matchFilter_str) nounwind
-  %buffIn_data_V = alloca [128 x i32], align 4
-  %buffIn_last_V = alloca [128 x i1], align 1
-  call void (...)* @_ssdm_op_SpecInterface(i32* %in_V_data_V, i1* %in_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str2, i32 0, i32 1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32* %out_V_data_V, i1* %out_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str2, i32 0, i32 1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind
-  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_V_data_V, i1* %in_V_last_V)
-  %tmp_data_V = extractvalue { i32, i1 } %empty, 0
-  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
-  br label %1
-
-; <label>:1                                       ; preds = %2, %0
-  %a = phi i7 [ -1, %0 ], [ %a_1, %2 ]
-  %a_cast2 = zext i7 %a to i32
-  %tmp = icmp eq i7 %a, 0
-  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 127, i64 127, i64 127)
-  br i1 %tmp, label %3, label %2
-
-; <label>:2                                       ; preds = %1
-  %a_1 = add i7 %a, -1
-  %a_1_cast = zext i7 %a_1 to i32
-  %buffIn_data_V_addr_1 = getelementptr [128 x i32]* %buffIn_data_V, i32 0, i32 %a_1_cast
-  %buffIn_data_V_load = load i32* %buffIn_data_V_addr_1, align 4
-  %buffIn_data_V_addr_2 = getelementptr [128 x i32]* %buffIn_data_V, i32 0, i32 %a_cast2
-  store i32 %buffIn_data_V_load, i32* %buffIn_data_V_addr_2, align 4
-  %buffIn_last_V_addr_1 = getelementptr [128 x i1]* %buffIn_last_V, i32 0, i32 %a_1_cast
-  %buffIn_last_V_load = load i1* %buffIn_last_V_addr_1, align 4
-  %buffIn_last_V_addr_2 = getelementptr [128 x i1]* %buffIn_last_V, i32 0, i32 %a_cast2
-  store i1 %buffIn_last_V_load, i1* %buffIn_last_V_addr_2, align 4
-  br label %1
-
-; <label>:3                                       ; preds = %1
-  %buffIn_data_V_addr = getelementptr [128 x i32]* %buffIn_data_V, i32 0, i32 0
-  store i32 %tmp_data_V, i32* %buffIn_data_V_addr, align 4
-  %buffIn_last_V_addr = getelementptr [128 x i1]* %buffIn_last_V, i32 0, i32 0
-  store i1 %tmp_last_V, i1* %buffIn_last_V_addr, align 4
-  br label %4
-
-; <label>:4                                       ; preds = %5, %3
-  %p_1_i = phi i16 [ 0, %3 ], [ %tempQ_V, %5 ]
-  %b_i = phi i8 [ 0, %3 ], [ %b, %5 ]
-  %b_i_cast1 = zext i8 %b_i to i32
-  %exitcond_i = icmp eq i8 %b_i, -128
-  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)
-  %b = add i8 %b_i, 1
-  br i1 %exitcond_i, label %convol.exit, label %5
-
-; <label>:5                                       ; preds = %4
-  %buffIn_data_V_addr_3 = getelementptr [128 x i32]* %buffIn_data_V, i32 0, i32 %b_i_cast1
-  %p_Val2_s = load i32* %buffIn_data_V_addr_3, align 4
-  %inQ_V = trunc i32 %p_Val2_s to i16
-  %tmp_3 = trunc i8 %b_i to i7
-  %tmp_1 = call i16 @_ssdm_op_Mux.ap_auto.128i16.i7(i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 1, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i7 %tmp_3)
-  %p_2_i = mul i16 %inQ_V, %tmp_1
-  %tempQ_V = add i16 %p_2_i, %p_1_i
-  br label %4
-
-convol.exit:                                      ; preds = %4
-  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 0, i16 %p_1_i)
-  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %out_V_data_V, i1* %out_V_last_V, i32 %p_Result_s, i1 %tmp_last_V)
+define internal fastcc void @shiftSampleIn(i16 %newVali_V, i16 %newValq_V) {
+  %newValq_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %newValq_V)
+  %newVali_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %newVali_V)
+  %match_matchBufferI_V = load i16* @match_matchBufferI_V_126, align 4
+  store i16 %match_matchBufferI_V, i16* @match_matchBufferI_V_127, align 2
+  %match_matchBufferQ_V = load i16* @match_matchBufferQ_V_126, align 4
+  store i16 %match_matchBufferQ_V, i16* @match_matchBufferQ_V_127, align 2
+  %match_matchBufferI_V_1 = load i16* @match_matchBufferI_V_125, align 2
+  store i16 %match_matchBufferI_V_1, i16* @match_matchBufferI_V_126, align 4
+  %match_matchBufferQ_V_1 = load i16* @match_matchBufferQ_V_125, align 2
+  store i16 %match_matchBufferQ_V_1, i16* @match_matchBufferQ_V_126, align 4
+  %match_matchBufferI_V_2 = load i16* @match_matchBufferI_V_124, align 8
+  store i16 %match_matchBufferI_V_2, i16* @match_matchBufferI_V_125, align 2
+  %match_matchBufferQ_V_2 = load i16* @match_matchBufferQ_V_124, align 8
+  store i16 %match_matchBufferQ_V_2, i16* @match_matchBufferQ_V_125, align 2
+  %match_matchBufferI_V_3 = load i16* @match_matchBufferI_V_123, align 2
+  store i16 %match_matchBufferI_V_3, i16* @match_matchBufferI_V_124, align 8
+  %match_matchBufferQ_V_3 = load i16* @match_matchBufferQ_V_123, align 2
+  store i16 %match_matchBufferQ_V_3, i16* @match_matchBufferQ_V_124, align 8
+  %match_matchBufferI_V_4 = load i16* @match_matchBufferI_V_122, align 4
+  store i16 %match_matchBufferI_V_4, i16* @match_matchBufferI_V_123, align 2
+  %match_matchBufferQ_V_4 = load i16* @match_matchBufferQ_V_122, align 4
+  store i16 %match_matchBufferQ_V_4, i16* @match_matchBufferQ_V_123, align 2
+  %match_matchBufferI_V_5 = load i16* @match_matchBufferI_V_121, align 2
+  store i16 %match_matchBufferI_V_5, i16* @match_matchBufferI_V_122, align 4
+  %match_matchBufferQ_V_5 = load i16* @match_matchBufferQ_V_121, align 2
+  store i16 %match_matchBufferQ_V_5, i16* @match_matchBufferQ_V_122, align 4
+  %match_matchBufferI_V_6 = load i16* @match_matchBufferI_V_120, align 16
+  store i16 %match_matchBufferI_V_6, i16* @match_matchBufferI_V_121, align 2
+  %match_matchBufferQ_V_6 = load i16* @match_matchBufferQ_V_120, align 16
+  store i16 %match_matchBufferQ_V_6, i16* @match_matchBufferQ_V_121, align 2
+  %match_matchBufferI_V_7 = load i16* @match_matchBufferI_V_119, align 2
+  store i16 %match_matchBufferI_V_7, i16* @match_matchBufferI_V_120, align 16
+  %match_matchBufferQ_V_7 = load i16* @match_matchBufferQ_V_119, align 2
+  store i16 %match_matchBufferQ_V_7, i16* @match_matchBufferQ_V_120, align 16
+  %match_matchBufferI_V_8 = load i16* @match_matchBufferI_V_118, align 4
+  store i16 %match_matchBufferI_V_8, i16* @match_matchBufferI_V_119, align 2
+  %match_matchBufferQ_V_8 = load i16* @match_matchBufferQ_V_118, align 4
+  store i16 %match_matchBufferQ_V_8, i16* @match_matchBufferQ_V_119, align 2
+  %match_matchBufferI_V_9 = load i16* @match_matchBufferI_V_117, align 2
+  store i16 %match_matchBufferI_V_9, i16* @match_matchBufferI_V_118, align 4
+  %match_matchBufferQ_V_9 = load i16* @match_matchBufferQ_V_117, align 2
+  store i16 %match_matchBufferQ_V_9, i16* @match_matchBufferQ_V_118, align 4
+  %match_matchBufferI_V_10 = load i16* @match_matchBufferI_V_116, align 8
+  store i16 %match_matchBufferI_V_10, i16* @match_matchBufferI_V_117, align 2
+  %match_matchBufferQ_V_10 = load i16* @match_matchBufferQ_V_116, align 8
+  store i16 %match_matchBufferQ_V_10, i16* @match_matchBufferQ_V_117, align 2
+  %match_matchBufferI_V_11 = load i16* @match_matchBufferI_V_115, align 2
+  store i16 %match_matchBufferI_V_11, i16* @match_matchBufferI_V_116, align 8
+  %match_matchBufferQ_V_11 = load i16* @match_matchBufferQ_V_115, align 2
+  store i16 %match_matchBufferQ_V_11, i16* @match_matchBufferQ_V_116, align 8
+  %match_matchBufferI_V_12 = load i16* @match_matchBufferI_V_114, align 4
+  store i16 %match_matchBufferI_V_12, i16* @match_matchBufferI_V_115, align 2
+  %match_matchBufferQ_V_12 = load i16* @match_matchBufferQ_V_114, align 4
+  store i16 %match_matchBufferQ_V_12, i16* @match_matchBufferQ_V_115, align 2
+  %match_matchBufferI_V_13 = load i16* @match_matchBufferI_V_113, align 2
+  store i16 %match_matchBufferI_V_13, i16* @match_matchBufferI_V_114, align 4
+  %match_matchBufferQ_V_13 = load i16* @match_matchBufferQ_V_113, align 2
+  store i16 %match_matchBufferQ_V_13, i16* @match_matchBufferQ_V_114, align 4
+  %match_matchBufferI_V_14 = load i16* @match_matchBufferI_V_112, align 16
+  store i16 %match_matchBufferI_V_14, i16* @match_matchBufferI_V_113, align 2
+  %match_matchBufferQ_V_14 = load i16* @match_matchBufferQ_V_112, align 16
+  store i16 %match_matchBufferQ_V_14, i16* @match_matchBufferQ_V_113, align 2
+  %match_matchBufferI_V_15 = load i16* @match_matchBufferI_V_111, align 2
+  store i16 %match_matchBufferI_V_15, i16* @match_matchBufferI_V_112, align 16
+  %match_matchBufferQ_V_15 = load i16* @match_matchBufferQ_V_111, align 2
+  store i16 %match_matchBufferQ_V_15, i16* @match_matchBufferQ_V_112, align 16
+  %match_matchBufferI_V_16 = load i16* @match_matchBufferI_V_110, align 4
+  store i16 %match_matchBufferI_V_16, i16* @match_matchBufferI_V_111, align 2
+  %match_matchBufferQ_V_16 = load i16* @match_matchBufferQ_V_110, align 4
+  store i16 %match_matchBufferQ_V_16, i16* @match_matchBufferQ_V_111, align 2
+  %match_matchBufferI_V_17 = load i16* @match_matchBufferI_V_109, align 2
+  store i16 %match_matchBufferI_V_17, i16* @match_matchBufferI_V_110, align 4
+  %match_matchBufferQ_V_17 = load i16* @match_matchBufferQ_V_109, align 2
+  store i16 %match_matchBufferQ_V_17, i16* @match_matchBufferQ_V_110, align 4
+  %match_matchBufferI_V_18 = load i16* @match_matchBufferI_V_108, align 8
+  store i16 %match_matchBufferI_V_18, i16* @match_matchBufferI_V_109, align 2
+  %match_matchBufferQ_V_18 = load i16* @match_matchBufferQ_V_108, align 8
+  store i16 %match_matchBufferQ_V_18, i16* @match_matchBufferQ_V_109, align 2
+  %match_matchBufferI_V_19 = load i16* @match_matchBufferI_V_107, align 2
+  store i16 %match_matchBufferI_V_19, i16* @match_matchBufferI_V_108, align 8
+  %match_matchBufferQ_V_19 = load i16* @match_matchBufferQ_V_107, align 2
+  store i16 %match_matchBufferQ_V_19, i16* @match_matchBufferQ_V_108, align 8
+  %match_matchBufferI_V_20 = load i16* @match_matchBufferI_V_106, align 4
+  store i16 %match_matchBufferI_V_20, i16* @match_matchBufferI_V_107, align 2
+  %match_matchBufferQ_V_20 = load i16* @match_matchBufferQ_V_106, align 4
+  store i16 %match_matchBufferQ_V_20, i16* @match_matchBufferQ_V_107, align 2
+  %match_matchBufferI_V_21 = load i16* @match_matchBufferI_V_105, align 2
+  store i16 %match_matchBufferI_V_21, i16* @match_matchBufferI_V_106, align 4
+  %match_matchBufferQ_V_21 = load i16* @match_matchBufferQ_V_105, align 2
+  store i16 %match_matchBufferQ_V_21, i16* @match_matchBufferQ_V_106, align 4
+  %match_matchBufferI_V_22 = load i16* @match_matchBufferI_V_104, align 16
+  store i16 %match_matchBufferI_V_22, i16* @match_matchBufferI_V_105, align 2
+  %match_matchBufferQ_V_22 = load i16* @match_matchBufferQ_V_104, align 16
+  store i16 %match_matchBufferQ_V_22, i16* @match_matchBufferQ_V_105, align 2
+  %match_matchBufferI_V_23 = load i16* @match_matchBufferI_V_103, align 2
+  store i16 %match_matchBufferI_V_23, i16* @match_matchBufferI_V_104, align 16
+  %match_matchBufferQ_V_23 = load i16* @match_matchBufferQ_V_103, align 2
+  store i16 %match_matchBufferQ_V_23, i16* @match_matchBufferQ_V_104, align 16
+  %match_matchBufferI_V_24 = load i16* @match_matchBufferI_V_102, align 4
+  store i16 %match_matchBufferI_V_24, i16* @match_matchBufferI_V_103, align 2
+  %match_matchBufferQ_V_24 = load i16* @match_matchBufferQ_V_102, align 4
+  store i16 %match_matchBufferQ_V_24, i16* @match_matchBufferQ_V_103, align 2
+  %match_matchBufferI_V_25 = load i16* @match_matchBufferI_V_101, align 2
+  store i16 %match_matchBufferI_V_25, i16* @match_matchBufferI_V_102, align 4
+  %match_matchBufferQ_V_25 = load i16* @match_matchBufferQ_V_101, align 2
+  store i16 %match_matchBufferQ_V_25, i16* @match_matchBufferQ_V_102, align 4
+  %match_matchBufferI_V_26 = load i16* @match_matchBufferI_V_100, align 8
+  store i16 %match_matchBufferI_V_26, i16* @match_matchBufferI_V_101, align 2
+  %match_matchBufferQ_V_26 = load i16* @match_matchBufferQ_V_100, align 8
+  store i16 %match_matchBufferQ_V_26, i16* @match_matchBufferQ_V_101, align 2
+  %match_matchBufferI_V_27 = load i16* @match_matchBufferI_V_99, align 2
+  store i16 %match_matchBufferI_V_27, i16* @match_matchBufferI_V_100, align 8
+  %match_matchBufferQ_V_27 = load i16* @match_matchBufferQ_V_99, align 2
+  store i16 %match_matchBufferQ_V_27, i16* @match_matchBufferQ_V_100, align 8
+  %match_matchBufferI_V_28 = load i16* @match_matchBufferI_V_98, align 4
+  store i16 %match_matchBufferI_V_28, i16* @match_matchBufferI_V_99, align 2
+  %match_matchBufferQ_V_28 = load i16* @match_matchBufferQ_V_98, align 4
+  store i16 %match_matchBufferQ_V_28, i16* @match_matchBufferQ_V_99, align 2
+  %match_matchBufferI_V_29 = load i16* @match_matchBufferI_V_97, align 2
+  store i16 %match_matchBufferI_V_29, i16* @match_matchBufferI_V_98, align 4
+  %match_matchBufferQ_V_29 = load i16* @match_matchBufferQ_V_97, align 2
+  store i16 %match_matchBufferQ_V_29, i16* @match_matchBufferQ_V_98, align 4
+  %match_matchBufferI_V_30 = load i16* @match_matchBufferI_V_96, align 16
+  store i16 %match_matchBufferI_V_30, i16* @match_matchBufferI_V_97, align 2
+  %match_matchBufferQ_V_30 = load i16* @match_matchBufferQ_V_96, align 16
+  store i16 %match_matchBufferQ_V_30, i16* @match_matchBufferQ_V_97, align 2
+  %match_matchBufferI_V_31 = load i16* @match_matchBufferI_V_95, align 2
+  store i16 %match_matchBufferI_V_31, i16* @match_matchBufferI_V_96, align 16
+  %match_matchBufferQ_V_31 = load i16* @match_matchBufferQ_V_95, align 2
+  store i16 %match_matchBufferQ_V_31, i16* @match_matchBufferQ_V_96, align 16
+  %match_matchBufferI_V_32 = load i16* @match_matchBufferI_V_94, align 4
+  store i16 %match_matchBufferI_V_32, i16* @match_matchBufferI_V_95, align 2
+  %match_matchBufferQ_V_32 = load i16* @match_matchBufferQ_V_94, align 4
+  store i16 %match_matchBufferQ_V_32, i16* @match_matchBufferQ_V_95, align 2
+  %match_matchBufferI_V_33 = load i16* @match_matchBufferI_V_93, align 2
+  store i16 %match_matchBufferI_V_33, i16* @match_matchBufferI_V_94, align 4
+  %match_matchBufferQ_V_33 = load i16* @match_matchBufferQ_V_93, align 2
+  store i16 %match_matchBufferQ_V_33, i16* @match_matchBufferQ_V_94, align 4
+  %match_matchBufferI_V_34 = load i16* @match_matchBufferI_V_92, align 8
+  store i16 %match_matchBufferI_V_34, i16* @match_matchBufferI_V_93, align 2
+  %match_matchBufferQ_V_34 = load i16* @match_matchBufferQ_V_92, align 8
+  store i16 %match_matchBufferQ_V_34, i16* @match_matchBufferQ_V_93, align 2
+  %match_matchBufferI_V_35 = load i16* @match_matchBufferI_V_91, align 2
+  store i16 %match_matchBufferI_V_35, i16* @match_matchBufferI_V_92, align 8
+  %match_matchBufferQ_V_35 = load i16* @match_matchBufferQ_V_91, align 2
+  store i16 %match_matchBufferQ_V_35, i16* @match_matchBufferQ_V_92, align 8
+  %match_matchBufferI_V_36 = load i16* @match_matchBufferI_V_90, align 4
+  store i16 %match_matchBufferI_V_36, i16* @match_matchBufferI_V_91, align 2
+  %match_matchBufferQ_V_36 = load i16* @match_matchBufferQ_V_90, align 4
+  store i16 %match_matchBufferQ_V_36, i16* @match_matchBufferQ_V_91, align 2
+  %match_matchBufferI_V_37 = load i16* @match_matchBufferI_V_89, align 2
+  store i16 %match_matchBufferI_V_37, i16* @match_matchBufferI_V_90, align 4
+  %match_matchBufferQ_V_37 = load i16* @match_matchBufferQ_V_89, align 2
+  store i16 %match_matchBufferQ_V_37, i16* @match_matchBufferQ_V_90, align 4
+  %match_matchBufferI_V_38 = load i16* @match_matchBufferI_V_88, align 16
+  store i16 %match_matchBufferI_V_38, i16* @match_matchBufferI_V_89, align 2
+  %match_matchBufferQ_V_38 = load i16* @match_matchBufferQ_V_88, align 16
+  store i16 %match_matchBufferQ_V_38, i16* @match_matchBufferQ_V_89, align 2
+  %match_matchBufferI_V_39 = load i16* @match_matchBufferI_V_87, align 2
+  store i16 %match_matchBufferI_V_39, i16* @match_matchBufferI_V_88, align 16
+  %match_matchBufferQ_V_39 = load i16* @match_matchBufferQ_V_87, align 2
+  store i16 %match_matchBufferQ_V_39, i16* @match_matchBufferQ_V_88, align 16
+  %match_matchBufferI_V_40 = load i16* @match_matchBufferI_V_86, align 4
+  store i16 %match_matchBufferI_V_40, i16* @match_matchBufferI_V_87, align 2
+  %match_matchBufferQ_V_40 = load i16* @match_matchBufferQ_V_86, align 4
+  store i16 %match_matchBufferQ_V_40, i16* @match_matchBufferQ_V_87, align 2
+  %match_matchBufferI_V_41 = load i16* @match_matchBufferI_V_85, align 2
+  store i16 %match_matchBufferI_V_41, i16* @match_matchBufferI_V_86, align 4
+  %match_matchBufferQ_V_41 = load i16* @match_matchBufferQ_V_85, align 2
+  store i16 %match_matchBufferQ_V_41, i16* @match_matchBufferQ_V_86, align 4
+  %match_matchBufferI_V_42 = load i16* @match_matchBufferI_V_84, align 8
+  store i16 %match_matchBufferI_V_42, i16* @match_matchBufferI_V_85, align 2
+  %match_matchBufferQ_V_42 = load i16* @match_matchBufferQ_V_84, align 8
+  store i16 %match_matchBufferQ_V_42, i16* @match_matchBufferQ_V_85, align 2
+  %match_matchBufferI_V_43 = load i16* @match_matchBufferI_V_83, align 2
+  store i16 %match_matchBufferI_V_43, i16* @match_matchBufferI_V_84, align 8
+  %match_matchBufferQ_V_43 = load i16* @match_matchBufferQ_V_83, align 2
+  store i16 %match_matchBufferQ_V_43, i16* @match_matchBufferQ_V_84, align 8
+  %match_matchBufferI_V_44 = load i16* @match_matchBufferI_V_82, align 4
+  store i16 %match_matchBufferI_V_44, i16* @match_matchBufferI_V_83, align 2
+  %match_matchBufferQ_V_44 = load i16* @match_matchBufferQ_V_82, align 4
+  store i16 %match_matchBufferQ_V_44, i16* @match_matchBufferQ_V_83, align 2
+  %match_matchBufferI_V_45 = load i16* @match_matchBufferI_V_81, align 2
+  store i16 %match_matchBufferI_V_45, i16* @match_matchBufferI_V_82, align 4
+  %match_matchBufferQ_V_45 = load i16* @match_matchBufferQ_V_81, align 2
+  store i16 %match_matchBufferQ_V_45, i16* @match_matchBufferQ_V_82, align 4
+  %match_matchBufferI_V_46 = load i16* @match_matchBufferI_V_80, align 16
+  store i16 %match_matchBufferI_V_46, i16* @match_matchBufferI_V_81, align 2
+  %match_matchBufferQ_V_46 = load i16* @match_matchBufferQ_V_80, align 16
+  store i16 %match_matchBufferQ_V_46, i16* @match_matchBufferQ_V_81, align 2
+  %match_matchBufferI_V_47 = load i16* @match_matchBufferI_V_79, align 2
+  store i16 %match_matchBufferI_V_47, i16* @match_matchBufferI_V_80, align 16
+  %match_matchBufferQ_V_47 = load i16* @match_matchBufferQ_V_79, align 2
+  store i16 %match_matchBufferQ_V_47, i16* @match_matchBufferQ_V_80, align 16
+  %match_matchBufferI_V_48 = load i16* @match_matchBufferI_V_78, align 4
+  store i16 %match_matchBufferI_V_48, i16* @match_matchBufferI_V_79, align 2
+  %match_matchBufferQ_V_48 = load i16* @match_matchBufferQ_V_78, align 4
+  store i16 %match_matchBufferQ_V_48, i16* @match_matchBufferQ_V_79, align 2
+  %match_matchBufferI_V_49 = load i16* @match_matchBufferI_V_77, align 2
+  store i16 %match_matchBufferI_V_49, i16* @match_matchBufferI_V_78, align 4
+  %match_matchBufferQ_V_49 = load i16* @match_matchBufferQ_V_77, align 2
+  store i16 %match_matchBufferQ_V_49, i16* @match_matchBufferQ_V_78, align 4
+  %match_matchBufferI_V_50 = load i16* @match_matchBufferI_V_76, align 8
+  store i16 %match_matchBufferI_V_50, i16* @match_matchBufferI_V_77, align 2
+  %match_matchBufferQ_V_50 = load i16* @match_matchBufferQ_V_76, align 8
+  store i16 %match_matchBufferQ_V_50, i16* @match_matchBufferQ_V_77, align 2
+  %match_matchBufferI_V_51 = load i16* @match_matchBufferI_V_75, align 2
+  store i16 %match_matchBufferI_V_51, i16* @match_matchBufferI_V_76, align 8
+  %match_matchBufferQ_V_51 = load i16* @match_matchBufferQ_V_75, align 2
+  store i16 %match_matchBufferQ_V_51, i16* @match_matchBufferQ_V_76, align 8
+  %match_matchBufferI_V_52 = load i16* @match_matchBufferI_V_74, align 4
+  store i16 %match_matchBufferI_V_52, i16* @match_matchBufferI_V_75, align 2
+  %match_matchBufferQ_V_52 = load i16* @match_matchBufferQ_V_74, align 4
+  store i16 %match_matchBufferQ_V_52, i16* @match_matchBufferQ_V_75, align 2
+  %match_matchBufferI_V_53 = load i16* @match_matchBufferI_V_73, align 2
+  store i16 %match_matchBufferI_V_53, i16* @match_matchBufferI_V_74, align 4
+  %match_matchBufferQ_V_53 = load i16* @match_matchBufferQ_V_73, align 2
+  store i16 %match_matchBufferQ_V_53, i16* @match_matchBufferQ_V_74, align 4
+  %match_matchBufferI_V_54 = load i16* @match_matchBufferI_V_72, align 16
+  store i16 %match_matchBufferI_V_54, i16* @match_matchBufferI_V_73, align 2
+  %match_matchBufferQ_V_54 = load i16* @match_matchBufferQ_V_72, align 16
+  store i16 %match_matchBufferQ_V_54, i16* @match_matchBufferQ_V_73, align 2
+  %match_matchBufferI_V_55 = load i16* @match_matchBufferI_V_71, align 2
+  store i16 %match_matchBufferI_V_55, i16* @match_matchBufferI_V_72, align 16
+  %match_matchBufferQ_V_55 = load i16* @match_matchBufferQ_V_71, align 2
+  store i16 %match_matchBufferQ_V_55, i16* @match_matchBufferQ_V_72, align 16
+  %match_matchBufferI_V_56 = load i16* @match_matchBufferI_V_70, align 4
+  store i16 %match_matchBufferI_V_56, i16* @match_matchBufferI_V_71, align 2
+  %match_matchBufferQ_V_56 = load i16* @match_matchBufferQ_V_70, align 4
+  store i16 %match_matchBufferQ_V_56, i16* @match_matchBufferQ_V_71, align 2
+  %match_matchBufferI_V_57 = load i16* @match_matchBufferI_V_69, align 2
+  store i16 %match_matchBufferI_V_57, i16* @match_matchBufferI_V_70, align 4
+  %match_matchBufferQ_V_57 = load i16* @match_matchBufferQ_V_69, align 2
+  store i16 %match_matchBufferQ_V_57, i16* @match_matchBufferQ_V_70, align 4
+  %match_matchBufferI_V_58 = load i16* @match_matchBufferI_V_68, align 8
+  store i16 %match_matchBufferI_V_58, i16* @match_matchBufferI_V_69, align 2
+  %match_matchBufferQ_V_58 = load i16* @match_matchBufferQ_V_68, align 8
+  store i16 %match_matchBufferQ_V_58, i16* @match_matchBufferQ_V_69, align 2
+  %match_matchBufferI_V_59 = load i16* @match_matchBufferI_V_67, align 2
+  store i16 %match_matchBufferI_V_59, i16* @match_matchBufferI_V_68, align 8
+  %match_matchBufferQ_V_59 = load i16* @match_matchBufferQ_V_67, align 2
+  store i16 %match_matchBufferQ_V_59, i16* @match_matchBufferQ_V_68, align 8
+  %match_matchBufferI_V_60 = load i16* @match_matchBufferI_V_66, align 4
+  store i16 %match_matchBufferI_V_60, i16* @match_matchBufferI_V_67, align 2
+  %match_matchBufferQ_V_60 = load i16* @match_matchBufferQ_V_66, align 4
+  store i16 %match_matchBufferQ_V_60, i16* @match_matchBufferQ_V_67, align 2
+  %match_matchBufferI_V_61 = load i16* @match_matchBufferI_V_65, align 2
+  store i16 %match_matchBufferI_V_61, i16* @match_matchBufferI_V_66, align 4
+  %match_matchBufferQ_V_61 = load i16* @match_matchBufferQ_V_65, align 2
+  store i16 %match_matchBufferQ_V_61, i16* @match_matchBufferQ_V_66, align 4
+  %match_matchBufferI_V_62 = load i16* @match_matchBufferI_V_64, align 16
+  store i16 %match_matchBufferI_V_62, i16* @match_matchBufferI_V_65, align 2
+  %match_matchBufferQ_V_62 = load i16* @match_matchBufferQ_V_64, align 16
+  store i16 %match_matchBufferQ_V_62, i16* @match_matchBufferQ_V_65, align 2
+  %match_matchBufferI_V_63 = load i16* @match_matchBufferI_V_63, align 2
+  store i16 %match_matchBufferI_V_63, i16* @match_matchBufferI_V_64, align 16
+  %match_matchBufferQ_V_63 = load i16* @match_matchBufferQ_V_63, align 2
+  store i16 %match_matchBufferQ_V_63, i16* @match_matchBufferQ_V_64, align 16
+  %match_matchBufferI_V_64 = load i16* @match_matchBufferI_V_62, align 4
+  store i16 %match_matchBufferI_V_64, i16* @match_matchBufferI_V_63, align 2
+  %match_matchBufferQ_V_64 = load i16* @match_matchBufferQ_V_62, align 4
+  store i16 %match_matchBufferQ_V_64, i16* @match_matchBufferQ_V_63, align 2
+  %match_matchBufferI_V_65 = load i16* @match_matchBufferI_V_61, align 2
+  store i16 %match_matchBufferI_V_65, i16* @match_matchBufferI_V_62, align 4
+  %match_matchBufferQ_V_65 = load i16* @match_matchBufferQ_V_61, align 2
+  store i16 %match_matchBufferQ_V_65, i16* @match_matchBufferQ_V_62, align 4
+  %match_matchBufferI_V_66 = load i16* @match_matchBufferI_V_60, align 8
+  store i16 %match_matchBufferI_V_66, i16* @match_matchBufferI_V_61, align 2
+  %match_matchBufferQ_V_66 = load i16* @match_matchBufferQ_V_60, align 8
+  store i16 %match_matchBufferQ_V_66, i16* @match_matchBufferQ_V_61, align 2
+  %match_matchBufferI_V_67 = load i16* @match_matchBufferI_V_59, align 2
+  store i16 %match_matchBufferI_V_67, i16* @match_matchBufferI_V_60, align 8
+  %match_matchBufferQ_V_67 = load i16* @match_matchBufferQ_V_59, align 2
+  store i16 %match_matchBufferQ_V_67, i16* @match_matchBufferQ_V_60, align 8
+  %match_matchBufferI_V_68 = load i16* @match_matchBufferI_V_58, align 4
+  store i16 %match_matchBufferI_V_68, i16* @match_matchBufferI_V_59, align 2
+  %match_matchBufferQ_V_68 = load i16* @match_matchBufferQ_V_58, align 4
+  store i16 %match_matchBufferQ_V_68, i16* @match_matchBufferQ_V_59, align 2
+  %match_matchBufferI_V_69 = load i16* @match_matchBufferI_V_57, align 2
+  store i16 %match_matchBufferI_V_69, i16* @match_matchBufferI_V_58, align 4
+  %match_matchBufferQ_V_69 = load i16* @match_matchBufferQ_V_57, align 2
+  store i16 %match_matchBufferQ_V_69, i16* @match_matchBufferQ_V_58, align 4
+  %match_matchBufferI_V_70 = load i16* @match_matchBufferI_V_56, align 16
+  store i16 %match_matchBufferI_V_70, i16* @match_matchBufferI_V_57, align 2
+  %match_matchBufferQ_V_70 = load i16* @match_matchBufferQ_V_56, align 16
+  store i16 %match_matchBufferQ_V_70, i16* @match_matchBufferQ_V_57, align 2
+  %match_matchBufferI_V_71 = load i16* @match_matchBufferI_V_55, align 2
+  store i16 %match_matchBufferI_V_71, i16* @match_matchBufferI_V_56, align 16
+  %match_matchBufferQ_V_71 = load i16* @match_matchBufferQ_V_55, align 2
+  store i16 %match_matchBufferQ_V_71, i16* @match_matchBufferQ_V_56, align 16
+  %match_matchBufferI_V_72 = load i16* @match_matchBufferI_V_54, align 4
+  store i16 %match_matchBufferI_V_72, i16* @match_matchBufferI_V_55, align 2
+  %match_matchBufferQ_V_72 = load i16* @match_matchBufferQ_V_54, align 4
+  store i16 %match_matchBufferQ_V_72, i16* @match_matchBufferQ_V_55, align 2
+  %match_matchBufferI_V_73 = load i16* @match_matchBufferI_V_53, align 2
+  store i16 %match_matchBufferI_V_73, i16* @match_matchBufferI_V_54, align 4
+  %match_matchBufferQ_V_73 = load i16* @match_matchBufferQ_V_53, align 2
+  store i16 %match_matchBufferQ_V_73, i16* @match_matchBufferQ_V_54, align 4
+  %match_matchBufferI_V_74 = load i16* @match_matchBufferI_V_52, align 8
+  store i16 %match_matchBufferI_V_74, i16* @match_matchBufferI_V_53, align 2
+  %match_matchBufferQ_V_74 = load i16* @match_matchBufferQ_V_52, align 8
+  store i16 %match_matchBufferQ_V_74, i16* @match_matchBufferQ_V_53, align 2
+  %match_matchBufferI_V_75 = load i16* @match_matchBufferI_V_51, align 2
+  store i16 %match_matchBufferI_V_75, i16* @match_matchBufferI_V_52, align 8
+  %match_matchBufferQ_V_75 = load i16* @match_matchBufferQ_V_51, align 2
+  store i16 %match_matchBufferQ_V_75, i16* @match_matchBufferQ_V_52, align 8
+  %match_matchBufferI_V_76 = load i16* @match_matchBufferI_V_50, align 4
+  store i16 %match_matchBufferI_V_76, i16* @match_matchBufferI_V_51, align 2
+  %match_matchBufferQ_V_76 = load i16* @match_matchBufferQ_V_50, align 4
+  store i16 %match_matchBufferQ_V_76, i16* @match_matchBufferQ_V_51, align 2
+  %match_matchBufferI_V_77 = load i16* @match_matchBufferI_V_49, align 2
+  store i16 %match_matchBufferI_V_77, i16* @match_matchBufferI_V_50, align 4
+  %match_matchBufferQ_V_77 = load i16* @match_matchBufferQ_V_49, align 2
+  store i16 %match_matchBufferQ_V_77, i16* @match_matchBufferQ_V_50, align 4
+  %match_matchBufferI_V_78 = load i16* @match_matchBufferI_V_48, align 16
+  store i16 %match_matchBufferI_V_78, i16* @match_matchBufferI_V_49, align 2
+  %match_matchBufferQ_V_78 = load i16* @match_matchBufferQ_V_48, align 16
+  store i16 %match_matchBufferQ_V_78, i16* @match_matchBufferQ_V_49, align 2
+  %match_matchBufferI_V_79 = load i16* @match_matchBufferI_V_47, align 2
+  store i16 %match_matchBufferI_V_79, i16* @match_matchBufferI_V_48, align 16
+  %match_matchBufferQ_V_79 = load i16* @match_matchBufferQ_V_47, align 2
+  store i16 %match_matchBufferQ_V_79, i16* @match_matchBufferQ_V_48, align 16
+  %match_matchBufferI_V_80 = load i16* @match_matchBufferI_V_46, align 4
+  store i16 %match_matchBufferI_V_80, i16* @match_matchBufferI_V_47, align 2
+  %match_matchBufferQ_V_80 = load i16* @match_matchBufferQ_V_46, align 4
+  store i16 %match_matchBufferQ_V_80, i16* @match_matchBufferQ_V_47, align 2
+  %match_matchBufferI_V_81 = load i16* @match_matchBufferI_V_45, align 2
+  store i16 %match_matchBufferI_V_81, i16* @match_matchBufferI_V_46, align 4
+  %match_matchBufferQ_V_81 = load i16* @match_matchBufferQ_V_45, align 2
+  store i16 %match_matchBufferQ_V_81, i16* @match_matchBufferQ_V_46, align 4
+  %match_matchBufferI_V_82 = load i16* @match_matchBufferI_V_44, align 8
+  store i16 %match_matchBufferI_V_82, i16* @match_matchBufferI_V_45, align 2
+  %match_matchBufferQ_V_82 = load i16* @match_matchBufferQ_V_44, align 8
+  store i16 %match_matchBufferQ_V_82, i16* @match_matchBufferQ_V_45, align 2
+  %match_matchBufferI_V_83 = load i16* @match_matchBufferI_V_43, align 2
+  store i16 %match_matchBufferI_V_83, i16* @match_matchBufferI_V_44, align 8
+  %match_matchBufferQ_V_83 = load i16* @match_matchBufferQ_V_43, align 2
+  store i16 %match_matchBufferQ_V_83, i16* @match_matchBufferQ_V_44, align 8
+  %match_matchBufferI_V_84 = load i16* @match_matchBufferI_V_42, align 4
+  store i16 %match_matchBufferI_V_84, i16* @match_matchBufferI_V_43, align 2
+  %match_matchBufferQ_V_84 = load i16* @match_matchBufferQ_V_42, align 4
+  store i16 %match_matchBufferQ_V_84, i16* @match_matchBufferQ_V_43, align 2
+  %match_matchBufferI_V_85 = load i16* @match_matchBufferI_V_41, align 2
+  store i16 %match_matchBufferI_V_85, i16* @match_matchBufferI_V_42, align 4
+  %match_matchBufferQ_V_85 = load i16* @match_matchBufferQ_V_41, align 2
+  store i16 %match_matchBufferQ_V_85, i16* @match_matchBufferQ_V_42, align 4
+  %match_matchBufferI_V_86 = load i16* @match_matchBufferI_V_40, align 16
+  store i16 %match_matchBufferI_V_86, i16* @match_matchBufferI_V_41, align 2
+  %match_matchBufferQ_V_86 = load i16* @match_matchBufferQ_V_40, align 16
+  store i16 %match_matchBufferQ_V_86, i16* @match_matchBufferQ_V_41, align 2
+  %match_matchBufferI_V_87 = load i16* @match_matchBufferI_V_39, align 2
+  store i16 %match_matchBufferI_V_87, i16* @match_matchBufferI_V_40, align 16
+  %match_matchBufferQ_V_87 = load i16* @match_matchBufferQ_V_39, align 2
+  store i16 %match_matchBufferQ_V_87, i16* @match_matchBufferQ_V_40, align 16
+  %match_matchBufferI_V_88 = load i16* @match_matchBufferI_V_38, align 4
+  store i16 %match_matchBufferI_V_88, i16* @match_matchBufferI_V_39, align 2
+  %match_matchBufferQ_V_88 = load i16* @match_matchBufferQ_V_38, align 4
+  store i16 %match_matchBufferQ_V_88, i16* @match_matchBufferQ_V_39, align 2
+  %match_matchBufferI_V_89 = load i16* @match_matchBufferI_V_37, align 2
+  store i16 %match_matchBufferI_V_89, i16* @match_matchBufferI_V_38, align 4
+  %match_matchBufferQ_V_89 = load i16* @match_matchBufferQ_V_37, align 2
+  store i16 %match_matchBufferQ_V_89, i16* @match_matchBufferQ_V_38, align 4
+  %match_matchBufferI_V_90 = load i16* @match_matchBufferI_V_36, align 8
+  store i16 %match_matchBufferI_V_90, i16* @match_matchBufferI_V_37, align 2
+  %match_matchBufferQ_V_90 = load i16* @match_matchBufferQ_V_36, align 8
+  store i16 %match_matchBufferQ_V_90, i16* @match_matchBufferQ_V_37, align 2
+  %match_matchBufferI_V_91 = load i16* @match_matchBufferI_V_35, align 2
+  store i16 %match_matchBufferI_V_91, i16* @match_matchBufferI_V_36, align 8
+  %match_matchBufferQ_V_91 = load i16* @match_matchBufferQ_V_35, align 2
+  store i16 %match_matchBufferQ_V_91, i16* @match_matchBufferQ_V_36, align 8
+  %match_matchBufferI_V_92 = load i16* @match_matchBufferI_V_34, align 4
+  store i16 %match_matchBufferI_V_92, i16* @match_matchBufferI_V_35, align 2
+  %match_matchBufferQ_V_92 = load i16* @match_matchBufferQ_V_34, align 4
+  store i16 %match_matchBufferQ_V_92, i16* @match_matchBufferQ_V_35, align 2
+  %match_matchBufferI_V_93 = load i16* @match_matchBufferI_V_33, align 2
+  store i16 %match_matchBufferI_V_93, i16* @match_matchBufferI_V_34, align 4
+  %match_matchBufferQ_V_93 = load i16* @match_matchBufferQ_V_33, align 2
+  store i16 %match_matchBufferQ_V_93, i16* @match_matchBufferQ_V_34, align 4
+  %match_matchBufferI_V_94 = load i16* @match_matchBufferI_V_32, align 16
+  store i16 %match_matchBufferI_V_94, i16* @match_matchBufferI_V_33, align 2
+  %match_matchBufferQ_V_94 = load i16* @match_matchBufferQ_V_32, align 16
+  store i16 %match_matchBufferQ_V_94, i16* @match_matchBufferQ_V_33, align 2
+  %match_matchBufferI_V_95 = load i16* @match_matchBufferI_V_31, align 2
+  store i16 %match_matchBufferI_V_95, i16* @match_matchBufferI_V_32, align 16
+  %match_matchBufferQ_V_95 = load i16* @match_matchBufferQ_V_31, align 2
+  store i16 %match_matchBufferQ_V_95, i16* @match_matchBufferQ_V_32, align 16
+  %match_matchBufferI_V_96 = load i16* @match_matchBufferI_V_30, align 4
+  store i16 %match_matchBufferI_V_96, i16* @match_matchBufferI_V_31, align 2
+  %match_matchBufferQ_V_96 = load i16* @match_matchBufferQ_V_30, align 4
+  store i16 %match_matchBufferQ_V_96, i16* @match_matchBufferQ_V_31, align 2
+  %match_matchBufferI_V_97 = load i16* @match_matchBufferI_V_29, align 2
+  store i16 %match_matchBufferI_V_97, i16* @match_matchBufferI_V_30, align 4
+  %match_matchBufferQ_V_97 = load i16* @match_matchBufferQ_V_29, align 2
+  store i16 %match_matchBufferQ_V_97, i16* @match_matchBufferQ_V_30, align 4
+  %match_matchBufferI_V_98 = load i16* @match_matchBufferI_V_28, align 8
+  store i16 %match_matchBufferI_V_98, i16* @match_matchBufferI_V_29, align 2
+  %match_matchBufferQ_V_98 = load i16* @match_matchBufferQ_V_28, align 8
+  store i16 %match_matchBufferQ_V_98, i16* @match_matchBufferQ_V_29, align 2
+  %match_matchBufferI_V_99 = load i16* @match_matchBufferI_V_27, align 2
+  store i16 %match_matchBufferI_V_99, i16* @match_matchBufferI_V_28, align 8
+  %match_matchBufferQ_V_99 = load i16* @match_matchBufferQ_V_27, align 2
+  store i16 %match_matchBufferQ_V_99, i16* @match_matchBufferQ_V_28, align 8
+  %match_matchBufferI_V_100 = load i16* @match_matchBufferI_V_26, align 4
+  store i16 %match_matchBufferI_V_100, i16* @match_matchBufferI_V_27, align 2
+  %match_matchBufferQ_V_100 = load i16* @match_matchBufferQ_V_26, align 4
+  store i16 %match_matchBufferQ_V_100, i16* @match_matchBufferQ_V_27, align 2
+  %match_matchBufferI_V_101 = load i16* @match_matchBufferI_V_25, align 2
+  store i16 %match_matchBufferI_V_101, i16* @match_matchBufferI_V_26, align 4
+  %match_matchBufferQ_V_101 = load i16* @match_matchBufferQ_V_25, align 2
+  store i16 %match_matchBufferQ_V_101, i16* @match_matchBufferQ_V_26, align 4
+  %match_matchBufferI_V_102 = load i16* @match_matchBufferI_V_24, align 16
+  store i16 %match_matchBufferI_V_102, i16* @match_matchBufferI_V_25, align 2
+  %match_matchBufferQ_V_102 = load i16* @match_matchBufferQ_V_24, align 16
+  store i16 %match_matchBufferQ_V_102, i16* @match_matchBufferQ_V_25, align 2
+  %match_matchBufferI_V_103 = load i16* @match_matchBufferI_V_23, align 2
+  store i16 %match_matchBufferI_V_103, i16* @match_matchBufferI_V_24, align 16
+  %match_matchBufferQ_V_103 = load i16* @match_matchBufferQ_V_23, align 2
+  store i16 %match_matchBufferQ_V_103, i16* @match_matchBufferQ_V_24, align 16
+  %match_matchBufferI_V_104 = load i16* @match_matchBufferI_V_22, align 4
+  store i16 %match_matchBufferI_V_104, i16* @match_matchBufferI_V_23, align 2
+  %match_matchBufferQ_V_104 = load i16* @match_matchBufferQ_V_22, align 4
+  store i16 %match_matchBufferQ_V_104, i16* @match_matchBufferQ_V_23, align 2
+  %match_matchBufferI_V_105 = load i16* @match_matchBufferI_V_21, align 2
+  store i16 %match_matchBufferI_V_105, i16* @match_matchBufferI_V_22, align 4
+  %match_matchBufferQ_V_105 = load i16* @match_matchBufferQ_V_21, align 2
+  store i16 %match_matchBufferQ_V_105, i16* @match_matchBufferQ_V_22, align 4
+  %match_matchBufferI_V_106 = load i16* @match_matchBufferI_V_20, align 8
+  store i16 %match_matchBufferI_V_106, i16* @match_matchBufferI_V_21, align 2
+  %match_matchBufferQ_V_106 = load i16* @match_matchBufferQ_V_20, align 8
+  store i16 %match_matchBufferQ_V_106, i16* @match_matchBufferQ_V_21, align 2
+  %match_matchBufferI_V_107 = load i16* @match_matchBufferI_V_19, align 2
+  store i16 %match_matchBufferI_V_107, i16* @match_matchBufferI_V_20, align 8
+  %match_matchBufferQ_V_107 = load i16* @match_matchBufferQ_V_19, align 2
+  store i16 %match_matchBufferQ_V_107, i16* @match_matchBufferQ_V_20, align 8
+  %match_matchBufferI_V_108 = load i16* @match_matchBufferI_V_18, align 4
+  store i16 %match_matchBufferI_V_108, i16* @match_matchBufferI_V_19, align 2
+  %match_matchBufferQ_V_108 = load i16* @match_matchBufferQ_V_18, align 4
+  store i16 %match_matchBufferQ_V_108, i16* @match_matchBufferQ_V_19, align 2
+  %match_matchBufferI_V_109 = load i16* @match_matchBufferI_V_17, align 2
+  store i16 %match_matchBufferI_V_109, i16* @match_matchBufferI_V_18, align 4
+  %match_matchBufferQ_V_109 = load i16* @match_matchBufferQ_V_17, align 2
+  store i16 %match_matchBufferQ_V_109, i16* @match_matchBufferQ_V_18, align 4
+  %match_matchBufferI_V_110 = load i16* @match_matchBufferI_V_16, align 16
+  store i16 %match_matchBufferI_V_110, i16* @match_matchBufferI_V_17, align 2
+  %match_matchBufferQ_V_110 = load i16* @match_matchBufferQ_V_16, align 16
+  store i16 %match_matchBufferQ_V_110, i16* @match_matchBufferQ_V_17, align 2
+  %match_matchBufferI_V_111 = load i16* @match_matchBufferI_V_15, align 2
+  store i16 %match_matchBufferI_V_111, i16* @match_matchBufferI_V_16, align 16
+  %match_matchBufferQ_V_111 = load i16* @match_matchBufferQ_V_15, align 2
+  store i16 %match_matchBufferQ_V_111, i16* @match_matchBufferQ_V_16, align 16
+  %match_matchBufferI_V_112 = load i16* @match_matchBufferI_V_14, align 4
+  store i16 %match_matchBufferI_V_112, i16* @match_matchBufferI_V_15, align 2
+  %match_matchBufferQ_V_112 = load i16* @match_matchBufferQ_V_14, align 4
+  store i16 %match_matchBufferQ_V_112, i16* @match_matchBufferQ_V_15, align 2
+  %match_matchBufferI_V_113 = load i16* @match_matchBufferI_V_13, align 2
+  store i16 %match_matchBufferI_V_113, i16* @match_matchBufferI_V_14, align 4
+  %match_matchBufferQ_V_113 = load i16* @match_matchBufferQ_V_13, align 2
+  store i16 %match_matchBufferQ_V_113, i16* @match_matchBufferQ_V_14, align 4
+  %match_matchBufferI_V_114 = load i16* @match_matchBufferI_V_12, align 8
+  store i16 %match_matchBufferI_V_114, i16* @match_matchBufferI_V_13, align 2
+  %match_matchBufferQ_V_114 = load i16* @match_matchBufferQ_V_12, align 8
+  store i16 %match_matchBufferQ_V_114, i16* @match_matchBufferQ_V_13, align 2
+  %match_matchBufferI_V_115 = load i16* @match_matchBufferI_V_11, align 2
+  store i16 %match_matchBufferI_V_115, i16* @match_matchBufferI_V_12, align 8
+  %match_matchBufferQ_V_115 = load i16* @match_matchBufferQ_V_11, align 2
+  store i16 %match_matchBufferQ_V_115, i16* @match_matchBufferQ_V_12, align 8
+  %match_matchBufferI_V_116 = load i16* @match_matchBufferI_V_10, align 4
+  store i16 %match_matchBufferI_V_116, i16* @match_matchBufferI_V_11, align 2
+  %match_matchBufferQ_V_116 = load i16* @match_matchBufferQ_V_10, align 4
+  store i16 %match_matchBufferQ_V_116, i16* @match_matchBufferQ_V_11, align 2
+  %match_matchBufferI_V_117 = load i16* @match_matchBufferI_V_9, align 2
+  store i16 %match_matchBufferI_V_117, i16* @match_matchBufferI_V_10, align 4
+  %match_matchBufferQ_V_117 = load i16* @match_matchBufferQ_V_9, align 2
+  store i16 %match_matchBufferQ_V_117, i16* @match_matchBufferQ_V_10, align 4
+  %match_matchBufferI_V_118 = load i16* @match_matchBufferI_V_8, align 16
+  store i16 %match_matchBufferI_V_118, i16* @match_matchBufferI_V_9, align 2
+  %match_matchBufferQ_V_118 = load i16* @match_matchBufferQ_V_8, align 16
+  store i16 %match_matchBufferQ_V_118, i16* @match_matchBufferQ_V_9, align 2
+  %match_matchBufferI_V_119 = load i16* @match_matchBufferI_V_7, align 2
+  store i16 %match_matchBufferI_V_119, i16* @match_matchBufferI_V_8, align 16
+  %match_matchBufferQ_V_119 = load i16* @match_matchBufferQ_V_7, align 2
+  store i16 %match_matchBufferQ_V_119, i16* @match_matchBufferQ_V_8, align 16
+  %match_matchBufferI_V_120 = load i16* @match_matchBufferI_V_6, align 4
+  store i16 %match_matchBufferI_V_120, i16* @match_matchBufferI_V_7, align 2
+  %match_matchBufferQ_V_120 = load i16* @match_matchBufferQ_V_6, align 4
+  store i16 %match_matchBufferQ_V_120, i16* @match_matchBufferQ_V_7, align 2
+  %match_matchBufferI_V_121 = load i16* @match_matchBufferI_V_5, align 2
+  store i16 %match_matchBufferI_V_121, i16* @match_matchBufferI_V_6, align 4
+  %match_matchBufferQ_V_121 = load i16* @match_matchBufferQ_V_5, align 2
+  store i16 %match_matchBufferQ_V_121, i16* @match_matchBufferQ_V_6, align 4
+  %match_matchBufferI_V_122 = load i16* @match_matchBufferI_V_4, align 8
+  store i16 %match_matchBufferI_V_122, i16* @match_matchBufferI_V_5, align 2
+  %match_matchBufferQ_V_122 = load i16* @match_matchBufferQ_V_4, align 8
+  store i16 %match_matchBufferQ_V_122, i16* @match_matchBufferQ_V_5, align 2
+  %match_matchBufferI_V_123 = load i16* @match_matchBufferI_V_3, align 2
+  store i16 %match_matchBufferI_V_123, i16* @match_matchBufferI_V_4, align 8
+  %match_matchBufferQ_V_123 = load i16* @match_matchBufferQ_V_3, align 2
+  store i16 %match_matchBufferQ_V_123, i16* @match_matchBufferQ_V_4, align 8
+  %match_matchBufferI_V_124 = load i16* @match_matchBufferI_V_2, align 4
+  store i16 %match_matchBufferI_V_124, i16* @match_matchBufferI_V_3, align 2
+  %match_matchBufferQ_V_124 = load i16* @match_matchBufferQ_V_2, align 4
+  store i16 %match_matchBufferQ_V_124, i16* @match_matchBufferQ_V_3, align 2
+  %match_matchBufferI_V_125 = load i16* @match_matchBufferI_V_1, align 2
+  store i16 %match_matchBufferI_V_125, i16* @match_matchBufferI_V_2, align 4
+  %match_matchBufferQ_V_125 = load i16* @match_matchBufferQ_V_1, align 2
+  store i16 %match_matchBufferQ_V_125, i16* @match_matchBufferQ_V_2, align 4
+  %match_matchBufferI_V_126 = load i16* @match_matchBufferI_V, align 16
+  store i16 %match_matchBufferI_V_126, i16* @match_matchBufferI_V_1, align 2
+  %match_matchBufferQ_V_126 = load i16* @match_matchBufferQ_V, align 16
+  store i16 %match_matchBufferQ_V_126, i16* @match_matchBufferQ_V_1, align 2
+  store i16 %newVali_V_read, i16* @match_matchBufferI_V, align 16
+  store i16 %newValq_V_read, i16* @match_matchBufferQ_V, align 16
   ret void
 }
+
+define void @matchTop(i32* %i_data_V_data_V, i1* %i_data_V_last_V, i32* %o_data_V_data_V, i1* %o_data_V_last_V) {
+codeRepl:
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %i_data_V_data_V), !map !114
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %i_data_V_last_V), !map !118
+  call void (...)* @_ssdm_op_SpecBitsMap(i32* %o_data_V_data_V), !map !122
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %o_data_V_last_V), !map !126
+  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @matchTop_str) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %o_data_V_data_V, i1* %o_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %i_data_V_data_V, i1* %i_data_V_last_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i16* @newVali_V, i32 1, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecReset(i16* @newValq_V, i32 1, [1 x i8]* @p_str2) nounwind
+  %empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %i_data_V_data_V, i1* %i_data_V_last_V)
+  %tmp_data_V_1 = extractvalue { i32, i1 } %empty, 0
+  %tmp_last_V = extractvalue { i32, i1 } %empty, 1
+  %tmp_dataQ_V = trunc i32 %tmp_data_V_1 to i16
+  %tmp_dataI_V = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %tmp_data_V_1, i32 16, i32 31)
+  store i16 %tmp_dataI_V, i16* @newVali_V, align 2
+  store i16 %tmp_dataQ_V, i16* @newValq_V, align 2
+  call fastcc void @shiftSampleIn(i16 %tmp_dataI_V, i16 %tmp_dataQ_V)
+  %out_sample_data_V = call fastcc i32 @convol()
+  call void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32* %o_data_V_data_V, i1* %o_data_V_last_V, i32 %out_sample_data_V, i1 %tmp_last_V)
+  ret void
+}
+
+declare i35 @llvm.part.select.i35(i35, i32, i32) nounwind readnone
+
+declare i33 @llvm.part.select.i33(i33, i32, i32) nounwind readnone
+
+declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
+
+declare i24 @llvm.part.select.i24(i24, i32, i32) nounwind readnone
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
+
+define internal fastcc i32 @convol() readonly {
+"ap_fixed_base<36, 7, true, 5, 3, 0>.exit.0":
+  %match_matchBufferQ_V = load i16* @match_matchBufferQ_V, align 16
+  %OP1_V_cast = sext i16 %match_matchBufferQ_V to i24
+  %p_Val2_3 = mul i24 90, %OP1_V_cast
+  %tmp_1 = call i21 @_ssdm_op_PartSelect.i21.i24.i32.i32(i24 %p_Val2_3, i32 3, i32 23)
+  %p_Val2_5_cast_cast = sext i21 %tmp_1 to i22
+  %tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3, i32 2)
+  %tmp_7_cast_cast = zext i1 %tmp_2 to i22
+  %p_Val2_s = add i22 %p_Val2_5_cast_cast, %tmp_7_cast_cast
+  %match_matchBufferI_V = load i16* @match_matchBufferI_V, align 16
+  %OP1_V_1_cast = sext i16 %match_matchBufferI_V to i24
+  %p_Val2_6 = mul i24 90, %OP1_V_1_cast
+  %tmp_3 = call i21 @_ssdm_op_PartSelect.i21.i24.i32.i32(i24 %p_Val2_6, i32 3, i32 23)
+  %p_Val2_1_cast_cast = sext i21 %tmp_3 to i22
+  %tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6, i32 2)
+  %tmp_5_cast_cast = zext i1 %tmp_4 to i22
+  %p_Val2_4 = add i22 %p_Val2_1_cast_cast, %tmp_5_cast_cast
+  %match_matchBufferQ_V_127 = load i16* @match_matchBufferQ_V_1, align 2
+  %OP1_V_cast_11 = sext i16 %match_matchBufferQ_V_127 to i24
+  %p_Val2_3_1 = mul i24 87, %OP1_V_cast_11
+  %tmp_7 = call i25 @_ssdm_op_BitConcatenate.i25.i22.i3(i22 %p_Val2_s, i3 0)
+  %tmp_3_1 = sext i25 %tmp_7 to i33
+  %tmp_4_1_cast = sext i24 %p_Val2_3_1 to i33
+  %p_Val2_4_1 = add i33 %tmp_3_1, %tmp_4_1_cast
+  %tmp_9 = call i30 @_ssdm_op_PartSelect.i30.i33.i32.i32(i33 %p_Val2_4_1, i32 3, i32 32)
+  %tmp_9_cast = sext i30 %tmp_9 to i31
+  %tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_1, i32 2)
+  %tmp_7_1_cast = zext i1 %tmp_11 to i31
+  %p_Val2_16_1 = add i31 %tmp_9_cast, %tmp_7_1_cast
+  %match_matchBufferI_V_127 = load i16* @match_matchBufferI_V_1, align 2
+  %OP1_V_1_1_cast = sext i16 %match_matchBufferI_V_127 to i24
+  %p_Val2_6_1 = mul i24 87, %OP1_V_1_1_cast
+  %tmp_12 = call i25 @_ssdm_op_BitConcatenate.i25.i22.i3(i22 %p_Val2_4, i3 0)
+  %tmp_16_1 = sext i25 %tmp_12 to i33
+  %tmp_17_1_cast = sext i24 %p_Val2_6_1 to i33
+  %p_Val2_7_1 = add i33 %tmp_16_1, %tmp_17_1_cast
+  %tmp_13 = call i30 @_ssdm_op_PartSelect.i30.i33.i32.i32(i33 %p_Val2_7_1, i32 3, i32 32)
+  %tmp_3_cast = sext i30 %tmp_13 to i31
+  %tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_1, i32 2)
+  %tmp_19_1_cast = zext i1 %tmp_14 to i31
+  %p_Val2_17_1 = add i31 %tmp_3_cast, %tmp_19_1_cast
+  %match_matchBufferQ_V_128 = load i16* @match_matchBufferQ_V_2, align 4
+  %OP1_V_2_cast = sext i16 %match_matchBufferQ_V_128 to i24
+  %p_Val2_3_2 = mul i24 74, %OP1_V_2_cast
+  %tmp_15 = call i34 @_ssdm_op_BitConcatenate.i34.i31.i3(i31 %p_Val2_16_1, i3 0)
+  %tmp_3_2 = sext i34 %tmp_15 to i35
+  %tmp_4_2_cast = sext i24 %p_Val2_3_2 to i35
+  %p_Val2_4_2 = add i35 %tmp_3_2, %tmp_4_2_cast
+  %p_Val2_5_2 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_2, i32 3, i32 34)
+  %tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_2, i32 2)
+  %tmp_7_2 = zext i1 %tmp_16 to i32
+  %p_Val2_16_2 = add nsw i32 %p_Val2_5_2, %tmp_7_2
+  %match_matchBufferI_V_128 = load i16* @match_matchBufferI_V_2, align 4
+  %OP1_V_1_2_cast = sext i16 %match_matchBufferI_V_128 to i24
+  %p_Val2_6_2 = mul i24 74, %OP1_V_1_2_cast
+  %tmp_17 = call i34 @_ssdm_op_BitConcatenate.i34.i31.i3(i31 %p_Val2_17_1, i3 0)
+  %tmp_16_2 = sext i34 %tmp_17 to i35
+  %tmp_17_2_cast = sext i24 %p_Val2_6_2 to i35
+  %p_Val2_7_2 = add i35 %tmp_16_2, %tmp_17_2_cast
+  %p_Val2_11_2 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_2, i32 3, i32 34)
+  %tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_2, i32 2)
+  %tmp_19_2 = zext i1 %tmp_18 to i32
+  %p_Val2_17_2 = add nsw i32 %p_Val2_11_2, %tmp_19_2
+  %match_matchBufferQ_V_129 = load i16* @match_matchBufferQ_V_3, align 2
+  %OP1_V_3_cast = sext i16 %match_matchBufferQ_V_129 to i23
+  %p_Val2_3_3 = mul i23 50, %OP1_V_3_cast
+  %tmp_3_3 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_2, i3 0)
+  %tmp_4_3_cast = sext i23 %p_Val2_3_3 to i35
+  %p_Val2_4_3 = add i35 %tmp_3_3, %tmp_4_3_cast
+  %p_Val2_5_3 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_3, i32 3, i32 34)
+  %tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_3, i32 2)
+  %tmp_7_3 = zext i1 %tmp_19 to i32
+  %p_Val2_16_3 = add nsw i32 %p_Val2_5_3, %tmp_7_3
+  %match_matchBufferI_V_129 = load i16* @match_matchBufferI_V_3, align 2
+  %OP1_V_1_3_cast = sext i16 %match_matchBufferI_V_129 to i23
+  %p_Val2_6_3 = mul i23 50, %OP1_V_1_3_cast
+  %tmp_16_3 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_2, i3 0)
+  %tmp_17_3_cast = sext i23 %p_Val2_6_3 to i35
+  %p_Val2_7_3 = add i35 %tmp_16_3, %tmp_17_3_cast
+  %p_Val2_11_3 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_3, i32 3, i32 34)
+  %tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_3, i32 2)
+  %tmp_19_3 = zext i1 %tmp_20 to i32
+  %p_Val2_17_3 = add nsw i32 %p_Val2_11_3, %tmp_19_3
+  %match_matchBufferQ_V_130 = load i16* @match_matchBufferQ_V_4, align 8
+  %p_shl1 = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %match_matchBufferQ_V_130, i4 0)
+  %p_shl1_cast = sext i20 %p_shl1 to i21
+  %p_shl2 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferQ_V_130, i1 false)
+  %p_shl2_cast = sext i17 %p_shl2 to i21
+  %p_Val2_3_4 = add i21 %p_shl1_cast, %p_shl2_cast
+  %tmp_3_4 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_3, i3 0)
+  %tmp_4_4_cast = sext i21 %p_Val2_3_4 to i35
+  %p_Val2_4_4 = add i35 %tmp_3_4, %tmp_4_4_cast
+  %p_Val2_5_4 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_4, i32 3, i32 34)
+  %tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferQ_V_130, i32 1)
+  %tmp_7_4 = zext i1 %tmp_21 to i32
+  %p_Val2_16_4 = add nsw i32 %p_Val2_5_4, %tmp_7_4
+  %match_matchBufferI_V_130 = load i16* @match_matchBufferI_V_4, align 8
+  %p_shl3 = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %match_matchBufferI_V_130, i4 0)
+  %p_shl3_cast = sext i20 %p_shl3 to i21
+  %p_shl4 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferI_V_130, i1 false)
+  %p_shl4_cast = sext i17 %p_shl4 to i21
+  %p_Val2_6_4 = add i21 %p_shl3_cast, %p_shl4_cast
+  %tmp_16_4 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_3, i3 0)
+  %tmp_17_4_cast = sext i21 %p_Val2_6_4 to i35
+  %p_Val2_7_4 = add i35 %tmp_16_4, %tmp_17_4_cast
+  %p_Val2_11_4 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_4, i32 3, i32 34)
+  %tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferI_V_130, i32 1)
+  %tmp_19_4 = zext i1 %tmp_22 to i32
+  %p_Val2_17_4 = add nsw i32 %p_Val2_11_4, %tmp_19_4
+  %match_matchBufferQ_V_131 = load i16* @match_matchBufferQ_V_5, align 2
+  %OP1_V_5_cast = sext i16 %match_matchBufferQ_V_131 to i22
+  %p_Val2_3_5 = mul i22 -19, %OP1_V_5_cast
+  %tmp_3_5 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_4, i3 0)
+  %tmp_4_5_cast = sext i22 %p_Val2_3_5 to i35
+  %p_Val2_4_5 = add i35 %tmp_3_5, %tmp_4_5_cast
+  %p_Val2_5_5 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_5, i32 3, i32 34)
+  %tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_Val2_3_5, i32 2)
+  %tmp_7_5 = zext i1 %tmp_23 to i32
+  %p_Val2_16_5 = add nsw i32 %p_Val2_5_5, %tmp_7_5
+  %match_matchBufferI_V_131 = load i16* @match_matchBufferI_V_5, align 2
+  %OP1_V_1_5_cast = sext i16 %match_matchBufferI_V_131 to i22
+  %p_Val2_6_5 = mul i22 -19, %OP1_V_1_5_cast
+  %tmp_16_5 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_4, i3 0)
+  %tmp_17_5_cast = sext i22 %p_Val2_6_5 to i35
+  %p_Val2_7_5 = add i35 %tmp_16_5, %tmp_17_5_cast
+  %p_Val2_11_5 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_5, i32 3, i32 34)
+  %tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_Val2_6_5, i32 2)
+  %tmp_19_5 = zext i1 %tmp_24 to i32
+  %p_Val2_17_5 = add nsw i32 %p_Val2_11_5, %tmp_19_5
+  %match_matchBufferQ_V_132 = load i16* @match_matchBufferQ_V_6, align 4
+  %p_shl5 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_132, i6 0)
+  %p_shl5_cast = sext i22 %p_shl5 to i23
+  %p_neg1 = sub i23 0, %p_shl5_cast
+  %p_shl6 = call i19 @_ssdm_op_BitConcatenate.i19.i16.i3(i16 %match_matchBufferQ_V_132, i3 0)
+  %p_shl6_cast = sext i19 %p_shl6 to i23
+  %p_Val2_3_6 = sub i23 %p_shl6_cast, %p_shl5_cast
+  %tmp_3_6 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_5, i3 0)
+  %tmp_4_6_cast = sext i23 %p_Val2_3_6 to i35
+  %p_Val2_4_6 = add i35 %tmp_3_6, %tmp_4_6_cast
+  %p_Val2_5_6 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_6, i32 3, i32 34)
+  %tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_neg1, i32 2)
+  %tmp_7_6 = zext i1 %tmp_25 to i32
+  %p_Val2_16_6 = add nsw i32 %p_Val2_5_6, %tmp_7_6
+  %match_matchBufferI_V_132 = load i16* @match_matchBufferI_V_6, align 4
+  %p_shl13 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_132, i6 0)
+  %p_shl13_cast = sext i22 %p_shl13 to i23
+  %p_neg2 = sub i23 0, %p_shl13_cast
+  %p_shl16 = call i19 @_ssdm_op_BitConcatenate.i19.i16.i3(i16 %match_matchBufferI_V_132, i3 0)
+  %p_shl16_cast = sext i19 %p_shl16 to i23
+  %p_Val2_6_6 = sub i23 %p_shl16_cast, %p_shl13_cast
+  %tmp_16_6 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_5, i3 0)
+  %tmp_17_6_cast = sext i23 %p_Val2_6_6 to i35
+  %p_Val2_7_6 = add i35 %tmp_16_6, %tmp_17_6_cast
+  %p_Val2_11_6 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_6, i32 3, i32 34)
+  %tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_neg2, i32 2)
+  %tmp_19_6 = zext i1 %tmp_26 to i32
+  %p_Val2_17_6 = add nsw i32 %p_Val2_11_6, %tmp_19_6
+  %match_matchBufferQ_V_133 = load i16* @match_matchBufferQ_V_7, align 2
+  %OP1_V_7_cast = sext i16 %match_matchBufferQ_V_133 to i24
+  %p_Val2_3_7 = mul i24 -89, %OP1_V_7_cast
+  %tmp_3_7 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_6, i3 0)
+  %tmp_4_7_cast = sext i24 %p_Val2_3_7 to i35
+  %p_Val2_4_7 = add i35 %tmp_3_7, %tmp_4_7_cast
+  %p_Val2_5_7 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_7, i32 3, i32 34)
+  %tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_7, i32 2)
+  %tmp_7_7 = zext i1 %tmp_27 to i32
+  %p_Val2_16_7 = add nsw i32 %p_Val2_5_7, %tmp_7_7
+  %match_matchBufferI_V_133 = load i16* @match_matchBufferI_V_7, align 2
+  %OP1_V_1_7_cast = sext i16 %match_matchBufferI_V_133 to i24
+  %p_Val2_6_7 = mul i24 -89, %OP1_V_1_7_cast
+  %tmp_16_7 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_6, i3 0)
+  %tmp_17_7_cast = sext i24 %p_Val2_6_7 to i35
+  %p_Val2_7_7 = add i35 %tmp_16_7, %tmp_17_7_cast
+  %p_Val2_11_7 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_7, i32 3, i32 34)
+  %tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_7, i32 2)
+  %tmp_19_7 = zext i1 %tmp_28 to i32
+  %p_Val2_17_7 = add nsw i32 %p_Val2_11_7, %tmp_19_7
+  %match_matchBufferQ_V_134 = load i16* @match_matchBufferQ_V_8, align 16
+  %OP1_V_8_cast = sext i16 %match_matchBufferQ_V_134 to i24
+  %p_Val2_3_8 = mul i24 -115, %OP1_V_8_cast
+  %tmp_3_8 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_7, i3 0)
+  %tmp_4_8_cast = sext i24 %p_Val2_3_8 to i35
+  %p_Val2_4_8 = add i35 %tmp_3_8, %tmp_4_8_cast
+  %p_Val2_5_8 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_8, i32 3, i32 34)
+  %tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_8, i32 2)
+  %tmp_7_8 = zext i1 %tmp_29 to i32
+  %p_Val2_16_8 = add nsw i32 %p_Val2_5_8, %tmp_7_8
+  %match_matchBufferI_V_134 = load i16* @match_matchBufferI_V_8, align 16
+  %OP1_V_1_8_cast = sext i16 %match_matchBufferI_V_134 to i24
+  %p_Val2_6_8 = mul i24 -115, %OP1_V_1_8_cast
+  %tmp_16_8 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_7, i3 0)
+  %tmp_17_8_cast = sext i24 %p_Val2_6_8 to i35
+  %p_Val2_7_8 = add i35 %tmp_16_8, %tmp_17_8_cast
+  %p_Val2_11_8 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_8, i32 3, i32 34)
+  %tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_8, i32 2)
+  %tmp_19_8 = zext i1 %tmp_30 to i32
+  %p_Val2_17_8 = add nsw i32 %p_Val2_11_8, %tmp_19_8
+  %match_matchBufferQ_V_135 = load i16* @match_matchBufferQ_V_9, align 2
+  %OP1_V_9_cast = sext i16 %match_matchBufferQ_V_135 to i24
+  %p_shl18 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_135, i7 0)
+  %p_shl18_cast = sext i23 %p_shl18 to i24
+  %p_neg3 = sub i24 0, %p_shl18_cast
+  %p_Val2_3_9 = sub i24 %p_neg3, %OP1_V_9_cast
+  %tmp_3_9 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_8, i3 0)
+  %tmp_4_9_cast = sext i24 %p_Val2_3_9 to i35
+  %p_Val2_4_9 = add i35 %tmp_3_9, %tmp_4_9_cast
+  %p_Val2_5_9 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_9, i32 3, i32 34)
+  %tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_9, i32 2)
+  %tmp_7_9 = zext i1 %tmp_31 to i32
+  %p_Val2_16_9 = add nsw i32 %p_Val2_5_9, %tmp_7_9
+  %match_matchBufferI_V_135 = load i16* @match_matchBufferI_V_9, align 2
+  %OP1_V_1_9_cast = sext i16 %match_matchBufferI_V_135 to i24
+  %p_shl20 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_135, i7 0)
+  %p_shl20_cast = sext i23 %p_shl20 to i24
+  %p_neg4 = sub i24 0, %p_shl20_cast
+  %p_Val2_6_9 = sub i24 %p_neg4, %OP1_V_1_9_cast
+  %tmp_16_9 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_8, i3 0)
+  %tmp_17_9_cast = sext i24 %p_Val2_6_9 to i35
+  %p_Val2_7_9 = add i35 %tmp_16_9, %tmp_17_9_cast
+  %p_Val2_11_9 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_9, i32 3, i32 34)
+  %tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_9, i32 2)
+  %tmp_19_9 = zext i1 %tmp_32 to i32
+  %p_Val2_17_9 = add nsw i32 %p_Val2_11_9, %tmp_19_9
+  %match_matchBufferQ_V_136 = load i16* @match_matchBufferQ_V_10, align 4
+  %OP1_V_10_cast = sext i16 %match_matchBufferQ_V_136 to i24
+  %p_shl22 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_136, i7 0)
+  %p_shl22_cast = sext i23 %p_shl22 to i24
+  %p_neg5 = sub i24 0, %p_shl22_cast
+  %p_Val2_3_s = sub i24 %p_neg5, %OP1_V_10_cast
+  %tmp_3_s = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_9, i3 0)
+  %tmp_4_cast = sext i24 %p_Val2_3_s to i35
+  %p_Val2_4_s = add i35 %tmp_3_s, %tmp_4_cast
+  %p_Val2_5_s = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_s, i32 3, i32 34)
+  %tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_s, i32 2)
+  %tmp_7_s = zext i1 %tmp_33 to i32
+  %p_Val2_16_s = add nsw i32 %p_Val2_5_s, %tmp_7_s
+  %match_matchBufferI_V_136 = load i16* @match_matchBufferI_V_10, align 4
+  %OP1_V_1_cast_12 = sext i16 %match_matchBufferI_V_136 to i24
+  %p_shl28 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_136, i7 0)
+  %p_shl28_cast = sext i23 %p_shl28 to i24
+  %p_neg6 = sub i24 0, %p_shl28_cast
+  %p_Val2_6_s = sub i24 %p_neg6, %OP1_V_1_cast_12
+  %tmp_16_s = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_9, i3 0)
+  %tmp_17_cast = sext i24 %p_Val2_6_s to i35
+  %p_Val2_7_s = add i35 %tmp_16_s, %tmp_17_cast
+  %p_Val2_11_s = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_s, i32 3, i32 34)
+  %tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_s, i32 2)
+  %tmp_19_s = zext i1 %tmp_34 to i32
+  %p_Val2_17_s = add nsw i32 %p_Val2_11_s, %tmp_19_s
+  %match_matchBufferQ_V_137 = load i16* @match_matchBufferQ_V_11, align 2
+  %OP1_V_11_cast = sext i16 %match_matchBufferQ_V_137 to i24
+  %p_Val2_3_10 = mul i24 -114, %OP1_V_11_cast
+  %tmp_3_10 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_s, i3 0)
+  %tmp_4_10_cast = sext i24 %p_Val2_3_10 to i35
+  %p_Val2_4_10 = add i35 %tmp_3_10, %tmp_4_10_cast
+  %p_Val2_5_1 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_10, i32 3, i32 34)
+  %tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_10, i32 2)
+  %tmp_7_1 = zext i1 %tmp_35 to i32
+  %p_Val2_16_10 = add nsw i32 %p_Val2_5_1, %tmp_7_1
+  %match_matchBufferI_V_137 = load i16* @match_matchBufferI_V_11, align 2
+  %OP1_V_1_10_cast = sext i16 %match_matchBufferI_V_137 to i24
+  %p_Val2_6_10 = mul i24 -114, %OP1_V_1_10_cast
+  %tmp_16_10 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_s, i3 0)
+  %tmp_17_10_cast = sext i24 %p_Val2_6_10 to i35
+  %p_Val2_7_10 = add i35 %tmp_16_10, %tmp_17_10_cast
+  %p_Val2_11_1 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_10, i32 3, i32 34)
+  %tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_10, i32 2)
+  %tmp_19_1 = zext i1 %tmp_36 to i32
+  %p_Val2_17_10 = add nsw i32 %p_Val2_11_1, %tmp_19_1
+  %match_matchBufferQ_V_138 = load i16* @match_matchBufferQ_V_12, align 8
+  %OP1_V_12_cast = sext i16 %match_matchBufferQ_V_138 to i24
+  %p_Val2_3_11 = mul i24 -85, %OP1_V_12_cast
+  %tmp_3_11 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_10, i3 0)
+  %tmp_4_11_cast = sext i24 %p_Val2_3_11 to i35
+  %p_Val2_4_11 = add i35 %tmp_3_11, %tmp_4_11_cast
+  %p_Val2_5_10 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_11, i32 3, i32 34)
+  %tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_11, i32 2)
+  %tmp_7_10 = zext i1 %tmp_37 to i32
+  %p_Val2_16_11 = add nsw i32 %p_Val2_5_10, %tmp_7_10
+  %match_matchBufferI_V_138 = load i16* @match_matchBufferI_V_12, align 8
+  %OP1_V_1_11_cast = sext i16 %match_matchBufferI_V_138 to i24
+  %p_Val2_6_11 = mul i24 -85, %OP1_V_1_11_cast
+  %tmp_16_11 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_10, i3 0)
+  %tmp_17_11_cast = sext i24 %p_Val2_6_11 to i35
+  %p_Val2_7_11 = add i35 %tmp_16_11, %tmp_17_11_cast
+  %p_Val2_11_10 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_11, i32 3, i32 34)
+  %tmp_38 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_11, i32 2)
+  %tmp_19_10 = zext i1 %tmp_38 to i32
+  %p_Val2_17_11 = add nsw i32 %p_Val2_11_10, %tmp_19_10
+  %match_matchBufferQ_V_139 = load i16* @match_matchBufferQ_V_13, align 2
+  %OP1_V_13_cast = sext i16 %match_matchBufferQ_V_139 to i23
+  %p_Val2_3_12 = mul i23 -44, %OP1_V_13_cast
+  %tmp_3_12 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_11, i3 0)
+  %tmp_4_12_cast = sext i23 %p_Val2_3_12 to i35
+  %p_Val2_4_12 = add i35 %tmp_3_12, %tmp_4_12_cast
+  %p_Val2_5_11 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_12, i32 3, i32 34)
+  %tmp_39 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_12, i32 2)
+  %tmp_7_11 = zext i1 %tmp_39 to i32
+  %p_Val2_16_12 = add nsw i32 %p_Val2_5_11, %tmp_7_11
+  %match_matchBufferI_V_139 = load i16* @match_matchBufferI_V_13, align 2
+  %OP1_V_1_12_cast = sext i16 %match_matchBufferI_V_139 to i23
+  %p_Val2_6_12 = mul i23 -44, %OP1_V_1_12_cast
+  %tmp_16_12 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_11, i3 0)
+  %tmp_17_12_cast = sext i23 %p_Val2_6_12 to i35
+  %p_Val2_7_12 = add i35 %tmp_16_12, %tmp_17_12_cast
+  %p_Val2_11_11 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_12, i32 3, i32 34)
+  %tmp_40 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_12, i32 2)
+  %tmp_19_11 = zext i1 %tmp_40 to i32
+  %p_Val2_17_12 = add nsw i32 %p_Val2_11_11, %tmp_19_11
+  %match_matchBufferQ_V_140 = load i16* @match_matchBufferQ_V_14, align 4
+  %p_Val2_3_13 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferQ_V_140, i2 0)
+  %tmp_3_13 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_12, i3 0)
+  %tmp_4_13_cast = sext i18 %p_Val2_3_13 to i35
+  %p_Val2_4_13 = add i35 %tmp_3_13, %tmp_4_13_cast
+  %p_Val2_5_12 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_13, i32 3, i32 34)
+  %tmp_41 = trunc i16 %match_matchBufferQ_V_140 to i1
+  %tmp_7_12 = zext i1 %tmp_41 to i32
+  %p_Val2_16_13 = add nsw i32 %p_Val2_5_12, %tmp_7_12
+  %match_matchBufferI_V_140 = load i16* @match_matchBufferI_V_14, align 4
+  %p_Val2_6_13 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferI_V_140, i2 0)
+  %tmp_16_13 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_12, i3 0)
+  %tmp_17_13_cast = sext i18 %p_Val2_6_13 to i35
+  %p_Val2_7_13 = add i35 %tmp_16_13, %tmp_17_13_cast
+  %p_Val2_11_12 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_13, i32 3, i32 34)
+  %tmp_42 = trunc i16 %match_matchBufferI_V_140 to i1
+  %tmp_19_12 = zext i1 %tmp_42 to i32
+  %p_Val2_17_13 = add nsw i32 %p_Val2_11_12, %tmp_19_12
+  %match_matchBufferQ_V_141 = load i16* @match_matchBufferQ_V_15, align 2
+  %OP1_V_15_cast = sext i16 %match_matchBufferQ_V_141 to i23
+  %p_Val2_3_14 = mul i23 55, %OP1_V_15_cast
+  %tmp_3_14 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_13, i3 0)
+  %tmp_4_14_cast = sext i23 %p_Val2_3_14 to i35
+  %p_Val2_4_14 = add i35 %tmp_3_14, %tmp_4_14_cast
+  %p_Val2_5_13 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_14, i32 3, i32 34)
+  %tmp_43 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_14, i32 2)
+  %tmp_7_13 = zext i1 %tmp_43 to i32
+  %p_Val2_16_14 = add nsw i32 %p_Val2_5_13, %tmp_7_13
+  %match_matchBufferI_V_141 = load i16* @match_matchBufferI_V_15, align 2
+  %OP1_V_1_14_cast = sext i16 %match_matchBufferI_V_141 to i23
+  %p_Val2_6_14 = mul i23 55, %OP1_V_1_14_cast
+  %tmp_16_14 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_13, i3 0)
+  %tmp_17_14_cast = sext i23 %p_Val2_6_14 to i35
+  %p_Val2_7_14 = add i35 %tmp_16_14, %tmp_17_14_cast
+  %p_Val2_11_13 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_14, i32 3, i32 34)
+  %tmp_44 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_14, i32 2)
+  %tmp_19_13 = zext i1 %tmp_44 to i32
+  %p_Val2_17_14 = add nsw i32 %p_Val2_11_13, %tmp_19_13
+  %match_matchBufferQ_V_142 = load i16* @match_matchBufferQ_V_16, align 16
+  %OP1_V_16_cast = sext i16 %match_matchBufferQ_V_142 to i24
+  %p_Val2_3_15 = mul i24 102, %OP1_V_16_cast
+  %tmp_3_15 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_14, i3 0)
+  %tmp_4_15_cast = sext i24 %p_Val2_3_15 to i35
+  %p_Val2_4_15 = add i35 %tmp_3_15, %tmp_4_15_cast
+  %p_Val2_5_14 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_15, i32 3, i32 34)
+  %tmp_45 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_15, i32 2)
+  %tmp_7_14 = zext i1 %tmp_45 to i32
+  %p_Val2_16_15 = add nsw i32 %p_Val2_5_14, %tmp_7_14
+  %match_matchBufferI_V_142 = load i16* @match_matchBufferI_V_16, align 16
+  %OP1_V_1_15_cast = sext i16 %match_matchBufferI_V_142 to i24
+  %p_Val2_6_15 = mul i24 102, %OP1_V_1_15_cast
+  %tmp_16_15 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_14, i3 0)
+  %tmp_17_15_cast = sext i24 %p_Val2_6_15 to i35
+  %p_Val2_7_15 = add i35 %tmp_16_15, %tmp_17_15_cast
+  %p_Val2_11_14 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_15, i32 3, i32 34)
+  %tmp_46 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_15, i32 2)
+  %tmp_19_14 = zext i1 %tmp_46 to i32
+  %p_Val2_17_15 = add nsw i32 %p_Val2_11_14, %tmp_19_14
+  %match_matchBufferQ_V_143 = load i16* @match_matchBufferQ_V_17, align 2
+  %OP1_V_17_cast = sext i16 %match_matchBufferQ_V_143 to i25
+  %p_Val2_3_16 = mul i25 138, %OP1_V_17_cast
+  %tmp_3_16 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_15, i3 0)
+  %tmp_4_16_cast = sext i25 %p_Val2_3_16 to i35
+  %p_Val2_4_16 = add i35 %tmp_3_16, %tmp_4_16_cast
+  %p_Val2_5_15 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_16, i32 3, i32 34)
+  %tmp_47 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_16, i32 2)
+  %tmp_7_15 = zext i1 %tmp_47 to i32
+  %p_Val2_16_16 = add nsw i32 %p_Val2_5_15, %tmp_7_15
+  %match_matchBufferI_V_143 = load i16* @match_matchBufferI_V_17, align 2
+  %OP1_V_1_16_cast = sext i16 %match_matchBufferI_V_143 to i25
+  %p_Val2_6_16 = mul i25 138, %OP1_V_1_16_cast
+  %tmp_16_16 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_15, i3 0)
+  %tmp_17_16_cast = sext i25 %p_Val2_6_16 to i35
+  %p_Val2_7_16 = add i35 %tmp_16_16, %tmp_17_16_cast
+  %p_Val2_11_15 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_16, i32 3, i32 34)
+  %tmp_48 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_16, i32 2)
+  %tmp_19_15 = zext i1 %tmp_48 to i32
+  %p_Val2_17_16 = add nsw i32 %p_Val2_11_15, %tmp_19_15
+  %match_matchBufferQ_V_144 = load i16* @match_matchBufferQ_V_18, align 4
+  %p_shl31 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_144, i7 0)
+  %p_shl31_cast = sext i23 %p_shl31 to i24
+  %p_shl36 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %match_matchBufferQ_V_144, i5 0)
+  %p_shl36_cast = sext i21 %p_shl36 to i24
+  %p_Val2_3_17 = add i24 %p_shl31_cast, %p_shl36_cast
+  %tmp_3_17 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_16, i3 0)
+  %tmp_4_17_cast = sext i24 %p_Val2_3_17 to i35
+  %p_Val2_4_17 = add i35 %tmp_3_17, %tmp_4_17_cast
+  %match_matchBufferI_V_144 = load i16* @match_matchBufferI_V_18, align 4
+  %p_shl38 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_144, i7 0)
+  %p_shl38_cast = sext i23 %p_shl38 to i24
+  %p_shl42 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %match_matchBufferI_V_144, i5 0)
+  %p_shl42_cast = sext i21 %p_shl42 to i24
+  %p_Val2_6_17 = add i24 %p_shl38_cast, %p_shl42_cast
+  %tmp_16_17 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_16, i3 0)
+  %tmp_17_17_cast = sext i24 %p_Val2_6_17 to i35
+  %p_Val2_7_17 = add i35 %tmp_16_17, %tmp_17_17_cast
+  %match_matchBufferQ_V_145 = load i16* @match_matchBufferQ_V_19, align 2
+  %OP1_V_19_cast = sext i16 %match_matchBufferQ_V_145 to i25
+  %p_Val2_3_18 = mul i25 161, %OP1_V_19_cast
+  %tmp = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_17, i32 3, i32 34)
+  %tmp_3_18 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %tmp, i3 0)
+  %tmp_4_18_cast = sext i25 %p_Val2_3_18 to i35
+  %p_Val2_4_18 = add i35 %tmp_3_18, %tmp_4_18_cast
+  %p_Val2_5_16 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_18, i32 3, i32 34)
+  %tmp_49 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_18, i32 2)
+  %tmp_7_16 = zext i1 %tmp_49 to i32
+  %p_Val2_16_17 = add nsw i32 %p_Val2_5_16, %tmp_7_16
+  %match_matchBufferI_V_145 = load i16* @match_matchBufferI_V_19, align 2
+  %OP1_V_1_18_cast = sext i16 %match_matchBufferI_V_145 to i25
+  %p_Val2_6_18 = mul i25 161, %OP1_V_1_18_cast
+  %tmp_5 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_17, i32 3, i32 34)
+  %tmp_16_18 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %tmp_5, i3 0)
+  %tmp_17_18_cast = sext i25 %p_Val2_6_18 to i35
+  %p_Val2_7_18 = add i35 %tmp_16_18, %tmp_17_18_cast
+  %p_Val2_11_16 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_18, i32 3, i32 34)
+  %tmp_50 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_18, i32 2)
+  %tmp_19_16 = zext i1 %tmp_50 to i32
+  %p_Val2_17_17 = add nsw i32 %p_Val2_11_16, %tmp_19_16
+  %match_matchBufferQ_V_146 = load i16* @match_matchBufferQ_V_20, align 8
+  %OP1_V_20_cast = sext i16 %match_matchBufferQ_V_146 to i25
+  %p_Val2_3_19 = mul i25 141, %OP1_V_20_cast
+  %tmp_3_19 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_17, i3 0)
+  %tmp_4_19_cast = sext i25 %p_Val2_3_19 to i35
+  %p_Val2_4_19 = add i35 %tmp_3_19, %tmp_4_19_cast
+  %p_Val2_5_17 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_19, i32 3, i32 34)
+  %tmp_51 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_19, i32 2)
+  %tmp_7_17 = zext i1 %tmp_51 to i32
+  %p_Val2_16_18 = add nsw i32 %p_Val2_5_17, %tmp_7_17
+  %match_matchBufferI_V_146 = load i16* @match_matchBufferI_V_20, align 8
+  %OP1_V_1_19_cast = sext i16 %match_matchBufferI_V_146 to i25
+  %p_Val2_6_19 = mul i25 141, %OP1_V_1_19_cast
+  %tmp_16_19 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_17, i3 0)
+  %tmp_17_19_cast = sext i25 %p_Val2_6_19 to i35
+  %p_Val2_7_19 = add i35 %tmp_16_19, %tmp_17_19_cast
+  %p_Val2_11_17 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_19, i32 3, i32 34)
+  %tmp_52 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_19, i32 2)
+  %tmp_19_17 = zext i1 %tmp_52 to i32
+  %p_Val2_17_18 = add nsw i32 %p_Val2_11_17, %tmp_19_17
+  %match_matchBufferQ_V_147 = load i16* @match_matchBufferQ_V_21, align 2
+  %OP1_V_21_cast = sext i16 %match_matchBufferQ_V_147 to i24
+  %p_Val2_3_20 = mul i24 99, %OP1_V_21_cast
+  %tmp_3_20 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_18, i3 0)
+  %tmp_4_20_cast = sext i24 %p_Val2_3_20 to i35
+  %p_Val2_4_20 = add i35 %tmp_3_20, %tmp_4_20_cast
+  %p_Val2_5_18 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_20, i32 3, i32 34)
+  %tmp_53 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_20, i32 2)
+  %tmp_7_18 = zext i1 %tmp_53 to i32
+  %p_Val2_16_19 = add nsw i32 %p_Val2_5_18, %tmp_7_18
+  %match_matchBufferI_V_147 = load i16* @match_matchBufferI_V_21, align 2
+  %OP1_V_1_20_cast = sext i16 %match_matchBufferI_V_147 to i24
+  %p_Val2_6_20 = mul i24 99, %OP1_V_1_20_cast
+  %tmp_16_20 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_18, i3 0)
+  %tmp_17_20_cast = sext i24 %p_Val2_6_20 to i35
+  %p_Val2_7_20 = add i35 %tmp_16_20, %tmp_17_20_cast
+  %p_Val2_11_18 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_20, i32 3, i32 34)
+  %tmp_54 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_20, i32 2)
+  %tmp_19_18 = zext i1 %tmp_54 to i32
+  %p_Val2_17_19 = add nsw i32 %p_Val2_11_18, %tmp_19_18
+  %match_matchBufferQ_V_148 = load i16* @match_matchBufferQ_V_22, align 4
+  %OP1_V_22_cast = sext i16 %match_matchBufferQ_V_148 to i23
+  %p_Val2_3_21 = mul i23 38, %OP1_V_22_cast
+  %tmp_3_21 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_19, i3 0)
+  %tmp_4_21_cast = sext i23 %p_Val2_3_21 to i35
+  %p_Val2_4_21 = add i35 %tmp_3_21, %tmp_4_21_cast
+  %p_Val2_5_19 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_21, i32 3, i32 34)
+  %tmp_55 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_21, i32 2)
+  %tmp_7_19 = zext i1 %tmp_55 to i32
+  %p_Val2_16_20 = add nsw i32 %p_Val2_5_19, %tmp_7_19
+  %match_matchBufferI_V_148 = load i16* @match_matchBufferI_V_22, align 4
+  %OP1_V_1_21_cast = sext i16 %match_matchBufferI_V_148 to i23
+  %p_Val2_6_21 = mul i23 38, %OP1_V_1_21_cast
+  %tmp_16_21 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_19, i3 0)
+  %tmp_17_21_cast = sext i23 %p_Val2_6_21 to i35
+  %p_Val2_7_21 = add i35 %tmp_16_21, %tmp_17_21_cast
+  %p_Val2_11_19 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_21, i32 3, i32 34)
+  %tmp_56 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_21, i32 2)
+  %tmp_19_19 = zext i1 %tmp_56 to i32
+  %p_Val2_17_20 = add nsw i32 %p_Val2_11_19, %tmp_19_19
+  %match_matchBufferQ_V_149 = load i16* @match_matchBufferQ_V_23, align 2
+  %OP1_V_23_cast = sext i16 %match_matchBufferQ_V_149 to i23
+  %p_Val2_3_22 = mul i23 -38, %OP1_V_23_cast
+  %tmp_3_22 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_20, i3 0)
+  %tmp_4_22_cast = sext i23 %p_Val2_3_22 to i35
+  %p_Val2_4_22 = add i35 %tmp_3_22, %tmp_4_22_cast
+  %p_Val2_5_20 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_22, i32 3, i32 34)
+  %tmp_57 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_22, i32 2)
+  %tmp_7_20 = zext i1 %tmp_57 to i32
+  %p_Val2_16_21 = add nsw i32 %p_Val2_5_20, %tmp_7_20
+  %match_matchBufferI_V_149 = load i16* @match_matchBufferI_V_23, align 2
+  %OP1_V_1_22_cast = sext i16 %match_matchBufferI_V_149 to i23
+  %p_Val2_6_22 = mul i23 -38, %OP1_V_1_22_cast
+  %tmp_16_22 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_20, i3 0)
+  %tmp_17_22_cast = sext i23 %p_Val2_6_22 to i35
+  %p_Val2_7_22 = add i35 %tmp_16_22, %tmp_17_22_cast
+  %p_Val2_11_20 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_22, i32 3, i32 34)
+  %tmp_58 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_22, i32 2)
+  %tmp_19_20 = zext i1 %tmp_58 to i32
+  %p_Val2_17_21 = add nsw i32 %p_Val2_11_20, %tmp_19_20
+  %match_matchBufferQ_V_150 = load i16* @match_matchBufferQ_V_24, align 16
+  %OP1_V_24_cast = sext i16 %match_matchBufferQ_V_150 to i24
+  %p_Val2_3_23 = mul i24 -119, %OP1_V_24_cast
+  %tmp_3_23 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_21, i3 0)
+  %tmp_4_23_cast = sext i24 %p_Val2_3_23 to i35
+  %p_Val2_4_23 = add i35 %tmp_3_23, %tmp_4_23_cast
+  %p_Val2_5_21 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_23, i32 3, i32 34)
+  %tmp_59 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_23, i32 2)
+  %tmp_7_21 = zext i1 %tmp_59 to i32
+  %p_Val2_16_22 = add nsw i32 %p_Val2_5_21, %tmp_7_21
+  %match_matchBufferI_V_150 = load i16* @match_matchBufferI_V_24, align 16
+  %OP1_V_1_23_cast = sext i16 %match_matchBufferI_V_150 to i24
+  %p_Val2_6_23 = mul i24 -119, %OP1_V_1_23_cast
+  %tmp_16_23 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_21, i3 0)
+  %tmp_17_23_cast = sext i24 %p_Val2_6_23 to i35
+  %p_Val2_7_23 = add i35 %tmp_16_23, %tmp_17_23_cast
+  %p_Val2_11_21 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_23, i32 3, i32 34)
+  %tmp_60 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_23, i32 2)
+  %tmp_19_21 = zext i1 %tmp_60 to i32
+  %p_Val2_17_22 = add nsw i32 %p_Val2_11_21, %tmp_19_21
+  %match_matchBufferQ_V_151 = load i16* @match_matchBufferQ_V_25, align 2
+  %OP1_V_25_cast = sext i16 %match_matchBufferQ_V_151 to i25
+  %p_Val2_3_24 = mul i25 -199, %OP1_V_25_cast
+  %tmp_3_24 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_22, i3 0)
+  %tmp_4_24_cast = sext i25 %p_Val2_3_24 to i35
+  %p_Val2_4_24 = add i35 %tmp_3_24, %tmp_4_24_cast
+  %p_Val2_5_22 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_24, i32 3, i32 34)
+  %tmp_61 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_24, i32 2)
+  %tmp_7_22 = zext i1 %tmp_61 to i32
+  %p_Val2_16_23 = add nsw i32 %p_Val2_5_22, %tmp_7_22
+  %match_matchBufferI_V_151 = load i16* @match_matchBufferI_V_25, align 2
+  %OP1_V_1_24_cast = sext i16 %match_matchBufferI_V_151 to i25
+  %p_Val2_6_24 = mul i25 -199, %OP1_V_1_24_cast
+  %tmp_16_24 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_22, i3 0)
+  %tmp_17_24_cast = sext i25 %p_Val2_6_24 to i35
+  %p_Val2_7_24 = add i35 %tmp_16_24, %tmp_17_24_cast
+  %p_Val2_11_22 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_24, i32 3, i32 34)
+  %tmp_62 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_24, i32 2)
+  %tmp_19_22 = zext i1 %tmp_62 to i32
+  %p_Val2_17_23 = add nsw i32 %p_Val2_11_22, %tmp_19_22
+  %match_matchBufferQ_V_152 = load i16* @match_matchBufferQ_V_26, align 4
+  %OP1_V_26_cast = sext i16 %match_matchBufferQ_V_152 to i26
+  %p_Val2_3_25 = mul i26 -266, %OP1_V_26_cast
+  %tmp_3_25 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_23, i3 0)
+  %tmp_4_25_cast = sext i26 %p_Val2_3_25 to i35
+  %p_Val2_4_25 = add i35 %tmp_3_25, %tmp_4_25_cast
+  %p_Val2_5_23 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_25, i32 3, i32 34)
+  %tmp_63 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_25, i32 2)
+  %tmp_7_23 = zext i1 %tmp_63 to i32
+  %p_Val2_16_24 = add nsw i32 %p_Val2_5_23, %tmp_7_23
+  %match_matchBufferI_V_152 = load i16* @match_matchBufferI_V_26, align 4
+  %OP1_V_1_25_cast = sext i16 %match_matchBufferI_V_152 to i26
+  %p_Val2_6_25 = mul i26 -266, %OP1_V_1_25_cast
+  %tmp_16_25 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_23, i3 0)
+  %tmp_17_25_cast = sext i26 %p_Val2_6_25 to i35
+  %p_Val2_7_25 = add i35 %tmp_16_25, %tmp_17_25_cast
+  %p_Val2_11_23 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_25, i32 3, i32 34)
+  %tmp_64 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_25, i32 2)
+  %tmp_19_23 = zext i1 %tmp_64 to i32
+  %p_Val2_17_24 = add nsw i32 %p_Val2_11_23, %tmp_19_23
+  %match_matchBufferQ_V_153 = load i16* @match_matchBufferQ_V_27, align 2
+  %OP1_V_27_cast = sext i16 %match_matchBufferQ_V_153 to i26
+  %p_Val2_3_26 = mul i26 -312, %OP1_V_27_cast
+  %tmp_3_26 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_24, i3 0)
+  %tmp_4_26_cast = sext i26 %p_Val2_3_26 to i35
+  %p_Val2_4_26 = add i35 %tmp_3_26, %tmp_4_26_cast
+  %p_Val2_5_24 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_26, i32 3, i32 34)
+  %tmp_65 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_26, i32 2)
+  %tmp_7_24 = zext i1 %tmp_65 to i32
+  %p_Val2_16_25 = add nsw i32 %p_Val2_5_24, %tmp_7_24
+  %match_matchBufferI_V_153 = load i16* @match_matchBufferI_V_27, align 2
+  %OP1_V_1_26_cast = sext i16 %match_matchBufferI_V_153 to i26
+  %p_Val2_6_26 = mul i26 -312, %OP1_V_1_26_cast
+  %tmp_16_26 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_24, i3 0)
+  %tmp_17_26_cast = sext i26 %p_Val2_6_26 to i35
+  %p_Val2_7_26 = add i35 %tmp_16_26, %tmp_17_26_cast
+  %p_Val2_11_24 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_26, i32 3, i32 34)
+  %tmp_66 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_26, i32 2)
+  %tmp_19_24 = zext i1 %tmp_66 to i32
+  %p_Val2_17_25 = add nsw i32 %p_Val2_11_24, %tmp_19_24
+  %match_matchBufferQ_V_154 = load i16* @match_matchBufferQ_V_28, align 8
+  %OP1_V_28_cast = sext i16 %match_matchBufferQ_V_154 to i26
+  %p_Val2_3_27 = mul i26 -328, %OP1_V_28_cast
+  %tmp_3_27 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_25, i3 0)
+  %tmp_4_27_cast = sext i26 %p_Val2_3_27 to i35
+  %p_Val2_4_27 = add i35 %tmp_3_27, %tmp_4_27_cast
+  %p_Val2_5_25 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_27, i32 3, i32 34)
+  %tmp_67 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_27, i32 2)
+  %tmp_7_25 = zext i1 %tmp_67 to i32
+  %p_Val2_16_26 = add nsw i32 %p_Val2_5_25, %tmp_7_25
+  %match_matchBufferI_V_154 = load i16* @match_matchBufferI_V_28, align 8
+  %OP1_V_1_27_cast = sext i16 %match_matchBufferI_V_154 to i26
+  %p_Val2_6_27 = mul i26 -328, %OP1_V_1_27_cast
+  %tmp_16_27 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_25, i3 0)
+  %tmp_17_27_cast = sext i26 %p_Val2_6_27 to i35
+  %p_Val2_7_27 = add i35 %tmp_16_27, %tmp_17_27_cast
+  %p_Val2_11_25 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_27, i32 3, i32 34)
+  %tmp_68 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_27, i32 2)
+  %tmp_19_25 = zext i1 %tmp_68 to i32
+  %p_Val2_17_26 = add nsw i32 %p_Val2_11_25, %tmp_19_25
+  %match_matchBufferQ_V_155 = load i16* @match_matchBufferQ_V_29, align 2
+  %OP1_V_29_cast = sext i16 %match_matchBufferQ_V_155 to i26
+  %p_Val2_3_28 = mul i26 -312, %OP1_V_29_cast
+  %tmp_3_28 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_26, i3 0)
+  %tmp_4_28_cast = sext i26 %p_Val2_3_28 to i35
+  %p_Val2_4_28 = add i35 %tmp_3_28, %tmp_4_28_cast
+  %p_Val2_5_26 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_28, i32 3, i32 34)
+  %tmp_69 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_28, i32 2)
+  %tmp_7_26 = zext i1 %tmp_69 to i32
+  %p_Val2_16_27 = add nsw i32 %p_Val2_5_26, %tmp_7_26
+  %match_matchBufferI_V_155 = load i16* @match_matchBufferI_V_29, align 2
+  %OP1_V_1_28_cast = sext i16 %match_matchBufferI_V_155 to i26
+  %p_Val2_6_28 = mul i26 -312, %OP1_V_1_28_cast
+  %tmp_16_28 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_26, i3 0)
+  %tmp_17_28_cast = sext i26 %p_Val2_6_28 to i35
+  %p_Val2_7_28 = add i35 %tmp_16_28, %tmp_17_28_cast
+  %p_Val2_11_26 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_28, i32 3, i32 34)
+  %tmp_70 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_28, i32 2)
+  %tmp_19_26 = zext i1 %tmp_70 to i32
+  %p_Val2_17_27 = add nsw i32 %p_Val2_11_26, %tmp_19_26
+  %match_matchBufferQ_V_156 = load i16* @match_matchBufferQ_V_30, align 4
+  %OP1_V_30_cast = sext i16 %match_matchBufferQ_V_156 to i26
+  %p_Val2_3_29 = mul i26 -259, %OP1_V_30_cast
+  %tmp_3_29 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_27, i3 0)
+  %tmp_4_29_cast = sext i26 %p_Val2_3_29 to i35
+  %p_Val2_4_29 = add i35 %tmp_3_29, %tmp_4_29_cast
+  %p_Val2_5_27 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_29, i32 3, i32 34)
+  %tmp_71 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_29, i32 2)
+  %tmp_7_27 = zext i1 %tmp_71 to i32
+  %p_Val2_16_28 = add nsw i32 %p_Val2_5_27, %tmp_7_27
+  %match_matchBufferI_V_156 = load i16* @match_matchBufferI_V_30, align 4
+  %OP1_V_1_29_cast = sext i16 %match_matchBufferI_V_156 to i26
+  %p_Val2_6_29 = mul i26 -259, %OP1_V_1_29_cast
+  %tmp_16_29 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_27, i3 0)
+  %tmp_17_29_cast = sext i26 %p_Val2_6_29 to i35
+  %p_Val2_7_29 = add i35 %tmp_16_29, %tmp_17_29_cast
+  %p_Val2_11_27 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_29, i32 3, i32 34)
+  %tmp_72 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_29, i32 2)
+  %tmp_19_27 = zext i1 %tmp_72 to i32
+  %p_Val2_17_28 = add nsw i32 %p_Val2_11_27, %tmp_19_27
+  %match_matchBufferQ_V_157 = load i16* @match_matchBufferQ_V_31, align 2
+  %OP1_V_31_cast = sext i16 %match_matchBufferQ_V_157 to i25
+  %p_Val2_3_30 = mul i25 -174, %OP1_V_31_cast
+  %tmp_3_30 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_28, i3 0)
+  %tmp_4_30_cast = sext i25 %p_Val2_3_30 to i35
+  %p_Val2_4_30 = add i35 %tmp_3_30, %tmp_4_30_cast
+  %p_Val2_5_28 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_30, i32 3, i32 34)
+  %tmp_73 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_30, i32 2)
+  %tmp_7_28 = zext i1 %tmp_73 to i32
+  %p_Val2_16_29 = add nsw i32 %p_Val2_5_28, %tmp_7_28
+  %match_matchBufferI_V_157 = load i16* @match_matchBufferI_V_31, align 2
+  %OP1_V_1_30_cast = sext i16 %match_matchBufferI_V_157 to i25
+  %p_Val2_6_30 = mul i25 -174, %OP1_V_1_30_cast
+  %tmp_16_30 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_28, i3 0)
+  %tmp_17_30_cast = sext i25 %p_Val2_6_30 to i35
+  %p_Val2_7_30 = add i35 %tmp_16_30, %tmp_17_30_cast
+  %p_Val2_11_28 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_30, i32 3, i32 34)
+  %tmp_74 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_30, i32 2)
+  %tmp_19_28 = zext i1 %tmp_74 to i32
+  %p_Val2_17_29 = add nsw i32 %p_Val2_11_28, %tmp_19_28
+  %match_matchBufferQ_V_158 = load i16* @match_matchBufferQ_V_32, align 16
+  %p_shl44 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_158, i6 0)
+  %p_shl44_cast = sext i22 %p_shl44 to i23
+  %p_shl48 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferQ_V_158, i1 false)
+  %p_shl48_cast = sext i17 %p_shl48 to i23
+  %p_Val2_3_31 = sub i23 %p_shl48_cast, %p_shl44_cast
+  %tmp_3_31 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_29, i3 0)
+  %tmp_4_31_cast = sext i23 %p_Val2_3_31 to i35
+  %p_Val2_4_31 = add i35 %tmp_3_31, %tmp_4_31_cast
+  %p_Val2_5_29 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_31, i32 3, i32 34)
+  %tmp_75 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_31, i32 2)
+  %tmp_7_29 = zext i1 %tmp_75 to i32
+  %p_Val2_16_30 = add nsw i32 %p_Val2_5_29, %tmp_7_29
+  %match_matchBufferI_V_158 = load i16* @match_matchBufferI_V_32, align 16
+  %p_shl47 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_158, i6 0)
+  %p_shl47_cast = sext i22 %p_shl47 to i23
+  %p_shl49 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferI_V_158, i1 false)
+  %p_shl49_cast = sext i17 %p_shl49 to i23
+  %p_Val2_6_31 = sub i23 %p_shl49_cast, %p_shl47_cast
+  %tmp_16_31 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_29, i3 0)
+  %tmp_17_31_cast = sext i23 %p_Val2_6_31 to i35
+  %p_Val2_7_31 = add i35 %tmp_16_31, %tmp_17_31_cast
+  %p_Val2_11_29 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_31, i32 3, i32 34)
+  %tmp_76 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_31, i32 2)
+  %tmp_19_29 = zext i1 %tmp_76 to i32
+  %p_Val2_17_30 = add nsw i32 %p_Val2_11_29, %tmp_19_29
+  %match_matchBufferQ_V_159 = load i16* @match_matchBufferQ_V_33, align 2
+  %OP1_V_33_cast = sext i16 %match_matchBufferQ_V_159 to i23
+  %p_shl46 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_159, i6 0)
+  %p_shl46_cast = sext i22 %p_shl46 to i23
+  %p_Val2_3_32 = add i23 %p_shl46_cast, %OP1_V_33_cast
+  %tmp_3_32 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_30, i3 0)
+  %tmp_4_32_cast = sext i23 %p_Val2_3_32 to i35
+  %p_Val2_4_32 = add i35 %tmp_3_32, %tmp_4_32_cast
+  %p_Val2_5_30 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_32, i32 3, i32 34)
+  %tmp_77 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferQ_V_159, i32 2)
+  %tmp_7_30 = zext i1 %tmp_77 to i32
+  %p_Val2_16_31 = add nsw i32 %p_Val2_5_30, %tmp_7_30
+  %match_matchBufferI_V_159 = load i16* @match_matchBufferI_V_33, align 2
+  %OP1_V_1_32_cast = sext i16 %match_matchBufferI_V_159 to i23
+  %p_shl45 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_159, i6 0)
+  %p_shl45_cast = sext i22 %p_shl45 to i23
+  %p_Val2_6_32 = add i23 %p_shl45_cast, %OP1_V_1_32_cast
+  %tmp_16_32 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_30, i3 0)
+  %tmp_17_32_cast = sext i23 %p_Val2_6_32 to i35
+  %p_Val2_7_32 = add i35 %tmp_16_32, %tmp_17_32_cast
+  %p_Val2_11_30 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_32, i32 3, i32 34)
+  %tmp_78 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferI_V_159, i32 2)
+  %tmp_19_30 = zext i1 %tmp_78 to i32
+  %p_Val2_17_31 = add nsw i32 %p_Val2_11_30, %tmp_19_30
+  %match_matchBufferQ_V_160 = load i16* @match_matchBufferQ_V_34, align 4
+  %OP1_V_34_cast = sext i16 %match_matchBufferQ_V_160 to i25
+  %p_Val2_3_33 = mul i25 193, %OP1_V_34_cast
+  %tmp_3_33 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_31, i3 0)
+  %tmp_4_33_cast = sext i25 %p_Val2_3_33 to i35
+  %p_Val2_4_33 = add i35 %tmp_3_33, %tmp_4_33_cast
+  %p_Val2_5_31 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_33, i32 3, i32 34)
+  %tmp_79 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_33, i32 2)
+  %tmp_7_31 = zext i1 %tmp_79 to i32
+  %p_Val2_16_32 = add nsw i32 %p_Val2_5_31, %tmp_7_31
+  %match_matchBufferI_V_160 = load i16* @match_matchBufferI_V_34, align 4
+  %OP1_V_1_33_cast = sext i16 %match_matchBufferI_V_160 to i25
+  %p_Val2_6_33 = mul i25 193, %OP1_V_1_33_cast
+  %tmp_16_33 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_31, i3 0)
+  %tmp_17_33_cast = sext i25 %p_Val2_6_33 to i35
+  %p_Val2_7_33 = add i35 %tmp_16_33, %tmp_17_33_cast
+  %p_Val2_11_31 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_33, i32 3, i32 34)
+  %tmp_80 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_33, i32 2)
+  %tmp_19_31 = zext i1 %tmp_80 to i32
+  %p_Val2_17_32 = add nsw i32 %p_Val2_11_31, %tmp_19_31
+  %match_matchBufferQ_V_161 = load i16* @match_matchBufferQ_V_35, align 2
+  %OP1_V_35_cast = sext i16 %match_matchBufferQ_V_161 to i26
+  %p_Val2_3_34 = mul i26 306, %OP1_V_35_cast
+  %tmp_3_34 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_32, i3 0)
+  %tmp_4_34_cast = sext i26 %p_Val2_3_34 to i35
+  %p_Val2_4_34 = add i35 %tmp_3_34, %tmp_4_34_cast
+  %p_Val2_5_32 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_34, i32 3, i32 34)
+  %tmp_81 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_34, i32 2)
+  %tmp_7_32 = zext i1 %tmp_81 to i32
+  %p_Val2_16_33 = add nsw i32 %p_Val2_5_32, %tmp_7_32
+  %match_matchBufferI_V_161 = load i16* @match_matchBufferI_V_35, align 2
+  %OP1_V_1_34_cast = sext i16 %match_matchBufferI_V_161 to i26
+  %p_Val2_6_34 = mul i26 306, %OP1_V_1_34_cast
+  %tmp_16_34 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_32, i3 0)
+  %tmp_17_34_cast = sext i26 %p_Val2_6_34 to i35
+  %p_Val2_7_34 = add i35 %tmp_16_34, %tmp_17_34_cast
+  %p_Val2_11_32 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_34, i32 3, i32 34)
+  %tmp_82 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_34, i32 2)
+  %tmp_19_32 = zext i1 %tmp_82 to i32
+  %p_Val2_17_33 = add nsw i32 %p_Val2_11_32, %tmp_19_32
+  %match_matchBufferQ_V_162 = load i16* @match_matchBufferQ_V_36, align 8
+  %OP1_V_36_cast = sext i16 %match_matchBufferQ_V_162 to i26
+  %p_Val2_3_35 = mul i26 388, %OP1_V_36_cast
+  %tmp_3_35 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_33, i3 0)
+  %tmp_4_35_cast = sext i26 %p_Val2_3_35 to i35
+  %p_Val2_4_35 = add i35 %tmp_3_35, %tmp_4_35_cast
+  %p_Val2_5_33 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_35, i32 3, i32 34)
+  %tmp_83 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_35, i32 2)
+  %tmp_7_33 = zext i1 %tmp_83 to i32
+  %p_Val2_16_34 = add nsw i32 %p_Val2_5_33, %tmp_7_33
+  %match_matchBufferI_V_162 = load i16* @match_matchBufferI_V_36, align 8
+  %OP1_V_1_35_cast = sext i16 %match_matchBufferI_V_162 to i26
+  %p_Val2_6_35 = mul i26 388, %OP1_V_1_35_cast
+  %tmp_16_35 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_33, i3 0)
+  %tmp_17_35_cast = sext i26 %p_Val2_6_35 to i35
+  %p_Val2_7_35 = add i35 %tmp_16_35, %tmp_17_35_cast
+  %p_Val2_11_33 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_35, i32 3, i32 34)
+  %tmp_84 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_35, i32 2)
+  %tmp_19_33 = zext i1 %tmp_84 to i32
+  %p_Val2_17_34 = add nsw i32 %p_Val2_11_33, %tmp_19_33
+  %match_matchBufferQ_V_163 = load i16* @match_matchBufferQ_V_37, align 2
+  %OP1_V_37_cast = sext i16 %match_matchBufferQ_V_163 to i26
+  %p_Val2_3_36 = mul i26 421, %OP1_V_37_cast
+  %tmp_3_36 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_34, i3 0)
+  %tmp_4_36_cast = sext i26 %p_Val2_3_36 to i35
+  %p_Val2_4_36 = add i35 %tmp_3_36, %tmp_4_36_cast
+  %p_Val2_5_34 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_36, i32 3, i32 34)
+  %tmp_85 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_36, i32 2)
+  %tmp_7_34 = zext i1 %tmp_85 to i32
+  %p_Val2_16_35 = add nsw i32 %p_Val2_5_34, %tmp_7_34
+  %match_matchBufferI_V_163 = load i16* @match_matchBufferI_V_37, align 2
+  %OP1_V_1_36_cast = sext i16 %match_matchBufferI_V_163 to i26
+  %p_Val2_6_36 = mul i26 421, %OP1_V_1_36_cast
+  %tmp_16_36 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_34, i3 0)
+  %tmp_17_36_cast = sext i26 %p_Val2_6_36 to i35
+  %p_Val2_7_36 = add i35 %tmp_16_36, %tmp_17_36_cast
+  %p_Val2_11_34 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_36, i32 3, i32 34)
+  %tmp_86 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_36, i32 2)
+  %tmp_19_34 = zext i1 %tmp_86 to i32
+  %p_Val2_17_35 = add nsw i32 %p_Val2_11_34, %tmp_19_34
+  %match_matchBufferQ_V_164 = load i16* @match_matchBufferQ_V_38, align 4
+  %OP1_V_38_cast = sext i16 %match_matchBufferQ_V_164 to i26
+  %p_Val2_3_37 = mul i26 391, %OP1_V_38_cast
+  %tmp_3_37 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_35, i3 0)
+  %tmp_4_37_cast = sext i26 %p_Val2_3_37 to i35
+  %p_Val2_4_37 = add i35 %tmp_3_37, %tmp_4_37_cast
+  %p_Val2_5_35 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_37, i32 3, i32 34)
+  %tmp_87 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_37, i32 2)
+  %tmp_7_35 = zext i1 %tmp_87 to i32
+  %p_Val2_16_36 = add nsw i32 %p_Val2_5_35, %tmp_7_35
+  %match_matchBufferI_V_164 = load i16* @match_matchBufferI_V_38, align 4
+  %OP1_V_1_37_cast = sext i16 %match_matchBufferI_V_164 to i26
+  %p_Val2_6_37 = mul i26 391, %OP1_V_1_37_cast
+  %tmp_16_37 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_35, i3 0)
+  %tmp_17_37_cast = sext i26 %p_Val2_6_37 to i35
+  %p_Val2_7_37 = add i35 %tmp_16_37, %tmp_17_37_cast
+  %p_Val2_11_35 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_37, i32 3, i32 34)
+  %tmp_88 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_37, i32 2)
+  %tmp_19_35 = zext i1 %tmp_88 to i32
+  %p_Val2_17_36 = add nsw i32 %p_Val2_11_35, %tmp_19_35
+  %match_matchBufferQ_V_165 = load i16* @match_matchBufferQ_V_39, align 2
+  %OP1_V_39_cast = sext i16 %match_matchBufferQ_V_165 to i26
+  %p_Val2_3_38 = mul i26 291, %OP1_V_39_cast
+  %tmp_3_38 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_36, i3 0)
+  %tmp_4_38_cast = sext i26 %p_Val2_3_38 to i35
+  %p_Val2_4_38 = add i35 %tmp_3_38, %tmp_4_38_cast
+  %p_Val2_5_36 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_38, i32 3, i32 34)
+  %tmp_89 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_38, i32 2)
+  %tmp_7_36 = zext i1 %tmp_89 to i32
+  %p_Val2_16_37 = add nsw i32 %p_Val2_5_36, %tmp_7_36
+  %match_matchBufferI_V_165 = load i16* @match_matchBufferI_V_39, align 2
+  %OP1_V_1_38_cast = sext i16 %match_matchBufferI_V_165 to i26
+  %p_Val2_6_38 = mul i26 291, %OP1_V_1_38_cast
+  %tmp_16_38 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_36, i3 0)
+  %tmp_17_38_cast = sext i26 %p_Val2_6_38 to i35
+  %p_Val2_7_38 = add i35 %tmp_16_38, %tmp_17_38_cast
+  %p_Val2_11_36 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_38, i32 3, i32 34)
+  %tmp_90 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_38, i32 2)
+  %tmp_19_36 = zext i1 %tmp_90 to i32
+  %p_Val2_17_37 = add nsw i32 %p_Val2_11_36, %tmp_19_36
+  %match_matchBufferQ_V_166 = load i16* @match_matchBufferQ_V_40, align 16
+  %OP1_V_40_cast = sext i16 %match_matchBufferQ_V_166 to i24
+  %p_Val2_3_39 = mul i24 119, %OP1_V_40_cast
+  %tmp_3_39 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_37, i3 0)
+  %tmp_4_39_cast = sext i24 %p_Val2_3_39 to i35
+  %p_Val2_4_39 = add i35 %tmp_3_39, %tmp_4_39_cast
+  %p_Val2_5_37 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_39, i32 3, i32 34)
+  %tmp_91 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_39, i32 2)
+  %tmp_7_37 = zext i1 %tmp_91 to i32
+  %p_Val2_16_38 = add nsw i32 %p_Val2_5_37, %tmp_7_37
+  %match_matchBufferI_V_166 = load i16* @match_matchBufferI_V_40, align 16
+  %OP1_V_1_39_cast = sext i16 %match_matchBufferI_V_166 to i24
+  %p_Val2_6_39 = mul i24 119, %OP1_V_1_39_cast
+  %tmp_16_39 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_37, i3 0)
+  %tmp_17_39_cast = sext i24 %p_Val2_6_39 to i35
+  %p_Val2_7_39 = add i35 %tmp_16_39, %tmp_17_39_cast
+  %p_Val2_11_37 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_39, i32 3, i32 34)
+  %tmp_92 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_39, i32 2)
+  %tmp_19_37 = zext i1 %tmp_92 to i32
+  %p_Val2_17_38 = add nsw i32 %p_Val2_11_37, %tmp_19_37
+  %match_matchBufferQ_V_167 = load i16* @match_matchBufferQ_V_41, align 2
+  %OP1_V_41_cast = sext i16 %match_matchBufferQ_V_167 to i24
+  %p_Val2_3_40 = mul i24 -119, %OP1_V_41_cast
+  %tmp_3_40 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_38, i3 0)
+  %tmp_4_40_cast = sext i24 %p_Val2_3_40 to i35
+  %p_Val2_4_40 = add i35 %tmp_3_40, %tmp_4_40_cast
+  %p_Val2_5_38 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_40, i32 3, i32 34)
+  %tmp_93 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_40, i32 2)
+  %tmp_7_38 = zext i1 %tmp_93 to i32
+  %p_Val2_16_39 = add nsw i32 %p_Val2_5_38, %tmp_7_38
+  %match_matchBufferI_V_167 = load i16* @match_matchBufferI_V_41, align 2
+  %OP1_V_1_40_cast = sext i16 %match_matchBufferI_V_167 to i24
+  %p_Val2_6_40 = mul i24 -119, %OP1_V_1_40_cast
+  %tmp_16_40 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_38, i3 0)
+  %tmp_17_40_cast = sext i24 %p_Val2_6_40 to i35
+  %p_Val2_7_40 = add i35 %tmp_16_40, %tmp_17_40_cast
+  %p_Val2_11_38 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_40, i32 3, i32 34)
+  %tmp_94 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_40, i32 2)
+  %tmp_19_38 = zext i1 %tmp_94 to i32
+  %p_Val2_17_39 = add nsw i32 %p_Val2_11_38, %tmp_19_38
+  %match_matchBufferQ_V_168 = load i16* @match_matchBufferQ_V_42, align 4
+  %OP1_V_42_cast = sext i16 %match_matchBufferQ_V_168 to i26
+  %p_Val2_3_41 = mul i26 -408, %OP1_V_42_cast
+  %tmp_3_41 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_39, i3 0)
+  %tmp_4_41_cast = sext i26 %p_Val2_3_41 to i35
+  %p_Val2_4_41 = add i35 %tmp_3_41, %tmp_4_41_cast
+  %p_Val2_5_39 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_41, i32 3, i32 34)
+  %tmp_95 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_41, i32 2)
+  %tmp_7_39 = zext i1 %tmp_95 to i32
+  %p_Val2_16_40 = add nsw i32 %p_Val2_5_39, %tmp_7_39
+  %match_matchBufferI_V_168 = load i16* @match_matchBufferI_V_42, align 4
+  %OP1_V_1_41_cast = sext i16 %match_matchBufferI_V_168 to i26
+  %p_Val2_6_41 = mul i26 -408, %OP1_V_1_41_cast
+  %tmp_16_41 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_39, i3 0)
+  %tmp_17_41_cast = sext i26 %p_Val2_6_41 to i35
+  %p_Val2_7_41 = add i35 %tmp_16_41, %tmp_17_41_cast
+  %p_Val2_11_39 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_41, i32 3, i32 34)
+  %tmp_96 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_41, i32 2)
+  %tmp_19_39 = zext i1 %tmp_96 to i32
+  %p_Val2_17_40 = add nsw i32 %p_Val2_11_39, %tmp_19_39
+  %match_matchBufferQ_V_169 = load i16* @match_matchBufferQ_V_43, align 2
+  %OP1_V_43_cast = sext i16 %match_matchBufferQ_V_169 to i27
+  %p_Val2_3_42 = mul i27 -730, %OP1_V_43_cast
+  %tmp_3_42 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_40, i3 0)
+  %tmp_4_42_cast = sext i27 %p_Val2_3_42 to i35
+  %p_Val2_4_42 = add i35 %tmp_3_42, %tmp_4_42_cast
+  %p_Val2_5_40 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_42, i32 3, i32 34)
+  %tmp_97 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_42, i32 2)
+  %tmp_7_40 = zext i1 %tmp_97 to i32
+  %p_Val2_16_41 = add nsw i32 %p_Val2_5_40, %tmp_7_40
+  %match_matchBufferI_V_169 = load i16* @match_matchBufferI_V_43, align 2
+  %OP1_V_1_42_cast = sext i16 %match_matchBufferI_V_169 to i27
+  %p_Val2_6_42 = mul i27 -730, %OP1_V_1_42_cast
+  %tmp_16_42 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_40, i3 0)
+  %tmp_17_42_cast = sext i27 %p_Val2_6_42 to i35
+  %p_Val2_7_42 = add i35 %tmp_16_42, %tmp_17_42_cast
+  %p_Val2_11_40 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_42, i32 3, i32 34)
+  %tmp_98 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_42, i32 2)
+  %tmp_19_40 = zext i1 %tmp_98 to i32
+  %p_Val2_17_41 = add nsw i32 %p_Val2_11_40, %tmp_19_40
+  %match_matchBufferQ_V_170 = load i16* @match_matchBufferQ_V_44, align 8
+  %OP1_V_44_cast = sext i16 %match_matchBufferQ_V_170 to i28
+  %p_Val2_3_43 = mul i28 -1047, %OP1_V_44_cast
+  %tmp_3_43 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_41, i3 0)
+  %tmp_4_43_cast = sext i28 %p_Val2_3_43 to i35
+  %p_Val2_4_43 = add i35 %tmp_3_43, %tmp_4_43_cast
+  %p_Val2_5_41 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_43, i32 3, i32 34)
+  %tmp_99 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_43, i32 2)
+  %tmp_7_41 = zext i1 %tmp_99 to i32
+  %p_Val2_16_42 = add nsw i32 %p_Val2_5_41, %tmp_7_41
+  %match_matchBufferI_V_170 = load i16* @match_matchBufferI_V_44, align 8
+  %OP1_V_1_43_cast = sext i16 %match_matchBufferI_V_170 to i28
+  %p_Val2_6_43 = mul i28 -1047, %OP1_V_1_43_cast
+  %tmp_16_43 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_41, i3 0)
+  %tmp_17_43_cast = sext i28 %p_Val2_6_43 to i35
+  %p_Val2_7_43 = add i35 %tmp_16_43, %tmp_17_43_cast
+  %p_Val2_11_41 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_43, i32 3, i32 34)
+  %tmp_100 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_43, i32 2)
+  %tmp_19_41 = zext i1 %tmp_100 to i32
+  %p_Val2_17_42 = add nsw i32 %p_Val2_11_41, %tmp_19_41
+  %match_matchBufferQ_V_171 = load i16* @match_matchBufferQ_V_45, align 2
+  %OP1_V_45_cast = sext i16 %match_matchBufferQ_V_171 to i28
+  %p_Val2_3_44 = mul i28 -1328, %OP1_V_45_cast
+  %tmp_3_44 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_42, i3 0)
+  %tmp_4_44_cast = sext i28 %p_Val2_3_44 to i35
+  %p_Val2_4_44 = add i35 %tmp_3_44, %tmp_4_44_cast
+  %p_Val2_5_42 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_44, i32 3, i32 34)
+  %tmp_101 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_44, i32 2)
+  %tmp_7_42 = zext i1 %tmp_101 to i32
+  %p_Val2_16_43 = add nsw i32 %p_Val2_5_42, %tmp_7_42
+  %match_matchBufferI_V_171 = load i16* @match_matchBufferI_V_45, align 2
+  %OP1_V_1_44_cast = sext i16 %match_matchBufferI_V_171 to i28
+  %p_Val2_6_44 = mul i28 -1328, %OP1_V_1_44_cast
+  %tmp_16_44 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_42, i3 0)
+  %tmp_17_44_cast = sext i28 %p_Val2_6_44 to i35
+  %p_Val2_7_44 = add i35 %tmp_16_44, %tmp_17_44_cast
+  %p_Val2_11_42 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_44, i32 3, i32 34)
+  %tmp_102 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_44, i32 2)
+  %tmp_19_42 = zext i1 %tmp_102 to i32
+  %p_Val2_17_43 = add nsw i32 %p_Val2_11_42, %tmp_19_42
+  %match_matchBufferQ_V_172 = load i16* @match_matchBufferQ_V_46, align 4
+  %OP1_V_46_cast = sext i16 %match_matchBufferQ_V_172 to i28
+  %p_Val2_3_45 = mul i28 -1531, %OP1_V_46_cast
+  %tmp_3_45 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_43, i3 0)
+  %tmp_4_45_cast = sext i28 %p_Val2_3_45 to i35
+  %p_Val2_4_45 = add i35 %tmp_3_45, %tmp_4_45_cast
+  %p_Val2_5_43 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_45, i32 3, i32 34)
+  %tmp_103 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_45, i32 2)
+  %tmp_7_43 = zext i1 %tmp_103 to i32
+  %p_Val2_16_44 = add nsw i32 %p_Val2_5_43, %tmp_7_43
+  %match_matchBufferI_V_172 = load i16* @match_matchBufferI_V_46, align 4
+  %OP1_V_1_45_cast = sext i16 %match_matchBufferI_V_172 to i28
+  %p_Val2_6_45 = mul i28 -1531, %OP1_V_1_45_cast
+  %tmp_16_45 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_43, i3 0)
+  %tmp_17_45_cast = sext i28 %p_Val2_6_45 to i35
+  %p_Val2_7_45 = add i35 %tmp_16_45, %tmp_17_45_cast
+  %p_Val2_11_43 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_45, i32 3, i32 34)
+  %tmp_104 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_45, i32 2)
+  %tmp_19_43 = zext i1 %tmp_104 to i32
+  %p_Val2_17_44 = add nsw i32 %p_Val2_11_43, %tmp_19_43
+  %match_matchBufferQ_V_173 = load i16* @match_matchBufferQ_V_47, align 2
+  %OP1_V_47_cast = sext i16 %match_matchBufferQ_V_173 to i28
+  %p_Val2_3_46 = mul i28 -1611, %OP1_V_47_cast
+  %tmp_3_46 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_44, i3 0)
+  %tmp_4_46_cast = sext i28 %p_Val2_3_46 to i35
+  %p_Val2_4_46 = add i35 %tmp_3_46, %tmp_4_46_cast
+  %p_Val2_5_44 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_46, i32 3, i32 34)
+  %tmp_105 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_46, i32 2)
+  %tmp_7_44 = zext i1 %tmp_105 to i32
+  %p_Val2_16_45 = add nsw i32 %p_Val2_5_44, %tmp_7_44
+  %match_matchBufferI_V_173 = load i16* @match_matchBufferI_V_47, align 2
+  %OP1_V_1_46_cast = sext i16 %match_matchBufferI_V_173 to i28
+  %p_Val2_6_46 = mul i28 -1611, %OP1_V_1_46_cast
+  %tmp_16_46 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_44, i3 0)
+  %tmp_17_46_cast = sext i28 %p_Val2_6_46 to i35
+  %p_Val2_7_46 = add i35 %tmp_16_46, %tmp_17_46_cast
+  %p_Val2_11_44 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_46, i32 3, i32 34)
+  %tmp_106 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_46, i32 2)
+  %tmp_19_44 = zext i1 %tmp_106 to i32
+  %p_Val2_17_45 = add nsw i32 %p_Val2_11_44, %tmp_19_44
+  %match_matchBufferQ_V_174 = load i16* @match_matchBufferQ_V_48, align 16
+  %OP1_V_48_cast = sext i16 %match_matchBufferQ_V_174 to i28
+  %p_Val2_3_47 = mul i28 -1531, %OP1_V_48_cast
+  %tmp_3_47 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_45, i3 0)
+  %tmp_4_47_cast = sext i28 %p_Val2_3_47 to i35
+  %p_Val2_4_47 = add i35 %tmp_3_47, %tmp_4_47_cast
+  %p_Val2_5_45 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_47, i32 3, i32 34)
+  %tmp_107 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_47, i32 2)
+  %tmp_7_45 = zext i1 %tmp_107 to i32
+  %p_Val2_16_46 = add nsw i32 %p_Val2_5_45, %tmp_7_45
+  %match_matchBufferI_V_174 = load i16* @match_matchBufferI_V_48, align 16
+  %OP1_V_1_47_cast = sext i16 %match_matchBufferI_V_174 to i28
+  %p_Val2_6_47 = mul i28 -1531, %OP1_V_1_47_cast
+  %tmp_16_47 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_45, i3 0)
+  %tmp_17_47_cast = sext i28 %p_Val2_6_47 to i35
+  %p_Val2_7_47 = add i35 %tmp_16_47, %tmp_17_47_cast
+  %p_Val2_11_45 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_47, i32 3, i32 34)
+  %tmp_108 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_47, i32 2)
+  %tmp_19_45 = zext i1 %tmp_108 to i32
+  %p_Val2_17_46 = add nsw i32 %p_Val2_11_45, %tmp_19_45
+  %match_matchBufferQ_V_175 = load i16* @match_matchBufferQ_V_49, align 2
+  %OP1_V_49_cast = sext i16 %match_matchBufferQ_V_175 to i28
+  %p_Val2_3_48 = mul i28 -1252, %OP1_V_49_cast
+  %tmp_3_48 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_46, i3 0)
+  %tmp_4_48_cast = sext i28 %p_Val2_3_48 to i35
+  %p_Val2_4_48 = add i35 %tmp_3_48, %tmp_4_48_cast
+  %p_Val2_5_46 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_48, i32 3, i32 34)
+  %tmp_109 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_48, i32 2)
+  %tmp_7_46 = zext i1 %tmp_109 to i32
+  %p_Val2_16_47 = add nsw i32 %p_Val2_5_46, %tmp_7_46
+  %match_matchBufferI_V_175 = load i16* @match_matchBufferI_V_49, align 2
+  %OP1_V_1_48_cast = sext i16 %match_matchBufferI_V_175 to i28
+  %p_Val2_6_48 = mul i28 -1252, %OP1_V_1_48_cast
+  %tmp_16_48 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_46, i3 0)
+  %tmp_17_48_cast = sext i28 %p_Val2_6_48 to i35
+  %p_Val2_7_48 = add i35 %tmp_16_48, %tmp_17_48_cast
+  %p_Val2_11_46 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_48, i32 3, i32 34)
+  %tmp_110 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_48, i32 2)
+  %tmp_19_46 = zext i1 %tmp_110 to i32
+  %p_Val2_17_47 = add nsw i32 %p_Val2_11_46, %tmp_19_46
+  %match_matchBufferQ_V_176 = load i16* @match_matchBufferQ_V_50, align 4
+  %OP1_V_50_cast = sext i16 %match_matchBufferQ_V_176 to i27
+  %p_Val2_3_49 = mul i27 -749, %OP1_V_50_cast
+  %tmp_3_49 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_47, i3 0)
+  %tmp_4_49_cast = sext i27 %p_Val2_3_49 to i35
+  %p_Val2_4_49 = add i35 %tmp_3_49, %tmp_4_49_cast
+  %p_Val2_5_47 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_49, i32 3, i32 34)
+  %tmp_111 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_49, i32 2)
+  %tmp_7_47 = zext i1 %tmp_111 to i32
+  %p_Val2_16_48 = add nsw i32 %p_Val2_5_47, %tmp_7_47
+  %match_matchBufferI_V_176 = load i16* @match_matchBufferI_V_50, align 4
+  %OP1_V_1_49_cast = sext i16 %match_matchBufferI_V_176 to i27
+  %p_Val2_6_49 = mul i27 -749, %OP1_V_1_49_cast
+  %tmp_16_49 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_47, i3 0)
+  %tmp_17_49_cast = sext i27 %p_Val2_6_49 to i35
+  %p_Val2_7_49 = add i35 %tmp_16_49, %tmp_17_49_cast
+  %p_Val2_11_47 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_49, i32 3, i32 34)
+  %tmp_112 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_49, i32 2)
+  %tmp_19_47 = zext i1 %tmp_112 to i32
+  %p_Val2_17_48 = add nsw i32 %p_Val2_11_47, %tmp_19_47
+  %match_matchBufferQ_V_177 = load i16* @match_matchBufferQ_V_51, align 2
+  %p_shl43 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferQ_V_177, i2 0)
+  %p_shl43_cast = sext i18 %p_shl43 to i19
+  %p_Val2_3_50 = sub i19 0, %p_shl43_cast
+  %tmp_3_50 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_48, i3 0)
+  %tmp_4_50_cast = sext i19 %p_Val2_3_50 to i35
+  %p_Val2_4_50 = add i35 %tmp_3_50, %tmp_4_50_cast
+  %p_Val2_5_48 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_50, i32 3, i32 34)
+  %tmp_113 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %p_Val2_3_50, i32 2)
+  %tmp_7_48 = zext i1 %tmp_113 to i32
+  %p_Val2_16_49 = add nsw i32 %p_Val2_5_48, %tmp_7_48
+  %match_matchBufferI_V_177 = load i16* @match_matchBufferI_V_51, align 2
+  %p_shl41 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferI_V_177, i2 0)
+  %p_shl41_cast = sext i18 %p_shl41 to i19
+  %p_Val2_6_50 = sub i19 0, %p_shl41_cast
+  %tmp_16_50 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_48, i3 0)
+  %tmp_17_50_cast = sext i19 %p_Val2_6_50 to i35
+  %p_Val2_7_50 = add i35 %tmp_16_50, %tmp_17_50_cast
+  %p_Val2_11_48 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_50, i32 3, i32 34)
+  %tmp_114 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %p_Val2_6_50, i32 2)
+  %tmp_19_48 = zext i1 %tmp_114 to i32
+  %p_Val2_17_49 = add nsw i32 %p_Val2_11_48, %tmp_19_48
+  %match_matchBufferQ_V_178 = load i16* @match_matchBufferQ_V_52, align 8
+  %OP1_V_52_cast = sext i16 %match_matchBufferQ_V_178 to i27
+  %p_Val2_3_51 = mul i27 986, %OP1_V_52_cast
+  %tmp_3_51 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_49, i3 0)
+  %tmp_4_51_cast = sext i27 %p_Val2_3_51 to i35
+  %p_Val2_4_51 = add i35 %tmp_3_51, %tmp_4_51_cast
+  %p_Val2_5_49 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_51, i32 3, i32 34)
+  %tmp_115 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_51, i32 2)
+  %tmp_7_49 = zext i1 %tmp_115 to i32
+  %p_Val2_16_50 = add nsw i32 %p_Val2_5_49, %tmp_7_49
+  %match_matchBufferI_V_178 = load i16* @match_matchBufferI_V_52, align 8
+  %OP1_V_1_51_cast = sext i16 %match_matchBufferI_V_178 to i27
+  %p_Val2_6_51 = mul i27 986, %OP1_V_1_51_cast
+  %tmp_16_51 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_49, i3 0)
+  %tmp_17_51_cast = sext i27 %p_Val2_6_51 to i35
+  %p_Val2_7_51 = add i35 %tmp_16_51, %tmp_17_51_cast
+  %p_Val2_11_49 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_51, i32 3, i32 34)
+  %tmp_116 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_51, i32 2)
+  %tmp_19_49 = zext i1 %tmp_116 to i32
+  %p_Val2_17_50 = add nsw i32 %p_Val2_11_49, %tmp_19_49
+  %match_matchBufferQ_V_179 = load i16* @match_matchBufferQ_V_53, align 2
+  %OP1_V_53_cast = sext i16 %match_matchBufferQ_V_179 to i29
+  %p_Val2_3_52 = mul i29 2211, %OP1_V_53_cast
+  %tmp_3_52 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_50, i3 0)
+  %tmp_4_52_cast = sext i29 %p_Val2_3_52 to i35
+  %p_Val2_4_52 = add i35 %tmp_3_52, %tmp_4_52_cast
+  %p_Val2_5_50 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_52, i32 3, i32 34)
+  %tmp_117 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_3_52, i32 2)
+  %tmp_7_50 = zext i1 %tmp_117 to i32
+  %p_Val2_16_51 = add nsw i32 %p_Val2_5_50, %tmp_7_50
+  %match_matchBufferI_V_179 = load i16* @match_matchBufferI_V_53, align 2
+  %OP1_V_1_52_cast = sext i16 %match_matchBufferI_V_179 to i29
+  %p_Val2_6_52 = mul i29 2211, %OP1_V_1_52_cast
+  %tmp_16_52 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_50, i3 0)
+  %tmp_17_52_cast = sext i29 %p_Val2_6_52 to i35
+  %p_Val2_7_52 = add i35 %tmp_16_52, %tmp_17_52_cast
+  %p_Val2_11_50 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_52, i32 3, i32 34)
+  %tmp_118 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_6_52, i32 2)
+  %tmp_19_50 = zext i1 %tmp_118 to i32
+  %p_Val2_17_51 = add nsw i32 %p_Val2_11_50, %tmp_19_50
+  %match_matchBufferQ_V_180 = load i16* @match_matchBufferQ_V_54, align 4
+  %OP1_V_54_cast = sext i16 %match_matchBufferQ_V_180 to i29
+  %p_Val2_3_53 = mul i29 3637, %OP1_V_54_cast
+  %tmp_3_53 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_51, i3 0)
+  %tmp_4_53_cast = sext i29 %p_Val2_3_53 to i35
+  %p_Val2_4_53 = add i35 %tmp_3_53, %tmp_4_53_cast
+  %p_Val2_5_51 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_53, i32 3, i32 34)
+  %tmp_119 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_3_53, i32 2)
+  %tmp_7_51 = zext i1 %tmp_119 to i32
+  %p_Val2_16_52 = add nsw i32 %p_Val2_5_51, %tmp_7_51
+  %match_matchBufferI_V_180 = load i16* @match_matchBufferI_V_54, align 4
+  %OP1_V_1_53_cast = sext i16 %match_matchBufferI_V_180 to i29
+  %p_Val2_6_53 = mul i29 3637, %OP1_V_1_53_cast
+  %tmp_16_53 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_51, i3 0)
+  %tmp_17_53_cast = sext i29 %p_Val2_6_53 to i35
+  %p_Val2_7_53 = add i35 %tmp_16_53, %tmp_17_53_cast
+  %p_Val2_11_51 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_53, i32 3, i32 34)
+  %tmp_120 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_6_53, i32 2)
+  %tmp_19_51 = zext i1 %tmp_120 to i32
+  %p_Val2_17_52 = add nsw i32 %p_Val2_11_51, %tmp_19_51
+  %match_matchBufferQ_V_181 = load i16* @match_matchBufferQ_V_55, align 2
+  %OP1_V_55_cast = sext i16 %match_matchBufferQ_V_181 to i30
+  %p_Val2_3_54 = mul i30 5242, %OP1_V_55_cast
+  %tmp_3_54 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_52, i3 0)
+  %tmp_4_54_cast = sext i30 %p_Val2_3_54 to i35
+  %p_Val2_4_54 = add i35 %tmp_3_54, %tmp_4_54_cast
+  %p_Val2_5_52 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_54, i32 3, i32 34)
+  %tmp_121 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_3_54, i32 2)
+  %tmp_7_52 = zext i1 %tmp_121 to i32
+  %p_Val2_16_53 = add nsw i32 %p_Val2_5_52, %tmp_7_52
+  %match_matchBufferI_V_181 = load i16* @match_matchBufferI_V_55, align 2
+  %OP1_V_1_54_cast = sext i16 %match_matchBufferI_V_181 to i30
+  %p_Val2_6_54 = mul i30 5242, %OP1_V_1_54_cast
+  %tmp_16_54 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_52, i3 0)
+  %tmp_17_54_cast = sext i30 %p_Val2_6_54 to i35
+  %p_Val2_7_54 = add i35 %tmp_16_54, %tmp_17_54_cast
+  %p_Val2_11_52 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_54, i32 3, i32 34)
+  %tmp_122 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_6_54, i32 2)
+  %tmp_19_52 = zext i1 %tmp_122 to i32
+  %p_Val2_17_53 = add nsw i32 %p_Val2_11_52, %tmp_19_52
+  %match_matchBufferQ_V_182 = load i16* @match_matchBufferQ_V_56, align 16
+  %OP1_V_56_cast = sext i16 %match_matchBufferQ_V_182 to i30
+  %p_Val2_3_55 = mul i30 6946, %OP1_V_56_cast
+  %tmp_3_55 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_53, i3 0)
+  %tmp_4_55_cast = sext i30 %p_Val2_3_55 to i35
+  %p_Val2_4_55 = add i35 %tmp_3_55, %tmp_4_55_cast
+  %p_Val2_5_53 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_55, i32 3, i32 34)
+  %tmp_123 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_3_55, i32 2)
+  %tmp_7_53 = zext i1 %tmp_123 to i32
+  %p_Val2_16_54 = add nsw i32 %p_Val2_5_53, %tmp_7_53
+  %match_matchBufferI_V_182 = load i16* @match_matchBufferI_V_56, align 16
+  %OP1_V_1_55_cast = sext i16 %match_matchBufferI_V_182 to i30
+  %p_Val2_6_55 = mul i30 6946, %OP1_V_1_55_cast
+  %tmp_16_55 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_53, i3 0)
+  %tmp_17_55_cast = sext i30 %p_Val2_6_55 to i35
+  %p_Val2_7_55 = add i35 %tmp_16_55, %tmp_17_55_cast
+  %p_Val2_11_53 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_55, i32 3, i32 34)
+  %tmp_124 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_6_55, i32 2)
+  %tmp_19_53 = zext i1 %tmp_124 to i32
+  %p_Val2_17_54 = add nsw i32 %p_Val2_11_53, %tmp_19_53
+  %match_matchBufferQ_V_183 = load i16* @match_matchBufferQ_V_57, align 2
+  %OP1_V_57_cast = sext i16 %match_matchBufferQ_V_183 to i31
+  %p_Val2_3_56 = mul i31 8699, %OP1_V_57_cast
+  %tmp_3_56 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_54, i3 0)
+  %tmp_4_56_cast = sext i31 %p_Val2_3_56 to i35
+  %p_Val2_4_56 = add i35 %tmp_3_56, %tmp_4_56_cast
+  %p_Val2_5_54 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_56, i32 3, i32 34)
+  %tmp_125 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_56, i32 2)
+  %tmp_7_54 = zext i1 %tmp_125 to i32
+  %p_Val2_16_55 = add nsw i32 %p_Val2_5_54, %tmp_7_54
+  %match_matchBufferI_V_183 = load i16* @match_matchBufferI_V_57, align 2
+  %OP1_V_1_56_cast = sext i16 %match_matchBufferI_V_183 to i31
+  %p_Val2_6_56 = mul i31 8699, %OP1_V_1_56_cast
+  %tmp_16_56 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_54, i3 0)
+  %tmp_17_56_cast = sext i31 %p_Val2_6_56 to i35
+  %p_Val2_7_56 = add i35 %tmp_16_56, %tmp_17_56_cast
+  %p_Val2_11_54 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_56, i32 3, i32 34)
+  %tmp_126 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_56, i32 2)
+  %tmp_19_54 = zext i1 %tmp_126 to i32
+  %p_Val2_17_55 = add nsw i32 %p_Val2_11_54, %tmp_19_54
+  %match_matchBufferQ_V_184 = load i16* @match_matchBufferQ_V_58, align 4
+  %OP1_V_58_cast = sext i16 %match_matchBufferQ_V_184 to i31
+  %p_Val2_3_57 = mul i31 10436, %OP1_V_58_cast
+  %tmp_3_57 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_55, i3 0)
+  %tmp_4_57_cast = sext i31 %p_Val2_3_57 to i35
+  %p_Val2_4_57 = add i35 %tmp_3_57, %tmp_4_57_cast
+  %p_Val2_5_55 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_57, i32 3, i32 34)
+  %tmp_127 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_57, i32 2)
+  %tmp_7_55 = zext i1 %tmp_127 to i32
+  %p_Val2_16_56 = add nsw i32 %p_Val2_5_55, %tmp_7_55
+  %match_matchBufferI_V_184 = load i16* @match_matchBufferI_V_58, align 4
+  %OP1_V_1_57_cast = sext i16 %match_matchBufferI_V_184 to i31
+  %p_Val2_6_57 = mul i31 10436, %OP1_V_1_57_cast
+  %tmp_16_57 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_55, i3 0)
+  %tmp_17_57_cast = sext i31 %p_Val2_6_57 to i35
+  %p_Val2_7_57 = add i35 %tmp_16_57, %tmp_17_57_cast
+  %p_Val2_11_55 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_57, i32 3, i32 34)
+  %tmp_128 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_57, i32 2)
+  %tmp_19_55 = zext i1 %tmp_128 to i32
+  %p_Val2_17_56 = add nsw i32 %p_Val2_11_55, %tmp_19_55
+  %match_matchBufferQ_V_185 = load i16* @match_matchBufferQ_V_59, align 2
+  %OP1_V_59_cast = sext i16 %match_matchBufferQ_V_185 to i31
+  %p_Val2_3_58 = mul i31 12058, %OP1_V_59_cast
+  %tmp_3_58 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_56, i3 0)
+  %tmp_4_58_cast = sext i31 %p_Val2_3_58 to i35
+  %p_Val2_4_58 = add i35 %tmp_3_58, %tmp_4_58_cast
+  %p_Val2_5_56 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_58, i32 3, i32 34)
+  %tmp_129 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_58, i32 2)
+  %tmp_7_56 = zext i1 %tmp_129 to i32
+  %p_Val2_16_57 = add nsw i32 %p_Val2_5_56, %tmp_7_56
+  %match_matchBufferI_V_185 = load i16* @match_matchBufferI_V_59, align 2
+  %OP1_V_1_58_cast = sext i16 %match_matchBufferI_V_185 to i31
+  %p_Val2_6_58 = mul i31 12058, %OP1_V_1_58_cast
+  %tmp_16_58 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_56, i3 0)
+  %tmp_17_58_cast = sext i31 %p_Val2_6_58 to i35
+  %p_Val2_7_58 = add i35 %tmp_16_58, %tmp_17_58_cast
+  %p_Val2_11_56 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_58, i32 3, i32 34)
+  %tmp_130 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_58, i32 2)
+  %tmp_19_56 = zext i1 %tmp_130 to i32
+  %p_Val2_17_57 = add nsw i32 %p_Val2_11_56, %tmp_19_56
+  %match_matchBufferQ_V_186 = load i16* @match_matchBufferQ_V_60, align 8
+  %OP1_V_60_cast = sext i16 %match_matchBufferQ_V_186 to i31
+  %p_Val2_3_59 = mul i31 13516, %OP1_V_60_cast
+  %tmp_3_59 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_57, i3 0)
+  %tmp_4_59_cast = sext i31 %p_Val2_3_59 to i35
+  %p_Val2_4_59 = add i35 %tmp_3_59, %tmp_4_59_cast
+  %p_Val2_5_57 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_59, i32 3, i32 34)
+  %tmp_131 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_59, i32 2)
+  %tmp_7_57 = zext i1 %tmp_131 to i32
+  %p_Val2_16_58 = add nsw i32 %p_Val2_5_57, %tmp_7_57
+  %match_matchBufferI_V_186 = load i16* @match_matchBufferI_V_60, align 8
+  %OP1_V_1_59_cast = sext i16 %match_matchBufferI_V_186 to i31
+  %p_Val2_6_59 = mul i31 13516, %OP1_V_1_59_cast
+  %tmp_16_59 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_57, i3 0)
+  %tmp_17_59_cast = sext i31 %p_Val2_6_59 to i35
+  %p_Val2_7_59 = add i35 %tmp_16_59, %tmp_17_59_cast
+  %p_Val2_11_57 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_59, i32 3, i32 34)
+  %tmp_132 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_59, i32 2)
+  %tmp_19_57 = zext i1 %tmp_132 to i32
+  %p_Val2_17_58 = add nsw i32 %p_Val2_11_57, %tmp_19_57
+  %match_matchBufferQ_V_187 = load i16* @match_matchBufferQ_V_61, align 2
+  %OP1_V_61_cast = sext i16 %match_matchBufferQ_V_187 to i31
+  %p_Val2_3_60 = mul i31 14712, %OP1_V_61_cast
+  %tmp_3_60 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_58, i3 0)
+  %tmp_4_60_cast = sext i31 %p_Val2_3_60 to i35
+  %p_Val2_4_60 = add i35 %tmp_3_60, %tmp_4_60_cast
+  %p_Val2_5_58 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_60, i32 3, i32 34)
+  %tmp_133 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_60, i32 2)
+  %tmp_7_58 = zext i1 %tmp_133 to i32
+  %p_Val2_16_59 = add nsw i32 %p_Val2_5_58, %tmp_7_58
+  %match_matchBufferI_V_187 = load i16* @match_matchBufferI_V_61, align 2
+  %OP1_V_1_60_cast = sext i16 %match_matchBufferI_V_187 to i31
+  %p_Val2_6_60 = mul i31 14712, %OP1_V_1_60_cast
+  %tmp_16_60 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_58, i3 0)
+  %tmp_17_60_cast = sext i31 %p_Val2_6_60 to i35
+  %p_Val2_7_60 = add i35 %tmp_16_60, %tmp_17_60_cast
+  %p_Val2_11_58 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_60, i32 3, i32 34)
+  %tmp_134 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_60, i32 2)
+  %tmp_19_58 = zext i1 %tmp_134 to i32
+  %p_Val2_17_59 = add nsw i32 %p_Val2_11_58, %tmp_19_58
+  %match_matchBufferQ_V_188 = load i16* @match_matchBufferQ_V_62, align 4
+  %OP1_V_62_cast = sext i16 %match_matchBufferQ_V_188 to i31
+  %p_Val2_3_61 = mul i31 15630, %OP1_V_62_cast
+  %tmp_3_61 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_59, i3 0)
+  %tmp_4_61_cast = sext i31 %p_Val2_3_61 to i35
+  %p_Val2_4_61 = add i35 %tmp_3_61, %tmp_4_61_cast
+  %p_Val2_5_59 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_61, i32 3, i32 34)
+  %tmp_135 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_61, i32 2)
+  %tmp_7_59 = zext i1 %tmp_135 to i32
+  %p_Val2_16_60 = add nsw i32 %p_Val2_5_59, %tmp_7_59
+  %match_matchBufferI_V_188 = load i16* @match_matchBufferI_V_62, align 4
+  %OP1_V_1_61_cast = sext i16 %match_matchBufferI_V_188 to i31
+  %p_Val2_6_61 = mul i31 15630, %OP1_V_1_61_cast
+  %tmp_16_61 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_59, i3 0)
+  %tmp_17_61_cast = sext i31 %p_Val2_6_61 to i35
+  %p_Val2_7_61 = add i35 %tmp_16_61, %tmp_17_61_cast
+  %p_Val2_11_59 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_61, i32 3, i32 34)
+  %tmp_136 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_61, i32 2)
+  %tmp_19_59 = zext i1 %tmp_136 to i32
+  %p_Val2_17_60 = add nsw i32 %p_Val2_11_59, %tmp_19_59
+  %match_matchBufferQ_V_189 = load i16* @match_matchBufferQ_V_63, align 2
+  %OP1_V_63_cast = sext i16 %match_matchBufferQ_V_189 to i31
+  %p_Val2_3_62 = mul i31 16187, %OP1_V_63_cast
+  %tmp_3_62 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_60, i3 0)
+  %tmp_4_62_cast = sext i31 %p_Val2_3_62 to i35
+  %p_Val2_4_62 = add i35 %tmp_3_62, %tmp_4_62_cast
+  %p_Val2_5_60 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_62, i32 3, i32 34)
+  %tmp_137 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_62, i32 2)
+  %tmp_7_60 = zext i1 %tmp_137 to i32
+  %p_Val2_16_61 = add nsw i32 %p_Val2_5_60, %tmp_7_60
+  %match_matchBufferI_V_189 = load i16* @match_matchBufferI_V_63, align 2
+  %OP1_V_1_62_cast = sext i16 %match_matchBufferI_V_189 to i31
+  %p_Val2_6_62 = mul i31 16187, %OP1_V_1_62_cast
+  %tmp_16_62 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_60, i3 0)
+  %tmp_17_62_cast = sext i31 %p_Val2_6_62 to i35
+  %p_Val2_7_62 = add i35 %tmp_16_62, %tmp_17_62_cast
+  %p_Val2_11_60 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_62, i32 3, i32 34)
+  %tmp_138 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_62, i32 2)
+  %tmp_19_60 = zext i1 %tmp_138 to i32
+  %p_Val2_17_61 = add nsw i32 %p_Val2_11_60, %tmp_19_60
+  %match_matchBufferQ_V_190 = load i16* @match_matchBufferQ_V_64, align 16
+  %OP1_V_64_cast = sext i16 %match_matchBufferQ_V_190 to i31
+  %p_shl40 = call i30 @_ssdm_op_BitConcatenate.i30.i16.i14(i16 %match_matchBufferQ_V_190, i14 0)
+  %p_shl40_cast = sext i30 %p_shl40 to i31
+  %p_Val2_3_63 = add i31 %p_shl40_cast, %OP1_V_64_cast
+  %tmp_3_63 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_61, i3 0)
+  %tmp_4_63_cast = sext i31 %p_Val2_3_63 to i35
+  %p_Val2_4_63 = add i35 %tmp_3_63, %tmp_4_63_cast
+  %p_Val2_5_61 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_63, i32 3, i32 34)
+  %tmp_139 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferQ_V_190, i32 2)
+  %tmp_7_61 = zext i1 %tmp_139 to i32
+  %p_Val2_16_62 = add nsw i32 %p_Val2_5_61, %tmp_7_61
+  %match_matchBufferI_V_190 = load i16* @match_matchBufferI_V_64, align 16
+  %OP1_V_1_63_cast = sext i16 %match_matchBufferI_V_190 to i31
+  %p_shl39 = call i30 @_ssdm_op_BitConcatenate.i30.i16.i14(i16 %match_matchBufferI_V_190, i14 0)
+  %p_shl39_cast = sext i30 %p_shl39 to i31
+  %p_Val2_6_63 = add i31 %p_shl39_cast, %OP1_V_1_63_cast
+  %tmp_16_63 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_61, i3 0)
+  %tmp_17_63_cast = sext i31 %p_Val2_6_63 to i35
+  %p_Val2_7_63 = add i35 %tmp_16_63, %tmp_17_63_cast
+  %p_Val2_11_61 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_63, i32 3, i32 34)
+  %tmp_140 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferI_V_190, i32 2)
+  %tmp_19_61 = zext i1 %tmp_140 to i32
+  %p_Val2_17_62 = add nsw i32 %p_Val2_11_61, %tmp_19_61
+  %match_matchBufferQ_V_191 = load i16* @match_matchBufferQ_V_65, align 2
+  %OP1_V_65_cast = sext i16 %match_matchBufferQ_V_191 to i31
+  %p_Val2_3_64 = mul i31 16187, %OP1_V_65_cast
+  %tmp_3_64 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_62, i3 0)
+  %tmp_4_64_cast = sext i31 %p_Val2_3_64 to i35
+  %p_Val2_4_64 = add i35 %tmp_3_64, %tmp_4_64_cast
+  %p_Val2_5_62 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_64, i32 3, i32 34)
+  %tmp_141 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_64, i32 2)
+  %tmp_7_62 = zext i1 %tmp_141 to i32
+  %p_Val2_16_63 = add nsw i32 %p_Val2_5_62, %tmp_7_62
+  %match_matchBufferI_V_191 = load i16* @match_matchBufferI_V_65, align 2
+  %OP1_V_1_64_cast = sext i16 %match_matchBufferI_V_191 to i31
+  %p_Val2_6_64 = mul i31 16187, %OP1_V_1_64_cast
+  %tmp_16_64 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_62, i3 0)
+  %tmp_17_64_cast = sext i31 %p_Val2_6_64 to i35
+  %p_Val2_7_64 = add i35 %tmp_16_64, %tmp_17_64_cast
+  %p_Val2_11_62 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_64, i32 3, i32 34)
+  %tmp_142 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_64, i32 2)
+  %tmp_19_62 = zext i1 %tmp_142 to i32
+  %p_Val2_17_63 = add nsw i32 %p_Val2_11_62, %tmp_19_62
+  %match_matchBufferQ_V_192 = load i16* @match_matchBufferQ_V_66, align 4
+  %OP1_V_66_cast = sext i16 %match_matchBufferQ_V_192 to i31
+  %p_Val2_3_65 = mul i31 15630, %OP1_V_66_cast
+  %tmp_3_65 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_63, i3 0)
+  %tmp_4_65_cast = sext i31 %p_Val2_3_65 to i35
+  %p_Val2_4_65 = add i35 %tmp_3_65, %tmp_4_65_cast
+  %p_Val2_5_63 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_65, i32 3, i32 34)
+  %tmp_143 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_65, i32 2)
+  %tmp_7_63 = zext i1 %tmp_143 to i32
+  %p_Val2_16_64 = add nsw i32 %p_Val2_5_63, %tmp_7_63
+  %match_matchBufferI_V_192 = load i16* @match_matchBufferI_V_66, align 4
+  %OP1_V_1_65_cast = sext i16 %match_matchBufferI_V_192 to i31
+  %p_Val2_6_65 = mul i31 15630, %OP1_V_1_65_cast
+  %tmp_16_65 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_63, i3 0)
+  %tmp_17_65_cast = sext i31 %p_Val2_6_65 to i35
+  %p_Val2_7_65 = add i35 %tmp_16_65, %tmp_17_65_cast
+  %p_Val2_11_63 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_65, i32 3, i32 34)
+  %tmp_144 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_65, i32 2)
+  %tmp_19_63 = zext i1 %tmp_144 to i32
+  %p_Val2_17_64 = add nsw i32 %p_Val2_11_63, %tmp_19_63
+  %match_matchBufferQ_V_193 = load i16* @match_matchBufferQ_V_67, align 2
+  %OP1_V_67_cast = sext i16 %match_matchBufferQ_V_193 to i31
+  %p_Val2_3_66 = mul i31 14712, %OP1_V_67_cast
+  %tmp_3_66 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_64, i3 0)
+  %tmp_4_66_cast = sext i31 %p_Val2_3_66 to i35
+  %p_Val2_4_66 = add i35 %tmp_3_66, %tmp_4_66_cast
+  %p_Val2_5_64 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_66, i32 3, i32 34)
+  %tmp_145 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_66, i32 2)
+  %tmp_7_64 = zext i1 %tmp_145 to i32
+  %p_Val2_16_65 = add nsw i32 %p_Val2_5_64, %tmp_7_64
+  %match_matchBufferI_V_193 = load i16* @match_matchBufferI_V_67, align 2
+  %OP1_V_1_66_cast = sext i16 %match_matchBufferI_V_193 to i31
+  %p_Val2_6_66 = mul i31 14712, %OP1_V_1_66_cast
+  %tmp_16_66 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_64, i3 0)
+  %tmp_17_66_cast = sext i31 %p_Val2_6_66 to i35
+  %p_Val2_7_66 = add i35 %tmp_16_66, %tmp_17_66_cast
+  %p_Val2_11_64 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_66, i32 3, i32 34)
+  %tmp_146 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_66, i32 2)
+  %tmp_19_64 = zext i1 %tmp_146 to i32
+  %p_Val2_17_65 = add nsw i32 %p_Val2_11_64, %tmp_19_64
+  %match_matchBufferQ_V_194 = load i16* @match_matchBufferQ_V_68, align 8
+  %OP1_V_68_cast = sext i16 %match_matchBufferQ_V_194 to i31
+  %p_Val2_3_67 = mul i31 13516, %OP1_V_68_cast
+  %tmp_3_67 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_65, i3 0)
+  %tmp_4_67_cast = sext i31 %p_Val2_3_67 to i35
+  %p_Val2_4_67 = add i35 %tmp_3_67, %tmp_4_67_cast
+  %p_Val2_5_65 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_67, i32 3, i32 34)
+  %tmp_147 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_67, i32 2)
+  %tmp_7_65 = zext i1 %tmp_147 to i32
+  %p_Val2_16_66 = add nsw i32 %p_Val2_5_65, %tmp_7_65
+  %match_matchBufferI_V_194 = load i16* @match_matchBufferI_V_68, align 8
+  %OP1_V_1_67_cast = sext i16 %match_matchBufferI_V_194 to i31
+  %p_Val2_6_67 = mul i31 13516, %OP1_V_1_67_cast
+  %tmp_16_67 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_65, i3 0)
+  %tmp_17_67_cast = sext i31 %p_Val2_6_67 to i35
+  %p_Val2_7_67 = add i35 %tmp_16_67, %tmp_17_67_cast
+  %p_Val2_11_65 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_67, i32 3, i32 34)
+  %tmp_148 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_67, i32 2)
+  %tmp_19_65 = zext i1 %tmp_148 to i32
+  %p_Val2_17_66 = add nsw i32 %p_Val2_11_65, %tmp_19_65
+  %match_matchBufferQ_V_195 = load i16* @match_matchBufferQ_V_69, align 2
+  %OP1_V_69_cast = sext i16 %match_matchBufferQ_V_195 to i31
+  %p_Val2_3_68 = mul i31 12058, %OP1_V_69_cast
+  %tmp_3_68 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_66, i3 0)
+  %tmp_4_68_cast = sext i31 %p_Val2_3_68 to i35
+  %p_Val2_4_68 = add i35 %tmp_3_68, %tmp_4_68_cast
+  %p_Val2_5_66 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_68, i32 3, i32 34)
+  %tmp_149 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_68, i32 2)
+  %tmp_7_66 = zext i1 %tmp_149 to i32
+  %p_Val2_16_67 = add nsw i32 %p_Val2_5_66, %tmp_7_66
+  %match_matchBufferI_V_195 = load i16* @match_matchBufferI_V_69, align 2
+  %OP1_V_1_68_cast = sext i16 %match_matchBufferI_V_195 to i31
+  %p_Val2_6_68 = mul i31 12058, %OP1_V_1_68_cast
+  %tmp_16_68 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_66, i3 0)
+  %tmp_17_68_cast = sext i31 %p_Val2_6_68 to i35
+  %p_Val2_7_68 = add i35 %tmp_16_68, %tmp_17_68_cast
+  %p_Val2_11_66 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_68, i32 3, i32 34)
+  %tmp_150 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_68, i32 2)
+  %tmp_19_66 = zext i1 %tmp_150 to i32
+  %p_Val2_17_67 = add nsw i32 %p_Val2_11_66, %tmp_19_66
+  %match_matchBufferQ_V_196 = load i16* @match_matchBufferQ_V_70, align 4
+  %OP1_V_70_cast = sext i16 %match_matchBufferQ_V_196 to i31
+  %p_Val2_3_69 = mul i31 10436, %OP1_V_70_cast
+  %tmp_3_69 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_67, i3 0)
+  %tmp_4_69_cast = sext i31 %p_Val2_3_69 to i35
+  %p_Val2_4_69 = add i35 %tmp_3_69, %tmp_4_69_cast
+  %p_Val2_5_67 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_69, i32 3, i32 34)
+  %tmp_151 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_69, i32 2)
+  %tmp_7_67 = zext i1 %tmp_151 to i32
+  %p_Val2_16_68 = add nsw i32 %p_Val2_5_67, %tmp_7_67
+  %match_matchBufferI_V_196 = load i16* @match_matchBufferI_V_70, align 4
+  %OP1_V_1_69_cast = sext i16 %match_matchBufferI_V_196 to i31
+  %p_Val2_6_69 = mul i31 10436, %OP1_V_1_69_cast
+  %tmp_16_69 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_67, i3 0)
+  %tmp_17_69_cast = sext i31 %p_Val2_6_69 to i35
+  %p_Val2_7_69 = add i35 %tmp_16_69, %tmp_17_69_cast
+  %p_Val2_11_67 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_69, i32 3, i32 34)
+  %tmp_152 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_69, i32 2)
+  %tmp_19_67 = zext i1 %tmp_152 to i32
+  %p_Val2_17_68 = add nsw i32 %p_Val2_11_67, %tmp_19_67
+  %match_matchBufferQ_V_197 = load i16* @match_matchBufferQ_V_71, align 2
+  %OP1_V_71_cast = sext i16 %match_matchBufferQ_V_197 to i31
+  %p_Val2_3_70 = mul i31 8699, %OP1_V_71_cast
+  %tmp_3_70 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_68, i3 0)
+  %tmp_4_70_cast = sext i31 %p_Val2_3_70 to i35
+  %p_Val2_4_70 = add i35 %tmp_3_70, %tmp_4_70_cast
+  %p_Val2_5_68 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_70, i32 3, i32 34)
+  %tmp_153 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_3_70, i32 2)
+  %tmp_7_68 = zext i1 %tmp_153 to i32
+  %p_Val2_16_69 = add nsw i32 %p_Val2_5_68, %tmp_7_68
+  %match_matchBufferI_V_197 = load i16* @match_matchBufferI_V_71, align 2
+  %OP1_V_1_70_cast = sext i16 %match_matchBufferI_V_197 to i31
+  %p_Val2_6_70 = mul i31 8699, %OP1_V_1_70_cast
+  %tmp_16_70 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_68, i3 0)
+  %tmp_17_70_cast = sext i31 %p_Val2_6_70 to i35
+  %p_Val2_7_70 = add i35 %tmp_16_70, %tmp_17_70_cast
+  %p_Val2_11_68 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_70, i32 3, i32 34)
+  %tmp_154 = call i1 @_ssdm_op_BitSelect.i1.i31.i32(i31 %p_Val2_6_70, i32 2)
+  %tmp_19_68 = zext i1 %tmp_154 to i32
+  %p_Val2_17_69 = add nsw i32 %p_Val2_11_68, %tmp_19_68
+  %match_matchBufferQ_V_198 = load i16* @match_matchBufferQ_V_72, align 16
+  %OP1_V_72_cast = sext i16 %match_matchBufferQ_V_198 to i30
+  %p_Val2_3_71 = mul i30 6946, %OP1_V_72_cast
+  %tmp_3_71 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_69, i3 0)
+  %tmp_4_71_cast = sext i30 %p_Val2_3_71 to i35
+  %p_Val2_4_71 = add i35 %tmp_3_71, %tmp_4_71_cast
+  %p_Val2_5_69 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_71, i32 3, i32 34)
+  %tmp_155 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_3_71, i32 2)
+  %tmp_7_69 = zext i1 %tmp_155 to i32
+  %p_Val2_16_70 = add nsw i32 %p_Val2_5_69, %tmp_7_69
+  %match_matchBufferI_V_198 = load i16* @match_matchBufferI_V_72, align 16
+  %OP1_V_1_71_cast = sext i16 %match_matchBufferI_V_198 to i30
+  %p_Val2_6_71 = mul i30 6946, %OP1_V_1_71_cast
+  %tmp_16_71 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_69, i3 0)
+  %tmp_17_71_cast = sext i30 %p_Val2_6_71 to i35
+  %p_Val2_7_71 = add i35 %tmp_16_71, %tmp_17_71_cast
+  %p_Val2_11_69 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_71, i32 3, i32 34)
+  %tmp_156 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_6_71, i32 2)
+  %tmp_19_69 = zext i1 %tmp_156 to i32
+  %p_Val2_17_70 = add nsw i32 %p_Val2_11_69, %tmp_19_69
+  %match_matchBufferQ_V_199 = load i16* @match_matchBufferQ_V_73, align 2
+  %OP1_V_73_cast = sext i16 %match_matchBufferQ_V_199 to i30
+  %p_Val2_3_72 = mul i30 5242, %OP1_V_73_cast
+  %tmp_3_72 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_70, i3 0)
+  %tmp_4_72_cast = sext i30 %p_Val2_3_72 to i35
+  %p_Val2_4_72 = add i35 %tmp_3_72, %tmp_4_72_cast
+  %p_Val2_5_70 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_72, i32 3, i32 34)
+  %tmp_157 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_3_72, i32 2)
+  %tmp_7_70 = zext i1 %tmp_157 to i32
+  %p_Val2_16_71 = add nsw i32 %p_Val2_5_70, %tmp_7_70
+  %match_matchBufferI_V_199 = load i16* @match_matchBufferI_V_73, align 2
+  %OP1_V_1_72_cast = sext i16 %match_matchBufferI_V_199 to i30
+  %p_Val2_6_72 = mul i30 5242, %OP1_V_1_72_cast
+  %tmp_16_72 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_70, i3 0)
+  %tmp_17_72_cast = sext i30 %p_Val2_6_72 to i35
+  %p_Val2_7_72 = add i35 %tmp_16_72, %tmp_17_72_cast
+  %p_Val2_11_70 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_72, i32 3, i32 34)
+  %tmp_158 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %p_Val2_6_72, i32 2)
+  %tmp_19_70 = zext i1 %tmp_158 to i32
+  %p_Val2_17_71 = add nsw i32 %p_Val2_11_70, %tmp_19_70
+  %match_matchBufferQ_V_200 = load i16* @match_matchBufferQ_V_74, align 4
+  %OP1_V_74_cast = sext i16 %match_matchBufferQ_V_200 to i29
+  %p_Val2_3_73 = mul i29 3637, %OP1_V_74_cast
+  %tmp_3_73 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_71, i3 0)
+  %tmp_4_73_cast = sext i29 %p_Val2_3_73 to i35
+  %p_Val2_4_73 = add i35 %tmp_3_73, %tmp_4_73_cast
+  %p_Val2_5_71 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_73, i32 3, i32 34)
+  %tmp_159 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_3_73, i32 2)
+  %tmp_7_71 = zext i1 %tmp_159 to i32
+  %p_Val2_16_72 = add nsw i32 %p_Val2_5_71, %tmp_7_71
+  %match_matchBufferI_V_200 = load i16* @match_matchBufferI_V_74, align 4
+  %OP1_V_1_73_cast = sext i16 %match_matchBufferI_V_200 to i29
+  %p_Val2_6_73 = mul i29 3637, %OP1_V_1_73_cast
+  %tmp_16_73 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_71, i3 0)
+  %tmp_17_73_cast = sext i29 %p_Val2_6_73 to i35
+  %p_Val2_7_73 = add i35 %tmp_16_73, %tmp_17_73_cast
+  %p_Val2_11_71 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_73, i32 3, i32 34)
+  %tmp_160 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_6_73, i32 2)
+  %tmp_19_71 = zext i1 %tmp_160 to i32
+  %p_Val2_17_72 = add nsw i32 %p_Val2_11_71, %tmp_19_71
+  %match_matchBufferQ_V_201 = load i16* @match_matchBufferQ_V_75, align 2
+  %OP1_V_75_cast = sext i16 %match_matchBufferQ_V_201 to i29
+  %p_Val2_3_74 = mul i29 2211, %OP1_V_75_cast
+  %tmp_3_74 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_72, i3 0)
+  %tmp_4_74_cast = sext i29 %p_Val2_3_74 to i35
+  %p_Val2_4_74 = add i35 %tmp_3_74, %tmp_4_74_cast
+  %p_Val2_5_72 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_74, i32 3, i32 34)
+  %tmp_161 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_3_74, i32 2)
+  %tmp_7_72 = zext i1 %tmp_161 to i32
+  %p_Val2_16_73 = add nsw i32 %p_Val2_5_72, %tmp_7_72
+  %match_matchBufferI_V_201 = load i16* @match_matchBufferI_V_75, align 2
+  %OP1_V_1_74_cast = sext i16 %match_matchBufferI_V_201 to i29
+  %p_Val2_6_74 = mul i29 2211, %OP1_V_1_74_cast
+  %tmp_16_74 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_72, i3 0)
+  %tmp_17_74_cast = sext i29 %p_Val2_6_74 to i35
+  %p_Val2_7_74 = add i35 %tmp_16_74, %tmp_17_74_cast
+  %p_Val2_11_72 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_74, i32 3, i32 34)
+  %tmp_162 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %p_Val2_6_74, i32 2)
+  %tmp_19_72 = zext i1 %tmp_162 to i32
+  %p_Val2_17_73 = add nsw i32 %p_Val2_11_72, %tmp_19_72
+  %match_matchBufferQ_V_202 = load i16* @match_matchBufferQ_V_76, align 8
+  %OP1_V_76_cast = sext i16 %match_matchBufferQ_V_202 to i27
+  %p_Val2_3_75 = mul i27 986, %OP1_V_76_cast
+  %tmp_3_75 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_73, i3 0)
+  %tmp_4_75_cast = sext i27 %p_Val2_3_75 to i35
+  %p_Val2_4_75 = add i35 %tmp_3_75, %tmp_4_75_cast
+  %p_Val2_5_73 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_75, i32 3, i32 34)
+  %tmp_163 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_75, i32 2)
+  %tmp_7_73 = zext i1 %tmp_163 to i32
+  %p_Val2_16_74 = add nsw i32 %p_Val2_5_73, %tmp_7_73
+  %match_matchBufferI_V_202 = load i16* @match_matchBufferI_V_76, align 8
+  %OP1_V_1_75_cast = sext i16 %match_matchBufferI_V_202 to i27
+  %p_Val2_6_75 = mul i27 986, %OP1_V_1_75_cast
+  %tmp_16_75 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_73, i3 0)
+  %tmp_17_75_cast = sext i27 %p_Val2_6_75 to i35
+  %p_Val2_7_75 = add i35 %tmp_16_75, %tmp_17_75_cast
+  %p_Val2_11_73 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_75, i32 3, i32 34)
+  %tmp_164 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_75, i32 2)
+  %tmp_19_73 = zext i1 %tmp_164 to i32
+  %p_Val2_17_74 = add nsw i32 %p_Val2_11_73, %tmp_19_73
+  %match_matchBufferQ_V_203 = load i16* @match_matchBufferQ_V_77, align 2
+  %p_shl37 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferQ_V_203, i2 0)
+  %p_shl37_cast = sext i18 %p_shl37 to i19
+  %p_Val2_3_76 = sub i19 0, %p_shl37_cast
+  %tmp_3_76 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_74, i3 0)
+  %tmp_4_76_cast = sext i19 %p_Val2_3_76 to i35
+  %p_Val2_4_76 = add i35 %tmp_3_76, %tmp_4_76_cast
+  %p_Val2_5_74 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_76, i32 3, i32 34)
+  %tmp_165 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %p_Val2_3_76, i32 2)
+  %tmp_7_74 = zext i1 %tmp_165 to i32
+  %p_Val2_16_75 = add nsw i32 %p_Val2_5_74, %tmp_7_74
+  %match_matchBufferI_V_203 = load i16* @match_matchBufferI_V_77, align 2
+  %p_shl35 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferI_V_203, i2 0)
+  %p_shl35_cast = sext i18 %p_shl35 to i19
+  %p_Val2_6_76 = sub i19 0, %p_shl35_cast
+  %tmp_16_76 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_74, i3 0)
+  %tmp_17_76_cast = sext i19 %p_Val2_6_76 to i35
+  %p_Val2_7_76 = add i35 %tmp_16_76, %tmp_17_76_cast
+  %p_Val2_11_74 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_76, i32 3, i32 34)
+  %tmp_166 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %p_Val2_6_76, i32 2)
+  %tmp_19_74 = zext i1 %tmp_166 to i32
+  %p_Val2_17_75 = add nsw i32 %p_Val2_11_74, %tmp_19_74
+  %match_matchBufferQ_V_204 = load i16* @match_matchBufferQ_V_78, align 4
+  %OP1_V_78_cast = sext i16 %match_matchBufferQ_V_204 to i27
+  %p_Val2_3_77 = mul i27 -749, %OP1_V_78_cast
+  %tmp_3_77 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_75, i3 0)
+  %tmp_4_77_cast = sext i27 %p_Val2_3_77 to i35
+  %p_Val2_4_77 = add i35 %tmp_3_77, %tmp_4_77_cast
+  %p_Val2_5_75 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_77, i32 3, i32 34)
+  %tmp_167 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_77, i32 2)
+  %tmp_7_75 = zext i1 %tmp_167 to i32
+  %p_Val2_16_76 = add nsw i32 %p_Val2_5_75, %tmp_7_75
+  %match_matchBufferI_V_204 = load i16* @match_matchBufferI_V_78, align 4
+  %OP1_V_1_77_cast = sext i16 %match_matchBufferI_V_204 to i27
+  %p_Val2_6_77 = mul i27 -749, %OP1_V_1_77_cast
+  %tmp_16_77 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_75, i3 0)
+  %tmp_17_77_cast = sext i27 %p_Val2_6_77 to i35
+  %p_Val2_7_77 = add i35 %tmp_16_77, %tmp_17_77_cast
+  %p_Val2_11_75 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_77, i32 3, i32 34)
+  %tmp_168 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_77, i32 2)
+  %tmp_19_75 = zext i1 %tmp_168 to i32
+  %p_Val2_17_76 = add nsw i32 %p_Val2_11_75, %tmp_19_75
+  %match_matchBufferQ_V_205 = load i16* @match_matchBufferQ_V_79, align 2
+  %OP1_V_79_cast = sext i16 %match_matchBufferQ_V_205 to i28
+  %p_Val2_3_78 = mul i28 -1252, %OP1_V_79_cast
+  %tmp_3_78 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_76, i3 0)
+  %tmp_4_78_cast = sext i28 %p_Val2_3_78 to i35
+  %p_Val2_4_78 = add i35 %tmp_3_78, %tmp_4_78_cast
+  %p_Val2_5_76 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_78, i32 3, i32 34)
+  %tmp_169 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_78, i32 2)
+  %tmp_7_76 = zext i1 %tmp_169 to i32
+  %p_Val2_16_77 = add nsw i32 %p_Val2_5_76, %tmp_7_76
+  %match_matchBufferI_V_205 = load i16* @match_matchBufferI_V_79, align 2
+  %OP1_V_1_78_cast = sext i16 %match_matchBufferI_V_205 to i28
+  %p_Val2_6_78 = mul i28 -1252, %OP1_V_1_78_cast
+  %tmp_16_78 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_76, i3 0)
+  %tmp_17_78_cast = sext i28 %p_Val2_6_78 to i35
+  %p_Val2_7_78 = add i35 %tmp_16_78, %tmp_17_78_cast
+  %p_Val2_11_76 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_78, i32 3, i32 34)
+  %tmp_170 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_78, i32 2)
+  %tmp_19_76 = zext i1 %tmp_170 to i32
+  %p_Val2_17_77 = add nsw i32 %p_Val2_11_76, %tmp_19_76
+  %match_matchBufferQ_V_206 = load i16* @match_matchBufferQ_V_80, align 16
+  %OP1_V_80_cast = sext i16 %match_matchBufferQ_V_206 to i28
+  %p_Val2_3_79 = mul i28 -1531, %OP1_V_80_cast
+  %tmp_3_79 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_77, i3 0)
+  %tmp_4_79_cast = sext i28 %p_Val2_3_79 to i35
+  %p_Val2_4_79 = add i35 %tmp_3_79, %tmp_4_79_cast
+  %p_Val2_5_77 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_79, i32 3, i32 34)
+  %tmp_171 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_79, i32 2)
+  %tmp_7_77 = zext i1 %tmp_171 to i32
+  %p_Val2_16_78 = add nsw i32 %p_Val2_5_77, %tmp_7_77
+  %match_matchBufferI_V_206 = load i16* @match_matchBufferI_V_80, align 16
+  %OP1_V_1_79_cast = sext i16 %match_matchBufferI_V_206 to i28
+  %p_Val2_6_79 = mul i28 -1531, %OP1_V_1_79_cast
+  %tmp_16_79 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_77, i3 0)
+  %tmp_17_79_cast = sext i28 %p_Val2_6_79 to i35
+  %p_Val2_7_79 = add i35 %tmp_16_79, %tmp_17_79_cast
+  %p_Val2_11_77 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_79, i32 3, i32 34)
+  %tmp_172 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_79, i32 2)
+  %tmp_19_77 = zext i1 %tmp_172 to i32
+  %p_Val2_17_78 = add nsw i32 %p_Val2_11_77, %tmp_19_77
+  %match_matchBufferQ_V_207 = load i16* @match_matchBufferQ_V_81, align 2
+  %OP1_V_81_cast = sext i16 %match_matchBufferQ_V_207 to i28
+  %p_Val2_3_80 = mul i28 -1611, %OP1_V_81_cast
+  %tmp_3_80 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_78, i3 0)
+  %tmp_4_80_cast = sext i28 %p_Val2_3_80 to i35
+  %p_Val2_4_80 = add i35 %tmp_3_80, %tmp_4_80_cast
+  %p_Val2_5_78 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_80, i32 3, i32 34)
+  %tmp_173 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_80, i32 2)
+  %tmp_7_78 = zext i1 %tmp_173 to i32
+  %p_Val2_16_79 = add nsw i32 %p_Val2_5_78, %tmp_7_78
+  %match_matchBufferI_V_207 = load i16* @match_matchBufferI_V_81, align 2
+  %OP1_V_1_80_cast = sext i16 %match_matchBufferI_V_207 to i28
+  %p_Val2_6_80 = mul i28 -1611, %OP1_V_1_80_cast
+  %tmp_16_80 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_78, i3 0)
+  %tmp_17_80_cast = sext i28 %p_Val2_6_80 to i35
+  %p_Val2_7_80 = add i35 %tmp_16_80, %tmp_17_80_cast
+  %p_Val2_11_78 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_80, i32 3, i32 34)
+  %tmp_174 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_80, i32 2)
+  %tmp_19_78 = zext i1 %tmp_174 to i32
+  %p_Val2_17_79 = add nsw i32 %p_Val2_11_78, %tmp_19_78
+  %match_matchBufferQ_V_208 = load i16* @match_matchBufferQ_V_82, align 4
+  %OP1_V_82_cast = sext i16 %match_matchBufferQ_V_208 to i28
+  %p_Val2_3_81 = mul i28 -1531, %OP1_V_82_cast
+  %tmp_3_81 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_79, i3 0)
+  %tmp_4_81_cast = sext i28 %p_Val2_3_81 to i35
+  %p_Val2_4_81 = add i35 %tmp_3_81, %tmp_4_81_cast
+  %p_Val2_5_79 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_81, i32 3, i32 34)
+  %tmp_175 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_81, i32 2)
+  %tmp_7_79 = zext i1 %tmp_175 to i32
+  %p_Val2_16_80 = add nsw i32 %p_Val2_5_79, %tmp_7_79
+  %match_matchBufferI_V_208 = load i16* @match_matchBufferI_V_82, align 4
+  %OP1_V_1_81_cast = sext i16 %match_matchBufferI_V_208 to i28
+  %p_Val2_6_81 = mul i28 -1531, %OP1_V_1_81_cast
+  %tmp_16_81 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_79, i3 0)
+  %tmp_17_81_cast = sext i28 %p_Val2_6_81 to i35
+  %p_Val2_7_81 = add i35 %tmp_16_81, %tmp_17_81_cast
+  %p_Val2_11_79 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_81, i32 3, i32 34)
+  %tmp_176 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_81, i32 2)
+  %tmp_19_79 = zext i1 %tmp_176 to i32
+  %p_Val2_17_80 = add nsw i32 %p_Val2_11_79, %tmp_19_79
+  %match_matchBufferQ_V_209 = load i16* @match_matchBufferQ_V_83, align 2
+  %OP1_V_83_cast = sext i16 %match_matchBufferQ_V_209 to i28
+  %p_Val2_3_82 = mul i28 -1328, %OP1_V_83_cast
+  %tmp_3_82 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_80, i3 0)
+  %tmp_4_82_cast = sext i28 %p_Val2_3_82 to i35
+  %p_Val2_4_82 = add i35 %tmp_3_82, %tmp_4_82_cast
+  %p_Val2_5_80 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_82, i32 3, i32 34)
+  %tmp_177 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_82, i32 2)
+  %tmp_7_80 = zext i1 %tmp_177 to i32
+  %p_Val2_16_81 = add nsw i32 %p_Val2_5_80, %tmp_7_80
+  %match_matchBufferI_V_209 = load i16* @match_matchBufferI_V_83, align 2
+  %OP1_V_1_82_cast = sext i16 %match_matchBufferI_V_209 to i28
+  %p_Val2_6_82 = mul i28 -1328, %OP1_V_1_82_cast
+  %tmp_16_82 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_80, i3 0)
+  %tmp_17_82_cast = sext i28 %p_Val2_6_82 to i35
+  %p_Val2_7_82 = add i35 %tmp_16_82, %tmp_17_82_cast
+  %p_Val2_11_80 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_82, i32 3, i32 34)
+  %tmp_178 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_82, i32 2)
+  %tmp_19_80 = zext i1 %tmp_178 to i32
+  %p_Val2_17_81 = add nsw i32 %p_Val2_11_80, %tmp_19_80
+  %match_matchBufferQ_V_210 = load i16* @match_matchBufferQ_V_84, align 8
+  %OP1_V_84_cast = sext i16 %match_matchBufferQ_V_210 to i28
+  %p_Val2_3_83 = mul i28 -1047, %OP1_V_84_cast
+  %tmp_3_83 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_81, i3 0)
+  %tmp_4_83_cast = sext i28 %p_Val2_3_83 to i35
+  %p_Val2_4_83 = add i35 %tmp_3_83, %tmp_4_83_cast
+  %p_Val2_5_81 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_83, i32 3, i32 34)
+  %tmp_179 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_3_83, i32 2)
+  %tmp_7_81 = zext i1 %tmp_179 to i32
+  %p_Val2_16_82 = add nsw i32 %p_Val2_5_81, %tmp_7_81
+  %match_matchBufferI_V_210 = load i16* @match_matchBufferI_V_84, align 8
+  %OP1_V_1_83_cast = sext i16 %match_matchBufferI_V_210 to i28
+  %p_Val2_6_83 = mul i28 -1047, %OP1_V_1_83_cast
+  %tmp_16_83 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_81, i3 0)
+  %tmp_17_83_cast = sext i28 %p_Val2_6_83 to i35
+  %p_Val2_7_83 = add i35 %tmp_16_83, %tmp_17_83_cast
+  %p_Val2_11_81 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_83, i32 3, i32 34)
+  %tmp_180 = call i1 @_ssdm_op_BitSelect.i1.i28.i32(i28 %p_Val2_6_83, i32 2)
+  %tmp_19_81 = zext i1 %tmp_180 to i32
+  %p_Val2_17_82 = add nsw i32 %p_Val2_11_81, %tmp_19_81
+  %match_matchBufferQ_V_211 = load i16* @match_matchBufferQ_V_85, align 2
+  %OP1_V_85_cast = sext i16 %match_matchBufferQ_V_211 to i27
+  %p_Val2_3_84 = mul i27 -730, %OP1_V_85_cast
+  %tmp_3_84 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_82, i3 0)
+  %tmp_4_84_cast = sext i27 %p_Val2_3_84 to i35
+  %p_Val2_4_84 = add i35 %tmp_3_84, %tmp_4_84_cast
+  %p_Val2_5_82 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_84, i32 3, i32 34)
+  %tmp_181 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_3_84, i32 2)
+  %tmp_7_82 = zext i1 %tmp_181 to i32
+  %p_Val2_16_83 = add nsw i32 %p_Val2_5_82, %tmp_7_82
+  %match_matchBufferI_V_211 = load i16* @match_matchBufferI_V_85, align 2
+  %OP1_V_1_84_cast = sext i16 %match_matchBufferI_V_211 to i27
+  %p_Val2_6_84 = mul i27 -730, %OP1_V_1_84_cast
+  %tmp_16_84 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_82, i3 0)
+  %tmp_17_84_cast = sext i27 %p_Val2_6_84 to i35
+  %p_Val2_7_84 = add i35 %tmp_16_84, %tmp_17_84_cast
+  %p_Val2_11_82 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_84, i32 3, i32 34)
+  %tmp_182 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %p_Val2_6_84, i32 2)
+  %tmp_19_82 = zext i1 %tmp_182 to i32
+  %p_Val2_17_83 = add nsw i32 %p_Val2_11_82, %tmp_19_82
+  %match_matchBufferQ_V_212 = load i16* @match_matchBufferQ_V_86, align 4
+  %OP1_V_86_cast = sext i16 %match_matchBufferQ_V_212 to i26
+  %p_Val2_3_85 = mul i26 -408, %OP1_V_86_cast
+  %tmp_3_85 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_83, i3 0)
+  %tmp_4_85_cast = sext i26 %p_Val2_3_85 to i35
+  %p_Val2_4_85 = add i35 %tmp_3_85, %tmp_4_85_cast
+  %p_Val2_5_83 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_85, i32 3, i32 34)
+  %tmp_183 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_85, i32 2)
+  %tmp_7_83 = zext i1 %tmp_183 to i32
+  %p_Val2_16_84 = add nsw i32 %p_Val2_5_83, %tmp_7_83
+  %match_matchBufferI_V_212 = load i16* @match_matchBufferI_V_86, align 4
+  %OP1_V_1_85_cast = sext i16 %match_matchBufferI_V_212 to i26
+  %p_Val2_6_85 = mul i26 -408, %OP1_V_1_85_cast
+  %tmp_16_85 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_83, i3 0)
+  %tmp_17_85_cast = sext i26 %p_Val2_6_85 to i35
+  %p_Val2_7_85 = add i35 %tmp_16_85, %tmp_17_85_cast
+  %p_Val2_11_83 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_85, i32 3, i32 34)
+  %tmp_184 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_85, i32 2)
+  %tmp_19_83 = zext i1 %tmp_184 to i32
+  %p_Val2_17_84 = add nsw i32 %p_Val2_11_83, %tmp_19_83
+  %match_matchBufferQ_V_213 = load i16* @match_matchBufferQ_V_87, align 2
+  %OP1_V_87_cast = sext i16 %match_matchBufferQ_V_213 to i24
+  %p_Val2_3_86 = mul i24 -119, %OP1_V_87_cast
+  %tmp_3_86 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_84, i3 0)
+  %tmp_4_86_cast = sext i24 %p_Val2_3_86 to i35
+  %p_Val2_4_86 = add i35 %tmp_3_86, %tmp_4_86_cast
+  %p_Val2_5_84 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_86, i32 3, i32 34)
+  %tmp_185 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_86, i32 2)
+  %tmp_7_84 = zext i1 %tmp_185 to i32
+  %p_Val2_16_85 = add nsw i32 %p_Val2_5_84, %tmp_7_84
+  %match_matchBufferI_V_213 = load i16* @match_matchBufferI_V_87, align 2
+  %OP1_V_1_86_cast = sext i16 %match_matchBufferI_V_213 to i24
+  %p_Val2_6_86 = mul i24 -119, %OP1_V_1_86_cast
+  %tmp_16_86 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_84, i3 0)
+  %tmp_17_86_cast = sext i24 %p_Val2_6_86 to i35
+  %p_Val2_7_86 = add i35 %tmp_16_86, %tmp_17_86_cast
+  %p_Val2_11_84 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_86, i32 3, i32 34)
+  %tmp_186 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_86, i32 2)
+  %tmp_19_84 = zext i1 %tmp_186 to i32
+  %p_Val2_17_85 = add nsw i32 %p_Val2_11_84, %tmp_19_84
+  %match_matchBufferQ_V_214 = load i16* @match_matchBufferQ_V_88, align 16
+  %OP1_V_88_cast = sext i16 %match_matchBufferQ_V_214 to i24
+  %p_Val2_3_87 = mul i24 119, %OP1_V_88_cast
+  %tmp_3_87 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_85, i3 0)
+  %tmp_4_87_cast = sext i24 %p_Val2_3_87 to i35
+  %p_Val2_4_87 = add i35 %tmp_3_87, %tmp_4_87_cast
+  %p_Val2_5_85 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_87, i32 3, i32 34)
+  %tmp_187 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_87, i32 2)
+  %tmp_7_85 = zext i1 %tmp_187 to i32
+  %p_Val2_16_86 = add nsw i32 %p_Val2_5_85, %tmp_7_85
+  %match_matchBufferI_V_214 = load i16* @match_matchBufferI_V_88, align 16
+  %OP1_V_1_87_cast = sext i16 %match_matchBufferI_V_214 to i24
+  %p_Val2_6_87 = mul i24 119, %OP1_V_1_87_cast
+  %tmp_16_87 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_85, i3 0)
+  %tmp_17_87_cast = sext i24 %p_Val2_6_87 to i35
+  %p_Val2_7_87 = add i35 %tmp_16_87, %tmp_17_87_cast
+  %p_Val2_11_85 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_87, i32 3, i32 34)
+  %tmp_188 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_87, i32 2)
+  %tmp_19_85 = zext i1 %tmp_188 to i32
+  %p_Val2_17_86 = add nsw i32 %p_Val2_11_85, %tmp_19_85
+  %match_matchBufferQ_V_215 = load i16* @match_matchBufferQ_V_89, align 2
+  %OP1_V_89_cast = sext i16 %match_matchBufferQ_V_215 to i26
+  %p_Val2_3_88 = mul i26 291, %OP1_V_89_cast
+  %tmp_3_88 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_86, i3 0)
+  %tmp_4_88_cast = sext i26 %p_Val2_3_88 to i35
+  %p_Val2_4_88 = add i35 %tmp_3_88, %tmp_4_88_cast
+  %p_Val2_5_86 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_88, i32 3, i32 34)
+  %tmp_189 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_88, i32 2)
+  %tmp_7_86 = zext i1 %tmp_189 to i32
+  %p_Val2_16_87 = add nsw i32 %p_Val2_5_86, %tmp_7_86
+  %match_matchBufferI_V_215 = load i16* @match_matchBufferI_V_89, align 2
+  %OP1_V_1_88_cast = sext i16 %match_matchBufferI_V_215 to i26
+  %p_Val2_6_88 = mul i26 291, %OP1_V_1_88_cast
+  %tmp_16_88 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_86, i3 0)
+  %tmp_17_88_cast = sext i26 %p_Val2_6_88 to i35
+  %p_Val2_7_88 = add i35 %tmp_16_88, %tmp_17_88_cast
+  %p_Val2_11_86 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_88, i32 3, i32 34)
+  %tmp_190 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_88, i32 2)
+  %tmp_19_86 = zext i1 %tmp_190 to i32
+  %p_Val2_17_87 = add nsw i32 %p_Val2_11_86, %tmp_19_86
+  %match_matchBufferQ_V_216 = load i16* @match_matchBufferQ_V_90, align 4
+  %OP1_V_90_cast = sext i16 %match_matchBufferQ_V_216 to i26
+  %p_Val2_3_89 = mul i26 391, %OP1_V_90_cast
+  %tmp_3_89 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_87, i3 0)
+  %tmp_4_89_cast = sext i26 %p_Val2_3_89 to i35
+  %p_Val2_4_89 = add i35 %tmp_3_89, %tmp_4_89_cast
+  %p_Val2_5_87 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_89, i32 3, i32 34)
+  %tmp_191 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_89, i32 2)
+  %tmp_7_87 = zext i1 %tmp_191 to i32
+  %p_Val2_16_88 = add nsw i32 %p_Val2_5_87, %tmp_7_87
+  %match_matchBufferI_V_216 = load i16* @match_matchBufferI_V_90, align 4
+  %OP1_V_1_89_cast = sext i16 %match_matchBufferI_V_216 to i26
+  %p_Val2_6_89 = mul i26 391, %OP1_V_1_89_cast
+  %tmp_16_89 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_87, i3 0)
+  %tmp_17_89_cast = sext i26 %p_Val2_6_89 to i35
+  %p_Val2_7_89 = add i35 %tmp_16_89, %tmp_17_89_cast
+  %p_Val2_11_87 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_89, i32 3, i32 34)
+  %tmp_192 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_89, i32 2)
+  %tmp_19_87 = zext i1 %tmp_192 to i32
+  %p_Val2_17_88 = add nsw i32 %p_Val2_11_87, %tmp_19_87
+  %match_matchBufferQ_V_217 = load i16* @match_matchBufferQ_V_91, align 2
+  %OP1_V_91_cast = sext i16 %match_matchBufferQ_V_217 to i26
+  %p_Val2_3_90 = mul i26 421, %OP1_V_91_cast
+  %tmp_3_90 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_88, i3 0)
+  %tmp_4_90_cast = sext i26 %p_Val2_3_90 to i35
+  %p_Val2_4_90 = add i35 %tmp_3_90, %tmp_4_90_cast
+  %p_Val2_5_88 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_90, i32 3, i32 34)
+  %tmp_193 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_90, i32 2)
+  %tmp_7_88 = zext i1 %tmp_193 to i32
+  %p_Val2_16_89 = add nsw i32 %p_Val2_5_88, %tmp_7_88
+  %match_matchBufferI_V_217 = load i16* @match_matchBufferI_V_91, align 2
+  %OP1_V_1_90_cast = sext i16 %match_matchBufferI_V_217 to i26
+  %p_Val2_6_90 = mul i26 421, %OP1_V_1_90_cast
+  %tmp_16_90 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_88, i3 0)
+  %tmp_17_90_cast = sext i26 %p_Val2_6_90 to i35
+  %p_Val2_7_90 = add i35 %tmp_16_90, %tmp_17_90_cast
+  %p_Val2_11_88 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_90, i32 3, i32 34)
+  %tmp_194 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_90, i32 2)
+  %tmp_19_88 = zext i1 %tmp_194 to i32
+  %p_Val2_17_89 = add nsw i32 %p_Val2_11_88, %tmp_19_88
+  %match_matchBufferQ_V_218 = load i16* @match_matchBufferQ_V_92, align 8
+  %OP1_V_92_cast = sext i16 %match_matchBufferQ_V_218 to i26
+  %p_Val2_3_91 = mul i26 388, %OP1_V_92_cast
+  %tmp_3_91 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_89, i3 0)
+  %tmp_4_91_cast = sext i26 %p_Val2_3_91 to i35
+  %p_Val2_4_91 = add i35 %tmp_3_91, %tmp_4_91_cast
+  %p_Val2_5_89 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_91, i32 3, i32 34)
+  %tmp_195 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_91, i32 2)
+  %tmp_7_89 = zext i1 %tmp_195 to i32
+  %p_Val2_16_90 = add nsw i32 %p_Val2_5_89, %tmp_7_89
+  %match_matchBufferI_V_218 = load i16* @match_matchBufferI_V_92, align 8
+  %OP1_V_1_91_cast = sext i16 %match_matchBufferI_V_218 to i26
+  %p_Val2_6_91 = mul i26 388, %OP1_V_1_91_cast
+  %tmp_16_91 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_89, i3 0)
+  %tmp_17_91_cast = sext i26 %p_Val2_6_91 to i35
+  %p_Val2_7_91 = add i35 %tmp_16_91, %tmp_17_91_cast
+  %p_Val2_11_89 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_91, i32 3, i32 34)
+  %tmp_196 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_91, i32 2)
+  %tmp_19_89 = zext i1 %tmp_196 to i32
+  %p_Val2_17_90 = add nsw i32 %p_Val2_11_89, %tmp_19_89
+  %match_matchBufferQ_V_219 = load i16* @match_matchBufferQ_V_93, align 2
+  %OP1_V_93_cast = sext i16 %match_matchBufferQ_V_219 to i26
+  %p_Val2_3_92 = mul i26 306, %OP1_V_93_cast
+  %tmp_3_92 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_90, i3 0)
+  %tmp_4_92_cast = sext i26 %p_Val2_3_92 to i35
+  %p_Val2_4_92 = add i35 %tmp_3_92, %tmp_4_92_cast
+  %p_Val2_5_90 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_92, i32 3, i32 34)
+  %tmp_197 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_92, i32 2)
+  %tmp_7_90 = zext i1 %tmp_197 to i32
+  %p_Val2_16_91 = add nsw i32 %p_Val2_5_90, %tmp_7_90
+  %match_matchBufferI_V_219 = load i16* @match_matchBufferI_V_93, align 2
+  %OP1_V_1_92_cast = sext i16 %match_matchBufferI_V_219 to i26
+  %p_Val2_6_92 = mul i26 306, %OP1_V_1_92_cast
+  %tmp_16_92 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_90, i3 0)
+  %tmp_17_92_cast = sext i26 %p_Val2_6_92 to i35
+  %p_Val2_7_92 = add i35 %tmp_16_92, %tmp_17_92_cast
+  %p_Val2_11_90 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_92, i32 3, i32 34)
+  %tmp_198 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_92, i32 2)
+  %tmp_19_90 = zext i1 %tmp_198 to i32
+  %p_Val2_17_91 = add nsw i32 %p_Val2_11_90, %tmp_19_90
+  %match_matchBufferQ_V_220 = load i16* @match_matchBufferQ_V_94, align 4
+  %OP1_V_94_cast = sext i16 %match_matchBufferQ_V_220 to i25
+  %p_Val2_3_93 = mul i25 193, %OP1_V_94_cast
+  %tmp_3_93 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_91, i3 0)
+  %tmp_4_93_cast = sext i25 %p_Val2_3_93 to i35
+  %p_Val2_4_93 = add i35 %tmp_3_93, %tmp_4_93_cast
+  %p_Val2_5_91 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_93, i32 3, i32 34)
+  %tmp_199 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_93, i32 2)
+  %tmp_7_91 = zext i1 %tmp_199 to i32
+  %p_Val2_16_92 = add nsw i32 %p_Val2_5_91, %tmp_7_91
+  %match_matchBufferI_V_220 = load i16* @match_matchBufferI_V_94, align 4
+  %OP1_V_1_93_cast = sext i16 %match_matchBufferI_V_220 to i25
+  %p_Val2_6_93 = mul i25 193, %OP1_V_1_93_cast
+  %tmp_16_93 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_91, i3 0)
+  %tmp_17_93_cast = sext i25 %p_Val2_6_93 to i35
+  %p_Val2_7_93 = add i35 %tmp_16_93, %tmp_17_93_cast
+  %p_Val2_11_91 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_93, i32 3, i32 34)
+  %tmp_200 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_93, i32 2)
+  %tmp_19_91 = zext i1 %tmp_200 to i32
+  %p_Val2_17_92 = add nsw i32 %p_Val2_11_91, %tmp_19_91
+  %match_matchBufferQ_V_221 = load i16* @match_matchBufferQ_V_95, align 2
+  %OP1_V_95_cast = sext i16 %match_matchBufferQ_V_221 to i23
+  %p_shl34 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_221, i6 0)
+  %p_shl34_cast = sext i22 %p_shl34 to i23
+  %p_Val2_3_94 = add i23 %p_shl34_cast, %OP1_V_95_cast
+  %tmp_3_94 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_92, i3 0)
+  %tmp_4_94_cast = sext i23 %p_Val2_3_94 to i35
+  %p_Val2_4_94 = add i35 %tmp_3_94, %tmp_4_94_cast
+  %p_Val2_5_92 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_94, i32 3, i32 34)
+  %tmp_201 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferQ_V_221, i32 2)
+  %tmp_7_92 = zext i1 %tmp_201 to i32
+  %p_Val2_16_93 = add nsw i32 %p_Val2_5_92, %tmp_7_92
+  %match_matchBufferI_V_221 = load i16* @match_matchBufferI_V_95, align 2
+  %OP1_V_1_94_cast = sext i16 %match_matchBufferI_V_221 to i23
+  %p_shl33 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_221, i6 0)
+  %p_shl33_cast = sext i22 %p_shl33 to i23
+  %p_Val2_6_94 = add i23 %p_shl33_cast, %OP1_V_1_94_cast
+  %tmp_16_94 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_92, i3 0)
+  %tmp_17_94_cast = sext i23 %p_Val2_6_94 to i35
+  %p_Val2_7_94 = add i35 %tmp_16_94, %tmp_17_94_cast
+  %p_Val2_11_92 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_94, i32 3, i32 34)
+  %tmp_202 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferI_V_221, i32 2)
+  %tmp_19_92 = zext i1 %tmp_202 to i32
+  %p_Val2_17_93 = add nsw i32 %p_Val2_11_92, %tmp_19_92
+  %match_matchBufferQ_V_222 = load i16* @match_matchBufferQ_V_96, align 16
+  %p_shl30 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_222, i6 0)
+  %p_shl30_cast = sext i22 %p_shl30 to i23
+  %p_shl32 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferQ_V_222, i1 false)
+  %p_shl32_cast = sext i17 %p_shl32 to i23
+  %p_Val2_3_95 = sub i23 %p_shl32_cast, %p_shl30_cast
+  %tmp_3_95 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_93, i3 0)
+  %tmp_4_95_cast = sext i23 %p_Val2_3_95 to i35
+  %p_Val2_4_95 = add i35 %tmp_3_95, %tmp_4_95_cast
+  %p_Val2_5_93 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_95, i32 3, i32 34)
+  %tmp_203 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_95, i32 2)
+  %tmp_7_93 = zext i1 %tmp_203 to i32
+  %p_Val2_16_94 = add nsw i32 %p_Val2_5_93, %tmp_7_93
+  %match_matchBufferI_V_222 = load i16* @match_matchBufferI_V_96, align 16
+  %p_shl27 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_222, i6 0)
+  %p_shl27_cast = sext i22 %p_shl27 to i23
+  %p_shl29 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferI_V_222, i1 false)
+  %p_shl29_cast = sext i17 %p_shl29 to i23
+  %p_Val2_6_95 = sub i23 %p_shl29_cast, %p_shl27_cast
+  %tmp_16_95 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_93, i3 0)
+  %tmp_17_95_cast = sext i23 %p_Val2_6_95 to i35
+  %p_Val2_7_95 = add i35 %tmp_16_95, %tmp_17_95_cast
+  %p_Val2_11_93 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_95, i32 3, i32 34)
+  %tmp_204 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_95, i32 2)
+  %tmp_19_93 = zext i1 %tmp_204 to i32
+  %p_Val2_17_94 = add nsw i32 %p_Val2_11_93, %tmp_19_93
+  %match_matchBufferQ_V_223 = load i16* @match_matchBufferQ_V_97, align 2
+  %OP1_V_97_cast = sext i16 %match_matchBufferQ_V_223 to i25
+  %p_Val2_3_96 = mul i25 -174, %OP1_V_97_cast
+  %tmp_3_96 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_94, i3 0)
+  %tmp_4_96_cast = sext i25 %p_Val2_3_96 to i35
+  %p_Val2_4_96 = add i35 %tmp_3_96, %tmp_4_96_cast
+  %p_Val2_5_94 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_96, i32 3, i32 34)
+  %tmp_205 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_96, i32 2)
+  %tmp_7_94 = zext i1 %tmp_205 to i32
+  %p_Val2_16_95 = add nsw i32 %p_Val2_5_94, %tmp_7_94
+  %match_matchBufferI_V_223 = load i16* @match_matchBufferI_V_97, align 2
+  %OP1_V_1_96_cast = sext i16 %match_matchBufferI_V_223 to i25
+  %p_Val2_6_96 = mul i25 -174, %OP1_V_1_96_cast
+  %tmp_16_96 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_94, i3 0)
+  %tmp_17_96_cast = sext i25 %p_Val2_6_96 to i35
+  %p_Val2_7_96 = add i35 %tmp_16_96, %tmp_17_96_cast
+  %p_Val2_11_94 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_96, i32 3, i32 34)
+  %tmp_206 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_96, i32 2)
+  %tmp_19_94 = zext i1 %tmp_206 to i32
+  %p_Val2_17_95 = add nsw i32 %p_Val2_11_94, %tmp_19_94
+  %match_matchBufferQ_V_224 = load i16* @match_matchBufferQ_V_98, align 4
+  %OP1_V_98_cast = sext i16 %match_matchBufferQ_V_224 to i26
+  %p_Val2_3_97 = mul i26 -259, %OP1_V_98_cast
+  %tmp_3_97 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_95, i3 0)
+  %tmp_4_97_cast = sext i26 %p_Val2_3_97 to i35
+  %p_Val2_4_97 = add i35 %tmp_3_97, %tmp_4_97_cast
+  %p_Val2_5_95 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_97, i32 3, i32 34)
+  %tmp_207 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_97, i32 2)
+  %tmp_7_95 = zext i1 %tmp_207 to i32
+  %p_Val2_16_96 = add nsw i32 %p_Val2_5_95, %tmp_7_95
+  %match_matchBufferI_V_224 = load i16* @match_matchBufferI_V_98, align 4
+  %OP1_V_1_97_cast = sext i16 %match_matchBufferI_V_224 to i26
+  %p_Val2_6_97 = mul i26 -259, %OP1_V_1_97_cast
+  %tmp_16_97 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_95, i3 0)
+  %tmp_17_97_cast = sext i26 %p_Val2_6_97 to i35
+  %p_Val2_7_97 = add i35 %tmp_16_97, %tmp_17_97_cast
+  %p_Val2_11_95 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_97, i32 3, i32 34)
+  %tmp_208 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_97, i32 2)
+  %tmp_19_95 = zext i1 %tmp_208 to i32
+  %p_Val2_17_96 = add nsw i32 %p_Val2_11_95, %tmp_19_95
+  %match_matchBufferQ_V_225 = load i16* @match_matchBufferQ_V_99, align 2
+  %OP1_V_99_cast = sext i16 %match_matchBufferQ_V_225 to i26
+  %p_Val2_3_98 = mul i26 -312, %OP1_V_99_cast
+  %tmp_3_98 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_96, i3 0)
+  %tmp_4_98_cast = sext i26 %p_Val2_3_98 to i35
+  %p_Val2_4_98 = add i35 %tmp_3_98, %tmp_4_98_cast
+  %p_Val2_5_96 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_98, i32 3, i32 34)
+  %tmp_209 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_98, i32 2)
+  %tmp_7_96 = zext i1 %tmp_209 to i32
+  %p_Val2_16_97 = add nsw i32 %p_Val2_5_96, %tmp_7_96
+  %match_matchBufferI_V_225 = load i16* @match_matchBufferI_V_99, align 2
+  %OP1_V_1_98_cast = sext i16 %match_matchBufferI_V_225 to i26
+  %p_Val2_6_98 = mul i26 -312, %OP1_V_1_98_cast
+  %tmp_16_98 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_96, i3 0)
+  %tmp_17_98_cast = sext i26 %p_Val2_6_98 to i35
+  %p_Val2_7_98 = add i35 %tmp_16_98, %tmp_17_98_cast
+  %p_Val2_11_96 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_98, i32 3, i32 34)
+  %tmp_210 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_98, i32 2)
+  %tmp_19_96 = zext i1 %tmp_210 to i32
+  %p_Val2_17_97 = add nsw i32 %p_Val2_11_96, %tmp_19_96
+  %match_matchBufferQ_V_226 = load i16* @match_matchBufferQ_V_100, align 8
+  %OP1_V_100_cast = sext i16 %match_matchBufferQ_V_226 to i26
+  %p_Val2_3_99 = mul i26 -328, %OP1_V_100_cast
+  %tmp_3_99 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_97, i3 0)
+  %tmp_4_99_cast = sext i26 %p_Val2_3_99 to i35
+  %p_Val2_4_99 = add i35 %tmp_3_99, %tmp_4_99_cast
+  %p_Val2_5_97 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_99, i32 3, i32 34)
+  %tmp_211 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_99, i32 2)
+  %tmp_7_97 = zext i1 %tmp_211 to i32
+  %p_Val2_16_98 = add nsw i32 %p_Val2_5_97, %tmp_7_97
+  %match_matchBufferI_V_226 = load i16* @match_matchBufferI_V_100, align 8
+  %OP1_V_1_99_cast = sext i16 %match_matchBufferI_V_226 to i26
+  %p_Val2_6_99 = mul i26 -328, %OP1_V_1_99_cast
+  %tmp_16_99 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_97, i3 0)
+  %tmp_17_99_cast = sext i26 %p_Val2_6_99 to i35
+  %p_Val2_7_99 = add i35 %tmp_16_99, %tmp_17_99_cast
+  %p_Val2_11_97 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_99, i32 3, i32 34)
+  %tmp_212 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_99, i32 2)
+  %tmp_19_97 = zext i1 %tmp_212 to i32
+  %p_Val2_17_98 = add nsw i32 %p_Val2_11_97, %tmp_19_97
+  %match_matchBufferQ_V_227 = load i16* @match_matchBufferQ_V_101, align 2
+  %OP1_V_101_cast = sext i16 %match_matchBufferQ_V_227 to i26
+  %p_Val2_3_100 = mul i26 -312, %OP1_V_101_cast
+  %tmp_3_100 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_98, i3 0)
+  %tmp_4_100_cast = sext i26 %p_Val2_3_100 to i35
+  %p_Val2_4_100 = add i35 %tmp_3_100, %tmp_4_100_cast
+  %p_Val2_5_98 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_100, i32 3, i32 34)
+  %tmp_213 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_100, i32 2)
+  %tmp_7_98 = zext i1 %tmp_213 to i32
+  %p_Val2_16_99 = add nsw i32 %p_Val2_5_98, %tmp_7_98
+  %match_matchBufferI_V_227 = load i16* @match_matchBufferI_V_101, align 2
+  %OP1_V_1_100_cast = sext i16 %match_matchBufferI_V_227 to i26
+  %p_Val2_6_100 = mul i26 -312, %OP1_V_1_100_cast
+  %tmp_16_100 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_98, i3 0)
+  %tmp_17_100_cast = sext i26 %p_Val2_6_100 to i35
+  %p_Val2_7_100 = add i35 %tmp_16_100, %tmp_17_100_cast
+  %p_Val2_11_98 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_100, i32 3, i32 34)
+  %tmp_214 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_100, i32 2)
+  %tmp_19_98 = zext i1 %tmp_214 to i32
+  %p_Val2_17_99 = add nsw i32 %p_Val2_11_98, %tmp_19_98
+  %match_matchBufferQ_V_228 = load i16* @match_matchBufferQ_V_102, align 4
+  %OP1_V_102_cast = sext i16 %match_matchBufferQ_V_228 to i26
+  %p_Val2_3_101 = mul i26 -266, %OP1_V_102_cast
+  %tmp_3_101 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_99, i3 0)
+  %tmp_4_101_cast = sext i26 %p_Val2_3_101 to i35
+  %p_Val2_4_101 = add i35 %tmp_3_101, %tmp_4_101_cast
+  %p_Val2_5_99 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_101, i32 3, i32 34)
+  %tmp_215 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_3_101, i32 2)
+  %tmp_7_99 = zext i1 %tmp_215 to i32
+  %p_Val2_16_100 = add nsw i32 %p_Val2_5_99, %tmp_7_99
+  %match_matchBufferI_V_228 = load i16* @match_matchBufferI_V_102, align 4
+  %OP1_V_1_101_cast = sext i16 %match_matchBufferI_V_228 to i26
+  %p_Val2_6_101 = mul i26 -266, %OP1_V_1_101_cast
+  %tmp_16_101 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_99, i3 0)
+  %tmp_17_101_cast = sext i26 %p_Val2_6_101 to i35
+  %p_Val2_7_101 = add i35 %tmp_16_101, %tmp_17_101_cast
+  %p_Val2_11_99 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_101, i32 3, i32 34)
+  %tmp_216 = call i1 @_ssdm_op_BitSelect.i1.i26.i32(i26 %p_Val2_6_101, i32 2)
+  %tmp_19_99 = zext i1 %tmp_216 to i32
+  %p_Val2_17_100 = add nsw i32 %p_Val2_11_99, %tmp_19_99
+  %match_matchBufferQ_V_229 = load i16* @match_matchBufferQ_V_103, align 2
+  %OP1_V_103_cast = sext i16 %match_matchBufferQ_V_229 to i25
+  %p_Val2_3_102 = mul i25 -199, %OP1_V_103_cast
+  %tmp_3_102 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_100, i3 0)
+  %tmp_4_102_cast = sext i25 %p_Val2_3_102 to i35
+  %p_Val2_4_102 = add i35 %tmp_3_102, %tmp_4_102_cast
+  %p_Val2_5_100 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_102, i32 3, i32 34)
+  %tmp_217 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_102, i32 2)
+  %tmp_7_100 = zext i1 %tmp_217 to i32
+  %p_Val2_16_101 = add nsw i32 %p_Val2_5_100, %tmp_7_100
+  %match_matchBufferI_V_229 = load i16* @match_matchBufferI_V_103, align 2
+  %OP1_V_1_102_cast = sext i16 %match_matchBufferI_V_229 to i25
+  %p_Val2_6_102 = mul i25 -199, %OP1_V_1_102_cast
+  %tmp_16_102 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_100, i3 0)
+  %tmp_17_102_cast = sext i25 %p_Val2_6_102 to i35
+  %p_Val2_7_102 = add i35 %tmp_16_102, %tmp_17_102_cast
+  %p_Val2_11_100 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_102, i32 3, i32 34)
+  %tmp_218 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_102, i32 2)
+  %tmp_19_100 = zext i1 %tmp_218 to i32
+  %p_Val2_17_101 = add nsw i32 %p_Val2_11_100, %tmp_19_100
+  %match_matchBufferQ_V_230 = load i16* @match_matchBufferQ_V_104, align 16
+  %OP1_V_104_cast = sext i16 %match_matchBufferQ_V_230 to i24
+  %p_Val2_3_103 = mul i24 -119, %OP1_V_104_cast
+  %tmp_3_103 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_101, i3 0)
+  %tmp_4_103_cast = sext i24 %p_Val2_3_103 to i35
+  %p_Val2_4_103 = add i35 %tmp_3_103, %tmp_4_103_cast
+  %p_Val2_5_101 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_103, i32 3, i32 34)
+  %tmp_219 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_103, i32 2)
+  %tmp_7_101 = zext i1 %tmp_219 to i32
+  %p_Val2_16_102 = add nsw i32 %p_Val2_5_101, %tmp_7_101
+  %match_matchBufferI_V_230 = load i16* @match_matchBufferI_V_104, align 16
+  %OP1_V_1_103_cast = sext i16 %match_matchBufferI_V_230 to i24
+  %p_Val2_6_103 = mul i24 -119, %OP1_V_1_103_cast
+  %tmp_16_103 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_101, i3 0)
+  %tmp_17_103_cast = sext i24 %p_Val2_6_103 to i35
+  %p_Val2_7_103 = add i35 %tmp_16_103, %tmp_17_103_cast
+  %p_Val2_11_101 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_103, i32 3, i32 34)
+  %tmp_220 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_103, i32 2)
+  %tmp_19_101 = zext i1 %tmp_220 to i32
+  %p_Val2_17_102 = add nsw i32 %p_Val2_11_101, %tmp_19_101
+  %match_matchBufferQ_V_231 = load i16* @match_matchBufferQ_V_105, align 2
+  %OP1_V_105_cast = sext i16 %match_matchBufferQ_V_231 to i23
+  %p_Val2_3_104 = mul i23 -38, %OP1_V_105_cast
+  %tmp_3_104 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_102, i3 0)
+  %tmp_4_104_cast = sext i23 %p_Val2_3_104 to i35
+  %p_Val2_4_104 = add i35 %tmp_3_104, %tmp_4_104_cast
+  %p_Val2_5_102 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_104, i32 3, i32 34)
+  %tmp_221 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_104, i32 2)
+  %tmp_7_102 = zext i1 %tmp_221 to i32
+  %p_Val2_16_103 = add nsw i32 %p_Val2_5_102, %tmp_7_102
+  %match_matchBufferI_V_231 = load i16* @match_matchBufferI_V_105, align 2
+  %OP1_V_1_104_cast = sext i16 %match_matchBufferI_V_231 to i23
+  %p_Val2_6_104 = mul i23 -38, %OP1_V_1_104_cast
+  %tmp_16_104 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_102, i3 0)
+  %tmp_17_104_cast = sext i23 %p_Val2_6_104 to i35
+  %p_Val2_7_104 = add i35 %tmp_16_104, %tmp_17_104_cast
+  %p_Val2_11_102 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_104, i32 3, i32 34)
+  %tmp_222 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_104, i32 2)
+  %tmp_19_102 = zext i1 %tmp_222 to i32
+  %p_Val2_17_103 = add nsw i32 %p_Val2_11_102, %tmp_19_102
+  %match_matchBufferQ_V_232 = load i16* @match_matchBufferQ_V_106, align 4
+  %OP1_V_106_cast = sext i16 %match_matchBufferQ_V_232 to i23
+  %p_Val2_3_105 = mul i23 38, %OP1_V_106_cast
+  %tmp_3_105 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_103, i3 0)
+  %tmp_4_105_cast = sext i23 %p_Val2_3_105 to i35
+  %p_Val2_4_105 = add i35 %tmp_3_105, %tmp_4_105_cast
+  %p_Val2_5_103 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_105, i32 3, i32 34)
+  %tmp_223 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_105, i32 2)
+  %tmp_7_103 = zext i1 %tmp_223 to i32
+  %p_Val2_16_104 = add nsw i32 %p_Val2_5_103, %tmp_7_103
+  %match_matchBufferI_V_232 = load i16* @match_matchBufferI_V_106, align 4
+  %OP1_V_1_105_cast = sext i16 %match_matchBufferI_V_232 to i23
+  %p_Val2_6_105 = mul i23 38, %OP1_V_1_105_cast
+  %tmp_16_105 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_103, i3 0)
+  %tmp_17_105_cast = sext i23 %p_Val2_6_105 to i35
+  %p_Val2_7_105 = add i35 %tmp_16_105, %tmp_17_105_cast
+  %p_Val2_11_103 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_105, i32 3, i32 34)
+  %tmp_224 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_105, i32 2)
+  %tmp_19_103 = zext i1 %tmp_224 to i32
+  %p_Val2_17_104 = add nsw i32 %p_Val2_11_103, %tmp_19_103
+  %match_matchBufferQ_V_233 = load i16* @match_matchBufferQ_V_107, align 2
+  %OP1_V_107_cast = sext i16 %match_matchBufferQ_V_233 to i24
+  %p_Val2_3_106 = mul i24 99, %OP1_V_107_cast
+  %tmp_3_106 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_104, i3 0)
+  %tmp_4_106_cast = sext i24 %p_Val2_3_106 to i35
+  %p_Val2_4_106 = add i35 %tmp_3_106, %tmp_4_106_cast
+  %p_Val2_5_104 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_106, i32 3, i32 34)
+  %tmp_225 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_106, i32 2)
+  %tmp_7_104 = zext i1 %tmp_225 to i32
+  %p_Val2_16_105 = add nsw i32 %p_Val2_5_104, %tmp_7_104
+  %match_matchBufferI_V_233 = load i16* @match_matchBufferI_V_107, align 2
+  %OP1_V_1_106_cast = sext i16 %match_matchBufferI_V_233 to i24
+  %p_Val2_6_106 = mul i24 99, %OP1_V_1_106_cast
+  %tmp_16_106 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_104, i3 0)
+  %tmp_17_106_cast = sext i24 %p_Val2_6_106 to i35
+  %p_Val2_7_106 = add i35 %tmp_16_106, %tmp_17_106_cast
+  %p_Val2_11_104 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_106, i32 3, i32 34)
+  %tmp_226 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_106, i32 2)
+  %tmp_19_104 = zext i1 %tmp_226 to i32
+  %p_Val2_17_105 = add nsw i32 %p_Val2_11_104, %tmp_19_104
+  %match_matchBufferQ_V_234 = load i16* @match_matchBufferQ_V_108, align 8
+  %OP1_V_108_cast = sext i16 %match_matchBufferQ_V_234 to i25
+  %p_Val2_3_107 = mul i25 141, %OP1_V_108_cast
+  %tmp_3_107 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_105, i3 0)
+  %tmp_4_107_cast = sext i25 %p_Val2_3_107 to i35
+  %p_Val2_4_107 = add i35 %tmp_3_107, %tmp_4_107_cast
+  %p_Val2_5_105 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_107, i32 3, i32 34)
+  %tmp_227 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_107, i32 2)
+  %tmp_7_105 = zext i1 %tmp_227 to i32
+  %p_Val2_16_106 = add nsw i32 %p_Val2_5_105, %tmp_7_105
+  %match_matchBufferI_V_234 = load i16* @match_matchBufferI_V_108, align 8
+  %OP1_V_1_107_cast = sext i16 %match_matchBufferI_V_234 to i25
+  %p_Val2_6_107 = mul i25 141, %OP1_V_1_107_cast
+  %tmp_16_107 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_105, i3 0)
+  %tmp_17_107_cast = sext i25 %p_Val2_6_107 to i35
+  %p_Val2_7_107 = add i35 %tmp_16_107, %tmp_17_107_cast
+  %p_Val2_11_105 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_107, i32 3, i32 34)
+  %tmp_228 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_107, i32 2)
+  %tmp_19_105 = zext i1 %tmp_228 to i32
+  %p_Val2_17_106 = add nsw i32 %p_Val2_11_105, %tmp_19_105
+  %match_matchBufferQ_V_235 = load i16* @match_matchBufferQ_V_109, align 2
+  %OP1_V_109_cast = sext i16 %match_matchBufferQ_V_235 to i25
+  %p_Val2_3_108 = mul i25 161, %OP1_V_109_cast
+  %tmp_3_108 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_106, i3 0)
+  %tmp_4_108_cast = sext i25 %p_Val2_3_108 to i35
+  %p_Val2_4_108 = add i35 %tmp_3_108, %tmp_4_108_cast
+  %p_Val2_5_106 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_108, i32 3, i32 34)
+  %tmp_229 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_108, i32 2)
+  %tmp_7_106 = zext i1 %tmp_229 to i32
+  %p_Val2_16_107 = add nsw i32 %p_Val2_5_106, %tmp_7_106
+  %match_matchBufferI_V_235 = load i16* @match_matchBufferI_V_109, align 2
+  %OP1_V_1_108_cast = sext i16 %match_matchBufferI_V_235 to i25
+  %p_Val2_6_108 = mul i25 161, %OP1_V_1_108_cast
+  %tmp_16_108 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_106, i3 0)
+  %tmp_17_108_cast = sext i25 %p_Val2_6_108 to i35
+  %p_Val2_7_108 = add i35 %tmp_16_108, %tmp_17_108_cast
+  %p_Val2_11_106 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_108, i32 3, i32 34)
+  %tmp_230 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_108, i32 2)
+  %tmp_19_106 = zext i1 %tmp_230 to i32
+  %p_Val2_17_107 = add nsw i32 %p_Val2_11_106, %tmp_19_106
+  %match_matchBufferQ_V_236 = load i16* @match_matchBufferQ_V_110, align 4
+  %p_shl25 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_236, i7 0)
+  %p_shl25_cast = sext i23 %p_shl25 to i24
+  %p_shl26 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %match_matchBufferQ_V_236, i5 0)
+  %p_shl26_cast = sext i21 %p_shl26 to i24
+  %p_Val2_3_109 = add i24 %p_shl25_cast, %p_shl26_cast
+  %tmp_3_109 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_107, i3 0)
+  %tmp_4_109_cast = sext i24 %p_Val2_3_109 to i35
+  %p_Val2_4_109 = add i35 %tmp_3_109, %tmp_4_109_cast
+  %match_matchBufferI_V_236 = load i16* @match_matchBufferI_V_110, align 4
+  %p_shl23 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_236, i7 0)
+  %p_shl23_cast = sext i23 %p_shl23 to i24
+  %p_shl24 = call i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16 %match_matchBufferI_V_236, i5 0)
+  %p_shl24_cast = sext i21 %p_shl24 to i24
+  %p_Val2_6_109 = add i24 %p_shl23_cast, %p_shl24_cast
+  %tmp_16_109 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_107, i3 0)
+  %tmp_17_109_cast = sext i24 %p_Val2_6_109 to i35
+  %p_Val2_7_109 = add i35 %tmp_16_109, %tmp_17_109_cast
+  %match_matchBufferQ_V_237 = load i16* @match_matchBufferQ_V_111, align 2
+  %OP1_V_111_cast = sext i16 %match_matchBufferQ_V_237 to i25
+  %p_Val2_3_110 = mul i25 138, %OP1_V_111_cast
+  %tmp_6 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_109, i32 3, i32 34)
+  %tmp_3_110 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %tmp_6, i3 0)
+  %tmp_4_110_cast = sext i25 %p_Val2_3_110 to i35
+  %p_Val2_4_110 = add i35 %tmp_3_110, %tmp_4_110_cast
+  %p_Val2_5_107 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_110, i32 3, i32 34)
+  %tmp_231 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_3_110, i32 2)
+  %tmp_7_107 = zext i1 %tmp_231 to i32
+  %p_Val2_16_108 = add nsw i32 %p_Val2_5_107, %tmp_7_107
+  %match_matchBufferI_V_237 = load i16* @match_matchBufferI_V_111, align 2
+  %OP1_V_1_110_cast = sext i16 %match_matchBufferI_V_237 to i25
+  %p_Val2_6_110 = mul i25 138, %OP1_V_1_110_cast
+  %tmp_10 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_109, i32 3, i32 34)
+  %tmp_16_110 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %tmp_10, i3 0)
+  %tmp_17_110_cast = sext i25 %p_Val2_6_110 to i35
+  %p_Val2_7_110 = add i35 %tmp_16_110, %tmp_17_110_cast
+  %p_Val2_11_107 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_110, i32 3, i32 34)
+  %tmp_232 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %p_Val2_6_110, i32 2)
+  %tmp_19_107 = zext i1 %tmp_232 to i32
+  %p_Val2_17_108 = add nsw i32 %p_Val2_11_107, %tmp_19_107
+  %match_matchBufferQ_V_238 = load i16* @match_matchBufferQ_V_112, align 16
+  %OP1_V_112_cast = sext i16 %match_matchBufferQ_V_238 to i24
+  %p_Val2_3_111 = mul i24 102, %OP1_V_112_cast
+  %tmp_3_111 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_108, i3 0)
+  %tmp_4_111_cast = sext i24 %p_Val2_3_111 to i35
+  %p_Val2_4_111 = add i35 %tmp_3_111, %tmp_4_111_cast
+  %p_Val2_5_108 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_111, i32 3, i32 34)
+  %tmp_233 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_111, i32 2)
+  %tmp_7_108 = zext i1 %tmp_233 to i32
+  %p_Val2_16_109 = add nsw i32 %p_Val2_5_108, %tmp_7_108
+  %match_matchBufferI_V_238 = load i16* @match_matchBufferI_V_112, align 16
+  %OP1_V_1_111_cast = sext i16 %match_matchBufferI_V_238 to i24
+  %p_Val2_6_111 = mul i24 102, %OP1_V_1_111_cast
+  %tmp_16_111 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_108, i3 0)
+  %tmp_17_111_cast = sext i24 %p_Val2_6_111 to i35
+  %p_Val2_7_111 = add i35 %tmp_16_111, %tmp_17_111_cast
+  %p_Val2_11_108 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_111, i32 3, i32 34)
+  %tmp_234 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_111, i32 2)
+  %tmp_19_108 = zext i1 %tmp_234 to i32
+  %p_Val2_17_109 = add nsw i32 %p_Val2_11_108, %tmp_19_108
+  %match_matchBufferQ_V_239 = load i16* @match_matchBufferQ_V_113, align 2
+  %OP1_V_113_cast = sext i16 %match_matchBufferQ_V_239 to i23
+  %p_Val2_3_112 = mul i23 55, %OP1_V_113_cast
+  %tmp_3_112 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_109, i3 0)
+  %tmp_4_112_cast = sext i23 %p_Val2_3_112 to i35
+  %p_Val2_4_112 = add i35 %tmp_3_112, %tmp_4_112_cast
+  %p_Val2_5_109 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_112, i32 3, i32 34)
+  %tmp_235 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_112, i32 2)
+  %tmp_7_109 = zext i1 %tmp_235 to i32
+  %p_Val2_16_110 = add nsw i32 %p_Val2_5_109, %tmp_7_109
+  %match_matchBufferI_V_239 = load i16* @match_matchBufferI_V_113, align 2
+  %OP1_V_1_112_cast = sext i16 %match_matchBufferI_V_239 to i23
+  %p_Val2_6_112 = mul i23 55, %OP1_V_1_112_cast
+  %tmp_16_112 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_109, i3 0)
+  %tmp_17_112_cast = sext i23 %p_Val2_6_112 to i35
+  %p_Val2_7_112 = add i35 %tmp_16_112, %tmp_17_112_cast
+  %p_Val2_11_109 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_112, i32 3, i32 34)
+  %tmp_236 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_112, i32 2)
+  %tmp_19_109 = zext i1 %tmp_236 to i32
+  %p_Val2_17_110 = add nsw i32 %p_Val2_11_109, %tmp_19_109
+  %match_matchBufferQ_V_240 = load i16* @match_matchBufferQ_V_114, align 4
+  %p_Val2_3_113 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferQ_V_240, i2 0)
+  %tmp_3_113 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_110, i3 0)
+  %tmp_4_113_cast = sext i18 %p_Val2_3_113 to i35
+  %p_Val2_4_113 = add i35 %tmp_3_113, %tmp_4_113_cast
+  %p_Val2_5_110 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_113, i32 3, i32 34)
+  %tmp_237 = trunc i16 %match_matchBufferQ_V_240 to i1
+  %tmp_7_110 = zext i1 %tmp_237 to i32
+  %p_Val2_16_111 = add nsw i32 %p_Val2_5_110, %tmp_7_110
+  %match_matchBufferI_V_240 = load i16* @match_matchBufferI_V_114, align 4
+  %p_Val2_6_113 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %match_matchBufferI_V_240, i2 0)
+  %tmp_16_113 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_110, i3 0)
+  %tmp_17_113_cast = sext i18 %p_Val2_6_113 to i35
+  %p_Val2_7_113 = add i35 %tmp_16_113, %tmp_17_113_cast
+  %p_Val2_11_110 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_113, i32 3, i32 34)
+  %tmp_238 = trunc i16 %match_matchBufferI_V_240 to i1
+  %tmp_19_110 = zext i1 %tmp_238 to i32
+  %p_Val2_17_111 = add nsw i32 %p_Val2_11_110, %tmp_19_110
+  %match_matchBufferQ_V_241 = load i16* @match_matchBufferQ_V_115, align 2
+  %OP1_V_115_cast = sext i16 %match_matchBufferQ_V_241 to i23
+  %p_Val2_3_114 = mul i23 -44, %OP1_V_115_cast
+  %tmp_3_114 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_111, i3 0)
+  %tmp_4_114_cast = sext i23 %p_Val2_3_114 to i35
+  %p_Val2_4_114 = add i35 %tmp_3_114, %tmp_4_114_cast
+  %p_Val2_5_111 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_114, i32 3, i32 34)
+  %tmp_239 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_114, i32 2)
+  %tmp_7_111 = zext i1 %tmp_239 to i32
+  %p_Val2_16_112 = add nsw i32 %p_Val2_5_111, %tmp_7_111
+  %match_matchBufferI_V_241 = load i16* @match_matchBufferI_V_115, align 2
+  %OP1_V_1_114_cast = sext i16 %match_matchBufferI_V_241 to i23
+  %p_Val2_6_114 = mul i23 -44, %OP1_V_1_114_cast
+  %tmp_16_114 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_111, i3 0)
+  %tmp_17_114_cast = sext i23 %p_Val2_6_114 to i35
+  %p_Val2_7_114 = add i35 %tmp_16_114, %tmp_17_114_cast
+  %p_Val2_11_111 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_114, i32 3, i32 34)
+  %tmp_240 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_114, i32 2)
+  %tmp_19_111 = zext i1 %tmp_240 to i32
+  %p_Val2_17_112 = add nsw i32 %p_Val2_11_111, %tmp_19_111
+  %match_matchBufferQ_V_242 = load i16* @match_matchBufferQ_V_116, align 8
+  %OP1_V_116_cast = sext i16 %match_matchBufferQ_V_242 to i24
+  %p_Val2_3_115 = mul i24 -85, %OP1_V_116_cast
+  %tmp_3_115 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_112, i3 0)
+  %tmp_4_115_cast = sext i24 %p_Val2_3_115 to i35
+  %p_Val2_4_115 = add i35 %tmp_3_115, %tmp_4_115_cast
+  %p_Val2_5_112 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_115, i32 3, i32 34)
+  %tmp_241 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_115, i32 2)
+  %tmp_7_112 = zext i1 %tmp_241 to i32
+  %p_Val2_16_113 = add nsw i32 %p_Val2_5_112, %tmp_7_112
+  %match_matchBufferI_V_242 = load i16* @match_matchBufferI_V_116, align 8
+  %OP1_V_1_115_cast = sext i16 %match_matchBufferI_V_242 to i24
+  %p_Val2_6_115 = mul i24 -85, %OP1_V_1_115_cast
+  %tmp_16_115 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_112, i3 0)
+  %tmp_17_115_cast = sext i24 %p_Val2_6_115 to i35
+  %p_Val2_7_115 = add i35 %tmp_16_115, %tmp_17_115_cast
+  %p_Val2_11_112 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_115, i32 3, i32 34)
+  %tmp_242 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_115, i32 2)
+  %tmp_19_112 = zext i1 %tmp_242 to i32
+  %p_Val2_17_113 = add nsw i32 %p_Val2_11_112, %tmp_19_112
+  %match_matchBufferQ_V_243 = load i16* @match_matchBufferQ_V_117, align 2
+  %OP1_V_117_cast = sext i16 %match_matchBufferQ_V_243 to i24
+  %p_Val2_3_116 = mul i24 -114, %OP1_V_117_cast
+  %tmp_3_116 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_113, i3 0)
+  %tmp_4_116_cast = sext i24 %p_Val2_3_116 to i35
+  %p_Val2_4_116 = add i35 %tmp_3_116, %tmp_4_116_cast
+  %p_Val2_5_113 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_116, i32 3, i32 34)
+  %tmp_243 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_116, i32 2)
+  %tmp_7_113 = zext i1 %tmp_243 to i32
+  %p_Val2_16_114 = add nsw i32 %p_Val2_5_113, %tmp_7_113
+  %match_matchBufferI_V_243 = load i16* @match_matchBufferI_V_117, align 2
+  %OP1_V_1_116_cast = sext i16 %match_matchBufferI_V_243 to i24
+  %p_Val2_6_116 = mul i24 -114, %OP1_V_1_116_cast
+  %tmp_16_116 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_113, i3 0)
+  %tmp_17_116_cast = sext i24 %p_Val2_6_116 to i35
+  %p_Val2_7_116 = add i35 %tmp_16_116, %tmp_17_116_cast
+  %p_Val2_11_113 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_116, i32 3, i32 34)
+  %tmp_244 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_116, i32 2)
+  %tmp_19_113 = zext i1 %tmp_244 to i32
+  %p_Val2_17_114 = add nsw i32 %p_Val2_11_113, %tmp_19_113
+  %match_matchBufferQ_V_244 = load i16* @match_matchBufferQ_V_118, align 4
+  %OP1_V_118_cast8 = sext i16 %match_matchBufferQ_V_244 to i24
+  %p_shl21 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_244, i7 0)
+  %p_shl21_cast = sext i23 %p_shl21 to i24
+  %p_neg7 = sub i24 0, %p_shl21_cast
+  %p_Val2_3_117 = sub i24 %p_neg7, %OP1_V_118_cast8
+  %tmp_3_117 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_114, i3 0)
+  %tmp_4_117_cast = sext i24 %p_Val2_3_117 to i35
+  %p_Val2_4_117 = add i35 %tmp_3_117, %tmp_4_117_cast
+  %p_Val2_5_114 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_117, i32 3, i32 34)
+  %tmp_245 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_117, i32 2)
+  %tmp_7_114 = zext i1 %tmp_245 to i32
+  %p_Val2_16_115 = add nsw i32 %p_Val2_5_114, %tmp_7_114
+  %match_matchBufferI_V_244 = load i16* @match_matchBufferI_V_118, align 4
+  %OP1_V_1_117_cast7 = sext i16 %match_matchBufferI_V_244 to i24
+  %p_shl19 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_244, i7 0)
+  %p_shl19_cast = sext i23 %p_shl19 to i24
+  %p_neg8 = sub i24 0, %p_shl19_cast
+  %p_Val2_6_117 = sub i24 %p_neg8, %OP1_V_1_117_cast7
+  %tmp_16_117 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_114, i3 0)
+  %tmp_17_117_cast = sext i24 %p_Val2_6_117 to i35
+  %p_Val2_7_117 = add i35 %tmp_16_117, %tmp_17_117_cast
+  %p_Val2_11_114 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_117, i32 3, i32 34)
+  %tmp_246 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_117, i32 2)
+  %tmp_19_114 = zext i1 %tmp_246 to i32
+  %p_Val2_17_115 = add nsw i32 %p_Val2_11_114, %tmp_19_114
+  %match_matchBufferQ_V_245 = load i16* @match_matchBufferQ_V_119, align 2
+  %OP1_V_119_cast6 = sext i16 %match_matchBufferQ_V_245 to i24
+  %p_shl17 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferQ_V_245, i7 0)
+  %p_shl17_cast = sext i23 %p_shl17 to i24
+  %p_neg9 = sub i24 0, %p_shl17_cast
+  %p_Val2_3_118 = sub i24 %p_neg9, %OP1_V_119_cast6
+  %tmp_3_118 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_115, i3 0)
+  %tmp_4_118_cast = sext i24 %p_Val2_3_118 to i35
+  %p_Val2_4_118 = add i35 %tmp_3_118, %tmp_4_118_cast
+  %p_Val2_5_115 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_118, i32 3, i32 34)
+  %tmp_247 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_118, i32 2)
+  %tmp_7_115 = zext i1 %tmp_247 to i32
+  %p_Val2_16_116 = add nsw i32 %p_Val2_5_115, %tmp_7_115
+  %match_matchBufferI_V_245 = load i16* @match_matchBufferI_V_119, align 2
+  %OP1_V_1_118_cast5 = sext i16 %match_matchBufferI_V_245 to i24
+  %p_shl15 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %match_matchBufferI_V_245, i7 0)
+  %p_shl15_cast = sext i23 %p_shl15 to i24
+  %p_neg10 = sub i24 0, %p_shl15_cast
+  %p_Val2_6_118 = sub i24 %p_neg10, %OP1_V_1_118_cast5
+  %tmp_16_118 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_115, i3 0)
+  %tmp_17_118_cast = sext i24 %p_Val2_6_118 to i35
+  %p_Val2_7_118 = add i35 %tmp_16_118, %tmp_17_118_cast
+  %p_Val2_11_115 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_118, i32 3, i32 34)
+  %tmp_248 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_118, i32 2)
+  %tmp_19_115 = zext i1 %tmp_248 to i32
+  %p_Val2_17_116 = add nsw i32 %p_Val2_11_115, %tmp_19_115
+  %match_matchBufferQ_V_246 = load i16* @match_matchBufferQ_V_120, align 16
+  %OP1_V_120_cast = sext i16 %match_matchBufferQ_V_246 to i24
+  %p_Val2_3_119 = mul i24 -115, %OP1_V_120_cast
+  %tmp_3_119 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_116, i3 0)
+  %tmp_4_119_cast = sext i24 %p_Val2_3_119 to i35
+  %p_Val2_4_119 = add i35 %tmp_3_119, %tmp_4_119_cast
+  %p_Val2_5_116 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_119, i32 3, i32 34)
+  %tmp_249 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_119, i32 2)
+  %tmp_7_116 = zext i1 %tmp_249 to i32
+  %p_Val2_16_117 = add nsw i32 %p_Val2_5_116, %tmp_7_116
+  %match_matchBufferI_V_246 = load i16* @match_matchBufferI_V_120, align 16
+  %OP1_V_1_119_cast = sext i16 %match_matchBufferI_V_246 to i24
+  %p_Val2_6_119 = mul i24 -115, %OP1_V_1_119_cast
+  %tmp_16_119 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_116, i3 0)
+  %tmp_17_119_cast = sext i24 %p_Val2_6_119 to i35
+  %p_Val2_7_119 = add i35 %tmp_16_119, %tmp_17_119_cast
+  %p_Val2_11_116 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_119, i32 3, i32 34)
+  %tmp_250 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_119, i32 2)
+  %tmp_19_116 = zext i1 %tmp_250 to i32
+  %p_Val2_17_117 = add nsw i32 %p_Val2_11_116, %tmp_19_116
+  %match_matchBufferQ_V_247 = load i16* @match_matchBufferQ_V_121, align 2
+  %OP1_V_121_cast = sext i16 %match_matchBufferQ_V_247 to i24
+  %p_Val2_3_120 = mul i24 -89, %OP1_V_121_cast
+  %tmp_3_120 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_117, i3 0)
+  %tmp_4_120_cast = sext i24 %p_Val2_3_120 to i35
+  %p_Val2_4_120 = add i35 %tmp_3_120, %tmp_4_120_cast
+  %p_Val2_5_117 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_120, i32 3, i32 34)
+  %tmp_251 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_120, i32 2)
+  %tmp_7_117 = zext i1 %tmp_251 to i32
+  %p_Val2_16_118 = add nsw i32 %p_Val2_5_117, %tmp_7_117
+  %match_matchBufferI_V_247 = load i16* @match_matchBufferI_V_121, align 2
+  %OP1_V_1_120_cast = sext i16 %match_matchBufferI_V_247 to i24
+  %p_Val2_6_120 = mul i24 -89, %OP1_V_1_120_cast
+  %tmp_16_120 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_117, i3 0)
+  %tmp_17_120_cast = sext i24 %p_Val2_6_120 to i35
+  %p_Val2_7_120 = add i35 %tmp_16_120, %tmp_17_120_cast
+  %p_Val2_11_117 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_120, i32 3, i32 34)
+  %tmp_252 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_120, i32 2)
+  %tmp_19_117 = zext i1 %tmp_252 to i32
+  %p_Val2_17_118 = add nsw i32 %p_Val2_11_117, %tmp_19_117
+  %match_matchBufferQ_V_248 = load i16* @match_matchBufferQ_V_122, align 4
+  %p_shl12 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferQ_V_248, i6 0)
+  %p_shl12_cast = sext i22 %p_shl12 to i23
+  %p_neg11 = sub i23 0, %p_shl12_cast
+  %p_shl14 = call i19 @_ssdm_op_BitConcatenate.i19.i16.i3(i16 %match_matchBufferQ_V_248, i3 0)
+  %p_shl14_cast = sext i19 %p_shl14 to i23
+  %p_Val2_3_121 = sub i23 %p_shl14_cast, %p_shl12_cast
+  %tmp_3_121 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_118, i3 0)
+  %tmp_4_121_cast = sext i23 %p_Val2_3_121 to i35
+  %p_Val2_4_121 = add i35 %tmp_3_121, %tmp_4_121_cast
+  %p_Val2_5_118 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_121, i32 3, i32 34)
+  %tmp_253 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_neg11, i32 2)
+  %tmp_7_118 = zext i1 %tmp_253 to i32
+  %p_Val2_16_119 = add nsw i32 %p_Val2_5_118, %tmp_7_118
+  %match_matchBufferI_V_248 = load i16* @match_matchBufferI_V_122, align 4
+  %p_shl10 = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %match_matchBufferI_V_248, i6 0)
+  %p_shl10_cast = sext i22 %p_shl10 to i23
+  %p_neg = sub i23 0, %p_shl10_cast
+  %p_shl11 = call i19 @_ssdm_op_BitConcatenate.i19.i16.i3(i16 %match_matchBufferI_V_248, i3 0)
+  %p_shl11_cast = sext i19 %p_shl11 to i23
+  %p_Val2_6_121 = sub i23 %p_shl11_cast, %p_shl10_cast
+  %tmp_16_121 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_118, i3 0)
+  %tmp_17_121_cast = sext i23 %p_Val2_6_121 to i35
+  %p_Val2_7_121 = add i35 %tmp_16_121, %tmp_17_121_cast
+  %p_Val2_11_118 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_121, i32 3, i32 34)
+  %tmp_254 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_neg, i32 2)
+  %tmp_19_118 = zext i1 %tmp_254 to i32
+  %p_Val2_17_119 = add nsw i32 %p_Val2_11_118, %tmp_19_118
+  %match_matchBufferQ_V_249 = load i16* @match_matchBufferQ_V_123, align 2
+  %OP1_V_123_cast = sext i16 %match_matchBufferQ_V_249 to i22
+  %p_Val2_3_122 = mul i22 -19, %OP1_V_123_cast
+  %tmp_3_122 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_119, i3 0)
+  %tmp_4_122_cast = sext i22 %p_Val2_3_122 to i35
+  %p_Val2_4_122 = add i35 %tmp_3_122, %tmp_4_122_cast
+  %p_Val2_5_119 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_122, i32 3, i32 34)
+  %tmp_255 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_Val2_3_122, i32 2)
+  %tmp_7_119 = zext i1 %tmp_255 to i32
+  %p_Val2_16_120 = add nsw i32 %p_Val2_5_119, %tmp_7_119
+  %match_matchBufferI_V_249 = load i16* @match_matchBufferI_V_123, align 2
+  %OP1_V_1_122_cast = sext i16 %match_matchBufferI_V_249 to i22
+  %p_Val2_6_122 = mul i22 -19, %OP1_V_1_122_cast
+  %tmp_16_122 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_119, i3 0)
+  %tmp_17_122_cast = sext i22 %p_Val2_6_122 to i35
+  %p_Val2_7_122 = add i35 %tmp_16_122, %tmp_17_122_cast
+  %p_Val2_11_119 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_122, i32 3, i32 34)
+  %tmp_256 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_Val2_6_122, i32 2)
+  %tmp_19_119 = zext i1 %tmp_256 to i32
+  %p_Val2_17_120 = add nsw i32 %p_Val2_11_119, %tmp_19_119
+  %match_matchBufferQ_V_250 = load i16* @match_matchBufferQ_V_124, align 8
+  %p_shl8 = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %match_matchBufferQ_V_250, i4 0)
+  %p_shl8_cast = sext i20 %p_shl8 to i21
+  %p_shl9 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferQ_V_250, i1 false)
+  %p_shl9_cast = sext i17 %p_shl9 to i21
+  %p_Val2_3_123 = add i21 %p_shl8_cast, %p_shl9_cast
+  %tmp_3_123 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_120, i3 0)
+  %tmp_4_123_cast = sext i21 %p_Val2_3_123 to i35
+  %p_Val2_4_123 = add i35 %tmp_3_123, %tmp_4_123_cast
+  %p_Val2_5_120 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_123, i32 3, i32 34)
+  %tmp_257 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferQ_V_250, i32 1)
+  %tmp_7_120 = zext i1 %tmp_257 to i32
+  %p_Val2_16_121 = add nsw i32 %p_Val2_5_120, %tmp_7_120
+  %match_matchBufferI_V_250 = load i16* @match_matchBufferI_V_124, align 8
+  %p_shl = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %match_matchBufferI_V_250, i4 0)
+  %p_shl_cast = sext i20 %p_shl to i21
+  %p_shl7 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %match_matchBufferI_V_250, i1 false)
+  %p_shl7_cast = sext i17 %p_shl7 to i21
+  %p_Val2_6_123 = add i21 %p_shl_cast, %p_shl7_cast
+  %tmp_16_123 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_120, i3 0)
+  %tmp_17_123_cast = sext i21 %p_Val2_6_123 to i35
+  %p_Val2_7_123 = add i35 %tmp_16_123, %tmp_17_123_cast
+  %p_Val2_11_120 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_123, i32 3, i32 34)
+  %tmp_258 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %match_matchBufferI_V_250, i32 1)
+  %tmp_19_120 = zext i1 %tmp_258 to i32
+  %p_Val2_17_121 = add nsw i32 %p_Val2_11_120, %tmp_19_120
+  %match_matchBufferQ_V_251 = load i16* @match_matchBufferQ_V_125, align 2
+  %OP1_V_125_cast = sext i16 %match_matchBufferQ_V_251 to i23
+  %p_Val2_3_124 = mul i23 50, %OP1_V_125_cast
+  %tmp_3_124 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_121, i3 0)
+  %tmp_4_124_cast = sext i23 %p_Val2_3_124 to i35
+  %p_Val2_4_124 = add i35 %tmp_3_124, %tmp_4_124_cast
+  %p_Val2_5_121 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_124, i32 3, i32 34)
+  %tmp_259 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_3_124, i32 2)
+  %tmp_7_121 = zext i1 %tmp_259 to i32
+  %p_Val2_16_122 = add nsw i32 %p_Val2_5_121, %tmp_7_121
+  %match_matchBufferI_V_251 = load i16* @match_matchBufferI_V_125, align 2
+  %OP1_V_1_124_cast = sext i16 %match_matchBufferI_V_251 to i23
+  %p_Val2_6_124 = mul i23 50, %OP1_V_1_124_cast
+  %tmp_16_124 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_121, i3 0)
+  %tmp_17_124_cast = sext i23 %p_Val2_6_124 to i35
+  %p_Val2_7_124 = add i35 %tmp_16_124, %tmp_17_124_cast
+  %p_Val2_11_121 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_124, i32 3, i32 34)
+  %tmp_260 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_Val2_6_124, i32 2)
+  %tmp_19_121 = zext i1 %tmp_260 to i32
+  %p_Val2_17_122 = add nsw i32 %p_Val2_11_121, %tmp_19_121
+  %match_matchBufferQ_V_252 = load i16* @match_matchBufferQ_V_126, align 4
+  %OP1_V_126_cast = sext i16 %match_matchBufferQ_V_252 to i24
+  %p_Val2_3_125 = mul i24 74, %OP1_V_126_cast
+  %tmp_3_125 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_122, i3 0)
+  %tmp_4_125_cast = sext i24 %p_Val2_3_125 to i35
+  %p_Val2_4_125 = add i35 %tmp_3_125, %tmp_4_125_cast
+  %p_Val2_5_122 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_125, i32 3, i32 34)
+  %tmp_261 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_125, i32 2)
+  %tmp_7_122 = zext i1 %tmp_261 to i32
+  %p_Val2_16_123 = add nsw i32 %p_Val2_5_122, %tmp_7_122
+  %match_matchBufferI_V_252 = load i16* @match_matchBufferI_V_126, align 4
+  %OP1_V_1_125_cast = sext i16 %match_matchBufferI_V_252 to i24
+  %p_Val2_6_125 = mul i24 74, %OP1_V_1_125_cast
+  %tmp_16_125 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_122, i3 0)
+  %tmp_17_125_cast = sext i24 %p_Val2_6_125 to i35
+  %p_Val2_7_125 = add i35 %tmp_16_125, %tmp_17_125_cast
+  %p_Val2_11_122 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_125, i32 3, i32 34)
+  %tmp_262 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_125, i32 2)
+  %tmp_19_122 = zext i1 %tmp_262 to i32
+  %p_Val2_17_123 = add nsw i32 %p_Val2_11_122, %tmp_19_122
+  %match_matchBufferQ_V_253 = load i16* @match_matchBufferQ_V_127, align 2
+  %OP1_V_127_cast = sext i16 %match_matchBufferQ_V_253 to i24
+  %p_Val2_3_126 = mul i24 87, %OP1_V_127_cast
+  %tmp_3_126 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_16_123, i3 0)
+  %tmp_4_126_cast = sext i24 %p_Val2_3_126 to i35
+  %p_Val2_4_126 = add i35 %tmp_3_126, %tmp_4_126_cast
+  %p_Val2_5_123 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_4_126, i32 3, i32 34)
+  %tmp_263 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_3_126, i32 2)
+  %tmp_7_123 = zext i1 %tmp_263 to i32
+  %p_Val2_16_124 = add nsw i32 %p_Val2_5_123, %tmp_7_123
+  %match_matchBufferI_V_253 = load i16* @match_matchBufferI_V_127, align 2
+  %OP1_V_1_126_cast = sext i16 %match_matchBufferI_V_253 to i24
+  %p_Val2_6_126 = mul i24 87, %OP1_V_1_126_cast
+  %tmp_16_126 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %p_Val2_17_123, i3 0)
+  %tmp_17_126_cast = sext i24 %p_Val2_6_126 to i35
+  %p_Val2_7_126 = add i35 %tmp_16_126, %tmp_17_126_cast
+  %p_Val2_11_123 = call i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35 %p_Val2_7_126, i32 3, i32 34)
+  %tmp_264 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %p_Val2_6_126, i32 2)
+  %tmp_19_123 = zext i1 %tmp_264 to i32
+  %p_Val2_17_124 = add nsw i32 %p_Val2_11_123, %tmp_19_123
+  %p_Val2_s_13 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_17_124, i32 16, i32 31)
+  %tmp_265 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_17_124, i32 15)
+  %tmp_8 = zext i1 %tmp_265 to i16
+  %p_Val2_7 = add i16 %p_Val2_s_13, %tmp_8
+  %p_Val2_2 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_16_124, i32 16, i32 31)
+  %tmp_266 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_16_124, i32 15)
+  %tmp_s = zext i1 %tmp_266 to i16
+  %p_Val2_8 = add i16 %p_Val2_2, %tmp_s
+  %p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %p_Val2_8, i16 %p_Val2_7)
+  ret i32 %p_Result_s
+}
 
 define weak void @_ssdm_op_Write.axis.volatile.i32P.i1P(i32*, i1*, i32, i1) {
 entry:
@@ -94,9 +3485,9 @@ entry:
   ret void
 }
 
-define weak i32 @_ssdm_op_SpecLoopTripCount(...) {
+define weak void @_ssdm_op_SpecReset(...) nounwind {
 entry:
-  ret i32 0
+  ret void
 }
 
 define weak void @_ssdm_op_SpecInterface(...) nounwind {
@@ -112,1055 +3503,404 @@ entry:
 define weak { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32*, i1*) {
 entry:
   %empty = load i32* %0
-  %empty_5 = load i1* %1
+  %empty_14 = load i1* %1
   %mrv_0 = insertvalue { i32, i1 } undef, i32 %empty, 0
-  %mrv1 = insertvalue { i32, i1 } %mrv_0, i1 %empty_5, 1
+  %mrv1 = insertvalue { i32, i1 } %mrv_0, i1 %empty_14, 1
   ret { i32, i1 } %mrv1
 }
 
-declare i7 @_ssdm_op_PartSelect.i7.i8.i32.i32(i8, i32, i32) nounwind readnone
-
-declare i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32, i32, i32) nounwind readnone
-
-define weak i16 @_ssdm_op_Mux.ap_auto.128i16.i7(i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i7) {
+define weak i16 @_ssdm_op_Read.ap_auto.i16(i16) {
 entry:
-  switch i7 %128, label %case127 [
-    i7 0, label %case0
-    i7 1, label %case1
-    i7 2, label %case2
-    i7 3, label %case3
-    i7 4, label %case4
-    i7 5, label %case5
-    i7 6, label %case6
-    i7 7, label %case7
-    i7 8, label %case8
-    i7 9, label %case9
-    i7 10, label %case10
-    i7 11, label %case11
-    i7 12, label %case12
-    i7 13, label %case13
-    i7 14, label %case14
-    i7 15, label %case15
-    i7 16, label %case16
-    i7 17, label %case17
-    i7 18, label %case18
-    i7 19, label %case19
-    i7 20, label %case20
-    i7 21, label %case21
-    i7 22, label %case22
-    i7 23, label %case23
-    i7 24, label %case24
-    i7 25, label %case25
-    i7 26, label %case26
-    i7 27, label %case27
-    i7 28, label %case28
-    i7 29, label %case29
-    i7 30, label %case30
-    i7 31, label %case31
-    i7 32, label %case32
-    i7 33, label %case33
-    i7 34, label %case34
-    i7 35, label %case35
-    i7 36, label %case36
-    i7 37, label %case37
-    i7 38, label %case38
-    i7 39, label %case39
-    i7 40, label %case40
-    i7 41, label %case41
-    i7 42, label %case42
-    i7 43, label %case43
-    i7 44, label %case44
-    i7 45, label %case45
-    i7 46, label %case46
-    i7 47, label %case47
-    i7 48, label %case48
-    i7 49, label %case49
-    i7 50, label %case50
-    i7 51, label %case51
-    i7 52, label %case52
-    i7 53, label %case53
-    i7 54, label %case54
-    i7 55, label %case55
-    i7 56, label %case56
-    i7 57, label %case57
-    i7 58, label %case58
-    i7 59, label %case59
-    i7 60, label %case60
-    i7 61, label %case61
-    i7 62, label %case62
-    i7 63, label %case63
-    i7 -64, label %case64
-    i7 -63, label %case65
-    i7 -62, label %case66
-    i7 -61, label %case67
-    i7 -60, label %case68
-    i7 -59, label %case69
-    i7 -58, label %case70
-    i7 -57, label %case71
-    i7 -56, label %case72
-    i7 -55, label %case73
-    i7 -54, label %case74
-    i7 -53, label %case75
-    i7 -52, label %case76
-    i7 -51, label %case77
-    i7 -50, label %case78
-    i7 -49, label %case79
-    i7 -48, label %case80
-    i7 -47, label %case81
-    i7 -46, label %case82
-    i7 -45, label %case83
-    i7 -44, label %case84
-    i7 -43, label %case85
-    i7 -42, label %case86
-    i7 -41, label %case87
-    i7 -40, label %case88
-    i7 -39, label %case89
-    i7 -38, label %case90
-    i7 -37, label %case91
-    i7 -36, label %case92
-    i7 -35, label %case93
-    i7 -34, label %case94
-    i7 -33, label %case95
-    i7 -32, label %case96
-    i7 -31, label %case97
-    i7 -30, label %case98
-    i7 -29, label %case99
-    i7 -28, label %case100
-    i7 -27, label %case101
-    i7 -26, label %case102
-    i7 -25, label %case103
-    i7 -24, label %case104
-    i7 -23, label %case105
-    i7 -22, label %case106
-    i7 -21, label %case107
-    i7 -20, label %case108
-    i7 -19, label %case109
-    i7 -18, label %case110
-    i7 -17, label %case111
-    i7 -16, label %case112
-    i7 -15, label %case113
-    i7 -14, label %case114
-    i7 -13, label %case115
-    i7 -12, label %case116
-    i7 -11, label %case117
-    i7 -10, label %case118
-    i7 -9, label %case119
-    i7 -8, label %case120
-    i7 -7, label %case121
-    i7 -6, label %case122
-    i7 -5, label %case123
-    i7 -4, label %case124
-    i7 -3, label %case125
-    i7 -2, label %case126
-  ]
-
-case0:                                            ; preds = %case127, %case126, %case125, %case124, %case123, %case122, %case121, %case120, %case119, %case118, %case117, %case116, %case115, %case114, %case113, %case112, %case111, %case110, %case109, %case108, %case107, %case106, %case105, %case104, %case103, %case102, %case101, %case100, %case99, %case98, %case97, %case96, %case95, %case94, %case93, %case92, %case91, %case90, %case89, %case88, %case87, %case86, %case85, %case84, %case83, %case82, %case81, %case80, %case79, %case78, %case77, %case76, %case75, %case74, %case73, %case72, %case71, %case70, %case69, %case68, %case67, %case66, %case65, %case64, %case63, %case62, %case61, %case60, %case59, %case58, %case57, %case56, %case55, %case54, %case53, %case52, %case51, %case50, %case49, %case48, %case47, %case46, %case45, %case44, %case43, %case42, %case41, %case40, %case39, %case38, %case37, %case36, %case35, %case34, %case33, %case32, %case31, %case30, %case29, %case28, %case27, %case26, %case25, %case24, %case23, %case22, %case21, %case20, %case19, %case18, %case17, %case16, %case15, %case14, %case13, %case12, %case11, %case10, %case9, %case8, %case7, %case6, %case5, %case4, %case3, %case2, %case1, %entry
-  %merge = phi i16 [ %0, %entry ], [ %1, %case1 ], [ %2, %case2 ], [ %3, %case3 ], [ %4, %case4 ], [ %5, %case5 ], [ %6, %case6 ], [ %7, %case7 ], [ %8, %case8 ], [ %9, %case9 ], [ %10, %case10 ], [ %11, %case11 ], [ %12, %case12 ], [ %13, %case13 ], [ %14, %case14 ], [ %15, %case15 ], [ %16, %case16 ], [ %17, %case17 ], [ %18, %case18 ], [ %19, %case19 ], [ %20, %case20 ], [ %21, %case21 ], [ %22, %case22 ], [ %23, %case23 ], [ %24, %case24 ], [ %25, %case25 ], [ %26, %case26 ], [ %27, %case27 ], [ %28, %case28 ], [ %29, %case29 ], [ %30, %case30 ], [ %31, %case31 ], [ %32, %case32 ], [ %33, %case33 ], [ %34, %case34 ], [ %35, %case35 ], [ %36, %case36 ], [ %37, %case37 ], [ %38, %case38 ], [ %39, %case39 ], [ %40, %case40 ], [ %41, %case41 ], [ %42, %case42 ], [ %43, %case43 ], [ %44, %case44 ], [ %45, %case45 ], [ %46, %case46 ], [ %47, %case47 ], [ %48, %case48 ], [ %49, %case49 ], [ %50, %case50 ], [ %51, %case51 ], [ %52, %case52 ], [ %53, %case53 ], [ %54, %case54 ], [ %55, %case55 ], [ %56, %case56 ], [ %57, %case57 ], [ %58, %case58 ], [ %59, %case59 ], [ %60, %case60 ], [ %61, %case61 ], [ %62, %case62 ], [ %63, %case63 ], [ %64, %case64 ], [ %65, %case65 ], [ %66, %case66 ], [ %67, %case67 ], [ %68, %case68 ], [ %69, %case69 ], [ %70, %case70 ], [ %71, %case71 ], [ %72, %case72 ], [ %73, %case73 ], [ %74, %case74 ], [ %75, %case75 ], [ %76, %case76 ], [ %77, %case77 ], [ %78, %case78 ], [ %79, %case79 ], [ %80, %case80 ], [ %81, %case81 ], [ %82, %case82 ], [ %83, %case83 ], [ %84, %case84 ], [ %85, %case85 ], [ %86, %case86 ], [ %87, %case87 ], [ %88, %case88 ], [ %89, %case89 ], [ %90, %case90 ], [ %91, %case91 ], [ %92, %case92 ], [ %93, %case93 ], [ %94, %case94 ], [ %95, %case95 ], [ %96, %case96 ], [ %97, %case97 ], [ %98, %case98 ], [ %99, %case99 ], [ %100, %case100 ], [ %101, %case101 ], [ %102, %case102 ], [ %103, %case103 ], [ %104, %case104 ], [ %105, %case105 ], [ %106, %case106 ], [ %107, %case107 ], [ %108, %case108 ], [ %109, %case109 ], [ %110, %case110 ], [ %111, %case111 ], [ %112, %case112 ], [ %113, %case113 ], [ %114, %case114 ], [ %115, %case115 ], [ %116, %case116 ], [ %117, %case117 ], [ %118, %case118 ], [ %119, %case119 ], [ %120, %case120 ], [ %121, %case121 ], [ %122, %case122 ], [ %123, %case123 ], [ %124, %case124 ], [ %125, %case125 ], [ %126, %case126 ], [ %127, %case127 ]
-  ret i16 %merge
-
-case1:                                            ; preds = %entry
-  br label %case0
-
-case2:                                            ; preds = %entry
-  br label %case0
-
-case3:                                            ; preds = %entry
-  br label %case0
-
-case4:                                            ; preds = %entry
-  br label %case0
-
-case5:                                            ; preds = %entry
-  br label %case0
-
-case6:                                            ; preds = %entry
-  br label %case0
-
-case7:                                            ; preds = %entry
-  br label %case0
-
-case8:                                            ; preds = %entry
-  br label %case0
-
-case9:                                            ; preds = %entry
-  br label %case0
-
-case10:                                           ; preds = %entry
-  br label %case0
-
-case11:                                           ; preds = %entry
-  br label %case0
-
-case12:                                           ; preds = %entry
-  br label %case0
-
-case13:                                           ; preds = %entry
-  br label %case0
-
-case14:                                           ; preds = %entry
-  br label %case0
-
-case15:                                           ; preds = %entry
-  br label %case0
-
-case16:                                           ; preds = %entry
-  br label %case0
-
-case17:                                           ; preds = %entry
-  br label %case0
-
-case18:                                           ; preds = %entry
-  br label %case0
-
-case19:                                           ; preds = %entry
-  br label %case0
-
-case20:                                           ; preds = %entry
-  br label %case0
-
-case21:                                           ; preds = %entry
-  br label %case0
-
-case22:                                           ; preds = %entry
-  br label %case0
-
-case23:                                           ; preds = %entry
-  br label %case0
-
-case24:                                           ; preds = %entry
-  br label %case0
-
-case25:                                           ; preds = %entry
-  br label %case0
-
-case26:                                           ; preds = %entry
-  br label %case0
-
-case27:                                           ; preds = %entry
-  br label %case0
-
-case28:                                           ; preds = %entry
-  br label %case0
-
-case29:                                           ; preds = %entry
-  br label %case0
-
-case30:                                           ; preds = %entry
-  br label %case0
-
-case31:                                           ; preds = %entry
-  br label %case0
-
-case32:                                           ; preds = %entry
-  br label %case0
-
-case33:                                           ; preds = %entry
-  br label %case0
-
-case34:                                           ; preds = %entry
-  br label %case0
-
-case35:                                           ; preds = %entry
-  br label %case0
-
-case36:                                           ; preds = %entry
-  br label %case0
-
-case37:                                           ; preds = %entry
-  br label %case0
-
-case38:                                           ; preds = %entry
-  br label %case0
-
-case39:                                           ; preds = %entry
-  br label %case0
-
-case40:                                           ; preds = %entry
-  br label %case0
-
-case41:                                           ; preds = %entry
-  br label %case0
-
-case42:                                           ; preds = %entry
-  br label %case0
-
-case43:                                           ; preds = %entry
-  br label %case0
-
-case44:                                           ; preds = %entry
-  br label %case0
-
-case45:                                           ; preds = %entry
-  br label %case0
-
-case46:                                           ; preds = %entry
-  br label %case0
-
-case47:                                           ; preds = %entry
-  br label %case0
-
-case48:                                           ; preds = %entry
-  br label %case0
-
-case49:                                           ; preds = %entry
-  br label %case0
-
-case50:                                           ; preds = %entry
-  br label %case0
-
-case51:                                           ; preds = %entry
-  br label %case0
-
-case52:                                           ; preds = %entry
-  br label %case0
-
-case53:                                           ; preds = %entry
-  br label %case0
-
-case54:                                           ; preds = %entry
-  br label %case0
-
-case55:                                           ; preds = %entry
-  br label %case0
-
-case56:                                           ; preds = %entry
-  br label %case0
-
-case57:                                           ; preds = %entry
-  br label %case0
-
-case58:                                           ; preds = %entry
-  br label %case0
-
-case59:                                           ; preds = %entry
-  br label %case0
-
-case60:                                           ; preds = %entry
-  br label %case0
-
-case61:                                           ; preds = %entry
-  br label %case0
-
-case62:                                           ; preds = %entry
-  br label %case0
-
-case63:                                           ; preds = %entry
-  br label %case0
-
-case64:                                           ; preds = %entry
-  br label %case0
-
-case65:                                           ; preds = %entry
-  br label %case0
-
-case66:                                           ; preds = %entry
-  br label %case0
-
-case67:                                           ; preds = %entry
-  br label %case0
-
-case68:                                           ; preds = %entry
-  br label %case0
-
-case69:                                           ; preds = %entry
-  br label %case0
-
-case70:                                           ; preds = %entry
-  br label %case0
-
-case71:                                           ; preds = %entry
-  br label %case0
-
-case72:                                           ; preds = %entry
-  br label %case0
-
-case73:                                           ; preds = %entry
-  br label %case0
-
-case74:                                           ; preds = %entry
-  br label %case0
-
-case75:                                           ; preds = %entry
-  br label %case0
-
-case76:                                           ; preds = %entry
-  br label %case0
-
-case77:                                           ; preds = %entry
-  br label %case0
-
-case78:                                           ; preds = %entry
-  br label %case0
-
-case79:                                           ; preds = %entry
-  br label %case0
-
-case80:                                           ; preds = %entry
-  br label %case0
-
-case81:                                           ; preds = %entry
-  br label %case0
-
-case82:                                           ; preds = %entry
-  br label %case0
-
-case83:                                           ; preds = %entry
-  br label %case0
-
-case84:                                           ; preds = %entry
-  br label %case0
-
-case85:                                           ; preds = %entry
-  br label %case0
-
-case86:                                           ; preds = %entry
-  br label %case0
-
-case87:                                           ; preds = %entry
-  br label %case0
-
-case88:                                           ; preds = %entry
-  br label %case0
-
-case89:                                           ; preds = %entry
-  br label %case0
-
-case90:                                           ; preds = %entry
-  br label %case0
-
-case91:                                           ; preds = %entry
-  br label %case0
-
-case92:                                           ; preds = %entry
-  br label %case0
-
-case93:                                           ; preds = %entry
-  br label %case0
-
-case94:                                           ; preds = %entry
-  br label %case0
-
-case95:                                           ; preds = %entry
-  br label %case0
-
-case96:                                           ; preds = %entry
-  br label %case0
-
-case97:                                           ; preds = %entry
-  br label %case0
-
-case98:                                           ; preds = %entry
-  br label %case0
-
-case99:                                           ; preds = %entry
-  br label %case0
-
-case100:                                          ; preds = %entry
-  br label %case0
-
-case101:                                          ; preds = %entry
-  br label %case0
-
-case102:                                          ; preds = %entry
-  br label %case0
-
-case103:                                          ; preds = %entry
-  br label %case0
-
-case104:                                          ; preds = %entry
-  br label %case0
-
-case105:                                          ; preds = %entry
-  br label %case0
-
-case106:                                          ; preds = %entry
-  br label %case0
-
-case107:                                          ; preds = %entry
-  br label %case0
-
-case108:                                          ; preds = %entry
-  br label %case0
-
-case109:                                          ; preds = %entry
-  br label %case0
-
-case110:                                          ; preds = %entry
-  br label %case0
-
-case111:                                          ; preds = %entry
-  br label %case0
-
-case112:                                          ; preds = %entry
-  br label %case0
-
-case113:                                          ; preds = %entry
-  br label %case0
-
-case114:                                          ; preds = %entry
-  br label %case0
-
-case115:                                          ; preds = %entry
-  br label %case0
-
-case116:                                          ; preds = %entry
-  br label %case0
-
-case117:                                          ; preds = %entry
-  br label %case0
-
-case118:                                          ; preds = %entry
-  br label %case0
-
-case119:                                          ; preds = %entry
-  br label %case0
-
-case120:                                          ; preds = %entry
-  br label %case0
-
-case121:                                          ; preds = %entry
-  br label %case0
-
-case122:                                          ; preds = %entry
-  br label %case0
-
-case123:                                          ; preds = %entry
-  br label %case0
-
-case124:                                          ; preds = %entry
-  br label %case0
-
-case125:                                          ; preds = %entry
-  br label %case0
-
-case126:                                          ; preds = %entry
-  br label %case0
-
-case127:                                          ; preds = %entry
-  br label %case0
+  ret i16 %0
+}
+
+define weak i32 @_ssdm_op_PartSelect.i32.i35.i32.i32(i35, i32, i32) nounwind readnone {
+entry:
+  %empty = call i35 @llvm.part.select.i35(i35 %0, i32 %1, i32 %2)
+  %empty_15 = trunc i35 %empty to i32
+  ret i32 %empty_15
+}
+
+define weak i30 @_ssdm_op_PartSelect.i30.i33.i32.i32(i33, i32, i32) nounwind readnone {
+entry:
+  %empty = call i33 @llvm.part.select.i33(i33 %0, i32 %1, i32 %2)
+  %empty_16 = trunc i33 %empty to i30
+  ret i30 %empty_16
+}
+
+define weak i21 @_ssdm_op_PartSelect.i21.i24.i32.i32(i24, i32, i32) nounwind readnone {
+entry:
+  %empty = call i24 @llvm.part.select.i24(i24 %0, i32 %1, i32 %2)
+  %empty_17 = trunc i24 %empty to i21
+  ret i21 %empty_17
+}
+
+define weak i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32, i32, i32) nounwind readnone {
+entry:
+  %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
+  %empty_18 = trunc i32 %empty to i16
+  ret i16 %empty_18
+}
+
+declare i1 @_ssdm_op_PartSelect.i1.i16.i32.i32(i16, i32, i32) nounwind readnone
+
+define weak i1 @_ssdm_op_BitSelect.i1.i32.i32(i32, i32) nounwind readnone {
+entry:
+  %empty = shl i32 1, %1
+  %empty_19 = and i32 %0, %empty
+  %empty_20 = icmp ne i32 %empty_19, 0
+  ret i1 %empty_20
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i31.i32(i31, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i31
+  %empty_21 = shl i31 1, %empty
+  %empty_22 = and i31 %0, %empty_21
+  %empty_23 = icmp ne i31 %empty_22, 0
+  ret i1 %empty_23
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i30.i32(i30, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i30
+  %empty_24 = shl i30 1, %empty
+  %empty_25 = and i30 %0, %empty_24
+  %empty_26 = icmp ne i30 %empty_25, 0
+  ret i1 %empty_26
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i29.i32(i29, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i29
+  %empty_27 = shl i29 1, %empty
+  %empty_28 = and i29 %0, %empty_27
+  %empty_29 = icmp ne i29 %empty_28, 0
+  ret i1 %empty_29
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i28.i32(i28, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i28
+  %empty_30 = shl i28 1, %empty
+  %empty_31 = and i28 %0, %empty_30
+  %empty_32 = icmp ne i28 %empty_31, 0
+  ret i1 %empty_32
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i27.i32(i27, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i27
+  %empty_33 = shl i27 1, %empty
+  %empty_34 = and i27 %0, %empty_33
+  %empty_35 = icmp ne i27 %empty_34, 0
+  ret i1 %empty_35
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i26.i32(i26, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i26
+  %empty_36 = shl i26 1, %empty
+  %empty_37 = and i26 %0, %empty_36
+  %empty_38 = icmp ne i26 %empty_37, 0
+  ret i1 %empty_38
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i25.i32(i25, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i25
+  %empty_39 = shl i25 1, %empty
+  %empty_40 = and i25 %0, %empty_39
+  %empty_41 = icmp ne i25 %empty_40, 0
+  ret i1 %empty_41
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i24.i32(i24, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i24
+  %empty_42 = shl i24 1, %empty
+  %empty_43 = and i24 %0, %empty_42
+  %empty_44 = icmp ne i24 %empty_43, 0
+  ret i1 %empty_44
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i23.i32(i23, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i23
+  %empty_45 = shl i23 1, %empty
+  %empty_46 = and i23 %0, %empty_45
+  %empty_47 = icmp ne i23 %empty_46, 0
+  ret i1 %empty_47
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i22.i32(i22, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i22
+  %empty_48 = shl i22 1, %empty
+  %empty_49 = and i22 %0, %empty_48
+  %empty_50 = icmp ne i22 %empty_49, 0
+  ret i1 %empty_50
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i19.i32(i19, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i19
+  %empty_51 = shl i19 1, %empty
+  %empty_52 = and i19 %0, %empty_51
+  %empty_53 = icmp ne i19 %empty_52, 0
+  ret i1 %empty_53
+}
+
+define weak i1 @_ssdm_op_BitSelect.i1.i16.i32(i16, i32) nounwind readnone {
+entry:
+  %empty = trunc i32 %1 to i16
+  %empty_54 = shl i16 1, %empty
+  %empty_55 = and i16 %0, %empty_54
+  %empty_56 = icmp ne i16 %empty_55, 0
+  ret i1 %empty_56
+}
+
+define weak i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32, i3) nounwind readnone {
+entry:
+  %empty = zext i32 %0 to i35
+  %empty_57 = zext i3 %1 to i35
+  %empty_58 = shl i35 %empty, 3
+  %empty_59 = or i35 %empty_58, %empty_57
+  ret i35 %empty_59
+}
+
+define weak i34 @_ssdm_op_BitConcatenate.i34.i31.i3(i31, i3) nounwind readnone {
+entry:
+  %empty = zext i31 %0 to i34
+  %empty_60 = zext i3 %1 to i34
+  %empty_61 = shl i34 %empty, 3
+  %empty_62 = or i34 %empty_61, %empty_60
+  ret i34 %empty_62
 }
 
 define weak i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16, i16) nounwind readnone {
 entry:
   %empty = zext i16 %0 to i32
-  %empty_6 = zext i16 %1 to i32
-  %empty_7 = shl i32 %empty, 16
-  %empty_8 = or i32 %empty_7, %empty_6
-  ret i32 %empty_8
+  %empty_63 = zext i16 %1 to i32
+  %empty_64 = shl i32 %empty, 16
+  %empty_65 = or i32 %empty_64, %empty_63
+  ret i32 %empty_65
 }
 
-declare void @_GLOBAL__I_a25() nounwind
+define weak i30 @_ssdm_op_BitConcatenate.i30.i16.i14(i16, i14) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i30
+  %empty_66 = zext i14 %1 to i30
+  %empty_67 = shl i30 %empty, 14
+  %empty_68 = or i30 %empty_67, %empty_66
+  ret i30 %empty_68
+}
 
-declare void @_GLOBAL__I_a() nounwind
+define weak i25 @_ssdm_op_BitConcatenate.i25.i22.i3(i22, i3) nounwind readnone {
+entry:
+  %empty = zext i22 %0 to i25
+  %empty_69 = zext i3 %1 to i25
+  %empty_70 = shl i25 %empty, 3
+  %empty_71 = or i25 %empty_70, %empty_69
+  ret i25 %empty_71
+}
 
-!opencl.kernels = !{!0, !7, !13, !19, !19, !13, !13, !22, !22, !24, !28, !30, !30, !13, !32, !13, !13, !13, !30, !30, !35, !13, !13, !13, !37, !37, !30, !30, !39, !39, !41, !44, !44, !50, !50, !50, !13, !13, !13, !53, !56, !13, !13, !58, !60, !13, !13, !13, !13, !13, !13, !13, !13, !62, !62, !62, !62, !65, !65, !65, !65, !67, !67, !67, !67, !62, !62, !62, !62, !65, !65, !65, !65, !67, !67, !67, !67, !68, !71, !13, !13, !13, !75, !78, !78, !13, !79, !79, !81, !13, !13, !13, !19, !19, !13, !13, !83, !86, !86, !13, !88, !90, !90, !13, !92, !92, !94, !92, !92, !94, !96, !78, !78, !102, !13, !13, !13, !104, !78, !78, !13, !13, !13, !106, !78, !78, !108, !13, !13, !13, !37, !37, !110, !110, !112, !13, !13, !94, !94, !13, !114, !116, !119, !119, !41, !41, !123, !123, !125, !127, !127, !13, !13, !13, !13, !128, !130, !130, !13, !13, !41, !131, !131, !133, !133, !135, !137, !137, !138, !140, !140, !138, !142, !142, !144, !146, !146, !13, !13, !147, !149, !149, !41, !41, !150, !150, !144, !147, !149, !149, !13, !41, !152, !152, !154, !155, !155, !157, !13, !114, !154, !159, !159, !114, !114, !13, !13, !13, !13, !13, !13, !13, !13, !68, !161, !13, !13, !13, !75, !163, !163, !165, !13, !19, !19, !13, !13, !167, !88, !169, !169, !13, !171, !171, !173, !171, !171, !173, !96, !175, !13, !13, !13, !177, !78, !78, !112, !13, !13, !173, !173, !140, !140, !138, !68, !179, !13, !13, !13, !75, !78, !78, !13, !181, !181, !183, !13, !19, !19, !13, !13, !185, !88, !187, !187, !13, !189, !189, !191, !189, !189, !191, !96, !193, !13, !13, !13, !195, !78, !78, !112, !13, !13, !191, !191, !140, !140, !138, !68, !197, !13, !13, !13, !75, !78, !78, !13, !199, !199, !201, !13, !19, !19, !13, !13, !203, !88, !205, !205, !13, !207, !207, !209, !207, !207, !209, !96, !211, !13, !13, !13, !213, !78, !78, !112, !13, !13, !209, !209, !140, !140, !138, !215, !217, !13, !219, !219, !221, !219, !219, !221, !223, !13, !13, !13, !225, !78, !78, !13, !227, !229, !231, !231, !112, !13, !13, !221, !221, !13, !114, !116, !233, !233, !41, !41, !235, !235, !237, !239, !239, !13, !13, !13, !13, !240, !242, !242, !13, !13, !41, !243, !243, !133, !133, !135, !137, !137, !245, !247, !247, !245, !249, !249, !250, !252, !252, !13, !13, !253, !255, !255, !41, !41, !256, !256, !250, !253, !255, !255, !41, !258, !258, !154, !260, !260, !262, !13, !264, !264, !13, !13, !13, !13, !215, !265, !267, !267, !269, !267, !267, !269, !271, !13, !13, !13, !273, !78, !78, !112, !13, !13, !269, !269, !247, !247, !245, !215, !275, !277, !277, !279, !277, !277, !279, !281, !13, !13, !13, !283, !78, !78, !112, !13, !13, !279, !279, !247, !247, !245, !215, !285, !287, !287, !289, !287, !287, !289, !291, !13, !13, !13, !293, !78, !78, !112, !13, !13, !289, !289, !247, !247, !245, !295, !297, !13, !299, !301, !302, !302, !304, !302, !302, !304, !306, !13, !13, !13, !308, !78, !78, !13, !310, !311, !313, !313, !112, !13, !13, !304, !304, !13, !114, !116, !315, !315, !41, !41, !317, !317, !319, !321, !321, !13, !13, !13, !322, !324, !324, !13, !41, !325, !325, !133, !133, !135, !137, !137, !327, !329, !329, !327, !331, !331, !332, !334, !334, !13, !13, !335, !337, !337, !41, !41, !338, !338, !332, !335, !337, !337, !13, !41, !340, !340, !154, !342, !342, !344, !13, !346, !346, !13, !13, !13, !13, !13, !295, !348, !350, !350, !352, !350, !350, !352, !354, !13, !13, !356, !78, !78, !112, !13, !13, !352, !352, !329, !329, !327, !295, !358, !360, !360, !362, !360, !360, !362, !364, !13, !13, !13, !366, !78, !78, !112, !13, !13, !362, !362, !329, !329, !327, !295, !368, !370, !370, !372, !370, !370, !372, !374, !13, !13, !13, !376, !78, !78, !112, !13, !13, !372, !372, !329, !329, !327, !68, !378, !13, !13, !13, !13, !380, !380, !382, !382, !384, !386, !386, !13, !114, !154, !388, !388, !19, !19, !13, !390, !88, !392, !392, !13, !92, !92, !94, !92, !92, !94, !96, !68, !394, !13, !13, !13, !13, !396, !396, !137, !137, !398, !400, !400, !13, !114, !154, !402, !402, !19, !19, !13, !404, !88, !406, !406, !13, !171, !171, !173, !13, !171, !171, !173, !96, !68, !408, !13, !13, !13, !13, !410, !410, !412, !412, !414, !416, !416, !13, !114, !154, !418, !418, !19, !19, !13, !420, !88, !422, !422, !13, !189, !189, !191, !13, !189, !189, !191, !96, !68, !424, !13, !13, !13, !13, !426, !426, !428, !428, !430, !432, !432, !13, !114, !154, !434, !434, !19, !19, !13, !436, !88, !438, !438, !13, !207, !207, !209, !13, !207, !207, !209, !96, !215, !440, !219, !219, !221, !219, !219, !221, !215, !442, !267, !267, !269, !267, !267, !269, !215, !444, !277, !277, !279, !277, !277, !279, !215, !446, !287, !287, !289, !287, !287, !289, !295, !448, !302, !302, !304, !302, !302, !304, !295, !450, !350, !350, !352, !350, !350, !352, !295, !452, !360, !360, !362, !360, !360, !362, !295, !454, !370, !370, !372, !370, !370, !372, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !460, !460, !461, !13, !463, !13, !13, !13, !465, !465, !467, !467, !469, !13, !13, !13, !471, !13, !13, !13, !13, !472, !13, !133, !133, !135, !137, !137, !474, !460, !460, !461, !472, !133, !133, !135, !137, !137, !476, !460, !460, !461, !472, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !478, !478, !478, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !478, !478, !478, !13, !478, !478, !478, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456, !13, !456, !456, !456}
+define weak i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16, i7) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i23
+  %empty_72 = zext i7 %1 to i23
+  %empty_73 = shl i23 %empty, 7
+  %empty_74 = or i23 %empty_73, %empty_72
+  ret i23 %empty_74
+}
+
+define weak i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16, i6) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i22
+  %empty_75 = zext i6 %1 to i22
+  %empty_76 = shl i22 %empty, 6
+  %empty_77 = or i22 %empty_76, %empty_75
+  ret i22 %empty_77
+}
+
+define weak i21 @_ssdm_op_BitConcatenate.i21.i16.i5(i16, i5) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i21
+  %empty_78 = zext i5 %1 to i21
+  %empty_79 = shl i21 %empty, 5
+  %empty_80 = or i21 %empty_79, %empty_78
+  ret i21 %empty_80
+}
+
+define weak i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16, i4) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i20
+  %empty_81 = zext i4 %1 to i20
+  %empty_82 = shl i20 %empty, 4
+  %empty_83 = or i20 %empty_82, %empty_81
+  ret i20 %empty_83
+}
+
+define weak i19 @_ssdm_op_BitConcatenate.i19.i16.i3(i16, i3) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i19
+  %empty_84 = zext i3 %1 to i19
+  %empty_85 = shl i19 %empty, 3
+  %empty_86 = or i19 %empty_85, %empty_84
+  ret i19 %empty_86
+}
+
+define weak i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16, i2) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i18
+  %empty_87 = zext i2 %1 to i18
+  %empty_88 = shl i18 %empty, 2
+  %empty_89 = or i18 %empty_88, %empty_87
+  ret i18 %empty_89
+}
+
+define weak i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16, i1) nounwind readnone {
+entry:
+  %empty = zext i16 %0 to i17
+  %empty_90 = zext i1 %1 to i17
+  %empty_91 = shl i17 %empty, 1
+  %empty_92 = or i17 %empty_91, %empty_90
+  ret i17 %empty_92
+}
+
+declare void @_GLOBAL__I_a() nounwind section ".text.startup"
+
+!opencl.kernels = !{!0, !7, !10, !16, !22, !22, !10, !24, !24, !10, !10, !26, !26, !28, !30, !36, !38, !38, !38, !30, !10, !40, !43, !43, !10, !28, !28, !10, !10, !44, !10, !10, !10, !10, !46, !46, !48, !50, !50, !52, !52, !28, !26, !10, !10, !10, !10, !10, !10, !54, !56, !59, !10, !61, !61, !61, !10, !10, !10, !64, !66, !69, !69, !73, !75, !78, !10, !10, !10, !10, !10, !10, !10, !80, !80, !82, !10, !84, !84, !10, !85, !10, !10, !10, !88, !88, !90, !90, !92, !10, !10, !10, !94, !84, !84, !97, !10, !10, !10, !99, !99, !101, !101, !103, !10, !10, !10, !10, !10, !10, !105, !10, !10, !10, !10, !10, !10, !10, !10, !10, !10}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!482}
+!llvm.map.gv = !{!107}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0}
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none"}
-!3 = metadata !{metadata !"kernel_arg_type", metadata !"hls::stream<axis_fixed>", metadata !"hls::stream<axis_fixed>"}
+!3 = metadata !{metadata !"kernel_arg_type", metadata !"hls::stream<rfnoc_axis>", metadata !"hls::stream<rfnoc_axis>"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !""}
-!5 = metadata !{metadata !"kernel_arg_name", metadata !"in", metadata !"out"}
+!5 = metadata !{metadata !"kernel_arg_name", metadata !"i_data", metadata !"o_data"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}
-!7 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !12, metadata !6}
-!8 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
-!9 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!10 = metadata !{metadata !"kernel_arg_type", metadata !"const struct axis_fixed &"}
-!11 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
-!12 = metadata !{metadata !"kernel_arg_name", metadata !"din"}
-!13 = metadata !{null, metadata !14, metadata !15, metadata !16, metadata !17, metadata !18, metadata !6}
-!14 = metadata !{metadata !"kernel_arg_addr_space"}
-!15 = metadata !{metadata !"kernel_arg_access_qual"}
-!16 = metadata !{metadata !"kernel_arg_type"}
-!17 = metadata !{metadata !"kernel_arg_type_qual"}
-!18 = metadata !{metadata !"kernel_arg_name"}
-!19 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !21, metadata !6}
-!20 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
+!7 = metadata !{null, metadata !1, metadata !2, metadata !8, metadata !4, metadata !9, metadata !6}
+!8 = metadata !{metadata !"kernel_arg_type", metadata !"fixedMatch", metadata !"fixedMatch"}
+!9 = metadata !{metadata !"kernel_arg_name", metadata !"newVali", metadata !"newValq"}
+!10 = metadata !{null, metadata !11, metadata !12, metadata !13, metadata !14, metadata !15, metadata !6}
+!11 = metadata !{metadata !"kernel_arg_addr_space"}
+!12 = metadata !{metadata !"kernel_arg_access_qual"}
+!13 = metadata !{metadata !"kernel_arg_type"}
+!14 = metadata !{metadata !"kernel_arg_type_qual"}
+!15 = metadata !{metadata !"kernel_arg_name"}
+!16 = metadata !{null, metadata !17, metadata !18, metadata !19, metadata !20, metadata !21, metadata !6}
+!17 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
+!18 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
+!19 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<16, true> &"}
+!20 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
 !21 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
-!22 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !21, metadata !6}
-!23 = metadata !{metadata !"kernel_arg_type", metadata !"double"}
-!24 = metadata !{null, metadata !25, metadata !9, metadata !26, metadata !11, metadata !27, metadata !6}
-!25 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
-!26 = metadata !{metadata !"kernel_arg_type", metadata !"struct axis_fixed*"}
-!27 = metadata !{metadata !"kernel_arg_name", metadata !"in"}
-!28 = metadata !{null, metadata !8, metadata !9, metadata !29, metadata !11, metadata !21, metadata !6}
-!29 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<16, true> &"}
-!30 = metadata !{null, metadata !8, metadata !9, metadata !29, metadata !11, metadata !31, metadata !6}
-!31 = metadata !{metadata !"kernel_arg_name", metadata !"op"}
-!32 = metadata !{null, metadata !1, metadata !2, metadata !33, metadata !4, metadata !34, metadata !6}
-!33 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<16, true> &", metadata !"const ap_int_base<16, true> &"}
-!34 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"op2"}
-!35 = metadata !{null, metadata !1, metadata !2, metadata !36, metadata !4, metadata !34, metadata !6}
-!36 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<16, true> &", metadata !"const ap_int_base<32, true> &"}
-!37 = metadata !{null, metadata !8, metadata !9, metadata !38, metadata !11, metadata !31, metadata !6}
-!38 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &"}
-!39 = metadata !{null, metadata !8, metadata !9, metadata !40, metadata !11, metadata !31, metadata !6}
-!40 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
-!41 = metadata !{null, metadata !1, metadata !2, metadata !42, metadata !4, metadata !43, metadata !6}
-!42 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
-!43 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
-!44 = metadata !{null, metadata !45, metadata !46, metadata !47, metadata !48, metadata !49, metadata !6}
-!45 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
-!46 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!47 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
-!48 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!49 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
-!50 = metadata !{null, metadata !8, metadata !9, metadata !51, metadata !11, metadata !52, metadata !6}
-!51 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<32, true> &"}
-!52 = metadata !{metadata !"kernel_arg_name", metadata !"ref"}
-!53 = metadata !{null, metadata !8, metadata !9, metadata !54, metadata !11, metadata !55, metadata !6}
-!54 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<16> &"}
-!55 = metadata !{metadata !"kernel_arg_name", metadata !"op2"}
-!56 = metadata !{null, metadata !8, metadata !9, metadata !57, metadata !11, metadata !55, metadata !6}
-!57 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
-!58 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !59, metadata !6}
-!59 = metadata !{metadata !"kernel_arg_name", metadata !""}
-!60 = metadata !{null, metadata !8, metadata !9, metadata !61, metadata !11, metadata !55, metadata !6}
-!61 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
-!62 = metadata !{null, metadata !8, metadata !9, metadata !63, metadata !11, metadata !64, metadata !6}
-!63 = metadata !{metadata !"kernel_arg_type", metadata !"half"}
-!64 = metadata !{metadata !"kernel_arg_name", metadata !"x"}
-!65 = metadata !{null, metadata !8, metadata !9, metadata !66, metadata !11, metadata !64, metadata !6}
-!66 = metadata !{metadata !"kernel_arg_type", metadata !"float"}
-!67 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !64, metadata !6}
-!68 = metadata !{null, metadata !1, metadata !2, metadata !69, metadata !4, metadata !70, metadata !6}
-!69 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool"}
-!70 = metadata !{metadata !"kernel_arg_name", metadata !"x", metadata !"detect_overflow"}
-!71 = metadata !{null, metadata !72, metadata !46, metadata !73, metadata !48, metadata !74, metadata !6}
-!72 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0}
-!73 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ulong long>::is_signed, _Bool>::type"}
-!74 = metadata !{metadata !"kernel_arg_name", metadata !"x", metadata !"detect_overflow", metadata !""}
-!75 = metadata !{null, metadata !8, metadata !9, metadata !76, metadata !11, metadata !77, metadata !6}
-!76 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool"}
-!77 = metadata !{metadata !"kernel_arg_name", metadata !"Cnative"}
-!78 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !31, metadata !6}
-!79 = metadata !{null, metadata !8, metadata !9, metadata !80, metadata !11, metadata !31, metadata !6}
-!80 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<64, 64, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!81 = metadata !{null, metadata !8, metadata !9, metadata !82, metadata !11, metadata !31, metadata !6}
-!82 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<64, 64, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!83 = metadata !{null, metadata !1, metadata !2, metadata !84, metadata !4, metadata !85, metadata !6}
-!84 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 65, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!85 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
-!86 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !87, metadata !6}
-!87 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
-!88 = metadata !{null, metadata !8, metadata !9, metadata !89, metadata !11, metadata !55, metadata !6}
-!89 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!90 = metadata !{null, metadata !8, metadata !9, metadata !91, metadata !11, metadata !31, metadata !6}
-!91 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 65, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!92 = metadata !{null, metadata !8, metadata !9, metadata !93, metadata !11, metadata !31, metadata !6}
-!93 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<169, 116, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!94 = metadata !{null, metadata !8, metadata !9, metadata !95, metadata !11, metadata !31, metadata !6}
-!95 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<169, 116, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!96 = metadata !{null, metadata !97, metadata !98, metadata !99, metadata !100, metadata !101, metadata !6}
-!97 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0}
-!98 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!99 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool", metadata !"_Bool", metadata !"_Bool", metadata !"_Bool"}
-!100 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !"", metadata !""}
-!101 = metadata !{metadata !"kernel_arg_name", metadata !"underflow", metadata !"overflow", metadata !"lD", metadata !"sign"}
-!102 = metadata !{null, metadata !1, metadata !2, metadata !103, metadata !4, metadata !34, metadata !6}
-!103 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<169, false> &", metadata !"int"}
-!104 = metadata !{null, metadata !8, metadata !9, metadata !105, metadata !11, metadata !55, metadata !6}
-!105 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<169, false> &"}
-!106 = metadata !{null, metadata !1, metadata !2, metadata !107, metadata !4, metadata !85, metadata !6}
-!107 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &", metadata !"int"}
-!108 = metadata !{null, metadata !1, metadata !2, metadata !109, metadata !4, metadata !34, metadata !6}
-!109 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &", metadata !"const ap_int_base<32, true> &"}
-!110 = metadata !{null, metadata !8, metadata !9, metadata !111, metadata !11, metadata !31, metadata !6}
-!111 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &"}
-!112 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !113, metadata !6}
-!113 = metadata !{metadata !"kernel_arg_name", metadata !"sh"}
-!114 = metadata !{null, metadata !8, metadata !9, metadata !115, metadata !11, metadata !21, metadata !6}
-!115 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
-!116 = metadata !{null, metadata !8, metadata !9, metadata !117, metadata !11, metadata !118, metadata !6}
-!117 = metadata !{metadata !"kernel_arg_type", metadata !"uint"}
-!118 = metadata !{metadata !"kernel_arg_name", metadata !"index"}
-!119 = metadata !{null, metadata !120, metadata !2, metadata !121, metadata !4, metadata !122, metadata !6}
-!120 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0}
-!121 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<53, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int"}
-!122 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"index"}
-!123 = metadata !{null, metadata !45, metadata !46, metadata !124, metadata !48, metadata !49, metadata !6}
-!124 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<52, false>*", metadata !"int", metadata !"int"}
-!125 = metadata !{null, metadata !8, metadata !9, metadata !126, metadata !11, metadata !21, metadata !6}
-!126 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<52, false> &"}
-!127 = metadata !{null, metadata !8, metadata !9, metadata !126, metadata !11, metadata !52, metadata !6}
-!128 = metadata !{null, metadata !8, metadata !9, metadata !129, metadata !11, metadata !21, metadata !6}
-!129 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<52, false> &"}
-!130 = metadata !{null, metadata !8, metadata !9, metadata !129, metadata !11, metadata !31, metadata !6}
-!131 = metadata !{null, metadata !45, metadata !46, metadata !132, metadata !48, metadata !49, metadata !6}
-!132 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<53, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
-!133 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !134, metadata !6}
-!134 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
-!135 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !136, metadata !6}
-!136 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
-!137 = metadata !{null, metadata !8, metadata !9, metadata !89, metadata !11, metadata !31, metadata !6}
-!138 = metadata !{null, metadata !8, metadata !9, metadata !139, metadata !11, metadata !31, metadata !6}
-!139 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<53, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!140 = metadata !{null, metadata !8, metadata !9, metadata !141, metadata !11, metadata !31, metadata !6}
-!141 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<53, 1, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!142 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !143, metadata !6}
-!143 = metadata !{metadata !"kernel_arg_name", metadata !"f"}
-!144 = metadata !{null, metadata !8, metadata !9, metadata !145, metadata !11, metadata !21, metadata !6}
-!145 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<64, false> &"}
-!146 = metadata !{null, metadata !8, metadata !9, metadata !145, metadata !11, metadata !52, metadata !6}
-!147 = metadata !{null, metadata !8, metadata !9, metadata !148, metadata !11, metadata !21, metadata !6}
-!148 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<64, false> &"}
-!149 = metadata !{null, metadata !8, metadata !9, metadata !148, metadata !11, metadata !31, metadata !6}
-!150 = metadata !{null, metadata !45, metadata !46, metadata !151, metadata !48, metadata !49, metadata !6}
-!151 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<64, false>*", metadata !"int", metadata !"int"}
-!152 = metadata !{null, metadata !45, metadata !46, metadata !153, metadata !48, metadata !49, metadata !6}
-!153 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<11, false>*", metadata !"int", metadata !"int"}
-!154 = metadata !{null, metadata !8, metadata !9, metadata !20, metadata !11, metadata !118, metadata !6}
-!155 = metadata !{null, metadata !120, metadata !2, metadata !156, metadata !4, metadata !122, metadata !6}
-!156 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<64, false>*", metadata !"int"}
-!157 = metadata !{null, metadata !8, metadata !9, metadata !158, metadata !11, metadata !21, metadata !6}
-!158 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_bit_ref<64, false> &"}
-!159 = metadata !{null, metadata !120, metadata !2, metadata !160, metadata !4, metadata !122, metadata !6}
-!160 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<1, false>*", metadata !"int"}
-!161 = metadata !{null, metadata !72, metadata !46, metadata !162, metadata !48, metadata !74, metadata !6}
-!162 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uint>::is_signed, _Bool>::type"}
-!163 = metadata !{null, metadata !8, metadata !9, metadata !164, metadata !11, metadata !31, metadata !6}
-!164 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<32, 32, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!165 = metadata !{null, metadata !8, metadata !9, metadata !166, metadata !11, metadata !31, metadata !6}
-!166 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!167 = metadata !{null, metadata !1, metadata !2, metadata !168, metadata !4, metadata !85, metadata !6}
-!168 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 33, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!169 = metadata !{null, metadata !8, metadata !9, metadata !170, metadata !11, metadata !31, metadata !6}
-!170 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 33, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!171 = metadata !{null, metadata !8, metadata !9, metadata !172, metadata !11, metadata !31, metadata !6}
-!172 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<137, 84, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!173 = metadata !{null, metadata !8, metadata !9, metadata !174, metadata !11, metadata !31, metadata !6}
-!174 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<137, 84, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!175 = metadata !{null, metadata !1, metadata !2, metadata !176, metadata !4, metadata !34, metadata !6}
-!176 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<137, false> &", metadata !"int"}
-!177 = metadata !{null, metadata !8, metadata !9, metadata !178, metadata !11, metadata !55, metadata !6}
-!178 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<137, false> &"}
-!179 = metadata !{null, metadata !72, metadata !46, metadata !180, metadata !48, metadata !74, metadata !6}
-!180 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ushort>::is_signed, _Bool>::type"}
-!181 = metadata !{null, metadata !8, metadata !9, metadata !182, metadata !11, metadata !31, metadata !6}
-!182 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<16, 16, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!183 = metadata !{null, metadata !8, metadata !9, metadata !184, metadata !11, metadata !31, metadata !6}
-!184 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<16, 16, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!185 = metadata !{null, metadata !1, metadata !2, metadata !186, metadata !4, metadata !85, metadata !6}
-!186 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 17, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!187 = metadata !{null, metadata !8, metadata !9, metadata !188, metadata !11, metadata !31, metadata !6}
-!188 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 17, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!189 = metadata !{null, metadata !8, metadata !9, metadata !190, metadata !11, metadata !31, metadata !6}
-!190 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<121, 68, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!191 = metadata !{null, metadata !8, metadata !9, metadata !192, metadata !11, metadata !31, metadata !6}
-!192 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<121, 68, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!193 = metadata !{null, metadata !1, metadata !2, metadata !194, metadata !4, metadata !34, metadata !6}
-!194 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<121, false> &", metadata !"int"}
-!195 = metadata !{null, metadata !8, metadata !9, metadata !196, metadata !11, metadata !55, metadata !6}
-!196 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<121, false> &"}
-!197 = metadata !{null, metadata !72, metadata !46, metadata !198, metadata !48, metadata !74, metadata !6}
-!198 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uchar>::is_signed, _Bool>::type"}
-!199 = metadata !{null, metadata !8, metadata !9, metadata !200, metadata !11, metadata !31, metadata !6}
-!200 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<8, 8, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!201 = metadata !{null, metadata !8, metadata !9, metadata !202, metadata !11, metadata !31, metadata !6}
-!202 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<8, 8, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!203 = metadata !{null, metadata !1, metadata !2, metadata !204, metadata !4, metadata !85, metadata !6}
-!204 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 9, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!205 = metadata !{null, metadata !8, metadata !9, metadata !206, metadata !11, metadata !31, metadata !6}
-!206 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 9, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!207 = metadata !{null, metadata !8, metadata !9, metadata !208, metadata !11, metadata !31, metadata !6}
-!208 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<113, 60, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!209 = metadata !{null, metadata !8, metadata !9, metadata !210, metadata !11, metadata !31, metadata !6}
-!210 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<113, 60, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!211 = metadata !{null, metadata !1, metadata !2, metadata !212, metadata !4, metadata !34, metadata !6}
-!212 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<113, false> &", metadata !"int"}
-!213 = metadata !{null, metadata !8, metadata !9, metadata !214, metadata !11, metadata !55, metadata !6}
-!214 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<113, false> &"}
-!215 = metadata !{null, metadata !1, metadata !2, metadata !216, metadata !4, metadata !70, metadata !6}
-!216 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool"}
-!217 = metadata !{null, metadata !72, metadata !46, metadata !218, metadata !48, metadata !74, metadata !6}
-!218 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ulong long>::is_signed, _Bool>::type"}
-!219 = metadata !{null, metadata !8, metadata !9, metadata !220, metadata !11, metadata !31, metadata !6}
-!220 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<111, 87, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!221 = metadata !{null, metadata !8, metadata !9, metadata !222, metadata !11, metadata !31, metadata !6}
-!222 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<111, 87, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!223 = metadata !{null, metadata !1, metadata !2, metadata !224, metadata !4, metadata !34, metadata !6}
-!224 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<111, false> &", metadata !"int"}
-!225 = metadata !{null, metadata !8, metadata !9, metadata !226, metadata !11, metadata !55, metadata !6}
-!226 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<111, false> &"}
-!227 = metadata !{null, metadata !1, metadata !2, metadata !228, metadata !4, metadata !85, metadata !6}
-!228 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &", metadata !"int"}
-!229 = metadata !{null, metadata !1, metadata !2, metadata !230, metadata !4, metadata !34, metadata !6}
-!230 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &", metadata !"const ap_int_base<32, true> &"}
-!231 = metadata !{null, metadata !8, metadata !9, metadata !232, metadata !11, metadata !31, metadata !6}
-!232 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &"}
-!233 = metadata !{null, metadata !120, metadata !2, metadata !234, metadata !4, metadata !122, metadata !6}
-!234 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<24, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int"}
-!235 = metadata !{null, metadata !45, metadata !46, metadata !236, metadata !48, metadata !49, metadata !6}
-!236 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<23, false>*", metadata !"int", metadata !"int"}
-!237 = metadata !{null, metadata !8, metadata !9, metadata !238, metadata !11, metadata !21, metadata !6}
-!238 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<23, false> &"}
-!239 = metadata !{null, metadata !8, metadata !9, metadata !238, metadata !11, metadata !52, metadata !6}
-!240 = metadata !{null, metadata !8, metadata !9, metadata !241, metadata !11, metadata !21, metadata !6}
-!241 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, false> &"}
-!242 = metadata !{null, metadata !8, metadata !9, metadata !241, metadata !11, metadata !31, metadata !6}
-!243 = metadata !{null, metadata !45, metadata !46, metadata !244, metadata !48, metadata !49, metadata !6}
-!244 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<24, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
-!245 = metadata !{null, metadata !8, metadata !9, metadata !246, metadata !11, metadata !31, metadata !6}
-!246 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<24, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!247 = metadata !{null, metadata !8, metadata !9, metadata !248, metadata !11, metadata !31, metadata !6}
-!248 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<24, 1, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!249 = metadata !{null, metadata !8, metadata !9, metadata !66, metadata !11, metadata !143, metadata !6}
-!250 = metadata !{null, metadata !8, metadata !9, metadata !251, metadata !11, metadata !21, metadata !6}
-!251 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<32, false> &"}
-!252 = metadata !{null, metadata !8, metadata !9, metadata !251, metadata !11, metadata !52, metadata !6}
-!253 = metadata !{null, metadata !8, metadata !9, metadata !254, metadata !11, metadata !21, metadata !6}
-!254 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, false> &"}
-!255 = metadata !{null, metadata !8, metadata !9, metadata !254, metadata !11, metadata !31, metadata !6}
-!256 = metadata !{null, metadata !45, metadata !46, metadata !257, metadata !48, metadata !49, metadata !6}
-!257 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, false>*", metadata !"int", metadata !"int"}
-!258 = metadata !{null, metadata !45, metadata !46, metadata !259, metadata !48, metadata !49, metadata !6}
-!259 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<8, false>*", metadata !"int", metadata !"int"}
-!260 = metadata !{null, metadata !120, metadata !2, metadata !261, metadata !4, metadata !122, metadata !6}
-!261 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, false>*", metadata !"int"}
-!262 = metadata !{null, metadata !8, metadata !9, metadata !263, metadata !11, metadata !21, metadata !6}
-!263 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_bit_ref<32, false> &"}
-!264 = metadata !{null, metadata !8, metadata !9, metadata !117, metadata !11, metadata !21, metadata !6}
-!265 = metadata !{null, metadata !72, metadata !46, metadata !266, metadata !48, metadata !74, metadata !6}
-!266 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uint>::is_signed, _Bool>::type"}
-!267 = metadata !{null, metadata !8, metadata !9, metadata !268, metadata !11, metadata !31, metadata !6}
-!268 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<79, 55, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!269 = metadata !{null, metadata !8, metadata !9, metadata !270, metadata !11, metadata !31, metadata !6}
-!270 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<79, 55, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!271 = metadata !{null, metadata !1, metadata !2, metadata !272, metadata !4, metadata !34, metadata !6}
-!272 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<79, false> &", metadata !"int"}
-!273 = metadata !{null, metadata !8, metadata !9, metadata !274, metadata !11, metadata !55, metadata !6}
-!274 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<79, false> &"}
-!275 = metadata !{null, metadata !72, metadata !46, metadata !276, metadata !48, metadata !74, metadata !6}
-!276 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ushort>::is_signed, _Bool>::type"}
-!277 = metadata !{null, metadata !8, metadata !9, metadata !278, metadata !11, metadata !31, metadata !6}
-!278 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<63, 39, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!279 = metadata !{null, metadata !8, metadata !9, metadata !280, metadata !11, metadata !31, metadata !6}
-!280 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<63, 39, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!281 = metadata !{null, metadata !1, metadata !2, metadata !282, metadata !4, metadata !34, metadata !6}
-!282 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<63, false> &", metadata !"int"}
-!283 = metadata !{null, metadata !8, metadata !9, metadata !284, metadata !11, metadata !55, metadata !6}
-!284 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<63, false> &"}
-!285 = metadata !{null, metadata !72, metadata !46, metadata !286, metadata !48, metadata !74, metadata !6}
-!286 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uchar>::is_signed, _Bool>::type"}
-!287 = metadata !{null, metadata !8, metadata !9, metadata !288, metadata !11, metadata !31, metadata !6}
-!288 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<55, 31, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!289 = metadata !{null, metadata !8, metadata !9, metadata !290, metadata !11, metadata !31, metadata !6}
-!290 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<55, 31, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!291 = metadata !{null, metadata !1, metadata !2, metadata !292, metadata !4, metadata !34, metadata !6}
-!292 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, false> &", metadata !"int"}
-!293 = metadata !{null, metadata !8, metadata !9, metadata !294, metadata !11, metadata !55, metadata !6}
-!294 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, false> &"}
-!295 = metadata !{null, metadata !1, metadata !2, metadata !296, metadata !4, metadata !70, metadata !6}
-!296 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool"}
-!297 = metadata !{null, metadata !72, metadata !46, metadata !298, metadata !48, metadata !74, metadata !6}
-!298 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ulong long>::is_signed, _Bool>::type"}
-!299 = metadata !{null, metadata !1, metadata !2, metadata !300, metadata !4, metadata !34, metadata !6}
-!300 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<5, false> &", metadata !"int"}
-!301 = metadata !{null, metadata !8, metadata !9, metadata !38, metadata !11, metadata !55, metadata !6}
-!302 = metadata !{null, metadata !8, metadata !9, metadata !303, metadata !11, metadata !31, metadata !6}
-!303 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<85, 74, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!304 = metadata !{null, metadata !8, metadata !9, metadata !305, metadata !11, metadata !31, metadata !6}
-!305 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<85, 74, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!306 = metadata !{null, metadata !1, metadata !2, metadata !307, metadata !4, metadata !34, metadata !6}
-!307 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<85, false> &", metadata !"int"}
-!308 = metadata !{null, metadata !8, metadata !9, metadata !309, metadata !11, metadata !55, metadata !6}
-!309 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<85, false> &"}
-!310 = metadata !{null, metadata !1, metadata !2, metadata !300, metadata !4, metadata !85, metadata !6}
-!311 = metadata !{null, metadata !1, metadata !2, metadata !312, metadata !4, metadata !34, metadata !6}
-!312 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<5, false> &", metadata !"const ap_int_base<32, true> &"}
-!313 = metadata !{null, metadata !8, metadata !9, metadata !314, metadata !11, metadata !31, metadata !6}
-!314 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<5, false> &"}
-!315 = metadata !{null, metadata !120, metadata !2, metadata !316, metadata !4, metadata !122, metadata !6}
-!316 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<11, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int"}
-!317 = metadata !{null, metadata !45, metadata !46, metadata !318, metadata !48, metadata !49, metadata !6}
-!318 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<10, false>*", metadata !"int", metadata !"int"}
-!319 = metadata !{null, metadata !8, metadata !9, metadata !320, metadata !11, metadata !21, metadata !6}
-!320 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<10, false> &"}
-!321 = metadata !{null, metadata !8, metadata !9, metadata !320, metadata !11, metadata !52, metadata !6}
-!322 = metadata !{null, metadata !8, metadata !9, metadata !323, metadata !11, metadata !21, metadata !6}
-!323 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<10, false> &"}
-!324 = metadata !{null, metadata !8, metadata !9, metadata !323, metadata !11, metadata !31, metadata !6}
-!325 = metadata !{null, metadata !45, metadata !46, metadata !326, metadata !48, metadata !49, metadata !6}
-!326 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<11, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
-!327 = metadata !{null, metadata !8, metadata !9, metadata !328, metadata !11, metadata !31, metadata !6}
-!328 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<11, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!329 = metadata !{null, metadata !8, metadata !9, metadata !330, metadata !11, metadata !31, metadata !6}
-!330 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<11, 1, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!331 = metadata !{null, metadata !8, metadata !9, metadata !63, metadata !11, metadata !143, metadata !6}
-!332 = metadata !{null, metadata !8, metadata !9, metadata !333, metadata !11, metadata !21, metadata !6}
-!333 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<16, false> &"}
-!334 = metadata !{null, metadata !8, metadata !9, metadata !333, metadata !11, metadata !52, metadata !6}
-!335 = metadata !{null, metadata !8, metadata !9, metadata !336, metadata !11, metadata !21, metadata !6}
-!336 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<16, false> &"}
-!337 = metadata !{null, metadata !8, metadata !9, metadata !336, metadata !11, metadata !31, metadata !6}
-!338 = metadata !{null, metadata !45, metadata !46, metadata !339, metadata !48, metadata !49, metadata !6}
-!339 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<16, false>*", metadata !"int", metadata !"int"}
-!340 = metadata !{null, metadata !45, metadata !46, metadata !341, metadata !48, metadata !49, metadata !6}
-!341 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<5, false>*", metadata !"int", metadata !"int"}
-!342 = metadata !{null, metadata !120, metadata !2, metadata !343, metadata !4, metadata !122, metadata !6}
-!343 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<16, false>*", metadata !"int"}
-!344 = metadata !{null, metadata !8, metadata !9, metadata !345, metadata !11, metadata !21, metadata !6}
-!345 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_bit_ref<16, false> &"}
-!346 = metadata !{null, metadata !8, metadata !9, metadata !347, metadata !11, metadata !21, metadata !6}
-!347 = metadata !{metadata !"kernel_arg_type", metadata !"ushort"}
-!348 = metadata !{null, metadata !72, metadata !46, metadata !349, metadata !48, metadata !74, metadata !6}
-!349 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uint>::is_signed, _Bool>::type"}
-!350 = metadata !{null, metadata !8, metadata !9, metadata !351, metadata !11, metadata !31, metadata !6}
-!351 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<53, 42, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!352 = metadata !{null, metadata !8, metadata !9, metadata !353, metadata !11, metadata !31, metadata !6}
-!353 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<53, 42, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!354 = metadata !{null, metadata !1, metadata !2, metadata !355, metadata !4, metadata !34, metadata !6}
-!355 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<53, false> &", metadata !"int"}
-!356 = metadata !{null, metadata !8, metadata !9, metadata !357, metadata !11, metadata !55, metadata !6}
-!357 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<53, false> &"}
-!358 = metadata !{null, metadata !72, metadata !46, metadata !359, metadata !48, metadata !74, metadata !6}
-!359 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<ushort>::is_signed, _Bool>::type"}
-!360 = metadata !{null, metadata !8, metadata !9, metadata !361, metadata !11, metadata !31, metadata !6}
-!361 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<37, 26, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!362 = metadata !{null, metadata !8, metadata !9, metadata !363, metadata !11, metadata !31, metadata !6}
-!363 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<37, 26, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!364 = metadata !{null, metadata !1, metadata !2, metadata !365, metadata !4, metadata !34, metadata !6}
-!365 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<37, false> &", metadata !"int"}
-!366 = metadata !{null, metadata !8, metadata !9, metadata !367, metadata !11, metadata !55, metadata !6}
-!367 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<37, false> &"}
-!368 = metadata !{null, metadata !72, metadata !46, metadata !369, metadata !48, metadata !74, metadata !6}
-!369 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<!std::numeric_limits<uchar>::is_signed, _Bool>::type"}
-!370 = metadata !{null, metadata !8, metadata !9, metadata !371, metadata !11, metadata !31, metadata !6}
-!371 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<29, 18, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!372 = metadata !{null, metadata !8, metadata !9, metadata !373, metadata !11, metadata !31, metadata !6}
-!373 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<29, 18, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!374 = metadata !{null, metadata !1, metadata !2, metadata !375, metadata !4, metadata !34, metadata !6}
-!375 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<29, false> &", metadata !"int"}
-!376 = metadata !{null, metadata !8, metadata !9, metadata !377, metadata !11, metadata !55, metadata !6}
-!377 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<29, false> &"}
-!378 = metadata !{null, metadata !72, metadata !46, metadata !379, metadata !48, metadata !74, metadata !6}
-!379 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<long long>::is_signed, _Bool>::type"}
-!380 = metadata !{null, metadata !8, metadata !9, metadata !381, metadata !11, metadata !31, metadata !6}
-!381 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<63, 63, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!382 = metadata !{null, metadata !8, metadata !9, metadata !383, metadata !11, metadata !31, metadata !6}
-!383 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<64, 64, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!384 = metadata !{null, metadata !8, metadata !9, metadata !385, metadata !11, metadata !31, metadata !6}
-!385 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<64, 64, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!386 = metadata !{null, metadata !8, metadata !9, metadata !387, metadata !11, metadata !31, metadata !6}
-!387 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<63, 63, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!388 = metadata !{null, metadata !120, metadata !2, metadata !389, metadata !4, metadata !122, metadata !6}
-!389 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<64, true>*", metadata !"int"}
-!390 = metadata !{null, metadata !1, metadata !2, metadata !391, metadata !4, metadata !85, metadata !6}
-!391 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 64, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!392 = metadata !{null, metadata !8, metadata !9, metadata !393, metadata !11, metadata !31, metadata !6}
-!393 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 64, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!394 = metadata !{null, metadata !72, metadata !46, metadata !395, metadata !48, metadata !74, metadata !6}
-!395 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<int>::is_signed, _Bool>::type"}
-!396 = metadata !{null, metadata !8, metadata !9, metadata !397, metadata !11, metadata !31, metadata !6}
-!397 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<31, 31, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!398 = metadata !{null, metadata !8, metadata !9, metadata !399, metadata !11, metadata !31, metadata !6}
-!399 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<32, 32, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!400 = metadata !{null, metadata !8, metadata !9, metadata !401, metadata !11, metadata !31, metadata !6}
-!401 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<31, 31, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!402 = metadata !{null, metadata !120, metadata !2, metadata !403, metadata !4, metadata !122, metadata !6}
-!403 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int"}
-!404 = metadata !{null, metadata !1, metadata !2, metadata !405, metadata !4, metadata !85, metadata !6}
-!405 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 32, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!406 = metadata !{null, metadata !8, metadata !9, metadata !407, metadata !11, metadata !31, metadata !6}
-!407 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 32, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!408 = metadata !{null, metadata !72, metadata !46, metadata !409, metadata !48, metadata !74, metadata !6}
-!409 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<short>::is_signed, _Bool>::type"}
-!410 = metadata !{null, metadata !8, metadata !9, metadata !411, metadata !11, metadata !31, metadata !6}
-!411 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<15, 15, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!412 = metadata !{null, metadata !8, metadata !9, metadata !413, metadata !11, metadata !31, metadata !6}
-!413 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<16, 16, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!414 = metadata !{null, metadata !8, metadata !9, metadata !415, metadata !11, metadata !31, metadata !6}
-!415 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 16, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!416 = metadata !{null, metadata !8, metadata !9, metadata !417, metadata !11, metadata !31, metadata !6}
-!417 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<15, 15, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!418 = metadata !{null, metadata !120, metadata !2, metadata !419, metadata !4, metadata !122, metadata !6}
-!419 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<16, true>*", metadata !"int"}
-!420 = metadata !{null, metadata !1, metadata !2, metadata !421, metadata !4, metadata !85, metadata !6}
-!421 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 16, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!422 = metadata !{null, metadata !8, metadata !9, metadata !423, metadata !11, metadata !31, metadata !6}
-!423 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 16, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!424 = metadata !{null, metadata !72, metadata !46, metadata !425, metadata !48, metadata !74, metadata !6}
-!425 = metadata !{metadata !"kernel_arg_type", metadata !"double", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<signed char>::is_signed, _Bool>::type"}
-!426 = metadata !{null, metadata !8, metadata !9, metadata !427, metadata !11, metadata !31, metadata !6}
-!427 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<7, 7, false, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!428 = metadata !{null, metadata !8, metadata !9, metadata !429, metadata !11, metadata !31, metadata !6}
-!429 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<8, 8, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!430 = metadata !{null, metadata !8, metadata !9, metadata !431, metadata !11, metadata !31, metadata !6}
-!431 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<8, 8, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!432 = metadata !{null, metadata !8, metadata !9, metadata !433, metadata !11, metadata !31, metadata !6}
-!433 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_ufixed<7, 7, (enum ap_q_mode)6, (enum ap_o_mode)3, 0> &"}
-!434 = metadata !{null, metadata !120, metadata !2, metadata !435, metadata !4, metadata !122, metadata !6}
-!435 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<8, true>*", metadata !"int"}
-!436 = metadata !{null, metadata !1, metadata !2, metadata !437, metadata !4, metadata !85, metadata !6}
-!437 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 8, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &", metadata !"int"}
-!438 = metadata !{null, metadata !8, metadata !9, metadata !439, metadata !11, metadata !31, metadata !6}
-!439 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<1, 8, false, (enum ap_q_mode)5, (enum ap_o_mode)0, 0> &"}
-!440 = metadata !{null, metadata !72, metadata !46, metadata !441, metadata !48, metadata !74, metadata !6}
-!441 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<long long>::is_signed, _Bool>::type"}
-!442 = metadata !{null, metadata !72, metadata !46, metadata !443, metadata !48, metadata !74, metadata !6}
-!443 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<int>::is_signed, _Bool>::type"}
-!444 = metadata !{null, metadata !72, metadata !46, metadata !445, metadata !48, metadata !74, metadata !6}
-!445 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<short>::is_signed, _Bool>::type"}
-!446 = metadata !{null, metadata !72, metadata !46, metadata !447, metadata !48, metadata !74, metadata !6}
-!447 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<signed char>::is_signed, _Bool>::type"}
-!448 = metadata !{null, metadata !72, metadata !46, metadata !449, metadata !48, metadata !74, metadata !6}
-!449 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<long long>::is_signed, _Bool>::type"}
-!450 = metadata !{null, metadata !72, metadata !46, metadata !451, metadata !48, metadata !74, metadata !6}
-!451 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<int>::is_signed, _Bool>::type"}
-!452 = metadata !{null, metadata !72, metadata !46, metadata !453, metadata !48, metadata !74, metadata !6}
-!453 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<short>::is_signed, _Bool>::type"}
-!454 = metadata !{null, metadata !72, metadata !46, metadata !455, metadata !48, metadata !74, metadata !6}
-!455 = metadata !{metadata !"kernel_arg_type", metadata !"half", metadata !"_Bool", metadata !"typename enable_if<std::numeric_limits<signed char>::is_signed, _Bool>::type"}
-!456 = metadata !{null, metadata !25, metadata !9, metadata !457, metadata !458, metadata !459, metadata !6}
-!457 = metadata !{metadata !"kernel_arg_type", metadata !"char*"}
-!458 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const"}
-!459 = metadata !{metadata !"kernel_arg_name", metadata !"str"}
-!460 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !134, metadata !6}
-!461 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !462, metadata !6}
-!462 = metadata !{metadata !"kernel_arg_name", metadata !"d"}
-!463 = metadata !{null, metadata !1, metadata !2, metadata !464, metadata !4, metadata !34, metadata !6}
-!464 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &", metadata !"const ap_int_base<54, true> &"}
-!465 = metadata !{null, metadata !8, metadata !9, metadata !466, metadata !11, metadata !31, metadata !6}
-!466 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<54, true> &"}
-!467 = metadata !{null, metadata !8, metadata !9, metadata !468, metadata !11, metadata !31, metadata !6}
-!468 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &"}
-!469 = metadata !{null, metadata !8, metadata !9, metadata !470, metadata !11, metadata !55, metadata !6}
-!470 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &"}
-!471 = metadata !{null, metadata !8, metadata !9, metadata !40, metadata !11, metadata !55, metadata !6}
-!472 = metadata !{null, metadata !8, metadata !9, metadata !23, metadata !11, metadata !473, metadata !6}
-!473 = metadata !{metadata !"kernel_arg_name", metadata !"pf"}
-!474 = metadata !{null, metadata !8, metadata !9, metadata !475, metadata !11, metadata !31, metadata !6}
-!475 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<25, 1, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!476 = metadata !{null, metadata !8, metadata !9, metadata !477, metadata !11, metadata !31, metadata !6}
-!477 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<7, 0, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!478 = metadata !{null, metadata !120, metadata !2, metadata !479, metadata !480, metadata !481, metadata !6}
-!479 = metadata !{metadata !"kernel_arg_type", metadata !"char*", metadata !"signed char"}
-!480 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const", metadata !""}
-!481 = metadata !{metadata !"kernel_arg_name", metadata !"str", metadata !"radix"}
-!482 = metadata !{metadata !483, [2 x i32]* @llvm_global_ctors_0}
-!483 = metadata !{metadata !484}
-!484 = metadata !{i32 0, i32 31, metadata !485}
-!485 = metadata !{metadata !486}
-!486 = metadata !{metadata !"llvm.global_ctors.0", metadata !487, metadata !"", i32 0, i32 31}
-!487 = metadata !{metadata !488}
-!488 = metadata !{i32 0, i32 1, i32 1}
-!489 = metadata !{metadata !490}
-!490 = metadata !{i32 0, i32 31, metadata !491}
-!491 = metadata !{metadata !492}
-!492 = metadata !{metadata !"in.V.data.V", metadata !493, metadata !"int32", i32 0, i32 31}
-!493 = metadata !{metadata !494}
-!494 = metadata !{i32 0, i32 0, i32 1}
-!495 = metadata !{metadata !496}
-!496 = metadata !{i32 0, i32 0, metadata !497}
-!497 = metadata !{metadata !498}
-!498 = metadata !{metadata !"in.V.last.V", metadata !493, metadata !"uint1", i32 0, i32 0}
-!499 = metadata !{metadata !500}
-!500 = metadata !{i32 0, i32 31, metadata !501}
-!501 = metadata !{metadata !502}
-!502 = metadata !{metadata !"out.V.data.V", metadata !493, metadata !"int32", i32 0, i32 31}
-!503 = metadata !{metadata !504}
-!504 = metadata !{i32 0, i32 0, metadata !505}
-!505 = metadata !{metadata !506}
-!506 = metadata !{metadata !"out.V.last.V", metadata !493, metadata !"uint1", i32 0, i32 0}
+!22 = metadata !{null, metadata !17, metadata !18, metadata !19, metadata !20, metadata !23, metadata !6}
+!23 = metadata !{metadata !"kernel_arg_name", metadata !"op"}
+!24 = metadata !{null, metadata !17, metadata !18, metadata !25, metadata !20, metadata !21, metadata !6}
+!25 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
+!26 = metadata !{null, metadata !17, metadata !18, metadata !27, metadata !20, metadata !23, metadata !6}
+!27 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<32, 6, (enum ap_q_mode)0, (enum ap_o_mode)3, 0> &"}
+!28 = metadata !{null, metadata !17, metadata !18, metadata !29, metadata !20, metadata !23, metadata !6}
+!29 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 6, true, (enum ap_q_mode)0, (enum ap_o_mode)3, 0> &"}
+!30 = metadata !{null, metadata !31, metadata !32, metadata !33, metadata !34, metadata !35, metadata !6}
+!31 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0}
+!32 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!33 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool", metadata !"_Bool", metadata !"_Bool"}
+!34 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!35 = metadata !{metadata !"kernel_arg_name", metadata !"qb", metadata !"r", metadata !"s"}
+!36 = metadata !{null, metadata !17, metadata !18, metadata !37, metadata !20, metadata !23, metadata !6}
+!37 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 6, (enum ap_q_mode)0, (enum ap_o_mode)3, 0> &"}
+!38 = metadata !{null, metadata !17, metadata !18, metadata !39, metadata !20, metadata !23, metadata !6}
+!39 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<36, 7, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!40 = metadata !{null, metadata !17, metadata !18, metadata !41, metadata !20, metadata !42, metadata !6}
+!41 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 3, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!42 = metadata !{metadata !"kernel_arg_name", metadata !"op2"}
+!43 = metadata !{null, metadata !17, metadata !18, metadata !41, metadata !20, metadata !23, metadata !6}
+!44 = metadata !{null, metadata !17, metadata !18, metadata !45, metadata !20, metadata !42, metadata !6}
+!45 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<16, 2, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!46 = metadata !{null, metadata !17, metadata !18, metadata !25, metadata !20, metadata !47, metadata !6}
+!47 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
+!48 = metadata !{null, metadata !17, metadata !18, metadata !25, metadata !20, metadata !49, metadata !6}
+!49 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
+!50 = metadata !{null, metadata !17, metadata !18, metadata !25, metadata !20, metadata !51, metadata !6}
+!51 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
+!52 = metadata !{null, metadata !17, metadata !18, metadata !53, metadata !20, metadata !23, metadata !6}
+!53 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!54 = metadata !{null, metadata !17, metadata !18, metadata !55, metadata !20, metadata !23, metadata !6}
+!55 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed<16, 1, (enum ap_q_mode)0, (enum ap_o_mode)3, 0> &"}
+!56 = metadata !{null, metadata !17, metadata !18, metadata !57, metadata !20, metadata !58, metadata !6}
+!57 = metadata !{metadata !"kernel_arg_type", metadata !"const struct rfnoc_axis &"}
+!58 = metadata !{metadata !"kernel_arg_name", metadata !"din"}
+!59 = metadata !{null, metadata !17, metadata !18, metadata !60, metadata !20, metadata !42, metadata !6}
+!60 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<32> &"}
+!61 = metadata !{null, metadata !17, metadata !18, metadata !62, metadata !20, metadata !63, metadata !6}
+!62 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_range_ref<32, true> &"}
+!63 = metadata !{metadata !"kernel_arg_name", metadata !"ref"}
+!64 = metadata !{null, metadata !17, metadata !18, metadata !65, metadata !20, metadata !42, metadata !6}
+!65 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<16> &"}
+!66 = metadata !{null, metadata !1, metadata !2, metadata !67, metadata !4, metadata !68, metadata !6}
+!67 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
+!68 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
+!69 = metadata !{null, metadata !70, metadata !32, metadata !71, metadata !34, metadata !72, metadata !6}
+!70 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
+!71 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int", metadata !"int"}
+!72 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
+!73 = metadata !{null, metadata !17, metadata !18, metadata !74, metadata !20, metadata !42, metadata !6}
+!74 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<1> &"}
+!75 = metadata !{null, metadata !17, metadata !18, metadata !76, metadata !20, metadata !77, metadata !6}
+!76 = metadata !{metadata !"kernel_arg_type", metadata !"struct rfnoc_axis &"}
+!77 = metadata !{metadata !"kernel_arg_name", metadata !"dout"}
+!78 = metadata !{null, metadata !17, metadata !18, metadata !57, metadata !20, metadata !79, metadata !6}
+!79 = metadata !{metadata !"kernel_arg_name", metadata !""}
+!80 = metadata !{null, metadata !17, metadata !18, metadata !81, metadata !20, metadata !47, metadata !6}
+!81 = metadata !{metadata !"kernel_arg_type", metadata !"double"}
+!82 = metadata !{null, metadata !17, metadata !18, metadata !81, metadata !20, metadata !83, metadata !6}
+!83 = metadata !{metadata !"kernel_arg_name", metadata !"d"}
+!84 = metadata !{null, metadata !17, metadata !18, metadata !25, metadata !20, metadata !23, metadata !6}
+!85 = metadata !{null, metadata !1, metadata !2, metadata !86, metadata !4, metadata !87, metadata !6}
+!86 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &", metadata !"const ap_int_base<54, true> &"}
+!87 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"op2"}
+!88 = metadata !{null, metadata !17, metadata !18, metadata !89, metadata !20, metadata !23, metadata !6}
+!89 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<54, true> &"}
+!90 = metadata !{null, metadata !17, metadata !18, metadata !91, metadata !20, metadata !23, metadata !6}
+!91 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &"}
+!92 = metadata !{null, metadata !17, metadata !18, metadata !93, metadata !20, metadata !42, metadata !6}
+!93 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &"}
+!94 = metadata !{null, metadata !1, metadata !2, metadata !95, metadata !4, metadata !96, metadata !6}
+!95 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &", metadata !"int"}
+!96 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
+!97 = metadata !{null, metadata !1, metadata !2, metadata !98, metadata !4, metadata !87, metadata !6}
+!98 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &", metadata !"const ap_int_base<32, true> &"}
+!99 = metadata !{null, metadata !17, metadata !18, metadata !100, metadata !20, metadata !23, metadata !6}
+!100 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &"}
+!101 = metadata !{null, metadata !17, metadata !18, metadata !102, metadata !20, metadata !23, metadata !6}
+!102 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<11, false> &"}
+!103 = metadata !{null, metadata !17, metadata !18, metadata !104, metadata !20, metadata !42, metadata !6}
+!104 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
+!105 = metadata !{null, metadata !17, metadata !18, metadata !81, metadata !20, metadata !106, metadata !6}
+!106 = metadata !{metadata !"kernel_arg_name", metadata !"pf"}
+!107 = metadata !{metadata !108, [1 x i32]* @llvm_global_ctors_0}
+!108 = metadata !{metadata !109}
+!109 = metadata !{i32 0, i32 31, metadata !110}
+!110 = metadata !{metadata !111}
+!111 = metadata !{metadata !"llvm.global_ctors.0", metadata !112, metadata !"", i32 0, i32 31}
+!112 = metadata !{metadata !113}
+!113 = metadata !{i32 0, i32 0, i32 1}
+!114 = metadata !{metadata !115}
+!115 = metadata !{i32 0, i32 31, metadata !116}
+!116 = metadata !{metadata !117}
+!117 = metadata !{metadata !"i_data.V.data.V", metadata !112, metadata !"int32", i32 0, i32 31}
+!118 = metadata !{metadata !119}
+!119 = metadata !{i32 0, i32 0, metadata !120}
+!120 = metadata !{metadata !121}
+!121 = metadata !{metadata !"i_data.V.last.V", metadata !112, metadata !"uint1", i32 0, i32 0}
+!122 = metadata !{metadata !123}
+!123 = metadata !{i32 0, i32 31, metadata !124}
+!124 = metadata !{metadata !125}
+!125 = metadata !{metadata !"o_data.V.data.V", metadata !112, metadata !"int32", i32 0, i32 31}
+!126 = metadata !{metadata !127}
+!127 = metadata !{i32 0, i32 0, metadata !128}
+!128 = metadata !{metadata !129}
+!129 = metadata !{metadata !"o_data.V.last.V", metadata !112, metadata !"uint1", i32 0, i32 0}

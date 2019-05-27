@@ -1,0 +1,448 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'correlateTopSynch'" level="0">
+<item name = "Date">Wed Apr 24 17:38:47 2019
+</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">CorrelatorSynch</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k410tffg900-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">5.00</item>
+<item name = "Clock uncertainty (ns)">0.62</item>
+<item name = "Estimated clock period (ns)">4.24</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 13, 1, 13, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_correlatorSynch_fu_1119">correlatorSynch, 4, 8, 4, 8, none</column>
+<column name="StgValue_70_shiftPhaseClassSynch_fu_1636">shiftPhaseClassSynch, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 292</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 1, 1753, 7591</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 185</column>
+<column name="Register">-, -, 4391, -</column>
+<specialColumn name="Available">1590, 1540, 508400, 254200</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 1, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_correlatorSynch_fu_1119">correlatorSynch, 0, 1, 1752, 5431</column>
+<column name="StgValue_70_shiftPhaseClassSynch_fu_1636">shiftPhaseClassSynch, 0, 0, 1, 2160</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ret_V_1_fu_2772_p2">+, 0, 0, 29, 1, 22</column>
+<column name="tmp_7_fu_2795_p2">+, 0, 0, 39, 1, 32</column>
+<column name="tmp_9_fu_2735_p2">+, 0, 0, 13, 1, 4</column>
+<column name="ap_predicate_op89_write_state6">and, 0, 0, 8, 1, 1</column>
+<column name="ap_predicate_op91_write_state6">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_data_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_data_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_last_V_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="o_data_V_last_V_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="i_data_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="i_data_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_V_data_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="o_data_V_last_V_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="tmp_5_fu_2767_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="tmp_s_fu_2807_p2">icmp, 0, 0, 18, 22, 14</column>
+<column name="ap_block_state5_io">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state6">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state6_io">or, 0, 0, 8, 1, 1</column>
+<column name="p_3_fu_2784_p3">select, 0, 0, 22, 1, 22</column>
+<column name="p_s_fu_2777_p3">select, 0, 0, 22, 1, 22</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">38, 7, 1, 7</column>
+<column name="i_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="i_data_V_data_V_0_data_out">9, 2, 32, 64</column>
+<column name="i_data_V_data_V_0_state">15, 3, 2, 6</column>
+<column name="i_data_V_last_V_0_data_out">9, 2, 1, 2</column>
+<column name="i_data_V_last_V_0_state">15, 3, 2, 6</column>
+<column name="loadCount_V">9, 2, 32, 64</column>
+<column name="o_data_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="o_data_V_data_V_1_data_in">15, 3, 32, 96</column>
+<column name="o_data_V_data_V_1_data_out">9, 2, 32, 64</column>
+<column name="o_data_V_data_V_1_state">15, 3, 2, 6</column>
+<column name="o_data_V_last_V_1_data_out">9, 2, 1, 2</column>
+<column name="o_data_V_last_V_1_state">15, 3, 2, 6</column>
+<column name="phaseClass_V">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_reg_grp_correlatorSynch_fu_1119_ap_start">1, 0, 1, 0</column>
+<column name="cor_phaseClass0i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass0i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass10i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass11i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass12i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass13i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass14i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass15i_V_s">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass1i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass2i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass3i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass4i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass5i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass6i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass7i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass8i_V_9">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_0">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_1">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_10">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_11">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_12">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_13">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_14">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_15">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_2">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_3">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_4">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_5">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_6">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_7">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_8">16, 0, 16, 0</column>
+<column name="cor_phaseClass9i_V_9">16, 0, 16, 0</column>
+<column name="currentState">1, 0, 1, 0</column>
+<column name="currentState_load_reg_2819">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="i_data_V_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_data_V_0_state">2, 0, 2, 0</column>
+<column name="i_data_V_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="i_data_V_last_V_0_state">2, 0, 2, 0</column>
+<column name="loadCount_V">32, 0, 32, 0</column>
+<column name="o_data_V_data_V_1_payload_A">32, 0, 32, 0</column>
+<column name="o_data_V_data_V_1_payload_B">32, 0, 32, 0</column>
+<column name="o_data_V_data_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_data_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_V_data_V_1_state">2, 0, 2, 0</column>
+<column name="o_data_V_last_V_1_payload_A">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_payload_B">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_rd">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_sel_wr">1, 0, 1, 0</column>
+<column name="o_data_V_last_V_1_state">2, 0, 2, 0</column>
+<column name="p_Val2_1_reg_2840">32, 0, 32, 0</column>
+<column name="phaseClass_V">4, 0, 4, 0</column>
+<column name="phaseClass_V_load_reg_2823">4, 0, 4, 0</column>
+<column name="ret_V_reg_2845">22, 0, 22, 0</column>
+<column name="tmp_50_reg_2852">10, 0, 10, 0</column>
+<column name="tmp_data_V_reg_2830">32, 0, 32, 0</column>
+<column name="tmp_last_V_reg_2835">1, 0, 1, 0</column>
+<column name="tmp_s_reg_2857">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, correlateTopSynch, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, correlateTopSynch, return value</column>
+<column name="i_data_TDATA">in, 32, axis, i_data_V_data_V, pointer</column>
+<column name="i_data_TVALID">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TREADY">out, 1, axis, i_data_V_last_V, pointer</column>
+<column name="i_data_TLAST">in, 1, axis, i_data_V_last_V, pointer</column>
+<column name="o_data_TDATA">out, 32, axis, o_data_V_data_V, pointer</column>
+<column name="o_data_TVALID">out, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TREADY">in, 1, axis, o_data_V_last_V, pointer</column>
+<column name="o_data_TLAST">out, 1, axis, o_data_V_last_V, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">3.37</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'__Val2__', CorrelatorSynch/correlatorSynch.cpp:147">call, 3.37, 3.37, -, -, -, -, -, -, -, -, -, correlatorSynch, -</column>
+</table>
+</item>
+</section>
+</profile>
